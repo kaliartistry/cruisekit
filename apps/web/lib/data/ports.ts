@@ -147,7 +147,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(242) 322-1181",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -445,7 +445,7 @@ export const PORTS: PortData[] = [
       hospital: "Centro Medico — San Juan",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-Wo5P8bXVReQ?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -542,7 +542,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Nassau, Bahamas",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1544551763-77263e83e3c3?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -738,7 +738,7 @@ export const PORTS: PortData[] = [
       hospital: "First aid station on site; medical center on ship",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1506953823645-3a20a025d1c6?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -888,7 +888,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1570073131892-1d218eb23de3?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -938,7 +938,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1567606404132-28a36e76d0e7?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=800&q=80",
   },
 
   /* ================================================================ */
