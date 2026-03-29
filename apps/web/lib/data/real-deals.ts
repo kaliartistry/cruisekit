@@ -52,7 +52,7 @@ function normalizeCarnival(): RealDeal[] {
       currency: s.currency || "USD",
       departureDate: s.departureDate || null,
       ports: s.ports?.map((p: { name: string }) => p.name).filter(Boolean) || [],
-      imageUrl: s.imageUrl
+      imageUrl: s.imageUrl && !s.imageUrl.includes("RandomImage")
         ? s.imageUrl.startsWith("http")
           ? s.imageUrl
           : `https://www.carnival.com${s.imageUrl}`
