@@ -535,7 +535,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
       </div>
 
       {/* Price + CTA */}
-      <div className="flex shrink-0 flex-row items-center justify-between border-t border-gray-100 p-4 md:flex-col md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[180px]">
+      <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[180px]">
         <div className="text-right">
           <p className="text-[10px] uppercase tracking-wider text-gray-400">
             from
