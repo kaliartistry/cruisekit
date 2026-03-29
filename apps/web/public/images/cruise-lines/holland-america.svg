@@ -1,3 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <text x="100" y="35" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="18" font-weight="600" fill="#003B6F" letter-spacing="0.5">Holland America</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- Compass rose icon -->
+  <g transform="translate(8, 8)">
+    <circle cx="14" cy="14" r="13" stroke="#003B6F" stroke-width="1.5" fill="none"/>
+    <!-- Cardinal points -->
+    <polygon points="14,1 16,11 14,9 12,11" fill="#003B6F"/>
+    <polygon points="27,14 17,12 19,14 17,16" fill="#003B6F"/>
+    <polygon points="14,27 12,17 14,19 16,17" fill="#003B6F" opacity="0.5"/>
+    <polygon points="1,14 11,16 9,14 11,12" fill="#003B6F" opacity="0.5"/>
+    <circle cx="14" cy="14" r="2.5" fill="#003B6F"/>
+  </g>
+  <text x="40" y="30" font-family="Georgia, Times New Roman, serif" font-size="14" font-weight="600" fill="#003B6F" letter-spacing="0.3">Holland America</text>
 </svg>

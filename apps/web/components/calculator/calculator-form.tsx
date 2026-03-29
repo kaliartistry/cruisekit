@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
+  Info,
   Minus,
   Plus,
   Ship,
@@ -231,7 +232,7 @@ export default function CalculatorForm({
   const [wifiOn, setWifiOn] = useState(false);
   const [wifiTier, setWifiTier] = useState<string>("");
   const [specialtyMeals, setSpecialtyMeals] = useState(0);
-  const [excursionBudget, setExcursionBudget] = useState(100);
+  const [excursionBudget, setExcursionBudget] = useState(0);
   const [numPorts, setNumPorts] = useState(Math.max(1, (defaultDuration ?? 7) - 2));
   const [insuranceOn, setInsuranceOn] = useState(false);
   const [parkingOn, setParkingOn] = useState(false);
@@ -467,10 +468,12 @@ export default function CalculatorForm({
   const goNext = () => {
     setDirection(1);
     setStep((s) => Math.min(3, s + 1));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const goBack = () => {
     setDirection(-1);
     setStep((s) => Math.max(1, s - 1));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   /* ================================================================ */
@@ -719,8 +722,11 @@ export default function CalculatorForm({
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-sm font-semibold text-navy">
+                          <p className="text-sm font-semibold text-navy flex items-center gap-1">
                             Drink Package
+                            <span title="Unlimited alcoholic and non-alcoholic beverages. Most lines require all adults in the cabin to purchase.">
+                              <Info className="h-3.5 w-3.5 text-gray-400 cursor-help" />
+                            </span>
                           </p>
                           {drinkPackageOn && drinkImpact > 0 && (
                             <p className="font-price text-xs font-medium text-teal">
@@ -770,8 +776,11 @@ export default function CalculatorForm({
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-sm font-semibold text-navy">
+                          <p className="text-sm font-semibold text-navy flex items-center gap-1">
                             WiFi
+                            <span title="Internet access at sea. Ranges from basic social media to full streaming.">
+                              <Info className="h-3.5 w-3.5 text-gray-400 cursor-help" />
+                            </span>
                           </p>
                           {wifiOn && wifiImpact > 0 && (
                             <p className="font-price text-xs font-medium text-teal">
@@ -817,8 +826,11 @@ export default function CalculatorForm({
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-sm font-semibold text-navy">
+                        <p className="text-sm font-semibold text-navy flex items-center gap-1">
                           Specialty Dining Meals
+                          <span title="Upcharge restaurants beyond the free main dining room and buffet.">
+                            <Info className="h-3.5 w-3.5 text-gray-400 cursor-help" />
+                          </span>
                         </p>
                         {diningImpact > 0 && (
                           <p className="font-price text-xs font-medium text-teal">
@@ -856,8 +868,11 @@ export default function CalculatorForm({
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-sm font-semibold text-navy">
+                        <p className="text-sm font-semibold text-navy flex items-center gap-1">
                           Excursion Budget Per Port
+                          <span title="Amount you plan to spend on activities at each port of call.">
+                            <Info className="h-3.5 w-3.5 text-gray-400 cursor-help" />
+                          </span>
                         </p>
                         {excursionImpact > 0 && (
                           <p className="font-price text-xs font-medium text-teal">
@@ -901,8 +916,11 @@ export default function CalculatorForm({
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-sm font-semibold text-navy">
+                        <p className="text-sm font-semibold text-navy flex items-center gap-1">
                           Travel Insurance
+                          <span title="Cancellation and medical coverage. Typically 5-10% of cruise fare.">
+                            <Info className="h-3.5 w-3.5 text-gray-400 cursor-help" />
+                          </span>
                         </p>
                         {insuranceOn && insuranceImpact > 0 && (
                           <p className="font-price text-xs font-medium text-teal">
@@ -926,8 +944,11 @@ export default function CalculatorForm({
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-sm font-semibold text-navy">
+                        <p className="text-sm font-semibold text-navy flex items-center gap-1">
                           Port Parking
+                          <span title="Parking at the cruise port if you're driving to the terminal.">
+                            <Info className="h-3.5 w-3.5 text-gray-400 cursor-help" />
+                          </span>
                         </p>
                         {parkingOn && parkingImpact > 0 && (
                           <p className="font-price text-xs font-medium text-teal">

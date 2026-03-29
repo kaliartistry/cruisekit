@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <text x="100" y="35" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#003DA5" letter-spacing="3">CARNIVAL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- Funnel shape -->
+  <g transform="translate(8, 8)">
+    <path d="M5,30 L7,8 C7,8 10,0 10,0 C10,0 13,8 13,8 L15,30 Z" fill="#E4002B"/>
+    <path d="M7,12 L13,12 L14,24 L6,24 Z" fill="#003DA5"/>
+    <ellipse cx="10" cy="30" rx="7" ry="2" fill="#003DA5"/>
+    <path d="M8,4 Q10,-2 12,4" stroke="#E4002B" stroke-width="1.5" fill="none"/>
+  </g>
+  <text x="34" y="32" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#003DA5" letter-spacing="2">CARNIVAL</text>
 </svg>

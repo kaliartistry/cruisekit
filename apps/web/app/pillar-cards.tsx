@@ -20,45 +20,188 @@ import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { SHIPS } from "@/lib/data/ships";
 import { getTopDeals, DEAL_STATS, type RealDeal } from "@/lib/data/real-deals";
 
-/* -- Destination images mapped to Caribbean ports -- */
-const PORT_IMAGES: Record<string, string> = {
-  "cozumel": "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
-  "costa maya": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600&q=80",
-  "nassau": "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-  "bahamas": "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-  "cococay": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  "grand turk": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-  "st. thomas": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-  "san juan": "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80",
-  "roatan": "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
-  "aruba": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  "grand cayman": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
-  "jamaica": "https://images.unsplash.com/photo-1570073131892-1d218eb23de3?w=600&q=80",
-  "belize": "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
-  "bermuda": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80",
-  "key west": "https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=600&q=80",
-  "curacao": "https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=600&q=80",
-  "st. lucia": "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
-  "western caribbean": "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
-  "eastern caribbean": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-  "caribbean": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+/* -- Deterministic hash for consistent image selection -- */
+function hashString(str: string): number {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = ((hash << 5) - hash) + str.charCodeAt(i);
+    hash = hash & hash; // Convert to 32-bit
+  }
+  return Math.abs(hash);
+}
+
+/* -- Destination images mapped to Caribbean ports (3-5 per dest) -- */
+const PORT_IMAGES: Record<string, string[]> = {
+  "cozumel": [
+    "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
+    "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=600&q=80",
+    "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=600&q=80",
+  ],
+  "costa maya": [
+    "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600&q=80",
+    "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
+    "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=600&q=80",
+  ],
+  "nassau": [
+    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+  ],
+  "bahamas": [
+    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+  ],
+  "cococay": [
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
+  ],
+  "grand turk": [
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
+  ],
+  "st. thomas": [
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+    "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80",
+    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
+  ],
+  "san juan": [
+    "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80",
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
+  ],
+  "roatan": [
+    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
+    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+  ],
+  "aruba": [
+    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+    "https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=600&q=80",
+  ],
+  "grand cayman": [
+    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+  ],
+  "jamaica": [
+    "https://images.unsplash.com/photo-1570073131892-1d218eb23de3?w=600&q=80",
+    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+  ],
+  "belize": [
+    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
+    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+  ],
+  "bermuda": [
+    "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80",
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+  ],
+  "key west": [
+    "https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=600&q=80",
+    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+  ],
+  "curacao": [
+    "https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=600&q=80",
+    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  ],
+  "st. lucia": [
+    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
+  ],
+  "western caribbean": [
+    "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
+    "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=600&q=80",
+    "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=600&q=80",
+  ],
+  "eastern caribbean": [
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
+    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
+  ],
+  "caribbean": [
+    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
+  ],
 };
+
+const DEFAULT_CRUISE_IMAGES = [
+  "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=600&q=80",
+  "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
+  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+];
 
 function getDealImage(deal: RealDeal): string {
   if (deal.imageUrl) return deal.imageUrl;
+
+  const h = hashString(deal.id);
+
   // Match by ports
   for (const port of deal.ports) {
     const portLower = port.toLowerCase();
-    for (const [key, url] of Object.entries(PORT_IMAGES)) {
-      if (portLower.includes(key)) return url;
+    for (const [key, images] of Object.entries(PORT_IMAGES)) {
+      if (portLower.includes(key)) return images[h % images.length];
     }
   }
   // Match by title
   const titleLower = deal.itineraryTitle.toLowerCase();
-  for (const [key, url] of Object.entries(PORT_IMAGES)) {
-    if (titleLower.includes(key)) return url;
+  for (const [key, images] of Object.entries(PORT_IMAGES)) {
+    if (titleLower.includes(key)) return images[h % images.length];
   }
-  return "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=600&q=80";
+  return DEFAULT_CRUISE_IMAGES[h % DEFAULT_CRUISE_IMAGES.length];
+}
+
+/* -- Port to country mapping -- */
+const PORT_COUNTRIES: Record<string, string> = {
+  "Cozumel": "Mexico",
+  "Costa Maya": "Mexico",
+  "Progreso": "Mexico",
+  "Nassau": "Bahamas",
+  "CocoCay": "Bahamas",
+  "Half Moon Cay": "Bahamas",
+  "Perfect Day at CocoCay": "Bahamas",
+  "Celebration Key": "Bahamas",
+  "St. Thomas": "US Virgin Islands",
+  "St. Maarten": "Netherlands",
+  "Grand Cayman": "Cayman Islands",
+  "Roatan": "Honduras",
+  "Falmouth": "Jamaica",
+  "Ocho Rios": "Jamaica",
+  "San Juan": "Puerto Rico",
+  "Aruba": "Aruba",
+  "Curacao": "Cura\u00e7ao",
+  "Belize City": "Belize",
+  "Harvest Caye": "Belize",
+  "Grand Turk": "Turks & Caicos",
+  "Bermuda": "Bermuda",
+  "Key West": "Florida, USA",
+  "Amber Cove": "Dominican Republic",
+  "Tortola": "British Virgin Islands",
+  "Barbados": "Barbados",
+  "Antigua": "Antigua",
+  "St. Lucia": "St. Lucia",
+  "St. Kitts": "St. Kitts",
+  "Bimini": "Bahamas",
+};
+
+function getPortWithCountry(port: string): string {
+  if (PORT_COUNTRIES[port]) return `${port}, ${PORT_COUNTRIES[port]}`;
+  const portLower = port.toLowerCase();
+  for (const [key, country] of Object.entries(PORT_COUNTRIES)) {
+    if (portLower.includes(key.toLowerCase()) || key.toLowerCase().includes(portLower)) {
+      return `${port}, ${country}`;
+    }
+  }
+  return port;
 }
 
 /* ------------------------------------------------------------------ */
@@ -266,7 +409,7 @@ export default function ContentSections() {
                             key={port}
                             className="text-[10px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded"
                           >
-                            {port}
+                            {getPortWithCountry(port)}
                           </span>
                         ))}
                         {deal.ports.length > 3 && (
