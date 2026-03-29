@@ -98,7 +98,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(52) 872-4574 (Consular Agency Cozumel)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -147,7 +147,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(242) 322-1181",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1580237541049-2d715a09486e?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -197,7 +197,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Jamaica. UK Governor's Office: (345) 244-2401",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -396,7 +396,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Curacao: (599-9) 461-3066",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1570052029792-6e4e84b26a6c?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -445,7 +445,7 @@ export const PORTS: PortData[] = [
       hospital: "Centro Medico — San Juan",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1579687196544-08ae57ab5966?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -493,7 +493,7 @@ export const PORTS: PortData[] = [
       hospital: "Lower Keys Medical Center",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1580407196238-dac33f57c410?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -542,7 +542,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Nassau, Bahamas",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -592,7 +592,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(52) 872-4574 (Consular Agency — shared with Cozumel)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -690,7 +690,7 @@ export const PORTS: PortData[] = [
       hospital: "First aid station on island; medical center on ship",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -788,7 +788,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(809) 567-7775 (Santo Domingo)",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -838,7 +838,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(501) 822-4011 (US Embassy Belmopan)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1580237072353-751a8b1e6171?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1570073131892-1d218eb23de3?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -888,7 +888,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1562613507-c4f16e82e66c?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -938,7 +938,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1570073131892-1d218eb23de3?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -988,7 +988,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(599-9) 461-3066",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1038,7 +1038,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(441) 295-1342",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1571689936114-b16146c9570a?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
   },
 ];
 
