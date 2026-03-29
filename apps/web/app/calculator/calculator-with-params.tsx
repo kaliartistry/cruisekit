@@ -27,11 +27,19 @@ function CalculatorFormWithSearchParams() {
       ? parseInt(adultsParam, 10)
       : undefined;
 
+  // Parse `month` param (0-indexed: 0=Jan, 11=Dec)
+  const monthParam = searchParams.get("month");
+  const defaultMonth =
+    monthParam && !isNaN(parseInt(monthParam, 10))
+      ? Math.min(11, Math.max(0, parseInt(monthParam, 10)))
+      : undefined;
+
   return (
     <CalculatorForm
       defaultCruiseLineIds={defaultCruiseLineIds}
       defaultDuration={defaultDuration}
       defaultAdults={defaultAdults}
+      defaultMonth={defaultMonth}
     />
   );
 }

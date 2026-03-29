@@ -19,6 +19,7 @@ import type {
 import { calculateCosts } from "@cruise/shared/utils";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import { getFareEstimate } from "@/lib/data/fare-estimates";
+import { MONTH_LABELS, getSeasonalMultiplier } from "@/lib/data/seasonal-pricing";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
@@ -184,6 +185,8 @@ interface CalculatorFormProps {
   defaultDuration?: number;
   /** Pre-select number of adults */
   defaultAdults?: number;
+  /** Pre-select travel month (0-indexed: 0=Jan, 11=Dec) */
+  defaultMonth?: number;
 }
 
 export default function CalculatorForm({
@@ -191,6 +194,7 @@ export default function CalculatorForm({
   defaultCruiseLineIds,
   defaultDuration,
   defaultAdults,
+  defaultMonth,
 }: CalculatorFormProps = {}) {
   /* -- Resolve default cruise line IDs with backward compat ---------- */
   const resolvedDefaultIds = useMemo(() => {
@@ -209,11 +213,14 @@ export default function CalculatorForm({
 
   /* -- Step 1 state ------------------------------------------------ */
   const [selectedLines, setSelectedLines] = useState<string[]>(resolvedDefaultIds);
+  const [month, setMonth] = useState<number | undefined>(defaultMonth);
   const [duration, setDuration] = useState(defaultDuration ?? 7);
   const [adults, setAdults] = useState(defaultAdults ?? 2);
   const [children, setChildren] = useState(0);
   const [cabinType, setCabinType] = useState<CabinType>("balcony");
   const [baseFare, setBaseFare] = useState("");
+
+  const seasonalInfo = month !== undefined ? getSeasonalMultiplier(month) : null;
 
   /* -- Step 2 state ------------------------------------------------ */
   const [drinkPackageOn, setDrinkPackageOn] = useState(false);
@@ -237,8 +244,8 @@ export default function CalculatorForm({
   /* -- Fare estimate for discovery mode ------------------------------- */
   const fareEstimate = useMemo(() => {
     if (!primaryLineId) return null;
-    return getFareEstimate(primaryLineId, duration, cabinType);
-  }, [primaryLineId, duration, cabinType]);
+    return getFareEstimate(primaryLineId, duration, cabinType, month);
+  }, [primaryLineId, duration, cabinType, month]);
 
   /** The effective base fare: user-entered value, or the mid estimate */
   const effectiveBaseFare = useMemo(() => {
@@ -518,6 +525,64 @@ export default function CalculatorForm({
                   </button>
                 ))}
               </div>
+            </div>
+
+            {/* Travel Month */}
+            <div className="mb-8">
+              <h2 className="mb-3 text-lg font-bold text-navy">
+                Travel month
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {MONTH_LABELS.map((label, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setMonth(month === idx ? undefined : idx)}
+                    className={cn(
+                      "rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
+                      month === idx
+                        ? "bg-teal text-white"
+                        : "border border-gray-200 bg-white text-navy hover:bg-gray-50"
+                    )}
+                  >
+                    {label.slice(0, 3)}
+                  </button>
+                ))}
+              </div>
+              {seasonalInfo && (
+                <div className="mt-2">
+                  <span
+                    className={cn(
+                      "inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full",
+                      seasonalInfo.multiplier > 1.15
+                        ? "bg-coral/10 text-coral"
+                        : seasonalInfo.multiplier < 0.95
+                          ? "bg-teal/10 text-teal"
+                          : "bg-gray-100 text-gray-500"
+                    )}
+                  >
+                    {seasonalInfo.label}
+                    {seasonalInfo.multiplier !== 1.0 && (
+                      <span>
+                        {" — "}
+                        {seasonalInfo.multiplier > 1
+                          ? `prices typically ${Math.round((seasonalInfo.multiplier - 1) * 100)}% higher`
+                          : `prices typically ${Math.round((1 - seasonalInfo.multiplier) * 100)}% lower`}
+                      </span>
+                    )}
+                  </span>
+                  {seasonalInfo.description && (
+                    <p className="mt-1 text-xs text-gray-400">
+                      {seasonalInfo.description}
+                    </p>
+                  )}
+                </div>
+              )}
+              {month === undefined && (
+                <p className="mt-1 text-xs text-gray-400">
+                  Select a month to see seasonal price adjustments
+                </p>
+              )}
             </div>
 
             {/* Guests */}

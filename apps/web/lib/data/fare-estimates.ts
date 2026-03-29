@@ -9,6 +9,8 @@
  * These are ESTIMATES — actual fares vary by ship, sail date, and availability.
  */
 
+import { getSeasonalMultiplier } from "./seasonal-pricing";
+
 export interface FareEstimate {
   /** Low end of typical price range (per person) */
   low: number;
@@ -250,40 +252,55 @@ export const FARE_ESTIMATES: Record<
 export function getFareEstimate(
   cruiseLineId: string,
   duration: number,
-  cabinType: CabinType
+  cabinType: CabinType,
+  month?: number // 0-indexed: 0=Jan, 11=Dec
 ): FareEstimate | null {
   const lineData = FARE_ESTIMATES[cruiseLineId];
   if (!lineData) return null;
 
   // Try exact duration match first
   const exactMatch = lineData[duration as Duration];
+  let result: FareEstimate | null = null;
+
   if (exactMatch && exactMatch[cabinType]) {
-    return exactMatch[cabinType];
-  }
+    result = { ...exactMatch[cabinType] };
+  } else {
+    // Find closest available duration
+    const availableDurations = Object.keys(lineData).map(Number).sort((a, b) => a - b);
+    if (availableDurations.length === 0) return null;
 
-  // Find closest available duration
-  const availableDurations = Object.keys(lineData).map(Number).sort((a, b) => a - b);
-  if (availableDurations.length === 0) return null;
-
-  let closest = availableDurations[0];
-  let minDiff = Math.abs(duration - closest);
-  for (const d of availableDurations) {
-    const diff = Math.abs(duration - d);
-    if (diff < minDiff) {
-      minDiff = diff;
-      closest = d;
+    let closest = availableDurations[0];
+    let minDiff = Math.abs(duration - closest);
+    for (const d of availableDurations) {
+      const diff = Math.abs(duration - d);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closest = d;
+      }
     }
+
+    const closestData = lineData[closest as Duration];
+    if (!closestData || !closestData[cabinType]) return null;
+
+    // Scale the estimate proportionally if duration differs
+    const scale = duration / closest;
+    const base = closestData[cabinType];
+    result = {
+      low: Math.round(base.low * scale),
+      mid: Math.round(base.mid * scale),
+      high: Math.round(base.high * scale),
+    };
   }
 
-  const closestData = lineData[closest as Duration];
-  if (!closestData || !closestData[cabinType]) return null;
+  // Apply seasonal multiplier if month is provided
+  if (month !== undefined && result) {
+    const { multiplier } = getSeasonalMultiplier(month);
+    return {
+      low: Math.round(result.low * multiplier),
+      mid: Math.round(result.mid * multiplier),
+      high: Math.round(result.high * multiplier),
+    };
+  }
 
-  // Scale the estimate proportionally if duration differs
-  const scale = duration / closest;
-  const base = closestData[cabinType];
-  return {
-    low: Math.round(base.low * scale),
-    mid: Math.round(base.mid * scale),
-    high: Math.round(base.high * scale),
-  };
+  return result;
 }

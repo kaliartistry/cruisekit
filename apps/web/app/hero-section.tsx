@@ -4,20 +4,32 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Search, Ship, Users, Calendar } from "lucide-react";
+import { Search, Ship, Users, Calendar, TrendingUp, TrendingDown, Minus } from "lucide-react";
 import { CRUISE_LINES } from "@cruise/shared/constants";
+import { MONTH_LABELS, getDefaultMonth, getSeasonalMultiplier } from "@/lib/data/seasonal-pricing";
 
 const DURATIONS = [3, 5, 7, 10, 14];
 
 export default function HeroSection() {
   const router = useRouter();
   const [selectedLine, setSelectedLine] = useState("");
+  const [month, setMonth] = useState(getDefaultMonth());
   const [duration, setDuration] = useState(7);
   const [adults, setAdults] = useState(2);
+
+  const seasonalInfo = getSeasonalMultiplier(month);
+
+  // Determine which year each month falls in for display
+  const now = new Date();
+  const currentMonth = now.getMonth();
+  const currentYear = now.getFullYear();
+  const getYearForMonth = (m: number) =>
+    m >= currentMonth ? currentYear : currentYear + 1;
 
   const handleSubmit = () => {
     const params = new URLSearchParams();
     if (selectedLine) params.set("line", selectedLine);
+    params.set("month", String(month));
     params.set("duration", String(duration));
     params.set("adults", String(adults));
     router.push(`/calculator?${params.toString()}`);
@@ -83,6 +95,59 @@ export default function HeroSection() {
                 </option>
               ))}
             </select>
+          </div>
+
+          {/* Month selector */}
+          <div className="mb-5">
+            <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 text-left">
+              <Calendar className="inline h-3.5 w-3.5 mr-1" />
+              When
+            </label>
+            <div className="flex gap-1 overflow-x-auto pb-1 -mx-1 px-1 scrollbar-thin">
+              {MONTH_LABELS.map((label, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setMonth(idx)}
+                  className={`flex-shrink-0 py-2 px-2.5 rounded-lg text-xs font-semibold transition-all ${
+                    month === idx
+                      ? "bg-teal text-white shadow-md"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  }`}
+                  title={`${label} ${getYearForMonth(idx)}`}
+                >
+                  {label.slice(0, 3)}
+                </button>
+              ))}
+            </div>
+            {/* Seasonal badge */}
+            <div className="mt-1.5 text-left">
+              <span
+                className={`inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-full ${
+                  seasonalInfo.multiplier > 1.15
+                    ? "bg-coral/10 text-coral"
+                    : seasonalInfo.multiplier < 0.95
+                      ? "bg-teal/10 text-teal"
+                      : "bg-gray-100 text-gray-500"
+                }`}
+              >
+                {seasonalInfo.multiplier > 1.15 ? (
+                  <TrendingUp className="h-3 w-3" />
+                ) : seasonalInfo.multiplier < 0.95 ? (
+                  <TrendingDown className="h-3 w-3" />
+                ) : (
+                  <Minus className="h-3 w-3" />
+                )}
+                {seasonalInfo.label}
+                {seasonalInfo.multiplier !== 1.0 && (
+                  <span>
+                    {" — "}prices typically{" "}
+                    {seasonalInfo.multiplier > 1
+                      ? `${Math.round((seasonalInfo.multiplier - 1) * 100)}% higher`
+                      : `${Math.round((1 - seasonalInfo.multiplier) * 100)}% lower`}
+                  </span>
+                )}
+              </span>
+            </div>
           </div>
 
           {/* Duration + Adults row */}
