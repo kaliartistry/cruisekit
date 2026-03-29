@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Wine,
@@ -164,17 +165,31 @@ export default function ContentSections() {
                 >
                   {/* Ship image area */}
                   <div
-                    className="relative h-36 w-full"
+                    className="relative h-36 w-full overflow-hidden"
                     style={{
                       background: `linear-gradient(135deg, ${line?.color ?? "#0077B6"}15, ${line?.color ?? "#0077B6"}35)`,
                     }}
                   >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Anchor
-                        className="h-12 w-12 opacity-15"
-                        style={{ color: line?.color ?? "#0077B6" }}
+                    {deal.imageUrl ? (
+                      <Image
+                        src={deal.imageUrl}
+                        alt={`${deal.shipName} - ${deal.itineraryTitle}`}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="300px"
                       />
-                    </div>
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Anchor
+                          className="h-12 w-12 opacity-15"
+                          style={{ color: line?.color ?? "#0077B6" }}
+                        />
+                      </div>
+                    )}
+                    {/* Dark gradient overlay for text readability on images */}
+                    {deal.imageUrl && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
+                    )}
                     {/* Price badge */}
                     <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow">
                       <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">from</p>
