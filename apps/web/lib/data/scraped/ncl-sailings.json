@@ -1,0 +1,5651 @@
+{
+  "scrapedAt": "2026-03-29T05:37:30.025Z",
+  "source": "ncl.com/api/v2/vacations/search",
+  "totalSailings": 152,
+  "sailings": [
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE7MIACZMRTBBPICMAMIA.jpg",
+      "combinedPrice": 679,
+      "basePrice": 1058,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "22997522",
+      "code": "ESCAPE7MIACZMRTBBPICMAMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Luna",
+      "shipCode": "LUNA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_luna/1440_LUNA7MIAPOPSTTTOVNPIMIA.jpg",
+      "combinedPrice": 909,
+      "basePrice": 1508,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23075911",
+      "code": "LUNA7MIAPOPSTTTOVNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/NCL_1440_AQUA_Tortola.jpg",
+      "combinedPrice": 929,
+      "basePrice": 1558,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "21467925",
+      "code": "AQUA7MIAPOPSTTTOVNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/lifestyle/homepage/NCL-Cruise-Parasailing-Ocho-Rios-Jamaica.jpg",
+      "combinedPrice": 849,
+      "basePrice": 1398,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "22925677",
+      "code": "PRIMA7PCVNPIFMHGECCZMPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Galveston, Texas",
+      "departurePortCode": "GAL",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Galveston: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/us-cities/galveston/NCL_1440_VIVA_Galveston.jpg",
+      "combinedPrice": 889,
+      "basePrice": 1398,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "23369078",
+      "code": "VIVA7GALCZMRTBBPICMAGAL",
+      "startingLocation": "Galveston, Texas"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "New Orleans, Louisiana",
+      "departurePortCode": "MSY",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/north-america/mexico/cozumel/1440_Cozumel_DAWN7TPACZMBPIRTBCMATPA.jpg",
+      "combinedPrice": 669,
+      "basePrice": 1018,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "21699224",
+      "code": "ESCAPE7MSYCZMBPIRTBCMAMSY",
+      "startingLocation": "New Orleans, Louisiana"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Star",
+      "shipCode": "STAR",
+      "duration": 4,
+      "durationText": "4-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "4-Day Caribbean Round-trip Tampa: Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_star/1440_STAR4TPACZMTPA.jpg",
+      "combinedPrice": 399,
+      "basePrice": 578,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25689443",
+      "code": "STAR4TPACZMTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/bahamas/great-stirrup-cay/NCL-Bahamas-GSC-Cruise2.png",
+      "combinedPrice": 899,
+      "basePrice": 1528,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Montego Bay, Jamaica",
+          "code": "MBJ"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "22925665",
+      "code": "PRIMA7PCVNPIMBJGECCZMPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "New Orleans, Louisiana",
+      "departurePortCode": "MSY",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE7MSYCZMRTBBPICMAMSY.jpg",
+      "combinedPrice": 669,
+      "basePrice": 1018,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "22997536",
+      "code": "ESCAPE7MSYCZMRTBBPICMAMSY",
+      "startingLocation": "New Orleans, Louisiana"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Joy",
+      "shipCode": "JOY",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_joy/1440_JOY7PCVPOPSTTTOVNPIPCV.jpg",
+      "combinedPrice": 649,
+      "basePrice": 1048,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23702493",
+      "code": "JOY7PCVPOPSTTTOVNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_GSC_GETAWAY4MIANPINASMIA.jpg",
+      "combinedPrice": 839,
+      "basePrice": 1458,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "22925660",
+      "code": "PRIMA7PCVPOPSTTTOVNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_aqua/1440_AQUA7PCVPOPSTTTOVNPIPCV.jpg",
+      "combinedPrice": 1246,
+      "basePrice": 2255,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "24221542",
+      "code": "AQUA7PCVPOPSTTTOVNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_aqua/1440_GSC_GETAWAY4MIANPINASMIA_1.jpg",
+      "combinedPrice": 1269,
+      "basePrice": 2268,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Ocho Rios, Jamaica",
+          "code": "OCJ"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25332015",
+      "code": "AQUA7PCVNPIOCJGECCZMPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_aqua/1440_GSC_GETAWAY3MIANASNPIMIA_6.jpg",
+      "combinedPrice": 1269,
+      "basePrice": 2278,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "24221566",
+      "code": "AQUA7PCVNPIFMHGECCZMPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_epic/1440_EPIC7PCVPOPSTTTOVNPIPCV.jpg",
+      "combinedPrice": 939,
+      "basePrice": 1638,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25334772",
+      "code": "EPIC7PCVPOPSTTTOVNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Luna",
+      "shipCode": "LUNA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/blog-2026/1200x800CostaMayaBeach.jpg",
+      "combinedPrice": 849,
+      "basePrice": 1398,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "23284986",
+      "code": "LUNA7MIARTBBPICZMCMAMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Luna",
+      "shipCode": "LUNA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_luna/1920_LUNA7MIARTBBPICMACZMMIA.jpg",
+      "combinedPrice": 959,
+      "basePrice": 1608,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "23367518",
+      "code": "LUNA7MIARTBBPICMACZMMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Luna",
+      "shipCode": "LUNA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/1000x667NCLRoatan.jpg",
+      "combinedPrice": 1019,
+      "basePrice": 1838,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23367510",
+      "code": "LUNA7MIARTBBPICZMNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE7PCVPOPSTTTOVNPIPCV.jpg",
+      "combinedPrice": 769,
+      "basePrice": 1258,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23369105",
+      "code": "ESCAPE7PCVPOPSTTTOVNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803-caribbean-st-thomas-usvi.jpg",
+      "combinedPrice": 929,
+      "basePrice": 1528,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "25390014",
+      "code": "GETAWAY7PCVNPISTTSJUPOPPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 9,
+      "durationText": "9-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "9-Day Caribbean Round-trip Orlando: St. Thomas & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE9PCVPOPSJUPHISTTTOVNPIPCV.jpg",
+      "combinedPrice": 1209,
+      "basePrice": 2138,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "23420489",
+      "code": "ESCAPE9PCVPOPSJUPHISTTTOVNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 9,
+      "durationText": "9-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "9-Day Caribbean Round-trip Orlando: St. Thomas & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_getaway/1440_GETAWAY9PCVPOPSJUPHISTTTOVNPIPCV.jpg",
+      "combinedPrice": 1839,
+      "basePrice": 3408,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "23468086",
+      "code": "GETAWAY9PCVPOPSJUPHISTTTOVNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_getaway/1440_GETAWAY5PCVPOPNPIPCV.jpg",
+      "combinedPrice": 669,
+      "basePrice": 1158,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23468071",
+      "code": "GETAWAY5PCVPOPNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean from Orlando (Port Canaveral): Puerto Plata & Great Stirrup Cay",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_getaway/1440x803_Puerto_Plata.jpg",
+      "combinedPrice": 699,
+      "basePrice": 1198,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "24223939",
+      "code": "ESCAPE5PCVPOPNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-Trip Philadelphia: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803-caribbean-st-thomas-usvi.jpg",
+      "combinedPrice": 1029,
+      "basePrice": 1688,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "23401410",
+      "code": "PEARL10PHLTOVSTTSJUPOPPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip Philadelphia: San Juan & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/1000x667SanJuanPuertoRico.jpg",
+      "combinedPrice": 1319,
+      "basePrice": 2418,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25389799",
+      "code": "PEARL12PHLPHISLUBGIANUSJUPOPPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 11,
+      "durationText": "11-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "11-Day Caribbean Round-trip Philadelphia: Bermuda & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/1000x667SanJuanPuertoRico.jpg",
+      "combinedPrice": 1329,
+      "basePrice": 2388,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Royal Naval Dockyard, Bermuda",
+          "code": "WRF"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "24871541",
+      "code": "PEARL11PHLWRFTOVSTTSJUPOPPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean Round-Trip Miami: Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE5MIANPICZMMIA.jpg",
+      "combinedPrice": 539,
+      "basePrice": 858,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "22997518",
+      "code": "ESCAPE5MIANPICZMMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Western Caribbean from Orlando (Port Canaveral)",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_getaway/1440_GETAWAY5PCVCZMNPIPCV.jpg",
+      "combinedPrice": 599,
+      "basePrice": 1008,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23468015",
+      "code": "GETAWAY5PCVCZMNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean from Orlando (Port Canaveral): Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_getaway/1440_GETAWAY5PCVCZMNPIPCV.jpg",
+      "combinedPrice": 869,
+      "basePrice": 1518,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "23468019",
+      "code": "GETAWAY5PCVCZMCMAPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Star",
+      "shipCode": "STAR",
+      "duration": 13,
+      "durationText": "13-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "13-Day Transatlantic from Tampa to Lisbon: Dominican Republic & US Virgin Islands",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_star/1440_STAR13TPAEYWPOPSTTPHILIS.jpg",
+      "combinedPrice": 919,
+      "basePrice": 1468,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Key West, Florida",
+          "code": "EYW"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        }
+      ],
+      "packageId": "23616334",
+      "code": "STAR13TPAEYWPOPSTTPHILIS",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 6,
+      "durationText": "6-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "6-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/dominican-republic/puerto-plata/POP_Caribbean_NYC_PRIMA10NYCPOPSJUSTTTOVWRFNYC_1440x803.jpg",
+      "combinedPrice": 1019,
+      "basePrice": 1818,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "24221539",
+      "code": "AQUA6MIAPOPSJUNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao & Aruba",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_pearl/1440-Willemstad-GETAWAY9MIANPIORJWILKRAPOPMIA.jpeg",
+      "combinedPrice": 1339,
+      "basePrice": 2518,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        }
+      ],
+      "packageId": "24929594",
+      "code": "PRIMA7SJUTOVSTTORJWILSTTSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-day Caribbean Round-trip San Juan: Curacao & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803-caribbean-st-thomas-usvi.jpg",
+      "combinedPrice": 1359,
+      "basePrice": 2558,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Kralendijk, Bonaire",
+          "code": "KRA"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        }
+      ],
+      "packageId": "24929591",
+      "code": "PRIMA7SJUKRAWILSTTTOVSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip New York: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/1000x667SanJuanPuertoRico.jpg",
+      "combinedPrice": 1369,
+      "basePrice": 2368,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "23392352",
+      "code": "BLISS12NYCPOPSJUBASTOVPHISTTNYC",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip New York: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/agnostic/NCL-Southern-Caribbean-Cruise-StKitts-SUB.jpg",
+      "combinedPrice": 1379,
+      "basePrice": 2478,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "23392351",
+      "code": "BLISS12NYCPOPSJUBASPHISTTTOVNYC",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-day Caribbean Round-trip San Juan: St. Thomas & Tortola",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/agnostic/NCL-Southern-Caribbean-Cruise-StKitts-3-SUB.jpg",
+      "combinedPrice": 1419,
+      "basePrice": 2668,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "24929579",
+      "code": "PRIMA7SJUPHIBASBGISLUTOVSTTSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip New York: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_bliss/1440_BLISS12NYCPOPSJUBASSTTTOVPHINYC.jpg",
+      "combinedPrice": 1509,
+      "basePrice": 2758,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25367211",
+      "code": "BLISS12NYCPOPSJUBASSTTTOVPHINYC",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-day Caribbean Round-trip San Juan: Barbados & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803-Tortola-Virgin-Islands.jpg",
+      "combinedPrice": 1549,
+      "basePrice": 2928,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "24929583",
+      "code": "PRIMA7SJUPHIBASBGISLUSTTTOVSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 11,
+      "durationText": "11-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "11-Day Caribbean: Round-Trip Philadelphia: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_pearl/1440_PEARL11PHLPHISTTTOVSJUPOPPHL.jpg",
+      "combinedPrice": 1789,
+      "basePrice": 3288,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "23401414",
+      "code": "PEARL11PHLPHISTTTOVSJUPOPPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-trip New York: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE10NYCSJUPHISTTTOVPOPNYC.jpg",
+      "combinedPrice": 1989,
+      "basePrice": 3738,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "22997519",
+      "code": "ESCAPE10NYCSJUPHISTTTOVPOPNYC",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao, Aruba & Bonaire",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-Castries-StLucia-EPIC7SJUORJWILSTGSLUBASSJU.jpg",
+      "combinedPrice": 5599,
+      "basePrice": 11068,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Kralendijk, Bonaire",
+          "code": "KRA"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        }
+      ],
+      "packageId": "22977631",
+      "code": "EPIC7SJUORJWILKRASLUBASSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-western-caribbean-from-miami-BREAKAWAY7MIARTBBPICMACZMMIA_R_2.jpg",
+      "combinedPrice": 1179,
+      "basePrice": 2128,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "24245127",
+      "code": "VIVA7MIARTBBPICZMNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean Round-trip Tampa: Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Cozumel_Mexico_DAWN7TPACZMBPIRTBCMATPA.jpg",
+      "combinedPrice": 509,
+      "basePrice": 808,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        }
+      ],
+      "packageId": "25382896",
+      "code": "GEM5TPACZMRTBTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 3,
+      "durationText": "3-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "3-Day Caribbean from Orlando to San Juan: Puerto Plata",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803-Puerto_Plata-DR-ESCAPE7PCVPOPSTTSJUNPIPCV.jpg",
+      "combinedPrice": 509,
+      "basePrice": 818,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "25659742",
+      "code": "PRIMA3PCVPOPSJU",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Breakaway",
+      "shipCode": "BREAKAWAY",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "New Orleans, Louisiana",
+      "departurePortCode": "MSY",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Western Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Palm_Cozumel_PRIMA7GALCMABPIRTBCZMGAL.jpg",
+      "combinedPrice": 709,
+      "basePrice": 1188,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        }
+      ],
+      "packageId": "24870141",
+      "code": "BREAKAWAY7MSYCZMRTBBPIMSY",
+      "startingLocation": "New Orleans, Louisiana"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-day Caribbean Round-trip Tampa: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-Cozumel-JADE7TPACMABPIRTBCZMTPA.jpg",
+      "combinedPrice": 729,
+      "basePrice": 1258,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25382901",
+      "code": "GEM7TPABPIRTBCZMTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Joy",
+      "shipCode": "JOY",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean Round-Trip Miami: Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-Cozumel-JOY10PCTLIOGECRTBBPICZMNPIMIA.jpg",
+      "combinedPrice": 739,
+      "basePrice": 1258,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25721021",
+      "code": "JOY5MIACZMNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_pearl/1440_PEARL5MIANPIPOPMIA.jpg",
+      "combinedPrice": 819,
+      "basePrice": 1428,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "24245125",
+      "code": "VIVA5MIANPIPOPMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Bahamas",
+      "itineraryTitle": "7-day Caribbean Round-trip Orlando: Great Stirrup Cay, Orlando & Nassau",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_bliss/1440_BLISS8NYCPCVNPINASNYC.jpg",
+      "combinedPrice": 829,
+      "basePrice": 1298,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        }
+      ],
+      "packageId": "23361665",
+      "code": "EPIC7PCVNPIGECFMHPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 8,
+      "durationText": "8-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "8-Day Eastern Caribbean from Orlando (Port Canaveral) : Great Stirrup & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-TORTOLA-BREAKAWAY7PCVTOVSTTNPIPCV_R.jpg",
+      "combinedPrice": 919,
+      "basePrice": 1488,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25390016",
+      "code": "GETAWAY8PCVPOPSJUTOVSTTNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Western Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_encore/1440_ENCORE7MIABPIRTBCMACZMMIA.jpg",
+      "combinedPrice": 929,
+      "basePrice": 1558,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "23353039",
+      "code": "AQUA7MIABPIRTBCZMCMAMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Bahamas",
+      "itineraryTitle": "7-Day Caribbean from Orlando (Port Canaveral): Nassau & Great Stirrup Cay",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/blog-2026/1200x800NassauBahamas.jpg",
+      "combinedPrice": 939,
+      "basePrice": 1618,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Nassau, Bahamas",
+          "code": "NAS"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23361671",
+      "code": "EPIC7PCVNASGECFMHNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-day Caribbean Round-trip Tampa: Cozumel & New Orleans",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/agnostic/NCL-Western-Caribbean-Cruise-Cozumel-Water.jpg",
+      "combinedPrice": 949,
+      "basePrice": 1748,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "New Orleans, Louisiana",
+          "code": "MSY"
+        }
+      ],
+      "packageId": "25382907",
+      "code": "GEM7TPACZMMSYTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/1000x667NCLRoatan.jpg",
+      "combinedPrice": 1009,
+      "basePrice": 1818,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23353038",
+      "code": "AQUA7MIARTBBPICZMNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 11,
+      "durationText": "11-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "11-Day Caribbean Round-Trip Tampa: Bahamas & Jamaica",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_sky/Aruba_Caribbean_Tres-Trapi-Steps-Beach_021723_1440x803.jpg",
+      "combinedPrice": 1019,
+      "basePrice": 1648,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        }
+      ],
+      "packageId": "25382910",
+      "code": "GEM11TPANPICBRORJWILFMHGECTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/bahamas/great-stirrup-cay/NCL-Bahamas-GSC-Cruise2.png",
+      "combinedPrice": 1029,
+      "basePrice": 1808,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Montego Bay, Jamaica",
+          "code": "MBJ"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25390015",
+      "code": "GETAWAY7PCVNPIMBJGECCZMPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-Trip Tampa: Curacao & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_sky/1440_SKY10TPACBRORJWILFMHGECTPA.jpg",
+      "combinedPrice": 1029,
+      "basePrice": 1888,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        }
+      ],
+      "packageId": "25382908",
+      "code": "GEM10TPACBRORJWILFMHGECTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean from Tampa to New York: Aruba & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_PUERTO-PLATA_GETAWAY10NYCPOPSJUSTTTOVWRFNYC.jpg",
+      "combinedPrice": 1039,
+      "basePrice": 1898,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "25382899",
+      "code": "GEM10TPACBRWILORJPOPNYC",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 9,
+      "durationText": "9-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "9-Day Caribbean Round-Trip Jacksonville: San Juan & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_gem/1440_GEM12JAXFPONPIPOPTOVBASPHISTTSJUJAX.jpg",
+      "combinedPrice": 1069,
+      "basePrice": 1898,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25855825",
+      "code": "DAWN9JAXFPONPISJUTOVPOPJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 9,
+      "durationText": "9-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "9-Day Caribbean Round-Trip Miami: Aruba, Jamaica & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_jewel/1440_JEWEL10MIANPICBRORJWILPOPPHL.jpg",
+      "combinedPrice": 1109,
+      "basePrice": 1958,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "26161723",
+      "code": "GEM9MIANPICBRORJWILFMHMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 9,
+      "durationText": "9-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Bahamas",
+      "itineraryTitle": "9-Day Bahamas Round-trip Tampa: Great Stirrup Cay & Key West",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_star/1440_STAR5TPAEYWNPITPA.jpg",
+      "combinedPrice": 1129,
+      "basePrice": 2018,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Key West, Florida",
+          "code": "EYW"
+        }
+      ],
+      "packageId": "25382897",
+      "code": "GEM9TPAEYWNPICBRFMHGECTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-trip Jacksonville: San Juan & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_CARIBBEAN_LUNA3MIANPIMIA.jpg",
+      "combinedPrice": 1139,
+      "basePrice": 2038,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Nassau, Bahamas",
+          "code": "NAS"
+        },
+        {
+          "name": "Samana, Dominican Republic",
+          "code": "SAM"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25855826",
+      "code": "DAWN10JAXFPONASPOPSAMTOVSJUJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-Trip Tampa: Jamaica & Puerto Rico",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_star/1440_STAR15LISPDLPHISTTFMHGECTPA.jpg",
+      "combinedPrice": 1199,
+      "basePrice": 2178,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25382898",
+      "code": "GEM12TPASJUTOVBASPHISTTFMHGECTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Jewel",
+      "shipCode": "JEWEL",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-Trip Miami: Curacao, Aruba & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_jewel/1440_JEWEL10MIANPICBRORJWILFMHGECMIA.jpg",
+      "combinedPrice": 1209,
+      "basePrice": 2108,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        }
+      ],
+      "packageId": "23425667",
+      "code": "JEWEL10MIANPICBRWILORJFMHGECMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-day Caribbean Round-trip San Juan: St. Thomas & Tortola",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/ships/norwegian-bliss/-agnostic--bliss/NCL-Tortola_Cruise-Tortola.jpeg",
+      "combinedPrice": 1209,
+      "basePrice": 2258,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25342341",
+      "code": "PRIMA7SJUTOVBASBGIPHISTTSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-Trip Miami: San Juan & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_RoadTown-Tortola-BVI-ENCORE7MIANPISTTTOVPOPMIA.jpg",
+      "combinedPrice": 1219,
+      "basePrice": 2168,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Samana, Dominican Republic",
+          "code": "SAM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25855828",
+      "code": "DAWN10JAXFPONPISAMPOPTOVSJUJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-trip Jacksonville: San Juan & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_CARIBBEAN_LUNA3MIANPIMIA.jpg",
+      "combinedPrice": 1239,
+      "basePrice": 2238,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Samana, Dominican Republic",
+          "code": "SAM"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25855827",
+      "code": "DAWN10JAXFPOPOPSAMSTTTOVSJUJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Gem",
+      "shipCode": "GEM",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Tampa, Florida",
+      "departurePortCode": "TPA",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-Trip Tampa: Curacao, Aruba & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Aruba_GEM10TPACBRORJFMHGECTPA.jpg",
+      "combinedPrice": 1249,
+      "basePrice": 2328,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        }
+      ],
+      "packageId": "25382909",
+      "code": "GEM10TPACBRWILORJFMHGECTPA",
+      "startingLocation": "Tampa, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aura",
+      "shipCode": "AURA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Costa_Maya_AURA7MIARTBBPICMACZMMIA.jpg",
+      "combinedPrice": 1269,
+      "basePrice": 2318,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25550729",
+      "code": "AURA7MIARTBBPICMACZMMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-trip Jacksonville: San Juan & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_CARIBBEAN_LUNA3MIANPIMIA.jpg",
+      "combinedPrice": 1289,
+      "basePrice": 2288,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Samana, Dominican Republic",
+          "code": "SAM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25855829",
+      "code": "DAWN10JAXFPONPIPOPSAMTOVSJUJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-Trip San Juan: Barbados & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803_SKY7MIAPOPSTTTOVNPIMIA.jpg",
+      "combinedPrice": 1299,
+      "basePrice": 2438,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "24929593",
+      "code": "PRIMA7SJUTOVBGIBASPHISTTSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aura",
+      "shipCode": "AURA",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean from Miami: Dominican Republic & Great Stirrup Cay",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Puerto_Plata_AURA5MIAPOPNPIMIA.jpg",
+      "combinedPrice": 1309,
+      "basePrice": 2408,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25729291",
+      "code": "AURA5MIAPOPNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/bahamas/great-stirrup-cay/NCL-Bahamas-GSC-Cruise2.png",
+      "combinedPrice": 1319,
+      "basePrice": 2368,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Montego Bay, Jamaica",
+          "code": "MBJ"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25332029",
+      "code": "AQUA7PCVNPIMBJGECCZMPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aura",
+      "shipCode": "AURA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean from Miami: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_StThomas_AURA7MIAPOPSTTTOVNPIMIA.jpg",
+      "combinedPrice": 1329,
+      "basePrice": 2408,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25550728",
+      "code": "AURA7MIAPOPSTTTOVNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Nassau & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Cozumel_ESCAPE7MIACZMRTBBPICMAMIA.jpg",
+      "combinedPrice": 1349,
+      "basePrice": 2448,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Nassau, Bahamas",
+          "code": "NAS"
+        }
+      ],
+      "packageId": "25332024",
+      "code": "AQUA7PCVCZMGECFMHNASPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_prima/1440_Tortola_JOY7PCVPOPSTTTOVNPIPCV.jpg",
+      "combinedPrice": 1359,
+      "basePrice": 2508,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23468087",
+      "code": "GETAWAY7PCVPOPSTTTOVNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: St. Thomas & Tortola",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-St-Thomas-USVirgin-JADE11TPAEYWPOPSTTORJWILGECTPA.jpg",
+      "combinedPrice": 1359,
+      "basePrice": 2558,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "24929588",
+      "code": "PRIMA7SJUPHISLUBGIBASSTTTOVSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip New York: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-St-Thomas-USVirgin-JADE11TPAEYWPOPSTTORJWILGECTPA.jpg",
+      "combinedPrice": 1399,
+      "basePrice": 2548,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25367216",
+      "code": "BLISS12NYCPOPSJUTOVBASPHISTTNYC",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip New York: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803-Puerto_Plata-DR-ESCAPE7PCVPOPSTTSJUNPIPCV.jpg",
+      "combinedPrice": 1399,
+      "basePrice": 2548,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25367208",
+      "code": "BLISS12NYCPOPSJUTOVSTTBASPHINYC",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip Jacksonville: San Juan & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_PUERTO-PLATA_GETAWAY10NYCPOPSJUSTTTOVWRFNYC.jpg",
+      "combinedPrice": 1409,
+      "basePrice": 2508,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Samana, Dominican Republic",
+          "code": "SAM"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25855830",
+      "code": "DAWN12JAXNPIFPOPOPSAMTOVANUPHISJUJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 13,
+      "durationText": "13-day Cruise",
+      "departurePort": "Lisbon, Portugal",
+      "departurePortCode": "LIS",
+      "region": "Caribbean",
+      "itineraryTitle": "13-Day Transatlantic from Lisbon to San Juan: Canary Islands & Tortola",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/blog-2026/1200x800PuertoRicoBeach.jpg",
+      "combinedPrice": 1489,
+      "basePrice": 2788,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Las Palmas, Canary Islands",
+          "code": "LPA"
+        },
+        {
+          "name": "Porto Grande, Cape Verde",
+          "code": "PTG"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        }
+      ],
+      "packageId": "25382859",
+      "code": "VIVA13LISLPAPTGPHITOVSJU",
+      "startingLocation": "Lisbon, Portugal"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip New York: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_breakaway/1440_BREAKAWAY11NYCPOPSJUPHITOVSTTNYC.jpg",
+      "combinedPrice": 1499,
+      "basePrice": 2748,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25367215",
+      "code": "BLISS12NYCPOPSJUPHIBASTOVSTTNYC",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip New York: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/agnostic/NCL-Eastern-Caribbean-Cruise-Tortola-SUB.jpg",
+      "combinedPrice": 1499,
+      "basePrice": 2748,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25367213",
+      "code": "BLISS12NYCPOPSJUTOVPHIBASSTTNYC",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-day Caribbean Round-trip San Juan: St. Thomas & Tortola",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803-Tortola-Virgin-Islands.jpg",
+      "combinedPrice": 1509,
+      "basePrice": 2858,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Kralendijk, Bonaire",
+          "code": "KRA"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        }
+      ],
+      "packageId": "24929596",
+      "code": "PRIMA7SJUTOVSTTKRAORJSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-Trip San Juan: St. Thomas & Tortola",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_St Thomas_ESCAPE7PCVNPISTTTOVPOPPCV.jpg",
+      "combinedPrice": 1509,
+      "basePrice": 2858,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "24929587",
+      "code": "PRIMA7SJUTOVANUBGIBASPHISTTSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Breakaway",
+      "shipCode": "BREAKAWAY",
+      "duration": 14,
+      "durationText": "14-day Cruise",
+      "departurePort": "Boston, Massachusetts",
+      "departurePortCode": "BOS",
+      "region": "Caribbean",
+      "itineraryTitle": "14-Day Caribbean from Boston to New Orleans: Curacao & Aruba",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/blog-2026/1200x800ArubaBeach.jpg",
+      "combinedPrice": 1799,
+      "basePrice": 3278,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "St. George's, Grenada",
+          "code": "STG"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        }
+      ],
+      "packageId": "24870119",
+      "code": "BREAKAWAY14BOSSTTSLUSTGWILORJGECMSY",
+      "startingLocation": "Boston, Massachusetts"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aura",
+      "shipCode": "AURA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Roatan_AURA7MIABPIRTBCZMMIA.jpg",
+      "combinedPrice": 1919,
+      "basePrice": 3618,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25550736",
+      "code": "AURA7MIABPIRTBCZMMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Tortola & Barbados",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_bliss/1440_BLISS12NYCPOPSJUBASSTTTOVPHINYC.jpg",
+      "combinedPrice": 2059,
+      "basePrice": 3958,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25342345",
+      "code": "PRIMA7SJUBASBGIANUPHITOVSTTSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 22,
+      "durationText": "22-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "22-Day Panama Canal From New York To Seattle: Mexico & Costa Rica",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/panama-canal-itineraries/1440x803-Cartagena-Colombia-CTG-Church_of_St_Peter_Claver-JEWEL15LAXCSLPVRPRQSJSPCLCTGNPIMIA.jpg",
+      "combinedPrice": 2539,
+      "basePrice": 4338,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cartagena, Colombia",
+          "code": "CTG"
+        },
+        {
+          "name": "Puntarenas (Puerto Caldera), Costa Rica",
+          "code": "PCL"
+        },
+        {
+          "name": "Acapulco, Mexico",
+          "code": "ACA"
+        },
+        {
+          "name": "Victoria, British Columbia",
+          "code": "VIC"
+        },
+        {
+          "name": "San Francisco, California",
+          "code": "SFO"
+        },
+        {
+          "name": "Cabo San Lucas, Mexico",
+          "code": "CSL"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "Puerto Quetzal, Guatemala",
+          "code": "PRQ"
+        },
+        {
+          "name": "Colón, Panama",
+          "code": "CLN"
+        }
+      ],
+      "packageId": "25367231",
+      "code": "BLISS22NYCPOPCTGCLNPCLPRQACACSLSFOVICSEA",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Bliss",
+      "shipCode": "BLISS",
+      "duration": 19,
+      "durationText": "19-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "19-Day Panama Canal: Mexico and Costa Rica from New York",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1920_ESCAPE9PCVPOPSJUPHISTTTOVNPIPCV.jpg",
+      "combinedPrice": 2539,
+      "basePrice": 4438,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cartagena, Colombia",
+          "code": "CTG"
+        },
+        {
+          "name": "Puerto Vallarta, Mexico",
+          "code": "PVR"
+        },
+        {
+          "name": "Puntarenas (Puerto Caldera), Costa Rica",
+          "code": "PCL"
+        },
+        {
+          "name": "Acapulco, Mexico",
+          "code": "ACA"
+        },
+        {
+          "name": "Cabo San Lucas, Mexico",
+          "code": "CSL"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "Puerto Quetzal, Guatemala",
+          "code": "PRQ"
+        },
+        {
+          "name": "Colón, Panama",
+          "code": "CLN"
+        }
+      ],
+      "packageId": "24218424",
+      "code": "BLISS19NYCPOPCTGCLNPCLPRQACAPVRCSLSFO",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 4,
+      "durationText": "4-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "4-Day Bahamas Round-trip Jacksonville: Grand Bahama Island",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/bahamas/agnostic/NCL-Bahamas-Cruise-Bahamas-Beach.jpg",
+      "combinedPrice": 529,
+      "basePrice": 878,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        }
+      ],
+      "packageId": "25382914",
+      "code": "DAWN4JAXFPOJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Bahamas Round-trip Jacksonville",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/blog-2026/1200x800GreatStirrupCay.jpg",
+      "combinedPrice": 579,
+      "basePrice": 848,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25382931",
+      "code": "DAWN5JAXFPONPIJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Dawn",
+      "shipCode": "DAWN",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Jacksonville, Florida",
+      "departurePortCode": "JAX",
+      "region": "Caribbean",
+      "itineraryTitle": "4-Day Bahamas Round-trip Jacksonville: Great Stirrup Cay & Grand Bahama Island",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/blog-2026/1200x800GreatStirrupCayPool.jpg",
+      "combinedPrice": 659,
+      "basePrice": 1088,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Grand Bahama Island, Bahamas",
+          "code": "FPO"
+        }
+      ],
+      "packageId": "25382943",
+      "code": "DAWN5JAXNPIFPOJAX",
+      "startingLocation": "Jacksonville, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Jewel",
+      "shipCode": "JEWEL",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean from Miami to Philadelphia: Bahamas & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_jewel/1440_JEWEL10MIANPICBRORJWILPOPPHL.jpg",
+      "combinedPrice": 819,
+      "basePrice": 1145,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "23616378",
+      "code": "JEWEL10MIANPICBRORJWILPOPPHL",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Jewel",
+      "shipCode": "JEWEL",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip Miami: Curacao, Aruba & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_jewel/1440-Willemstad-PEARL12MIAORJWILKRASMRCTGPCGCLNLIOMIA.jpg",
+      "combinedPrice": 2419,
+      "basePrice": 4488,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "23425671",
+      "code": "JEWEL12MIANPICBRORJWILPHISTTTOVPOPMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Bahamas",
+      "itineraryTitle": "5-Day Western Caribbean from Orlando (Port Canaveral)",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-western-caribbean-from-orlando-port-canaveral-ESCAPE5PCVCZMNPIPCV_R_0_0.jpg",
+      "combinedPrice": 689,
+      "basePrice": 1158,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "23420486",
+      "code": "ESCAPE5PCVCZMNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Jewel",
+      "shipCode": "JEWEL",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-Trip Miami: Curacao, Aruba & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_jewel/1440_JEWEL10MIANPICBRORJWILFMHGECMIA.jpg",
+      "combinedPrice": 1059,
+      "basePrice": 1808,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        }
+      ],
+      "packageId": "23425668",
+      "code": "JEWEL10MIANPICBRORJWILFMHGECMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay, Jamaica, Grand Cayman & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/bahamas/great-stirrup-cay/1440-Great-Stirrup-Cay-Parasail.jpg",
+      "combinedPrice": 759,
+      "basePrice": 1218,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "23361660",
+      "code": "EPIC7PCVNPIFMHGECCZMPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay, Jamaica, Grand Cayman & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/bahamas/great-stirrup-cay/1440-Great-Stirrup-Cay-Parasail.jpg",
+      "combinedPrice": 899,
+      "basePrice": 1538,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "24236980",
+      "code": "EPIC7PCVCZMGECFMHNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Jewel",
+      "shipCode": "JEWEL",
+      "duration": 4,
+      "durationText": "4-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "4-Day Caribbean Round-trip Miami",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-western-caribbean-from-miami-PEARL5MIABPICMAMIA.jpg",
+      "combinedPrice": 499,
+      "basePrice": 798,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "24767586",
+      "code": "JEWEL4MIACZMMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Encore",
+      "shipCode": "ENCORE",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Western Caribbean Round-Trip Miami: Great Stirrup Cay, Cozumel & Falmouth",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/agnostic/NCL-Western-Caribbean-Cruise-Cozumel-Water.jpg",
+      "combinedPrice": 639,
+      "basePrice": 1038,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "21702552",
+      "code": "ENCORE7MIANPIFMHGECCZMMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "10-Day Caribbean Round-Trip Philadelphia: Dominican Republic & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_pearl/1440_PEARL10PHLPOPSJUSTTTOVPHL.jpg",
+      "combinedPrice": 969,
+      "basePrice": 1578,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        }
+      ],
+      "packageId": "23401407",
+      "code": "PEARL10PHLPOPSJUSTTTOVPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Sun",
+      "shipCode": "SUN",
+      "duration": 13,
+      "durationText": "13-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "13-Day from New York to Miami: Aruba, Bahamas & Bermuda",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/blog-images/1000x667SanJuanPuertoRico.jpg",
+      "combinedPrice": 1719,
+      "basePrice": 2918,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Cabo Rojo, Dominican Republic",
+          "code": "CBR"
+        },
+        {
+          "name": "Royal Naval Dockyard, Bermuda",
+          "code": "WRF"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "23424954",
+      "code": "SUN13NYCWRFSJUSTTTOVWILORJCBRNPIMIA",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 9,
+      "durationText": "9-day Cruise",
+      "departurePort": "Galveston, Texas",
+      "departurePortCode": "GAL",
+      "region": "Caribbean",
+      "itineraryTitle": "9-Day Caribbean Round-trip Galveston: Bahamas & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Cozumel_JADE5PCVCZMNPIPCV.jpg",
+      "combinedPrice": 1039,
+      "basePrice": 1818,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25337701",
+      "code": "ESCAPE9GALCZMGECFMHBPICMAGAL",
+      "startingLocation": "Galveston, Texas"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Sun",
+      "shipCode": "SUN",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Panama Canal Round-trip Miami: Mexico, Jamaica & Costa Rica",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/agnostic/NCL-Caribbean-Cruise-HarvestCaye.jpg",
+      "combinedPrice": 1819,
+      "basePrice": 3118,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Cartagena, Colombia",
+          "code": "CTG"
+        },
+        {
+          "name": "Puerto Limon, Costa Rica",
+          "code": "LIO"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Colón, Panama",
+          "code": "CLN"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Ocho Rios, Jamaica",
+          "code": "OCJ"
+        },
+        {
+          "name": "Panama Canal (Gatun Lake), Panama",
+          "code": "PCG"
+        }
+      ],
+      "packageId": "23377871",
+      "code": "SUN12MIAOCJGECCTGPCGCLNLIOBPICZMMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Jewel",
+      "shipCode": "JEWEL",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "5-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_getaway/1440x803_Puerto_Plata.jpg",
+      "combinedPrice": 589,
+      "basePrice": 988,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "23425664",
+      "code": "JEWEL5MIANPIPOPMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 4,
+      "durationText": "4-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "4-Day Caribbean Round-trip Miami: Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_pearl/1440_PEARL5MIANPIPOPMIA.jpg",
+      "combinedPrice": 599,
+      "basePrice": 1018,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "23910700",
+      "code": "PEARL4MIAPOPMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/caribbean-central-america/bahamas/great-stirrup-cay/NCL-Bahamas-GSC-Cruise2.png",
+      "combinedPrice": 739,
+      "basePrice": 1198,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Nassau, Bahamas",
+          "code": "NAS"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "23361661",
+      "code": "EPIC7PCVNASNPIGECCZMPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Galveston, Texas",
+      "departurePortCode": "GAL",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Galveston: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/us-cities/galveston/NCL_1440_VIVA_Galveston.jpg",
+      "combinedPrice": 759,
+      "basePrice": 1288,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "25337682",
+      "code": "ESCAPE7GALCZMRTBBPICMAGAL",
+      "startingLocation": "Galveston, Texas"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Aqua",
+      "shipCode": "AQUA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Nassau & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Cozumel_Mexico_DAWN7TPACZMBPIRTBCMATPA.jpg",
+      "combinedPrice": 1519,
+      "basePrice": 2768,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25332035",
+      "code": "AQUA7PCVCZMGECFMHNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 10,
+      "durationText": "10-day Cruise",
+      "departurePort": "New York, New York",
+      "departurePortCode": "NYC",
+      "region": "Caribbean",
+      "itineraryTitle": "10-day Caribbean from New York to San Juan: Bermuda & Barbados",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-StThomas-UsVirgin-VIVA7SJUTOVANUSLUBGIPHISTTSJU.jpg",
+      "combinedPrice": 2009,
+      "basePrice": 3758,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Royal Naval Dockyard, Bermuda",
+          "code": "WRF"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25342362",
+      "code": "PRIMA10NYCWRFTOVBASBGIANUPHISTTSJU",
+      "startingLocation": "New York, New York"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Breakaway",
+      "shipCode": "BREAKAWAY",
+      "duration": 4,
+      "durationText": "4-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Bahamas",
+      "itineraryTitle": "4-Day Bahamas from Orlando (Port Canaveral): Nassau & Great Stirrup Cay",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/bahamas-itineraries/1440_Nassau_PEARL3MIAFPONASMIA.jpg",
+      "combinedPrice": 609,
+      "basePrice": 1008,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Nassau, Bahamas",
+          "code": "NAS"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25421042",
+      "code": "BREAKAWAY4PCVNASNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Luna",
+      "shipCode": "LUNA",
+      "duration": 3,
+      "durationText": "3-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "3-Day Bahamas Round-trip Miami: Great Stirrup Cay & Nassau",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/bahamas-itineraries/1440x803_GettyImages-1170963352_blue_water_floating.jpg",
+      "combinedPrice": 629,
+      "basePrice": 1048,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Nassau, Bahamas",
+          "code": "NAS"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25337844",
+      "code": "LUNA3MIANASNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Breakaway",
+      "shipCode": "BREAKAWAY",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Bahamas",
+      "itineraryTitle": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_getaway/1440_GETAWAY5PCVPOPNPIPCV.jpg",
+      "combinedPrice": 699,
+      "basePrice": 1198,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25421021",
+      "code": "BREAKAWAY5PCVPOPNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Breakaway",
+      "shipCode": "BREAKAWAY",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Bahamas",
+      "itineraryTitle": "5-Day Caribbean from Orlando (Port Canaveral): Great Stirrup & Cozumel",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Cozumel_JADE5PCVCZMNPIPCV.jpg",
+      "combinedPrice": 719,
+      "basePrice": 1218,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25421032",
+      "code": "BREAKAWAY5PCVCZMNPIPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Breakaway",
+      "shipCode": "BREAKAWAY",
+      "duration": 5,
+      "durationText": "5-day Cruise",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Bahamas",
+      "itineraryTitle": "5-Day Caribbean Round-Trip Orlando: Great Stirrup & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE9PCVPOPSJUPHISTTTOVNPIPCV.jpg",
+      "combinedPrice": 779,
+      "basePrice": 1348,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "25421026",
+      "code": "BREAKAWAY5PCVNPIPOPPCV",
+      "startingLocation": "Orlando (Port Canaveral), Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "New Orleans, Louisiana",
+      "departurePortCode": "MSY",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Costa Maya_GEM7MIARTBBPICMACZMMIA.jpg",
+      "combinedPrice": 789,
+      "basePrice": 1338,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "25340056",
+      "code": "GETAWAY7MSYCZMRTBBPICMAMSY",
+      "startingLocation": "New Orleans, Louisiana"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao, Aruba & St. Lucia",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/north-america/puerto-rico/san-juan/NCL-PUERTO-RICO-CRUISE-LA-PERLA-SAN-JUAN.jpg",
+      "combinedPrice": 1119,
+      "basePrice": 2118,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        }
+      ],
+      "packageId": "25382865",
+      "code": "VIVA7SJUBASPHIWILORJSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Oranjestad, Willemstad & Philipsburg",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/north-america/puerto-rico/san-juan/NCL-PUERTO-RICO-CRUISE-LA-PERLA-SAN-JUAN.jpg",
+      "combinedPrice": 1119,
+      "basePrice": 2118,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        }
+      ],
+      "packageId": "25382864",
+      "code": "VIVA7SJUBASSLUBGIORJSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao, Aruba & St. Lucia",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/north-america/united-states/agnostic/NCL-From-Florida-Cruise-San-Juan-Street.jpg",
+      "combinedPrice": 1119,
+      "basePrice": 2118,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        }
+      ],
+      "packageId": "25382863",
+      "code": "VIVA7SJUPHIBASORJWILSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao & St. Lucia",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_breakaway/1440_Willemstad_GEM12LRMORJWILKRASTGSCABGISLUANUBASPHITOVLRM.jpg",
+      "combinedPrice": 1169,
+      "basePrice": 2218,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Kralendijk, Bonaire",
+          "code": "KRA"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        }
+      ],
+      "packageId": "25382871",
+      "code": "VIVA7SJUBASSLUKRAWILSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao, Aruba & St. Lucia",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Castries_St_Lucia_VIVA7SJUORJWILSLUBASSJU.jpg",
+      "combinedPrice": 1169,
+      "basePrice": 2218,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        }
+      ],
+      "packageId": "25382870",
+      "code": "VIVA7SJUORJBGIPHIBASSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao, Aruba & St. Lucia",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/destinations-ports/north-america/puerto-rico/san-juan/NCL-PUERTO-RICO-CRUISE-LA-PERLA-SAN-JUAN.jpg",
+      "combinedPrice": 1169,
+      "basePrice": 2218,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        }
+      ],
+      "packageId": "25382869",
+      "code": "VIVA7SJUPHIWILSLUBASSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 11,
+      "durationText": "11-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "11-Day Caribbean Round-Trip Philadelphia: Antigua & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-Philipsburg-VIVA7SJUTOVPHIANUBGISLUSTTSJU.jpg",
+      "combinedPrice": 1209,
+      "basePrice": 2208,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25389791",
+      "code": "PEARL11PHLPOPSJUANUSLUPHIPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Tortola & Barbados",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_bliss/1440_BLISS12NYCPOPSJUBASSTTTOVPHINYC.jpg",
+      "combinedPrice": 1209,
+      "basePrice": 2258,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25342343",
+      "code": "PRIMA7SJUSTTBASPHIBGITOVSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao, Aruba & St. Lucia",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Castries_St_Lucia_VIVA7SJUORJWILSLUBASSJU.jpg",
+      "combinedPrice": 1219,
+      "basePrice": 2318,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        }
+      ],
+      "packageId": "25382868",
+      "code": "VIVA7SJUORJWILSLUBASSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 11,
+      "durationText": "11-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "11-Day Caribbean Round-trip New York: Dominican Republic & San Juan",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440x803-shutterstock_247330879-SJU-SanJuan-PuertoRico-SUN11PCVNPISJUBASBGIORJKRAWILCLP.jpg",
+      "combinedPrice": 1259,
+      "basePrice": 2308,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25389802",
+      "code": "PEARL11PHLPHISLUANUSJUPOPPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 11,
+      "durationText": "11-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "11-Day Caribbean Round-trip Philadelphia: Puerto Rico & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Castries_St_Lucia_VIVA7SJUORJWILSLUBASSJU.jpg",
+      "combinedPrice": 1259,
+      "basePrice": 2308,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25389801",
+      "code": "PEARL11PHLANUSLUPHISJUPOPPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Tortola & Barbados",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_bliss/1440_BLISS12NYCPOPSJUBASSTTTOVPHINYC.jpg",
+      "combinedPrice": 1259,
+      "basePrice": 2358,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25342351",
+      "code": "PRIMA7SJUTOVBASPHIBGISTTSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Tortola & Barbados",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_bliss/1440_BLISS12NYCPOPSJUBASSTTTOVPHINYC.jpg",
+      "combinedPrice": 1259,
+      "basePrice": 2358,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25342349",
+      "code": "PRIMA7SJUSTTBASBGIANUPHITOVSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Eastern Caribbean from San Juan : Tortola & St. Thomas",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440-TORTOLA-BREAKAWAY7PCVTOVSTTNPIPCV_R.jpg",
+      "combinedPrice": 1259,
+      "basePrice": 2358,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25342348",
+      "code": "PRIMA7SJUTOVBASBGIANUPHISTTSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao, Aruba & St. Lucia",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Castries_St_Lucia_VIVA7SJUORJWILSLUBASSJU.jpg",
+      "combinedPrice": 1269,
+      "basePrice": 2418,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Willemstad, Curaçao",
+          "code": "WIL"
+        },
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        }
+      ],
+      "packageId": "25382861",
+      "code": "VIVA7SJUBASSLUWILORJSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean From San Juan to New York: Tortola & Barbados",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_bliss/1440_BLISS12NYCPOPSJUBASSTTTOVPHINYC.jpg",
+      "combinedPrice": 1289,
+      "basePrice": 2438,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        }
+      ],
+      "packageId": "25342338",
+      "code": "PRIMA7SJUTOVBASSTTNYC",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 12,
+      "durationText": "12-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "12-Day Caribbean Round-trip Philadelphia: Barbados & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Castries_St_Lucia_VIVA7SJUORJWILSLUBASSJU.jpg",
+      "combinedPrice": 1319,
+      "basePrice": 2418,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25389798",
+      "code": "PEARL12PHLPHIBGISLUANUSJUPOPPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Luna",
+      "shipCode": "LUNA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-Trip Miami: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_RoadTown-Tortola-BVI-ENCORE7MIANPISTTTOVPOPMIA.jpg",
+      "combinedPrice": 1349,
+      "basePrice": 2448,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        }
+      ],
+      "packageId": "25337851",
+      "code": "LUNA7MIANPISTTTOVPOPMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Luna",
+      "shipCode": "LUNA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "Miami, Florida",
+      "departurePortCode": "MIA",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_pearl/1440_British-Virgin-Islands_GEM9MIAPOPTOVPHISTTSJUNPIMIA.jpg",
+      "combinedPrice": 1399,
+      "basePrice": 2548,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25337860",
+      "code": "LUNA7MIAPOPTOVSTTNPIMIA",
+      "startingLocation": "Miami, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 7,
+      "durationText": "7-day Cruise",
+      "departurePort": "San Juan, Puerto Rico",
+      "departurePortCode": "SJU",
+      "region": "Caribbean",
+      "itineraryTitle": "7-Day Caribbean Round-trip San Juan: Curacao, Aruba & St. Lucia",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Castries_St_Lucia_VIVA7SJUORJWILSLUBASSJU.jpg",
+      "combinedPrice": 1419,
+      "basePrice": 2718,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Oranjestad, Aruba",
+          "code": "ORJ"
+        },
+        {
+          "name": "Bridgetown, Barbados",
+          "code": "BGI"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        }
+      ],
+      "packageId": "25382862",
+      "code": "VIVA7SJUORJBGISLUBASSJU",
+      "startingLocation": "San Juan, Puerto Rico"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Pearl",
+      "shipCode": "PEARL",
+      "duration": 11,
+      "durationText": "11-day Cruise",
+      "departurePort": "Philadelphia, Pennsylvania",
+      "departurePortCode": "PHL",
+      "region": "Caribbean",
+      "itineraryTitle": "11-Day Caribbean Round-trip Philadelphia: Puerto Rico & Dominican Republic",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/caribbean-itineraries/1440_Castries_St_Lucia_VIVA7SJUORJWILSLUBASSJU.jpg",
+      "combinedPrice": 2099,
+      "basePrice": 3998,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Basseterre, St. Kitts",
+          "code": "BAS"
+        },
+        {
+          "name": "Castries, St. Lucia",
+          "code": "SLU"
+        },
+        {
+          "name": "St. John's, Antigua",
+          "code": "ANU"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25389800",
+      "code": "PEARL11PHLBASSLUANUSJUPOPPHL",
+      "startingLocation": "Philadelphia, Pennsylvania"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Joy",
+      "shipCode": "JOY",
+      "duration": 17,
+      "durationText": "17-day Cruise",
+      "departurePort": "Los Angeles, California",
+      "departurePortCode": "LAX",
+      "region": "Caribbean",
+      "itineraryTitle": "17-Day Panama Canal from Los Angeles to Miami: Mexico & Jamaica",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/mexican-riviera-itineraries/1440_Cabo_San_Lucas_JOY17LAXCSLACAPRQPCLPCGCTGOCJGECMIA.jpg",
+      "combinedPrice": 2239,
+      "basePrice": 3838,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Panama City (Pacific Cruise Terminal), Panama",
+          "code": "PCT"
+        },
+        {
+          "name": "Cartagena, Colombia",
+          "code": "CTG"
+        },
+        {
+          "name": "Puntarenas (Puerto Caldera), Costa Rica",
+          "code": "PCL"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Puerto Quetzal, Guatemala",
+          "code": "PRQ"
+        },
+        {
+          "name": "Cabo San Lucas, Mexico",
+          "code": "CSL"
+        },
+        {
+          "name": "Acapulco, Mexico",
+          "code": "ACA"
+        },
+        {
+          "name": "Ocho Rios, Jamaica",
+          "code": "OCJ"
+        }
+      ],
+      "packageId": "25400696",
+      "code": "JOY17LAXCSLACAPRQPCLPCTCTGOCJGECMIA",
+      "startingLocation": "Los Angeles, California"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 10,
+      "durationText": "10-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_MCOCRUISETOUR9.jpg",
+      "combinedPrice": 1898,
+      "basePrice": 2447,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25382793",
+      "code": "MCOCRUISETOUR9PRIMA7PCVNPIFMHGECCZMPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Viva",
+      "shipCode": "VIVA",
+      "duration": 10,
+      "durationText": "10-day Cruisetour",
+      "departurePort": "Galveston, Texas",
+      "departurePortCode": "GAL",
+      "region": "Caribbean",
+      "itineraryTitle": "Galveston Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/galveston-cruisetours/1440x803_Galveston_Texas.jpg",
+      "combinedPrice": 1818,
+      "basePrice": 2327,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        },
+        {
+          "name": "Costa Maya, Mexico",
+          "code": "CMA"
+        }
+      ],
+      "packageId": "25402188",
+      "code": "GALCRUISETOUR1VIVA7GALCZMRTBBPICMAGAL",
+      "startingLocation": "Galveston, Texas"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Prima",
+      "shipCode": "PRIMA",
+      "duration": 10,
+      "durationText": "10-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_Cruisetour_16.jpg",
+      "combinedPrice": 1888,
+      "basePrice": 2507,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25382790",
+      "code": "MCOCRUISETOUR9PRIMA7PCVPOPSTTTOVNPIPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 10,
+      "durationText": "10-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_MCOCRUISETOUR2.jpg",
+      "combinedPrice": 1818,
+      "basePrice": 2307,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25382753",
+      "code": "MCOCRUISETOUR2ESCAPE7PCVPOPSTTTOVNPIPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 12,
+      "durationText": "12-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_MCOCRUISETOUR7.jpg",
+      "combinedPrice": 2888,
+      "basePrice": 4457,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Philipsburg, St. Maarten",
+          "code": "PHI"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "San Juan, Puerto Rico",
+          "code": "SJU"
+        }
+      ],
+      "packageId": "25382770",
+      "code": "MCOCRUISETOUR7GETAWAY9PCVPOPPHISTTTOVNPIPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 8,
+      "durationText": "8-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_Cruisetour_15.jpg",
+      "combinedPrice": 1718,
+      "basePrice": 2207,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25382764",
+      "code": "MCOCRUISETOUR5GETAWAY5PCVPOPNPIPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 8,
+      "durationText": "8-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_MCOCRUISETOUR5.jpg",
+      "combinedPrice": 1648,
+      "basePrice": 2057,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25382768",
+      "code": "MCOCRUISETOUR5GETAWAY5PCVNPICZMPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Breakaway",
+      "shipCode": "BREAKAWAY",
+      "duration": 10,
+      "durationText": "10-day Cruisetour",
+      "departurePort": "New Orleans, Louisiana",
+      "departurePortCode": "MSY",
+      "region": "Caribbean",
+      "itineraryTitle": "New Orleans Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/us-cities/new-orleans/New_Orleans_313894316.jpg",
+      "combinedPrice": 2138,
+      "basePrice": 2617,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Roatán (Bay Islands), Honduras",
+          "code": "RTB"
+        },
+        {
+          "name": "Harvest Caye, Belize",
+          "code": "BPI"
+        }
+      ],
+      "packageId": "25166216",
+      "code": "MSYCRUISETOUR5BREAKAWAY7MSYCZMRTBBPIMSY",
+      "startingLocation": "New Orleans, Louisiana"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Getaway",
+      "shipCode": "GETAWAY",
+      "duration": 10,
+      "durationText": "10-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_MCOCRUISETOUR6.jpg",
+      "combinedPrice": 2408,
+      "basePrice": 3557,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Puerto Plata, Dominican Republic",
+          "code": "POP"
+        },
+        {
+          "name": "St. Thomas, US Virgin Islands",
+          "code": "STT"
+        },
+        {
+          "name": "Tortola, British Virgin Islands",
+          "code": "TOV"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25382769",
+      "code": "MCOCRUISETOUR6GETAWAY7PCVCZMNPIPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Escape",
+      "shipCode": "ESCAPE",
+      "duration": 8,
+      "durationText": "8-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Bahamas",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_MCOCRUISETOUR3.jpg",
+      "combinedPrice": 1738,
+      "basePrice": 2207,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        }
+      ],
+      "packageId": "25382756",
+      "code": "MCOCRUISETOUR3ESCAPE5PCVCZMNPIPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 10,
+      "durationText": "10-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_MCOCRUISETOUR1.jpg",
+      "combinedPrice": 1808,
+      "basePrice": 2267,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "Falmouth, Jamaica",
+          "code": "FMH"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25382745",
+      "code": "MCOCRUISETOUR1EPIC7PCVNPIFMHGECCZMPCV",
+      "startingLocation": "Orlando, Florida"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "shipName": "Norwegian Epic",
+      "shipCode": "EPIC",
+      "duration": 10,
+      "durationText": "10-day Cruisetour",
+      "departurePort": "Orlando (Port Canaveral), Florida",
+      "departurePortCode": "PCV",
+      "region": "Caribbean",
+      "itineraryTitle": "Orlando Cruisetour",
+      "imageUrl": "https://www.ncl.com/content/dam/ncl/us/en/itineraries/orlando_cruisetour/1440x803_Orlando_Cruisetour_15.jpg",
+      "combinedPrice": 1788,
+      "basePrice": 2247,
+      "currency": "USD",
+      "ports": [
+        {
+          "name": "Nassau, Bahamas",
+          "code": "NAS"
+        },
+        {
+          "name": "Great Stirrup Cay, Bahamas",
+          "code": "NPI"
+        },
+        {
+          "name": "George Town, Grand Cayman",
+          "code": "GEC"
+        },
+        {
+          "name": "Cozumel, Mexico",
+          "code": "CZM"
+        }
+      ],
+      "packageId": "25382746",
+      "code": "MCOCRUISETOUR1EPIC7PCVNASNPIGECCZMPCV",
+      "startingLocation": "Orlando, Florida"
+    }
+  ]
+}
