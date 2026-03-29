@@ -169,7 +169,7 @@ export default function ContentSections() {
               </p>
             </div>
             <Link
-              href="/calculator"
+              href="/cruises"
               className="hidden sm:flex items-center gap-1 text-sm font-semibold text-teal hover:text-teal-dark transition-colors"
             >
               View all
@@ -177,7 +177,12 @@ export default function ContentSections() {
             </Link>
           </div>
 
-          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="relative">
+            {/* Scroll fade indicators */}
+            <div className="pointer-events-none absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-white to-transparent z-10" />
+            <div className="pointer-events-none absolute left-0 top-0 bottom-4 w-4 bg-gradient-to-r from-white to-transparent z-10 sm:hidden" />
+
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0" style={{ scrollbarWidth: "thin" }}>
             {REAL_TRENDING.map((deal) => {
               const line = CRUISE_LINES.find((l) => l.id === deal.cruiseLineId);
               return (
@@ -268,9 +273,10 @@ export default function ContentSections() {
               );
             })}
           </div>
+          </div>
 
           <Link
-            href="/calculator"
+            href="/cruises"
             className="sm:hidden flex items-center justify-center gap-1 mt-4 text-sm font-semibold text-teal hover:text-teal-dark transition-colors"
           >
             View all cruises
@@ -380,7 +386,9 @@ export default function ContentSections() {
             </p>
           </div>
 
-          <div className="flex gap-5 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
+          <div className="relative">
+            <div className="pointer-events-none absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory" style={{ scrollbarWidth: "thin" }}>
             {CRUISE_LINES.map((line) => (
               <Link
                 key={line.id}
@@ -393,6 +401,7 @@ export default function ContentSections() {
                 </span>
               </Link>
             ))}
+          </div>
           </div>
         </div>
       </section>

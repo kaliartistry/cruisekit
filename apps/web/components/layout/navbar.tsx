@@ -12,10 +12,12 @@ import {
   Users,
   Navigation,
   Star,
+  Anchor,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
 const NAV_LINKS = [
+  { label: "Deals", href: "/cruises", icon: Anchor },
   { label: "Plan", href: "/calculator", icon: Calculator },
   { label: "Explore", href: "/ports", icon: Map },
   { label: "Coordinate", href: "/groups", icon: Users },

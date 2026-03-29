@@ -5,6 +5,7 @@ const FOOTER_COLUMNS = [
   {
     title: "Platform",
     links: [
+      { label: "Cruise Deals", href: "/cruises" },
       { label: "True Cost Calculator", href: "/calculator" },
       { label: "Port Day Planner", href: "/ports" },
       { label: "Group Hub", href: "/groups" },
