@@ -1,161 +1,128 @@
 {
-  "scrapedAt": "2026-03-29T05:59:37.236Z",
-  "source": "msccruises.com (Algolia)",
-  "totalSailings": 9,
+  "scrapedAt": "2026-03-29T22:37:01.632Z",
+  "source": "msccruisesusa.com (Algolia intercepted)",
+  "totalSailings": 8,
   "sailings": [
     {
       "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SE20260511MIAMIA",
-      "duration": 4,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-05-11",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
-      "currency": "USD",
-      "ports": [],
-      "imageUrl": null,
-      "discountCodes": [
-        "MSVG15W"
-      ]
-    },
-    {
-      "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SE20260814MIAMIA",
+      "shipName": "MSC Virtuosa",
       "duration": 3,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-08-14",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
+      "departurePort": "Hamburg",
+      "itineraryTitle": "Northern Europe",
+      "fromPrice": 129,
       "currency": "USD",
-      "ports": [],
-      "imageUrl": null,
-      "discountCodes": []
+      "departureDate": "2026-04-17",
+      "ports": [
+        "Le Havre (Paris)"
+      ],
+      "imageUrl": "https://www.msccruisesusa.com/-/media/global-b2c-contents/cruise-results/destinations/northern-europe/nor_msc13022858_1050x365.jpg?bc=transparent&as=1&mh=365&mw=1050&hash=C135C9136385268FF79F4328C5F8C154",
+      "bookingUrl": null
     },
     {
       "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SH20260806CPVCPV",
+      "shipName": "MSC Grandiosa",
       "duration": 3,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-08-06",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
+      "departurePort": "Barcelona",
+      "itineraryTitle": "Mediterranean",
+      "fromPrice": 158,
       "currency": "USD",
+      "departureDate": "2026-10-31",
       "ports": [],
-      "imageUrl": null,
-      "discountCodes": [
-        "MSVG15W",
-        "MSVG10W"
-      ]
+      "imageUrl": "https://www.msccruisesusa.com/-/media/global-b2c-contents/cruise-results/destinations/mediterranean/fyc_med_9.jpg?bc=transparent&as=1&mh=900&mw=3180&hash=9D5C3A5960F5E4F90F7D9BA33969CA71",
+      "bookingUrl": null
     },
     {
       "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SH20260510CPVCPV",
+      "shipName": "MSC Seaside",
       "duration": 4,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-05-10",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
+      "departurePort": "Miami",
+      "itineraryTitle": "The Bahamas",
+      "fromPrice": 199,
       "currency": "USD",
-      "ports": [],
-      "imageUrl": null,
-      "discountCodes": []
+      "departureDate": "2026-09-14",
+      "ports": [
+        "Nassau",
+        "Ocean Cay MSC Marine Reserve",
+        "Ocean Cay MSC Marine Reserve"
+      ],
+      "imageUrl": "https://www.msccruisesusa.com/-/media/global-b2c-contents/cruise-results/destinations/caribbean-cuba-antilles/fyc_car_01.jpg?bc=transparent&as=1&mh=900&mw=3180&hash=AA41BDA92039520097355A4095000F25",
+      "bookingUrl": null
     },
     {
       "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SH20260816CPVCPV",
+      "shipName": "MSC Seaside",
+      "duration": 3,
+      "departurePort": "Miami",
+      "itineraryTitle": "The Bahamas",
+      "fromPrice": 199,
+      "currency": "USD",
+      "departureDate": "2026-10-16",
+      "ports": [
+        "Nassau",
+        "Ocean Cay MSC Marine Reserve"
+      ],
+      "imageUrl": "https://www.msccruisesusa.com/-/media/us/2025-itineraries/uux4_ocean_cay_desktop.jpg?bc=transparent&as=1&mh=474&mw=1677&hash=6C096D522BFA9A056FB9A173BE252DE2",
+      "bookingUrl": null
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "MSC Seaside",
+      "duration": 3,
+      "departurePort": "Miami",
+      "itineraryTitle": "The Bahamas",
+      "fromPrice": 203,
+      "currency": "USD",
+      "departureDate": "2026-10-30",
+      "ports": [
+        "Nassau",
+        "Ocean Cay MSC Marine Reserve"
+      ],
+      "imageUrl": "https://www.msccruisesusa.com/-/media/global-b2c-contents/cruise-results/destinations/caribbean-cuba-antilles/fyc_car_21.jpg?bc=transparent&as=1&mh=900&mw=3180&hash=B4525289AD73850A896C75CB45A752CC",
+      "bookingUrl": null
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "MSC Bellissima",
+      "duration": 3,
+      "departurePort": "Incheon",
+      "itineraryTitle": "Asia",
+      "fromPrice": 204,
+      "currency": "USD",
+      "departureDate": "2027-06-20",
+      "ports": [],
+      "imageUrl": "https://www.msccruisesusa.com/-/media/global-b2c-contents/cruise-results/destinations/asia/fyc_fae_14.jpg?bc=transparent&as=1&mh=900&mw=3180&hash=4F95F9C5B131B2243C06D248B3349504",
+      "bookingUrl": null
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "MSC Seaside",
       "duration": 4,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-08-16",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
+      "departurePort": "Miami",
+      "itineraryTitle": "The Bahamas",
+      "fromPrice": 209,
       "currency": "USD",
-      "ports": [],
-      "imageUrl": null,
-      "discountCodes": []
+      "departureDate": "2026-11-16",
+      "ports": [
+        "Nassau",
+        "Ocean Cay MSC Marine Reserve"
+      ],
+      "imageUrl": "https://www.msccruisesusa.com/-/media/global-b2c-contents/cruise-results/destinations/caribbean-cuba-antilles/fyc_car_04.jpg?bc=transparent&as=1&mh=900&mw=3180&hash=B319F7AD9FC271ABBCD17EEB4B225870",
+      "bookingUrl": null
     },
     {
       "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SC20260503GLSGLS",
-      "duration": 7,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-05-03",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
+      "shipName": "MSC Opera",
+      "duration": 3,
+      "departurePort": "La Romana",
+      "itineraryTitle": "Southern Caribbean",
+      "fromPrice": 209,
       "currency": "USD",
-      "ports": [],
-      "imageUrl": null,
-      "discountCodes": [
-        "MSVG15W",
-        "MSVG5W"
-      ]
-    },
-    {
-      "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SE20260629MIAMIA",
-      "duration": 4,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-06-29",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
-      "currency": "USD",
-      "ports": [],
-      "imageUrl": null,
-      "discountCodes": []
-    },
-    {
-      "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SH20260517CPVCPV",
-      "duration": 7,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-05-17",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
-      "currency": "USD",
-      "ports": [],
-      "imageUrl": null,
-      "discountCodes": []
-    },
-    {
-      "cruiseLine": "msc",
-      "shipName": "Unknown",
-      "cruiseId": "SE20260817MIAMI1",
-      "duration": 7,
-      "departurePort": "",
-      "region": "Caribbean",
-      "departureDate": "2026-08-17",
-      "arrivalDate": null,
-      "fromPrice": 0,
-      "maxPrice": 0,
-      "currency": "USD",
-      "ports": [],
-      "imageUrl": null,
-      "discountCodes": [
-        "MSVG5W"
-      ]
+      "departureDate": "2027-04-12",
+      "ports": [
+        "Catalina Island"
+      ],
+      "imageUrl": "https://www.msccruisesusa.com/-/media/global-b2c-contents/cruise-results/destinations/caribbean-cuba-antilles/car_7.jpg?bc=transparent&as=1&mh=900&mw=3180&hash=0384D0F2694C6B84DD73A9DD8995396E",
+      "bookingUrl": null
     }
   ]
 }

@@ -15,6 +15,8 @@ import nclData from "./scraped/ncl-sailings.json";
 import virginData from "./scraped/virgin-sailings.json";
 import rciData from "./scraped/rci-sailings.json";
 import celebrityData from "./scraped/celebrity-sailings.json";
+import mscData from "./scraped/msc-sailings.json";
+import halData from "./scraped/hal-sailings.json";
 
 export interface RealDeal {
   id: string;
@@ -156,6 +158,46 @@ function normalizeCelebrity(): RealDeal[] {
     }));
 }
 
+function normalizeMSC(): RealDeal[] {
+  return mscData.sailings
+    .filter((s) => s.fromPrice > 0)
+    .map((s, i) => ({
+      id: `msc-${i}`,
+      cruiseLine: "MSC Cruises",
+      cruiseLineId: "msc",
+      shipName: s.shipName,
+      duration: s.duration,
+      departurePort: s.departurePort,
+      itineraryTitle: s.itineraryTitle,
+      fromPrice: s.fromPrice,
+      currency: "USD",
+      departureDate: s.departureDate || null,
+      ports: Array.isArray(s.ports) ? s.ports.filter(Boolean) : [],
+      imageUrl: s.imageUrl || null,
+      bookingUrl: null,
+    }));
+}
+
+function normalizeHAL(): RealDeal[] {
+  return halData.sailings
+    .filter((s) => s.fromPrice > 0 && s.duration > 0)
+    .map((s, i) => ({
+      id: `hal-${i}`,
+      cruiseLine: "Holland America Line",
+      cruiseLineId: "holland-america",
+      shipName: s.shipName,
+      duration: s.duration,
+      departurePort: s.departurePort,
+      itineraryTitle: s.itineraryTitle,
+      fromPrice: s.fromPrice,
+      currency: "USD",
+      departureDate: s.departureDate || null,
+      ports: Array.isArray(s.ports) ? s.ports.filter(Boolean) : [],
+      imageUrl: s.imageUrl || null,
+      bookingUrl: null,
+    }));
+}
+
 /** All real deals from scraped data, sorted by price (lowest first) */
 export const REAL_DEALS: RealDeal[] = [
   ...normalizeCarnival(),
@@ -163,6 +205,8 @@ export const REAL_DEALS: RealDeal[] = [
   ...normalizeVirgin(),
   ...normalizeRCI(),
   ...normalizeCelebrity(),
+  ...normalizeMSC(),
+  ...normalizeHAL(),
 ].sort((a, b) => a.fromPrice - b.fromPrice);
 
 /** Get top N deals by lowest price */
