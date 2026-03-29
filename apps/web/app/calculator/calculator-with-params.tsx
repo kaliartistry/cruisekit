@@ -34,12 +34,20 @@ function CalculatorFormWithSearchParams() {
       ? Math.min(11, Math.max(0, parseInt(monthParam, 10)))
       : undefined;
 
+  // Parse `fare` param (pre-fill base fare from deal cards)
+  const fareParam = searchParams.get("fare");
+  const defaultFare =
+    fareParam && !isNaN(parseFloat(fareParam))
+      ? fareParam
+      : undefined;
+
   return (
     <CalculatorForm
       defaultCruiseLineIds={defaultCruiseLineIds}
       defaultDuration={defaultDuration}
       defaultAdults={defaultAdults}
       defaultMonth={defaultMonth}
+      defaultFare={defaultFare}
     />
   );
 }

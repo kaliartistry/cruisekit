@@ -1,0 +1,161 @@
+{
+  "scrapedAt": "2026-03-29T05:59:37.236Z",
+  "source": "msccruises.com (Algolia)",
+  "totalSailings": 9,
+  "sailings": [
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SE20260511MIAMIA",
+      "duration": 4,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-05-11",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": [
+        "MSVG15W"
+      ]
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SE20260814MIAMIA",
+      "duration": 3,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-08-14",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": []
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SH20260806CPVCPV",
+      "duration": 3,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-08-06",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": [
+        "MSVG15W",
+        "MSVG10W"
+      ]
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SH20260510CPVCPV",
+      "duration": 4,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-05-10",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": []
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SH20260816CPVCPV",
+      "duration": 4,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-08-16",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": []
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SC20260503GLSGLS",
+      "duration": 7,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-05-03",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": [
+        "MSVG15W",
+        "MSVG5W"
+      ]
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SE20260629MIAMIA",
+      "duration": 4,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-06-29",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": []
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SH20260517CPVCPV",
+      "duration": 7,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-05-17",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": []
+    },
+    {
+      "cruiseLine": "msc",
+      "shipName": "Unknown",
+      "cruiseId": "SE20260817MIAMI1",
+      "duration": 7,
+      "departurePort": "",
+      "region": "Caribbean",
+      "departureDate": "2026-08-17",
+      "arrivalDate": null,
+      "fromPrice": 0,
+      "maxPrice": 0,
+      "currency": "USD",
+      "ports": [],
+      "imageUrl": null,
+      "discountCodes": [
+        "MSVG5W"
+      ]
+    }
+  ]
+}

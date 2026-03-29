@@ -187,6 +187,8 @@ interface CalculatorFormProps {
   defaultAdults?: number;
   /** Pre-select travel month (0-indexed: 0=Jan, 11=Dec) */
   defaultMonth?: number;
+  /** Pre-fill base fare (e.g., from a deal card click) */
+  defaultFare?: string;
 }
 
 export default function CalculatorForm({
@@ -195,6 +197,7 @@ export default function CalculatorForm({
   defaultDuration,
   defaultAdults,
   defaultMonth,
+  defaultFare,
 }: CalculatorFormProps = {}) {
   /* -- Resolve default cruise line IDs with backward compat ---------- */
   const resolvedDefaultIds = useMemo(() => {
@@ -218,7 +221,7 @@ export default function CalculatorForm({
   const [adults, setAdults] = useState(defaultAdults ?? 2);
   const [children, setChildren] = useState(0);
   const [cabinType, setCabinType] = useState<CabinType>("balcony");
-  const [baseFare, setBaseFare] = useState("");
+  const [baseFare, setBaseFare] = useState(defaultFare ?? "");
 
   const seasonalInfo = month !== undefined ? getSeasonalMultiplier(month) : null;
 

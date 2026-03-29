@@ -1,0 +1,5768 @@
+{
+  "scrapedAt": "2026-03-29T06:00:29.667Z",
+  "source": "virginvoyages.com (GraphQL)",
+  "totalSailings": 292,
+  "allRegionsSailings": 440,
+  "sailings": [
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-04-01",
+      "arrivalDate": "2026-04-05",
+      "fromPrice": 5912,
+      "maxPrice": 6000,
+      "currency": "USD",
+      "packageCode": "4NKW2",
+      "ports": []
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-04-04",
+      "arrivalDate": "2026-04-11",
+      "fromPrice": 2646,
+      "maxPrice": 13160,
+      "currency": "USD",
+      "packageCode": "7NGOR2",
+      "ports": []
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-04-05",
+      "arrivalDate": "2026-04-10",
+      "fromPrice": 2588,
+      "maxPrice": 8500,
+      "currency": "USD",
+      "packageCode": "5NCZ",
+      "ports": [
+        "MIA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-04-10",
+      "arrivalDate": "2026-04-15",
+      "fromPrice": 1490,
+      "maxPrice": 2540,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-04-11",
+      "arrivalDate": "2026-04-18",
+      "fromPrice": 2226,
+      "maxPrice": 16310,
+      "currency": "USD",
+      "packageCode": "7NGOR2",
+      "ports": []
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-04-15",
+      "arrivalDate": "2026-04-19",
+      "fromPrice": 2112,
+      "maxPrice": 2378,
+      "currency": "USD",
+      "packageCode": "4NKW2",
+      "ports": []
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-04-18",
+      "arrivalDate": "2026-04-25",
+      "fromPrice": 2116,
+      "maxPrice": 12670,
+      "currency": "USD",
+      "packageCode": "7NPD",
+      "ports": [
+        "MIA",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-04-25",
+      "arrivalDate": "2026-05-02",
+      "fromPrice": 2226,
+      "maxPrice": 32060,
+      "currency": "USD",
+      "packageCode": "7NGOR2",
+      "ports": []
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-05-02",
+      "arrivalDate": "2026-05-07",
+      "fromPrice": 2590,
+      "maxPrice": 14000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-05-07",
+      "arrivalDate": "2026-05-11",
+      "fromPrice": 1512,
+      "maxPrice": 14960,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-05-11",
+      "arrivalDate": "2026-05-16",
+      "fromPrice": 1490,
+      "maxPrice": 16300,
+      "currency": "USD",
+      "packageCode": "5NCZ",
+      "ports": [
+        "MIA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-05-16",
+      "arrivalDate": "2026-05-21",
+      "fromPrice": 2964,
+      "maxPrice": 15950,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-05-21",
+      "arrivalDate": "2026-05-25",
+      "fromPrice": 1884,
+      "maxPrice": 11840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-05-25",
+      "arrivalDate": "2026-05-30",
+      "fromPrice": 2158,
+      "maxPrice": 14600,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-05-30",
+      "arrivalDate": "2026-06-04",
+      "fromPrice": 3012,
+      "maxPrice": 13250,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-06-04",
+      "arrivalDate": "2026-06-08",
+      "fromPrice": 1884,
+      "maxPrice": 12800,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-06-08",
+      "arrivalDate": "2026-06-13",
+      "fromPrice": 1890,
+      "maxPrice": 14000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-06-13",
+      "arrivalDate": "2026-06-18",
+      "fromPrice": 2190,
+      "maxPrice": 19000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-06-18",
+      "arrivalDate": "2026-06-22",
+      "fromPrice": 1832,
+      "maxPrice": 15120,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-06-22",
+      "arrivalDate": "2026-06-27",
+      "fromPrice": 1590,
+      "maxPrice": 14000,
+      "currency": "USD",
+      "packageCode": "5NCM",
+      "ports": [
+        "MIA",
+        "CMA",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-06-27",
+      "arrivalDate": "2026-07-02",
+      "fromPrice": 3190,
+      "maxPrice": 13450,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-07-02",
+      "arrivalDate": "2026-07-06",
+      "fromPrice": 1512,
+      "maxPrice": 15440,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-07-06",
+      "arrivalDate": "2026-07-11",
+      "fromPrice": 1990,
+      "maxPrice": 14000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-07-11",
+      "arrivalDate": "2026-07-16",
+      "fromPrice": 3012,
+      "maxPrice": 21000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-07-16",
+      "arrivalDate": "2026-07-20",
+      "fromPrice": 1432,
+      "maxPrice": 15040,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-07-20",
+      "arrivalDate": "2026-07-25",
+      "fromPrice": 1690,
+      "maxPrice": 18300,
+      "currency": "USD",
+      "packageCode": "5NCZ",
+      "ports": [
+        "MIA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-07-25",
+      "arrivalDate": "2026-07-30",
+      "fromPrice": 2390,
+      "maxPrice": 19500,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-07-30",
+      "arrivalDate": "2026-08-03",
+      "fromPrice": 1512,
+      "maxPrice": 15440,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-08-03",
+      "arrivalDate": "2026-08-08",
+      "fromPrice": 1732,
+      "maxPrice": 18500,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-08-08",
+      "arrivalDate": "2026-08-13",
+      "fromPrice": 2490,
+      "maxPrice": 11600,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-08-13",
+      "arrivalDate": "2026-08-17",
+      "fromPrice": 1272,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-08-17",
+      "arrivalDate": "2026-08-22",
+      "fromPrice": 1490,
+      "maxPrice": 15500,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-08-22",
+      "arrivalDate": "2026-08-27",
+      "fromPrice": 2302,
+      "maxPrice": 13000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-08-27",
+      "arrivalDate": "2026-08-31",
+      "fromPrice": 1272,
+      "maxPrice": 10000,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-08-31",
+      "arrivalDate": "2026-09-05",
+      "fromPrice": 1490,
+      "maxPrice": 15500,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-09-05",
+      "arrivalDate": "2026-09-10",
+      "fromPrice": 2490,
+      "maxPrice": 13250,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-09-10",
+      "arrivalDate": "2026-09-14",
+      "fromPrice": 1192,
+      "maxPrice": 13520,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-09-14",
+      "arrivalDate": "2026-09-19",
+      "fromPrice": 1390,
+      "maxPrice": 15750,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-09-19",
+      "arrivalDate": "2026-09-24",
+      "fromPrice": 2390,
+      "maxPrice": 16250,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-09-24",
+      "arrivalDate": "2026-09-28",
+      "fromPrice": 1192,
+      "maxPrice": 10240,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-09-28",
+      "arrivalDate": "2026-10-03",
+      "fromPrice": 1490,
+      "maxPrice": 15750,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-10-03",
+      "arrivalDate": "2026-10-08",
+      "fromPrice": 2254,
+      "maxPrice": 13250,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-10-08",
+      "arrivalDate": "2026-10-12",
+      "fromPrice": 1618,
+      "maxPrice": 13600,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-10-12",
+      "arrivalDate": "2026-10-17",
+      "fromPrice": 1826,
+      "maxPrice": 16750,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-10-17",
+      "arrivalDate": "2026-10-22",
+      "fromPrice": 2254,
+      "maxPrice": 12750,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-10-22",
+      "arrivalDate": "2026-10-26",
+      "fromPrice": 1352,
+      "maxPrice": 13600,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-10-25",
+      "arrivalDate": "2026-10-31",
+      "fromPrice": 2628,
+      "maxPrice": 17760,
+      "currency": "USD",
+      "packageCode": "6NGT2",
+      "ports": [
+        "MIA",
+        "GDT",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-10-31",
+      "arrivalDate": "2026-11-07",
+      "fromPrice": 1946,
+      "maxPrice": 14700,
+      "currency": "USD",
+      "packageCode": "7NSE2",
+      "ports": [
+        "SJU",
+        "WIL",
+        "AUA",
+        "FDF",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-10-31",
+      "arrivalDate": "2026-11-05",
+      "fromPrice": 1496,
+      "maxPrice": 17700,
+      "currency": "USD",
+      "packageCode": "5NCZH2",
+      "ports": [
+        "MIA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-01",
+      "arrivalDate": "2026-11-08",
+      "fromPrice": 2086,
+      "maxPrice": 21070,
+      "currency": "USD",
+      "packageCode": "7NGOR3",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-05",
+      "arrivalDate": "2026-11-09",
+      "fromPrice": 1350,
+      "maxPrice": 13000,
+      "currency": "USD",
+      "packageCode": "4NKW4",
+      "ports": [
+        "MIA",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-07",
+      "arrivalDate": "2026-11-14",
+      "fromPrice": 2786,
+      "maxPrice": 15400,
+      "currency": "USD",
+      "packageCode": "7NSJR",
+      "ports": [
+        "SJU",
+        "SXM",
+        "BGI",
+        "SLU",
+        "FDF",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-08",
+      "arrivalDate": "2026-11-16",
+      "fromPrice": 2384,
+      "maxPrice": 22800,
+      "currency": "USD",
+      "packageCode": "8NSJM3",
+      "ports": [
+        "MIA",
+        "POP",
+        "SJU",
+        "TOV",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-09",
+      "arrivalDate": "2026-11-14",
+      "fromPrice": 1778,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-14",
+      "arrivalDate": "2026-11-19",
+      "fromPrice": 1732,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 6,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-14",
+      "arrivalDate": "2026-11-20",
+      "fromPrice": 2028,
+      "maxPrice": 16500,
+      "currency": "USD",
+      "packageCode": "6NSJB2",
+      "ports": [
+        "SJU",
+        "TOV",
+        "ANU",
+        "SLU",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-15",
+      "arrivalDate": "2026-11-25",
+      "fromPrice": 2972,
+      "maxPrice": 37000,
+      "currency": "USD",
+      "packageCode": "10NMM",
+      "ports": [
+        "MIA",
+        "SXM",
+        "TOV",
+        "SKB",
+        "ANU",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-16",
+      "arrivalDate": "2026-11-22",
+      "fromPrice": 2020,
+      "maxPrice": 17100,
+      "currency": "USD",
+      "packageCode": "6NRM4",
+      "ports": [
+        "MIA",
+        "CMA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-19",
+      "arrivalDate": "2026-11-23",
+      "fromPrice": 1238,
+      "maxPrice": 13000,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 8,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-20",
+      "arrivalDate": "2026-11-28",
+      "fromPrice": 2384,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "8NSJC",
+      "ports": [
+        "SJU",
+        "STT",
+        "WIL",
+        "AUA",
+        "SKB",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-23",
+      "arrivalDate": "2026-11-28",
+      "fromPrice": 1732,
+      "maxPrice": 16500,
+      "currency": "USD",
+      "packageCode": "5NORB",
+      "ports": [
+        "MIA",
+        "OCJ",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-25",
+      "arrivalDate": "2026-11-30",
+      "fromPrice": 1540,
+      "maxPrice": 16150,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-28",
+      "arrivalDate": "2026-12-03",
+      "fromPrice": 1258,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NCM",
+      "ports": [
+        "MIA",
+        "CMA",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-28",
+      "arrivalDate": "2026-12-05",
+      "fromPrice": 2226,
+      "maxPrice": 18900,
+      "currency": "USD",
+      "packageCode": "7NSJCA",
+      "ports": [
+        "SJU",
+        "STT",
+        "TOV",
+        "SKB",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-29",
+      "arrivalDate": "2026-12-05",
+      "fromPrice": 1788,
+      "maxPrice": 16020,
+      "currency": "USD",
+      "packageCode": "6NMGO",
+      "ports": [
+        "MIA",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-11-30",
+      "arrivalDate": "2026-12-10",
+      "fromPrice": 2980,
+      "maxPrice": 26000,
+      "currency": "USD",
+      "packageCode": "10NDP",
+      "ports": [
+        "MIA",
+        "SXM",
+        "TOV",
+        "STX",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-03",
+      "arrivalDate": "2026-12-07",
+      "fromPrice": 1238,
+      "maxPrice": 13000,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-05",
+      "arrivalDate": "2026-12-12",
+      "fromPrice": 2226,
+      "maxPrice": 15750,
+      "currency": "USD",
+      "packageCode": "7NSE",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "FDF",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-05",
+      "arrivalDate": "2026-12-13",
+      "fromPrice": 1904,
+      "maxPrice": 21600,
+      "currency": "USD",
+      "packageCode": "8NCP2",
+      "ports": [
+        "MIA",
+        "STX",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-07",
+      "arrivalDate": "2026-12-12",
+      "fromPrice": 1398,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-10",
+      "arrivalDate": "2026-12-14",
+      "fromPrice": 1238,
+      "maxPrice": 13000,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-12",
+      "arrivalDate": "2026-12-19",
+      "fromPrice": 2226,
+      "maxPrice": 19250,
+      "currency": "USD",
+      "packageCode": "7NSJR",
+      "ports": [
+        "SJU",
+        "SXM",
+        "BGI",
+        "SLU",
+        "FDF",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-12",
+      "arrivalDate": "2026-12-17",
+      "fromPrice": 1400,
+      "maxPrice": 16250,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-13",
+      "arrivalDate": "2026-12-19",
+      "fromPrice": 1668,
+      "maxPrice": 16200,
+      "currency": "USD",
+      "packageCode": "6NMGO2",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 9,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-14",
+      "arrivalDate": "2026-12-23",
+      "fromPrice": 2502,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "9NSJM",
+      "ports": [
+        "MIA",
+        "SXM",
+        "STT",
+        "SJU",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-17",
+      "arrivalDate": "2026-12-21",
+      "fromPrice": 1278,
+      "maxPrice": 13000,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-19",
+      "arrivalDate": "2026-12-27",
+      "fromPrice": 2864,
+      "maxPrice": 18560,
+      "currency": "USD",
+      "packageCode": "8NPD3",
+      "ports": [
+        "MIA",
+        "POP",
+        "SJU",
+        "SXM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-19",
+      "arrivalDate": "2026-12-26",
+      "fromPrice": 2226,
+      "maxPrice": 28700,
+      "currency": "USD",
+      "packageCode": "7NSFO",
+      "ports": [
+        "SJU",
+        "SKB",
+        "FDF",
+        "AUA",
+        "WIL"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-21",
+      "arrivalDate": "2026-12-26",
+      "fromPrice": 1590,
+      "maxPrice": 21250,
+      "currency": "USD",
+      "packageCode": "5NCH",
+      "ports": [
+        "MIA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-23",
+      "arrivalDate": "2026-12-28",
+      "fromPrice": 1872,
+      "maxPrice": 21300,
+      "currency": "USD",
+      "packageCode": "5NBCH",
+      "ports": [
+        "MIA",
+        "BIM",
+        "GDT"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-26",
+      "arrivalDate": "2026-12-30",
+      "fromPrice": 1432,
+      "maxPrice": 13000,
+      "currency": "USD",
+      "packageCode": "4NKW4",
+      "ports": [
+        "MIA",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-26",
+      "arrivalDate": "2027-01-02",
+      "fromPrice": 3766,
+      "maxPrice": 30800,
+      "currency": "USD",
+      "packageCode": "7NSFS",
+      "ports": [
+        "SJU",
+        "SXM",
+        "FDF",
+        "BGI",
+        "SLU",
+        "ANU"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-27",
+      "arrivalDate": "2027-01-03",
+      "fromPrice": 3766,
+      "maxPrice": 25830,
+      "currency": "USD",
+      "packageCode": "7NRNYA2",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-28",
+      "arrivalDate": "2027-01-07",
+      "fromPrice": 4776,
+      "maxPrice": 37000,
+      "currency": "USD",
+      "packageCode": "10NBNY",
+      "ports": [
+        "MIA",
+        "SXM",
+        "SKB",
+        "TOV",
+        "ANU",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2026-12-30",
+      "arrivalDate": "2027-01-04",
+      "fromPrice": 2790,
+      "maxPrice": 16900,
+      "currency": "USD",
+      "packageCode": "5NPNY",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-02",
+      "arrivalDate": "2027-01-09",
+      "fromPrice": 1946,
+      "maxPrice": 12950,
+      "currency": "USD",
+      "packageCode": "7NRT",
+      "ports": [
+        "SJU",
+        "TOV",
+        "BGI",
+        "SLU",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-03",
+      "arrivalDate": "2027-01-10",
+      "fromPrice": 1946,
+      "maxPrice": 20720,
+      "currency": "USD",
+      "packageCode": "7NPD",
+      "ports": [
+        "MIA",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-04",
+      "arrivalDate": "2027-01-09",
+      "fromPrice": 1290,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NCM",
+      "ports": [
+        "MIA",
+        "CMA",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-07",
+      "arrivalDate": "2027-01-11",
+      "fromPrice": 1052,
+      "maxPrice": 14280,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-09",
+      "arrivalDate": "2027-01-16",
+      "fromPrice": 1946,
+      "maxPrice": 19250,
+      "currency": "USD",
+      "packageCode": "7NSE",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "FDF",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-09",
+      "arrivalDate": "2027-01-14",
+      "fromPrice": 1390,
+      "maxPrice": 17000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-10",
+      "arrivalDate": "2027-01-16",
+      "fromPrice": 1668,
+      "maxPrice": 17640,
+      "currency": "USD",
+      "packageCode": "6NMGO",
+      "ports": [
+        "MIA",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-11",
+      "arrivalDate": "2027-01-21",
+      "fromPrice": 2792,
+      "maxPrice": 27000,
+      "currency": "USD",
+      "packageCode": "10NDP",
+      "ports": [
+        "MIA",
+        "SXM",
+        "TOV",
+        "STX",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-14",
+      "arrivalDate": "2027-01-18",
+      "fromPrice": 1032,
+      "maxPrice": 14280,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-16",
+      "arrivalDate": "2027-01-24",
+      "fromPrice": 2224,
+      "maxPrice": 23360,
+      "currency": "USD",
+      "packageCode": "8NCRB",
+      "ports": [
+        "MIA",
+        "CMA",
+        "RTB",
+        "BZE",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-16",
+      "arrivalDate": "2027-01-23",
+      "fromPrice": 1954,
+      "maxPrice": 18900,
+      "currency": "USD",
+      "packageCode": "7NSJR",
+      "ports": [
+        "SJU",
+        "SXM",
+        "BGI",
+        "SLU",
+        "FDF",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-18",
+      "arrivalDate": "2027-01-23",
+      "fromPrice": 1190,
+      "maxPrice": 18600,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-21",
+      "arrivalDate": "2027-01-25",
+      "fromPrice": 1112,
+      "maxPrice": 14280,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 6,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-23",
+      "arrivalDate": "2027-01-29",
+      "fromPrice": 1668,
+      "maxPrice": 16200,
+      "currency": "USD",
+      "packageCode": "6NSJB",
+      "ports": [
+        "SJU",
+        "TOV",
+        "SKB",
+        "ANU",
+        "SLU"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-23",
+      "arrivalDate": "2027-01-28",
+      "fromPrice": 1390,
+      "maxPrice": 17000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-24",
+      "arrivalDate": "2027-01-30",
+      "fromPrice": 1668,
+      "maxPrice": 14940,
+      "currency": "USD",
+      "packageCode": "6NKGP",
+      "ports": [
+        "MIA",
+        "EYW",
+        "GDT",
+        "POP"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-25",
+      "arrivalDate": "2027-02-04",
+      "fromPrice": 2380,
+      "maxPrice": 21000,
+      "currency": "USD",
+      "packageCode": "10NMM",
+      "ports": [
+        "MIA",
+        "SXM",
+        "TOV",
+        "SKB",
+        "ANU",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-28",
+      "arrivalDate": "2027-02-01",
+      "fromPrice": 1032,
+      "maxPrice": 14280,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 8,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-29",
+      "arrivalDate": "2027-02-06",
+      "fromPrice": 2224,
+      "maxPrice": 21440,
+      "currency": "USD",
+      "packageCode": "8NSJU3",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "KRA",
+        "FDF",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-01-30",
+      "arrivalDate": "2027-02-07",
+      "fromPrice": 2224,
+      "maxPrice": 24960,
+      "currency": "USD",
+      "packageCode": "8NPD4",
+      "ports": [
+        "MIA",
+        "POP",
+        "SJU",
+        "SXM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-01",
+      "arrivalDate": "2027-02-06",
+      "fromPrice": 1390,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-04",
+      "arrivalDate": "2027-02-08",
+      "fromPrice": 1584,
+      "maxPrice": 1584,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-06",
+      "arrivalDate": "2027-02-11",
+      "fromPrice": 1290,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-06",
+      "arrivalDate": "2027-02-13",
+      "fromPrice": 2086,
+      "maxPrice": 18900,
+      "currency": "USD",
+      "packageCode": "7NSJ8",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-07",
+      "arrivalDate": "2027-02-14",
+      "fromPrice": 1946,
+      "maxPrice": 21070,
+      "currency": "USD",
+      "packageCode": "7NONB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-08",
+      "arrivalDate": "2027-02-18",
+      "fromPrice": 3362,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "10NGTV",
+      "ports": [
+        "MIA",
+        "SXM",
+        "TOV",
+        "STX",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-11",
+      "arrivalDate": "2027-02-15",
+      "fromPrice": 1394,
+      "maxPrice": 14360,
+      "currency": "USD",
+      "packageCode": "4NKWV",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-13",
+      "arrivalDate": "2027-02-20",
+      "fromPrice": 2366,
+      "maxPrice": 19600,
+      "currency": "USD",
+      "packageCode": "7NSCRV",
+      "ports": [
+        "SJU",
+        "SAM",
+        "GDT",
+        "CBJ"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-14",
+      "arrivalDate": "2027-02-21",
+      "fromPrice": 2226,
+      "maxPrice": 14630,
+      "currency": "USD",
+      "packageCode": "7NMPRV",
+      "ports": [
+        "MIA",
+        "FPO",
+        "PGO",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-15",
+      "arrivalDate": "2027-02-20",
+      "fromPrice": 2018,
+      "maxPrice": 13000,
+      "currency": "USD",
+      "packageCode": "5NMRV",
+      "ports": [
+        "MIA",
+        "FPO",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-18",
+      "arrivalDate": "2027-02-22",
+      "fromPrice": 1112,
+      "maxPrice": 14200,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-20",
+      "arrivalDate": "2027-02-25",
+      "fromPrice": 1190,
+      "maxPrice": 12250,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-20",
+      "arrivalDate": "2027-02-27",
+      "fromPrice": 2086,
+      "maxPrice": 15330,
+      "currency": "USD",
+      "packageCode": "7NSJR2",
+      "ports": [
+        "SJU",
+        "TOV",
+        "SLU",
+        "BGI",
+        "RSU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-21",
+      "arrivalDate": "2027-02-28",
+      "fromPrice": 1946,
+      "maxPrice": 20720,
+      "currency": "USD",
+      "packageCode": "7NGOR2",
+      "ports": []
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-22",
+      "arrivalDate": "2027-03-04",
+      "fromPrice": 3170,
+      "maxPrice": 20000,
+      "currency": "USD",
+      "packageCode": "10NMM",
+      "ports": [
+        "MIA",
+        "SXM",
+        "TOV",
+        "SKB",
+        "ANU",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-25",
+      "arrivalDate": "2027-03-01",
+      "fromPrice": 1112,
+      "maxPrice": 14200,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-27",
+      "arrivalDate": "2027-03-06",
+      "fromPrice": 2086,
+      "maxPrice": 18900,
+      "currency": "USD",
+      "packageCode": "7NSE",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "FDF",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-02-28",
+      "arrivalDate": "2027-03-07",
+      "fromPrice": 1946,
+      "maxPrice": 20720,
+      "currency": "USD",
+      "packageCode": "7NONB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-01",
+      "arrivalDate": "2027-03-06",
+      "fromPrice": 1390,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-04",
+      "arrivalDate": "2027-03-08",
+      "fromPrice": 1192,
+      "maxPrice": 14800,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-06",
+      "arrivalDate": "2027-03-11",
+      "fromPrice": 1290,
+      "maxPrice": 18600,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-06",
+      "arrivalDate": "2027-03-13",
+      "fromPrice": 2086,
+      "maxPrice": 18900,
+      "currency": "USD",
+      "packageCode": "7NRT3",
+      "ports": [
+        "SJU",
+        "SXM",
+        "BGI",
+        "SLU",
+        "ANU",
+        "TOV"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-07",
+      "arrivalDate": "2027-03-13",
+      "fromPrice": 1548,
+      "maxPrice": 18840,
+      "currency": "USD",
+      "packageCode": "6NBOG",
+      "ports": [
+        "MIA",
+        "BIM",
+        "OCJ",
+        "GEC"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-08",
+      "arrivalDate": "2027-03-18",
+      "fromPrice": 2888,
+      "maxPrice": 26000,
+      "currency": "USD",
+      "packageCode": "10NDP",
+      "ports": [
+        "MIA",
+        "SXM",
+        "TOV",
+        "STX",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-11",
+      "arrivalDate": "2027-03-15",
+      "fromPrice": 1192,
+      "maxPrice": 13200,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-13",
+      "arrivalDate": "2027-03-21",
+      "fromPrice": 2064,
+      "maxPrice": 23760,
+      "currency": "USD",
+      "packageCode": "8NCRB",
+      "ports": [
+        "MIA",
+        "CMA",
+        "RTB",
+        "BZE",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 6,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-13",
+      "arrivalDate": "2027-03-19",
+      "fromPrice": 1788,
+      "maxPrice": 16200,
+      "currency": "USD",
+      "packageCode": "6NSJB",
+      "ports": [
+        "SJU",
+        "TOV",
+        "SKB",
+        "ANU",
+        "SLU"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-15",
+      "arrivalDate": "2027-03-20",
+      "fromPrice": 1390,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-18",
+      "arrivalDate": "2027-03-22",
+      "fromPrice": 1032,
+      "maxPrice": 13200,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 8,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-19",
+      "arrivalDate": "2027-03-27",
+      "fromPrice": 2384,
+      "maxPrice": 15200,
+      "currency": "USD",
+      "packageCode": "8NSJCA",
+      "ports": [
+        "SJU",
+        "STT",
+        "BGI",
+        "SVD",
+        "RSU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-20",
+      "arrivalDate": "2027-03-25",
+      "fromPrice": 1190,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NCM",
+      "ports": [
+        "MIA",
+        "CMA",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-21",
+      "arrivalDate": "2027-03-27",
+      "fromPrice": 1668,
+      "maxPrice": 17760,
+      "currency": "USD",
+      "packageCode": "6NGSP",
+      "ports": [
+        "MIA",
+        "GDT",
+        "SAM",
+        "POP"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-22",
+      "arrivalDate": "2027-03-26",
+      "fromPrice": 1276,
+      "maxPrice": 13200,
+      "currency": "USD",
+      "packageCode": "4NMF",
+      "ports": [
+        "MIA",
+        "FPO",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-25",
+      "arrivalDate": "2027-03-29",
+      "fromPrice": 1192,
+      "maxPrice": 13200,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-27",
+      "arrivalDate": "2027-04-04",
+      "fromPrice": 2064,
+      "maxPrice": 23520,
+      "currency": "USD",
+      "packageCode": "8NCP",
+      "ports": [
+        "MIA",
+        "POP",
+        "SJU",
+        "STX",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-27",
+      "arrivalDate": "2027-04-03",
+      "fromPrice": 3416,
+      "maxPrice": 3416,
+      "currency": "USD",
+      "packageCode": "7NSJSP",
+      "ports": [
+        "SJU",
+        "WIL",
+        "AUA",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-03-29",
+      "arrivalDate": "2027-04-03",
+      "fromPrice": 1390,
+      "maxPrice": 16000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-03",
+      "arrivalDate": "2027-04-08",
+      "fromPrice": 1690,
+      "maxPrice": 17700,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-03",
+      "arrivalDate": "2027-04-10",
+      "fromPrice": 2086,
+      "maxPrice": 19250,
+      "currency": "USD",
+      "packageCode": "7NSE",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "FDF",
+        "SKB"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-04",
+      "arrivalDate": "2027-04-11",
+      "fromPrice": 2226,
+      "maxPrice": 20370,
+      "currency": "USD",
+      "packageCode": "7NKOG",
+      "ports": [
+        "MIA",
+        "EYW",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-08",
+      "arrivalDate": "2027-04-12",
+      "fromPrice": 1432,
+      "maxPrice": 14280,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-10",
+      "arrivalDate": "2027-04-15",
+      "fromPrice": 1308,
+      "maxPrice": 17700,
+      "currency": "USD",
+      "packageCode": "5NPP2",
+      "ports": [
+        "SJU",
+        "POP",
+        "BIM",
+        "MIA"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-11",
+      "arrivalDate": "2027-04-18",
+      "fromPrice": 2226,
+      "maxPrice": 20370,
+      "currency": "USD",
+      "packageCode": "7NONB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-12",
+      "arrivalDate": "2027-04-17",
+      "fromPrice": 1690,
+      "maxPrice": 17700,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-15",
+      "arrivalDate": "2027-04-22",
+      "fromPrice": 2226,
+      "maxPrice": 25550,
+      "currency": "USD",
+      "packageCode": "7NGOR3",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-17",
+      "arrivalDate": "2027-04-24",
+      "fromPrice": 2226,
+      "maxPrice": 20230,
+      "currency": "USD",
+      "packageCode": "7NPD",
+      "ports": [
+        "MIA",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-18",
+      "arrivalDate": "2027-04-23",
+      "fromPrice": 1590,
+      "maxPrice": 18650,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-22",
+      "arrivalDate": "2027-04-26",
+      "fromPrice": 1432,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-23",
+      "arrivalDate": "2027-04-28",
+      "fromPrice": 1590,
+      "maxPrice": 17900,
+      "currency": "USD",
+      "packageCode": "5NGCB2",
+      "ports": [
+        "MIA",
+        "BIM",
+        "GEC"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-26",
+      "arrivalDate": "2027-05-01",
+      "fromPrice": 1790,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-04-28",
+      "arrivalDate": "2027-05-02",
+      "fromPrice": 1432,
+      "maxPrice": 14320,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-05-01",
+      "arrivalDate": "2027-05-06",
+      "fromPrice": 1690,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-05-06",
+      "arrivalDate": "2027-05-10",
+      "fromPrice": 1352,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-05-10",
+      "arrivalDate": "2027-05-15",
+      "fromPrice": 1690,
+      "maxPrice": 21900,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-05-15",
+      "arrivalDate": "2027-05-20",
+      "fromPrice": 1790,
+      "maxPrice": 21900,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-05-20",
+      "arrivalDate": "2027-05-24",
+      "fromPrice": 1432,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-05-24",
+      "arrivalDate": "2027-05-29",
+      "fromPrice": 1790,
+      "maxPrice": 14300,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-05-29",
+      "arrivalDate": "2027-06-03",
+      "fromPrice": 1890,
+      "maxPrice": 18500,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-06-03",
+      "arrivalDate": "2027-06-07",
+      "fromPrice": 1432,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-06-07",
+      "arrivalDate": "2027-06-12",
+      "fromPrice": 1790,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-06-12",
+      "arrivalDate": "2027-06-17",
+      "fromPrice": 1890,
+      "maxPrice": 18450,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-06-17",
+      "arrivalDate": "2027-06-21",
+      "fromPrice": 1512,
+      "maxPrice": 14880,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-06-21",
+      "arrivalDate": "2027-06-26",
+      "fromPrice": 1690,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NCZ",
+      "ports": [
+        "MIA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-06-26",
+      "arrivalDate": "2027-07-01",
+      "fromPrice": 1890,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-07-01",
+      "arrivalDate": "2027-07-05",
+      "fromPrice": 1592,
+      "maxPrice": 14880,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-07-05",
+      "arrivalDate": "2027-07-10",
+      "fromPrice": 1790,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-07-10",
+      "arrivalDate": "2027-07-15",
+      "fromPrice": 1990,
+      "maxPrice": 18450,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-07-15",
+      "arrivalDate": "2027-07-19",
+      "fromPrice": 1736,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-07-19",
+      "arrivalDate": "2027-07-24",
+      "fromPrice": 1790,
+      "maxPrice": 14300,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-07-24",
+      "arrivalDate": "2027-07-29",
+      "fromPrice": 1890,
+      "maxPrice": 18450,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-07-29",
+      "arrivalDate": "2027-08-02",
+      "fromPrice": 1432,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-08-02",
+      "arrivalDate": "2027-08-07",
+      "fromPrice": 1690,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-08-07",
+      "arrivalDate": "2027-08-12",
+      "fromPrice": 1690,
+      "maxPrice": 18450,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-08-12",
+      "arrivalDate": "2027-08-16",
+      "fromPrice": 1272,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-08-16",
+      "arrivalDate": "2027-08-21",
+      "fromPrice": 1490,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-08-21",
+      "arrivalDate": "2027-08-26",
+      "fromPrice": 1490,
+      "maxPrice": 18450,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-08-26",
+      "arrivalDate": "2027-08-30",
+      "fromPrice": 1192,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-08-30",
+      "arrivalDate": "2027-09-04",
+      "fromPrice": 1490,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-09-04",
+      "arrivalDate": "2027-09-09",
+      "fromPrice": 1690,
+      "maxPrice": 18500,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-09-09",
+      "arrivalDate": "2027-09-13",
+      "fromPrice": 1112,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-09-13",
+      "arrivalDate": "2027-09-18",
+      "fromPrice": 1490,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-09-18",
+      "arrivalDate": "2027-09-23",
+      "fromPrice": 1490,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-09-23",
+      "arrivalDate": "2027-09-27",
+      "fromPrice": 1112,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-09-27",
+      "arrivalDate": "2027-10-02",
+      "fromPrice": 1490,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-10-02",
+      "arrivalDate": "2027-10-07",
+      "fromPrice": 1490,
+      "maxPrice": 18450,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-10-07",
+      "arrivalDate": "2027-10-11",
+      "fromPrice": 1192,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-10-11",
+      "arrivalDate": "2027-10-16",
+      "fromPrice": 1390,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-10-16",
+      "arrivalDate": "2027-10-21",
+      "fromPrice": 1490,
+      "maxPrice": 18450,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-10-21",
+      "arrivalDate": "2027-10-25",
+      "fromPrice": 1112,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-10-25",
+      "arrivalDate": "2027-10-30",
+      "fromPrice": 1390,
+      "maxPrice": 18100,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-10-30",
+      "arrivalDate": "2027-11-04",
+      "fromPrice": 1590,
+      "maxPrice": 18500,
+      "currency": "USD",
+      "packageCode": "5NCZH",
+      "ports": [
+        "MIA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-04",
+      "arrivalDate": "2027-11-08",
+      "fromPrice": 1272,
+      "maxPrice": 14840,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-07",
+      "arrivalDate": "2027-11-14",
+      "fromPrice": 1806,
+      "maxPrice": 18200,
+      "currency": "USD",
+      "packageCode": "7NGSP",
+      "ports": [
+        "MIA",
+        "GDT",
+        "SAM",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-08",
+      "arrivalDate": "2027-11-13",
+      "fromPrice": 1190,
+      "maxPrice": 17500,
+      "currency": "USD",
+      "packageCode": "5NCMRH",
+      "ports": [
+        "MIA",
+        "CMA",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 8,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-12",
+      "arrivalDate": "2027-11-20",
+      "fromPrice": 1904,
+      "maxPrice": 20000,
+      "currency": "USD",
+      "packageCode": "8NSJBR",
+      "ports": [
+        "SJU",
+        "TOV",
+        "SKB",
+        "BGI",
+        "SLU",
+        "RSU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-13",
+      "arrivalDate": "2027-11-18",
+      "fromPrice": 1290,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-14",
+      "arrivalDate": "2027-11-20",
+      "fromPrice": 1428,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "6NPB",
+      "ports": [
+        "MIA",
+        "NAS",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-18",
+      "arrivalDate": "2027-11-22",
+      "fromPrice": 1032,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKWN",
+      "ports": [
+        "MIA",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-20",
+      "arrivalDate": "2027-11-28",
+      "fromPrice": 1906,
+      "maxPrice": 20640,
+      "currency": "USD",
+      "packageCode": "8NPSST",
+      "ports": [
+        "MIA",
+        "SXM",
+        "SJU",
+        "SAM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-20",
+      "arrivalDate": "2027-11-27",
+      "fromPrice": 1526,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJ8",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-22",
+      "arrivalDate": "2027-11-27",
+      "fromPrice": 1290,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-27",
+      "arrivalDate": "2027-12-04",
+      "fromPrice": 1526,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJBR",
+      "ports": [
+        "SJU",
+        "TOV",
+        "BGI",
+        "SLU",
+        "RSU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-27",
+      "arrivalDate": "2027-12-02",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-11-28",
+      "arrivalDate": "2027-12-04",
+      "fromPrice": 1550,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "6NMGO",
+      "ports": [
+        "MIA",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-02",
+      "arrivalDate": "2027-12-06",
+      "fromPrice": 1032,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-04",
+      "arrivalDate": "2027-12-11",
+      "fromPrice": 1666,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJ8",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-04",
+      "arrivalDate": "2027-12-12",
+      "fromPrice": 1904,
+      "maxPrice": 20640,
+      "currency": "USD",
+      "packageCode": "8NPSP",
+      "ports": [
+        "MIA",
+        "SXM",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-06",
+      "arrivalDate": "2027-12-11",
+      "fromPrice": 1190,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-11",
+      "arrivalDate": "2027-12-18",
+      "fromPrice": 1666,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJCO",
+      "ports": [
+        "SJU",
+        "SXM",
+        "ANU",
+        "SLU",
+        "AUA"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-11",
+      "arrivalDate": "2027-12-16",
+      "fromPrice": 1190,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-12",
+      "arrivalDate": "2027-12-19",
+      "fromPrice": 1668,
+      "maxPrice": 18200,
+      "currency": "USD",
+      "packageCode": "7NONB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 9,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-14",
+      "arrivalDate": "2027-12-23",
+      "fromPrice": 2142,
+      "maxPrice": 32400,
+      "currency": "USD",
+      "packageCode": "9NMSP",
+      "ports": [
+        "MIA",
+        "SJU",
+        "STT",
+        "SXM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-16",
+      "arrivalDate": "2027-12-20",
+      "fromPrice": 1032,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 8,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-18",
+      "arrivalDate": "2027-12-26",
+      "fromPrice": 2224,
+      "maxPrice": 30800,
+      "currency": "USD",
+      "packageCode": "8NSJRW",
+      "ports": [
+        "SJU",
+        "SXM",
+        "ANU",
+        "RSU",
+        "AUA",
+        "WIL"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-19",
+      "arrivalDate": "2027-12-26",
+      "fromPrice": 2226,
+      "maxPrice": 21000,
+      "currency": "USD",
+      "packageCode": "7NPD3H",
+      "ports": [
+        "MIA",
+        "POP",
+        "SJU",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-20",
+      "arrivalDate": "2027-12-27",
+      "fromPrice": 2226,
+      "maxPrice": 21000,
+      "currency": "USD",
+      "packageCode": "7NGOR3C",
+      "ports": [
+        "MIA",
+        "GEC",
+        "OCJ",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-23",
+      "arrivalDate": "2027-12-28",
+      "fromPrice": 1792,
+      "maxPrice": 21300,
+      "currency": "USD",
+      "packageCode": "5NCZX",
+      "ports": [
+        "MIA",
+        "BIM",
+        "CZM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-26",
+      "arrivalDate": "2028-01-02",
+      "fromPrice": 3348,
+      "maxPrice": 31850,
+      "currency": "USD",
+      "packageCode": "7NCBNY",
+      "ports": [
+        "MIA",
+        "CMA",
+        "BZE",
+        "RTB",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-26",
+      "arrivalDate": "2028-01-02",
+      "fromPrice": 3346,
+      "maxPrice": 28490,
+      "currency": "USD",
+      "packageCode": "7NSJBF",
+      "ports": [
+        "SJU",
+        "SXM",
+        "BGI",
+        "FDF",
+        "ANU",
+        "STT"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 3,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-27",
+      "arrivalDate": "2027-12-30",
+      "fromPrice": 1014,
+      "maxPrice": 10800,
+      "currency": "USD",
+      "packageCode": "3NMB",
+      "ports": [
+        "MIA",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-28",
+      "arrivalDate": "2028-01-04",
+      "fromPrice": 3628,
+      "maxPrice": 26600,
+      "currency": "USD",
+      "packageCode": "7NLOGN",
+      "ports": [
+        "MIA",
+        "NAS",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2027-12-30",
+      "arrivalDate": "2028-01-03",
+      "fromPrice": 1912,
+      "maxPrice": 19200,
+      "currency": "USD",
+      "packageCode": "4NKWNY",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-02",
+      "arrivalDate": "2028-01-09",
+      "fromPrice": 1668,
+      "maxPrice": 18200,
+      "currency": "USD",
+      "packageCode": "7NNSP",
+      "ports": [
+        "MIA",
+        "NAS",
+        "SAM",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 6,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-02",
+      "arrivalDate": "2028-01-08",
+      "fromPrice": 1308,
+      "maxPrice": 12780,
+      "currency": "USD",
+      "packageCode": "6NSJKR",
+      "ports": [
+        "SJU",
+        "SVD",
+        "BGI",
+        "RSU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-03",
+      "arrivalDate": "2028-01-08",
+      "fromPrice": 1190,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 3,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-04",
+      "arrivalDate": "2028-01-07",
+      "fromPrice": 716,
+      "maxPrice": 10800,
+      "currency": "USD",
+      "packageCode": "3NMB",
+      "ports": [
+        "MIA",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 3,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-07",
+      "arrivalDate": "2028-01-10",
+      "fromPrice": 776,
+      "maxPrice": 10800,
+      "currency": "USD",
+      "packageCode": "3NMB",
+      "ports": [
+        "MIA",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-08",
+      "arrivalDate": "2028-01-15",
+      "fromPrice": 1526,
+      "maxPrice": 18760,
+      "currency": "USD",
+      "packageCode": "7NSJ8",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-08",
+      "arrivalDate": "2028-01-13",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-09",
+      "arrivalDate": "2028-01-16",
+      "fromPrice": 1666,
+      "maxPrice": 18200,
+      "currency": "USD",
+      "packageCode": "7NKOG",
+      "ports": [
+        "MIA",
+        "EYW",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-10",
+      "arrivalDate": "2028-01-20",
+      "fromPrice": 2382,
+      "maxPrice": 27000,
+      "currency": "USD",
+      "packageCode": "10NPTS",
+      "ports": [
+        "MIA",
+        "SXM",
+        "TOV",
+        "STT",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-13",
+      "arrivalDate": "2028-01-17",
+      "fromPrice": 952,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKWN",
+      "ports": [
+        "MIA",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-15",
+      "arrivalDate": "2028-01-22",
+      "fromPrice": 1526,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJFK",
+      "ports": [
+        "SJU",
+        "STT",
+        "BGI",
+        "SVD",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 7,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-16",
+      "arrivalDate": "2028-01-23",
+      "fromPrice": 1666,
+      "maxPrice": 18200,
+      "currency": "USD",
+      "packageCode": "7NGSP",
+      "ports": [
+        "MIA",
+        "GDT",
+        "SAM",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-17",
+      "arrivalDate": "2028-01-22",
+      "fromPrice": 1190,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-20",
+      "arrivalDate": "2028-01-24",
+      "fromPrice": 1034,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKWN",
+      "ports": [
+        "MIA",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-22",
+      "arrivalDate": "2028-01-29",
+      "fromPrice": 1526,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJCO2",
+      "ports": [
+        "SJU",
+        "AUA",
+        "SLU",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-22",
+      "arrivalDate": "2028-01-27",
+      "fromPrice": 1190,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-23",
+      "arrivalDate": "2028-01-29",
+      "fromPrice": 1430,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "6NMKG",
+      "ports": [
+        "MIA",
+        "EYW",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-24",
+      "arrivalDate": "2028-02-03",
+      "fromPrice": 2382,
+      "maxPrice": 27000,
+      "currency": "USD",
+      "packageCode": "10NSSS",
+      "ports": [
+        "MIA",
+        "POP",
+        "SJU",
+        "STX",
+        "STT",
+        "SKB",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-27",
+      "arrivalDate": "2028-01-31",
+      "fromPrice": 1032,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-29",
+      "arrivalDate": "2028-02-05",
+      "fromPrice": 1526,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJBF2",
+      "ports": [
+        "SJU",
+        "SXM",
+        "BGI",
+        "FDF",
+        "SKB",
+        "STT"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-29",
+      "arrivalDate": "2028-02-06",
+      "fromPrice": 1904,
+      "maxPrice": 20640,
+      "currency": "USD",
+      "packageCode": "8NPSP",
+      "ports": [
+        "MIA",
+        "SXM",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-01-31",
+      "arrivalDate": "2028-02-05",
+      "fromPrice": 1190,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-03",
+      "arrivalDate": "2028-02-07",
+      "fromPrice": 1032,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKWN",
+      "ports": [
+        "MIA",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-05",
+      "arrivalDate": "2028-02-12",
+      "fromPrice": 1666,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJ8",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-05",
+      "arrivalDate": "2028-02-10",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-06",
+      "arrivalDate": "2028-02-12",
+      "fromPrice": 1548,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "6NMGO",
+      "ports": [
+        "MIA",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 10,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-07",
+      "arrivalDate": "2028-02-17",
+      "fromPrice": 2382,
+      "maxPrice": 27000,
+      "currency": "USD",
+      "packageCode": "10NPTS2",
+      "ports": [
+        "MIA",
+        "POP",
+        "SJU",
+        "TOV",
+        "STT",
+        "SKB",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-10",
+      "arrivalDate": "2028-02-14",
+      "fromPrice": 1032,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-12",
+      "arrivalDate": "2028-02-20",
+      "fromPrice": 2066,
+      "maxPrice": 20640,
+      "currency": "USD",
+      "packageCode": "8NGSP2",
+      "ports": [
+        "MIA",
+        "GDT",
+        "POP",
+        "SAM",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-12",
+      "arrivalDate": "2028-02-19",
+      "fromPrice": 1666,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NRT4",
+      "ports": [
+        "SJU",
+        "STT",
+        "BGI",
+        "SLU",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-14",
+      "arrivalDate": "2028-02-19",
+      "fromPrice": 1190,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "BR",
+      "shipName": "BR",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-17",
+      "arrivalDate": "2028-02-21",
+      "fromPrice": 1032,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NMF",
+      "ports": [
+        "MIA",
+        "FPO",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-19",
+      "arrivalDate": "2028-02-24",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-19",
+      "arrivalDate": "2028-02-26",
+      "fromPrice": 1666,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJ8",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-20",
+      "arrivalDate": "2028-02-26",
+      "fromPrice": 1548,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "6NMGO",
+      "ports": [
+        "MIA",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-24",
+      "arrivalDate": "2028-02-28",
+      "fromPrice": 1112,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKWN",
+      "ports": [
+        "MIA",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-26",
+      "arrivalDate": "2028-03-05",
+      "fromPrice": 2066,
+      "maxPrice": 20640,
+      "currency": "USD",
+      "packageCode": "8NPSP",
+      "ports": [
+        "MIA",
+        "SXM",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-26",
+      "arrivalDate": "2028-03-04",
+      "fromPrice": 1666,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJBF2",
+      "ports": [
+        "SJU",
+        "SXM",
+        "BGI",
+        "FDF",
+        "SKB",
+        "STT"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-02-28",
+      "arrivalDate": "2028-03-04",
+      "fromPrice": 1290,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-04",
+      "arrivalDate": "2028-03-09",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-04",
+      "arrivalDate": "2028-03-11",
+      "fromPrice": 1806,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJ8",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-05",
+      "arrivalDate": "2028-03-11",
+      "fromPrice": 1548,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "6NPB",
+      "ports": [
+        "MIA",
+        "NAS",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-09",
+      "arrivalDate": "2028-03-13",
+      "fromPrice": 1112,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-11",
+      "arrivalDate": "2028-03-19",
+      "fromPrice": 2066,
+      "maxPrice": 20640,
+      "currency": "USD",
+      "packageCode": "8NGSP",
+      "ports": [
+        "MIA",
+        "GDT",
+        "SAM",
+        "POP",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-11",
+      "arrivalDate": "2028-03-18",
+      "fromPrice": 1806,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJRP",
+      "ports": [
+        "SJU",
+        "STT",
+        "BGI",
+        "FDF",
+        "RSU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-13",
+      "arrivalDate": "2028-03-18",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-18",
+      "arrivalDate": "2028-03-23",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-18",
+      "arrivalDate": "2028-03-25",
+      "fromPrice": 1806,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJCO2",
+      "ports": [
+        "SJU",
+        "AUA",
+        "SLU",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-19",
+      "arrivalDate": "2028-03-25",
+      "fromPrice": 1548,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "6NMGO",
+      "ports": [
+        "MIA",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-23",
+      "arrivalDate": "2028-03-27",
+      "fromPrice": 1112,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-25",
+      "arrivalDate": "2028-04-02",
+      "fromPrice": 2066,
+      "maxPrice": 20640,
+      "currency": "USD",
+      "packageCode": "8NPSP",
+      "ports": [
+        "MIA",
+        "SXM",
+        "SJU",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-25",
+      "arrivalDate": "2028-04-01",
+      "fromPrice": 1806,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJBF2",
+      "ports": [
+        "SJU",
+        "SXM",
+        "BGI",
+        "FDF",
+        "SKB",
+        "STT"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-03-27",
+      "arrivalDate": "2028-04-01",
+      "fromPrice": 1290,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-01",
+      "arrivalDate": "2028-04-06",
+      "fromPrice": 1290,
+      "maxPrice": 17500,
+      "currency": "USD",
+      "packageCode": "5NCZ",
+      "ports": [
+        "MIA",
+        "CZM",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-01",
+      "arrivalDate": "2028-04-08",
+      "fromPrice": 1806,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJ8",
+      "ports": [
+        "SJU",
+        "AUA",
+        "WIL",
+        "ANU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 6,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-02",
+      "arrivalDate": "2028-04-08",
+      "fromPrice": 1668,
+      "maxPrice": 15600,
+      "currency": "USD",
+      "packageCode": "6NMGO",
+      "ports": [
+        "MIA",
+        "OCJ",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-06",
+      "arrivalDate": "2028-04-10",
+      "fromPrice": 1112,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKWN",
+      "ports": [
+        "MIA",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "RS",
+      "duration": 8,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-08",
+      "arrivalDate": "2028-04-16",
+      "fromPrice": 2224,
+      "maxPrice": 20640,
+      "currency": "USD",
+      "packageCode": "8NGSP",
+      "ports": [
+        "MIA",
+        "GDT",
+        "SAM",
+        "POP",
+        "NAS",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "SC",
+      "shipName": "Scarlet Lady",
+      "duration": 7,
+      "departurePort": "SJU",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-08",
+      "arrivalDate": "2028-04-15",
+      "fromPrice": 1806,
+      "maxPrice": 17990,
+      "currency": "USD",
+      "packageCode": "7NSJBR",
+      "ports": [
+        "SJU",
+        "TOV",
+        "BGI",
+        "SLU",
+        "RSU",
+        "SXM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-10",
+      "arrivalDate": "2028-04-15",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-15",
+      "arrivalDate": "2028-04-20",
+      "fromPrice": 1390,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NGCB",
+      "ports": [
+        "MIA",
+        "GEC",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-20",
+      "arrivalDate": "2028-04-24",
+      "fromPrice": 1112,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-24",
+      "arrivalDate": "2028-04-29",
+      "fromPrice": 1290,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NPP",
+      "ports": [
+        "MIA",
+        "POP",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 5,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-04-29",
+      "arrivalDate": "2028-05-04",
+      "fromPrice": 1490,
+      "maxPrice": 18000,
+      "currency": "USD",
+      "packageCode": "5NTC",
+      "ports": [
+        "MIA",
+        "GDT",
+        "BIM"
+      ]
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "shipCode": "VL",
+      "shipName": "Valiant Lady",
+      "duration": 4,
+      "departurePort": "MIA",
+      "region": "CARIBB..",
+      "departureDate": "2028-05-04",
+      "arrivalDate": "2028-05-08",
+      "fromPrice": 1112,
+      "maxPrice": 14400,
+      "currency": "USD",
+      "packageCode": "4NKW",
+      "ports": [
+        "MIA",
+        "EYW",
+        "BIM"
+      ]
+    }
+  ]
+}
