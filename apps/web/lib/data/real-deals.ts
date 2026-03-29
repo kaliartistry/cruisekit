@@ -1,16 +1,20 @@
 /**
  * Real cruise deals from scraped API data.
- * Combines Carnival + NCL + Virgin Voyages into a unified format.
+ * Combines Carnival + NCL + Virgin Voyages + Royal Caribbean + Celebrity.
  *
  * Updated by running:
  *   node scripts/scrape-carnival.js
  *   node scripts/scrape-ncl.js
  *   node scripts/scrape-virgin.js
+ *   node scripts/scrape-rci-intercept.js
+ *   node scripts/scrape-celebrity-intercept.js
  */
 
 import carnivalData from "./scraped/carnival-sailings.json";
 import nclData from "./scraped/ncl-sailings.json";
 import virginData from "./scraped/virgin-sailings.json";
+import rciData from "./scraped/rci-sailings.json";
+import celebrityData from "./scraped/celebrity-sailings.json";
 
 export interface RealDeal {
   id: string;
@@ -112,11 +116,53 @@ function getVirginPortName(code: string | undefined): string {
   return map[code || ""] || code || "";
 }
 
+function normalizeRCI(): RealDeal[] {
+  return rciData.sailings
+    .filter((s) => s.fromPrice > 0)
+    .map((s, i) => ({
+      id: `rci-${i}`,
+      cruiseLine: "Royal Caribbean International",
+      cruiseLineId: "royal-caribbean",
+      shipName: s.shipName,
+      duration: s.duration,
+      departurePort: s.departurePort,
+      itineraryTitle: s.itineraryTitle,
+      fromPrice: s.fromPrice,
+      currency: "USD",
+      departureDate: s.departureDate || null,
+      ports: Array.isArray(s.ports) ? s.ports.filter(Boolean) : [],
+      imageUrl: s.imageUrl || null,
+      bookingUrl: s.bookingUrl || null,
+    }));
+}
+
+function normalizeCelebrity(): RealDeal[] {
+  return celebrityData.sailings
+    .filter((s) => s.fromPrice > 0)
+    .map((s, i) => ({
+      id: `celebrity-${i}`,
+      cruiseLine: "Celebrity Cruises",
+      cruiseLineId: "celebrity",
+      shipName: s.shipName,
+      duration: s.duration,
+      departurePort: s.departurePort,
+      itineraryTitle: s.itineraryTitle,
+      fromPrice: s.fromPrice,
+      currency: "USD",
+      departureDate: s.departureDate || null,
+      ports: Array.isArray(s.ports) ? s.ports.filter(Boolean) : [],
+      imageUrl: s.imageUrl || null,
+      bookingUrl: s.bookingUrl || null,
+    }));
+}
+
 /** All real deals from scraped data, sorted by price (lowest first) */
 export const REAL_DEALS: RealDeal[] = [
   ...normalizeCarnival(),
   ...normalizeNCL(),
   ...normalizeVirgin(),
+  ...normalizeRCI(),
+  ...normalizeCelebrity(),
 ].sort((a, b) => a.fromPrice - b.fromPrice);
 
 /** Get top N deals by lowest price */

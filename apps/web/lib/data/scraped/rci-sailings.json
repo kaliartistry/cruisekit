@@ -1,0 +1,187 @@
+{
+  "scrapedAt": "2026-03-29T16:16:58.272Z",
+  "source": "royalcaribbean.com (GraphQL intercepted)",
+  "totalSailings": 10,
+  "sailings": [
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Wonder of the Seas",
+      "shipCode": "WN",
+      "duration": 4,
+      "departurePort": "Miami",
+      "itineraryTitle": "Bahamas & Perfect Day Cruise",
+      "fromPrice": 509,
+      "currency": "USD",
+      "departureDate": "2026-04-13",
+      "ports": [
+        "Perfect Day at CocoCay",
+        "Nassau"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=WN04MIA-1040267344&sailDate=2026-04-13&shipCode=WN&packageCode=WN4BH277&destinationCode=BAHAM&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 99
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Wonder of the Seas",
+      "shipCode": "WN",
+      "duration": 3,
+      "departurePort": "Miami",
+      "itineraryTitle": "Bahamas & Perfect Day Cruise",
+      "fromPrice": 459,
+      "currency": "USD",
+      "departureDate": "2026-09-04",
+      "ports": [
+        "Perfect Day at CocoCay",
+        "Nassau"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=WN03MIA-2714834348&sailDate=2026-09-04&shipCode=WN&packageCode=WN3BH177&destinationCode=BAHAM&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 97
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Freedom of the Seas",
+      "shipCode": "FR",
+      "duration": 4,
+      "departurePort": "Miami",
+      "itineraryTitle": "Eastern Caribbean Cruise",
+      "fromPrice": 511,
+      "currency": "USD",
+      "departureDate": "2027-01-14",
+      "ports": [
+        "Labadee"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/grand-turk-turks-caicos/overview/grand-turk-island-coast.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=FR04MIA-1557830586&sailDate=2027-01-14&shipCode=FR&packageCode=FR04E029&destinationCode=CARIB&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 5
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Icon of the Seas",
+      "shipCode": "IC",
+      "duration": 7,
+      "departurePort": "Miami",
+      "itineraryTitle": "Eastern Caribbean & Perfect Day",
+      "fromPrice": 1294,
+      "currency": "USD",
+      "departureDate": "2026-04-25",
+      "ports": [
+        "Philipsburg",
+        "Charlotte Amalie",
+        "Perfect Day at CocoCay"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=IC07MIA-2623281014&sailDate=2026-04-25&shipCode=IC&packageCode=IC07E410&destinationCode=CARIB&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 35
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Freedom of the Seas",
+      "shipCode": "FR",
+      "duration": 5,
+      "departurePort": "Miami",
+      "itineraryTitle": "Caribbean Getaway Cruise",
+      "fromPrice": 458,
+      "currency": "USD",
+      "departureDate": "2026-08-08",
+      "ports": [
+        "Nassau",
+        "Perfect Day at CocoCay"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=FR05MIA-3040554279&sailDate=2026-08-08&shipCode=FR&packageCode=FR05E067&destinationCode=BAHAM&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 13
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Jewel of the Seas",
+      "shipCode": "JW",
+      "duration": 3,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "Bahamas Getaway Cruise",
+      "fromPrice": 305,
+      "currency": "USD",
+      "departureDate": "2026-10-22",
+      "ports": [
+        "Nassau"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/royal-beach-club/paradise-island/renders/royal-beach-club-paradise-island-aerial-shot-nassau-long-stretch-beach-cruise-ship.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=JW03FLL-3171030460&sailDate=2026-10-22&shipCode=JW&packageCode=JW3BH230&destinationCode=BAHAM&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 4
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Freedom of the Seas",
+      "shipCode": "FR",
+      "duration": 9,
+      "departurePort": "Miami",
+      "itineraryTitle": "Southern Caribbean Cruise",
+      "fromPrice": 747,
+      "currency": "USD",
+      "departureDate": "2026-10-22",
+      "ports": [
+        "Oranjestad",
+        "Willemstad",
+        "Cabo Rojo",
+        "Nassau"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/cabo-rojo-dominican-republic/overview/beach-playa-cabo-rojo-north-bahia-de-las-aguilas-around-pedernales-jaragua-national-park-dominican-republic.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=FR09MIA-1340445121&sailDate=2026-10-22&shipCode=FR&packageCode=FR09D173&destinationCode=CARIB&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 7
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Freedom of the Seas",
+      "shipCode": "FR",
+      "duration": 4,
+      "departurePort": "Miami",
+      "itineraryTitle": "Caribbean Getaway Cruise",
+      "fromPrice": 509,
+      "currency": "USD",
+      "departureDate": "2026-04-09",
+      "ports": [
+        "Nassau"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/royal-beach-club/paradise-island/renders/royal-beach-club-paradise-island-aerial-shot-nassau-long-stretch-beach-cruise-ship.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=FR04MIA-4049318889&sailDate=2026-04-09&shipCode=FR&packageCode=FR04E022&destinationCode=CARIB&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 1
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Harmony of the Seas",
+      "shipCode": "HM",
+      "duration": 2,
+      "departurePort": "Orlando (Port Canaveral)",
+      "itineraryTitle": "Perfect Day Getaway Cruise",
+      "fromPrice": 298,
+      "currency": "USD",
+      "departureDate": "2026-10-29",
+      "ports": [
+        "Perfect Day at CocoCay"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=HM02PCN-4287409234&sailDate=2026-10-29&shipCode=HM&packageCode=HM2BH021&destinationCode=BAHAM&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 9
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "shipName": "Allure of the Seas",
+      "shipCode": "AL",
+      "duration": 6,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "Western Caribbean & Perfect Day",
+      "fromPrice": 709,
+      "currency": "USD",
+      "departureDate": "2026-09-27",
+      "ports": [
+        "Perfect Day at CocoCay",
+        "Falmouth",
+        "Nassau"
+      ],
+      "imageUrl": "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg",
+      "bookingUrl": "https://www.royalcaribbean.com/booking/landing?groupId=AL06FLL-2906128061&sailDate=2026-09-27&shipCode=AL&packageCode=AL06W286&destinationCode=CARIB&selectedCurrencyCode=USD&country=USA",
+      "totalSailingDates": 12
+    }
+  ]
+}

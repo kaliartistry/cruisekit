@@ -1,0 +1,196 @@
+{
+  "scrapedAt": "2026-03-29T16:19:39.743Z",
+  "source": "celebritycruises.com (GraphQL intercepted)",
+  "totalSailings": 10,
+  "sailings": [
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "Celebrity Reflection",
+      "shipCode": "RF",
+      "duration": 3,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "Key West & Bahamas",
+      "fromPrice": 373,
+      "currency": "USD",
+      "departureDate": "2026-08-28",
+      "ports": [
+        "Key West",
+        "Nassau"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/aerial-view-nassau-bahamas-2560x1440.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=RF03FLL-2679013690&pID=RF3BH164&sDT=2026-08-28&sCD=RF&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "EG",
+      "shipCode": "EG",
+      "duration": 7,
+      "departurePort": "Seattle",
+      "itineraryTitle": "Alaska Dawes Glacier",
+      "fromPrice": 1030,
+      "currency": "USD",
+      "departureDate": "2027-09-17",
+      "ports": [
+        "Ketchikan",
+        "Victoria"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/Celebrity-Edge-Alaska-Dawes-Glacier-2560x1440.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=EG07SEA-4212612062&pID=EG07A439&sDT=2027-09-17&sCD=EG&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "BY",
+      "shipCode": "BY",
+      "duration": 7,
+      "departurePort": "Miami",
+      "itineraryTitle": "Grand Cayman, Mexico & Perfect Day",
+      "fromPrice": 847,
+      "currency": "USD",
+      "departureDate": "2026-09-20",
+      "ports": [
+        "Perfect Day at CocoCay",
+        "Cozumel",
+        "George Town",
+        "Nassau"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/pdcc/drone-shot-hideaway-beach-perfect-day-at-cococay-bahamas-2560x1440.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=BY07MIA-2177944375&pID=BY07W680&sDT=2026-09-20&sCD=BY&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "BY",
+      "shipCode": "BY",
+      "duration": 7,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "Grand Cayman, Mexico & Bahamas",
+      "fromPrice": 808,
+      "currency": "USD",
+      "departureDate": "2026-12-06",
+      "ports": [
+        "Nassau",
+        "Cozumel",
+        "George Town"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/sunset-beach-cozumel-mexico-2560x1440.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=BY07FLL-1205041136&pID=BY07W678&sDT=2026-12-06&sCD=BY&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "Celebrity Silhouette",
+      "shipCode": "SI",
+      "duration": 6,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "Grand Cayman, Mexico & Bahamas ",
+      "fromPrice": 642,
+      "currency": "USD",
+      "departureDate": "2026-12-13",
+      "ports": [
+        "Cozumel",
+        "George Town",
+        "Bimini"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/georgetown-grand-cayman-2560x1440.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=SI06FLL-318967522&pID=SI06W270&sDT=2026-12-13&sCD=SI&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "SL",
+      "shipCode": "SL",
+      "duration": 7,
+      "departurePort": "Vancouver",
+      "itineraryTitle": "Alaska Dawes Glacier",
+      "fromPrice": 904,
+      "currency": "USD",
+      "departureDate": "2026-05-10",
+      "ports": [
+        "Inside Passage (Cruising)",
+        "Icy Strait Point",
+        "Skagway",
+        "Ketchikan"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/pcp/endicott-arm-dawes-glacier-2560x1440.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=SL07YVR-1176201108&pID=SL07A436&sDT=2026-05-10&sCD=SL&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "Celebrity Silhouette",
+      "shipCode": "SI",
+      "duration": 8,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "Aruba, Curacao & Bonaire",
+      "fromPrice": 847,
+      "currency": "USD",
+      "departureDate": "2027-12-11",
+      "ports": [
+        "Willemstad",
+        "Kralendijk",
+        "Oranjestad"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/aruba-tres-trapi-beach-2560x1440.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=SI08FLL-4016595653&pID=SI08D162&sDT=2027-12-11&sCD=SI&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "SL",
+      "shipCode": "SL",
+      "duration": 7,
+      "departurePort": "Vancouver",
+      "itineraryTitle": "Alaska Hubbard Glacier",
+      "fromPrice": 926,
+      "currency": "USD",
+      "departureDate": "2026-07-12",
+      "ports": [
+        "Inside Passage (Cruising)",
+        "Icy Strait Point",
+        "Hubbard Glacier",
+        "Juneau",
+        "Ketchikan"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/new-deployment-2025-2026/alaska/GTY_US_Alaska_Hubbard-Glacier_147989127.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=SL07YVR-248500797&pID=SL07A435&sDT=2026-07-12&sCD=SL&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "Celebrity Equinox",
+      "shipCode": "EQ",
+      "duration": 10,
+      "departurePort": "Barcelona",
+      "itineraryTitle": "Greece, Italy & Malta",
+      "fromPrice": 1273,
+      "currency": "USD",
+      "departureDate": "2026-11-09",
+      "ports": [
+        "Valletta",
+        "Chania (Souda)",
+        "Olympia (Katakolon)",
+        "Sicily (Messina)",
+        "Naples",
+        "Rome (Civitavecchia)"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/itineraries/europe/capri-italy-3840x2160.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=EQ10BCN-2996089596&pID=EQ10M384&sDT=2026-11-09&sCD=EQ&sCT=CO&country=USA"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "shipName": "SM",
+      "shipCode": "SM",
+      "duration": 7,
+      "departurePort": "Vancouver",
+      "itineraryTitle": "Alaska Northbound Glacier",
+      "fromPrice": 562,
+      "currency": "USD",
+      "departureDate": "2026-08-28",
+      "ports": [
+        "Inside Passage (Cruising)",
+        "Ketchikan",
+        "Sitka",
+        "Juneau",
+        "Icy Strait Point",
+        "Hubbard Glacier",
+        "Seward"
+      ],
+      "imageUrl": "https://www.celebritycruises.com/celebrity/new-images/itineraries/alaska/dog-sledding-alaska-2560x1440.jpg",
+      "bookingUrl": "https://www.celebritycruises.com/booking-cruise/selectRoom/stateroomQuantity?groupId=SM07YVR-1380934501&pID=SM07A393&sDT=2026-08-28&sCD=SM&sCT=CO&country=USA"
+    }
+  ]
+}
