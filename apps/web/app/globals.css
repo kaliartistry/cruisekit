@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* ============================================
+   CruiseKit — Design System
+   Evolved from ShipSafe SDK brand DNA
+   ============================================ */
+
+:root {
+  /* Primary palette — inherited from ShipSafe */
+  --navy: #0C2340;
+  --ocean: #0077B6;
+  --teal: #00B4D8;
+  --teal-dark: #0096B7;
+
+  /* Consumer warmth colors */
+  --coral: #FF6B6B;
+  --coral-dark: #E85D5D;
+  --sunset: #FF9F43;
+  --sand: #F4E8D1;
+  --seafoam: #E0F7FA;
+
+  /* Neutrals */
+  --white: #FFFFFF;
+  --off-white: #FAFBFC;
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1;
+  --gray-400: #94A3B8;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+
+  /* Semantic */
+  --success: #22C55E;
+  --success-light: #DCFCE7;
+  --warning: #F59E0B;
+  --warning-light: #FEF3C7;
+  --error: #EF4444;
+  --error-light: #FEE2E2;
+  --info: #3B82F6;
+  --info-light: #DBEAFE;
+
+  /* BackToShip alert states */
+  --alert-green: #22C55E;
+  --alert-yellow: #F59E0B;
+  --alert-orange: #F97316;
+  --alert-red: #EF4444;
+  --alert-safe: #00B4D8;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.07), 0 5px 10px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 0 30px rgba(0, 180, 216, 0.15);
+
+  /* Backgrounds */
+  --background: var(--white);
+  --foreground: var(--gray-800);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+
+  /* Platform colors */
+  --color-navy: var(--navy);
+  --color-ocean: var(--ocean);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-coral: var(--coral);
+  --color-coral-dark: var(--coral-dark);
+  --color-sunset: var(--sunset);
+  --color-sand: var(--sand);
+  --color-seafoam: var(--seafoam);
+
+  /* Semantic colors */
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-error: var(--error);
+  --color-error-light: var(--error-light);
+  --color-info: var(--info);
+  --color-info-light: var(--info-light);
+
+  /* Alert states */
+  --color-alert-green: var(--alert-green);
+  --color-alert-yellow: var(--alert-yellow);
+  --color-alert-orange: var(--alert-orange);
+  --color-alert-red: var(--alert-red);
+  --color-alert-safe: var(--alert-safe);
+}
+
+/* Base styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body, var(--font-inter, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif));
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use Jakarta Sans */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans, var(--font-jakarta, 'Plus Jakarta Sans', 'Inter', sans-serif));
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+/* Price/number display uses monospace */
+.font-price {
+  font-family: var(--font-mono, var(--font-jetbrains, 'JetBrains Mono', monospace));
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(12, 35, 64, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Skeleton loading shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--gray-100) 25%,
+    var(--gray-200) 50%,
+    var(--gray-100) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(0, 180, 216, 0.2);
+  color: var(--navy);
+}
