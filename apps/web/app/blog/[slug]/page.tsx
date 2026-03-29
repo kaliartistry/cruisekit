@@ -14,6 +14,42 @@ import {
   type BlogCategory,
   type BlogPost,
 } from "@/lib/data/blog-posts";
+import RelatedContent from "@/components/shared/related-content";
+
+/* ------------------------------------------------------------------ */
+/*  Cruise-line detection from post metadata                           */
+/* ------------------------------------------------------------------ */
+
+const CRUISE_LINE_TAG_MAP: Record<string, string> = {
+  "royal caribbean": "royal-caribbean",
+  rci: "royal-caribbean",
+  carnival: "carnival",
+  norwegian: "norwegian",
+  ncl: "norwegian",
+  msc: "msc",
+  celebrity: "celebrity",
+  princess: "princess",
+  "holland america": "holland-america",
+  disney: "disney",
+  "virgin voyages": "virgin-voyages",
+};
+
+function detectCruiseLineId(post: BlogPost): string | undefined {
+  // Check slug first for line-specific cost posts
+  for (const [, id] of Object.entries(CRUISE_LINE_TAG_MAP)) {
+    if (post.slug.startsWith(id + "-cruise-cost") || post.slug.includes(id)) {
+      return id;
+    }
+  }
+  // Then check tags
+  for (const tag of post.tags) {
+    const lower = tag.toLowerCase();
+    for (const [keyword, id] of Object.entries(CRUISE_LINE_TAG_MAP)) {
+      if (lower.includes(keyword)) return id;
+    }
+  }
+  return undefined;
+}
 
 /* ------------------------------------------------------------------ */
 /*  Category styling                                                   */
@@ -560,6 +596,13 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* CTAs */}
           <CtaBanners post={post} />
+
+          {/* Related Content — internal linking */}
+          <RelatedContent
+            type="blog"
+            cruiseLineId={detectCruiseLineId(post)}
+            tags={post.tags}
+          />
 
           {/* Related Posts */}
           <RelatedPosts currentSlug={post.slug} />
