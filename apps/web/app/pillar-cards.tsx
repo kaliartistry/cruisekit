@@ -18,7 +18,30 @@ import {
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { SHIPS } from "@/lib/data/ships";
-import { getTopDeals, DEAL_STATS } from "@/lib/data/real-deals";
+import { getTopDeals, DEAL_STATS, type RealDeal } from "@/lib/data/real-deals";
+
+/* -- Fallback destination images from Unsplash for deals without API images -- */
+const DESTINATION_IMAGES: Record<string, string> = {
+  "Cozumel": "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=600&q=80",
+  "Nassau": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "San Juan": "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80",
+  "Roatan": "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
+  "St. Thomas": "https://images.unsplash.com/photo-1580237541049-2d715a09486e?w=600&q=80",
+  "Grand Cayman": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
+  "Aruba": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
+  "default": "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=600&q=80",
+};
+
+function getDealImage(deal: RealDeal): string {
+  if (deal.imageUrl) return deal.imageUrl;
+  // Try to match a port to a destination image
+  for (const port of deal.ports) {
+    for (const [key, url] of Object.entries(DESTINATION_IMAGES)) {
+      if (port.toLowerCase().includes(key.toLowerCase())) return url;
+    }
+  }
+  return DESTINATION_IMAGES["default"];
+}
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -170,26 +193,15 @@ export default function ContentSections() {
                       background: `linear-gradient(135deg, ${line?.color ?? "#0077B6"}15, ${line?.color ?? "#0077B6"}35)`,
                     }}
                   >
-                    {deal.imageUrl ? (
-                      <Image
-                        src={deal.imageUrl}
-                        alt={`${deal.shipName} - ${deal.itineraryTitle}`}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="300px"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Anchor
-                          className="h-12 w-12 opacity-15"
-                          style={{ color: line?.color ?? "#0077B6" }}
-                        />
-                      </div>
-                    )}
-                    {/* Dark gradient overlay for text readability on images */}
-                    {deal.imageUrl && (
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
-                    )}
+                    <Image
+                      src={getDealImage(deal)}
+                      alt={`${deal.shipName} - ${deal.itineraryTitle}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="300px"
+                    />
+                    {/* Dark gradient overlay for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/30" />
                     {/* Price badge */}
                     <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow">
                       <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">from</p>
