@@ -41,7 +41,14 @@ import { cn } from "@/lib/utils/cn";
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
 
-const DURATIONS = [3, 4, 5, 7, 10, 14];
+const DURATION_RANGES = [
+  { label: "3-4", default: 4 },
+  { label: "5-6", default: 5 },
+  { label: "7", default: 7 },
+  { label: "8-9", default: 9 },
+  { label: "10-13", default: 10 },
+  { label: "14+", default: 14 },
+];
 
 const CABIN_TYPES: { value: CabinType; label: string }[] = [
   { value: "inside", label: "Inside" },
@@ -221,6 +228,7 @@ export default function CalculatorForm({
   const [duration, setDuration] = useState(defaultDuration ?? 7);
   const [adults, setAdults] = useState(defaultAdults ?? 2);
   const [children, setChildren] = useState(0);
+  const [showChildren, setShowChildren] = useState(false);
   const [cabinType, setCabinType] = useState<CabinType>("balcony");
   const [baseFare, setBaseFare] = useState(defaultFare ?? "");
 
@@ -515,19 +523,19 @@ export default function CalculatorForm({
                 Cruise duration
               </h2>
               <div className="flex flex-wrap gap-2">
-                {DURATIONS.map((d) => (
+                {DURATION_RANGES.map((range) => (
                   <button
-                    key={d}
+                    key={range.label}
                     type="button"
-                    onClick={() => handleDurationChange(d)}
+                    onClick={() => handleDurationChange(range.default)}
                     className={cn(
                       "rounded-lg px-4 py-2 text-sm font-semibold transition-colors",
-                      duration === d
+                      duration === range.default
                         ? "bg-teal text-white"
                         : "border border-gray-200 bg-white text-navy hover:bg-gray-50"
                     )}
                   >
-                    {d} nights
+                    {range.label} nights
                   </button>
                 ))}
               </div>
@@ -603,13 +611,27 @@ export default function CalculatorForm({
                     min={1}
                     max={8}
                   />
-                  <NumberStepper
-                    label="Children"
-                    value={children}
-                    onChange={setChildren}
-                    min={0}
-                    max={6}
-                  />
+                  {!showChildren && (
+                    <button
+                      type="button"
+                      onClick={() => setShowChildren(true)}
+                      className="self-start text-sm font-medium text-teal hover:text-teal-dark transition-colors"
+                    >
+                      + Add children
+                    </button>
+                  )}
+                  {showChildren && (
+                    <div>
+                      <p className="mb-1 text-xs text-gray-400">Children (under 18)</p>
+                      <NumberStepper
+                        label="Children"
+                        value={children}
+                        onChange={setChildren}
+                        min={0}
+                        max={6}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
 

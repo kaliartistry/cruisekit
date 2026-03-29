@@ -52,23 +52,16 @@ function FeaturedCard({
         "md:flex-row"
       )}
     >
-      {/* Image placeholder */}
-      <div className="relative h-56 w-full shrink-0 bg-gradient-to-br from-navy/10 to-teal/10 md:h-auto md:w-[45%]">
-        <div className="flex h-full items-center justify-center">
-          <svg
-            className="h-16 w-16 text-teal/30"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-            />
-          </svg>
-        </div>
+      {/* Featured image */}
+      <div className="relative h-56 w-full shrink-0 overflow-hidden bg-gradient-to-br from-navy/10 to-teal/10 md:h-auto md:w-[45%]">
+        <Image
+          src={post.imageUrl}
+          alt={post.title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 45vw"
+          priority
+        />
         <div className="absolute left-4 top-4">
           <Badge
             className={cn(
@@ -128,23 +121,15 @@ function BlogCard({
         "hover:-translate-y-0.5 hover:shadow-[var(--shadow-md)]"
       )}
     >
-      {/* Image placeholder */}
-      <div className="relative h-44 w-full bg-gradient-to-br from-navy/10 to-teal/10">
-        <div className="flex h-full items-center justify-center">
-          <svg
-            className="h-10 w-10 text-teal/30"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-            />
-          </svg>
-        </div>
+      {/* Featured image */}
+      <div className="relative h-44 w-full overflow-hidden bg-gradient-to-br from-navy/10 to-teal/10">
+        <Image
+          src={post.imageUrl}
+          alt={post.title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
         <div className="absolute left-3 top-3">
           <Badge
             className={cn(

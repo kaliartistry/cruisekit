@@ -690,7 +690,7 @@ export const PORTS: PortData[] = [
       hospital: "First aid station on island; medical center on ship",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -788,7 +788,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(809) 567-7775 (Santo Domingo)",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -888,7 +888,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -938,7 +938,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1468413253725-0d5181091126?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1087,7 +1087,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Santo Domingo 809-567-7775",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1530053969600-caed2596d242?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1137,7 +1137,7 @@ export const PORTS: PortData[] = [
       usConsulate: "876-953-0620",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1186,7 +1186,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1236,7 +1236,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Bogotá +57 1 275-2000",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1505881502353-a1986add3762?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1285,7 +1285,7 @@ export const PORTS: PortData[] = [
       usConsulate: "246-227-4000",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1334,7 +1334,7 @@ export const PORTS: PortData[] = [
       usConsulate: "473-444-1173",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1383,7 +1383,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1432,7 +1432,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1481,7 +1481,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Curacao 599-9-461-3066",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1528164344885-47d68e2e77c1?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1529,7 +1529,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility, coordinates with ship medical staff",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1619,7 +1619,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility planned",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80",
   },
 
   /* ================================================================ */
@@ -1668,7 +1668,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Kingston 876-702-6000",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=800&q=80",
   },
 ];
 

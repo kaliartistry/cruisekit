@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
@@ -502,25 +503,23 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Featured image placeholder */}
+        {/* Featured image */}
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="-mt-6 mb-10 h-56 overflow-hidden rounded-xl bg-gradient-to-br from-navy/10 to-teal/10 sm:h-72 lg:h-80">
-            <div className="flex h-full items-center justify-center">
-              <svg
-                className="h-16 w-16 text-teal/20"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
+          <figure className="-mt-6 mb-10">
+            <div className="relative h-56 overflow-hidden rounded-xl sm:h-72 lg:h-80">
+              <Image
+                src={post.imageUrl}
+                alt={post.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 896px) 100vw, 896px"
+                priority
+              />
             </div>
-          </div>
+            <figcaption className="mt-2 text-center text-xs text-gray-400">
+              {post.title}
+            </figcaption>
+          </figure>
         </div>
 
         {/* Article content */}
