@@ -28,6 +28,8 @@ interface CostBreakdownProps {
   /** When provided, enables comparison mode */
   comparisonBreakdown?: CostBreakdownType;
   comparisonCruiseLineId?: string;
+  /** Callback to go back to Step 1 for adding a comparison line */
+  onCompare?: () => void;
 }
 
 const COST_ITEMS = [
@@ -78,10 +80,12 @@ function SingleBreakdown({
   breakdown,
   cruiseLineId,
   inputs,
+  onCompare,
 }: {
   breakdown: CostBreakdownType;
   cruiseLineId: string;
   inputs: CalculatorInputs;
+  onCompare?: () => void;
 }) {
   const totalGuests = inputs.adults + inputs.children;
   const visibleItems = COST_ITEMS.filter((item) => breakdown[item.key] > 0);
@@ -228,6 +232,9 @@ function SingleBreakdown({
           variant="default"
           size="lg"
           onClick={() => {
+            if (onCompare) {
+              onCompare();
+            }
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
@@ -514,6 +521,7 @@ export default function CostBreakdown({
   inputs,
   comparisonBreakdown,
   comparisonCruiseLineId,
+  onCompare,
 }: CostBreakdownProps) {
   // Comparison mode: both props provided
   if (comparisonBreakdown && comparisonCruiseLineId) {
@@ -534,6 +542,7 @@ export default function CostBreakdown({
       breakdown={breakdown}
       cruiseLineId={cruiseLineId}
       inputs={inputs}
+      onCompare={onCompare}
     />
   );
 }

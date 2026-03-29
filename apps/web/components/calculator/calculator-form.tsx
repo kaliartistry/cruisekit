@@ -1110,6 +1110,10 @@ export default function CalculatorForm({
               inputs={calculatorInputs}
               comparisonBreakdown={comparisonBreakdown ?? undefined}
               comparisonCruiseLineId={secondaryLineId ?? undefined}
+              onCompare={() => {
+                setDirection(-1);
+                setStep(1);
+              }}
             />
           </motion.div>
         )}
