@@ -1031,6 +1031,11 @@ export default function CalculatorForm({
                           duration={0.6}
                         />
                       </p>
+                      {(adults + children) > 1 && (
+                        <p className="font-price text-sm text-gray-500 mt-1">
+                          ${Math.round(runningTotal / (adults + children)).toLocaleString()} per person
+                        </p>
+                      )}
                       <div className="mt-3 space-y-1 border-t border-gray-100 pt-3">
                         <div className="flex justify-between text-xs text-gray-500">
                           <span>Base fare</span>
@@ -1062,6 +1067,11 @@ export default function CalculatorForm({
                   <p className="font-price text-lg font-bold text-navy">
                     ${Math.round(runningTotal).toLocaleString()}
                   </p>
+                  {(adults + children) > 1 && (
+                    <p className="font-price text-[11px] text-gray-400">
+                      ${Math.round(runningTotal / (adults + children)).toLocaleString()}/person
+                    </p>
+                  )}
                 </div>
                 <div className="flex gap-2">
                   <Button variant="outline" size="sm" onClick={goBack}>
