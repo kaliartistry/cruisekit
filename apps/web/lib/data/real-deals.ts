@@ -17,6 +17,7 @@ import rciData from "./scraped/rci-sailings.json";
 import celebrityData from "./scraped/celebrity-sailings.json";
 import mscData from "./scraped/msc-sailings.json";
 import halData from "./scraped/hal-sailings.json";
+import disneyData from "./scraped/disney-sailings.json";
 
 export interface RealDeal {
   id: string;
@@ -198,6 +199,26 @@ function normalizeHAL(): RealDeal[] {
     }));
 }
 
+function normalizeDisney(): RealDeal[] {
+  return disneyData.sailings
+    .filter((s) => s.fromPrice > 0 && s.duration > 0)
+    .map((s, i) => ({
+      id: `disney-${i}`,
+      cruiseLine: "Disney Cruise Line",
+      cruiseLineId: "disney",
+      shipName: s.shipName,
+      duration: s.duration,
+      departurePort: s.departurePort,
+      itineraryTitle: s.itineraryTitle,
+      fromPrice: s.fromPrice,
+      currency: "USD",
+      departureDate: s.departureDate || null,
+      ports: Array.isArray(s.ports) ? s.ports.filter(Boolean) : [],
+      imageUrl: s.imageUrl || null,
+      bookingUrl: null,
+    }));
+}
+
 /** All real deals from scraped data, sorted by price (lowest first) */
 export const REAL_DEALS: RealDeal[] = [
   ...normalizeCarnival(),
@@ -207,6 +228,7 @@ export const REAL_DEALS: RealDeal[] = [
   ...normalizeCelebrity(),
   ...normalizeMSC(),
   ...normalizeHAL(),
+  ...normalizeDisney(),
 ].sort((a, b) => a.fromPrice - b.fromPrice);
 
 /** Get top N deals by lowest price */

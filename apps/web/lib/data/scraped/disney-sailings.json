@@ -1,0 +1,765 @@
+{
+  "scrapedAt": "2026-03-29T23:34:12.532Z",
+  "source": "disneycruise.disney.go.com (available-products API)",
+  "totalSailings": 45,
+  "sailings": [
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 4,
+      "departurePort": "San Diego",
+      "itineraryTitle": "4-Night Pacific Coast Cruise from San Diego ending in Vancouver",
+      "fromPrice": 754,
+      "totalFor2": 1507.02,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Vancouver (British Columbia), Canada"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/san-diego/san-diego-adobeStock_82570608-32x9.jpg?1693498622655",
+      "totalDates": 4
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wonder",
+      "duration": 3,
+      "departurePort": "San Diego",
+      "itineraryTitle": "3-Night Baja Cruise from San Diego",
+      "fromPrice": 778,
+      "totalFor2": 1556.66,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Ensenada, Mexico"
+      ],
+      "imageUrl": null,
+      "totalDates": 9
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 3,
+      "departurePort": "San Diego",
+      "itineraryTitle": "3-Night Baja Cruise from San Diego",
+      "fromPrice": 784,
+      "totalFor2": 1568.66,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Ensenada, Mexico"
+      ],
+      "imageUrl": null,
+      "totalDates": 5
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 4,
+      "departurePort": "Galveston",
+      "itineraryTitle": "4-Night Western Caribbean Cruise from Galveston",
+      "fromPrice": 854,
+      "totalFor2": 1708.08,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Progreso, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/galveston/galveston-adobestock_352652948-16x9.jpg?1718815457619",
+      "totalDates": 6
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 4,
+      "departurePort": "Galveston with Marvel Days at Sea",
+      "itineraryTitle": "4-Night Western Caribbean Cruise from Galveston",
+      "fromPrice": 854,
+      "totalFor2": 1708.08,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Progreso, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/themed-and-holidays/marvel-day-at-sea/0216ZN_1504AS_xak-2-16x9.jpg?2023-07-31T18:29:04+00:00",
+      "totalDates": 3
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Dream",
+      "duration": 3,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "3-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 891,
+      "totalFor2": 1781.58,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ports/ft-lauderdale-fl/237754019.jpg?2022-09-08T21:17:18+00:00",
+      "totalDates": 2
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Dream",
+      "duration": 3,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "3-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 943,
+      "totalFor2": 1886.06,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/wdpro-assets/dcl/finder/destinations/ports-of-call/nassau-bahamas/nassau-bahamas-00.jpg?1755601113638",
+      "totalDates": 60
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Dream",
+      "duration": 3,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "3-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 986,
+      "totalFor2": 1972,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Lookout Cay at Lighthouse Point",
+        "Nassau, Bahamas"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/events/holidays/entertainment/0113ZM_0010SD_R3_xak-16x9.jpg?2024-05-08T04:08:19+00:00",
+      "totalDates": 5
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wish",
+      "duration": 3,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "3-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1046,
+      "totalFor2": 2092.06,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/onboard-activities/halloween-on-the-high-seas/mickey-minnie-halloween-16x9.jpg?1703278111608",
+      "totalDates": 9
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wish",
+      "duration": 3,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "3-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1046,
+      "totalFor2": 2092.06,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/onboard-activities/halloween-on-the-high-seas/mickey-minnie-halloween-16x9.jpg?1703278111608",
+      "totalDates": 9
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Destiny",
+      "duration": 4,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "4-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 1071,
+      "totalFor2": 2141.84,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ports/ft-lauderdale-fl/237754019-1-00.jpg?2022-09-08T21:17:18+00:00",
+      "totalDates": 9
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 4,
+      "departurePort": "Galveston",
+      "itineraryTitle": "4-Night Western Caribbean Cruise from Galveston",
+      "fromPrice": 1097,
+      "totalFor2": 2193.98,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Progreso, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruises-destinations/overview/holiday-cruises/mickey-minnie-holiday-16x9.jpg?1693497824708",
+      "totalDates": 3
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 4,
+      "departurePort": "Galveston",
+      "itineraryTitle": "4-Night Western Caribbean Cruise from Galveston",
+      "fromPrice": 1097,
+      "totalFor2": 2193.98,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Progreso, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruises-destinations/overview/holiday-cruises/mickey-minnie-holiday-16x9.jpg?1693497824708",
+      "totalDates": 3
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wonder",
+      "duration": 5,
+      "departurePort": "Vancouver",
+      "itineraryTitle": "5-Night Pacific Coast Cruise from Vancouver ending in San Diego",
+      "fromPrice": 1116,
+      "totalFor2": 2232.06,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Victoria (British Columbia), Canada",
+        "San Diego, California"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/victoria-british-columbia/victoria-british-columbia-00-16x9.jpg?1755602746080",
+      "totalDates": 1
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 5,
+      "departurePort": "Galveston with Marvel Days at Sea",
+      "itineraryTitle": "5-Night Western Caribbean Cruise from Galveston",
+      "fromPrice": 1121,
+      "totalFor2": 2241.4,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Cozumel, Mexico",
+        "Progreso, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/themed-sailings/marvel-day-at-sea/marvel-01-16x9.jpg?1774355658997",
+      "totalDates": 5
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 5,
+      "departurePort": "Galveston with Marvel Days at Sea",
+      "itineraryTitle": "5-Night Western Caribbean Cruise from Galveston",
+      "fromPrice": 1121,
+      "totalFor2": 2241.4,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Cozumel, Mexico",
+        "Progreso, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/themed-sailings/marvel-day-at-sea/marvel-01-16x9.jpg?1774355658997",
+      "totalDates": 5
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Dream",
+      "duration": 4,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "4-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 1129,
+      "totalFor2": 2258,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Lookout Cay at Lighthouse Point",
+        "Nassau, Bahamas"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/stock/ft-lauderdale-fl/237754019-16x9.jpg?2022-07-05T17:29:09+00:00",
+      "totalDates": 2
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wish",
+      "duration": 3,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "3-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1139,
+      "totalFor2": 2278.06,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/onboard-activities/very-merrytime-cruises/very-merrytime-minnie-mickey-16x9.jpg?1755602532585",
+      "totalDates": 6
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wish",
+      "duration": 3,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "3-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1139,
+      "totalFor2": 2278.06,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/onboard-activities/very-merrytime-cruises/very-merrytime-minnie-mickey-16x9.jpg?1755602532585",
+      "totalDates": 6
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Fantasy",
+      "duration": 4,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "4-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1140,
+      "totalFor2": 2279.88,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/wdpro-assets/dcl/finder/destinations/ports-of-call/castaway-cay/castaway-cay-00.jpg?1693497723091",
+      "totalDates": 17
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Fantasy",
+      "duration": 4,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "4-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1140,
+      "totalFor2": 2279.88,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/wdpro-assets/dcl/finder/destinations/ports-of-call/castaway-cay/castaway-cay-00.jpg?1693497723091",
+      "totalDates": 17
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wonder",
+      "duration": 5,
+      "departurePort": "San Diego",
+      "itineraryTitle": "5-Night Mexican Riviera Cruise from San Diego",
+      "fromPrice": 1142,
+      "totalFor2": 2283.82,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Cabo San Lucas, Mexico",
+        "Ensenada, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/wdpro-assets/dcl/finder/destinations/ports-of-call/cabo-san-lucas-mexico/cabo-san-lucas-mexico-02.jpg?1755600371569",
+      "totalDates": 2
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 5,
+      "departurePort": "Galveston",
+      "itineraryTitle": "5-Night Western Caribbean Cruise from Galveston",
+      "fromPrice": 1161,
+      "totalFor2": 2321.4,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Cozumel, Mexico",
+        "Progreso, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/cozumel/Cozumel-00-16x9.jpg?1718710850975",
+      "totalDates": 6
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wonder",
+      "duration": 5,
+      "departurePort": "San Diego",
+      "itineraryTitle": "5-Night Mexican Riviera Cruise from San Diego",
+      "fromPrice": 1162,
+      "totalFor2": 2324.96,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Cabo San Lucas, Mexico",
+        "Ensenada, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/events/halloween/entertainment/1025ZO_3054AS_R2_xak-16x9.jpg?2024-01-05T14:15:25+00:00",
+      "totalDates": 2
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Dream",
+      "duration": 4,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "4-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1173,
+      "totalFor2": 2345.28,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/wdpro-assets/dcl/finder/destinations/ports-of-call/castaway-cay/castaway-cay-00.jpg?1693497723091",
+      "totalDates": 29
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Dream",
+      "duration": 4,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "4-Night Eastern Caribbean Cruise from Fort Lauderdale ending in San Juan",
+      "fromPrice": 1232,
+      "totalFor2": 2464.08,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Disney Lookout Cay at Lighthouse Point",
+        "San Juan, Puerto Rico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ports/rotterdam-netherlands/AdobeStock_201339424-00.jpg?2023-02-17T19:19:22+00:00",
+      "totalDates": 1
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Destiny",
+      "duration": 4,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "4-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 1241,
+      "totalFor2": 2482.52,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ports/ft-lauderdale-fl/237754019-1-00.jpg?2022-09-08T21:17:18+00:00",
+      "totalDates": 18
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wish",
+      "duration": 4,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "4-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1272,
+      "totalFor2": 2543.96,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/onboard-activities/halloween-on-the-high-seas/mickey-minnie-halloween-16x9.jpg?1755601085959",
+      "totalDates": 4
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Dream",
+      "duration": 4,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "4-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1273,
+      "totalFor2": 2546.46,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/wdpro-assets/dcl/finder/destinations/ports-of-call/castaway-cay/castaway-cay-00.jpg?1693497723091",
+      "totalDates": 42
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Destiny",
+      "duration": 5,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "5-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 1285,
+      "totalFor2": 2570.16,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ports/ft-lauderdale-fl/306620020-1-00.jpg?2022-09-08T21:17:18+00:00",
+      "totalDates": 3
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 5,
+      "departurePort": "Galveston",
+      "itineraryTitle": "5-Night Western Caribbean Cruise from Galveston",
+      "fromPrice": 1300,
+      "totalFor2": 2600.26,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Cozumel, Mexico",
+        "Progreso, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/onboard-activities/very-merrytime-cruises/very-merrytime-minnie-mickey-16x9.jpg?1755601095941",
+      "totalDates": 4
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Destiny",
+      "duration": 5,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "5-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 1318,
+      "totalFor2": 2636.4,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ports/ft-lauderdale-fl/306620020-1-00.jpg?2022-09-08T21:17:18+00:00",
+      "totalDates": 4
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Fantasy",
+      "duration": 5,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "5-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1327,
+      "totalFor2": 2653.76,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Disney Lookout Cay at Lighthouse Point",
+        "Nassau, Bahamas"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/events/halloween/entertainment/1025ZO_3054AS_R2_xak-16x9.jpg?2024-01-05T14:15:25+00:00",
+      "totalDates": 6
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Destiny",
+      "duration": 4,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "4-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 1345,
+      "totalFor2": 2689.7,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/stock/ft-lauderdale-fl/237754019-16x9.jpg?2022-07-05T17:29:09+00:00",
+      "totalDates": 3
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wish",
+      "duration": 4,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "4-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1360,
+      "totalFor2": 2719.96,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruises-destinations/overview/holiday-cruises/mickey-minnie-holiday-16x9.jpg?1718711239639",
+      "totalDates": 3
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Destiny",
+      "duration": 5,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "5-Night Western Caribbean Cruise from Fort Lauderdale",
+      "fromPrice": 1388,
+      "totalFor2": 2776.88,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Cozumel, Mexico",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ports/ft-lauderdale-fl/321730566-00.jpg?2022-09-08T21:17:18+00:00",
+      "totalDates": 24
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Fantasy",
+      "duration": 5,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "5-Night Western Caribbean Cruise from Port Canaveral",
+      "fromPrice": 1415,
+      "totalFor2": 2829.94,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Cozumel, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/wdpro-assets/dcl/finder/destinations/ports-of-call/cozumel-mexico/cozumel-mexico-00.jpg?1755600935940",
+      "totalDates": 3
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Fantasy",
+      "duration": 4,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "4-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1434,
+      "totalFor2": 2868.68,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruises-destinations/overview/holiday-cruises/mickey-minnie-holiday-16x9.jpg?1718711239639",
+      "totalDates": 7
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Fantasy",
+      "duration": 5,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "5-Night Western Caribbean Cruise from Port Canaveral",
+      "fromPrice": 1452,
+      "totalFor2": 2904.26,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Cozumel, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/onboard-activities/halloween-on-the-high-seas/mickey-minnie-halloween-16x9.jpg?1755601156142",
+      "totalDates": 1
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Fantasy",
+      "duration": 5,
+      "departurePort": "Port Canaveral with Pixar Days at Sea",
+      "itineraryTitle": "5-Night Western Caribbean from Port Canaveral",
+      "fromPrice": 1490,
+      "totalFor2": 2979.26,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Cozumel, Mexico"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/experience/family/0330ZN_0715SD_R2_xak-16x9.jpg?2025-10-24T20:07:01+00:00",
+      "totalDates": 1
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Dream",
+      "duration": 5,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "5-Night Bahamian Cruise from Fort Lauderdale",
+      "fromPrice": 1498,
+      "totalFor2": 2996.4,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ports/ft-lauderdale-fl/306620020-1-00.jpg?2022-09-08T21:17:18+00:00",
+      "totalDates": 1
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Wish",
+      "duration": 3,
+      "departurePort": "Port Canaveral",
+      "itineraryTitle": "3-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1500,
+      "totalFor2": 3000.6,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/onboard-activities/very-merrytime-cruises/very-merrytime-minnie-mickey-16x9.jpg?1755602532585",
+      "totalDates": 1
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Magic",
+      "duration": 7,
+      "departurePort": "Galveston with Marvel Days at Sea",
+      "itineraryTitle": "7-Night Bahamian Cruise from Galveston",
+      "fromPrice": 1524,
+      "totalFor2": 3047.72,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Nassau, Bahamas",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/themed-sailings/marvel-day-at-sea/marvel-01-16x9.jpg?1774355605454",
+      "totalDates": 2
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Fantasy",
+      "duration": 5,
+      "departurePort": "Port Canaveral with Pixar Days at Sea",
+      "itineraryTitle": "5-Night Bahamian Cruise from Port Canaveral",
+      "fromPrice": 1530,
+      "totalFor2": 3060.88,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Disney Castaway Cay",
+        "Disney Lookout Cay at Lighthouse Point"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/experience/family/0330ZN_0715SD_R2_xak-16x9.jpg?2025-10-24T20:07:01+00:00",
+      "totalDates": 1
+    },
+    {
+      "cruiseLine": "disney",
+      "shipName": "Disney Destiny",
+      "duration": 5,
+      "departurePort": "Fort Lauderdale",
+      "itineraryTitle": "5-Night Western Caribbean Cruise from Fort Lauderdale",
+      "fromPrice": 1541,
+      "totalFor2": 3082.56,
+      "currency": "USD",
+      "departureDate": null,
+      "ports": [
+        "Cozumel, Mexico",
+        "Disney Castaway Cay"
+      ],
+      "imageUrl": "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/events/halloween/guests/halloween-lanterns-16x9.jpg?2022-10-11T17:22:03+00:00",
+      "totalDates": 2
+    }
+  ]
+}
