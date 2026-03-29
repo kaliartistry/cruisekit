@@ -10,13 +10,23 @@ import {
   UtensilsCrossed,
   ShieldCheck,
   Sparkles,
+  Anchor,
+  MapPin,
+  TrendingDown,
 } from "lucide-react";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
+import { SHIPS } from "@/lib/data/ships";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
 /* ------------------------------------------------------------------ */
+
+/* -- Trending deals: top 8 ships sorted by lowest inside fare -- */
+const TRENDING_DEALS = SHIPS
+  .filter((s) => s.fare7Night.inside > 0)
+  .sort((a, b) => a.fare7Night.inside - b.fare7Night.inside)
+  .slice(0, 8);
 
 const COMPARISONS = [
   {
@@ -115,6 +125,113 @@ const cardVariants = {
 export default function ContentSections() {
   return (
     <>
+      {/* ---- Trending Deals ---- */}
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <TrendingDown className="h-5 w-5 text-coral" />
+                <h2 className="text-xl font-bold tracking-tight text-navy sm:text-2xl">
+                  Trending Caribbean Cruises
+                </h2>
+              </div>
+              <p className="text-sm text-gray-500">
+                Starting fares per person — see the <span className="font-semibold text-navy">true cost</span> with our calculator
+              </p>
+            </div>
+            <Link
+              href="/calculator"
+              className="hidden sm:flex items-center gap-1 text-sm font-semibold text-teal hover:text-teal-dark transition-colors"
+            >
+              View all
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
+            {TRENDING_DEALS.map((ship) => {
+              const line = CRUISE_LINES.find((l) => l.id === ship.cruiseLineId);
+              return (
+                <Link
+                  key={ship.id}
+                  href={`/calculator?line=${ship.cruiseLineId}&duration=7&adults=2`}
+                  className="group flex-shrink-0 w-[280px] sm:w-[300px] snap-start rounded-xl border border-gray-200 bg-white shadow-[var(--shadow-sm)] transition-all hover:shadow-[var(--shadow-lg)] hover:-translate-y-1 overflow-hidden"
+                >
+                  {/* Ship image placeholder with gradient */}
+                  <div
+                    className="relative h-36 w-full"
+                    style={{
+                      background: `linear-gradient(135deg, ${line?.color ?? "#0077B6"}22, ${line?.color ?? "#0077B6"}44)`,
+                    }}
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Anchor
+                        className="h-12 w-12 opacity-20"
+                        style={{ color: line?.color ?? "#0077B6" }}
+                      />
+                    </div>
+                    {/* Price badge */}
+                    <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1 shadow">
+                      <p className="font-price text-xs text-gray-500">from</p>
+                      <p className="font-price text-lg font-bold text-navy leading-tight">
+                        ${ship.fare7Night.inside.toLocaleString()}
+                      </p>
+                    </div>
+                    {/* Cruise line badge */}
+                    <div className="absolute bottom-3 left-3">
+                      <CruiseLineLogo cruiseLineId={ship.cruiseLineId} size="sm" />
+                    </div>
+                  </div>
+
+                  {/* Card content */}
+                  <div className="p-4">
+                    <h3 className="font-bold text-navy text-sm group-hover:text-teal transition-colors">
+                      {ship.name}
+                    </h3>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      {ship.shipClass} class &middot; {ship.passengerCapacity.toLocaleString()} guests &middot; {ship.decks} decks
+                    </p>
+
+                    <div className="flex items-center gap-1.5 mt-2">
+                      <MapPin className="h-3 w-3 text-gray-400 flex-shrink-0" />
+                      <p className="text-xs text-gray-400 truncate">
+                        {ship.homePorts.join(", ")}
+                      </p>
+                    </div>
+
+                    <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
+                      <div className="flex gap-3">
+                        <div>
+                          <p className="text-[10px] text-gray-400 uppercase tracking-wider">Balcony</p>
+                          <p className="font-price text-sm font-semibold text-navy">${ship.fare7Night.balcony.toLocaleString()}</p>
+                        </div>
+                        <div>
+                          <p className="text-[10px] text-gray-400 uppercase tracking-wider">Suite</p>
+                          <p className="font-price text-sm font-semibold text-navy">${ship.fare7Night.suite.toLocaleString()}</p>
+                        </div>
+                      </div>
+                      <span className="flex items-center gap-1 text-xs font-semibold text-teal group-hover:text-teal-dark transition-colors">
+                        True cost
+                        <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+
+          <Link
+            href="/calculator"
+            className="sm:hidden flex items-center justify-center gap-1 mt-4 text-sm font-semibold text-teal hover:text-teal-dark transition-colors"
+          >
+            View all cruises
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       {/* ---- Section A: Compare cruise line costs ---- */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
