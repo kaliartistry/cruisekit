@@ -27,7 +27,7 @@ export default function HeroSection() {
     <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1920&q=80"
+        src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1920&q=80"
         alt="Cruise ship at sea"
         fill
         className="object-cover"
