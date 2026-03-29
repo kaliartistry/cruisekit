@@ -13,6 +13,7 @@ import {
   Navigation,
   Star,
   Anchor,
+  BookOpen,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
@@ -23,6 +24,7 @@ const NAV_LINKS = [
   { label: "Coordinate", href: "/groups", icon: Users },
   { label: "Track", href: "/track", icon: Navigation },
   { label: "Optimize", href: "/loyalty", icon: Star },
+  { label: "Blog", href: "/blog", icon: BookOpen },
 ] as const;
 
 export default function Navbar() {
