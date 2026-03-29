@@ -1136,7 +1136,7 @@ const virginVoyagesCostPost: BlogPost = {
   publishedDate: "2026-03-29",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1590523278191-995a2e4068f3?w=1200&q=80",
+    "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1200&q=80",
   tags: [
     "Virgin Voyages",
     "cruise cost",

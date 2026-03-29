@@ -27,6 +27,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils/cn";
+import HeartButton from "@/components/shared/heart-button";
 
 /* ------------------------------------------------------------------ */
 /*  Constants & helpers                                                 */
@@ -486,6 +487,22 @@ function DealCard({ deal }: { deal: RealDeal }) {
         <div className="absolute top-3 left-3 rounded-md bg-navy/80 px-2 py-1 text-xs font-bold text-white">
           {deal.duration} nights
         </div>
+        <HeartButton
+          dealId={deal.id}
+          dealData={{
+            cruiseLineId: deal.cruiseLineId,
+            cruiseLine: deal.cruiseLine,
+            shipName: deal.shipName,
+            duration: deal.duration,
+            departurePort: deal.departurePort,
+            ports: deal.ports,
+            fromPrice: deal.fromPrice,
+            departureDate: deal.departureDate,
+            itineraryTitle: deal.itineraryTitle,
+            imageUrl: deal.imageUrl,
+            bookingUrl: deal.bookingUrl,
+          }}
+        />
       </div>
 
       {/* Content */}
