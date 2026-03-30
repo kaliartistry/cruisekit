@@ -303,29 +303,33 @@ export function getTopDeals(n: number = 10): RealDeal[] {
   return REAL_DEALS.slice(0, n);
 }
 
-/** Get top N deals for a specific region, diversified by cruise line */
+/** Get top N deals for a specific region, diversified (1 per cruise line, then 1 per ship) */
 export function getTopDealsByRegion(region: DealRegion, n: number = 10): RealDeal[] {
   const regionDeals = REAL_DEALS.filter((d) => d.region === region);
-  // Pick the cheapest deal per cruise line first for variety, then fill remaining
+  const result: RealDeal[] = [];
   const seenLines = new Set<string>();
-  const diverse: RealDeal[] = [];
+  const seenShips = new Set<string>();
+
+  // Round 1: cheapest deal per cruise line
   for (const d of regionDeals) {
     if (!seenLines.has(d.cruiseLineId)) {
       seenLines.add(d.cruiseLineId);
-      diverse.push(d);
+      seenShips.add(d.shipName);
+      result.push(d);
     }
-    if (diverse.length >= n) break;
+    if (result.length >= n) break;
   }
-  // If we still need more, fill with remaining cheapest
-  if (diverse.length < n) {
+  // Round 2: cheapest deal per unseen ship (different ship, same line OK)
+  if (result.length < n) {
     for (const d of regionDeals) {
-      if (!diverse.includes(d)) {
-        diverse.push(d);
+      if (!seenShips.has(d.shipName)) {
+        seenShips.add(d.shipName);
+        result.push(d);
       }
-      if (diverse.length >= n) break;
+      if (result.length >= n) break;
     }
   }
-  return diverse.sort((a, b) => a.fromPrice - b.fromPrice);
+  return result.sort((a, b) => a.fromPrice - b.fromPrice);
 }
 
 /** Get all unique regions with counts */
