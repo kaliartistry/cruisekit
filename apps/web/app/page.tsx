@@ -7,7 +7,7 @@ import ContentSections from "./pillar-cards";
 export const metadata: Metadata = {
   title: "True Cruise Cost Calculator — See What Your Cruise Really Costs | CruiseKit",
   description:
-    "Calculate the true total cost of your cruise including drinks, WiFi, gratuities, and hidden fees. Compare 9 major cruise lines side by side. 100% free.",
+    "Calculate the true total cost of your cruise including drinks, WiFi, gratuities, and hidden fees. Compare 8 major cruise lines side by side. 100% free.",
 };
 
 export default function HomePage() {

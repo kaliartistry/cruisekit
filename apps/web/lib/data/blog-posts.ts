@@ -705,7 +705,7 @@ const carnivalCruiseCostPost: BlogPost = {
     "Carnival's base fares start under $300, but $17/day gratuities, an $82.54/day CHEERS! package, and WiFi from $20.40/day add up fast. We break down every dollar.",
   category: "tips",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-28",
   readTime: "10 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?w=1200&q=80",
@@ -767,7 +767,7 @@ const norwegianCruiseCostPost: BlogPost = {
     "Norwegian markets \"Free at Sea\" perks, but $20/day gratuities plus a hidden $21.80/day bar gratuity mean \"free\" is anything but. Here is the true cost breakdown.",
   category: "tips",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-27",
   readTime: "10 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1200&q=80",
@@ -828,7 +828,7 @@ const mscCruiseCostPost: BlogPost = {
     "MSC offers the lowest base fares in the industry starting at $249, but the Premium Extra package at $85/day and $16/day gratuities change the math. Full breakdown inside.",
   category: "tips",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-26",
   readTime: "9 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&q=80",
@@ -889,7 +889,7 @@ const celebrityCruiseCostPost: BlogPost = {
     "Celebrity positions itself as premium-but-accessible. With $18/day gratuities and Classic drinks at $89.99/day, here is what a 7-night Celebrity cruise actually costs.",
   category: "tips",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-25",
   readTime: "9 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
@@ -950,7 +950,7 @@ const princessCruiseCostPost: BlogPost = {
     "Princess Plus at $65/day and Premier at $100/day bundle drinks, WiFi, and tips. But which tier actually saves money? We do the math on every Princess add-on.",
   category: "tips",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-24",
   readTime: "9 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1200&q=80",
@@ -1011,7 +1011,7 @@ const hollandAmericaCostPost: BlogPost = {
     "Holland America's Have It All package at $60/day is one of the best bundles in cruising. With $17/day gratuities and refined dining included, here is the full cost picture.",
   category: "tips",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-22",
   readTime: "9 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80",
@@ -1072,7 +1072,7 @@ const disneyCruiseCostPost: BlogPost = {
     "Disney Cruise Line has no drink packages, charges $16/day gratuities, and starts at $1,309 per person. Here is why families still line up to book and what the real total looks like.",
   category: "tips",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-21",
   readTime: "10 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1605711285791-0219e80e43a3?w=1200&q=80",
@@ -1133,7 +1133,7 @@ const virginVoyagesCostPost: BlogPost = {
     "All dining is free, WiFi is included, but $20/day gratuities and a Bar Tab system replace drink packages. Here is the real cost of sailing with Virgin Voyages in 2026.",
   category: "tips",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-20",
   readTime: "9 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1200&q=80",
@@ -1194,7 +1194,7 @@ const norwegianVsRoyalCaribbeanPost: BlogPost = {
     "Norwegian's Free at Sea perks vs Royal Caribbean's a la carte add-ons. We compared every line item for a 7-night Caribbean cruise to find which line actually costs less.",
   category: "comparison",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-19",
   readTime: "11 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=1200&q=80",
@@ -1263,7 +1263,7 @@ const celebrityVsPrincessPost: BlogPost = {
     "Celebrity's Always Included at $89.99/day vs Princess Plus at $65/day. We compare the two leading premium cruise lines on every cost dimension.",
   category: "comparison",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-18",
   readTime: "10 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80",
@@ -1325,7 +1325,7 @@ const mscVsNorwegianPost: BlogPost = {
     "MSC starts at $249. Norwegian starts at $549 but includes Free at Sea perks. Which approach actually costs less when you add it all up? The answer depends on one question.",
   category: "comparison",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-17",
   readTime: "10 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=1200&q=80",
@@ -1387,7 +1387,7 @@ const virginVsCelebrityPost: BlogPost = {
     "Both cater to adults who value style and food. But Virgin includes all dining while Celebrity includes drinks. We compare the two premium adults-focused lines dollar for dollar.",
   category: "comparison",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-15",
   readTime: "10 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1502003148287-a82ef80a6abc?w=1200&q=80",
@@ -1449,7 +1449,7 @@ const carnivalVsMscPost: BlogPost = {
     "Carnival starts at $374 with CHEERS! at $82.54/day. MSC starts at $249 with Premium Extra at $85/day. We compared the two budget kings on every cost dimension.",
   category: "comparison",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-14",
   readTime: "10 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1534190239940-9ba8944ea261?w=1200&q=80",
@@ -1511,7 +1511,7 @@ const disneyVsCarnivalFamiliesPost: BlogPost = {
     "Disney starts at $1,309 per person. Carnival starts at $374. The gap is massive, but Disney includes character dining, Castaway Cay, and experiences Carnival cannot match. Is it worth 3x the price?",
   category: "comparison",
   author: "CruiseKit",
-  publishedDate: "2026-03-29",
+  publishedDate: "2026-03-12",
   readTime: "11 min read",
   imageUrl:
     "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1200&q=80",

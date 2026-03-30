@@ -184,7 +184,7 @@ export default function PortsPage() {
             </h1>
             <p className="mt-3 max-w-2xl text-base text-gray-600 sm:text-lg">
               Safety ratings, excursion guides, time zone alerts, and local tips
-              for 20 popular Caribbean cruise ports. Plan your perfect port day.
+              for {PORTS.length} popular Caribbean cruise ports. Plan your perfect port day.
             </p>
           </div>
         </section>

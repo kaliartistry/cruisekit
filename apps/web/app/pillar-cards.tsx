@@ -291,11 +291,11 @@ export default function ContentSections() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/30" />
                     {/* Price badge */}
                     <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow">
-                      <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">from</p>
+                      <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">Interior from</p>
                       <p className="font-price text-xl font-bold text-coral leading-tight">
                         ${deal.fromPrice.toLocaleString()}
                       </p>
-                      <p className="font-price text-[10px] text-gray-400">per person</p>
+                      <p className="font-price text-[10px] text-gray-400">per person (excl. taxes)</p>
                     </div>
                     {/* Duration badge */}
                     <div className="absolute top-3 left-3 bg-navy/80 text-white text-xs font-bold px-2 py-1 rounded-md">
@@ -343,7 +343,9 @@ export default function ContentSections() {
 
                     <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
                       {deal.departureDate && (
-                        <p className="text-xs text-gray-400">{deal.departureDate}</p>
+                        <p className="text-xs text-gray-400">
+                          {new Date(deal.departureDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                        </p>
                       )}
                       <span className="flex items-center gap-1 text-xs font-semibold text-teal group-hover:text-teal-dark transition-colors ml-auto">
                         See true cost

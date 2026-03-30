@@ -492,7 +492,7 @@ export const PORTS: PortData[] = [
       police: "911",
       hospital: "Lower Keys Medical Center",
     },
-    region: "eastern",
+    region: "western",
     imageUrl: "https://images.unsplash.com/photo-1617202830798-cf48261fb70d?w=800&q=80",
   },
 
@@ -592,7 +592,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(52) 872-4574 (Consular Agency — shared with Cozumel)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1719857664707-60ebe8852aa0?w=800&q=80",
   },
 
   /* ================================================================ */

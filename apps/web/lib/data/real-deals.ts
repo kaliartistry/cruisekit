@@ -239,7 +239,7 @@ function normalizeMSC(): DealWithoutRegion[] {
       fromPrice: s.fromPrice,
       currency: "USD",
       departureDate: s.departureDate || null,
-      ports: Array.isArray(s.ports) ? s.ports.filter(Boolean) : [],
+      ports: Array.isArray(s.ports) ? [...new Set(s.ports.filter(Boolean))] : [],
       imageUrl: s.imageUrl || null,
       bookingUrl: null,
     }));
