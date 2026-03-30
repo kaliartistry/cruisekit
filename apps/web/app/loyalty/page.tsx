@@ -2,11 +2,22 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
+import LoyaltyContent from "./loyalty-content";
 
 export const metadata: Metadata = {
-  title: "Loyalty Hub",
+  title: "Cruise Loyalty Programs — Compare Tiers, Perks & Status Matching",
   description:
-    "Track loyalty points, find the best deals, and maximize every dollar across all major cruise lines.",
+    "Compare loyalty programs across Royal Caribbean, Carnival, Norwegian, Celebrity, Princess, Disney, and more. Find your tier, see perks, and discover which lines offer status matching.",
+  keywords: [
+    "cruise loyalty programs",
+    "crown and anchor society",
+    "vifp club",
+    "latitudes rewards",
+    "cruise status match",
+    "cruise line loyalty comparison",
+    "cruise loyalty tiers",
+    "best cruise loyalty program",
+  ],
 };
 
 export default function LoyaltyPage() {
@@ -17,16 +28,10 @@ export default function LoyaltyPage() {
         <PageHeader
           pillar="optimize"
           title="Loyalty Hub"
-          subtitle="Track loyalty points, find the best deals, and maximize every dollar across all major cruise lines."
+          subtitle="Compare loyalty programs across 9 cruise lines. See your tier, explore perks, and find status match opportunities."
           breadcrumbs={[{ label: "Loyalty Hub" }]}
         />
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50/50 p-12 text-center">
-            <p className="text-lg font-medium text-gray-500">
-              Coming soon — Optimize your loyalty rewards.
-            </p>
-          </div>
-        </section>
+        <LoyaltyContent />
       </main>
       <Footer />
     </>
