@@ -39,7 +39,7 @@ export interface RealDeal {
 }
 
 const CARIBBEAN_KEYWORDS = [
-  "caribbean", "bahamas", "nassau", "cococay", "cozumel", "costa maya",
+  "caribbean", "caribb", "bahamas", "nassau", "cococay", "cozumel", "costa maya",
   "roatan", "belize", "jamaica", "falmouth", "ocho rios", "montego bay",
   "grand cayman", "cayman", "aruba", "curacao", "bonaire", "st. thomas",
   "st. maarten", "san juan", "puerto rico", "virgin islands", "bermuda",
@@ -47,7 +47,9 @@ const CARIBBEAN_KEYWORDS = [
   "tortola", "st. kitts", "dominica", "martinique", "guadeloupe",
   "cartagena", "labadee", "amber cove", "puerto plata", "key west",
   "half moon", "celebration key", "harvest caye", "perfect day",
-  "ocean cay", "great stirrup",
+  "ocean cay", "great stirrup", "bimini",
+  // Port codes used by Virgin Voyages
+  "czm", "pop", "bim", "sjd",
 ];
 
 const MEXICO_KEYWORDS = [
@@ -64,6 +66,7 @@ const EUROPE_KEYWORDS = [
   "northern europe", "british isles", "norwegian fjord", "baltic",
   "canary island", "iceland", "transatlantic", "dover", "southampton",
   "copenhagen", "hamburg", "paris", "london", "cultural crossing",
+  "canada", "new england", "quebec", "halifax",
 ];
 
 const ALASKA_KEYWORDS = ["alaska", "juneau", "ketchikan", "skagway", "glacier"];
