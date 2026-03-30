@@ -2,11 +2,22 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
+import CompareContent from "./compare-content";
 
 export const metadata: Metadata = {
-  title: "Compare Cruise Lines",
+  title: "Compare Cruise Lines — Side-by-Side Cost Comparison",
   description:
-    "Side-by-side comparison of cruise lines, ships, and itineraries to find your perfect match.",
+    "Compare gratuities, drink packages, WiFi, dining, and hidden costs across Royal Caribbean, Carnival, Norwegian, Celebrity, Princess, Disney, and more. Find the best value cruise line for your next trip.",
+  keywords: [
+    "compare cruise lines",
+    "cruise line comparison",
+    "cruise cost comparison",
+    "royal caribbean vs carnival",
+    "norwegian vs royal caribbean",
+    "cheapest cruise line",
+    "cruise line gratuity comparison",
+    "cruise drink package comparison",
+  ],
 };
 
 export default function ComparePage() {
@@ -17,16 +28,10 @@ export default function ComparePage() {
         <PageHeader
           pillar="plan"
           title="Compare Cruise Lines"
-          subtitle="Side-by-side comparison of cruise lines, ships, and itineraries to find your perfect match."
+          subtitle="Side-by-side cost comparison across 9 major cruise lines. Real prices, not marketing — find where your money goes."
           breadcrumbs={[{ label: "Compare Cruise Lines" }]}
         />
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50/50 p-12 text-center">
-            <p className="text-lg font-medium text-gray-500">
-              Coming soon — Compare every major cruise line.
-            </p>
-          </div>
-        </section>
+        <CompareContent />
       </main>
       <Footer />
     </>

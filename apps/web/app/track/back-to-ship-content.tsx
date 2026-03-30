@@ -154,8 +154,7 @@ function AlertBar() {
           key={state.label}
           className={`${state.color} ${state.textColor} ${state.width} flex items-center justify-center text-xs font-semibold`}
           initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
+          animate={{ scaleX: 1 }}
           transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
           style={{ transformOrigin: "left" }}
         >
@@ -260,8 +259,7 @@ export default function BackToShipContent() {
             <motion.p
               className="text-sm font-semibold uppercase tracking-wider text-alert-red"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={0}
             >
@@ -271,8 +269,7 @@ export default function BackToShipContent() {
             <motion.h2
               className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={1}
             >
@@ -282,8 +279,7 @@ export default function BackToShipContent() {
             <motion.p
               className="mt-5 text-lg leading-relaxed text-gray-600"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={2}
             >
@@ -295,8 +291,7 @@ export default function BackToShipContent() {
             <motion.p
               className="mt-6 text-xl font-semibold text-navy"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={3}
             >
@@ -318,8 +313,7 @@ export default function BackToShipContent() {
             <motion.p
               className="text-sm font-semibold uppercase tracking-wider text-teal"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={0}
             >
@@ -328,8 +322,7 @@ export default function BackToShipContent() {
             <motion.h2
               className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={1}
             >
@@ -341,8 +334,7 @@ export default function BackToShipContent() {
             className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
             variants={staggerContainer}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            animate="visible"
           >
             {FEATURES.map((feature) => {
               const Icon = feature.icon;
@@ -379,8 +371,7 @@ export default function BackToShipContent() {
             <motion.p
               className="text-sm font-semibold uppercase tracking-wider text-ocean"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={0}
             >
@@ -389,8 +380,7 @@ export default function BackToShipContent() {
             <motion.h2
               className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={1}
             >
@@ -406,8 +396,7 @@ export default function BackToShipContent() {
                   key={step.number}
                   className="relative text-center"
                   initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-60px" }}
+                  animate="visible"
                   variants={fadeUp}
                   custom={i}
                 >
@@ -445,8 +434,7 @@ export default function BackToShipContent() {
             <motion.div
               className="rounded-2xl border border-navy/10 bg-navy/[0.03] p-8 sm:p-10"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={0}
             >
@@ -496,8 +484,7 @@ export default function BackToShipContent() {
             <motion.h2
               className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={0}
             >
@@ -506,8 +493,7 @@ export default function BackToShipContent() {
             <motion.p
               className="mt-4 text-lg text-white/80"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={1}
             >
@@ -517,8 +503,7 @@ export default function BackToShipContent() {
             <motion.div
               className="mt-8"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
+              animate="visible"
               variants={fadeUp}
               custom={2}
             >

@@ -120,7 +120,7 @@ const rciVsCarnivalPost: BlogPost = {
   publishedDate: "2026-03-10",
   readTime: "9 min read",
   imageUrl:
-    "https://upload.wikimedia.org/wikipedia/commons/7/70/Nassau%2C_Bahamas.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/c/c6/Beaches_in_Nassau%2C_Bahamas.jpg",
   tags: [
     "Royal Caribbean",
     "Carnival",

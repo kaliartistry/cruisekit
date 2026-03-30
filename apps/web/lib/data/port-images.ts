@@ -21,8 +21,8 @@ export const PORT_IMAGES: Record<string, string> = {
   "cococay": `${RCI_CDN}/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg`,
   "labadee": `${RCI_CDN}/data/ports/labadee-haiti/labadee-haiti-zipline-coast.jpg`,
   "cozumel": `${RCI_CDN}/data/ports/cozumel-mexico/1920x1080.jpg`,
-  "nassau": "https://upload.wikimedia.org/wikipedia/commons/7/70/Nassau%2C_Bahamas.jpg",
-  "bahamas": "https://upload.wikimedia.org/wikipedia/commons/7/70/Nassau%2C_Bahamas.jpg",
+  "nassau": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Beaches_in_Nassau%2C_Bahamas.jpg",
+  "bahamas": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Beaches_in_Nassau%2C_Bahamas.jpg",
   "grand turk": `${RCI_CDN}/ports-and-destinations/ports/grand-turk-turks-caicos/overview/grand-turk-island-coast.jpg`,
   "st. thomas": `${RCI_CDN}/data/ports/charlotte-amalie-st-thomas/charlotte-amalie-st-thomas-magens-bay.jpg`,
   "charlotte amalie": `${RCI_CDN}/data/ports/charlotte-amalie-st-thomas/charlotte-amalie-st-thomas-magens-bay.jpg`,
@@ -54,7 +54,7 @@ export const PORT_IMAGES: Record<string, string> = {
   "ocho rios": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Dunn's_River_Falls_%26_Park.jpg",
   "jamaica": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Dunn's_River_Falls_%26_Park.jpg",
   "montego bay": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Doctors-Cave-Beach.jpg",
-  "costa maya": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Costa_Maya_Northeast_Quintana_Roo_2023.jpg",
+  "costa maya": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Costa_Maya%2C_Mexico_-_panoramio_%287%29.jpg/1280px-Costa_Maya%2C_Mexico_-_panoramio_%287%29.jpg",
   "progreso": "https://upload.wikimedia.org/wikipedia/commons/3/33/Yucat%C3%A1n,_Progreso_de_Castro,_its_beach_and_the_pier.jpg",
   "puerto plata": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Puerto_Plata_Dominican_Republic_Town_Architecture.jpg",
   // Keep Carnival CDN for ports where Wikimedia wasn't sourced
@@ -73,10 +73,10 @@ export const PORT_IMAGES: Record<string, string> = {
   "western caribbean": `${RCI_CDN}/data/ports/cozumel-mexico/1920x1080.jpg`,
   "eastern caribbean": `${CARNIVAL_CDN}/carnival-caribbean-port-san-juan-1.jpg`,
   "southern caribbean": `${CARNIVAL_CDN}/carnival-caribbean-port-curacao-4.jpg`,
-  "caribbean": "https://upload.wikimedia.org/wikipedia/commons/7/70/Nassau%2C_Bahamas.jpg",
+  "caribbean": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Beaches_in_Nassau%2C_Bahamas.jpg",
 };
 
-export const DEFAULT_CRUISE_IMAGE = "https://upload.wikimedia.org/wikipedia/commons/7/70/Nassau%2C_Bahamas.jpg";
+export const DEFAULT_CRUISE_IMAGE = "https://upload.wikimedia.org/wikipedia/commons/c/c6/Beaches_in_Nassau%2C_Bahamas.jpg";
 
 /** Get the best image for a deal, checking API images first, then port matching */
 export function getDealImage(deal: {

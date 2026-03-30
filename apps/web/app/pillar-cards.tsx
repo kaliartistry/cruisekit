@@ -334,7 +334,7 @@ export default function ContentSections() {
             {COMPARISONS.map((cmp) => (
               <motion.div key={cmp.label} variants={cardVariants}>
                 <Link
-                  href={`/calculator/${cmp.lineA}?compare=${cmp.lineB}`}
+                  href={`/calculator?line=${cmp.lineA},${cmp.lineB}`}
                   className="group flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-[var(--shadow-sm)] transition-all hover:shadow-[var(--shadow-lg)] hover:-translate-y-0.5"
                 >
                   <CruiseLineLogo cruiseLineId={cmp.lineA} size="md" />
