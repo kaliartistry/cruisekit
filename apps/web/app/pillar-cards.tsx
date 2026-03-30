@@ -18,7 +18,7 @@ import {
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { SHIPS } from "@/lib/data/ships";
-import { getTopDeals, DEAL_STATS, type RealDeal } from "@/lib/data/real-deals";
+import { getTopDealsByRegion, DEAL_STATS, type RealDeal } from "@/lib/data/real-deals";
 
 /* -- Verified destination images: each photo confirmed to show the actual location -- */
 const PORT_IMAGES: Record<string, string> = {
@@ -130,7 +130,7 @@ function getPortWithCountry(port: string): string {
 /* ------------------------------------------------------------------ */
 
 /* -- Real deals from scraped API data (Carnival + NCL) -- */
-const REAL_TRENDING = getTopDeals(10);
+const REAL_TRENDING = getTopDealsByRegion("caribbean", 10);
 /* -- Fallback to ship database if no scraped data available -- */
 const SHIP_DEALS = SHIPS
   .filter((s) => s.fare7Night.inside > 0)

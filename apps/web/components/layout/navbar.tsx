@@ -24,12 +24,12 @@ import SignInModal from "@/components/shared/sign-in-modal";
 
 const NAV_LINKS = [
   { label: "Deals", href: "/cruises", icon: Anchor },
-  { label: "Plan", href: "/calculator", icon: Calculator },
-  { label: "Explore", href: "/ports", icon: Map },
-  { label: "Coordinate", href: "/groups", icon: Users },
+  { label: "Calculator", href: "/calculator", icon: Calculator },
+  { label: "Ports", href: "/ports", icon: Map },
+  { label: "Groups", href: "/groups", icon: Users },
   { label: "Track", href: "/track", icon: Navigation },
-  { label: "Optimize", href: "/loyalty", icon: Star },
-  { label: "Blog", href: "/blog", icon: BookOpen },
+  { label: "Loyalty", href: "/loyalty", icon: Star },
+  { label: "Guides", href: "/blog", icon: BookOpen },
 ] as const;
 
 export default function Navbar() {

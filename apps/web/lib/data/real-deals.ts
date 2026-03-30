@@ -19,6 +19,8 @@ import mscData from "./scraped/msc-sailings.json";
 import halData from "./scraped/hal-sailings.json";
 import disneyData from "./scraped/disney-sailings.json";
 
+export type DealRegion = "caribbean" | "bahamas" | "mexico" | "mediterranean" | "europe" | "alaska" | "pacific" | "asia" | "other";
+
 export interface RealDeal {
   id: string;
   cruiseLine: string;
@@ -33,6 +35,65 @@ export interface RealDeal {
   ports: string[];
   imageUrl: string | null;
   bookingUrl: string | null;
+  region: DealRegion;
+}
+
+const CARIBBEAN_KEYWORDS = [
+  "caribbean", "bahamas", "nassau", "cococay", "cozumel", "costa maya",
+  "roatan", "belize", "jamaica", "falmouth", "ocho rios", "montego bay",
+  "grand cayman", "cayman", "aruba", "curacao", "bonaire", "st. thomas",
+  "st. maarten", "san juan", "puerto rico", "virgin islands", "bermuda",
+  "turks", "grand turk", "antigua", "barbados", "st. lucia", "grenada",
+  "tortola", "st. kitts", "dominica", "martinique", "guadeloupe",
+  "cartagena", "labadee", "amber cove", "puerto plata", "key west",
+  "half moon", "celebration key", "harvest caye", "perfect day",
+  "ocean cay", "great stirrup",
+];
+
+const MEXICO_KEYWORDS = [
+  "mexican riviera", "cabo", "ensenada", "puerto vallarta", "mazatlan",
+  "sea of cortez", "baja",
+];
+
+const MEDITERRANEAN_KEYWORDS = [
+  "mediterranean", "rome", "barcelona", "athens", "santorini", "venice",
+  "dubrovnik", "naples", "amalfi", "greek", "adriatic", "lisbon",
+];
+
+const EUROPE_KEYWORDS = [
+  "northern europe", "british isles", "norwegian fjord", "baltic",
+  "canary island", "iceland", "transatlantic", "dover", "southampton",
+  "copenhagen", "hamburg", "paris", "london", "cultural crossing",
+];
+
+const ALASKA_KEYWORDS = ["alaska", "juneau", "ketchikan", "skagway", "glacier"];
+
+const PACIFIC_KEYWORDS = [
+  "pacific", "hawaii", "vancouver", "victoria", "wine country",
+  "pacific northwest", "pacific coast", "san diego", "seattle",
+];
+
+const ASIA_KEYWORDS = [
+  "asia", "japan", "tokyo", "yokohama", "china", "singapore", "vietnam",
+  "thailand", "incheon", "korea",
+];
+
+function classifyRegion(deal: Omit<RealDeal, "region">): DealRegion {
+  const text = `${deal.itineraryTitle} ${deal.ports.join(" ")} ${deal.departurePort}`.toLowerCase();
+
+  // Check most specific first
+  if (CARIBBEAN_KEYWORDS.some((k) => text.includes(k))) return "caribbean";
+  if (MEXICO_KEYWORDS.some((k) => text.includes(k))) return "mexico";
+  if (ALASKA_KEYWORDS.some((k) => text.includes(k))) return "alaska";
+  if (ASIA_KEYWORDS.some((k) => text.includes(k))) return "asia";
+  if (MEDITERRANEAN_KEYWORDS.some((k) => text.includes(k))) return "mediterranean";
+  if (EUROPE_KEYWORDS.some((k) => text.includes(k))) return "europe";
+  if (PACIFIC_KEYWORDS.some((k) => text.includes(k))) return "pacific";
+
+  // Florida departure ports are usually Caribbean
+  if (/miami|fort lauderdale|port canaveral|tampa|galveston|new orleans/.test(text)) return "caribbean";
+
+  return "other";
 }
 
 const VIRGIN_SHIP_NAMES: Record<string, string> = {
@@ -44,7 +105,9 @@ const VIRGIN_SHIP_NAMES: Record<string, string> = {
   BR: "Brilliant Lady",
 };
 
-function normalizeCarnival(): RealDeal[] {
+type DealWithoutRegion = Omit<RealDeal, "region">;
+
+function normalizeCarnival(): DealWithoutRegion[] {
   return carnivalData.sailings
     .filter((s) => s.fromPrice > 0)
     .map((s, i) => ({
@@ -68,7 +131,7 @@ function normalizeCarnival(): RealDeal[] {
     }));
 }
 
-function normalizeNCL(): RealDeal[] {
+function normalizeNCL(): DealWithoutRegion[] {
   return nclData.sailings
     .filter((s) => (s.combinedPrice ?? 0) > 0)
     .map((s, i) => ({
@@ -88,7 +151,7 @@ function normalizeNCL(): RealDeal[] {
     }));
 }
 
-function normalizeVirgin(): RealDeal[] {
+function normalizeVirgin(): DealWithoutRegion[] {
   return virginData.sailings
     .filter((s) => (s.fromPrice ?? 0) > 0)
     .map((s, i) => ({
@@ -119,7 +182,7 @@ function getVirginPortName(code: string | undefined): string {
   return map[code || ""] || code || "";
 }
 
-function normalizeRCI(): RealDeal[] {
+function normalizeRCI(): DealWithoutRegion[] {
   return rciData.sailings
     .filter((s) => s.fromPrice > 0)
     .map((s, i) => ({
@@ -139,7 +202,7 @@ function normalizeRCI(): RealDeal[] {
     }));
 }
 
-function normalizeCelebrity(): RealDeal[] {
+function normalizeCelebrity(): DealWithoutRegion[] {
   return celebrityData.sailings
     .filter((s) => s.fromPrice > 0)
     .map((s, i) => ({
@@ -159,7 +222,7 @@ function normalizeCelebrity(): RealDeal[] {
     }));
 }
 
-function normalizeMSC(): RealDeal[] {
+function normalizeMSC(): DealWithoutRegion[] {
   return mscData.sailings
     .filter((s) => s.fromPrice > 0)
     .map((s, i) => ({
@@ -179,7 +242,7 @@ function normalizeMSC(): RealDeal[] {
     }));
 }
 
-function normalizeHAL(): RealDeal[] {
+function normalizeHAL(): DealWithoutRegion[] {
   return halData.sailings
     .filter((s) => s.fromPrice > 0 && s.duration > 0)
     .map((s, i) => ({
@@ -199,7 +262,7 @@ function normalizeHAL(): RealDeal[] {
     }));
 }
 
-function normalizeDisney(): RealDeal[] {
+function normalizeDisney(): DealWithoutRegion[] {
   return disneyData.sailings
     .filter((s) => s.fromPrice > 0 && s.duration > 0)
     .map((s, i) => ({
@@ -229,11 +292,28 @@ export const REAL_DEALS: RealDeal[] = [
   ...normalizeMSC(),
   ...normalizeHAL(),
   ...normalizeDisney(),
-].sort((a, b) => a.fromPrice - b.fromPrice);
+].map((deal) => ({ ...deal, region: classifyRegion(deal) } as RealDeal))
+  .sort((a, b) => a.fromPrice - b.fromPrice);
 
 /** Get top N deals by lowest price */
 export function getTopDeals(n: number = 10): RealDeal[] {
   return REAL_DEALS.slice(0, n);
+}
+
+/** Get top N deals for a specific region */
+export function getTopDealsByRegion(region: DealRegion, n: number = 10): RealDeal[] {
+  return REAL_DEALS.filter((d) => d.region === region).slice(0, n);
+}
+
+/** Get all unique regions with counts */
+export function getRegionCounts(): { region: DealRegion; count: number }[] {
+  const counts = new Map<DealRegion, number>();
+  for (const deal of REAL_DEALS) {
+    counts.set(deal.region, (counts.get(deal.region) || 0) + 1);
+  }
+  return Array.from(counts.entries())
+    .map(([region, count]) => ({ region, count }))
+    .sort((a, b) => b.count - a.count);
 }
 
 /** Get deals for a specific cruise line */

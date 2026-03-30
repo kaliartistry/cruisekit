@@ -12,7 +12,7 @@ import {
   Ship,
   Anchor,
 } from "lucide-react";
-import { REAL_DEALS, DEAL_STATS, type RealDeal } from "@/lib/data/real-deals";
+import { REAL_DEALS, DEAL_STATS, type RealDeal, type DealRegion } from "@/lib/data/real-deals";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { Badge } from "@/components/ui/badge";
@@ -212,6 +212,36 @@ const ALL_DEPARTURE_PORTS = [
 ].sort();
 const ALL_SHIP_NAMES = [...new Set(REAL_DEALS.map((d) => d.shipName))].sort();
 
+const REGION_LABELS: Record<DealRegion, string> = {
+  caribbean: "Caribbean",
+  bahamas: "Bahamas",
+  mexico: "Mexico",
+  mediterranean: "Mediterranean",
+  europe: "Europe",
+  alaska: "Alaska",
+  pacific: "Pacific",
+  asia: "Asia",
+  other: "Other",
+};
+const ALL_REGIONS = [...new Set(REAL_DEALS.map((d) => d.region))] as DealRegion[];
+
+function getDepartureMonth(date: string | null): string | null {
+  if (!date) return null;
+  const d = new Date(date);
+  if (isNaN(d.getTime())) return null;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+}
+
+function formatMonth(ym: string): string {
+  const [year, month] = ym.split("-");
+  const d = new Date(Number(year), Number(month) - 1);
+  return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+}
+
+const ALL_MONTHS = [...new Set(
+  REAL_DEALS.map((d) => getDepartureMonth(d.departureDate)).filter(Boolean) as string[]
+)].sort();
+
 /* -- Count helpers -- */
 function countByField(
   deals: RealDeal[],
@@ -393,14 +423,14 @@ function DealCard({ deal }: { deal: RealDeal }) {
 
           {deal.ports.length > 0 && (
             <div className="mt-3 flex flex-wrap gap-1">
-              {deal.ports.slice(0, 4).map((port) => (
+              {deal.ports.slice(0, 6).map((port) => (
                 <Badge key={port} variant="outline" className="text-[10px]">
                   {getPortWithCountry(port)}
                 </Badge>
               ))}
-              {deal.ports.length > 4 && (
+              {deal.ports.length > 6 && (
                 <span className="text-[10px] text-gray-400 self-center">
-                  +{deal.ports.length - 4} more
+                  +{deal.ports.length - 6} more
                 </span>
               )}
             </div>
@@ -412,12 +442,14 @@ function DealCard({ deal }: { deal: RealDeal }) {
       <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[180px]">
         <div className="text-right">
           <p className="text-[10px] uppercase tracking-wider text-gray-400">
-            from
+            Interior from
           </p>
           <p className="font-price text-xl font-bold text-coral">
             ${deal.fromPrice.toLocaleString()}
           </p>
-          <p className="text-[10px] text-gray-400">per person</p>
+          <p className="text-[10px] text-gray-400">
+            per person {deal.cruiseLineId === "disney" ? "(incl. taxes)" : "(excl. taxes)"}
+          </p>
         </div>
         <div className="flex flex-col gap-2 mt-3 w-full md:w-auto">
           <Button asChild size="sm" className="w-full">
@@ -454,8 +486,10 @@ function DealCard({ deal }: { deal: RealDeal }) {
 
 interface FilterState {
   priceRange: [number, number];
+  regions: Set<string>;
   cruiseLines: Set<string>;
   durations: Set<string>;
+  months: Set<string>;
   departurePorts: Set<string>;
   ships: Set<string>;
 }
@@ -474,14 +508,23 @@ function FilterSidebar({
   onClose?: () => void;
 }) {
   /* Counts based on unfiltered data */
+  const regionCountsMap = countByField(REAL_DEALS, "region");
   const lineCountsMap = countByField(REAL_DEALS, "cruiseLineId");
   const durationCountsMap = countByDuration(REAL_DEALS);
+  const monthCountsMap = (() => {
+    const m = new Map<string, number>();
+    for (const d of REAL_DEALS) {
+      const mo = getDepartureMonth(d.departureDate);
+      if (mo) m.set(mo, (m.get(mo) || 0) + 1);
+    }
+    return m;
+  })();
   const portCountsMap = countByField(REAL_DEALS, "departurePort");
   const shipCountsMap = countByField(REAL_DEALS, "shipName");
 
   const toggleInSet = useCallback(
     (
-      key: "cruiseLines" | "durations" | "departurePorts" | "ships",
+      key: "regions" | "cruiseLines" | "durations" | "months" | "departurePorts" | "ships",
       value: string
     ) => {
       setFilters((prev) => {
@@ -497,12 +540,20 @@ function FilterSidebar({
   const clearAll = () => {
     setFilters({
       priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
+      regions: new Set(ALL_REGIONS),
       cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
       durations: new Set(DURATION_RANGES.map((r) => r.key)),
+      months: new Set(ALL_MONTHS),
       departurePorts: new Set(ALL_DEPARTURE_PORTS),
       ships: new Set(ALL_SHIP_NAMES),
     });
   };
+
+  const regionItems = ALL_REGIONS.map((r) => ({
+    value: r,
+    label: REGION_LABELS[r] || r,
+    count: regionCountsMap.get(r) ?? 0,
+  })).sort((a, b) => b.count - a.count);
 
   /* Cruise line items with display names */
   const cruiseLineItems = ALL_CRUISE_LINE_IDS.map((id) => {
@@ -518,6 +569,12 @@ function FilterSidebar({
     value: r.key,
     label: r.label,
     count: durationCountsMap.get(r.key) ?? 0,
+  }));
+
+  const monthItems = ALL_MONTHS.map((m) => ({
+    value: m,
+    label: formatMonth(m),
+    count: monthCountsMap.get(m) ?? 0,
   }));
 
   const portItems = ALL_DEPARTURE_PORTS.map((p) => ({
@@ -627,6 +684,15 @@ function FilterSidebar({
           </div>
         </FilterSection>
 
+        {/* Destination */}
+        <FilterSection title="Destination">
+          <CheckboxGroup
+            items={regionItems}
+            selected={filters.regions}
+            onChange={(v) => toggleInSet("regions", v)}
+          />
+        </FilterSection>
+
         {/* Cruise line */}
         <FilterSection title="Cruise Line">
           <CheckboxGroup
@@ -644,6 +710,18 @@ function FilterSidebar({
             onChange={(v) => toggleInSet("durations", v)}
           />
         </FilterSection>
+
+        {/* Month */}
+        {monthItems.length > 0 && (
+          <FilterSection title="Departure Month" defaultOpen={false}>
+            <CheckboxGroup
+              items={monthItems}
+              selected={filters.months}
+              onChange={(v) => toggleInSet("months", v)}
+              maxVisible={6}
+            />
+          </FilterSection>
+        )}
 
         {/* Departure port */}
         <FilterSection title="Departure Port">
@@ -677,8 +755,10 @@ export default function CruiseSearchPage() {
   /* Filter state */
   const [filters, setFilters] = useState<FilterState>({
     priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
+    regions: new Set(ALL_REGIONS),
     cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
     durations: new Set(DURATION_RANGES.map((r) => r.key)),
+    months: new Set(ALL_MONTHS),
     departurePorts: new Set(ALL_DEPARTURE_PORTS),
     ships: new Set(ALL_SHIP_NAMES),
   });
@@ -693,8 +773,13 @@ export default function CruiseSearchPage() {
     let deals = REAL_DEALS.filter((d) => {
       if (d.fromPrice < filters.priceRange[0]) return false;
       if (d.fromPrice > filters.priceRange[1]) return false;
+      if (!filters.regions.has(d.region)) return false;
       if (!filters.cruiseLines.has(d.cruiseLineId)) return false;
       if (!filters.durations.has(getDurationKey(d.duration))) return false;
+      if (filters.months.size < ALL_MONTHS.length) {
+        const m = getDepartureMonth(d.departureDate);
+        if (m && !filters.months.has(m)) return false;
+      }
       if (!filters.departurePorts.has(d.departurePort)) return false;
       if (!filters.ships.has(d.shipName)) return false;
       return true;
@@ -748,8 +833,12 @@ export default function CruiseSearchPage() {
           </div>
           <p className="text-sm text-gray-500">
             Browse {DEAL_STATS.totalDeals} real sailings from{" "}
-            {DEAL_STATS.cruiseLines.length} cruise lines &middot; Prices
-            updated daily
+            {DEAL_STATS.cruiseLines.length} cruise lines &middot; Updated{" "}
+            {new Date(DEAL_STATS.lastScraped).toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            })}
           </p>
         </div>
       </div>
@@ -837,8 +926,10 @@ export default function CruiseSearchPage() {
                   onClick={() =>
                     setFiltersAndResetPage({
                       priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
+                      regions: new Set(ALL_REGIONS),
                       cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
                       durations: new Set(DURATION_RANGES.map((r) => r.key)),
+                      months: new Set(ALL_MONTHS),
                       departurePorts: new Set(ALL_DEPARTURE_PORTS),
                       ships: new Set(ALL_SHIP_NAMES),
                     })
