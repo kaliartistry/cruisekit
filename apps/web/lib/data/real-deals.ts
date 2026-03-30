@@ -283,7 +283,7 @@ function normalizeMSC(): DealWithoutRegion[] {
       currency: "USD",
       departureDate: s.departureDate || null,
       ports: Array.isArray(s.ports) ? [...new Set(s.ports.filter(Boolean))] : [],
-      imageUrl: s.imageUrl || null,
+      imageUrl: null, // MSC CDN images are unreliable (orcas for Bahamas) — use port-matched images instead
       bookingUrl: null,
     }));
 }

@@ -57,7 +57,7 @@ const caribbeanCostPost: BlogPost = {
   publishedDate: "2026-03-15",
   readTime: "8 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg?w=1200&q=80",
   tags: ["cruise cost", "hidden fees", "budget", "Caribbean cruise", "2026"],
   content: [
     {
@@ -120,7 +120,7 @@ const rciVsCarnivalPost: BlogPost = {
   publishedDate: "2026-03-10",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1200&q=80",
+    "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/aerial-view-nassau-bahamas-2560x1440.jpg?w=1200&q=80",
   tags: [
     "Royal Caribbean",
     "Carnival",
@@ -189,7 +189,7 @@ const hiddenCostsPost: BlogPost = {
   publishedDate: "2026-03-05",
   readTime: "7 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=1200&q=80",
+    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1200&q=80?w=1200&q=80",
   tags: ["hidden costs", "fees", "budget", "cruise tips", "gratuities"],
   content: [
     {
@@ -280,7 +280,7 @@ const bestPortsPost: BlogPost = {
   publishedDate: "2026-02-28",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=1200&q=80",
+    "https://images.unsplash.com/photo-1579493933703-70473cdf84f8?w=1200&q=80?w=1200&q=80",
   tags: [
     "Caribbean",
     "ports",
@@ -355,7 +355,7 @@ const carnivalCheersPost: BlogPost = {
   publishedDate: "2026-02-20",
   readTime: "7 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&q=80",
+    "https://images.unsplash.com/photo-1559956144-ee11501d5459?w=1200&q=80?w=1200&q=80",
   tags: [
     "Carnival",
     "drink package",
@@ -423,7 +423,7 @@ const norwegianFreeAtSeaPost: BlogPost = {
   publishedDate: "2026-02-15",
   readTime: "8 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1200&q=80",
+    "https://images.unsplash.com/photo-1593007466861-7707b21b81c0?w=1200&q=80?w=1200&q=80",
   tags: ["Norwegian", "Free at Sea", "NCL", "drink package", "cruise perks"],
   content: [
     {
@@ -499,7 +499,7 @@ const shipTimePost: BlogPost = {
   publishedDate: "2026-02-10",
   readTime: "6 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80",
+    "https://images.unsplash.com/photo-1558923240-2672e219374b?w=1200&q=80?w=1200&q=80",
   tags: [
     "ship time",
     "port day",
@@ -574,7 +574,7 @@ const disneyVsRciPost: BlogPost = {
   publishedDate: "2026-02-05",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=1200&q=80",
+    "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/galveston/galveston-adobestock_352652948-16x9.jpg?1718815457619?w=1200&q=80",
   tags: [
     "Disney",
     "Royal Caribbean",
@@ -645,7 +645,7 @@ const royalCaribbeanCostPost: BlogPost = {
   publishedDate: "2026-03-29",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1559599746-8823b38544c6?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/grand-turk-turks-caicos/overview/grand-turk-island-coast.jpg?w=1200&q=80",
   tags: [
     "Royal Caribbean",
     "cruise cost",
@@ -708,7 +708,7 @@ const carnivalCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-28",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?w=1200&q=80",
+    "https://images.unsplash.com/photo-1603756009316-20fafbee4a3e?w=1200&q=80?w=1200&q=80",
   tags: [
     "Carnival",
     "cruise cost",
@@ -770,7 +770,7 @@ const norwegianCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-27",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=1200&q=80",
+    "https://images.unsplash.com/photo-1585540036061-a57122a5aa3f?w=1200&q=80?w=1200&q=80",
   tags: [
     "Norwegian",
     "NCL",
@@ -831,7 +831,7 @@ const mscCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-26",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&q=80",
+    "https://images.unsplash.com/photo-1543240498-d949ce4412b3?w=1200&q=80?w=1200&q=80",
   tags: [
     "MSC",
     "cruise cost",
@@ -892,7 +892,7 @@ const celebrityCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-25",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
+    "https://images.unsplash.com/photo-1693574276068-d5d65bb34ad0?w=1200&q=80?w=1200&q=80",
   tags: [
     "Celebrity",
     "cruise cost",
@@ -953,7 +953,7 @@ const princessCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-24",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1200&q=80",
+    "https://images.unsplash.com/photo-1584558701762-387e5d31e441?w=1200&q=80?w=1200&q=80",
   tags: [
     "Princess",
     "cruise cost",
@@ -1014,7 +1014,7 @@ const hollandAmericaCostPost: BlogPost = {
   publishedDate: "2026-03-22",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80",
+    "https://images.unsplash.com/photo-1555744164-728dd59f9d8b?w=1200&q=80?w=1200&q=80",
   tags: [
     "Holland America",
     "cruise cost",
@@ -1075,7 +1075,7 @@ const disneyCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-21",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1605711285791-0219e80e43a3?w=1200&q=80",
+    "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/san-diego/san-diego-adobeStock_82570608-32x9.jpg?1693498622655?w=1200&q=80",
   tags: [
     "Disney",
     "cruise cost",
@@ -1197,7 +1197,7 @@ const norwegianVsRoyalCaribbeanPost: BlogPost = {
   publishedDate: "2026-03-19",
   readTime: "11 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=1200&q=80",
+    "https://images.unsplash.com/photo-1617202830798-cf48261fb70d?w=1200&q=80?w=1200&q=80",
   tags: [
     "Norwegian",
     "Royal Caribbean",
@@ -1266,7 +1266,7 @@ const celebrityVsPrincessPost: BlogPost = {
   publishedDate: "2026-03-18",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80",
+    "https://images.unsplash.com/photo-1745156705689-eef88991849d?w=1200&q=80?w=1200&q=80",
   tags: [
     "Celebrity",
     "Princess",
@@ -1328,7 +1328,7 @@ const mscVsNorwegianPost: BlogPost = {
   publishedDate: "2026-03-17",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=1200&q=80",
+    "https://images.unsplash.com/photo-1668813922137-e5dcda303af6?w=1200&q=80?w=1200&q=80",
   tags: [
     "MSC",
     "Norwegian",
@@ -1390,7 +1390,7 @@ const virginVsCelebrityPost: BlogPost = {
   publishedDate: "2026-03-15",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1502003148287-a82ef80a6abc?w=1200&q=80",
+    "https://images.unsplash.com/photo-1536308037887-165852797016?w=1200&q=80?w=1200&q=80",
   tags: [
     "Virgin Voyages",
     "Celebrity",
@@ -1452,7 +1452,7 @@ const carnivalVsMscPost: BlogPost = {
   publishedDate: "2026-03-14",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1534190239940-9ba8944ea261?w=1200&q=80",
+    "https://images.unsplash.com/photo-1706455986634-225f93284c0c?w=1200&q=80?w=1200&q=80",
   tags: [
     "Carnival",
     "MSC",
@@ -1514,7 +1514,7 @@ const disneyVsCarnivalFamiliesPost: BlogPost = {
   publishedDate: "2026-03-12",
   readTime: "11 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1200&q=80",
+    "https://images.unsplash.com/photo-1530225029356-e301a685e6b1?w=1200&q=80?w=1200&q=80",
   tags: [
     "Disney",
     "Carnival",
