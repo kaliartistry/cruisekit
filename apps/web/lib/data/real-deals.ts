@@ -157,32 +157,75 @@ function normalizeNCL(): DealWithoutRegion[] {
 function normalizeVirgin(): DealWithoutRegion[] {
   return virginData.sailings
     .filter((s) => (s.fromPrice ?? 0) > 0)
-    .map((s, i) => ({
-      id: `virgin-${i}`,
-      cruiseLine: "Virgin Voyages",
-      cruiseLineId: "virgin-voyages",
-      shipName: VIRGIN_SHIP_NAMES[s.shipCode] || s.shipName || s.shipCode || "Unknown",
-      duration: s.duration,
-      departurePort: s.departurePort || getVirginPortName((s as Record<string, unknown>).homePort as string),
-      itineraryTitle: `${s.duration}-Night ${s.region?.replace("..", "").trim() || "Caribbean"} from ${getVirginPortName((s as Record<string, unknown>).homePort as string)}`,
-      fromPrice: s.fromPrice ?? 0,
-      currency: "USD",
-      departureDate: s.departureDate || null,
-      ports: Array.isArray(s.ports) ? s.ports.filter(Boolean) : [],
-      imageUrl: null,
-      bookingUrl: null,
-    }));
+    .map((s, i) => {
+      const homePort = (s as Record<string, unknown>).homePort as string;
+      const depPort = s.departurePort || getVirginPortName(homePort);
+      // Expand port codes to real names and filter out departure port
+      const expandedPorts = (Array.isArray(s.ports) ? s.ports : [])
+        .map((code: string) => getVirginPortName(code))
+        .filter((name: string) => name && name !== depPort && name !== "Miami");
+      const uniquePorts = [...new Set(expandedPorts)];
+      // Build a real itinerary title from port names
+      const portSummary = uniquePorts.length > 0
+        ? uniquePorts.slice(0, 2).join(" & ")
+        : "Caribbean";
+      return {
+        id: `virgin-${i}`,
+        cruiseLine: "Virgin Voyages",
+        cruiseLineId: "virgin-voyages",
+        shipName: VIRGIN_SHIP_NAMES[s.shipCode] || s.shipName || s.shipCode || "Unknown",
+        duration: s.duration,
+        departurePort: depPort,
+        itineraryTitle: `${s.duration}-Night ${portSummary} from ${depPort}`,
+        fromPrice: s.fromPrice ?? 0,
+        currency: "USD",
+        departureDate: s.departureDate || null,
+        ports: uniquePorts,
+        imageUrl: null,
+        bookingUrl: null,
+      };
+    });
 }
 
+const VIRGIN_PORT_CODES: Record<string, string> = {
+  MIA: "Miami",
+  SJU: "San Juan",
+  CZM: "Cozumel",
+  BIM: "Bimini",
+  NAS: "Nassau",
+  POP: "Puerto Plata",
+  GDT: "Grand Turk",
+  STT: "St. Thomas",
+  SXM: "St. Maarten",
+  AUA: "Aruba",
+  WIL: "Willemstad",
+  KRA: "Kralendijk",
+  BGI: "Barbados",
+  ANU: "Antigua",
+  SLU: "St. Lucia",
+  SVD: "St. Vincent",
+  GEC: "George Town",
+  RTB: "Roatan",
+  BZE: "Belize City",
+  FDF: "Martinique",
+  SKB: "St. Kitts",
+  TOV: "Tortola",
+  STX: "St. Croix",
+  CMA: "Costa Maya",
+  EYW: "Key West",
+  OCJ: "Ocho Rios",
+  FPO: "Freeport",
+  RSU: "Iles des Saintes",
+  SAM: "Samaná",
+  PGO: "Progreso",
+  CBJ: "Cabo Rojo",
+  BCN: "Barcelona",
+  ATH: "Athens",
+  SOU: "Southampton",
+};
+
 function getVirginPortName(code: string | undefined): string {
-  const map: Record<string, string> = {
-    MIA: "Miami, FL",
-    SJU: "San Juan, PR",
-    BCN: "Barcelona",
-    ATH: "Athens",
-    SOU: "Southampton",
-  };
-  return map[code || ""] || code || "";
+  return VIRGIN_PORT_CODES[code || ""] || code || "";
 }
 
 function normalizeRCI(): DealWithoutRegion[] {
