@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
+import GroupsContent from "./groups-content";
 
 export const metadata: Metadata = {
-  title: "Group Hub",
+  title: "Group Hub — Plan & Split Costs for Group Cruises",
   description:
-    "Manage group bookings, split costs, share itineraries, and keep everyone on the same page.",
+    "Estimate per-person costs for your group cruise, follow a step-by-step planning timeline, and coordinate your group booking across all major cruise lines.",
+  keywords: [
+    "group cruise planning",
+    "group cruise cost calculator",
+    "split cruise costs",
+    "group cruise booking",
+    "cruise group rates",
+    "group cruise checklist",
+  ],
 };
 
 export default function GroupsPage() {
@@ -17,16 +26,10 @@ export default function GroupsPage() {
         <PageHeader
           pillar="coordinate"
           title="Group Hub"
-          subtitle="Manage group bookings, split costs, share itineraries, and keep everyone on the same page."
+          subtitle="Estimate per-person costs, plan your timeline, and coordinate your group cruise — all in one place."
           breadcrumbs={[{ label: "Group Hub" }]}
         />
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50/50 p-12 text-center">
-            <p className="text-lg font-medium text-gray-500">
-              Coming soon — Wrangle your group with ease.
-            </p>
-          </div>
-        </section>
+        <GroupsContent />
       </main>
       <Footer />
     </>
