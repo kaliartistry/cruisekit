@@ -15,6 +15,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.hollandamerica.com" },
       { protocol: "https", hostname: "www.celebritycruises.com" },
       { protocol: "https", hostname: "disneycruise.disney.go.com" },
+      { protocol: "https", hostname: "cdn1.parksmedia.wdprapps.disney.com" },
+      { protocol: "https", hostname: "upload.wikimedia.org" },
       { protocol: "https", hostname: "lh3.googleusercontent.com" },
     ],
   },

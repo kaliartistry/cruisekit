@@ -296,7 +296,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Curacao",
     },
     region: "eastern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-st-maarten-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/87/Maho_Beach_Saint_Martin.jpg",
   },
 
   /* ================================================================ */
@@ -346,7 +346,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Tegucigalpa. Emergency: (504) 2236-9320",
     },
     region: "western",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-roatan-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/45/West_Bay_Beach_-Roatan_-Honduras-23May2009-g.jpg",
   },
 
   /* ================================================================ */
@@ -396,7 +396,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Curacao: (599-9) 461-3066",
     },
     region: "southern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-aruba-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Divi_divi_tree_Eagle_Beach.jpg",
   },
 
   /* ================================================================ */
@@ -445,7 +445,7 @@ export const PORTS: PortData[] = [
       hospital: "Centro Medico — San Juan",
     },
     region: "eastern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-san-juan-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/71/Modern_Skyline_of_San_Juan,_Puerto_Rico.jpg",
   },
 
   /* ================================================================ */
@@ -592,7 +592,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(52) 872-4574 (Consular Agency — shared with Cozumel)",
     },
     region: "western",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-costa-maya-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/76/Costa_maya_beach.jpg",
   },
 
   /* ================================================================ */
@@ -642,7 +642,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(999) 942-5700 (US Consulate in Merida)",
     },
     region: "western",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-progreso-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/33/Yucat%C3%A1n,_Progreso_de_Castro,_its_beach_and_the_pier.jpg",
   },
 
   /* ================================================================ */
@@ -938,7 +938,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-ocho-rios-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Dunn's_River_Falls_%26_Park.jpg",
   },
 
   /* ================================================================ */
@@ -988,7 +988,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(599-9) 461-3066",
     },
     region: "southern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-curacao-4.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/59/Facades_of_Handelskade,_Willemstad,_Cura%C3%A7ao_-_February_2020.jpg",
   },
 
   /* ================================================================ */
@@ -1087,7 +1087,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Santo Domingo 809-567-7775",
     },
     region: "eastern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-puerto-plata-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Puerto_Plata_Dominican_Republic_Town_Architecture.jpg",
   },
 
   /* ================================================================ */
@@ -1137,7 +1137,7 @@ export const PORTS: PortData[] = [
       usConsulate: "876-953-0620",
     },
     region: "western",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-montego-bay-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Doctors-Cave-Beach.jpg",
   },
 
   /* ================================================================ */
@@ -1186,7 +1186,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-tortola-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b6/BVI-tortola-cane-garden-bay.jpg",
   },
 
   /* ================================================================ */
@@ -1285,7 +1285,7 @@ export const PORTS: PortData[] = [
       usConsulate: "246-227-4000",
     },
     region: "southern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-barbados-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Brandon's_Beach.jpg",
   },
 
   /* ================================================================ */
@@ -1334,7 +1334,7 @@ export const PORTS: PortData[] = [
       usConsulate: "473-444-1173",
     },
     region: "southern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-grenada-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Grand_Anse_Beach_Grenada.jpg",
   },
 
   /* ================================================================ */
@@ -1383,7 +1383,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-antigua-1.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/af/St._John's_Antigua_Cruise_Port_1.jpg",
   },
 
   /* ================================================================ */
@@ -1576,7 +1576,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility, coordinates with ship medical staff",
     },
     region: "bahamas",
-    imageUrl: "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE7MIACZMRTBBPICMAMIA.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/25/Perfect_Day_Coco_Cay_PANO.jpg",
   },
 
   /* ================================================================ */
@@ -1619,7 +1619,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility planned",
     },
     region: "bahamas",
-    imageUrl: "https://www.carnival.com/~/media/Images/celebration-key/whats-included-and-how-to-upgrade-section/whats-included-section-background-4.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/54/Gold_Rock_Beach_Grand_Bahama_Island.jpg",
   },
 
   /* ================================================================ */

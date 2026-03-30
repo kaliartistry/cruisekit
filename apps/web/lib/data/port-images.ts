@@ -39,34 +39,36 @@ export const PORT_IMAGES: Record<string, string> = {
   "amber cove": `${RCI_CDN}/ports-and-destinations/ports/cabo-rojo-dominican-republic/overview/beach-playa-cabo-rojo-north-bahia-de-las-aguilas-around-pedernales-jaragua-national-park-dominican-republic.jpg`,
 
   // --- Carnival CDN ---
-  "st. maarten": `${CARNIVAL_CDN}/carnival-caribbean-port-st-maarten-1.jpg`,
-  "philipsburg": `${CARNIVAL_CDN}/carnival-caribbean-port-st-maarten-1.jpg`,
-  "san juan": `${CARNIVAL_CDN}/carnival-caribbean-port-san-juan-1.jpg`,
-  "aruba": `${CARNIVAL_CDN}/carnival-caribbean-port-aruba-1.jpg`,
-  "oranjestad": `${CARNIVAL_CDN}/carnival-caribbean-port-aruba-1.jpg`,
-  "curacao": `${CARNIVAL_CDN}/carnival-caribbean-port-curacao-4.jpg`,
-  "willemstad": `${CARNIVAL_CDN}/carnival-caribbean-port-curacao-4.jpg`,
+  // --- Wikimedia Commons (verified destination photos, CC licensed) ---
+  "st. maarten": "https://upload.wikimedia.org/wikipedia/commons/8/87/Maho_Beach_Saint_Martin.jpg",
+  "philipsburg": "https://upload.wikimedia.org/wikipedia/commons/8/87/Maho_Beach_Saint_Martin.jpg",
+  "san juan": "https://upload.wikimedia.org/wikipedia/commons/7/71/Modern_Skyline_of_San_Juan,_Puerto_Rico.jpg",
+  "aruba": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Divi_divi_tree_Eagle_Beach.jpg",
+  "oranjestad": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Divi_divi_tree_Eagle_Beach.jpg",
+  "curacao": "https://upload.wikimedia.org/wikipedia/commons/5/59/Facades_of_Handelskade,_Willemstad,_Cura%C3%A7ao_-_February_2020.jpg",
+  "willemstad": "https://upload.wikimedia.org/wikipedia/commons/5/59/Facades_of_Handelskade,_Willemstad,_Cura%C3%A7ao_-_February_2020.jpg",
+  "barbados": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Brandon's_Beach.jpg",
+  "antigua": "https://upload.wikimedia.org/wikipedia/commons/a/af/St._John's_Antigua_Cruise_Port_1.jpg",
+  "tortola": "https://upload.wikimedia.org/wikipedia/commons/b/b6/BVI-tortola-cane-garden-bay.jpg",
+  "grenada": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Grand_Anse_Beach_Grenada.jpg",
+  "roatan": "https://upload.wikimedia.org/wikipedia/commons/4/45/West_Bay_Beach_-Roatan_-Honduras-23May2009-g.jpg",
+  "ocho rios": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Dunn's_River_Falls_%26_Park.jpg",
+  "jamaica": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Dunn's_River_Falls_%26_Park.jpg",
+  "montego bay": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Doctors-Cave-Beach.jpg",
+  "costa maya": "https://upload.wikimedia.org/wikipedia/commons/7/76/Costa_maya_beach.jpg",
+  "progreso": "https://upload.wikimedia.org/wikipedia/commons/3/33/Yucat%C3%A1n,_Progreso_de_Castro,_its_beach_and_the_pier.jpg",
+  "puerto plata": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Puerto_Plata_Dominican_Republic_Town_Architecture.jpg",
+  // Keep Carnival CDN for ports where Wikimedia wasn't sourced
   "bonaire": `${CARNIVAL_CDN}/carnival-caribbean-port-bonaire-1.jpg`,
   "kralendijk": `${CARNIVAL_CDN}/carnival-caribbean-port-bonaire-1.jpg`,
-  "barbados": `${CARNIVAL_CDN}/carnival-caribbean-port-barbados-1.jpg`,
-  "antigua": `${CARNIVAL_CDN}/carnival-caribbean-port-antigua-1.jpg`,
   "st. lucia": `${CARNIVAL_CDN}/carnival-caribbean-port-st-lucia-2.jpg`,
-  "tortola": `${CARNIVAL_CDN}/carnival-caribbean-port-tortola-1.jpg`,
   "st. kitts": `${CARNIVAL_CDN}/carnival-caribbean-port-st-maarten-1.jpg`,
-  "grenada": `${CARNIVAL_CDN}/carnival-caribbean-port-grenada-1.jpg`,
-  "roatan": `${CARNIVAL_CDN}/carnival-caribbean-port-roatan-1.jpg`,
-  "ocho rios": `${CARNIVAL_CDN}/carnival-caribbean-port-ocho-rios-1.jpg`,
-  "jamaica": `${CARNIVAL_CDN}/carnival-caribbean-port-ocho-rios-1.jpg`,
-  "montego bay": `${CARNIVAL_CDN}/carnival-caribbean-port-montego-bay-1.jpg`,
-  "costa maya": `${CARNIVAL_CDN}/carnival-caribbean-port-costa-maya-1.jpg`,
-  "progreso": `${CARNIVAL_CDN}/carnival-caribbean-port-progreso-1.jpg`,
-  "puerto plata": `${CARNIVAL_CDN}/carnival-caribbean-port-puerto-plata-1.jpg`,
 
   // --- Celebrity CDN ---
   "half moon": `${CELEBRITY_CDN}/pdcc/drone-shot-hideaway-beach-perfect-day-at-cococay-bahamas-2560x1440.jpg`,
 
   // --- Carnival private destinations ---
-  "celebration key": "https://www.carnival.com/~/media/Images/celebration-key/whats-included-and-how-to-upgrade-section/whats-included-section-background-4.jpg",
+  "celebration key": "https://upload.wikimedia.org/wikipedia/commons/5/54/Gold_Rock_Beach_Grand_Bahama_Island.jpg",
 
   // --- Cruise type fallbacks (use representative destination for that region) ---
   "western caribbean": `${RCI_CDN}/data/ports/cozumel-mexico/1920x1080.jpg`,
