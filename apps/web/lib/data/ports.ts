@@ -98,7 +98,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(52) 872-4574 (Consular Agency Cozumel)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1579493933703-70473cdf84f8?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/cozumel-mexico/1920x1080.jpg",
   },
 
   /* ================================================================ */
@@ -147,7 +147,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(242) 322-1181",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80",
+    imageUrl: "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/aerial-view-nassau-bahamas-2560x1440.jpg",
   },
 
   /* ================================================================ */
@@ -197,7 +197,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Jamaica. UK Governor's Office: (345) 244-2401",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1555744164-728dd59f9d8b?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/george-town-grand-cayman/george-town-grand-cayman-stingray-city.jpg",
   },
 
   /* ================================================================ */
@@ -246,7 +246,7 @@ export const PORTS: PortData[] = [
       hospital: "Schneider Regional Medical Center",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1748624185483-3fd96e68c749?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/charlotte-amalie-st-thomas/charlotte-amalie-st-thomas-magens-bay.jpg",
   },
 
   /* ================================================================ */
@@ -493,7 +493,7 @@ export const PORTS: PortData[] = [
       hospital: "Lower Keys Medical Center",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1617202830798-cf48261fb70d?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/key/key-west-florida-southernmost-point.jpg",
   },
 
   /* ================================================================ */
@@ -542,7 +542,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Nassau, Bahamas",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1558923240-2672e219374b?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/grand-turk-turks-caicos/overview/grand-turk-island-coast.jpg",
   },
 
   /* ================================================================ */
@@ -690,7 +690,7 @@ export const PORTS: PortData[] = [
       hospital: "First aid station on island; medical center on ship",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg",
   },
 
   /* ================================================================ */
@@ -738,7 +738,7 @@ export const PORTS: PortData[] = [
       hospital: "First aid station on site; medical center on ship",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1554759068-c560c4563912?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/labadee-haiti/labadee-haiti-zipline-coast.jpg",
   },
 
   /* ================================================================ */
@@ -788,7 +788,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(809) 567-7775 (Santo Domingo)",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1678816331175-a61a6835e889?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/cabo-rojo-dominican-republic/overview/beach-playa-cabo-rojo-north-bahia-de-las-aguilas-around-pedernales-jaragua-national-park-dominican-republic.jpg",
   },
 
   /* ================================================================ */
@@ -838,7 +838,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(501) 822-4011 (US Embassy Belmopan)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1585540036061-a57122a5aa3f?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/belize-city-belize/belize-crystal-caves-limestone.jpg",
   },
 
   /* ================================================================ */
@@ -888,7 +888,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1614529168796-cb235d6a2557?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/falmouth-jamaica/falmouth-jamaica-port-aerial-coast.jpg",
   },
 
   /* ================================================================ */
@@ -1038,7 +1038,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(441) 295-1342",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1584558701762-387e5d31e441?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/kings-wharf-bermuda/kings-wharf-bermuda-horseshoe-bay-rock-formations.jpg",
   },
 
   /* ================================================================ */
@@ -1236,7 +1236,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Bogotá +57 1 275-2000",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1536308037887-165852797016?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/cartagena-colombia/overview/cartagena-colombia-close-up-church-of-st-peter-claver.jpg",
   },
 
   /* ================================================================ */
@@ -1529,7 +1529,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility, coordinates with ship medical staff",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80",
+    imageUrl: "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/aerial-view-nassau-bahamas-2560x1440.jpg",
   },
 
   /* ================================================================ */

@@ -189,7 +189,7 @@ const hiddenCostsPost: BlogPost = {
   publishedDate: "2026-03-05",
   readTime: "7 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/falmouth-jamaica/falmouth-jamaica-port-aerial-coast.jpg",
   tags: ["hidden costs", "fees", "budget", "cruise tips", "gratuities"],
   content: [
     {
@@ -280,7 +280,7 @@ const bestPortsPost: BlogPost = {
   publishedDate: "2026-02-28",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1579493933703-70473cdf84f8?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/cabo-rojo-dominican-republic/overview/beach-playa-cabo-rojo-north-bahia-de-las-aguilas-around-pedernales-jaragua-national-park-dominican-republic.jpg",
   tags: [
     "Caribbean",
     "ports",
@@ -355,7 +355,7 @@ const carnivalCheersPost: BlogPost = {
   publishedDate: "2026-02-20",
   readTime: "7 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1559956144-ee11501d5459?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/key/key-west-florida-southernmost-point.jpg",
   tags: [
     "Carnival",
     "drink package",
@@ -423,7 +423,7 @@ const norwegianFreeAtSeaPost: BlogPost = {
   publishedDate: "2026-02-15",
   readTime: "8 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1593007466861-7707b21b81c0?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/grand-turk-turks-caicos/overview/grand-turk-island-coast.jpg",
   tags: ["Norwegian", "Free at Sea", "NCL", "drink package", "cruise perks"],
   content: [
     {
@@ -499,7 +499,7 @@ const shipTimePost: BlogPost = {
   publishedDate: "2026-02-10",
   readTime: "6 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1558923240-2672e219374b?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/st--croix-usvi/st-croix-usvi-frederiksted-beach-wave-crashing.jpg",
   tags: [
     "ship time",
     "port day",
@@ -708,7 +708,7 @@ const carnivalCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-28",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1603756009316-20fafbee4a3e?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/cozumel-mexico/1920x1080.jpg",
   tags: [
     "Carnival",
     "cruise cost",
@@ -770,7 +770,7 @@ const norwegianCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-27",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1585540036061-a57122a5aa3f?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/belize-city-belize/belize-crystal-caves-limestone.jpg",
   tags: [
     "Norwegian",
     "NCL",
@@ -831,7 +831,7 @@ const mscCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-26",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1543240498-d949ce4412b3?w=1200&q=80?w=1200&q=80",
+    "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/wdpro-assets/dcl/finder/destinations/ports-of-call/nassau-bahamas/nassau-bahamas-00.jpg?1755601113638",
   tags: [
     "MSC",
     "cruise cost",
@@ -892,7 +892,7 @@ const celebrityCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-25",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1693574276068-d5d65bb34ad0?w=1200&q=80?w=1200&q=80",
+    "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/sunset-beach-cozumel-mexico-2560x1440.jpg",
   tags: [
     "Celebrity",
     "cruise cost",
@@ -953,7 +953,7 @@ const princessCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-24",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1584558701762-387e5d31e441?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/kings-wharf-bermuda/kings-wharf-bermuda-horseshoe-bay-rock-formations.jpg",
   tags: [
     "Princess",
     "cruise cost",
@@ -1014,7 +1014,7 @@ const hollandAmericaCostPost: BlogPost = {
   publishedDate: "2026-03-22",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1555744164-728dd59f9d8b?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/george-town-grand-cayman/george-town-grand-cayman-stingray-city.jpg",
   tags: [
     "Holland America",
     "cruise cost",
@@ -1136,7 +1136,7 @@ const virginVoyagesCostPost: BlogPost = {
   publishedDate: "2026-03-20",
   readTime: "9 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/bimini/bimini-bahamas-island-shore-beach.jpg",
   tags: [
     "Virgin Voyages",
     "cruise cost",
@@ -1197,7 +1197,7 @@ const norwegianVsRoyalCaribbeanPost: BlogPost = {
   publishedDate: "2026-03-19",
   readTime: "11 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1617202830798-cf48261fb70d?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/charlotte-amalie-st-thomas/charlotte-amalie-st-thomas-magens-bay.jpg",
   tags: [
     "Norwegian",
     "Royal Caribbean",
@@ -1266,7 +1266,7 @@ const celebrityVsPrincessPost: BlogPost = {
   publishedDate: "2026-03-18",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1745156705689-eef88991849d?w=1200&q=80?w=1200&q=80",
+    "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/georgetown-grand-cayman-2560x1440.jpg",
   tags: [
     "Celebrity",
     "Princess",
@@ -1328,7 +1328,7 @@ const mscVsNorwegianPost: BlogPost = {
   publishedDate: "2026-03-17",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1668813922137-e5dcda303af6?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/labadee-haiti/labadee-haiti-zipline-coast.jpg",
   tags: [
     "MSC",
     "Norwegian",
@@ -1390,7 +1390,7 @@ const virginVsCelebrityPost: BlogPost = {
   publishedDate: "2026-03-15",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1536308037887-165852797016?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/cartagena-colombia/overview/cartagena-colombia-close-up-church-of-st-peter-claver.jpg",
   tags: [
     "Virgin Voyages",
     "Celebrity",
@@ -1452,7 +1452,7 @@ const carnivalVsMscPost: BlogPost = {
   publishedDate: "2026-03-14",
   readTime: "10 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1706455986634-225f93284c0c?w=1200&q=80?w=1200&q=80",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/grand/grand-bahama-island-sands-beaches-palm-trees.jpg",
   tags: [
     "Carnival",
     "MSC",
@@ -1514,7 +1514,7 @@ const disneyVsCarnivalFamiliesPost: BlogPost = {
   publishedDate: "2026-03-12",
   readTime: "11 min read",
   imageUrl:
-    "https://images.unsplash.com/photo-1530225029356-e301a685e6b1?w=1200&q=80?w=1200&q=80",
+    "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/cozumel/Cozumel-00-16x9.jpg?1718710850975",
   tags: [
     "Disney",
     "Carnival",
