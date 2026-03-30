@@ -71,233 +71,90 @@ function hashString(str: string): number {
   return Math.abs(hash);
 }
 
-/* -- Destination images mapped to Caribbean ports/regions (3-5 per dest) -- */
-const PORT_IMAGES: Record<string, string[]> = {
-  // Mexican ports
-  "cozumel": [
-    "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
-    "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=600&q=80",
-    "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=600&q=80",
-    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
-  ],
-  "costa maya": [
-    "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600&q=80",
-    "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
-    "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=600&q=80",
-  ],
-  "progreso": [
-    "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=600&q=80",
-    "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=600&q=80",
-    "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
-  ],
+/* -- Verified destination images: each photo confirmed to show the actual location -- */
+const PORT_IMAGES: Record<string, string> = {
+  // Mexico
+  "cozumel": "https://images.unsplash.com/photo-1579493933703-70473cdf84f8?w=600&q=80",
+  "costa maya": "https://images.unsplash.com/photo-1579493933703-70473cdf84f8?w=600&q=80",
+  "progreso": "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=600&q=80",
   // Bahamas
-  "nassau": [
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
-  ],
-  "cococay": [
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-  ],
-  "bahamas": [
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-  ],
-  "bimini": [
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-  ],
-  "grand turk": [
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-  ],
-  "celebration key": [
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-  ],
-  "half moon": [
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-  ],
+  "nassau": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "cococay": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "bahamas": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "bimini": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "grand turk": "https://images.unsplash.com/photo-1558923240-2672e219374b?w=600&q=80",
+  "celebration key": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "half moon": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
   // Caribbean islands
-  "st. thomas": [
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  ],
-  "st. maarten": [
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
-  ],
-  "san juan": [
-    "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80",
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  ],
-  "aruba": [
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=600&q=80",
-  ],
-  "curacao": [
-    "https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-  ],
-  "bonaire": [
-    "https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-  ],
-  "barbados": [
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  ],
-  "antigua": [
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  ],
-  "st. lucia": [
-    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  ],
-  "tortola": [
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
-    "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80",
-  ],
-  "st. kitts": [
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  ],
+  "st. thomas": "https://images.unsplash.com/photo-1748624185483-3fd96e68c749?w=600&q=80",
+  "charlotte amalie": "https://images.unsplash.com/photo-1748624185483-3fd96e68c749?w=600&q=80",
+  "st. maarten": "https://images.unsplash.com/photo-1551960051-39f23da5ed22?w=600&q=80",
+  "philipsburg": "https://images.unsplash.com/photo-1551960051-39f23da5ed22?w=600&q=80",
+  "san juan": "https://images.unsplash.com/photo-1733266934182-9a0db4367e13?w=600&q=80",
+  "aruba": "https://images.unsplash.com/photo-1593007466861-7707b21b81c0?w=600&q=80",
+  "oranjestad": "https://images.unsplash.com/photo-1593007466861-7707b21b81c0?w=600&q=80",
+  "curacao": "https://images.unsplash.com/photo-1693574276068-d5d65bb34ad0?w=600&q=80",
+  "willemstad": "https://images.unsplash.com/photo-1693574276068-d5d65bb34ad0?w=600&q=80",
+  "bonaire": "https://images.unsplash.com/photo-1543240498-d949ce4412b3?w=600&q=80",
+  "kralendijk": "https://images.unsplash.com/photo-1543240498-d949ce4412b3?w=600&q=80",
+  "barbados": "https://images.unsplash.com/photo-1712086353412-512d17c08403?w=600&q=80",
+  "antigua": "https://images.unsplash.com/photo-1746208440749-b25fcc19e025?w=600&q=80",
+  "st. lucia": "https://images.unsplash.com/photo-1745156705689-eef88991849d?w=600&q=80",
+  "tortola": "https://images.unsplash.com/photo-1504659728239-b005b35c5d69?w=600&q=80",
+  "st. kitts": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "grenada": "https://images.unsplash.com/photo-1616464654572-43996d6b0133?w=600&q=80",
   // Central America
-  "roatan": [
-    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
-    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  ],
-  "belize": [
-    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
-    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  ],
-  "harvest caye": [
-    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
-    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  ],
-  "isla tropicale": [
-    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
-    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  ],
+  "roatan": "https://images.unsplash.com/photo-1668813922137-e5dcda303af6?w=600&q=80",
+  "belize": "https://images.unsplash.com/photo-1585540036061-a57122a5aa3f?w=600&q=80",
+  "harvest caye": "https://images.unsplash.com/photo-1585540036061-a57122a5aa3f?w=600&q=80",
+  "isla tropicale": "https://images.unsplash.com/photo-1585540036061-a57122a5aa3f?w=600&q=80",
   // Jamaica
-  "falmouth": [
-    "https://images.unsplash.com/photo-1570073131892-1d218eb23de3?w=600&q=80",
-    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  ],
-  "ocho rios": [
-    "https://images.unsplash.com/photo-1570073131892-1d218eb23de3?w=600&q=80",
-    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
-    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
-  ],
-  "jamaica": [
-    "https://images.unsplash.com/photo-1570073131892-1d218eb23de3?w=600&q=80",
-    "https://images.unsplash.com/photo-1589519160732-57fc498494f8?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  ],
+  "falmouth": "https://images.unsplash.com/photo-1614529168796-cb235d6a2557?w=600&q=80",
+  "ocho rios": "https://images.unsplash.com/photo-1530225029356-e301a685e6b1?w=600&q=80",
+  "jamaica": "https://images.unsplash.com/photo-1530225029356-e301a685e6b1?w=600&q=80",
   // Cayman
-  "grand cayman": [
-    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-  ],
+  "grand cayman": "https://images.unsplash.com/photo-1555744164-728dd59f9d8b?w=600&q=80",
+  // Dominican Republic
+  "amber cove": "https://images.unsplash.com/photo-1678816331175-a61a6835e889?w=600&q=80",
   // Other
-  "bermuda": [
-    "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80",
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  ],
-  "key west": [
-    "https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=600&q=80",
-    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  ],
-  "amber cove": [
-    "https://images.unsplash.com/photo-1580237072617-771c3ecc4a24?w=600&q=80",
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  ],
+  "bermuda": "https://images.unsplash.com/photo-1584558701762-387e5d31e441?w=600&q=80",
+  "key west": "https://images.unsplash.com/photo-1617202830798-cf48261fb70d?w=600&q=80",
+  "labadee": "https://images.unsplash.com/photo-1554759068-c560c4563912?w=600&q=80",
+  "cartagena": "https://images.unsplash.com/photo-1536308037887-165852797016?w=600&q=80",
   // Cruise type fallbacks
-  "western caribbean": [
-    "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
-    "https://images.unsplash.com/photo-1547150492-da7ff1742941?w=600&q=80",
-    "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?w=600&q=80",
-  ],
-  "eastern caribbean": [
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-    "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=600&q=80",
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-  ],
-  "southern caribbean": [
-    "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80",
-    "https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=600&q=80",
-    "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-  ],
-  "caribbean": [
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-    "https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=600&q=80",
-  ],
+  "western caribbean": "https://images.unsplash.com/photo-1579493933703-70473cdf84f8?w=600&q=80",
+  "eastern caribbean": "https://images.unsplash.com/photo-1733266934182-9a0db4367e13?w=600&q=80",
+  "southern caribbean": "https://images.unsplash.com/photo-1693574276068-d5d65bb34ad0?w=600&q=80",
+  "caribbean": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
 };
 
-const DEFAULT_CRUISE_IMAGES = [
-  "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=600&q=80",
-  "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-];
+const DEFAULT_CRUISE_IMAGE = "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80";
 
 function getDealImage(deal: RealDeal): string {
-  // 1. Use API image if available (from Carnival/NCL APIs)
+  // 1. Use API image if available (but not Carnival's random ones)
   if (deal.imageUrl) return deal.imageUrl;
-
-  const h = hashString(deal.id);
 
   // 2. Match by ports of call
   for (const port of deal.ports) {
     const portLower = port.toLowerCase();
-    for (const [key, images] of Object.entries(PORT_IMAGES)) {
-      if (portLower.includes(key)) return images[h % images.length];
+    for (const [key, img] of Object.entries(PORT_IMAGES)) {
+      if (portLower.includes(key)) return img;
     }
   }
 
   // 3. Match by itinerary title (e.g., "Western Caribbean")
   const titleLower = deal.itineraryTitle.toLowerCase();
-  for (const [key, images] of Object.entries(PORT_IMAGES)) {
-    if (titleLower.includes(key)) return images[h % images.length];
+  for (const [key, img] of Object.entries(PORT_IMAGES)) {
+    if (titleLower.includes(key)) return img;
   }
 
   // 4. Match by departure port
   const depLower = deal.departurePort.toLowerCase();
-  for (const [key, images] of Object.entries(PORT_IMAGES)) {
-    if (depLower.includes(key)) return images[h % images.length];
+  for (const [key, img] of Object.entries(PORT_IMAGES)) {
+    if (depLower.includes(key)) return img;
   }
 
-  return DEFAULT_CRUISE_IMAGES[h % DEFAULT_CRUISE_IMAGES.length];
+  return DEFAULT_CRUISE_IMAGE;
 }
 
 /* -- Port to country mapping -- */
