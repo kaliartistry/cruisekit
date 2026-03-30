@@ -147,7 +147,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(242) 322-1181",
     },
     region: "bahamas",
-    imageUrl: "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/aerial-view-nassau-bahamas-2560x1440.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/70/Nassau%2C_Bahamas.jpg",
   },
 
   /* ================================================================ */
@@ -1529,7 +1529,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility, coordinates with ship medical staff",
     },
     region: "western",
-    imageUrl: "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/aerial-view-nassau-bahamas-2560x1440.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/70/Nassau%2C_Bahamas.jpg",
   },
 
   /* ================================================================ */

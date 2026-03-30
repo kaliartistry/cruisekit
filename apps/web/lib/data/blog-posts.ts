@@ -120,7 +120,7 @@ const rciVsCarnivalPost: BlogPost = {
   publishedDate: "2026-03-10",
   readTime: "9 min read",
   imageUrl:
-    "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/aerial-view-nassau-bahamas-2560x1440.jpg?w=1200&q=80",
+    "https://upload.wikimedia.org/wikipedia/commons/7/70/Nassau%2C_Bahamas.jpg",
   tags: [
     "Royal Caribbean",
     "Carnival",
@@ -574,7 +574,7 @@ const disneyVsRciPost: BlogPost = {
   publishedDate: "2026-02-05",
   readTime: "9 min read",
   imageUrl:
-    "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/galveston/galveston-adobestock_352652948-16x9.jpg?1718815457619?w=1200&q=80",
+    "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/galveston/galveston-adobestock_352652948-16x9.jpg?1718815457619",
   tags: [
     "Disney",
     "Royal Caribbean",
@@ -892,7 +892,7 @@ const celebrityCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-25",
   readTime: "9 min read",
   imageUrl:
-    "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/sunset-beach-cozumel-mexico-2560x1440.jpg",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/cozumel-mexico/1920x1080.jpg",
   tags: [
     "Celebrity",
     "cruise cost",
@@ -1075,7 +1075,7 @@ const disneyCruiseCostPost: BlogPost = {
   publishedDate: "2026-03-21",
   readTime: "10 min read",
   imageUrl:
-    "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/san-diego/san-diego-adobeStock_82570608-32x9.jpg?1693498622655?w=1200&q=80",
+    "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/san-diego/san-diego-adobeStock_82570608-32x9.jpg?1693498622655",
   tags: [
     "Disney",
     "cruise cost",
@@ -1266,7 +1266,7 @@ const celebrityVsPrincessPost: BlogPost = {
   publishedDate: "2026-03-18",
   readTime: "10 min read",
   imageUrl:
-    "https://www.celebritycruises.com/celebrity/new-images/itineraries/caribbean/georgetown-grand-cayman-2560x1440.jpg",
+    "https://www.royalcaribbean.com/content/dam/royal/data/ports/george-town-grand-cayman/george-town-grand-cayman-stingray-city.jpg",
   tags: [
     "Celebrity",
     "Princess",
