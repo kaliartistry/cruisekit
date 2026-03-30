@@ -296,7 +296,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Curacao",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1551960051-39f23da5ed22?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-st-maarten-1.jpg",
   },
 
   /* ================================================================ */
@@ -346,7 +346,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Tegucigalpa. Emergency: (504) 2236-9320",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1668813922137-e5dcda303af6?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-roatan-1.jpg",
   },
 
   /* ================================================================ */
@@ -396,7 +396,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Curacao: (599-9) 461-3066",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1593007466861-7707b21b81c0?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-aruba-1.jpg",
   },
 
   /* ================================================================ */
@@ -445,7 +445,7 @@ export const PORTS: PortData[] = [
       hospital: "Centro Medico — San Juan",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1692719199304-86a527fb1df8?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-san-juan-1.jpg",
   },
 
   /* ================================================================ */
@@ -592,7 +592,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(52) 872-4574 (Consular Agency — shared with Cozumel)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1719857664707-60ebe8852aa0?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-costa-maya-1.jpg",
   },
 
   /* ================================================================ */
@@ -642,7 +642,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(999) 942-5700 (US Consulate in Merida)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-progreso-1.jpg",
   },
 
   /* ================================================================ */
@@ -938,7 +938,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1530225029356-e301a685e6b1?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-ocho-rios-1.jpg",
   },
 
   /* ================================================================ */
@@ -988,7 +988,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(599-9) 461-3066",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1693574276068-d5d65bb34ad0?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-curacao-4.jpg",
   },
 
   /* ================================================================ */
@@ -1087,7 +1087,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Santo Domingo 809-567-7775",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1530053969600-caed2596d242?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-puerto-plata-1.jpg",
   },
 
   /* ================================================================ */
@@ -1137,7 +1137,7 @@ export const PORTS: PortData[] = [
       usConsulate: "876-953-0620",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-montego-bay-1.jpg",
   },
 
   /* ================================================================ */
@@ -1186,7 +1186,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1504659728239-b005b35c5d69?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-tortola-1.jpg",
   },
 
   /* ================================================================ */
@@ -1285,7 +1285,7 @@ export const PORTS: PortData[] = [
       usConsulate: "246-227-4000",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1712086353412-512d17c08403?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-barbados-1.jpg",
   },
 
   /* ================================================================ */
@@ -1334,7 +1334,7 @@ export const PORTS: PortData[] = [
       usConsulate: "473-444-1173",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1616464654572-43996d6b0133?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-grenada-1.jpg",
   },
 
   /* ================================================================ */
@@ -1383,7 +1383,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1746208440749-b25fcc19e025?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-antigua-1.jpg",
   },
 
   /* ================================================================ */
@@ -1432,7 +1432,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1745156705689-eef88991849d?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-st-lucia-2.jpg",
   },
 
   /* ================================================================ */
@@ -1481,7 +1481,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Curacao 599-9-461-3066",
     },
     region: "southern",
-    imageUrl: "https://images.unsplash.com/photo-1543240498-d949ce4412b3?w=800&q=80",
+    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-bonaire-1.jpg",
   },
 
   /* ================================================================ */
@@ -1576,7 +1576,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility, coordinates with ship medical staff",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80",
+    imageUrl: "https://www.ncl.com/content/dam/ncl/us/en/itineraries/drupal_escape/1440_ESCAPE7MIACZMRTBBPICMAMIA.jpg",
   },
 
   /* ================================================================ */
@@ -1619,7 +1619,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility planned",
     },
     region: "bahamas",
-    imageUrl: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80",
+    imageUrl: "https://www.carnival.com/~/media/Images/celebration-key/whats-included-and-how-to-upgrade-section/whats-included-section-background-4.jpg",
   },
 
   /* ================================================================ */
@@ -1668,7 +1668,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Kingston 876-702-6000",
     },
     region: "western",
-    imageUrl: "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=800&q=80",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/falmouth-jamaica/falmouth-jamaica-port-aerial-coast.jpg",
   },
 ];
 
