@@ -79,18 +79,18 @@ const PORT_IMAGES: Record<string, string> = {
   "progreso": "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=600&q=80",
   // Bahamas
   "nassau": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-  "cococay": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "cococay": "https://images.unsplash.com/photo-1559956144-ee11501d5459?w=600&q=80",
   "bahamas": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-  "bimini": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "bimini": "https://images.unsplash.com/photo-1706455986634-225f93284c0c?w=600&q=80",
   "grand turk": "https://images.unsplash.com/photo-1558923240-2672e219374b?w=600&q=80",
-  "celebration key": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
-  "half moon": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "celebration key": "https://images.unsplash.com/photo-1603756009316-20fafbee4a3e?w=600&q=80",
+  "half moon": "https://images.unsplash.com/photo-1728994532864-1410da4e2037?w=600&q=80",
   // Caribbean islands
   "st. thomas": "https://images.unsplash.com/photo-1748624185483-3fd96e68c749?w=600&q=80",
   "charlotte amalie": "https://images.unsplash.com/photo-1748624185483-3fd96e68c749?w=600&q=80",
   "st. maarten": "https://images.unsplash.com/photo-1551960051-39f23da5ed22?w=600&q=80",
   "philipsburg": "https://images.unsplash.com/photo-1551960051-39f23da5ed22?w=600&q=80",
-  "san juan": "https://images.unsplash.com/photo-1733266934182-9a0db4367e13?w=600&q=80",
+  "san juan": "https://images.unsplash.com/photo-1692719199304-86a527fb1df8?w=600&q=80",
   "aruba": "https://images.unsplash.com/photo-1593007466861-7707b21b81c0?w=600&q=80",
   "oranjestad": "https://images.unsplash.com/photo-1593007466861-7707b21b81c0?w=600&q=80",
   "curacao": "https://images.unsplash.com/photo-1693574276068-d5d65bb34ad0?w=600&q=80",
@@ -101,7 +101,7 @@ const PORT_IMAGES: Record<string, string> = {
   "antigua": "https://images.unsplash.com/photo-1746208440749-b25fcc19e025?w=600&q=80",
   "st. lucia": "https://images.unsplash.com/photo-1745156705689-eef88991849d?w=600&q=80",
   "tortola": "https://images.unsplash.com/photo-1504659728239-b005b35c5d69?w=600&q=80",
-  "st. kitts": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
+  "st. kitts": "https://images.unsplash.com/photo-1706400486972-6b40488814af?w=600&q=80",
   "grenada": "https://images.unsplash.com/photo-1616464654572-43996d6b0133?w=600&q=80",
   // Central America
   "roatan": "https://images.unsplash.com/photo-1668813922137-e5dcda303af6?w=600&q=80",
@@ -123,7 +123,7 @@ const PORT_IMAGES: Record<string, string> = {
   "cartagena": "https://images.unsplash.com/photo-1536308037887-165852797016?w=600&q=80",
   // Cruise type fallbacks
   "western caribbean": "https://images.unsplash.com/photo-1579493933703-70473cdf84f8?w=600&q=80",
-  "eastern caribbean": "https://images.unsplash.com/photo-1733266934182-9a0db4367e13?w=600&q=80",
+  "eastern caribbean": "https://images.unsplash.com/photo-1692719199304-86a527fb1df8?w=600&q=80",
   "southern caribbean": "https://images.unsplash.com/photo-1693574276068-d5d65bb34ad0?w=600&q=80",
   "caribbean": "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80",
 };

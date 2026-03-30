@@ -445,7 +445,7 @@ export const PORTS: PortData[] = [
       hospital: "Centro Medico — San Juan",
     },
     region: "eastern",
-    imageUrl: "https://images.unsplash.com/photo-1733266934182-9a0db4367e13?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1692719199304-86a527fb1df8?w=800&q=80",
   },
 
   /* ================================================================ */
