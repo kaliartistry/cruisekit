@@ -303,9 +303,29 @@ export function getTopDeals(n: number = 10): RealDeal[] {
   return REAL_DEALS.slice(0, n);
 }
 
-/** Get top N deals for a specific region */
+/** Get top N deals for a specific region, diversified by cruise line */
 export function getTopDealsByRegion(region: DealRegion, n: number = 10): RealDeal[] {
-  return REAL_DEALS.filter((d) => d.region === region).slice(0, n);
+  const regionDeals = REAL_DEALS.filter((d) => d.region === region);
+  // Pick the cheapest deal per cruise line first for variety, then fill remaining
+  const seenLines = new Set<string>();
+  const diverse: RealDeal[] = [];
+  for (const d of regionDeals) {
+    if (!seenLines.has(d.cruiseLineId)) {
+      seenLines.add(d.cruiseLineId);
+      diverse.push(d);
+    }
+    if (diverse.length >= n) break;
+  }
+  // If we still need more, fill with remaining cheapest
+  if (diverse.length < n) {
+    for (const d of regionDeals) {
+      if (!diverse.includes(d)) {
+        diverse.push(d);
+      }
+      if (diverse.length >= n) break;
+    }
+  }
+  return diverse.sort((a, b) => a.fromPrice - b.fromPrice);
 }
 
 /** Get all unique regions with counts */

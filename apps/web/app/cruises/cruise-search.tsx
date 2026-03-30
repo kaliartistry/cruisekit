@@ -755,7 +755,7 @@ export default function CruiseSearchPage() {
   /* Filter state */
   const [filters, setFilters] = useState<FilterState>({
     priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
-    regions: new Set(ALL_REGIONS),
+    regions: new Set(["caribbean", "bahamas", "mexico"]),
     cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
     durations: new Set(DURATION_RANGES.map((r) => r.key)),
     months: new Set(ALL_MONTHS),

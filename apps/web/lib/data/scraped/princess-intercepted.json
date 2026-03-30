@@ -1,0 +1,2095 @@
+{
+  "AjaxWatches": [
+    {
+      "URLRegex": "gw.api.princess.com\\/pcl-web\\/internal",
+      "RecordReq": 0,
+      "RecordRsp": 2,
+      "ReqWhitelist": "",
+      "RspWhitelist": "error\nstatus\nmessage",
+      "ReqAllowlist": "",
+      "RspAllowlist": "error\nstatus\nmessage",
+      "ReqBody": false,
+      "RspBody": false
+    }
+  ],
+  "BehaviorSignalSettings": {
+    "ElementBlocks": [
+      {
+        "Selector": "#ube-react .zone-container",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": "[data-track-id=\"help-me-plan\"]",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/packages\"]",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": ".save-cruise-btn[data-track=\"product-unsave\"]",
+        "Signals": [
+          2
+        ]
+      },
+      {
+        "Selector": "[aria-label=\"Previous item of The best cruise deals at sea\"]",
+        "Signals": [
+          2
+        ]
+      },
+      {
+        "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/stateroom-type\"]",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": "[data-track-id=\"cruising-around-the-world\"] [data-track-id=\"left-arrow\"]",
+        "Signals": [
+          2
+        ]
+      },
+      {
+        "Selector": "#mobiaiModalBtn",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": "#ube-react .stateroom-location-page-wrapper .deck-plan-wrapper",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": "body div#__next div.login-container div div ownid-root",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": "body.basepage.basicpage.itinerary-details-pages.itinerarydetailspages div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.hero-itinerary div div div div div.stateroom[aria-labelledby=\"stateroom-group-label\"][role=\"group\"]",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/guest-count\"]",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": "[aria-label=\"Next item of The best cruise deals at sea\"]",
+        "Signals": [
+          2
+        ]
+      },
+      {
+        "Selector": "#ube-react>div[class^=\"product-T-1391-common-module__banner\"]",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/stateroom-summary\"]",
+        "Signals": [
+          2,
+          1
+        ]
+      },
+      {
+        "Selector": ".save-cruise-btn[data-track=\"product-save\"]",
+        "Signals": [
+          2
+        ]
+      },
+      {
+        "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/payment\"]",
+        "Signals": [
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "Domains": {
+    "OnlyKnownDomains": false
+  },
+  "ElementBlocks": [
+    {
+      "Selector": "input[type=password]",
+      "Consent": false,
+      "Type": 1,
+      "GroupId": 0
+    },
+    {
+      "Selector": "input[type=hidden]",
+      "Consent": false,
+      "Type": 1,
+      "GroupId": 0
+    },
+    {
+      "Selector": "[autocomplete^=cc-]",
+      "Consent": false,
+      "Type": 1,
+      "GroupId": 0
+    },
+    {
+      "Selector": "input",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 1
+    },
+    {
+      "Selector": "textarea",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 1
+    },
+    {
+      "Selector": "select",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 1
+    },
+    {
+      "Selector": "[contenteditable]",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 1
+    },
+    {
+      "Selector": "input[type=radio]",
+      "Consent": false,
+      "Type": 1,
+      "GroupId": 1
+    },
+    {
+      "Selector": "input[type=checkbox]",
+      "Consent": false,
+      "Type": 1,
+      "GroupId": 1
+    },
+    {
+      "Selector": "body",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "#offer-details-dialog.lightbox-container[aria-labelledby=\"lightbox-title\"][role=\"dialog\"] div.lightbox-body",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".excursion-options-guests-option-guest-info",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".tour-details div span.passengers strong",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "#price-breakdown[name=\"price-breakdown-form\"] #excursion-price-breakdown",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fieldset-block",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "[data-test-id=\"guest-name\"]",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".guest-name",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "#my-account-form",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".transfer-option-wrap",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".summary-details-header div.summary-details-header__title",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "[data-testid=\"sf-checkout-confirmation-container\"]",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".react-target",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "[data-testid=\"product-details-page\"]",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "[data-testid=\"product-added\"]",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "[data-testid=\"sf-cart-container\"]",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".mb-booking-detail",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "article .summary-header .article-header.article-header-others .article-title .welcome",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".itinerary-excursion-container .expanded-guest-list-container",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".table-responsive table.all-obc.medium-border.table-spacing thead tr th.light-bg[scope=\"col\"]",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".itin-detail",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div#stateroom-pricing div.container.row.summary-container div.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.row div.detail-fare-row.itemized-row div.align-left",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div#stateroom-pricing div.container.row.summary-container div.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.itemized-pricing-content.row.top-rounded-corners div.row div div.gotham-bold.itemized-row.lineitem-label-bold div.align-left",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.clearfix.container div.medium-border div.align-items-center.row div",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.clearfix.container div.align-center.clearfix.container h2",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.flex-dir-col.payment-page-wrapper div.itemized-pricing-wrapper div.align-center.clearfix.container div.itemized-pricing-content.row.top-rounded-corners div.clearfix div.gotham-book.row div label.align-left.gotham-bold",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div.login-container div div ownid-root",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".sensitive-data",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "div.chakra-container[data-testid=\"sf-checkout-container\"] .chakra-checkbox__label",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div section div div span",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.flex-dir-col.payment-page-wrapper div.container.flex-dir-col.full-width.payment-page div.flex-dir-col.payment-page-content div.container.full-width.payment-module-wrapper div.future-cruise-deposit-wrapper fieldset.future-cruise-deposit-options div.align-items-center.checked.future-cruise-deposit-checkbox-option label.align-items-center.checked.gotham-bold[for=\"fcd-1\"] div",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "#page_sort",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width.newer-standards[role=\"main\"] div div div#stateroom-pricing div.align-items-center.container.justify-content-space-between div.summary-container div.flex-dir-col.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.itemized-pricing-content.row.top-rounded-corners div.row div div.gotham-bold.itemized-row.lineitem-label-bold div.align-left",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width.newer-standards[role=\"main\"] div div div#stateroom-pricing div.align-items-center.container.justify-content-space-between div.summary-container div.flex-dir-col.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.row div.detail-fare-row.itemized-row div.align-left",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.container div.medium-border div.align-left.row div.right-offset",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div div div#offer-details-dialog.hide-border-bottom.lightbox-container[aria-labelledby=\"lightbox-title\"][role=\"dialog\"] div.lightbox-body div div",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div div div#offer-details-dialog.hide-border-bottom.lightbox-container[aria-labelledby=\"lightbox-title\"][role=\"dialog\"] div.lightbox-body div h1",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#root div main#container div.spa-content.spa-font-family div.container-fluid.reservation-container.services-container div div._loading_overlay_wrapper[data-testid=\"wrapper\"] div.spa-breadcrumb-adjust div#spa-bread-crumb.bread-crumb-container.spa-bread-crumb div.container.spa-bread-crumb[aria-label] ol.breadcrumb li.shopping-cart[data-test-id=\"shopping-cart\"] dl dd div.shopping-cart-trigger[role=\"text\"] div.cart-pop-up-content.popup-content div.cart-container div.cart-items-container[data-test-id=\"reservation-pop-up-container\"] div.cart-items-container.scrollbar div.contents-scroll div.cart-item-container span.cart-item-guest",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body.travel-summary div#container div#content.clearfix.safe-print-width section div.row.thick-border-bottom div.row.thin-border-bottom div h3",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "body div#container.show-chat[data-countrycode=\"US\"][data-track-trade-name=\"Caribbean\"][data-track-voyage-name=\"Eastern Caribbean Pcv\"] main.full-width[role=\"main\"] article#content.content div.article-container.clearfix div.container div#payment-wrapper div.invoice-payment section#balance-payment.light-border.row[data-gatewaymid=\"PL-PCPCUSD\"][data-ppfname=\"Eulofia\"][data-pplname=\"Leyva\"] div#gratuities.selected div.row form.make-payment[action=\"json/prePayGratuity.page\"][name=\"payment\"] div.row div fieldset.no-spacing div.field-group span.checkbox.form-field",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-exclude",
+      "Consent": false,
+      "Type": 1,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-exclude-without-consent",
+      "Consent": true,
+      "Type": 1,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-mask",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-mask-without-consent",
+      "Consent": true,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-unmask",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-unmask-with-consent",
+      "Consent": true,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-hide",
+      "Consent": false,
+      "Type": 1,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-block",
+      "Consent": false,
+      "Type": 1,
+      "GroupId": 0
+    },
+    {
+      "Selector": ".fs-record-with-consent",
+      "Consent": true,
+      "Type": 1,
+      "GroupId": 0
+    },
+    {
+      "Selector": "html",
+      "Consent": false,
+      "Type": 2,
+      "GroupId": 0
+    },
+    {
+      "Selector": "link",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "style",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    },
+    {
+      "Selector": "base",
+      "Consent": false,
+      "Type": 3,
+      "GroupId": 0
+    }
+  ],
+  "NamedElementBlocks": [
+    {
+      "Name": "input[type=password]",
+      "Consent": false,
+      "BlockType": 1,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "input[type=password]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "input[type=hidden]",
+      "Consent": false,
+      "BlockType": 1,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "input[type=hidden]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "[autocomplete^=cc-]",
+      "Consent": false,
+      "BlockType": 1,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "[autocomplete^=cc-]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "input",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "input",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 1
+    },
+    {
+      "Name": "textarea",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "textarea",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 1
+    },
+    {
+      "Name": "select",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "select",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 1
+    },
+    {
+      "Name": "[contenteditable]",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "[contenteditable]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 1
+    },
+    {
+      "Name": "input[type=radio]",
+      "Consent": false,
+      "BlockType": 1,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "input[type=radio]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 1
+    },
+    {
+      "Name": "input[type=checkbox]",
+      "Consent": false,
+      "BlockType": 1,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "input[type=checkbox]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 1
+    },
+    {
+      "Name": "Removing PbD",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Confirmation page",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "#offer-details-dialog.lightbox-container[aria-labelledby=\"lightbox-title\"][role=\"dialog\"] div.lightbox-body",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Guest names",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".excursion-options-guests-option-guest-info",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Passenger names",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".tour-details div span.passengers strong",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Excursion summary",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "#price-breakdown[name=\"price-breakdown-form\"] #excursion-price-breakdown",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Masking fieldset ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fieldset-block",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Guest name",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "[data-test-id=\"guest-name\"]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Guest name 2",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".guest-name",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Entire profile",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "#my-account-form",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Transfer options",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".transfer-option-wrap",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Summary - Name",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".summary-details-header div.summary-details-header__title",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Checkout Container ",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "[data-testid=\"sf-checkout-confirmation-container\"]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Planner Masked ",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".react-target",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "ID Page ",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "[data-testid=\"product-details-page\"]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Product Added",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "[data-testid=\"product-added\"]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Cart Container ",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "[data-testid=\"sf-cart-container\"]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Booking Header",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".mb-booking-detail",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Welcome Header ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "article .summary-header .article-header.article-header-others .article-title .welcome",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Masking Dropdown CP LP ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".itinerary-excursion-container .expanded-guest-list-container",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Onboard Credit ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".table-responsive table.all-obc.medium-border.table-spacing thead tr th.light-bg[scope=\"col\"]",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Itn Details ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".itin-detail",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Stateroom Summary ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div#stateroom-pricing div.container.row.summary-container div.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.row div.detail-fare-row.itemized-row div.align-left",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Summary Page - Guest Name ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div#stateroom-pricing div.container.row.summary-container div.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.itemized-pricing-content.row.top-rounded-corners div.row div div.gotham-bold.itemized-row.lineitem-label-bold div.align-left",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Guest Info (Identification)",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.clearfix.container div.medium-border div.align-items-center.row div",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Guest info (Title) ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.clearfix.container div.align-center.clearfix.container h2",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Total Fly Out Guest Info & Payment",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.flex-dir-col.payment-page-wrapper div.itemized-pricing-wrapper div.align-center.clearfix.container div.itemized-pricing-content.row.top-rounded-corners div.clearfix div.gotham-book.row div label.align-left.gotham-bold",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "OwnID Masking ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div.login-container div div ownid-root",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "SFCC Personal Information ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".sensitive-data",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "OBC Checkout SFCC",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "div.chakra-container[data-testid=\"sf-checkout-container\"] .chakra-checkbox__label",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "PII On Right Rail ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div section div div span",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Masking Name ON FCC",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.flex-dir-col.payment-page-wrapper div.container.flex-dir-col.full-width.payment-page div.flex-dir-col.payment-page-content div.container.full-width.payment-module-wrapper div.future-cruise-deposit-wrapper fieldset.future-cruise-deposit-options div.align-items-center.checked.future-cruise-deposit-checkbox-option label.align-items-center.checked.gotham-bold[for=\"fcd-1\"] div",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Unmask SFCC - Sort ",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "#page_sort",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Names - Summary ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width.newer-standards[role=\"main\"] div div div#stateroom-pricing div.align-items-center.container.justify-content-space-between div.summary-container div.flex-dir-col.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.itemized-pricing-content.row.top-rounded-corners div.row div div.gotham-bold.itemized-row.lineitem-label-bold div.align-left",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Hi Name Of Logged in Guest - Summery Page ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width.newer-standards[role=\"main\"] div div div#stateroom-pricing div.align-items-center.container.justify-content-space-between div.summary-container div.flex-dir-col.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.row div.detail-fare-row.itemized-row div.align-left",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Logged In Guest (Future Cruise Credit)",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div div div.container div.medium-border div.align-left.row div.right-offset",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Alert",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div div div#offer-details-dialog.hide-border-bottom.lightbox-container[aria-labelledby=\"lightbox-title\"][role=\"dialog\"] div.lightbox-body div div",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Alert",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div div div#offer-details-dialog.hide-border-bottom.lightbox-container[aria-labelledby=\"lightbox-title\"][role=\"dialog\"] div.lightbox-body div h1",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Name SPA",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#root div main#container div.spa-content.spa-font-family div.container-fluid.reservation-container.services-container div div._loading_overlay_wrapper[data-testid=\"wrapper\"] div.spa-breadcrumb-adjust div#spa-bread-crumb.bread-crumb-container.spa-bread-crumb div.container.spa-bread-crumb[aria-label] ol.breadcrumb li.shopping-cart[data-test-id=\"shopping-cart\"] dl dd div.shopping-cart-trigger[role=\"text\"] div.cart-pop-up-content.popup-content div.cart-container div.cart-items-container[data-test-id=\"reservation-pop-up-container\"] div.cart-items-container.scrollbar div.contents-scroll div.cart-item-container span.cart-item-guest",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Itinerary ",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body.travel-summary div#container div#content.clearfix.safe-print-width section div.row.thick-border-bottom div.row.thin-border-bottom div h3",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "Names",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "body div#container.show-chat[data-countrycode=\"US\"][data-track-trade-name=\"Caribbean\"][data-track-voyage-name=\"Eastern Caribbean Pcv\"] main.full-width[role=\"main\"] article#content.content div.article-container.clearfix div.container div#payment-wrapper div.invoice-payment section#balance-payment.light-border.row[data-gatewaymid=\"PL-PCPCUSD\"][data-ppfname=\"Eulofia\"][data-pplname=\"Leyva\"] div#gratuities.selected div.row form.make-payment[action=\"json/prePayGratuity.page\"][name=\"payment\"] div.row div fieldset.no-spacing div.field-group span.checkbox.form-field",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 1,
+      "Platforms": [
+        1,
+        2,
+        3
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-exclude",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": true,
+      "BlockType": 1,
+      "Platforms": [
+        1,
+        2,
+        3
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-exclude-without-consent",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1,
+        2,
+        3
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-mask",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": true,
+      "BlockType": 2,
+      "Platforms": [
+        1,
+        2,
+        3
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-mask-without-consent",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1,
+        2,
+        3
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-unmask",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": true,
+      "BlockType": 3,
+      "Platforms": [
+        1,
+        2,
+        3
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-unmask-with-consent",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 1,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-hide",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 1,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-block",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": true,
+      "BlockType": 1,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": ".fs-record-with-consent",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 2,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "html",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "link",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "style",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    },
+    {
+      "Name": "",
+      "Consent": false,
+      "BlockType": 3,
+      "Platforms": [
+        1
+      ],
+      "TargetedSelectorsForCapture": [
+        {
+          "Selector": "base",
+          "Platforms": null,
+          "MinVersion": null,
+          "MaxVersion": null
+        }
+      ],
+      "GroupId": 0
+    }
+  ],
+  "ElementDeferreds": [],
+  "ElementKeeps": null,
+  "ElementWatches": [
+    {
+      "Selector": "#guest-selector-button"
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width.new-standards[role=\"main\"] div div div.container.flex-dir-col.list-.packages-wrapper div.container.flex-dir-col.full-width.packages-inner.undefined div.container.flex-dir-col.full-width div.align-right.justify-content-right div"
+    },
+    {
+      "Selector": ".lightbox-overlay"
+    },
+    {
+      "Selector": ".form-field-msg.invalid"
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width.newer-standards[role=\"main\"] div div div#stateroom-pricing div.align-items-center.container.justify-content-space-between div.summary-container div.flex-dir-col div.flex-dir-col div.row div.configuration-wrapper.flex-dir-col div.configuration-add-on-wrapper"
+    },
+    {
+      "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/packages\"]"
+    },
+    {
+      "Selector": ".loading-inner"
+    },
+    {
+      "Selector": "body.pcl-search-global div main div#content div div#search-interface div#search-results[aria-label=\"Search Results\"][role=\"region\"] div div[aria-label=\"Cruise product card\"][role=\"region\"] figure button[aria-label=\"Show cruise map\"][type=\"button\"]"
+    },
+    {
+      "Selector": "[data-track-id=\"help-me-plan\"]"
+    },
+    {
+      "Selector": "div.T575-CTA"
+    },
+    {
+      "Selector": ".alert.booking-list"
+    },
+    {
+      "Selector": "#getDesktopSearchCountdownBanner"
+    },
+    {
+      "Selector": "a[data-track-id=\"celebration-key\"]"
+    },
+    {
+      "Selector": ".error-container"
+    },
+    {
+      "Selector": "span.voyage-offers"
+    },
+    {
+      "Selector": "#ube-react>div[class^=\"product-T-1391-common-module__banner\"]"
+    },
+    {
+      "Selector": "a[data-track-id=\"ask-mckinley\"]"
+    },
+    {
+      "Selector": "[data-testid=\"sf-checkout-confirmation-container\"] .chakra-heading"
+    },
+    {
+      "Selector": "div.voucher-notification"
+    },
+    {
+      "Selector": "#content.full-width.new-standards[role=\"main\"] div div .clearfix.container.stateroom-type-header-container"
+    },
+    {
+      "Selector": ".error-container h1"
+    },
+    {
+      "Selector": "#spa [data-testid=\"sf-product-empty-list-page\"] .chakra-heading"
+    },
+    {
+      "Selector": "[role=\"dialog\"]"
+    },
+    {
+      "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/guest-count\"]"
+    },
+    {
+      "Selector": ".package-header"
+    },
+    {
+      "Selector": ".payment-pg #cp-header-message.cp-global-msg"
+    },
+    {
+      "Selector": "a[data-track-id=\"plan-your-alaska-cruisetour-by-asking-mckinley\"]"
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width.newer-standards[role=\"main\"] div div div#stateroom-pricing div.align-items-center.container.justify-content-space-between div.summary-container div.flex-dir-col.itemized-pricing-redesign-wrapper div.itemized-pricing-redesign.itemized-pricing-wrapper div div.itemized-pricing-content.row.top-rounded-corners div.fare-details-filter label.switch[for=\"switchSeeDetailsCheckBox\"] span#toggle-see-details-checkbox.slider[role=\"switch\"]"
+    },
+    {
+      "Selector": "body div#__next div.login-container div div ownid-root"
+    },
+    {
+      "Selector": "a[data-track-id=\"redeem-offer\"]"
+    },
+    {
+      "Selector": "body.basepage.basicpage.itinerary-details-pages.itinerarydetailspages div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.hero-itinerary div div div div div.stateroom[aria-labelledby=\"stateroom-group-label\"][role=\"group\"] div.item-stateroom[aria-label][data-track=\"meta\"][data-track-id=\"oceanview\"][role=\"button\"]"
+    },
+    {
+      "Selector": "#mobiaiModalBtn"
+    },
+    {
+      "Selector": "body.basepage.basicpage.itinerary-details-pages.itinerarydetailspages div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.hero-itinerary div div div div div.stateroom[aria-labelledby=\"stateroom-group-label\"][role=\"group\"] div.item-stateroom[aria-label][data-track=\"meta\"][data-track-id=\"suite\"][role=\"button\"]"
+    },
+    {
+      "Selector": ".error-container>.container>.align-center>h1"
+    },
+    {
+      "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/stateroom-type\"]"
+    },
+    {
+      "Selector": "body.basepage.basicpage.itinerary-details-pages.itinerarydetailspages div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.hero-itinerary div div div div div.stateroom[aria-labelledby=\"stateroom-group-label\"][role=\"group\"]"
+    },
+    {
+      "Selector": "body.basepage.basicpage.itinerary-details-pages.itinerarydetailspages div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.hero-itinerary div div div div div[aria-labelledby=\"stateroom-group-label\"][role=\"group\"]"
+    },
+    {
+      "Selector": "#popupContainer .alert"
+    },
+    {
+      "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/stateroom-summary\"]"
+    },
+    {
+      "Selector": "a.chakra-link[href*=\"manage-booking/documents.page\"]"
+    },
+    {
+      "Selector": ".trans-white-bg .no-spacing"
+    },
+    {
+      "Selector": "body.basepage.basicpage.itinerary-details-pages.itinerarydetailspages div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.hero-itinerary div div div div div.stateroom[aria-labelledby=\"stateroom-group-label\"][role=\"group\"] div.item-stateroom[aria-label][data-track=\"meta\"][data-track-id=\"balcony\"][role=\"button\"]"
+    },
+    {
+      "Selector": "#ube-react .zone-container"
+    },
+    {
+      "Selector": "div.headline-green-638325-bg[role=\"alert\"]"
+    },
+    {
+      "Selector": "#no-saved-cruises-msg"
+    },
+    {
+      "Selector": "[data-track-component-type=\"casino-cards\"] div"
+    },
+    {
+      "Selector": "[class^=\"product-card_priceStatus\"]"
+    },
+    {
+      "Selector": ".errorMessage"
+    },
+    {
+      "Selector": "body.basepage.basicpage.homepage.new-homepage div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.call-out div div div.height--medium div"
+    },
+    {
+      "Selector": ".funnel-stepper [href=\"https://www.princess.com/cruise-search/payment\"]"
+    },
+    {
+      "Selector": "div#offer-details-dialog.lightbox-container[role=\"dialog\"]>div.lightbox-body>div>h1"
+    },
+    {
+      "Selector": "body.basepage.basicpage.itinerary-details-pages.itinerarydetailspages div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.hero-itinerary div div div div div.stateroom[aria-labelledby=\"stateroom-group-label\"][role=\"group\"] div.item-stateroom[aria-label][data-track=\"meta\"][data-track-id=\"mini-suite\"][role=\"button\"]"
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width[role=\"main\"] div button[aria-label=\"Toggle right rail\"]"
+    },
+    {
+      "Selector": "#confirm-msg"
+    },
+    {
+      "Selector": "div.desktop.survey-container div#site-intercept-survey.survey-wrapper"
+    },
+    {
+      "Selector": ".funnel-stepper"
+    },
+    {
+      "Selector": "#loading-saved-cruises"
+    },
+    {
+      "Selector": ".error"
+    },
+    {
+      "Selector": "#ube-react .stateroom-location-page-wrapper .deck-plan-wrapper"
+    },
+    {
+      "Selector": "div.results-count div.count"
+    },
+    {
+      "Selector": ".stateroom-details"
+    },
+    {
+      "Selector": "body.basepage.basicpage.nextgenpage div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.casino-cards section#no-title[data-track-component-type=\"casino-cards\"][data-track-id=\"no-title\"] div"
+    },
+    {
+      "Selector": "body.basepage.basicpage.nextgenpage div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.casino-voucher div.is-loading[data-track=\"redeem-your-vip-casino-voucher\"][data-track-component-type=\"casino-voucher\"] div img[alt]"
+    },
+    {
+      "Selector": "#refundableAddOn"
+    },
+    {
+      "Selector": "#optStickyHeader"
+    },
+    {
+      "Selector": "button[data-track=\"redeem-your-vip-casino-voucher\"]"
+    },
+    {
+      "Selector": "body div#__next div#container main#content.full-width.new-standards[role=\"main\"] div div div.clearfix.container.stateroom-type-header-container div.align-items-center.container h2.heading-title a.align-items-start.header-link.plain-text-btn.text-align-left[aria-label=\"2 guests, , Select to change the number of guests link\"][href=\"https://www.princess.com/itinerary-details/?voyageCode=X631&guestCount=2&stateRoomId=O&editGuestCount=true\"]"
+    },
+    {
+      "Selector": "#search-interface .Summary"
+    },
+    {
+      "Selector": "body.basepage.basicpage.itinerary-details-pages.itinerarydetailspages div.responsivegrid.root div main#main-content.main-wrapper.responsivegrid[data-swiftype-name=\"body\"] div div.microsites-section div#no-title[data-track=\"no-title\"][data-track-component-type=\"section\"] div div div.hero-itinerary div div div div div.stateroom[aria-labelledby=\"stateroom-group-label\"][role=\"group\"] div.active.item-stateroom.selected[aria-label][data-track=\"meta\"][data-track-id=\"interior\"][role=\"button\"]"
+    },
+    {
+      "Selector": "body.basepage.basicpage.homepage.new-homepage div div#modalOverlay div#monthPicker"
+    }
+  ],
+  "OrgSettings": {
+    "AttributeBlocklist": [
+      {
+        "Target": 0,
+        "Tag": "*",
+        "Name": "src",
+        "Action": 2
+      },
+      {
+        "Target": 0,
+        "Tag": "iframe",
+        "Name": "srcdoc",
+        "Action": 0
+      },
+      {
+        "Target": 0,
+        "Tag": "frame",
+        "Name": "src",
+        "Action": 2
+      },
+      {
+        "Target": 0,
+        "Tag": "frame",
+        "Name": "srcdoc",
+        "Action": 0
+      },
+      {
+        "Target": 0,
+        "Tag": "*",
+        "Name": "data-v-form-field",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "alt",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "checked",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "data",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "href",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "placeholder",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "src",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "srcset",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "style",
+        "Action": 3
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "title",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "value",
+        "Action": 0
+      },
+      {
+        "Target": 2,
+        "Tag": "*",
+        "Name": "checked",
+        "Action": 0
+      },
+      {
+        "Target": 2,
+        "Tag": "*",
+        "Name": "data",
+        "Action": 0
+      },
+      {
+        "Target": 2,
+        "Tag": "*",
+        "Name": "alt",
+        "Action": 1
+      },
+      {
+        "Target": 2,
+        "Tag": "*",
+        "Name": "placeholder",
+        "Action": 1
+      },
+      {
+        "Target": 2,
+        "Tag": "*",
+        "Name": "title",
+        "Action": 1
+      },
+      {
+        "Target": 2,
+        "Tag": "*",
+        "Name": "value",
+        "Action": 1
+      },
+      {
+        "Target": 2,
+        "Tag": "option",
+        "Name": "label",
+        "Action": 1
+      },
+      {
+        "Target": 2,
+        "Tag": "*",
+        "Name": "placeholder",
+        "Action": 1
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "data-com.agilebits.onepassword.initial-value",
+        "Action": 0
+      },
+      {
+        "Target": 1,
+        "Tag": "*",
+        "Name": "data-kwcachedvalue",
+        "Action": 0
+      },
+      {
+        "Target": 0,
+        "Tag": "*",
+        "Name": "href",
+        "Action": 2
+      }
+    ],
+    "HttpRequestHeadersAllowlist": [
+      "a-im",
+      "accept",
+      "accept-charset",
+      "accept-encoding",
+      "accept-language",
+      "accept-datetime",
+      "access-control-request-method",
+      "access-control-request-headers",
+      "cache-control",
+      "connection",
+      "content-length",
+      "content-md5",
+      "content-type",
+      "date",
+      "expect",
+      "forwarded",
+      "from",
+      "host",
+      "if-match",
+      "if-modified-since",
+      "if-none-match",
+      "if-range",
+      "if-unmodified-since",
+      "max-forwards",
+      "origin",
+      "pragma",
+      "range",
+      "referer",
+      "te",
+      "user-agent",
+      "upgrade",
+      "via",
+      "warning",
+      "x-b3-traceid",
+      "x-request-id",
+      "x-correlation-id",
+      "traceparent",
+      "tracestate",
+      "cf-ray",
+      "x-amzn-trace-id",
+      "x-datadog-trace-id",
+      "sentry-trace"
+    ],
+    "HttpResponseHeadersAllowlist": [
+      "access-control-allow-origin",
+      "access-control-allow-credentials",
+      "access-control-expose-headers",
+      "access-control-max-age",
+      "access-control-allow-methods",
+      "access-control-allow-headers",
+      "accept-patch",
+      "accept-ranges",
+      "age",
+      "allow",
+      "alt-svc",
+      "cache-control",
+      "connection",
+      "content-disposition",
+      "content-encoding",
+      "content-language",
+      "content-length",
+      "content-location",
+      "content-md5",
+      "content-range",
+      "content-type",
+      "date",
+      "delta-base",
+      "etag",
+      "expires",
+      "im",
+      "last-modified",
+      "link",
+      "location",
+      "permanent",
+      "p3p",
+      "pragma",
+      "proxy-authenticate",
+      "public-key-pins",
+      "retry-after",
+      "server",
+      "status",
+      "strict-transport-security",
+      "trailer",
+      "transfer-encoding",
+      "tk",
+      "upgrade",
+      "vary",
+      "via",
+      "warning",
+      "www-authenticate",
+      "x-b3-traceid",
+      "x-frame-options",
+      "x-request-id",
+      "x-correlation-id",
+      "traceparent",
+      "tracestate",
+      "cf-ray",
+      "x-amzn-trace-id",
+      "x-datadog-trace-id",
+      "sentry-trace",
+      "server-timing"
+    ],
+    "MaxAjaxPayloadLength": 16384,
+    "MaxConsoleLogPerPage": 1024,
+    "MaxPerfMarksPerPage": 16384,
+    "MaxUrlLength": 2048,
+    "RecordPerformanceResourceImg": true,
+    "RecordPerformanceResourceTiming": true,
+    "UrlPathBlocklist": [],
+    "UrlPrivacyConfig": [
+      {
+        "Exclude": {
+          "Hash": [
+            {
+              "Expression": "#access_token.*"
+            }
+          ],
+          "QueryParam": [
+            {
+              "Expression": "(password.*=)(.*)"
+            },
+            {
+              "Expression": "(token.*=)(.*)"
+            },
+            {
+              "Expression": "^(code=)(.*)"
+            },
+            {
+              "Expression": "^(jwt=)(.*)"
+            }
+          ]
+        }
+      }
+    ],
+    "UrlQueryStringBlocklist": [
+      "(password.*=)(.*)",
+      "(token.*=)(.*)",
+      "^(code=)(.*)",
+      "^(jwt=)(.*)"
+    ]
+  },
+  "UrlKeeps": null,
+  "DwellTime": 0
+}
