@@ -348,7 +348,15 @@ function CheckboxGroup({
 /*  Deal card                                                          */
 /* ------------------------------------------------------------------ */
 
-function DealCard({ deal }: { deal: RealDeal }) {
+const TAX_PER_NIGHT_PP = 30; // ~$30/night/person estimated port fees & taxes
+const TAXES_INCLUDED_LINES = new Set(["disney"]); // Lines where scraped price already includes taxes
+
+function estimateTaxes(deal: RealDeal): number {
+  if (TAXES_INCLUDED_LINES.has(deal.cruiseLineId)) return 0;
+  return deal.duration * TAX_PER_NIGHT_PP;
+}
+
+function DealCard({ deal, includeTaxes }: { deal: RealDeal; includeTaxes?: boolean }) {
   const line = CRUISE_LINES.find((l) => l.id === deal.cruiseLineId);
   const imgSrc = getDealImage(deal);
   const region =
@@ -445,10 +453,14 @@ function DealCard({ deal }: { deal: RealDeal }) {
             Interior from
           </p>
           <p className="font-price text-xl font-bold text-coral">
-            ${deal.fromPrice.toLocaleString()}
+            ${includeTaxes
+              ? (deal.fromPrice + estimateTaxes(deal)).toLocaleString()
+              : deal.fromPrice.toLocaleString()}
           </p>
           <p className="text-[10px] text-gray-400">
-            per person {deal.cruiseLineId === "disney" ? "(incl. taxes)" : "(excl. taxes)"}
+            per person {includeTaxes
+              ? TAXES_INCLUDED_LINES.has(deal.cruiseLineId) ? "(incl. taxes)" : "(est. incl. taxes)"
+              : TAXES_INCLUDED_LINES.has(deal.cruiseLineId) ? "(incl. taxes)" : "(excl. taxes)"}
           </p>
         </div>
         <div className="flex flex-col gap-2 mt-3 w-full md:w-auto">
@@ -942,7 +954,7 @@ export default function CruiseSearchPage() {
             ) : (
               <div className="space-y-4">
                 {paginatedDeals.map((deal) => (
-                  <DealCard key={deal.id} deal={deal} />
+                  <DealCard key={deal.id} deal={deal} includeTaxes={includeTaxes} />
                 ))}
               </div>
             )}
