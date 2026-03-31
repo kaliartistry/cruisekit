@@ -1529,7 +1529,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility, coordinates with ship medical staff",
     },
     region: "western",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Beaches_in_Nassau%2C_Bahamas.jpg",
+    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/belize-city-belize/belize-crystal-caves-limestone.jpg",
   },
 
   /* ================================================================ */
@@ -1668,7 +1668,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Kingston 876-702-6000",
     },
     region: "western",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/falmouth-jamaica/falmouth-jamaica-port-aerial-coast.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Port_Royal_in_Tranquility.jpg/1280px-Port_Royal_in_Tranquility.jpg",
   },
 ];
 

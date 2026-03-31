@@ -29,7 +29,7 @@ const NAV_LINKS = [
   { label: "Groups", href: "/groups", icon: Users },
   { label: "Track", href: "/track", icon: Navigation },
   { label: "Loyalty", href: "/loyalty", icon: Star },
-  { label: "Guides", href: "/blog", icon: BookOpen },
+  { label: "Guides", href: "/guides", icon: BookOpen },
 ] as const;
 
 export default function Navbar() {

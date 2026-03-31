@@ -57,6 +57,8 @@ const PORT_COUNTRIES: Record<string, string> = {
 };
 
 function getPortWithCountry(port: string): string {
+  // If the port already contains a country/region (has a comma), return as-is
+  if (port.includes(",")) return port;
   if (PORT_COUNTRIES[port]) return `${port}, ${PORT_COUNTRIES[port]}`;
   const portLower = port.toLowerCase();
   for (const [key, country] of Object.entries(PORT_COUNTRIES)) {

@@ -4,9 +4,9 @@ import Footer from "@/components/layout/footer";
 import CruiseSearchPage from "./cruise-search";
 
 export const metadata: Metadata = {
-  title: "Caribbean Cruise Deals — Compare 708+ Sailings | CruiseKit",
+  title: "Cruise Deals — Compare Real Sailings from 8 Cruise Lines | CruiseKit",
   description:
-    "Browse and filter real cruise deals from Carnival, Norwegian, and Virgin Voyages. Compare prices, ships, ports, and durations. Find the lowest Caribbean cruise fares.",
+    "Browse and filter real cruise deals from Royal Caribbean, Carnival, Norwegian, Celebrity, Princess, Holland America, MSC, Disney, and Virgin Voyages. Compare prices, ships, ports, and durations.",
 };
 
 export default function CruisesPage() {
