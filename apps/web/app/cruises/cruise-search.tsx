@@ -34,6 +34,22 @@ import HeartButton from "@/components/shared/heart-button";
 /*  Constants & helpers                                                 */
 /* ------------------------------------------------------------------ */
 
+const CRUISE_LINE_URLS: Record<string, string> = {
+  "carnival": "https://www.carnival.com",
+  "royal-caribbean": "https://www.royalcaribbean.com",
+  "norwegian": "https://www.ncl.com",
+  "msc": "https://www.msccruisesusa.com",
+  "celebrity": "https://www.celebritycruises.com",
+  "holland-america": "https://www.hollandamerica.com",
+  "disney": "https://disneycruise.disney.go.com",
+  "virgin-voyages": "https://www.virginvoyages.com",
+  "princess": "https://www.princess.com",
+};
+
+function getCruiseLineUrl(cruiseLineId: string): string {
+  return CRUISE_LINE_URLS[cruiseLineId] ?? `https://www.${cruiseLineId}.com`;
+}
+
 const ITEMS_PER_PAGE = 20;
 
 const DURATION_RANGES = [
@@ -402,7 +418,7 @@ function DealCard({ deal, includeTaxes }: { deal: RealDeal; includeTaxes?: boole
             </a>
           ) : (
             <a
-              href={`https://www.${deal.cruiseLineId === "virgin-voyages" ? "virginvoyages.com" : deal.cruiseLineId === "norwegian" ? "ncl.com" : deal.cruiseLineId === "royal-caribbean" ? "royalcaribbean.com" : deal.cruiseLineId === "celebrity" ? "celebritycruises.com" : deal.cruiseLineId + ".com"}`}
+              href={getCruiseLineUrl(deal.cruiseLineId)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg border-2 border-coral bg-white px-4 py-2 text-xs font-bold text-coral transition-colors hover:bg-coral hover:text-white"
