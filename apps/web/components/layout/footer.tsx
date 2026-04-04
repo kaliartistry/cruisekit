@@ -8,7 +8,6 @@ const FOOTER_COLUMNS = [
       { label: "Cruise Deals", href: "/cruises" },
       { label: "True Cost Calculator", href: "/calculator" },
       { label: "Port Day Planner", href: "/ports" },
-      { label: "Group Hub", href: "/groups" },
       { label: "BackToShip GPS", href: "/track" },
       { label: "Loyalty Hub", href: "/loyalty" },
       { label: "Compare Cruise Lines", href: "/compare" },

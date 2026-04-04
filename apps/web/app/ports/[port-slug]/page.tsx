@@ -22,6 +22,8 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import ViatorExcursions from "@/components/viator/viator-excursions";
+import { hasViatorProducts } from "@/lib/data/viator-destinations";
 import { cn } from "@/lib/utils/cn";
 import {
   PORTS,
@@ -303,6 +305,13 @@ export default async function PortDetailPage({ params }: Props) {
               ))}
             </div>
           </section>
+
+          {/* ============================================================ */}
+          {/*  5b. Book Tours — Viator (client-side, dynamic)               */}
+          {/* ============================================================ */}
+          {hasViatorProducts(slug) && (
+            <ViatorExcursions portSlug={slug} portName={port.name} />
+          )}
 
           {/* ============================================================ */}
           {/*  6. Free Things To Do                                         */}

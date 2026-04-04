@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "cdn1.parksmedia.wdprapps.disney.com" },
       { protocol: "https", hostname: "upload.wikimedia.org" },
       { protocol: "https", hostname: "lh3.googleusercontent.com" },
+      { protocol: "https", hostname: "hare-media-cdn.tripadvisor.com" },
+      { protocol: "https", hostname: "media.tacdn.com" },
     ],
   },
   // Trailing slashes for GitHub Pages compatibility
