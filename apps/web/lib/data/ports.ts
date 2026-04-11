@@ -942,57 +942,7 @@ export const PORTS: PortData[] = [
   },
 
   /* ================================================================ */
-  /*  19. Curacao                                                     */
-  /* ================================================================ */
-  {
-    slug: "curacao",
-    name: "Curacao",
-    country: "Curacao",
-    coordinates: { lat: 12.1696, lng: -68.9900 },
-    timezone: "AST (no DST)",
-    safetyRating: 8.5,
-    walkabilityRating: 8,
-    isTenderPort: false,
-    typicalPortHours: 9,
-    walkingDistanceToTown: "5 min walk across Queen Emma Bridge to Punda",
-    currency: "ANG",
-    usdAccepted: true,
-    wifiAvailability: "good",
-    cellularCoverage: "good",
-    overview:
-      "Curacao is a colorful Dutch Caribbean island known for its UNESCO World Heritage waterfront in Willemstad, excellent diving, and unique liqueur. The cruise terminal is right in the historic Otrobanda district, steps from the iconic Queen Emma floating bridge.",
-    timeZoneAlert:
-      "Curacao uses AST year-round. Same as EDT in summer, 1 hour ahead of EST in winter.",
-    excursionCategories: [
-      { name: "Curacao Sea Aquarium & Dolphins", priceRange: { min: 40, max: 100 }, typicalDuration: "2-3 hours" },
-      { name: "Beach Hopping Tour", priceRange: { min: 50, max: 80 }, typicalDuration: "4-5 hours" },
-      { name: "Hato Caves", priceRange: { min: 15, max: 25 }, typicalDuration: "1.5 hours" },
-      { name: "Curacao Liqueur Distillery Tour", priceRange: { min: 10, max: 15 }, typicalDuration: "1 hour" },
-      { name: "Snorkeling at Tugboat Beach", priceRange: { min: 30, max: 50 }, typicalDuration: "2-3 hours" },
-    ],
-    freeActivities: [
-      { name: "Queen Emma Floating Bridge", description: "Unique pontoon bridge that swings open for ships. Walk across to Punda for postcard-perfect views." },
-      { name: "Punda & Handelskade Walk", description: "The most photographed street in the Caribbean — colorful Dutch colonial facades along the waterfront." },
-      { name: "Fort Amsterdam", description: "Historic fort that now houses the Governor's residence and a small church. Free to walk through." },
-    ],
-    restaurants: [
-      { name: "Plasa Bieu (Old Market)", priceRange: "$" },
-      { name: "Gouverneur de Rouville", priceRange: "$$$" },
-      { name: "Iguana Cafe", priceRange: "$$" },
-    ],
-    gettingAround:
-      "Walking around Willemstad (Punda and Otrobanda) is easy and safe. Buses run to beaches for $2. Taxis to popular beaches cost $15-25. Renting a car ($35-45/day) is the best way to explore hidden coves and Shete Boka National Park.",
-    emergencyInfo: {
-      police: "911",
-      hospital: "Curacao Medical Center",
-      usConsulate: "(599-9) 461-3066",
-    },
-    region: "southern",
-    imageUrl: "/images/ports/curacao.jpg"
-  },
-
-  /* ================================================================ */
-  /*  20. Bermuda                                                     */
+  /*  19. Bermuda                                                     */
   /* ================================================================ */
   {
     slug: "bermuda",
