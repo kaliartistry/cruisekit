@@ -7,7 +7,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-export type PillarKey = "plan" | "coordinate" | "explore" | "track" | "optimize";
+export type PillarKey = "plan" | "coordinate" | "explore" | "myday" | "optimize";
 
 export interface Pillar {
   key: PillarKey;
@@ -94,6 +94,6 @@ export const PILLAR_LIST: Pillar[] = [
   PILLARS.plan,
   PILLARS.explore,
   PILLARS.coordinate,
-  PILLARS.track,
+  PILLARS.myday,
   PILLARS.optimize,
 ];
