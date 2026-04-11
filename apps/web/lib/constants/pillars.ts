@@ -62,18 +62,18 @@ export const PILLARS: Record<PillarKey, Pillar> = {
       "Discover port activities, plan excursions, and build day-by-day itineraries for every stop on your voyage.",
     href: "/ports",
   },
-  track: {
-    key: "track",
-    label: "Track",
+  myday: {
+    key: "myday",
+    label: "MyDay",
     icon: Navigation,
     color: "#F59E0B",
     colorClass: "text-warning",
     bgClass: "bg-warning/10",
     borderClass: "border-warning/30",
-    tagline: "BackToShip GPS",
+    tagline: "Your cruise day, handled",
     description:
-      "Real-time GPS tracking so you never miss the ship. Get alerts, directions, and peace of mind at every port.",
-    href: "/track",
+      "Daily schedule, onboard spend tracker, and real-time crew coordination — everything you need during your cruise.",
+    href: "/myday",
   },
   optimize: {
     key: "optimize",

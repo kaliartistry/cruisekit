@@ -125,10 +125,10 @@ export default function AboutPage() {
                   4
                 </span>
                 <span>
-                  <strong className="text-navy">Track</strong> &mdash;
-                  BackToShip GPS gives you real-time distance tracking to your
-                  ship while you&rsquo;re in port, so you never have to worry
-                  about cutting it close.
+                  <strong className="text-navy">MyDay</strong> &mdash;
+                  Your daily cruise command center with schedule management,
+                  onboard spend tracking, and real-time crew coordination
+                  so everyone stays connected.
                 </span>
               </li>
               <li className="flex items-start gap-3">

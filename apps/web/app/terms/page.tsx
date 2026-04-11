@@ -70,17 +70,18 @@ export default function TermsPage() {
             {/* 4 */}
             <section>
               <h2 className="mb-3 text-xl font-bold text-navy">
-                4. BackToShip GPS Disclaimer
+                4. MyDay Feature Disclaimer
               </h2>
               <p>
-                The BackToShip GPS feature is a{" "}
+                The MyDay feature, including schedule management, spend tracking,
+                and crew location sharing, is a{" "}
                 <strong>planning aid only and not a guarantee</strong>.
-                CruiseKit is not responsible for missed departures, delayed
-                returns, or any consequences resulting from reliance on the
-                BackToShip feature. GPS accuracy depends on your device and
-                environmental conditions. Always allow ample time to return to
-                your ship and follow the cruise line&rsquo;s official
-                all-aboard time.
+                CruiseKit is not responsible for missed departures, inaccurate
+                spend totals, or any consequences resulting from reliance on
+                MyDay features. GPS accuracy for crew location depends on your
+                device and environmental conditions. Always allow ample time
+                to return to your ship and follow the cruise line&rsquo;s
+                official all-aboard time.
               </p>
             </section>
 

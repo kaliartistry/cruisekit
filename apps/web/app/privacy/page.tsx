@@ -90,8 +90,8 @@ export default function PrivacyPage() {
                   data.
                 </li>
                 <li>
-                  <strong>No location data.</strong> The BackToShip GPS
-                  feature uses your device&rsquo;s location API in real time
+                  <strong>No location data.</strong> The MyDay crew
+                  location feature uses your device&rsquo;s location API
                   but does not store, transmit, or log your location to our
                   servers. All location processing happens on your device.
                 </li>

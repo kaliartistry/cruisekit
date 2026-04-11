@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "cruise group planning",
     "cruise loyalty tracker",
     "hidden cruise costs",
-    "back to ship tracker",
+    "cruise day planner",
     "cruisekit",
   ],
 };

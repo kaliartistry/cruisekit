@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "cruise planning help",
     "cruisekit support",
     "true cost calculator help",
-    "backtoship help",
+    "myday cruise planner",
   ],
 };
 
@@ -113,10 +113,10 @@ const TOOLS = [
     ),
   },
   {
-    name: "BackToShip GPS",
+    name: "MyDay",
     description:
-      "Real-time distance tracking to your ship while in port. See walking and driving time estimates so you never cut it close.",
-    href: "/track",
+      "Your daily cruise command center — schedule, spend tracking, and crew coordination all in one place.",
+    href: "/myday",
     icon: (
       <svg
         className="h-6 w-6"

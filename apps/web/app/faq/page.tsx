@@ -7,12 +7,12 @@ import PageHeader from "@/components/layout/page-header";
 export const metadata: Metadata = {
   title: "FAQ — CruiseKit",
   description:
-    "Frequently asked questions about CruiseKit, the free cruise planning toolkit. Learn about the True Cost Calculator, BackToShip GPS, data accuracy, and more.",
+    "Frequently asked questions about CruiseKit, the free cruise planning toolkit. Learn about the True Cost Calculator, MyDay, data accuracy, and more.",
   keywords: [
     "cruisekit faq",
     "cruise planning questions",
     "true cost calculator help",
-    "backtoship gps",
+    "cruise day planner",
     "cruise planning tool help",
   ],
 };
@@ -21,7 +21,7 @@ const FAQS = [
   {
     question: "What is CruiseKit?",
     answer:
-      "CruiseKit is a free, independent cruise planning toolkit. It gives you tools to calculate the true cost of a cruise, explore port-day options, coordinate group trips, track your distance back to the ship, and compare loyalty programs across major cruise lines. Think of it as your planning companion before and during a cruise.",
+      "CruiseKit is a free, independent cruise planning toolkit. It gives you tools to calculate the true cost of a cruise, explore port-day options, coordinate group trips, manage your daily cruise schedule and spending, and compare loyalty programs across major cruise lines. Think of it as your planning companion before and during a cruise.",
   },
   {
     question: "Is CruiseKit a travel agency?",
@@ -41,7 +41,7 @@ const FAQS = [
   {
     question: "Is my data safe?",
     answer:
-      "Yes. CruiseKit uses Firebase Authentication (Google sign-in) for accounts and Firebase Firestore for saved trip data. We do not use tracking cookies, we do not sell your data, and we do not share personal information with third parties for marketing. The BackToShip GPS feature processes your location entirely on your device — we never store or transmit your location to our servers.",
+      "Yes. CruiseKit uses Firebase Authentication (Google sign-in) for accounts and Firebase Firestore for saved trip data. We do not use tracking cookies, we do not sell your data, and we do not share personal information with third parties for marketing. The MyDay crew location feature processes your location entirely on your device — we never store or transmit your location to our servers.",
   },
   {
     question: "How do I save cruises and trips?",
@@ -49,9 +49,9 @@ const FAQS = [
       "Sign in with your Google account using the sign-in button in the navigation bar. Once signed in, you can save cruise comparisons and trip plans to your \"My Trips\" dashboard. Your saved data syncs across devices and is stored securely in Firebase.",
   },
   {
-    question: "What is BackToShip?",
+    question: "What is MyDay?",
     answer:
-      "BackToShip is CruiseKit's GPS tracking feature designed for port days. It shows you in real time how far you are from your ship's pier, estimated walking and driving times, and helps you keep track of the all-aboard time. It's a planning aid — not a substitute for keeping your own time and following the cruise line's departure schedule.",
+      "MyDay is CruiseKit's during-cruise command center. It includes a daily schedule with ship time / port time clocks and all-aboard countdown, an onboard spend tracker that compares your actual spending to your budget from the Plan calculator, and a Crew tab for real-time group coordination with location sharing and chat.",
   },
   {
     question: "Is CruiseKit free?",
@@ -61,7 +61,7 @@ const FAQS = [
   {
     question: "Can I use CruiseKit on my phone?",
     answer:
-      "Yes. CruiseKit is fully responsive and works on mobile browsers. The BackToShip GPS feature is specifically designed for mobile use while you're in port. No app download is required — just visit cruisekit.app in your phone's browser.",
+      "Yes. CruiseKit is fully responsive and works on mobile browsers. The MyDay feature is specifically designed for mobile use during your cruise. No app download is required — just visit cruisekit.app in your phone's browser.",
   },
   {
     question: "How do I contact you?",
