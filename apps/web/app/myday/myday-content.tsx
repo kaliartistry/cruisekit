@@ -121,7 +121,8 @@ export default function MyDayContent() {
           <motion.h1
             custom={0}
             variants={fadeUp}
-            className="mx-auto mt-6 max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl"
+            className="mx-auto mt-6 max-w-3xl text-4xl font-black leading-tight sm:text-5xl"
+            style={{ color: '#ffffff' }}
           >
             Your phone says 2pm.{" "}
             <span className="text-amber-400">The ship says 1pm.</span>
