@@ -1,33 +1,27 @@
 import { cn } from "@/lib/utils/cn";
 
-// Logo file extensions — some are real downloads, some are text-based placeholders
-// Real logos: carnival, msc, virgin-voyages, princess
-// Placeholder text SVGs: royal-caribbean, norwegian, celebrity, holland-america, disney
-const LOGO_EXT: Record<string, string> = {
-  "royal-caribbean": "svg",
-  "carnival": "svg",
-  "norwegian": "svg",
-  "msc": "svg",
-  "celebrity": "svg",
-  "princess": "png",
-  "holland-america": "svg",
-  "disney": "svg",
-  "virgin-voyages": "svg",
-};
-
 interface CruiseLineLogoProps {
-  /** Cruise line identifier (e.g. "royal-caribbean") */
   cruiseLineId: string;
-  /** Display size (default "md") */
   size?: "sm" | "md" | "lg";
-  /** Additional CSS classes */
   className?: string;
 }
 
+const BRANDS: Record<string, { abbr: string; name: string; color: string }> = {
+  "royal-caribbean": { abbr: "RCI", name: "Royal Caribbean", color: "#0066CC" },
+  carnival: { abbr: "CCL", name: "Carnival", color: "#003DA5" },
+  norwegian: { abbr: "NCL", name: "Norwegian", color: "#00BCD4" },
+  msc: { abbr: "MSC", name: "MSC Cruises", color: "#003B73" },
+  celebrity: { abbr: "CEL", name: "Celebrity", color: "#1C1C1C" },
+  princess: { abbr: "PCL", name: "Princess", color: "#003366" },
+  "holland-america": { abbr: "HAL", name: "Holland America", color: "#003B6F" },
+  disney: { abbr: "DCL", name: "Disney", color: "#0066B2" },
+  "virgin-voyages": { abbr: "VV", name: "Virgin Voyages", color: "#E4002B" },
+};
+
 const SIZE_MAP = {
-  sm: { width: 80, height: 24 },
-  md: { width: 120, height: 36 },
-  lg: { width: 160, height: 48 },
+  sm: "h-10 w-16 text-xs",
+  md: "h-14 w-24 text-sm",
+  lg: "h-16 w-28 text-base",
 };
 
 export default function CruiseLineLogo({
@@ -35,11 +29,10 @@ export default function CruiseLineLogo({
   size = "md",
   className,
 }: CruiseLineLogoProps) {
-  const dims = SIZE_MAP[size];
-  const ext = LOGO_EXT[cruiseLineId];
+  const brand = BRANDS[cruiseLineId];
+  const sizeClass = SIZE_MAP[size];
 
-  if (!ext) {
-    // Fallback for unknown cruise lines
+  if (!brand) {
     return (
       <span className={cn("text-xs font-semibold text-gray-500", className)}>
         {cruiseLineId}
@@ -48,12 +41,21 @@ export default function CruiseLineLogo({
   }
 
   return (
-    <img
-      src={`/images/cruise-lines/${cruiseLineId}.${ext}`}
-      alt={`${cruiseLineId} logo`}
-      width={dims.width}
-      height={dims.height}
-      className={cn("object-contain", className)}
-    />
+    <div
+      className={cn(
+        "inline-flex items-center justify-center rounded-xl border bg-white shadow-sm",
+        sizeClass,
+        className
+      )}
+      style={{ borderColor: `${brand.color}20` }}
+      title={brand.name}
+    >
+      <span
+        className="font-black tracking-tight"
+        style={{ color: brand.color }}
+      >
+        {brand.abbr}
+      </span>
+    </div>
   );
 }
