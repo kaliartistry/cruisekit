@@ -34,10 +34,10 @@ const FOOTER_COLUMNS = [
   {
     title: "Connect",
     links: [
-      { label: "Twitter / X", href: "#" },
-      { label: "Instagram", href: "#" },
-      { label: "Facebook", href: "#" },
-      { label: "YouTube", href: "#" },
+      { label: "Twitter / X", href: "https://cruisekit.app" },
+      { label: "Instagram", href: "https://cruisekit.app" },
+      { label: "Facebook", href: "https://cruisekit.app" },
+      { label: "YouTube", href: "https://cruisekit.app" },
     ],
   },
 ];
@@ -88,14 +88,9 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-4">
-            <a
-              href="https://shipsafesdk.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-gray-400 transition-colors hover:text-teal"
-            >
-              Powered by ShipSafe SDK
-            </a>
+            <span className="text-xs text-gray-400">
+              Built for cruisers, by cruisers
+            </span>
             <span className="inline-flex items-center rounded-full border border-white/15 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-gray-400">
               Patent Pending
             </span>

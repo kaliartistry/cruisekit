@@ -246,7 +246,7 @@ export default function HelpPage() {
             </Link>
 
             <a
-              href="mailto:kali@shipsafesdk.com"
+              href="mailto:hello@cruisekit.app"
               className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal/10 text-teal">
@@ -267,7 +267,7 @@ export default function HelpPage() {
               <div>
                 <h3 className="font-bold text-navy">Email Support</h3>
                 <p className="text-sm text-gray-500">
-                  kali@shipsafesdk.com
+                  hello@cruisekit.app
                 </p>
               </div>
             </a>
@@ -309,7 +309,7 @@ export default function HelpPage() {
               Don&rsquo;t hesitate to reach out.
             </p>
             <a
-              href="mailto:kali@shipsafesdk.com"
+              href="mailto:hello@cruisekit.app"
               className="mt-5 inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy/90"
             >
               Contact Us

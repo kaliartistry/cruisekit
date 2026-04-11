@@ -66,7 +66,7 @@ const FAQS = [
   {
     question: "How do I contact you?",
     answer:
-      "CruiseKit is built and maintained by a solo developer. You can reach us directly at kali@shipsafesdk.com for bug reports, feature requests, data corrections, or general feedback. We read every email.",
+      "CruiseKit is built and maintained by a solo developer. You can reach us directly at hello@cruisekit.app for bug reports, feature requests, data corrections, or general feedback. We read every email.",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function FAQPage() {
             </p>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
               <a
-                href="mailto:kali@shipsafesdk.com"
+                href="mailto:hello@cruisekit.app"
                 className="inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy/90"
               >
                 Email Us

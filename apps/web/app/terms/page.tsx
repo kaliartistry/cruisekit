@@ -183,10 +183,10 @@ export default function TermsPage() {
                 If you have questions about these Terms of Service, contact
                 us at{" "}
                 <a
-                  href="mailto:kali@shipsafesdk.com"
+                  href="mailto:hello@cruisekit.app"
                   className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
                 >
-                  kali@shipsafesdk.com
+                  hello@cruisekit.app
                 </a>
                 .
               </p>

@@ -75,7 +75,7 @@ export default function ContactPage() {
                 feedback are all welcome.
               </p>
               <a
-                href="mailto:kali@shipsafesdk.com"
+                href="mailto:hello@cruisekit.app"
                 className="inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy/90"
               >
                 <svg
@@ -91,7 +91,7 @@ export default function ContactPage() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                kali@shipsafesdk.com
+                hello@cruisekit.app
               </a>
             </div>
 
@@ -142,25 +142,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* ShipSafe SDK */}
-            <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-              <h2 className="mb-2 text-xl font-bold text-navy">
-                For Developers &amp; Partners
-              </h2>
-              <p className="mb-4 text-sm leading-relaxed text-gray-600">
-                Building a travel app or looking for cruise data
-                infrastructure? Check out{" "}
-                <a
-                  href="https://shipsafesdk.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
-                >
-                  ShipSafe SDK
-                </a>{" "}
-                for B2B API access to cruise data.
-              </p>
-            </div>
           </div>
         </section>
       </main>

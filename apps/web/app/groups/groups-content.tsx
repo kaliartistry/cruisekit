@@ -495,7 +495,7 @@ function ComingFeatures() {
 
       <div className="mt-6 text-center">
         <a
-          href="mailto:kali@shipsafesdk.com?subject=CruiseKit%20Groups%20Waitlist&body=I%27d%20like%20to%20be%20notified%20when%20Group%20Hub%20launches!"
+          href="mailto:hello@cruisekit.app?subject=CruiseKit%20Groups%20Waitlist&body=I%27d%20like%20to%20be%20notified%20when%20Group%20Hub%20launches!"
           className="inline-flex items-center gap-2 rounded-full bg-coral px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-coral/90 hover:shadow-md active:scale-[0.98]"
         >
           Get Notified When Groups Launches

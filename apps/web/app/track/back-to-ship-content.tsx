@@ -14,7 +14,6 @@ import {
   ArrowRight,
   Download,
   Route,
-  ChevronRight,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -226,7 +225,7 @@ export default function BackToShipContent() {
               transition={{ duration: 0.6, delay: 0.35 }}
             >
               <a
-                href="mailto:kali@shipsafesdk.com?subject=BackToShip%20Waitlist&body=I%27d%20like%20to%20be%20notified%20when%20BackToShip%20launches!"
+                href="mailto:hello@cruisekit.app?subject=BackToShip%20Waitlist&body=I%27d%20like%20to%20be%20notified%20when%20BackToShip%20launches!"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-teal/20 transition-all hover:bg-teal-dark hover:shadow-xl hover:shadow-teal/30 active:scale-[0.97]"
               >
                 Get Notified When It Launches
@@ -426,7 +425,7 @@ export default function BackToShipContent() {
       </section>
 
       {/* ============================================================= */}
-      {/*  POWERED BY SHIPSAFE SDK                                       */}
+      {/*  SAFETY TECHNOLOGY                                             */}
       {/* ============================================================= */}
       <section className="border-b border-gray-200 bg-gray-50/60">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
@@ -444,26 +443,17 @@ export default function BackToShipContent() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-navy sm:text-3xl">
-                    Powered by ShipSafe SDK
+                    Built on Patent-Pending Safety Technology
                   </h2>
                   <p className="mt-3 text-base leading-relaxed text-gray-600">
-                    BackToShip is powered by the ShipSafe SDK — the same
-                    maritime safety technology trusted by cruise industry
-                    professionals.
+                    BackToShip is built on CruiseKit&apos;s proprietary maritime
+                    safety technology, designed specifically for the unique
+                    challenges of cruise port navigation.
                   </p>
                   <p className="mt-3 text-base leading-relaxed text-gray-600">
                     Patent pending technology. Offline-first. Conservative ETA
                     calculations because missing your ship isn&apos;t an option.
                   </p>
-                  <a
-                    href="https://shipsafesdk.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-teal transition-colors hover:text-teal-dark"
-                  >
-                    Learn more about ShipSafe SDK
-                    <ChevronRight className="h-4 w-4" />
-                  </a>
                 </div>
               </div>
             </motion.div>
@@ -508,7 +498,7 @@ export default function BackToShipContent() {
               custom={2}
             >
               <a
-                href="mailto:kali@shipsafesdk.com?subject=BackToShip%20Waitlist&body=I%27d%20like%20to%20be%20notified%20when%20BackToShip%20launches!"
+                href="mailto:hello@cruisekit.app?subject=BackToShip%20Waitlist&body=I%27d%20like%20to%20be%20notified%20when%20BackToShip%20launches!"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-navy shadow-xl transition-all hover:bg-gray-50 hover:shadow-2xl active:scale-[0.97]"
               >
                 Join the Waitlist

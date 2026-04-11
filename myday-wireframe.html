@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyDay — Interactive Wireframe</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', sans-serif; background: #0f1117; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+  .phone {
+    width: 390px; height: 844px; background: #1a1d27; border-radius: 44px;
+    border: 3px solid #2a2d37; overflow: hidden; position: relative;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.6);
+  }
+  .notch { width: 160px; height: 34px; background: #0f1117; border-radius: 0 0 20px 20px; margin: 0 auto; position: relative; z-index: 10; }
+  .status-bar { display: flex; justify-content: space-between; align-items: center; padding: 4px 24px 0; font-size: 12px; font-weight: 600; color: #999; }
+
+  .screen-area {
+    height: 700px; overflow-y: auto; overflow-x: hidden; padding: 0;
+    scrollbar-width: none;
+  }
+  .screen-area::-webkit-scrollbar { display: none; }
+
+  /* Bottom Nav */
+  .bottom-nav {
+    display: flex; justify-content: space-around; align-items: center;
+    height: 64px; background: #1a1d27; border-top: 1px solid #2a2d37;
+    position: absolute; bottom: 20px; left: 0; right: 0; padding: 0 8px;
+  }
+  .nav-item {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    font-size: 10px; color: #666; cursor: pointer; padding: 6px 8px; border-radius: 8px;
+    transition: all 0.2s;
+  }
+  .nav-item:hover { color: #999; }
+  .nav-item.active { color: #f5a623; }
+  .nav-item .icon { font-size: 20px; }
+  .home-indicator { width: 134px; height: 5px; background: #666; border-radius: 3px; margin: 0 auto; position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); }
+
+  /* Tab bar inside MyDay */
+  .tab-bar {
+    display: flex; background: #1a1d27; border-bottom: 1px solid #2a2d37;
+    padding: 0 16px; position: sticky; top: 0; z-index: 5;
+  }
+  .tab {
+    flex: 1; text-align: center; padding: 12px 0; font-size: 14px; font-weight: 600;
+    color: #666; cursor: pointer; border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .tab.active { color: #f5a623; border-bottom-color: #f5a623; }
+  .tab:hover { color: #999; }
+
+  /* Screen containers */
+  .screen { display: none; padding: 16px; }
+  .screen.active { display: block; }
+
+  /* Header */
+  .page-header { padding: 12px 16px 4px; }
+  .page-header h1 { font-size: 22px; font-weight: 700; }
+  .page-header .subtitle { font-size: 13px; color: #888; margin-top: 2px; }
+
+  /* Clock Strip */
+  .clock-strip {
+    display: flex; justify-content: space-between; padding: 14px 16px;
+    background: linear-gradient(135deg, #1e2230, #252a3a); border-radius: 16px;
+    margin: 12px 0;
+  }
+  .clock-item { text-align: center; flex: 1; }
+  .clock-item .label { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+  .clock-item .time { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; margin: 4px 0 2px; }
+  .clock-item .zone { font-size: 10px; color: #666; }
+  .clock-item.ship .time { color: #f5a623; }
+  .clock-item.port .time { color: #4ecdc4; }
+  .clock-item.home .time { color: #a8a8ff; }
+  .clock-divider { width: 1px; background: #333; margin: 4px 0; }
+
+  /* Countdown */
+  .countdown-card {
+    background: linear-gradient(135deg, #2d1810, #1a1d27); border: 1px solid #8b4513;
+    border-radius: 16px; padding: 16px; margin: 12px 0; text-align: center;
+  }
+  .countdown-card .label { font-size: 12px; color: #cc8844; text-transform: uppercase; letter-spacing: 1px; }
+  .countdown-card .timer { font-size: 36px; font-weight: 800; color: #f5a623; margin: 8px 0; font-variant-numeric: tabular-nums; }
+  .countdown-card .detail { font-size: 13px; color: #999; }
+
+  /* What's Open Now */
+  .whats-open { margin: 16px 0; }
+  .whats-open .section-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 10px;
+  }
+  .whats-open .section-header h3 { font-size: 15px; font-weight: 600; }
+  .whats-open .section-header .see-all { font-size: 12px; color: #f5a623; cursor: pointer; }
+  .open-scroll { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+  .open-scroll::-webkit-scrollbar { display: none; }
+  .open-chip {
+    flex-shrink: 0; background: #252a3a; border-radius: 12px; padding: 10px 14px;
+    min-width: 130px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent;
+  }
+  .open-chip:hover { border-color: #f5a623; }
+  .open-chip .venue-name { font-size: 13px; font-weight: 600; }
+  .open-chip .venue-type { font-size: 11px; color: #888; margin-top: 2px; }
+  .open-chip .venue-hours { font-size: 11px; color: #4ecdc4; margin-top: 4px; }
+
+  /* Schedule */
+  .schedule { margin: 16px 0; }
+  .schedule h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .timeline-item {
+    display: flex; gap: 12px; padding: 12px 0;
+    border-bottom: 1px solid #2a2d37;
+  }
+  .timeline-time {
+    width: 52px; flex-shrink: 0; text-align: right;
+  }
+  .timeline-time .hour { font-size: 15px; font-weight: 700; color: #f5a623; }
+  .timeline-time .ampm { font-size: 10px; color: #888; }
+  .timeline-dot-col { display: flex; flex-direction: column; align-items: center; width: 20px; }
+  .timeline-dot { width: 10px; height: 10px; border-radius: 50%; background: #f5a623; flex-shrink: 0; margin-top: 4px; }
+  .timeline-dot.auto { background: #4ecdc4; }
+  .timeline-dot.user { background: #f5a623; }
+  .timeline-line { width: 2px; flex: 1; background: #2a2d37; margin-top: 4px; }
+  .timeline-content { flex: 1; }
+  .timeline-content .event-name { font-size: 14px; font-weight: 600; }
+  .timeline-content .event-detail { font-size: 12px; color: #888; margin-top: 2px; }
+  .timeline-content .event-tag {
+    display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 4px;
+    margin-top: 4px;
+  }
+  .tag-auto { background: rgba(78,205,196,0.15); color: #4ecdc4; }
+  .tag-user { background: rgba(245,166,35,0.15); color: #f5a623; }
+  .tag-reminder { background: rgba(168,168,255,0.15); color: #a8a8ff; }
+
+  /* Add Event FAB */
+  .fab {
+    position: fixed; bottom: 100px; right: calc(50% - 170px);
+    width: 52px; height: 52px; border-radius: 26px;
+    background: #f5a623; color: #1a1d27; border: none;
+    font-size: 28px; font-weight: 300; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(245,166,35,0.4);
+    transition: all 0.2s; z-index: 20;
+  }
+  .fab:hover { transform: scale(1.08); }
+
+  /* Spend Tab */
+  .spend-hero {
+    text-align: center; padding: 20px 0; margin: 8px 0;
+    background: linear-gradient(135deg, #1e2230, #252a3a); border-radius: 16px;
+  }
+  .spend-hero .label { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+  .spend-hero .amount { font-size: 44px; font-weight: 800; margin: 8px 0; }
+  .spend-hero .budget-line { font-size: 13px; color: #4ecdc4; }
+  .spend-hero .budget-line .over { color: #ff6b6b; }
+  .spend-hero .daily-avg { font-size: 12px; color: #666; margin-top: 4px; }
+
+  .budget-bar-container { margin: 16px 0; }
+  .budget-bar-label { display: flex; justify-content: space-between; font-size: 12px; color: #888; margin-bottom: 6px; }
+  .budget-bar { height: 8px; background: #2a2d37; border-radius: 4px; overflow: hidden; }
+  .budget-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; }
+  .fill-green { background: linear-gradient(90deg, #4ecdc4, #44b8a8); }
+  .fill-yellow { background: linear-gradient(90deg, #f5a623, #e09520); }
+  .fill-red { background: linear-gradient(90deg, #ff6b6b, #e05555); }
+
+  /* Quick Add */
+  .quick-add { margin: 20px 0; }
+  .quick-add h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .quick-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .quick-btn {
+    background: #252a3a; border: 1px solid #333; border-radius: 12px;
+    padding: 12px; cursor: pointer; transition: all 0.15s;
+    text-align: left;
+  }
+  .quick-btn:hover { border-color: #f5a623; background: #2a3040; }
+  .quick-btn:active { transform: scale(0.97); }
+  .quick-btn .item-icon { font-size: 18px; }
+  .quick-btn .item-name { font-size: 13px; font-weight: 600; margin-top: 4px; }
+  .quick-btn .item-price { font-size: 12px; color: #f5a623; margin-top: 2px; }
+  .quick-btn .item-note { font-size: 10px; color: #666; margin-top: 1px; }
+
+  /* Category Breakdown */
+  .categories { margin: 20px 0; }
+  .categories h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .cat-row {
+    display: flex; align-items: center; gap: 10px; padding: 10px 0;
+    border-bottom: 1px solid #222;
+  }
+  .cat-icon { font-size: 18px; width: 28px; text-align: center; }
+  .cat-info { flex: 1; }
+  .cat-name { font-size: 13px; font-weight: 600; }
+  .cat-bar { height: 4px; background: #2a2d37; border-radius: 2px; margin-top: 4px; }
+  .cat-bar-fill { height: 100%; border-radius: 2px; background: #f5a623; }
+  .cat-amount { font-size: 14px; font-weight: 700; text-align: right; min-width: 60px; }
+  .cat-budget { font-size: 10px; color: #666; text-align: right; }
+
+  /* Recent charges */
+  .recent { margin: 20px 0; }
+  .recent h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .charge-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid #222;
+  }
+  .charge-info .charge-name { font-size: 13px; font-weight: 500; }
+  .charge-info .charge-time { font-size: 11px; color: #666; }
+  .charge-amount { font-size: 14px; font-weight: 700; color: #ff6b6b; }
+
+  /* Modals / Overlays */
+  .modal-overlay {
+    display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7); z-index: 30;
+    justify-content: center; align-items: flex-end;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal-sheet {
+    background: #1e2230; border-radius: 20px 20px 0 0; padding: 24px;
+    width: 100%; max-height: 70%;
+  }
+  .modal-handle { width: 40px; height: 4px; background: #444; border-radius: 2px; margin: 0 auto 16px; }
+  .modal-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+  .modal-field { margin-bottom: 14px; }
+  .modal-field label { font-size: 12px; color: #888; display: block; margin-bottom: 4px; }
+  .modal-field input, .modal-field select {
+    width: 100%; padding: 10px 14px; border-radius: 10px;
+    background: #252a3a; border: 1px solid #333; color: #fff;
+    font-size: 14px; outline: none;
+  }
+  .modal-field input:focus, .modal-field select:focus { border-color: #f5a623; }
+  .modal-btn {
+    width: 100%; padding: 14px; border-radius: 12px; border: none;
+    background: #f5a623; color: #1a1d27; font-size: 15px; font-weight: 700;
+    cursor: pointer; margin-top: 8px;
+  }
+  .modal-btn:hover { background: #e09520; }
+
+  /* Data source badges */
+  .data-source {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; padding: 3px 8px; border-radius: 6px;
+    background: rgba(245,166,35,0.1); color: #f5a623;
+    margin-top: 4px;
+  }
+  .data-source.auto {
+    background: rgba(78,205,196,0.1); color: #4ecdc4;
+  }
+
+  /* Workflow annotations */
+  .annotation {
+    position: absolute; background: #f5a623; color: #1a1d27;
+    font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 8px;
+    z-index: 25; white-space: nowrap; pointer-events: none;
+  }
+  .annotation::after {
+    content: ''; position: absolute; bottom: -6px; left: 16px;
+    border-left: 6px solid transparent; border-right: 6px solid transparent;
+    border-top: 6px solid #f5a623;
+  }
+
+  /* Info banner */
+  .info-banner {
+    background: rgba(168,168,255,0.08); border: 1px solid rgba(168,168,255,0.2);
+    border-radius: 12px; padding: 12px 14px; margin: 12px 0;
+    font-size: 12px; color: #a8a8ff; line-height: 1.5;
+  }
+  .info-banner strong { color: #c8c8ff; }
+
+  /* Side panel */
+  .side-panel {
+    position: fixed; top: 0; right: 0; width: 340px; height: 100vh;
+    background: #1a1d27; border-left: 1px solid #2a2d37;
+    padding: 32px 24px; overflow-y: auto; z-index: 50;
+    transform: translateX(100%); transition: transform 0.3s ease;
+  }
+  .side-panel.open { transform: translateX(0); }
+  .side-panel h2 { font-size: 18px; margin-bottom: 16px; color: #f5a623; }
+  .side-panel .close-btn {
+    position: absolute; top: 16px; right: 16px; background: none;
+    border: none; color: #888; font-size: 24px; cursor: pointer;
+  }
+  .flow-step {
+    display: flex; gap: 12px; margin-bottom: 20px;
+  }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 14px; background: #f5a623;
+    color: #1a1d27; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; flex-shrink: 0;
+  }
+  .step-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .step-content p { font-size: 12px; color: #999; line-height: 1.5; }
+  .step-content .source-tag {
+    display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 4px;
+    margin-top: 4px;
+  }
+  .source-auto { background: rgba(78,205,196,0.15); color: #4ecdc4; }
+  .source-user { background: rgba(245,166,35,0.15); color: #f5a623; }
+  .source-plan { background: rgba(168,168,255,0.15); color: #a8a8ff; }
+
+  /* Help toggle */
+  .help-toggle {
+    position: fixed; top: 20px; right: 20px; background: #f5a623;
+    color: #1a1d27; border: none; padding: 10px 18px; border-radius: 10px;
+    font-size: 13px; font-weight: 700; cursor: pointer; z-index: 60;
+    box-shadow: 0 4px 20px rgba(245,166,35,0.3);
+  }
+  .help-toggle:hover { background: #e09520; }
+
+  /* Pre-cruise state */
+  .pre-cruise-countdown {
+    text-align: center; padding: 32px 16px; margin: 12px 0;
+    background: linear-gradient(135deg, #1a2030, #252a3a); border-radius: 16px;
+    border: 1px solid #2a3a4a;
+  }
+  .pre-cruise-countdown .emoji { font-size: 48px; margin-bottom: 12px; }
+  .pre-cruise-countdown .big-number { font-size: 64px; font-weight: 900; color: #f5a623; }
+  .pre-cruise-countdown .unit { font-size: 18px; color: #888; margin-top: 4px; }
+  .pre-cruise-countdown .sail-date { font-size: 13px; color: #4ecdc4; margin-top: 12px; }
+
+  /* State toggle */
+  .state-toggle {
+    display: flex; gap: 8px; padding: 8px 16px; margin-bottom: 4px;
+  }
+  .state-btn {
+    padding: 6px 14px; border-radius: 8px; border: 1px solid #333;
+    background: #252a3a; color: #888; font-size: 11px; font-weight: 600;
+    cursor: pointer; transition: all 0.15s;
+  }
+  .state-btn.active { background: #f5a623; color: #1a1d27; border-color: #f5a623; }
+</style>
+</head>
+<body>
+
+<!-- Help / Data Flow Panel -->
+<button class="help-toggle" onclick="togglePanel()">? Data Flow</button>
+
+<div class="side-panel" id="sidePanel">
+  <button class="close-btn" onclick="togglePanel()">&times;</button>
+
+  <h2>Where Does the Data Come From?</h2>
+
+  <h3 style="font-size:14px; color:#4ecdc4; margin: 16px 0 12px;">TODAY TAB</h3>
+
+  <div class="flow-step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h4>Ship Time & Port Time</h4>
+      <p>Calculated automatically from the sailing itinerary the user already entered in the Plan pillar. We know the port, we know the timezone.</p>
+      <span class="step-content source-tag source-auto">Auto from itinerary</span>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h4>All-Aboard Countdown</h4>
+      <p>Pulled from the sailing's itinerary data. Each port day has a departure time. We calculate the countdown in real-time.</p>
+      <span class="step-content source-tag source-auto">Auto from itinerary</span>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h4>Daily Schedule Events</h4>
+      <p><strong>User adds their own events.</strong> Dinner reservations, show times, spa appointments, excursion departures. Quick-add with presets or custom entry. Each event gets an optional push notification.</p>
+      <span class="step-content source-tag source-user">User enters manually</span>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h4>"What's Open Now" Strip</h4>
+      <p>Ship venues with typical operating hours, bundled per-ship in our database. Approximate hours based on cruise line patterns (e.g., buffet 6am-9:30pm, pool bar 10am-6pm). Users can correct/update.</p>
+      <span class="step-content source-tag source-auto">Bundled ship data</span>
+      <span class="step-content source-tag source-user">User-correctable</span>
+    </div>
+  </div>
+
+  <h3 style="font-size:14px; color:#f5a623; margin: 24px 0 12px;">SPEND TAB</h3>
+
+  <div class="flow-step">
+    <div class="step-num">5</div>
+    <div class="step-content">
+      <h4>Budget Baseline</h4>
+      <p>Seeded from the Plan pillar's True Cost Calculator. If the user estimated $4,200 total, that becomes the budget target. Categories (drinks, dining, spa, etc.) carry over too.</p>
+      <span class="step-content source-tag source-plan">Auto from Plan calculator</span>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="step-num">6</div>
+    <div class="step-content">
+      <h4>Charge Logging</h4>
+      <p><strong>User taps to log each charge.</strong> Quick-add presets have cruise-line-specific default prices (e.g., Carnival cocktail = $13, Royal = $15). One tap adds, long-press to edit amount. Custom entry for anything else.</p>
+      <span class="step-content source-tag source-user">User taps to log</span>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="step-num">7</div>
+    <div class="step-content">
+      <h4>Budget vs Actual</h4>
+      <p>Calculated in real-time. Compares logged spend against Plan estimates. Shows daily burn rate and projects end-of-cruise total. "Plan said $800 for drinks, you're at $340 on day 3."</p>
+      <span class="step-content source-tag source-auto">Auto-calculated</span>
+    </div>
+  </div>
+
+  <h3 style="font-size:14px; color:#a8a8ff; margin: 24px 0 12px;">KEY INSIGHT</h3>
+  <div style="font-size: 12px; color: #999; line-height: 1.6; padding: 12px; background: #252a3a; border-radius: 10px;">
+    <strong style="color: #a8a8ff;">No cruise line API needed.</strong> The Today tab is a personal planner (like Google Calendar for your cruise). The Spend tab is a personal ledger (like a budgeting app). Both are user-input driven with smart defaults. This means: works fully offline, zero partnership dependency, and ships on day one.
+  </div>
+</div>
+
+<!-- Phone Frame -->
+<div class="phone">
+  <div class="notch"></div>
+  <div class="status-bar">
+    <span>9:41 AM</span>
+    <span>Ship Time</span>
+    <span>87%</span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>MyDay</h1>
+    <div class="subtitle">Day 3 of 7 — Port Day: Cozumel, Mexico</div>
+  </div>
+
+  <!-- State Toggle (for demo purposes) -->
+  <div class="state-toggle">
+    <button class="state-btn" onclick="showState('pre')" id="statePreBtn">Pre-Cruise</button>
+    <button class="state-btn active" onclick="showState('during')" id="stateDuringBtn">During Cruise</button>
+  </div>
+
+  <!-- Tab Bar -->
+  <div class="tab-bar">
+    <div class="tab active" id="todayTab" onclick="switchTab('today')">Today</div>
+    <div class="tab" id="spendTab" onclick="switchTab('spend')">Spend</div>
+  </div>
+
+  <div class="screen-area">
+
+    <!-- PRE-CRUISE STATE -->
+    <div id="preCruiseScreen" style="display:none; padding: 16px;">
+      <div class="pre-cruise-countdown">
+        <div class="emoji">🚢</div>
+        <div class="big-number">23</div>
+        <div class="unit">days until embarkation</div>
+        <div class="sail-date">May 3, 2026 — Icon of the Seas</div>
+      </div>
+      <div class="info-banner">
+        <strong>Pre-cruise mode.</strong> Your MyDay will come alive on embarkation day. For now, use Plan to estimate your budget and Explore to research your ports.
+      </div>
+      <div style="margin-top: 16px;">
+        <div class="schedule">
+          <h3>Prep Checklist</h3>
+          <div class="timeline-item">
+            <div class="timeline-time"><div class="hour" style="color:#4ecdc4;">&#10003;</div></div>
+            <div class="timeline-dot-col"><div class="timeline-dot auto"></div><div class="timeline-line"></div></div>
+            <div class="timeline-content">
+              <div class="event-name">Online Check-in</div>
+              <div class="event-detail">Opens 45 days before sailing</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time"><div class="hour" style="color:#888;">○</div></div>
+            <div class="timeline-dot-col"><div class="timeline-dot" style="background:#666;"></div><div class="timeline-line"></div></div>
+            <div class="timeline-content">
+              <div class="event-name">Set Your Budget</div>
+              <div class="event-detail">Use Plan calculator → auto-seeds Spend tab</div>
+              <span class="data-source auto">Links to Plan pillar</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time"><div class="hour" style="color:#888;">○</div></div>
+            <div class="timeline-dot-col"><div class="timeline-dot" style="background:#666;"></div></div>
+            <div class="timeline-content">
+              <div class="event-name">Pre-Book Dining & Shows</div>
+              <div class="event-detail">Add reservations to MyDay so they're ready</div>
+              <span class="data-source">You add these</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODAY TAB -->
+    <div class="screen active" id="todayScreen">
+      <!-- Clock Strip -->
+      <div class="clock-strip">
+        <div class="clock-item ship">
+          <div class="label">Ship Time</div>
+          <div class="time">9:41</div>
+          <div class="zone">AM · CST</div>
+        </div>
+        <div class="clock-divider"></div>
+        <div class="clock-item port">
+          <div class="label">Port Time</div>
+          <div class="time">9:41</div>
+          <div class="zone">AM · CST</div>
+        </div>
+        <div class="clock-divider"></div>
+        <div class="clock-item home">
+          <div class="label">Home</div>
+          <div class="time">10:41</div>
+          <div class="zone">AM · EST</div>
+        </div>
+      </div>
+
+      <!-- All-Aboard Countdown -->
+      <div class="countdown-card">
+        <div class="label">All Aboard</div>
+        <div class="timer">5h 19m</div>
+        <div class="detail">Back on ship by 3:00 PM ship time</div>
+        <span class="data-source auto" style="margin-top: 8px;">Auto from your itinerary</span>
+      </div>
+
+      <!-- What's Open Now -->
+      <div class="whats-open">
+        <div class="section-header">
+          <h3>What's Open Now</h3>
+          <span class="see-all">See All →</span>
+        </div>
+        <div class="open-scroll">
+          <div class="open-chip">
+            <div class="venue-name">Windjammer Buffet</div>
+            <div class="venue-type">Buffet · Deck 11</div>
+            <div class="venue-hours">Open til 9:30 PM</div>
+          </div>
+          <div class="open-chip">
+            <div class="venue-name">Pool Bar</div>
+            <div class="venue-type">Bar · Deck 15</div>
+            <div class="venue-hours">Open til 6:00 PM</div>
+          </div>
+          <div class="open-chip">
+            <div class="venue-name">Vitality Spa</div>
+            <div class="venue-type">Spa · Deck 5</div>
+            <div class="venue-hours">Open til 8:00 PM</div>
+          </div>
+          <div class="open-chip">
+            <div class="venue-name">Casino Royale</div>
+            <div class="venue-type">Casino · Deck 4</div>
+            <div class="venue-hours">Open at sea only</div>
+          </div>
+        </div>
+        <span class="data-source auto" style="margin-top: 4px;">Bundled ship data · user-correctable</span>
+      </div>
+
+      <!-- Today's Schedule -->
+      <div class="schedule">
+        <h3>Today's Schedule</h3>
+
+        <div class="timeline-item">
+          <div class="timeline-time">
+            <div class="hour">7:30</div>
+            <div class="ampm">AM</div>
+          </div>
+          <div class="timeline-dot-col">
+            <div class="timeline-dot auto"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="event-name">Ship Docks at Cozumel</div>
+            <div class="event-detail">Puerta Maya Cruise Terminal</div>
+            <span class="event-tag tag-auto">Auto from itinerary</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">
+            <div class="hour">9:00</div>
+            <div class="ampm">AM</div>
+          </div>
+          <div class="timeline-dot-col">
+            <div class="timeline-dot user"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="event-name">Snorkeling Excursion</div>
+            <div class="event-detail">Meeting point: Deck 1 gangway</div>
+            <span class="event-tag tag-user">You added this</span>
+            <span class="event-tag tag-reminder">🔔 30 min before</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">
+            <div class="hour">1:00</div>
+            <div class="ampm">PM</div>
+          </div>
+          <div class="timeline-dot-col">
+            <div class="timeline-dot user"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="event-name">Lunch at Cozumel</div>
+            <div class="event-detail">La Choza (recommended in Explore)</div>
+            <span class="event-tag tag-user">You added this</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">
+            <div class="hour">3:00</div>
+            <div class="ampm">PM</div>
+          </div>
+          <div class="timeline-dot-col">
+            <div class="timeline-dot auto"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="event-name" style="color: #ff6b6b;">⚠️ All Aboard</div>
+            <div class="event-detail">Must be back on ship</div>
+            <span class="event-tag tag-auto">Auto from itinerary</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">
+            <div class="hour">6:00</div>
+            <div class="ampm">PM</div>
+          </div>
+          <div class="timeline-dot-col">
+            <div class="timeline-dot user"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="event-name">Main Dining Room</div>
+            <div class="event-detail">Table 42 · Formal Night</div>
+            <span class="event-tag tag-user">You added this</span>
+            <span class="event-tag tag-reminder">🔔 15 min before</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">
+            <div class="hour">8:30</div>
+            <div class="ampm">PM</div>
+          </div>
+          <div class="timeline-dot-col">
+            <div class="timeline-dot user"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="event-name">Comedy Show</div>
+            <div class="event-detail">Royal Theater · Deck 4</div>
+            <span class="event-tag tag-user">You added this</span>
+            <span class="event-tag tag-reminder">🔔 15 min before</span>
+          </div>
+        </div>
+
+        <div style="height: 80px;"></div>
+      </div>
+    </div>
+
+    <!-- SPEND TAB -->
+    <div class="screen" id="spendScreen">
+      <!-- Hero -->
+      <div class="spend-hero">
+        <div class="label">Total Spent</div>
+        <div class="amount">$1,247</div>
+        <div class="budget-line">of <strong>$4,200</strong> budget from Plan</div>
+        <div class="daily-avg">$415/day avg · Day 3 of 7</div>
+        <span class="data-source" style="background: rgba(168,168,255,0.1); color: #a8a8ff; margin-top: 8px;">Budget seeded from Plan calculator</span>
+      </div>
+
+      <!-- Budget Bar -->
+      <div class="budget-bar-container">
+        <div class="budget-bar-label">
+          <span>$1,247 spent</span>
+          <span>$4,200 budget</span>
+        </div>
+        <div class="budget-bar">
+          <div class="budget-bar-fill fill-green" style="width: 30%;"></div>
+        </div>
+        <div style="font-size: 11px; color: #4ecdc4; margin-top: 4px;">On track — projected total: $2,905</div>
+      </div>
+
+      <!-- Quick Add -->
+      <div class="quick-add">
+        <h3>Quick Add</h3>
+        <div class="quick-grid">
+          <div class="quick-btn" onclick="showAddChargeModal('Cocktail', 15)">
+            <div class="item-icon">🍹</div>
+            <div class="item-name">Cocktail</div>
+            <div class="item-price">$15</div>
+            <div class="item-note">Royal Caribbean default</div>
+          </div>
+          <div class="quick-btn" onclick="showAddChargeModal('Specialty Dinner', 45)">
+            <div class="item-icon">🍽️</div>
+            <div class="item-name">Specialty Dinner</div>
+            <div class="item-price">$45</div>
+            <div class="item-note">per person</div>
+          </div>
+          <div class="quick-btn" onclick="showAddChargeModal('Spa Treatment', 80)">
+            <div class="item-icon">💆</div>
+            <div class="item-name">Spa Treatment</div>
+            <div class="item-price">$80</div>
+            <div class="item-note">avg. 50-min session</div>
+          </div>
+          <div class="quick-btn" onclick="showAddChargeModal('WiFi Day Pass', 18)">
+            <div class="item-icon">📶</div>
+            <div class="item-name">WiFi Day Pass</div>
+            <div class="item-price">$18</div>
+            <div class="item-note">surf + stream</div>
+          </div>
+          <div class="quick-btn" onclick="showAddChargeModal('Shore Excursion', 65)">
+            <div class="item-icon">🏝️</div>
+            <div class="item-name">Shore Excursion</div>
+            <div class="item-price">$65</div>
+            <div class="item-note">avg. half-day</div>
+          </div>
+          <div class="quick-btn" onclick="showAddChargeModal('Custom', '')">
+            <div class="item-icon">✏️</div>
+            <div class="item-name">Custom Entry</div>
+            <div class="item-price">$___</div>
+            <div class="item-note">any charge</div>
+          </div>
+        </div>
+        <span class="data-source" style="margin-top: 8px;">One-tap logging · prices are cruise-line defaults you can edit</span>
+      </div>
+
+      <!-- Category Breakdown -->
+      <div class="categories">
+        <h3>By Category</h3>
+        <div class="cat-row">
+          <div class="cat-icon">🍹</div>
+          <div class="cat-info">
+            <div class="cat-name">Drinks</div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width: 42%;"></div></div>
+          </div>
+          <div>
+            <div class="cat-amount">$340</div>
+            <div class="cat-budget">of $800</div>
+          </div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-icon">🍽️</div>
+          <div class="cat-info">
+            <div class="cat-name">Dining</div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width: 35%;"></div></div>
+          </div>
+          <div>
+            <div class="cat-amount">$245</div>
+            <div class="cat-budget">of $700</div>
+          </div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-icon">🏝️</div>
+          <div class="cat-info">
+            <div class="cat-name">Excursions</div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width: 50%;"></div></div>
+          </div>
+          <div>
+            <div class="cat-amount">$390</div>
+            <div class="cat-budget">of $780</div>
+          </div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-icon">💆</div>
+          <div class="cat-info">
+            <div class="cat-name">Spa & Wellness</div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width: 22%;"></div></div>
+          </div>
+          <div>
+            <div class="cat-amount">$160</div>
+            <div class="cat-budget">of $720</div>
+          </div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-icon">📶</div>
+          <div class="cat-info">
+            <div class="cat-name">WiFi & Other</div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width: 28%;"></div></div>
+          </div>
+          <div>
+            <div class="cat-amount">$112</div>
+            <div class="cat-budget">of $400</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Charges -->
+      <div class="recent">
+        <h3>Recent Charges</h3>
+        <div class="charge-row">
+          <div class="charge-info">
+            <div class="charge-name">Snorkeling Excursion</div>
+            <div class="charge-time">Today · 9:00 AM</div>
+          </div>
+          <div class="charge-amount">-$65</div>
+        </div>
+        <div class="charge-row">
+          <div class="charge-info">
+            <div class="charge-name">2x Cocktails at Pool Bar</div>
+            <div class="charge-time">Yesterday · 3:15 PM</div>
+          </div>
+          <div class="charge-amount">-$30</div>
+        </div>
+        <div class="charge-row">
+          <div class="charge-info">
+            <div class="charge-name">Izumi Sushi Dinner</div>
+            <div class="charge-time">Yesterday · 7:30 PM</div>
+          </div>
+          <div class="charge-amount">-$45</div>
+        </div>
+        <div class="charge-row">
+          <div class="charge-info">
+            <div class="charge-name">Vitality Spa Massage</div>
+            <div class="charge-time">Day 1 · 2:00 PM</div>
+          </div>
+          <div class="charge-amount">-$80</div>
+        </div>
+      </div>
+
+      <div style="height: 80px;"></div>
+    </div>
+  </div>
+
+  <!-- FAB -->
+  <button class="fab" id="fab" onclick="showModal()">+</button>
+
+  <!-- Add Event Modal -->
+  <div class="modal-overlay" id="addEventModal">
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <div class="modal-title">Add Event</div>
+      <div class="modal-field">
+        <label>Event Name</label>
+        <input type="text" placeholder="e.g., Dinner at Chops Grille">
+      </div>
+      <div class="modal-field">
+        <label>Time</label>
+        <input type="time" value="18:00">
+      </div>
+      <div class="modal-field">
+        <label>Location (optional)</label>
+        <input type="text" placeholder="e.g., Deck 5, Royal Theater">
+      </div>
+      <div class="modal-field">
+        <label>Remind Me</label>
+        <select>
+          <option>No reminder</option>
+          <option selected>15 minutes before</option>
+          <option>30 minutes before</option>
+          <option>1 hour before</option>
+        </select>
+      </div>
+      <button class="modal-btn" onclick="hideModal('addEventModal')">Add to Today</button>
+    </div>
+  </div>
+
+  <!-- Add Charge Modal -->
+  <div class="modal-overlay" id="addChargeModal">
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <div class="modal-title" id="chargeModalTitle">Log Charge</div>
+      <div class="modal-field">
+        <label>Amount</label>
+        <input type="number" id="chargeAmount" placeholder="$0.00" style="font-size: 24px; font-weight: 700; text-align: center;">
+      </div>
+      <div class="modal-field">
+        <label>Category</label>
+        <select>
+          <option>Drinks</option>
+          <option>Dining</option>
+          <option>Excursions</option>
+          <option>Spa & Wellness</option>
+          <option>WiFi & Internet</option>
+          <option>Casino</option>
+          <option>Shopping</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="modal-field">
+        <label>Note (optional)</label>
+        <input type="text" placeholder="e.g., 2 margaritas at pool bar">
+      </div>
+      <div style="display: flex; gap: 8px; margin-top: 4px;">
+        <div style="flex:1; text-align: center; padding: 8px; background: #252a3a; border-radius: 8px; font-size: 11px; color: #888;">
+          <div style="font-weight: 600; color: #ccc;">Split?</div>
+          Per person in group
+        </div>
+        <div style="flex:1; text-align: center; padding: 8px; background: #252a3a; border-radius: 8px; font-size: 11px; color: #888;">
+          <div style="font-weight: 600; color: #ccc;">Who paid?</div>
+          Links to Coordinate
+        </div>
+      </div>
+      <button class="modal-btn" onclick="hideModal('addChargeModal')">Log Charge</button>
+    </div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="bottom-nav">
+    <div class="nav-item">
+      <div class="icon">🏠</div>
+      <span>Home</span>
+    </div>
+    <div class="nav-item">
+      <div class="icon">💰</div>
+      <span>Plan</span>
+    </div>
+    <div class="nav-item">
+      <div class="icon">🧭</div>
+      <span>Explore</span>
+    </div>
+    <div class="nav-item active">
+      <div class="icon">📋</div>
+      <span>MyDay</span>
+    </div>
+    <div class="nav-item">
+      <div class="icon">•••</div>
+      <span>More</span>
+    </div>
+  </div>
+  <div class="home-indicator"></div>
+</div>
+
+<script>
+  function switchTab(tab) {
+    document.getElementById('todayTab').classList.toggle('active', tab === 'today');
+    document.getElementById('spendTab').classList.toggle('active', tab === 'spend');
+    document.getElementById('todayScreen').classList.toggle('active', tab === 'today');
+    document.getElementById('spendScreen').classList.toggle('active', tab === 'spend');
+    document.getElementById('preCruiseScreen').style.display = 'none';
+
+    // Update FAB behavior
+    document.getElementById('fab').onclick = tab === 'today'
+      ? () => showModal()
+      : () => showAddChargeModal('Custom', '');
+    document.getElementById('fab').textContent = '+';
+  }
+
+  function showState(state) {
+    document.getElementById('statePreBtn').classList.toggle('active', state === 'pre');
+    document.getElementById('stateDuringBtn').classList.toggle('active', state === 'during');
+
+    if (state === 'pre') {
+      document.getElementById('todayScreen').classList.remove('active');
+      document.getElementById('spendScreen').classList.remove('active');
+      document.getElementById('preCruiseScreen').style.display = 'block';
+      document.getElementById('fab').style.display = 'none';
+    } else {
+      document.getElementById('preCruiseScreen').style.display = 'none';
+      switchTab(document.getElementById('todayTab').classList.contains('active') ? 'today' : 'spend');
+      document.getElementById('fab').style.display = 'flex';
+    }
+  }
+
+  function showModal() {
+    document.getElementById('addEventModal').classList.add('show');
+  }
+
+  function showAddChargeModal(name, price) {
+    document.getElementById('chargeModalTitle').textContent = name === 'Custom' ? 'Log Custom Charge' : `Log: ${name}`;
+    document.getElementById('chargeAmount').value = price;
+    document.getElementById('addChargeModal').classList.add('show');
+  }
+
+  function hideModal(id) {
+    document.getElementById(id).classList.remove('show');
+  }
+
+  function togglePanel() {
+    document.getElementById('sidePanel').classList.toggle('open');
+  }
+
+  // Close modals on overlay click
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.classList.remove('show');
+    });
+  });
+</script>
+
+</body>
+</html>

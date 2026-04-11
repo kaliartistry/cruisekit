@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "cruise planning tool",
     "cruise cost calculator",
     "independent cruise toolkit",
-    "shipsafe sdk",
+    "cruise toolkit technology",
   ],
 };
 
@@ -163,21 +163,13 @@ export default function AboutPage() {
             </p>
 
             <h2 className="text-2xl font-bold text-navy pt-4">
-              ShipSafe SDK
+              Our Technology
             </h2>
             <p>
-              CruiseKit is powered by{" "}
-              <a
-                href="https://shipsafesdk.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
-              >
-                ShipSafe SDK
-              </a>
-              , our B2B platform that provides cruise data infrastructure to
-              travel apps and agencies. If you&rsquo;re building something in
-              the cruise space, check it out.
+              CruiseKit is built on proprietary cruise data infrastructure
+              and patent-pending safety technology. Every tool on the platform
+              is designed with accuracy, offline reliability, and real-world
+              cruising conditions in mind.
             </p>
           </div>
         </section>
