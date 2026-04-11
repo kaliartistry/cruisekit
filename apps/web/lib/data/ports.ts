@@ -147,7 +147,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(242) 322-1181",
     },
     region: "bahamas",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Beaches_in_Nassau%2C_Bahamas.jpg",
+    imageUrl: "/images/ports/nassau.jpg"
   },
 
   /* ================================================================ */
@@ -296,7 +296,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Curacao",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/87/Maho_Beach_Saint_Martin.jpg",
+    imageUrl: "/images/ports/st-maarten.jpg"
   },
 
   /* ================================================================ */
@@ -346,7 +346,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Tegucigalpa. Emergency: (504) 2236-9320",
     },
     region: "western",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/45/West_Bay_Beach_-Roatan_-Honduras-23May2009-g.jpg",
+    imageUrl: "/images/ports/roatan.jpg"
   },
 
   /* ================================================================ */
@@ -396,7 +396,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Curacao: (599-9) 461-3066",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Divi_divi_tree_Eagle_Beach.jpg",
+    imageUrl: "/images/ports/aruba.jpg"
   },
 
   /* ================================================================ */
@@ -445,7 +445,7 @@ export const PORTS: PortData[] = [
       hospital: "Centro Medico — San Juan",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/71/Modern_Skyline_of_San_Juan,_Puerto_Rico.jpg",
+    imageUrl: "/images/ports/san-juan.jpg"
   },
 
   /* ================================================================ */
@@ -592,7 +592,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(52) 872-4574 (Consular Agency — shared with Cozumel)",
     },
     region: "western",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/76/Costa_maya_beach.jpg",
+    imageUrl: "/images/ports/costa-maya.jpg"
   },
 
   /* ================================================================ */
@@ -642,7 +642,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(999) 942-5700 (US Consulate in Merida)",
     },
     region: "western",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/33/Yucat%C3%A1n,_Progreso_de_Castro,_its_beach_and_the_pier.jpg",
+    imageUrl: "/images/ports/progreso.jpg"
   },
 
   /* ================================================================ */
@@ -938,7 +938,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Dunn's_River_Falls_%26_Park.jpg",
+    imageUrl: "/images/ports/ocho-rios.jpg"
   },
 
   /* ================================================================ */
@@ -988,7 +988,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(599-9) 461-3066",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/59/Facades_of_Handelskade,_Willemstad,_Cura%C3%A7ao_-_February_2020.jpg",
+    imageUrl: "/images/ports/curacao.jpg"
   },
 
   /* ================================================================ */
@@ -1087,7 +1087,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Santo Domingo 809-567-7775",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Puerto_Plata_Dominican_Republic_Town_Architecture.jpg",
+    imageUrl: "/images/ports/puerto-plata.jpg"
   },
 
   /* ================================================================ */
@@ -1137,7 +1137,7 @@ export const PORTS: PortData[] = [
       usConsulate: "876-953-0620",
     },
     region: "western",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Doctors-Cave-Beach.jpg",
+    imageUrl: "/images/ports/montego-bay.jpg"
   },
 
   /* ================================================================ */
@@ -1186,7 +1186,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b6/BVI-tortola-cane-garden-bay.jpg",
+    imageUrl: "/images/ports/tortola.jpg"
   },
 
   /* ================================================================ */
@@ -1285,7 +1285,7 @@ export const PORTS: PortData[] = [
       usConsulate: "246-227-4000",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Brandon's_Beach.jpg",
+    imageUrl: "/images/ports/barbados.jpg"
   },
 
   /* ================================================================ */
@@ -1334,7 +1334,7 @@ export const PORTS: PortData[] = [
       usConsulate: "473-444-1173",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Grand_Anse_Beach_Grenada.jpg",
+    imageUrl: "/images/ports/grenada.jpg"
   },
 
   /* ================================================================ */
@@ -1383,7 +1383,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/af/St._John's_Antigua_Cruise_Port_1.jpg",
+    imageUrl: "/images/ports/antigua.jpg"
   },
 
   /* ================================================================ */
@@ -1432,7 +1432,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Barbados",
     },
     region: "eastern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-st-lucia-2.jpg",
+    imageUrl: "/images/ports/st-lucia.jpg"
   },
 
   /* ================================================================ */
@@ -1481,7 +1481,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Nearest in Curacao 599-9-461-3066",
     },
     region: "southern",
-    imageUrl: "https://www.carnival.com/-/media/Images/explore/destinations/ports/carnival-caribbean-port-bonaire-1.jpg",
+    imageUrl: "/images/ports/bonaire.jpg"
   },
 
   /* ================================================================ */
@@ -1576,7 +1576,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility, coordinates with ship medical staff",
     },
     region: "bahamas",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/25/Perfect_Day_Coco_Cay_PANO.jpg",
+    imageUrl: "/images/ports/great-stirrup-cay.jpg"
   },
 
   /* ================================================================ */
@@ -1619,7 +1619,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility planned",
     },
     region: "bahamas",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/54/Gold_Rock_Beach_Grand_Bahama_Island.jpg",
+    imageUrl: "/images/ports/celebration-key.jpg"
   },
 
   /* ================================================================ */
@@ -1668,7 +1668,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Kingston 876-702-6000",
     },
     region: "western",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Port_Royal_in_Tranquility.jpg/1280px-Port_Royal_in_Tranquility.jpg",
+    imageUrl: "/images/ports/port-royal.jpg"
   },
 
   /* ================================================================ */
@@ -1718,7 +1718,7 @@ export const PORTS: PortData[] = [
       hospital: "Jackson Memorial Hospital — 1611 NW 12th Ave",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Miami_Skyline_Brickell.jpg/1280px-Miami_Skyline_Brickell.jpg",
+    imageUrl: "/images/ports/miami.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -1764,7 +1764,7 @@ export const PORTS: PortData[] = [
       hospital: "Broward Health Medical Center — 1600 S Andrews Ave",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Fort_Lauderdale_skyline_2024.jpg/1280px-Fort_Lauderdale_skyline_2024.jpg",
+    imageUrl: "/images/ports/fort-lauderdale.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -1810,7 +1810,7 @@ export const PORTS: PortData[] = [
       hospital: "Health First Cape Canaveral Hospital",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Port_Canaveral_Florida.jpg/1280px-Port_Canaveral_Florida.jpg",
+    imageUrl: "/images/ports/port-canaveral.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -1856,7 +1856,7 @@ export const PORTS: PortData[] = [
       hospital: "UTMB Health — 301 University Blvd",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Galveston_Texas_Pleasure_Pier.jpg/1280px-Galveston_Texas_Pleasure_Pier.jpg",
+    imageUrl: "/images/ports/galveston.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -1902,7 +1902,7 @@ export const PORTS: PortData[] = [
       hospital: "Tampa General Hospital — 1 Tampa General Circle",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Tampa_FL_skyline_from_Platt_St_bridge_-_2022.jpg/1280px-Tampa_FL_skyline_from_Platt_St_bridge_-_2022.jpg",
+    imageUrl: "/images/ports/tampa.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -1948,7 +1948,7 @@ export const PORTS: PortData[] = [
       hospital: "University Medical Center — 2000 Canal St",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/New_Orleans_Skyline_from_Crescent_Park.jpg/1280px-New_Orleans_Skyline_from_Crescent_Park.jpg",
+    imageUrl: "/images/ports/new-orleans.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -1994,7 +1994,7 @@ export const PORTS: PortData[] = [
       hospital: "Johns Hopkins Hospital — 1800 Orleans St",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Baltimore_Inner_Harbor_Panorama.jpg/1280px-Baltimore_Inner_Harbor_Panorama.jpg",
+    imageUrl: "/images/ports/baltimore.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2040,7 +2040,7 @@ export const PORTS: PortData[] = [
       hospital: "Sentara Norfolk General — 600 Gresham Dr",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Norfolk_Skyline_Panorama.jpg/1280px-Norfolk_Skyline_Panorama.jpg",
+    imageUrl: "/images/ports/norfolk.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2086,7 +2086,7 @@ export const PORTS: PortData[] = [
       hospital: "Mount Sinai West — 1000 10th Ave",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/1280px-New_york_times_square-terabass.jpg",
+    imageUrl: "/images/ports/manhattan.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2132,7 +2132,7 @@ export const PORTS: PortData[] = [
       hospital: "Virginia Mason Medical Center — 1100 9th Ave",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Seattle_Kerry_Park_Skyline.jpg/1280px-Seattle_Kerry_Park_Skyline.jpg",
+    imageUrl: "/images/ports/seattle.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2178,7 +2178,7 @@ export const PORTS: PortData[] = [
       hospital: "St. Paul's Hospital — 1081 Burrard St",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Vancouver_skyline_from_Stanley_Park.jpg/1280px-Vancouver_skyline_from_Stanley_Park.jpg",
+    imageUrl: "/images/ports/vancouver.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2224,7 +2224,7 @@ export const PORTS: PortData[] = [
       hospital: "Mobile Infirmary — 5 Mobile Infirmary Circle",
     },
     region: "homeport",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mobile_Alabama_skyline.jpg/1280px-Mobile_Alabama_skyline.jpg",
+    imageUrl: "/images/ports/mobile.jpg"
   },
 
   /* ================================================================ */
@@ -2276,7 +2276,7 @@ export const PORTS: PortData[] = [
       hospital: "Bartlett Regional Hospital — 3260 Hospital Dr",
     },
     region: "alaska",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Juneau_from_Douglas_Island.jpg/1280px-Juneau_from_Douglas_Island.jpg",
+    imageUrl: "/images/ports/juneau.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2323,7 +2323,7 @@ export const PORTS: PortData[] = [
       hospital: "PeaceHealth Ketchikan Medical Center",
     },
     region: "alaska",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ketchikan_-_Creek_Street.jpg/1280px-Ketchikan_-_Creek_Street.jpg",
+    imageUrl: "/images/ports/ketchikan.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2369,7 +2369,7 @@ export const PORTS: PortData[] = [
       hospital: "Dahl Memorial Clinic — 350 14th Ave",
     },
     region: "alaska",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Skagway_Alaska_Broadway.jpg/1280px-Skagway_Alaska_Broadway.jpg",
+    imageUrl: "/images/ports/skagway.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2415,7 +2415,7 @@ export const PORTS: PortData[] = [
       hospital: "SEARHC Mt. Edgecumbe Hospital",
     },
     region: "alaska",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sitka_Alaska.jpg/1280px-Sitka_Alaska.jpg",
+    imageUrl: "/images/ports/sitka.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2460,7 +2460,7 @@ export const PORTS: PortData[] = [
       hospital: "Hoonah Medical Clinic",
     },
     region: "alaska",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Icy_Strait_Point_Alaska.jpg/1280px-Icy_Strait_Point_Alaska.jpg",
+    imageUrl: "/images/ports/icy-strait-point.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2506,7 +2506,7 @@ export const PORTS: PortData[] = [
       hospital: "Royal Jubilee Hospital — 1952 Bay St",
     },
     region: "alaska",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/British_Columbia_Parliament_Buildings_-_Victoria.jpg/1280px-British_Columbia_Parliament_Buildings_-_Victoria.jpg",
+    imageUrl: "/images/ports/victoria.jpg"
   },
 
   /* ================================================================ */
@@ -2554,7 +2554,7 @@ export const PORTS: PortData[] = [
       hospital: "Bimini Medical Clinic — Alice Town",
     },
     region: "private-island",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bimini_Bahamas.jpg/1280px-Bimini_Bahamas.jpg",
+    imageUrl: "/images/ports/bimini.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2598,7 +2598,7 @@ export const PORTS: PortData[] = [
       hospital: "Ship's medical center — no hospital on island",
     },
     region: "private-island",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Half_Moon_Cay.jpg/1280px-Half_Moon_Cay.jpg",
+    imageUrl: "/images/ports/half-moon-cay.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2643,7 +2643,7 @@ export const PORTS: PortData[] = [
       hospital: "Ship's medical center",
     },
     region: "private-island",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ocean_Cay_Bahamas.jpg/1280px-Ocean_Cay_Bahamas.jpg",
+    imageUrl: "/images/ports/ocean-cay.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2687,7 +2687,7 @@ export const PORTS: PortData[] = [
       hospital: "Ship's medical center",
     },
     region: "private-island",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Princess_Cays_Bahamas.jpg/1280px-Princess_Cays_Bahamas.jpg",
+    imageUrl: "/images/ports/princess-cays.jpg"
   },
 
   /* ================================================================ */
@@ -2739,7 +2739,7 @@ export const PORTS: PortData[] = [
       usConsulate: "+599 9 461-3066",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Willemstad_Curacao.jpg/1280px-Willemstad_Curacao.jpg",
+    imageUrl: "/images/ports/curacao.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2786,7 +2786,7 @@ export const PORTS: PortData[] = [
       hospital: "Princess Margaret Hospital — Roseau",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Trafalgar_Falls_Dominica.jpg/1280px-Trafalgar_Falls_Dominica.jpg",
+    imageUrl: "/images/ports/dominica.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2831,7 +2831,7 @@ export const PORTS: PortData[] = [
       hospital: "Rand Memorial Hospital — East Atlantic Dr",
     },
     region: "bahamas",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Port_Lucaya_Marketplace.jpg/1280px-Port_Lucaya_Marketplace.jpg",
+    imageUrl: "/images/ports/freeport.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2877,7 +2877,7 @@ export const PORTS: PortData[] = [
       hospital: "CHU de Martinique — Fort-de-France",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Fort-de-France_Martinique.jpg/1280px-Fort-de-France_Martinique.jpg",
+    imageUrl: "/images/ports/martinique.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2922,7 +2922,7 @@ export const PORTS: PortData[] = [
       hospital: "CHU de Guadeloupe — Pointe-à-Pitre",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Guadeloupe_Pointe-a-Pitre.jpg/1280px-Guadeloupe_Pointe-a-Pitre.jpg",
+    imageUrl: "/images/ports/guadeloupe.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -2969,7 +2969,7 @@ export const PORTS: PortData[] = [
       hospital: "Joseph N. France General Hospital — Basseterre",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Basseterre_St_Kitts.jpg/1280px-Basseterre_St_Kitts.jpg",
+    imageUrl: "/images/ports/st-kitts.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3015,7 +3015,7 @@ export const PORTS: PortData[] = [
       hospital: "Juan F. Luis Hospital — Christiansted",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Frederiksted_St_Croix.jpg/1280px-Frederiksted_St_Croix.jpg",
+    imageUrl: "/images/ports/st-croix.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3059,7 +3059,7 @@ export const PORTS: PortData[] = [
       hospital: "Hospital Dr. Francisco Gonzalvo — La Romana",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Altos_de_Chavon_La_Romana.jpg/1280px-Altos_de_Chavon_La_Romana.jpg",
+    imageUrl: "/images/ports/la-romana.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3103,7 +3103,7 @@ export const PORTS: PortData[] = [
       hospital: "Hospital Municipal de Samaná",
     },
     region: "eastern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Samana_Dominican_Republic.jpg/1280px-Samana_Dominican_Republic.jpg",
+    imageUrl: "/images/ports/samana.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3148,7 +3148,7 @@ export const PORTS: PortData[] = [
       hospital: "Milton Cato Memorial Hospital — Kingstown",
     },
     region: "southern",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Kingstown_St_Vincent.jpg/1280px-Kingstown_St_Vincent.jpg",
+    imageUrl: "/images/ports/st-vincent.jpg"
   },
 
   /* ================================================================ */
@@ -3200,7 +3200,7 @@ export const PORTS: PortData[] = [
       usConsulate: "+34 93-280-2227",
     },
     region: "europe-med",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Sagrada_Familia_nave_roof_detail.jpg/1280px-Sagrada_Familia_nave_roof_detail.jpg",
+    imageUrl: "/images/ports/barcelona.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3245,7 +3245,7 @@ export const PORTS: PortData[] = [
       usConsulate: "US Embassy Rome: +39 06-46741",
     },
     region: "europe-med",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Colosseum_in_Rome-April_2007.jpg/1280px-Colosseum_in_Rome-April_2007.jpg",
+    imageUrl: "/images/ports/rome-civitavecchia.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3291,7 +3291,7 @@ export const PORTS: PortData[] = [
       hospital: "Mater Dei Hospital — Msida",
     },
     region: "europe-med",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Valletta_from_Upper_Barrakka_Gardens.jpg/1280px-Valletta_from_Upper_Barrakka_Gardens.jpg",
+    imageUrl: "/images/ports/valletta.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3336,7 +3336,7 @@ export const PORTS: PortData[] = [
       hospital: "Policlinico Universitario — Via Consolare Valeria",
     },
     region: "europe-med",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Messina_Duomo_Clock.jpg/1280px-Messina_Duomo_Clock.jpg",
+    imageUrl: "/images/ports/sicily-messina.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3381,7 +3381,7 @@ export const PORTS: PortData[] = [
       hospital: "Pyrgos General Hospital (25 min drive)",
     },
     region: "europe-med",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Olympia_Greece_Stadium.jpg/1280px-Olympia_Greece_Stadium.jpg",
+    imageUrl: "/images/ports/olympia-katakolon.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3428,7 +3428,7 @@ export const PORTS: PortData[] = [
       hospital: "Chania General Hospital — Mournies",
     },
     region: "europe-med",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Chania_-_Venetian_harbor.jpg/1280px-Chania_-_Venetian_harbor.jpg",
+    imageUrl: "/images/ports/chania-souda.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3474,7 +3474,7 @@ export const PORTS: PortData[] = [
       usConsulate: "US Embassy Paris: +33 1-43-12-22-22",
     },
     region: "europe-north",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Le_Havre_St_Joseph.jpg/1280px-Le_Havre_St_Joseph.jpg",
+    imageUrl: "/images/ports/le-havre.jpg"
   },
 
   /* ---------------------------------------------------------------- */
@@ -3521,7 +3521,7 @@ export const PORTS: PortData[] = [
       usConsulate: "+49 40-4117-1100",
     },
     region: "europe-north",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Elbphilharmonie_Hamburg_2016.jpg/1280px-Elbphilharmonie_Hamburg_2016.jpg",
+    imageUrl: "/images/ports/hamburg.jpg"
   },
 ];
 
