@@ -64,7 +64,7 @@ const FEATURES = [
   },
   {
     icon: Users,
-    title: "Crew Coordination",
+    title: "MyCrew",
     description:
       "See where your travel companions are on a real map during port days. Quick status broadcasts and group chat.",
     color: "text-blue-500",
@@ -96,7 +96,7 @@ const TABS = [
     ],
   },
   {
-    name: "Crew",
+    name: "MyCrew",
     icon: Users,
     features: [
       "GPS map with crew dots on port days",
@@ -112,7 +112,7 @@ export default function MyDayContent() {
   return (
     <div className="min-h-screen">
       {/* ── Hero ── */}
-      <section className="bg-gradient-to-b from-navy to-navy/95 px-4 pb-20 pt-24 text-center text-white">
+      <section className="bg-gradient-to-b from-navy to-[#0a1d38] px-4 pb-20 pt-24 text-center text-white">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -139,7 +139,7 @@ export default function MyDayContent() {
             className="mx-auto mt-5 max-w-2xl text-lg text-white/90"
           >
             MyDay is your daily command center during the cruise. Schedule,
-            spend tracking, and crew coordination — everything you need from
+            spend tracking, and MyCrew coordination — everything you need from
             embarkation to disembarkation.
           </motion.p>
 

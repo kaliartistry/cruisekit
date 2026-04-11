@@ -115,7 +115,7 @@ const TOOLS = [
   {
     name: "MyDay",
     description:
-      "Your daily cruise command center — schedule, spend tracking, and crew coordination all in one place.",
+      "Your daily cruise command center — schedule, spend tracking, and MyCrew coordination all in one place.",
     href: "/myday",
     icon: (
       <svg

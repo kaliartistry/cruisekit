@@ -41,7 +41,7 @@ const FAQS = [
   {
     question: "Is my data safe?",
     answer:
-      "Yes. CruiseKit uses Firebase Authentication (Google sign-in) for accounts and Firebase Firestore for saved trip data. We do not use tracking cookies, we do not sell your data, and we do not share personal information with third parties for marketing. The MyDay crew location feature processes your location entirely on your device — we never store or transmit your location to our servers.",
+      "Yes. CruiseKit uses Firebase Authentication (Google sign-in) for accounts and Firebase Firestore for saved trip data. We do not use tracking cookies, we do not sell your data, and we do not share personal information with third parties for marketing. The MyDay MyCrew location feature processes your location entirely on your device — we never store or transmit your location to our servers.",
   },
   {
     question: "How do I save cruises and trips?",

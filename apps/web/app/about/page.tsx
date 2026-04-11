@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <span>
                   <strong className="text-navy">MyDay</strong> &mdash;
                   Your daily cruise command center with schedule management,
-                  onboard spend tracking, and real-time crew coordination
+                  onboard spend tracking, and real-time MyCrew coordination
                   so everyone stays connected.
                 </span>
               </li>

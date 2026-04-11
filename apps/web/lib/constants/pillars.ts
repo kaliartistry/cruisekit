@@ -72,7 +72,7 @@ export const PILLARS: Record<PillarKey, Pillar> = {
     borderClass: "border-warning/30",
     tagline: "Your cruise day, handled",
     description:
-      "Daily schedule, onboard spend tracker, and real-time crew coordination — everything you need during your cruise.",
+      "Daily schedule, onboard spend tracker, and real-time MyCrew coordination — everything you need during your cruise.",
     href: "/myday",
   },
   optimize: {
