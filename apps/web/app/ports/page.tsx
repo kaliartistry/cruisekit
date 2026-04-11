@@ -23,10 +23,10 @@ type FilterKey = "all" | PortRegion;
 
 const FILTER_OPTIONS: { key: FilterKey; label: string }[] = [
   { key: "all", label: "All Ports" },
-  { key: "western", label: "Western Caribbean" },
-  { key: "eastern", label: "Eastern Caribbean" },
-  { key: "southern", label: "Southern Caribbean" },
-  { key: "bahamas", label: "Bahamas" },
+  ...Object.entries(REGION_LABELS).map(([key, label]) => ({
+    key: key as FilterKey,
+    label,
+  })),
 ];
 
 /* ------------------------------------------------------------------ */
