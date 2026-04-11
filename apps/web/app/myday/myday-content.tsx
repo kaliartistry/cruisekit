@@ -127,7 +127,7 @@ export default function MyDayContent() {
           <motion.h1
             custom={1}
             variants={fadeUp}
-            className="mx-auto mt-6 max-w-3xl text-4xl font-black leading-tight sm:text-5xl"
+            className="mx-auto mt-6 max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl"
           >
             Your cruise day,{" "}
             <span className="text-amber-400">handled.</span>
@@ -136,7 +136,7 @@ export default function MyDayContent() {
           <motion.p
             custom={2}
             variants={fadeUp}
-            className="mx-auto mt-5 max-w-2xl text-lg text-white/70"
+            className="mx-auto mt-5 max-w-2xl text-lg text-white/90"
           >
             MyDay is your daily command center during the cruise. Schedule,
             spend tracking, and crew coordination — everything you need from
