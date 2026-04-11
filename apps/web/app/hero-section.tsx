@@ -333,7 +333,7 @@ export default function HeroSection() {
           transition={{ delay: 0.5 }}
           className="flex items-center justify-center gap-4 sm:gap-6 mt-6 flex-wrap"
         >
-          {["8 cruise lines", "100% free", "No booking required"].map(
+          {["9 cruise lines", "100% free", "No booking required"].map(
             (text) => (
               <span
                 key={text}

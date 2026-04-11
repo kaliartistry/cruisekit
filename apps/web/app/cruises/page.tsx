@@ -4,7 +4,7 @@ import Footer from "@/components/layout/footer";
 import CruiseSearchPage from "./cruise-search";
 
 export const metadata: Metadata = {
-  title: "Cruise Deals — Compare Real Sailings from 8 Cruise Lines | CruiseKit",
+  title: "Cruise Deals — Compare Real Sailings from 9 Cruise Lines | CruiseKit",
   description:
     "Browse and filter real cruise deals from Royal Caribbean, Carnival, Norwegian, Celebrity, Princess, Holland America, MSC, Disney, and Virgin Voyages. Compare prices, ships, ports, and durations.",
 };

@@ -118,29 +118,24 @@ export default function MyDayContent() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div custom={0} variants={fadeUp}>
-            <span className="inline-block rounded-full bg-amber-500/20 px-4 py-1 text-sm font-semibold text-amber-400">
-              New Pillar
-            </span>
-          </motion.div>
-
           <motion.h1
-            custom={1}
+            custom={0}
             variants={fadeUp}
             className="mx-auto mt-6 max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl"
           >
-            Your cruise day,{" "}
-            <span className="text-amber-400">handled.</span>
+            Your phone says 2pm.{" "}
+            <span className="text-amber-400">The ship says 1pm.</span>
           </motion.h1>
 
           <motion.p
-            custom={2}
+            custom={1}
             variants={fadeUp}
             className="mx-auto mt-5 max-w-2xl text-lg text-white/90"
           >
-            MyDay is your daily command center during the cruise. Schedule,
-            spend tracking, and MyCrew coordination — everything you need from
-            embarkation to disembarkation.
+            Missed all-aboard times. Surprise charges on your folio.
+            No idea where your family is in port. MyDay fixes all of it
+            &mdash; ship time clocks, spend tracking, and MyCrew
+            coordination, even on unreliable cruise WiFi.
           </motion.p>
 
           {/* 3-tab preview */}
