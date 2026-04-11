@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils/cn";
 import HeartButton from "@/components/shared/heart-button";
+import { getBookingLink } from "@/lib/affiliate-config";
 
 /* ------------------------------------------------------------------ */
 /*  Constants & helpers                                                 */
@@ -407,25 +408,14 @@ function DealCard({ deal, includeTaxes }: { deal: RealDeal; includeTaxes?: boole
           <Button asChild size="sm" className="w-full">
             <Link href={calcHref}>See True Cost</Link>
           </Button>
-          {deal.bookingUrl ? (
-            <a
-              href={deal.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-coral bg-white px-4 py-2 text-xs font-bold text-coral transition-colors hover:bg-coral hover:text-white"
-            >
-              Book Now
-            </a>
-          ) : (
-            <a
-              href={getCruiseLineUrl(deal.cruiseLineId)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-coral bg-white px-4 py-2 text-xs font-bold text-coral transition-colors hover:bg-coral hover:text-white"
-            >
-              Book Now
-            </a>
-          )}
+          <a
+            href={getBookingLink(deal.bookingUrl, getCruiseLineUrl(deal.cruiseLineId))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg border-2 border-coral bg-white px-4 py-2 text-xs font-bold text-coral transition-colors hover:bg-coral hover:text-white"
+          >
+            Book Now
+          </a>
         </div>
       </div>
     </div>

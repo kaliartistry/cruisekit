@@ -21,7 +21,14 @@ export type CruiseRegion =
   | "northern-europe"
   | "asia"
   | "south-pacific"
-  | "transatlantic";
+  | "transatlantic"
+  | "bahamas"
+  | "bermuda"
+  | "hawaii"
+  | "mexican-riviera"
+  | "california-coast"
+  | "europe-north"
+  | "middle-east";
 
 /** Base cruise line information */
 export interface CruiseLine {
