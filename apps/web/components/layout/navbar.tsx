@@ -25,7 +25,7 @@ const NAV_LINKS = [
   { label: "Deals", href: "/cruises", icon: Anchor },
   { label: "Calculator", href: "/calculator", icon: Calculator },
   { label: "Ports", href: "/ports", icon: Map },
-  { label: "Track", href: "/track", icon: Navigation },
+  { label: "MyDay", href: "/myday", icon: Navigation },
   { label: "Loyalty", href: "/loyalty", icon: Star },
   { label: "Guides", href: "/guides", icon: BookOpen },
 ] as const;
