@@ -25,6 +25,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cruisekit.app"),
   title: {
     default: "CruiseKit — Everything You Need for Your Cruise",
     template: "%s | CruiseKit",
@@ -41,6 +42,18 @@ export const metadata: Metadata = {
     "cruise day planner",
     "cruisekit",
   ],
+  openGraph: {
+    siteName: "CruiseKit",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -55,6 +68,28 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <AuthProvider>{children}</AuthProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  name: "CruiseKit",
+                  url: "https://cruisekit.app",
+                  description:
+                    "The all-in-one cruise planning toolkit. Calculate true costs, plan port days, coordinate your group, and optimize your loyalty rewards.",
+                },
+                {
+                  "@type": "WebSite",
+                  name: "CruiseKit",
+                  url: "https://cruisekit.app",
+                },
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );

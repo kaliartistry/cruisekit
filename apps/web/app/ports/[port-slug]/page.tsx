@@ -132,6 +132,23 @@ export default async function PortDetailPage({ params }: Props) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristDestination",
+            name: `${port.name} Cruise Port`,
+            description: port.overview,
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: port.coordinates.lat,
+              longitude: port.coordinates.lng,
+            },
+            touristType: "Cruise passengers",
+          }),
+        }}
+      />
       <Navbar />
       <main className="flex-1">
         {/* ============================================================ */}
