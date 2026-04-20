@@ -10,6 +10,25 @@
 
 const AWIN_PUBLISHER_ID = "2850709";
 
+/**
+ * Viator affiliate account ID (direct programme, not via Awin).
+ *
+ * Awin rejected CruiseKit's Viator application ("reapply with traffic"),
+ * but the Viator Partner programme approved us directly. Direct is also
+ * strictly better economics: full commission (no Awin cut), faster
+ * payout cycle, single redirect instead of two.
+ *
+ * Live account: partners.viator.com, USD payout, account P00294955.
+ */
+const VIATOR_PARTNER_ID = "P00294955";
+
+/**
+ * `mcid` (marketing campaign ID) lets us split Viator reports by
+ * surface — port pages vs. blog vs. app webview, etc. Keep numeric,
+ * 5 digits by convention.
+ */
+const VIATOR_MCID_PORT_PAGE = "42383";
+
 /** Master switch — 3 programmes approved (Booking.com, SamBoat, Medjet) */
 const AWIN_ENABLED = true;
 
@@ -68,14 +87,47 @@ export function getBookingLink(
 }
 
 /**
- * Wraps a Viator or GetYourGuide excursion URL.
+ * Wraps an excursion URL with the right affiliate tracking.
+ *
+ * Viator goes direct (no Awin) — we hold a direct partner account
+ * P00294955, which pays more and ships in one redirect.
+ *   - If the URL already contains `pid=`, it was returned by the
+ *     Viator Partner API with attribution baked in — pass through.
+ *   - Otherwise, append `?pid=…&mcid=…&medium=link` ourselves.
+ *
+ * GetYourGuide continues to route through Awin (no direct programme
+ * yet — once they approve the Awin application, the `GYG_*` id on
+ * AWIN_ADVERTISERS lights up).
  */
 export function getExcursionLink(
   url: string,
   provider: "viator" | "getYourGuide",
 ): string {
-  const advertiserId = AWIN_ADVERTISERS[provider];
-  return wrapWithAwin(url, advertiserId);
+  if (provider === "viator") {
+    if (/[?&]pid=/.test(url)) return url;
+    const sep = url.includes("?") ? "&" : "?";
+    return `${url}${sep}pid=${VIATOR_PARTNER_ID}&mcid=${VIATOR_MCID_PORT_PAGE}&medium=link`;
+  }
+  return wrapWithAwin(url, AWIN_ADVERTISERS[provider]);
+}
+
+/**
+ * Builds a link to Viator's destination browse page — used when we
+ * have no specific products for a port but still want to send
+ * interested users to Viator's own search (earns attribution on
+ * whatever they book).
+ */
+export function getViatorDestinationLink(
+  destinationId: number,
+  portName: string,
+): string {
+  // Viator's URL format: /Destination-tours/d{ID}-ttd
+  const slug = portName
+    .replace(/[^a-zA-Z0-9\s]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+  const base = `https://www.viator.com/${slug}-tours/d${destinationId}-ttd`;
+  return `${base}?pid=${VIATOR_PARTNER_ID}&mcid=${VIATOR_MCID_PORT_PAGE}&medium=link`;
 }
 
 /**

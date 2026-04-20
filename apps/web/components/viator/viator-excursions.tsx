@@ -6,6 +6,11 @@ import { Star, Clock, ExternalLink, Loader2, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import type { ViatorProduct, ViatorSearchResponse } from "@/lib/types/viator";
+import {
+  getExcursionLink,
+  getViatorDestinationLink,
+} from "@/lib/affiliate-config";
+import { VIATOR_DESTINATIONS } from "@/lib/data/viator-destinations";
 
 interface ViatorExcursionsProps {
   portSlug: string;
@@ -48,8 +53,15 @@ export default function ViatorExcursions({
     };
   }, [portSlug]);
 
-  // Private islands / no products
-  if (!loading && !error && products.length === 0) {
+  // Private islands / no products: fall back to Viator's destination
+  // browse page so interested users still land on Viator with our
+  // affiliate attribution. Returns null only when Viator has no
+  // presence for this port at all (e.g. NCL private islands).
+  const destinationId = VIATOR_DESTINATIONS[portSlug];
+  const showBrowseFallback =
+    !loading && !error && products.length === 0 && destinationId != null;
+
+  if (!loading && !error && products.length === 0 && !showBrowseFallback) {
     return null;
   }
 
@@ -90,8 +102,31 @@ export default function ViatorExcursions({
         </div>
       )}
 
+      {/* Empty-state fallback — send users to Viator's destination page
+          with our pid attached so the click still earns attribution. */}
+      {showBrowseFallback && destinationId != null && (
+        <a
+          href={getViatorDestinationLink(destinationId, portName)}
+          target="_blank"
+          rel="noopener noreferrer noindex nofollow"
+          className="group flex items-center justify-between rounded-xl border border-teal/30 bg-teal/5 p-5 transition-colors hover:bg-teal/10"
+        >
+          <div>
+            <p className="font-semibold text-navy">
+              Browse tours for {portName} on Viator
+            </p>
+            <p className="mt-1 text-sm text-gray-600">
+              Shore excursions, day trips, and guided experiences.
+            </p>
+          </div>
+          <span className="flex items-center gap-1 text-sm font-semibold text-teal">
+            Browse <ExternalLink className="h-4 w-4" />
+          </span>
+        </a>
+      )}
+
       {/* Viator attribution (required by partner agreement) + disclosure */}
-      {!loading && products.length > 0 && (
+      {!loading && !error && (products.length > 0 || showBrowseFallback) && (
         <div className="mt-4">
           <AffiliateDisclosure variant="block" />
           <p className="mt-2 text-center text-[10px] text-gray-400">
@@ -108,9 +143,13 @@ export default function ViatorExcursions({
 /* ------------------------------------------------------------------ */
 
 function ViatorProductCard({ product }: { product: ViatorProduct }) {
+  // Viator Partner API URLs are usually pre-attributed, but some paths
+  // (manual curation, cached exports) may not be — getExcursionLink is
+  // a no-op when `pid=` is already present.
+  const href = getExcursionLink(product.productUrl, "viator");
   return (
     <a
-      href={product.productUrl}
+      href={href}
       target="_blank"
       rel="noopener noreferrer noindex nofollow"
       className={cn(
