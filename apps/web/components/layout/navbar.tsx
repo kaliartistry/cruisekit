@@ -16,14 +16,16 @@ import {
   BookOpen,
   Heart,
   LogOut,
+  Scale,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { useAuth } from "@/lib/firebase/auth";
 import SignInModal from "@/components/shared/sign-in-modal";
 
 const NAV_LINKS = [
-  { label: "Deals", href: "/cruises", icon: Anchor },
+  { label: "Compare", href: "/compare", icon: Scale },
   { label: "Calculator", href: "/calculator", icon: Calculator },
+  { label: "Deals", href: "/cruises", icon: Anchor },
   { label: "Ports", href: "/ports", icon: Map },
   { label: "MyDay", href: "/myday", icon: Navigation },
   { label: "Loyalty", href: "/loyalty", icon: Star },

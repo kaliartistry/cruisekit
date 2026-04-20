@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Ship } from "lucide-react";
+import AppHandoff from "@/components/shared/app-handoff";
 
 const FOOTER_COLUMNS = [
   {
@@ -20,6 +21,7 @@ const FOOTER_COLUMNS = [
       { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/faq" },
       { label: "Help Center", href: "/help" },
+      { label: "Methodology", href: "/methodology" },
     ],
   },
   {
@@ -27,6 +29,7 @@ const FOOTER_COLUMNS = [
     links: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
+      { label: "How we make money", href: "/how-we-make-money" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
     ],
@@ -45,6 +48,11 @@ const FOOTER_COLUMNS = [
 export default function Footer() {
   return (
     <footer className="bg-navy text-white">
+      {/* App handoff block — persistent footer promo */}
+      <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8 lg:pt-16">
+        <AppHandoff variant="footer" />
+      </div>
+
       {/* Main footer grid */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         {/* Brand row */}

@@ -22,6 +22,7 @@ const CATEGORY_COLORS: Record<GuideCategory, string> = {
   budget: "bg-coral/10 text-coral-dark",
   onboard: "bg-success-light text-success",
   "port-days": "bg-warning-light text-warning",
+  insurance: "bg-amber-100 text-amber-700",
 };
 
 const CATEGORY_LABELS: Record<GuideCategory, string> = {
@@ -30,6 +31,7 @@ const CATEGORY_LABELS: Record<GuideCategory, string> = {
   budget: "Budget",
   onboard: "Onboard",
   "port-days": "Port Days",
+  insurance: "Insurance",
 };
 
 /* ------------------------------------------------------------------ */

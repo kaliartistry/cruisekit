@@ -3,7 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import AffiliateLink from "@/components/shared/affiliate-link";
+import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import { Badge } from "@/components/ui/badge";
+import { getHotelLink, getMedEvacLink } from "@/lib/affiliate-config";
 import { cn } from "@/lib/utils/cn";
 import {
   GUIDES,
@@ -24,6 +27,7 @@ const CATEGORY_COLORS: Record<GuideCategory, string> = {
   budget: "bg-coral/10 text-coral-dark",
   onboard: "bg-success-light text-success",
   "port-days": "bg-warning-light text-warning",
+  insurance: "bg-amber-100 text-amber-700",
 };
 
 const CATEGORY_LABELS: Record<GuideCategory, string> = {
@@ -32,6 +36,7 @@ const CATEGORY_LABELS: Record<GuideCategory, string> = {
   budget: "Budget",
   onboard: "Onboard",
   "port-days": "Port Days",
+  insurance: "Insurance",
 };
 
 /* ------------------------------------------------------------------ */
@@ -328,6 +333,127 @@ function CtaBanners({ slug }: { slug: string }) {
             />
           </svg>
         </Link>
+      )}
+
+      {/* Medjet CTA — show on first-timer, packing, port-day, and insurance guides */}
+      {["first-time-cruise-guide", "cruise-packing-list", "port-day-tips", "cruise-insurance-explained"].includes(slug) && (
+        <div className="rounded-xl border-2 border-amber-200 bg-amber-50/50 p-6">
+          <div className="flex items-start gap-4">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-600">
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <p className="text-lg font-bold text-navy">
+                Don&apos;t skip medical evacuation coverage
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                Helicopter medical evacuations from a cruise ship can cost
+                $50,000 or more. Trip insurance typically covers the nearest
+                facility — Medjet covers transport to your home hospital.
+              </p>
+              <AffiliateLink
+                href={getMedEvacLink("https://www.medjetassist.com/")}
+                partner="medjet"
+                source={`guide-${slug}`}
+                className={cn(
+                  "mt-3 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold",
+                  "bg-amber-500 text-white hover:bg-amber-600 transition-colors"
+                )}
+              >
+                Learn about Medjet
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </AffiliateLink>
+              <AffiliateDisclosure className="mt-2" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Booking.com CTA — show on first-timer guide */}
+      {slug === "first-time-cruise-guide" && (
+        <div className="rounded-xl border-2 border-blue-200 bg-blue-50/50 p-6">
+          <div className="flex items-start gap-4">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <p className="text-lg font-bold text-navy">
+                Fly in the night before — always
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                Missing embarkation because of a flight delay is the #1 cause
+                of a ruined first cruise. Book a hotel near the port the night
+                before sailing.
+              </p>
+              <AffiliateLink
+                href={getHotelLink("https://www.booking.com/")}
+                partner="booking.com"
+                source={`guide-${slug}`}
+                className={cn(
+                  "mt-3 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold",
+                  "bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                )}
+              >
+                Search pre-cruise hotels
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </AffiliateLink>
+              <AffiliateDisclosure className="mt-2" />
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

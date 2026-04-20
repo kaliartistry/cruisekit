@@ -1114,6 +1114,16 @@ export default function CalculatorForm({
                 setDirection(-1);
                 setStep(1);
               }}
+              onRemoveDrinkPackage={() => {
+                setDrinkPackageOn(false);
+                setDrinkTier("");
+              }}
+              onRemoveWifi={() => {
+                setWifiOn(false);
+                setWifiTier("");
+              }}
+              onRemoveSpecialtyDining={() => setSpecialtyMeals(0)}
+              onRemoveExcursions={() => setExcursionBudget(0)}
             />
           </motion.div>
         )}

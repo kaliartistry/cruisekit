@@ -22,14 +22,20 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import AffiliateLink from "@/components/shared/affiliate-link";
+import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import ViatorExcursions from "@/components/viator/viator-excursions";
+import PortTodayHeader from "./port-today-header";
+import PortSectionNav from "./port-section-nav";
 import { hasViatorProducts } from "@/lib/data/viator-destinations";
+import { getHotelLink, getBoatRentalLink, getMedEvacLink } from "@/lib/affiliate-config";
 import { cn } from "@/lib/utils/cn";
 import {
   PORTS,
   getPortBySlug,
   getAllPortSlugs,
   REGION_LABELS,
+  type PortRegion,
 } from "@/lib/data/ports";
 
 /* ------------------------------------------------------------------ */
@@ -263,6 +269,16 @@ export default async function PortDetailPage({ params }: Props) {
         </section>
 
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          {/* Pinned "Today at [port]" header — live port time + TZ delta */}
+          <PortTodayHeader
+            portName={port.name}
+            timezone={port.timezone}
+            timeZoneAlert={port.timeZoneAlert}
+          />
+
+          {/* Section tabs — IntersectionObserver-powered in-page nav */}
+          <PortSectionNav />
+
           {/* ============================================================ */}
           {/*  3. Time Zone Alert                                          */}
           {/* ============================================================ */}
@@ -283,19 +299,46 @@ export default async function PortDetailPage({ params }: Props) {
           {/* ============================================================ */}
           {/*  4. Overview                                                  */}
           {/* ============================================================ */}
-          <section className="mb-12">
+          <section id="overview" className="mb-12 scroll-mt-[160px]">
             <h2 className="mb-4 text-2xl font-bold tracking-tight text-navy">
               Overview
             </h2>
             <p className="max-w-3xl text-base leading-relaxed text-gray-600">
               {port.overview}
             </p>
+
+            {/* All-aboard math — three plain sentences. No GPS, no ETA —
+                just the logic every cruiser needs to do in their head. */}
+            <div className="mt-6 max-w-3xl rounded-xl border-l-4 border-teal bg-teal/5 px-5 py-4">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-teal">
+                All-aboard math
+              </p>
+              <p className="text-sm leading-relaxed text-navy">
+                All-aboard in {port.name} is typically 30&ndash;60 minutes
+                before your ship departs &mdash; confirm the exact time on the
+                day&rsquo;s ship newsletter.{" "}
+                {port.isTenderPort && (
+                  <>
+                    This is a{" "}
+                    <span className="font-semibold text-coral">tender port</span>,
+                    so add ~20 minutes for the tender queue on a full ship and
+                    head back earlier than you think.{" "}
+                  </>
+                )}
+                {port.timeZoneAlert && (
+                  <>
+                    <span className="font-semibold">Time-zone note:</span>{" "}
+                    {port.timeZoneAlert}
+                  </>
+                )}
+              </p>
+            </div>
           </section>
 
           {/* ============================================================ */}
           {/*  5. Top Excursions                                            */}
           {/* ============================================================ */}
-          <section className="mb-12">
+          <section id="excursions" className="mb-12 scroll-mt-[160px]">
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-navy">
               Top Excursions
             </h2>
@@ -331,6 +374,75 @@ export default async function PortDetailPage({ params }: Props) {
           )}
 
           {/* ============================================================ */}
+          {/*  5c. Affiliate CTAs — Hotels & Boat Rentals                   */}
+          {/* ============================================================ */}
+          <section className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {/* Booking.com Hotels */}
+            <div className="rounded-xl border border-gray-200 bg-white p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                  <MapPin className="h-5 w-5" />
+                </div>
+                <h3 className="font-semibold text-navy">
+                  Hotels Near {port.name}
+                </h3>
+              </div>
+              <p className="text-sm text-gray-600 mb-4">
+                Flying in the night before? Find hotels near the cruise
+                terminal in {port.name}, {port.country}.
+              </p>
+              <AffiliateLink
+                href={getHotelLink(
+                  `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(port.name + ", " + port.country)}`
+                )}
+                partner="booking.com"
+                source={`port-${slug}`}
+                className={cn(
+                  "inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold",
+                  "bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                )}
+              >
+                Search Hotels
+                <ChevronRight className="h-4 w-4" />
+              </AffiliateLink>
+              <AffiliateDisclosure className="mt-2" />
+            </div>
+
+            {/* SamBoat — only for warm-water / boat-friendly regions */}
+            {(["western", "eastern", "southern", "bahamas", "europe-med"] as PortRegion[]).includes(port.region) && (
+              <div className="rounded-xl border border-gray-200 bg-white p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal/10 text-teal">
+                    <Anchor className="h-5 w-5" />
+                  </div>
+                  <h3 className="font-semibold text-navy">
+                    Rent a Boat in {port.name}
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-600 mb-4">
+                  Skip the cruise excursion desk — rent a private boat and
+                  explore {port.name} at your own pace.
+                </p>
+                <AffiliateLink
+                  href={getBoatRentalLink(
+                    `https://www.samboat.com/boat-rental/${encodeURIComponent(port.name.toLowerCase().replace(/\s+/g, "-"))}`
+                  )}
+                  partner="samboat"
+                  source={`port-${slug}`}
+                  className={cn(
+                    "inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold",
+                    "bg-teal text-white hover:bg-teal-dark transition-colors"
+                  )}
+                >
+                  Browse Boats
+                  <ChevronRight className="h-4 w-4" />
+                </AffiliateLink>
+                <AffiliateDisclosure className="mt-2" />
+              </div>
+            )}
+          </section>
+
+          {/* ============================================================ */}
           {/*  6. Free Things To Do                                         */}
           {/* ============================================================ */}
           <section className="mb-12">
@@ -362,7 +474,7 @@ export default async function PortDetailPage({ params }: Props) {
           {/* ============================================================ */}
           {/*  7. Restaurants Near Terminal                                  */}
           {/* ============================================================ */}
-          <section className="mb-12">
+          <section id="eat" className="mb-12 scroll-mt-[160px]">
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-navy flex items-center gap-2">
               <Utensils className="h-6 w-6 text-coral" />
               Restaurants Near Terminal
@@ -385,7 +497,7 @@ export default async function PortDetailPage({ params }: Props) {
           {/* ============================================================ */}
           {/*  8. Getting Around                                            */}
           {/* ============================================================ */}
-          <section className="mb-12">
+          <section id="get-around" className="mb-12 scroll-mt-[160px]">
             <h2 className="mb-4 text-2xl font-bold tracking-tight text-navy flex items-center gap-2">
               <Bus className="h-6 w-6 text-ocean" />
               Getting Around
@@ -400,7 +512,7 @@ export default async function PortDetailPage({ params }: Props) {
           {/* ============================================================ */}
           {/*  9. Emergency Info                                            */}
           {/* ============================================================ */}
-          <section className="mb-12">
+          <section id="emergency" className="mb-12 scroll-mt-[160px]">
             <h2 className="mb-4 text-2xl font-bold tracking-tight text-navy flex items-center gap-2">
               <Phone className="h-6 w-6 text-coral" />
               Emergency Information
@@ -432,6 +544,42 @@ export default async function PortDetailPage({ params }: Props) {
                   </p>
                 </div>
               )}
+            </div>
+          </section>
+
+          {/* ============================================================ */}
+          {/*  9b. Medjet — Medical Evacuation                              */}
+          {/* ============================================================ */}
+          <section className="mb-12">
+            <div className="rounded-xl border border-amber-200 bg-amber-50/50 p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
+                  <Shield className="h-5 w-5" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-navy">
+                    Medical Evacuation Coverage
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Helicopter evacuations from ports like {port.name} can cost
+                    $50,000+. Medjet covers medical transport to your home
+                    hospital — not just the nearest facility.
+                  </p>
+                  <AffiliateLink
+                    href={getMedEvacLink("https://www.medjetassist.com/")}
+                    partner="medjet"
+                    source={`port-${slug}`}
+                    className={cn(
+                      "mt-3 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold",
+                      "bg-amber-500 text-white hover:bg-amber-600 transition-colors"
+                    )}
+                  >
+                    Learn About Medjet
+                    <ChevronRight className="h-4 w-4" />
+                  </AffiliateLink>
+                  <AffiliateDisclosure className="mt-2" />
+                </div>
+              </div>
             </div>
           </section>
 

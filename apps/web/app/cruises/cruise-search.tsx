@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils/cn";
 import HeartButton from "@/components/shared/heart-button";
+import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import { getBookingLink } from "@/lib/affiliate-config";
 
 /* ------------------------------------------------------------------ */
@@ -387,35 +388,50 @@ function DealCard({ deal, includeTaxes }: { deal: RealDeal; includeTaxes?: boole
         </div>
       </div>
 
-      {/* Price + CTA */}
-      <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[180px]">
-        <div className="text-right">
-          <p className="text-[10px] uppercase tracking-wider text-gray-400">
-            Interior from
-          </p>
-          <p className="font-price text-xl font-bold text-coral">
-            ${includeTaxes
-              ? (deal.fromPrice + estimateTaxes(deal)).toLocaleString()
-              : deal.fromPrice.toLocaleString()}
-          </p>
-          <p className="text-[10px] text-gray-400">
-            per person {includeTaxes
-              ? TAXES_INCLUDED_LINES.has(deal.cruiseLineId) ? "(incl. taxes)" : "(est. incl. taxes)"
-              : TAXES_INCLUDED_LINES.has(deal.cruiseLineId) ? "(incl. taxes)" : "(excl. taxes)"}
-          </p>
-        </div>
-        <div className="flex flex-col gap-2 mt-3 w-full md:w-auto">
+      {/* Price + CTA — lead with the gap, not the sticker.
+          ~85% markup approximates the calculator's typical output for
+          Caribbean 7-night voyages w/ drink pkg + WiFi + gratuities +
+          taxes. It's a directional estimate on the card; the "See true
+          cost" button takes users to the real calculation. */}
+      <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[200px]">
+        {(() => {
+          const advertised = includeTaxes
+            ? deal.fromPrice + estimateTaxes(deal)
+            : deal.fromPrice;
+          const estReal = Math.round(advertised * 1.85);
+          return (
+            <div className="text-right">
+              <p className="text-[10px] uppercase tracking-wider text-gray-400">
+                Advertised from
+              </p>
+              <p className="font-price text-sm font-semibold text-navy line-through">
+                ${advertised.toLocaleString()}
+              </p>
+              <p className="text-[10px] uppercase tracking-wider text-coral mt-1.5">
+                Real ~
+              </p>
+              <p className="font-price text-2xl font-bold text-coral leading-none">
+                ${estReal.toLocaleString()}
+              </p>
+              <p className="text-[10px] text-gray-400 mt-1">
+                per person · estimate
+              </p>
+            </div>
+          );
+        })()}
+        <div className="flex flex-col gap-2 mt-2 w-full md:w-auto">
           <Button asChild size="sm" className="w-full">
-            <Link href={calcHref}>See True Cost</Link>
+            <Link href={calcHref}>See real cost</Link>
           </Button>
           <a
             href={getBookingLink(deal.bookingUrl, getCruiseLineUrl(deal.cruiseLineId))}
             target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-lg border-2 border-coral bg-white px-4 py-2 text-xs font-bold text-coral transition-colors hover:bg-coral hover:text-white"
+            rel="noopener noreferrer sponsored nofollow"
+            className="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-xs font-bold text-navy transition-colors hover:bg-gray-50"
           >
-            Book Now
+            Book with line
           </a>
+          <AffiliateDisclosure className="mt-1 text-right md:text-right" />
         </div>
       </div>
     </div>

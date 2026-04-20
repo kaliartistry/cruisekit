@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import HeroSection from "./hero-section";
+import HomeGuideTeaser from "./home-guide-teaser";
 import ContentSections from "./pillar-cards";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Navbar />
       <main className="flex-1">
         <HeroSection />
+        <HomeGuideTeaser />
         <ContentSections />
       </main>
       <Footer />
