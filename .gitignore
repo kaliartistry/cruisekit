@@ -42,3 +42,13 @@ firebase-debug.log
 
 # Misc
 *.tsbuildinfo
+
+# Design review working artifacts (local only, not for git)
+design-review-internal/
+design-review-originals/
+design-review-package/
+design-review-package-2-logos/
+CruiseKit-Design-Review.md
+CruiseKit-Screenshots.pdf
+cruisekit-design-review.zip
+myday-wireframe.html
