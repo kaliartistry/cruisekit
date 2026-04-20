@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0039)https://www.carnival.com/?vpwrtest=true -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local("Open Sans Regular"), local("OpenSans-Regular"),
+          url("https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0b.woff2")
+            format("woff2");
+        unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6,
+          u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193,
+          u+2212, u+2215, u+feff, u+fffd;
+      }
+
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local("Open Sans Bold"), local("OpenSans-Bold"),
+          url("https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2")
+            format("woff2");
+        unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6,
+          u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2191, u+2193,
+          u+2212, u+2215, u+feff, u+fffd;
+      }
+
+      @font-face {
+        font-family: "tempo";
+        src: local("Open Sans Bold"), local("OpenSans-Bold");
+        src: url(/failover1/failover1/tempostd-heavycondensed-webfont.eot);
+        src: url(/failover1/failover1/tempostd-heavycondensed-webfont.eot?#iefix)
+            format("embedded-opentype"),
+          url(/failover1/failover1/tempostd-heavycondensed-webfont.woff)
+            format("woff"),
+          url(/failover1/failover1/tempostd-heavycondensed-webfont.ttf)
+            format("truetype");
+        font-display: swap;
+      }
+    </style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="keywords" content="Carnival Cruise Line">
+    <meta name="description" content="Carnival cruise deals and cruise packages to the most popular destinations. Find great deals and specials on Caribbean, The Bahamas, Alaska, and Mexico cruises. ">
+    <meta name="author" content="Carnival Cruise Line">
+    <meta name="robots" content="follow">
+    <link id="CanonicalTagID" href="https://www.carnival.com/" rel="canonical">
+    <meta property="og:type" content="Website">
+    <meta property="og:site_name" content="Carnival Cruise Line">
+    <meta property="fb:app_id" content="1882621052012988">
+    <meta property="og:title" content="Cruises | Carnival Cruise Deals: Caribbean, The Bahamas, Alaska, and Mexico">
+    <meta property="og:url" content="https://www.carnival.com/">
+    <meta property="og:image" content="https://www.carnival.com/~/media/CCLUS/Images/Home/Header/carnival-cruise-linespng.png">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:description" content="Carnival cruise deals and cruise packages to the most popular destinations. Find great deals and specials on Caribbean, The Bahamas, Alaska, and Mexico cruises.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:video">
+    <meta property="og:video:width">
+    <meta property="og:video:height">
+    <meta property="og:video:type">
+    <title>
+      Cruises | Carnival Cruise Deals: Caribbean, Bahamas, Alaska, Mexico
+    </title>
+
+    <link rel="stylesheet" href="/failover1/failover1/simple2.css">
+  
+<iframe src="javascript:void(0)" title="" role="presentation" style="width: 0px; height: 0px; border: 0px; display: none;" src="/failover1/failover1/saved_resource.html"></iframe><script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"true","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-b9332dc1-4e81-4500-8d81-2aa236afcad1","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="YYZC5-9SJ3E-WBPEW-9KUY8-9QZWF",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"YYZC5-9SJ3E-WBPEW-9KUY8-9QZWF",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="s56pvsaxei3j2zij6evq-f-320525fb3-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"36","ak.cp":"560098","ak.ai":parseInt("283480",10),"ak.ol":"0","ak.cr":45,"ak.ipv":4,"ak.proto":"h2","ak.rid":"a72be4e5","ak.r":42171,"ak.a2":e,"ak.m":"x","ak.n":"essl","ak.bpcip":"151.124.250.0","ak.cport":29921,"ak.gh":"23.218.252.86","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1695150379","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==6kad0/SP8rCDPbpvfoMIH/rRREXqV/R3RWkOzbpD7MS3tQqTzRlLhC4clBJSFOOMeCTkeNUbrNZmVTvr5nbrT31VClBTNYz5YMgdDU1jxuWja0PlfGP7joxxTqtcQ9TeGK9T7ZUAgMmd8ajyQLXRDH2Qwda6RJwF9o4jjcUaH0soerE0N7XmY/wF5xYBvMhlErZk/pPN6LwSB8cJnb5iwlEtn+GOyPHcazMJZSiG6pBtWhrNFIZpJ0vU1+igsbejeXtVLRxDqLzYSA1cVxuGrJ4Jkf7TzVDAY7Tmo+5dx8f+SZsbVhiyryaE7QQstbys4gr/IQdgOGwxrx6qJTdJk9NNWvpY9ChfHOkk3s4KlbMsrVL0QYJ8sHG3WPs7IqbTztnfvlQ/DxlMdS3fAvEOS57brN3Zn0Y7wy02hcXoLHI=","ak.pv":"535","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>
+                    <script async="" src="/failover1/failover1/aksb.min.js.download"></script><script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"560098",ustr:"",originlat:"0",clientrtt:"45",ghostip:"23.218.252.86",ipv6:false,pct:"10",clientip:"151.124.250.200",requestid:"a72be4e5",region:"42171",protocol:"h2",blver:14,akM:"x",akN:"ae",akTT:"O",akTX:"1",akTI:"a72be4e5",ai:"283480",ra:"true",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    </head>
+
+  <body>
+    <main>
+      <img src="/failover1/failover1/carnival_logo.jpg" id="carnival-logo" alt="Carnival. Choose fun">
+
+      <div id="container">
+        <div id="left-content">
+          <h1>OH... UM, OOPS?</h1>
+          <p>
+            Looks like we’re experiencing a problem with carnival.com. Sorry! We’re already working on fixing it up — check back a little bit later, or give us a call now at 1-888-CARNIVAL.
+          </p>
+          <p>
+            To get your cruise fix in the meantime, visit us on social media… any of these will do:
+          </p>
+          <div id="social-media">
+            <a href="https://www.facebook.com/Carnival" aria-label="Carnival Cruise Line on Facebook. External site which may or may not meet accessibility guidelines."><img src="/failover1/failover1/facebook-icon.svg" alt="Visit Facebook"></a>
+            <a href="https://www.instagram.com/carnival/" aria-label="Carnival Cruise Line on Instagram. External site which may or may not meet accessibility guidelines."><img src="/failover1/failover1/instagram-icon.svg" alt="Visit Instagram"></a>
+            <a href="https://www.tiktok.com/@carnival" aria-label="Carnival Cruise Line on TikTok. External site which may or may not meet accessibility guidelines."><img src="/failover1/failover1/tik-tok-icon.svg" alt="Visit TikTok"></a>
+            <a href="https://x.com/carnivalcruise" aria-label="Carnival Cruise Line on X. External site which may or may not meet accessibility guidelines."><img src="/failover1/failover1/x-icon.svg" alt="Visit X"></a>
+            <a href="https://www.pinterest.com/carnivalcruise/" aria-label="Carnival Cruise Line on Pinterest. External site which may or may not meet accessibility guidelines."><img src="/failover1/failover1/pinterest-icon.svg" alt="Visit Pinterest"></a>
+            <a href="https://www.youtube.com/user/Carnival/" aria-label="Carnival Cruise Line on YouTube. External site which may or may not meet accessibility guidelines."><img src="/failover1/failover1/youtube-icon.svg" alt="Visit YouTube"></a>
+            <a href="https://www.threads.net/@carnival" aria-label="Carnival Cruise Line on Threads. External site which may or may not meet accessibility guidelines."><img src="/failover1/failover1/threads-icon.svg" alt="Visit Threads"></a>
+          </div>
+          <p>
+            Want to find out how people like you make the most of their
+            vacation? Visit
+            <a href="https://www.carnival.com/awaywego">Away We Go</a>, for
+            great cruise-inspired stories and more. (P.S. There’s stuff like
+            cruise tips and lots of pictures too!)
+          </p>
+        </div>
+        <div id="right-content">
+          <img src="/failover1/failover1/towel-dog.png" alt="">
+        </div>
+      </div>
+    </main>
+  
+
+</body></html>
