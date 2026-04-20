@@ -16,6 +16,7 @@ import {
   ArrowUp,
   Share2,
   Check,
+  Info,
 } from "lucide-react";
 import type { CostBreakdown as CostBreakdownType, CalculatorInputs } from "@cruise/shared/types";
 import { CRUISE_LINES } from "@cruise/shared/constants";
@@ -473,6 +474,22 @@ function SingleBreakdown({
           <p className="mt-1 text-xs text-gray-400">
             Based on {totalGuests} {totalGuests === 1 ? "guest" : "guests"},{" "}
             {inputs.duration} nights
+          </p>
+        </motion.div>
+
+        {/* Pricing-freshness disclaimer — matches the Flutter app's
+            _PricingDisclaimer in results_step.dart. Bump PRICING_AS_OF
+            when cruise_costs.json / fare_estimates.json are refreshed. */}
+        <motion.div
+          variants={itemVariants}
+          className="mt-5 flex items-start gap-2 rounded-lg border border-gray-200 bg-gray-50 p-3 text-xs text-gray-500"
+        >
+          <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+          <p className="leading-relaxed">
+            Base fares and add-on rates reflect published pricing as of{" "}
+            <span className="font-medium text-gray-700">April 2026</span> and are
+            for comparison only. Confirm the final price with the cruise line
+            before booking.
           </p>
         </motion.div>
 
