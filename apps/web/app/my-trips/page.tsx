@@ -6,6 +6,7 @@ import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { db } from "@/lib/firebase/config";
 import { useAuth } from "@/lib/firebase/auth";
 import SignInModal from "@/components/shared/sign-in-modal";
+import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -60,13 +61,16 @@ function SavedDealCard({
       <div className="flex flex-1 flex-col sm:flex-row">
         <div className="flex-1 p-4 sm:p-5">
           <div className="flex items-start justify-between gap-3">
-            <div>
-              <h3 className="font-bold text-navy group-hover:text-teal transition-colors">
-                {deal.itineraryTitle}
-              </h3>
-              <p className="mt-1 text-xs text-gray-500">
-                {deal.cruiseLine || deal.cruiseLineId} &middot; {deal.shipName}
-              </p>
+            <div className="flex items-start gap-3 min-w-0">
+              <CruiseLineLogo cruiseLineId={deal.cruiseLineId} size="md" />
+              <div className="min-w-0">
+                <h3 className="font-bold text-navy group-hover:text-teal transition-colors truncate">
+                  {deal.itineraryTitle}
+                </h3>
+                <p className="mt-1 text-xs text-gray-500 truncate">
+                  {deal.cruiseLine || deal.cruiseLineId} &middot; {deal.shipName}
+                </p>
+              </div>
             </div>
             <div className="text-right shrink-0">
               <p className="text-[10px] uppercase tracking-wider text-gray-400">
