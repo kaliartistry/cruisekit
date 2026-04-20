@@ -93,7 +93,7 @@ export default function AffiliateLink({
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer sponsored nofollow"
       onClick={handleClick}
       className={className}
     >

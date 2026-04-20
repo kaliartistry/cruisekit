@@ -10,34 +10,34 @@
 
 const AWIN_PUBLISHER_ID = "2850709";
 
-/** Master switch — flip to true once GoToSea or any programme is approved */
-const AWIN_ENABLED = false;
+/** Master switch — 3 programmes approved (Booking.com, SamBoat, Medjet) */
+const AWIN_ENABLED = true;
 
 /**
  * Map of programme purpose → Awin advertiser ID.
- * Add IDs here as programmes get approved.
+ * Only populate IDs for approved programmes.
  */
 const AWIN_ADVERTISERS = {
   /** Primary cruise booking OTA */
-  cruiseBooking: "", // GoToSea: "57795"
+  cruiseBooking: "", // GoToSea: pending
   /** Shore excursions — Viator */
-  viator: "", // "11018"
+  viator: "", // rejected — reapply with traffic
   /** Shore excursions — GetYourGuide */
-  getYourGuide: "", // "18925"
+  getYourGuide: "", // pending
   /** Travel insurance */
-  travelInsurance: "", // Generali: "49127"
-  /** Pre/post cruise hotels */
-  hotels: "", // Booking.com: "6776"
+  travelInsurance: "", // Generali: pending
+  /** Pre/post cruise hotels — APPROVED */
+  hotels: "6776",
   /** Cruise port parking */
-  parking: "", // One Stop Parking: "54341"
+  parking: "", // One Stop Parking: pending
   /** Theme park tickets */
-  themePark: "", // Undercover Tourist: "96367"
-  /** Medical evacuation */
-  medicalEvac: "", // Medjet: "20001"
-  /** Boat rentals */
-  boatRental: "", // SamBoat: "32679"
+  themePark: "", // Undercover Tourist: pending
+  /** Medical evacuation — APPROVED */
+  medicalEvac: "20001",
+  /** Boat rentals — APPROVED */
+  boatRental: "32679",
   /** Cruise + tour packages */
-  tourPackages: "", // Triptogo: "98699"
+  tourPackages: "", // Triptogo: pending
 } as const;
 
 /**
@@ -83,6 +83,20 @@ export function getExcursionLink(
  */
 export function getHotelLink(url: string): string {
   return wrapWithAwin(url, AWIN_ADVERTISERS.hotels);
+}
+
+/**
+ * Wraps a SamBoat boat rental URL.
+ */
+export function getBoatRentalLink(url: string): string {
+  return wrapWithAwin(url, AWIN_ADVERTISERS.boatRental);
+}
+
+/**
+ * Wraps a Medjet medical evacuation URL.
+ */
+export function getMedEvacLink(url: string): string {
+  return wrapWithAwin(url, AWIN_ADVERTISERS.medicalEvac);
 }
 
 /**

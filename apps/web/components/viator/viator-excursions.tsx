@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Star, Clock, ExternalLink, Loader2, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
+import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import type { ViatorProduct, ViatorSearchResponse } from "@/lib/types/viator";
 
 interface ViatorExcursionsProps {
@@ -89,12 +90,14 @@ export default function ViatorExcursions({
         </div>
       )}
 
-      {/* Viator attribution (required by partner agreement) */}
+      {/* Viator attribution (required by partner agreement) + disclosure */}
       {!loading && products.length > 0 && (
-        <p className="mt-4 text-center text-[11px] text-gray-400">
-          Tour content and prices provided by Viator. CruiseKit may earn a
-          commission on bookings.
-        </p>
+        <div className="mt-4">
+          <AffiliateDisclosure variant="block" />
+          <p className="mt-2 text-center text-[10px] text-gray-400">
+            Tour content and prices provided by Viator.
+          </p>
+        </div>
       )}
     </section>
   );
