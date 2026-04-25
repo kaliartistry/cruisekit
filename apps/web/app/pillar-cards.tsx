@@ -11,14 +11,12 @@ import {
   UtensilsCrossed,
   ShieldCheck,
   Sparkles,
-  Anchor,
   MapPin,
   TrendingDown,
 } from "lucide-react";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
-import { SHIPS } from "@/lib/data/ships";
-import { getTopDealsByRegion, DEAL_STATS, type RealDeal } from "@/lib/data/real-deals";
+import { getTopDealsByRegion, DEAL_STATS } from "@/lib/data/real-deals";
 import { getDealImage } from "@/lib/data/port-images";
 
 /* Port images and getDealImage imported from @/lib/data/port-images */
@@ -75,12 +73,6 @@ function getPortWithCountry(port: string): string {
 
 /* -- Real deals from scraped API data (Carnival + NCL) -- */
 const REAL_TRENDING = getTopDealsByRegion("caribbean", 10);
-/* -- Fallback to ship database if no scraped data available -- */
-const SHIP_DEALS = SHIPS
-  .filter((s) => s.fare7Night.inside > 0)
-  .sort((a, b) => a.fare7Night.inside - b.fare7Night.inside)
-  .slice(0, 8);
-
 const COMPARISONS = [
   {
     lineA: "royal-caribbean",
@@ -399,6 +391,15 @@ export default function ContentSections() {
               );
             })}
           </motion.div>
+
+          <div className="mt-8 text-right">
+            <Link
+              href="/methodology"
+              className="text-xs text-gray-400 hover:text-teal underline underline-offset-2 transition-colors"
+            >
+              Sources &amp; methodology &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 

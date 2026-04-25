@@ -174,7 +174,6 @@ type SortConfig = { key: string; direction: "asc" | "desc" } | null;
 
 function ComparisonTable() {
   const [sortConfig, setSortConfig] = useState<SortConfig>(null);
-  const [expandedRow, setExpandedRow] = useState<string | null>(null);
 
   const sortedLines = useMemo(() => {
     if (!sortConfig) return [...LINES];
@@ -640,6 +639,13 @@ export default function CompareContent() {
         </h2>
         <p className="mt-2 text-gray-500">
           Click any column header to sort. Green = best value, coral = highest cost.
+          {" · "}
+          <Link
+            href="/methodology"
+            className="text-xs text-gray-400 hover:text-teal underline underline-offset-2 transition-colors"
+          >
+            Sources &amp; methodology &rarr;
+          </Link>
         </p>
 
         {/* Desktop table */}
