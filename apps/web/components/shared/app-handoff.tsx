@@ -1,4 +1,5 @@
 import { Smartphone, Calendar, DollarSign, Users } from "lucide-react";
+import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/config/app-store-urls";
 
 interface AppHandoffProps {
   /** The tone of the headline — tailored to where it appears. */
@@ -30,7 +31,7 @@ const FEATURES = [
 /**
  * Web-to-mobile handoff card. Reusable across calculator result, my-trips
  * page, and footer. App is unreleased — CTAs read "Coming soon" for now;
- * swap the `href` props in with real store URLs on launch.
+ * set the store URL config values on launch.
  */
 export default function AppHandoff({
   variant = "calculator-result",
@@ -68,8 +69,8 @@ export default function AppHandoff({
           </ul>
 
           <div className="flex flex-wrap gap-3">
-            <StoreBadge label="App Store" sub="iOS — coming soon" />
-            <StoreBadge label="Google Play" sub="Android — coming soon" />
+            <StoreBadge label="App Store" sub="iOS — coming soon" href={APP_STORE_URL} />
+            <StoreBadge label="Google Play" sub="Android — coming soon" href={PLAY_STORE_URL} />
           </div>
         </div>
 
@@ -82,19 +83,44 @@ export default function AppHandoff({
   );
 }
 
-function StoreBadge({ label, sub }: { label: string; sub: string }) {
+function StoreBadge({
+  label,
+  sub,
+  href,
+}: {
+  label: string;
+  sub: string;
+  href: string | null;
+}) {
+  const content = (
+    <div>
+      <div className="text-[10px] uppercase tracking-wider text-white/60">
+        Get on
+      </div>
+      <div className="text-sm font-semibold text-white">{label}</div>
+      <div className="text-[10px] text-white/50 mt-0.5">{sub}</div>
+    </div>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-left"
+      >
+        {content}
+      </a>
+    );
+  }
+
   return (
     <button
       disabled
       className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-left cursor-not-allowed opacity-80"
     >
-      <div>
-        <div className="text-[10px] uppercase tracking-wider text-white/60">
-          Get on
-        </div>
-        <div className="text-sm font-semibold text-white">{label}</div>
-        <div className="text-[10px] text-white/50 mt-0.5">{sub}</div>
-      </div>
+      {content}
     </button>
   );
 }
