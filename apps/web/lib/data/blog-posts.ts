@@ -551,9 +551,9 @@ const shipTimePost: BlogPost = {
       ],
     },
     {
-      heading: "Let Technology Watch the Clock for You",
+      heading: "Let CruiseKit Keep Ship Time Close",
       paragraphs: [
-        "CruiseKit's BackToShip GPS tracker was built to solve this exact problem. It shows your real-time distance from the ship, estimated travel time back to the port, and a live countdown to all-aboard in ship time. It sends push notifications when you are approaching your time buffer, giving you advance warning to wrap up and start heading back. Combined with our Port Day Planner that displays local time offsets for every Caribbean port, you will never have to do time zone math in your head again.",
+        "CruiseKit's MyDay and Port Day Planner keep ship time, port time, and all-aboard context close to the rest of your plans. Photograph the cruise line's official all-aboard notice, keep your phone alarms on ship time, and use CruiseKit as the planning layer that helps you avoid time-zone math in your head.",
       ],
     },
   ],

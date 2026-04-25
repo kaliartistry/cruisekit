@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | CruiseKit",
   },
   description:
-    "The all-in-one cruise planning toolkit. Calculate true costs, plan port days, coordinate your group, track your way back to the ship, and optimize your loyalty rewards.",
+    "The all-in-one cruise planning toolkit. Calculate true costs, plan port days, coordinate your group, manage your cruise day, and optimize your loyalty rewards.",
   keywords: [
     "cruise cost calculator",
     "cruise planning",

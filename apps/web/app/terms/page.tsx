@@ -74,14 +74,12 @@ export default function TermsPage() {
               </h2>
               <p>
                 The MyDay feature, including schedule management, spend tracking,
-                and MyCrew location sharing, is a{" "}
+                and MyCrew status check-ins, is a{" "}
                 <strong>planning aid only and not a guarantee</strong>.
                 CruiseKit is not responsible for missed departures, inaccurate
                 spend totals, or any consequences resulting from reliance on
-                MyDay features. GPS accuracy for MyCrew location depends on your
-                device and environmental conditions. Always allow ample time
-                to return to your ship and follow the cruise line&rsquo;s
-                official all-aboard time.
+                MyDay features. Always allow ample time to return to your ship
+                and follow the cruise line&rsquo;s official all-aboard time.
               </p>
             </section>
 

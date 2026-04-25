@@ -24,17 +24,17 @@ const fadeUp = {
 const FEATURES = [
   {
     icon: Clock,
-    title: "Triple Clock Display",
+    title: "Ship + Port Clocks",
     description:
-      "Ship time, port time, and home time side by side. Never get confused by timezone changes again.",
+      "Ship time and port time stay visible together, so timezone changes do not turn into day-three confusion.",
     color: "text-amber-500",
     bg: "bg-amber-500/10",
   },
   {
     icon: Bell,
-    title: "All-Aboard Countdown",
+    title: "All-Aboard Reference",
     description:
-      "Live countdown to your ship's departure on port days. Auto-calculated from your itinerary.",
+      "Port-day timing is pulled from your itinerary and kept close to the rest of your day, without turning MyDay into a navigation tool.",
     color: "text-red-500",
     bg: "bg-red-500/10",
   },
@@ -48,9 +48,9 @@ const FEATURES = [
   },
   {
     icon: Wallet,
-    title: "Numpad Spend Tracker",
+    title: "Spend Tracker",
     description:
-      "Two-tap expense logging with a calculator-style numpad. Tracks budget vs actual from your Plan estimates.",
+      "Log drinks, dining, excursions, and extras into one running total against the budget you set before boarding.",
     color: "text-green-500",
     bg: "bg-green-500/10",
   },
@@ -64,9 +64,9 @@ const FEATURES = [
   },
   {
     icon: Users,
-    title: "MyCrew",
+    title: "MyCrew Check-ins",
     description:
-      "See where your travel companions are on a real map during port days. Quick status broadcasts and group chat.",
+      "Share simple group status like on ship, at dinner, or heading back, so the day feels coordinated without needing a full chat app.",
     color: "text-blue-500",
     bg: "bg-blue-500/10",
   },
@@ -77,8 +77,8 @@ const TABS = [
     name: "Today",
     icon: CalendarDays,
     features: [
-      "Ship time / port time / home time clocks",
-      "All-aboard countdown with push alerts",
+      "Ship time and port time at a glance",
+      "All-aboard context from your itinerary",
       "Personal event schedule with reminders",
       '"What\'s Open Now" venue strip',
       "Crew status at a glance",
@@ -88,8 +88,8 @@ const TABS = [
     name: "Spend",
     icon: Wallet,
     features: [
-      "Numpad-first charge entry (2 taps)",
-      "Smart tip prompt after dining/bar charges",
+      "Fast charge entry for onboard purchases",
+      "Smart tip prompt after dining or bar charges",
       "Budget vs actual from Plan calculator",
       "Category breakdown with progress bars",
       "Learned frequent items for quick repeat",
@@ -99,11 +99,11 @@ const TABS = [
     name: "MyCrew",
     icon: Users,
     features: [
-      "GPS map with crew dots on port days",
-      "Quick status broadcasts (At pool, At dinner...)",
-      "Group chat with push notifications",
-      "Tap-to-center on any crew member",
-      "Straight-line distance from ship",
+      "Quick status check-ins for your group",
+      "Dinner, pool, and meetup plan updates",
+      "Crew list with current shared status",
+      "Sea-day coordination without location noise",
+      "Location-sharing language only when it is appropriate",
     ],
   },
 ];
@@ -133,10 +133,10 @@ export default function MyDayContent() {
             variants={fadeUp}
             className="mx-auto mt-5 max-w-2xl text-lg text-white/90"
           >
-            Missed all-aboard times. Surprise charges on your folio.
-            No idea where your family is in port. MyDay fixes all of it
-            &mdash; ship time clocks, spend tracking, and MyCrew
-            coordination, even on unreliable cruise WiFi.
+            Ship time drift. Surprise charges on your folio. Dinner plans
+            scattered across texts. MyDay pulls the day into one calm view
+            &mdash; clocks, schedule, spend, and MyCrew check-ins, even on
+            unreliable cruise WiFi.
           </motion.p>
 
           {/* 3-tab preview */}
@@ -178,9 +178,9 @@ export default function MyDayContent() {
             variants={fadeUp}
             className="mx-auto mt-3 max-w-xl text-muted"
           >
-            The features cruisers actually use every day — validated by
-            Reddit, CruiseCritic, and app store reviews across thousands of
-            passengers.
+            The features cruisers actually use every day: knowing the right
+            time, seeing what is next, keeping spend honest, and staying loose
+            with the people they came with.
           </motion.p>
         </motion.div>
 

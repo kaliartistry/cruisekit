@@ -90,10 +90,10 @@ export default function PrivacyPage() {
                   data.
                 </li>
                 <li>
-                  <strong>No location data.</strong> The MyDay crew
-                  location feature uses your device&rsquo;s location API
-                  but does not store, transmit, or log your location to our
-                  servers. All location processing happens on your device.
+                  <strong>No background location tracking.</strong> The
+                  website does not collect GPS location. MyDay is positioned
+                  around user-entered schedule, spend, and crew status data,
+                  not server-side location tracking.
                 </li>
               </ul>
             </section>
