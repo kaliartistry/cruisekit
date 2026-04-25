@@ -78,6 +78,13 @@ export default function HeroSection() {
           logistics — before you board.
         </motion.p>
 
+        <Link
+          href="/methodology"
+          className="mt-3 inline-block text-xs text-white/60 hover:text-white/90 underline underline-offset-2 transition-colors"
+        >
+          See how we calculate this &rarr;
+        </Link>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -157,7 +164,7 @@ export default function HeroSection() {
 
           <button
             onClick={handleSubmit}
-            className="w-full bg-[#FF6B4A] hover:bg-[#E85A3A] text-white font-bold py-4 px-6 rounded-xl text-base transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+            className="w-full bg-teal hover:bg-teal-dark text-white font-bold py-4 px-6 rounded-xl text-base transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
           >
             See the true cost of my cruise
             <span aria-hidden="true">&rarr;</span>
