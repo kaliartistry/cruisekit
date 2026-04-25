@@ -1,0 +1,128 @@
+rules_version = '2';
+
+// CruiseKit Firestore security rules.
+// Covers both the Next.js web app (users, savedDeals) and the Flutter mobile
+// app (groups + subcollections). Default deny at the bottom.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isGroupMember(groupId) {
+      return isSignedIn()
+        && request.auth.uid in
+             get(/databases/$(database)/documents/groups/$(groupId)).data.memberUserIds;
+    }
+
+    function isGroupOrganizer(groupId) {
+      return isSignedIn()
+        && request.auth.uid ==
+             get(/databases/$(database)/documents/groups/$(groupId)).data.organizerId;
+    }
+
+    // ───── users/{uid} (web) ─────
+    match /users/{uid} {
+      allow read: if isOwner(uid);
+
+      allow create: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(
+            ['displayName', 'email', 'photoURL', 'createdAt', 'lastLoginAt'])
+        && request.resource.data.email is string;
+
+      allow update: if isOwner(uid)
+        && request.resource.data.diff(resource.data)
+             .affectedKeys()
+             .hasOnly(['displayName', 'email', 'photoURL', 'lastLoginAt']);
+
+      // User-deletion goes through an Admin SDK path (not yet built).
+      allow delete: if false;
+
+      match /savedDeals/{dealId} {
+        allow read, delete: if isOwner(uid);
+
+        allow create, update: if isOwner(uid)
+          && request.resource.data.savedAt is string
+          && request.resource.data.fromPrice is number
+          && request.resource.data.size() < 30;
+      }
+    }
+
+    // ───── groups/{groupId} (Flutter MyCrew) ─────
+    //
+    // Reads are allowed for any signed-in user. The join flow needs to look up
+    // a group by inviteCode before the user is a member; member-only reads
+    // would break that. Group IDs are auto-generated 20-char strings and
+    // invite codes are 6-char from a 32-char alphabet, so direct enumeration
+    // is impractical. Subcollections (locations, messages) require membership.
+    // Long-term fix: move invite lookup to a separate `groupInvites/{code}`
+    // collection or a Cloud Function and tighten this read rule.
+    match /groups/{groupId} {
+      allow read: if isSignedIn();
+
+      allow create: if isSignedIn()
+        && request.resource.data.organizerId == request.auth.uid
+        && request.auth.uid in request.resource.data.memberUserIds
+        && request.resource.data.inviteCode is string;
+
+      allow update: if isSignedIn() && (
+        // Organizer: can modify group fields except identity / invite code.
+        (resource.data.organizerId == request.auth.uid
+          && request.resource.data.diff(resource.data).affectedKeys()
+               .hasOnly(['memberUserIds', 'members', 'name',
+                         'cruiseLineId', 'shipName', 'departureDate']))
+        ||
+        // Self-join: exactly one element added to memberUserIds, and it's me.
+        (request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['memberUserIds', 'members'])
+          && request.resource.data.memberUserIds.size() ==
+               resource.data.memberUserIds.size() + 1
+          && request.auth.uid in request.resource.data.memberUserIds
+          && !(request.auth.uid in resource.data.memberUserIds))
+        ||
+        // Self-leave: exactly one element removed from memberUserIds, and it's me.
+        (request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['memberUserIds', 'members'])
+          && request.resource.data.memberUserIds.size() ==
+               resource.data.memberUserIds.size() - 1
+          && !(request.auth.uid in request.resource.data.memberUserIds)
+          && request.auth.uid in resource.data.memberUserIds)
+      );
+
+      // No delete flow exists in the Flutter code.
+      allow delete: if false;
+
+      match /locations/{userId} {
+        allow read: if isGroupMember(groupId);
+
+        allow create, update: if isOwner(userId) && isGroupMember(groupId);
+
+        // Self-leave (user deletes own location) or organizer kick.
+        allow delete: if isOwner(userId) || isGroupOrganizer(groupId);
+      }
+
+      match /messages/{messageId} {
+        allow read: if isGroupMember(groupId);
+
+        allow create: if isGroupMember(groupId)
+          && request.resource.data.senderId == request.auth.uid
+          && request.resource.data.text is string
+          && request.resource.data.text.size() < 5000;
+
+        // Messages are append-only.
+        allow update, delete: if false;
+      }
+    }
+
+    // ───── default deny ─────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
