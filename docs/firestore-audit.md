@@ -132,11 +132,10 @@ firebase deploy --only firestore:rules
 ```
 
 ### Deploy record
-_To be filled in when the deploy happens._
 
-| Date | Release ID | Deployed by | Notes |
+| Date (ET) | Release | Deployed by | Notes |
 |---|---|---|---|
-| | | | |
+| 2026-04-25 ~14:40 | initial production release | kalimccarthy@gmail.com via `firebase deploy --only firestore:rules` | Replaces Test Mode. Compilation clean. Rules ID is visible at https://console.firebase.google.com/project/cruisekit-app/firestore/rules — copy from there into the next row when modifying. |
 
 ### Post-deploy smoke tests (Console → Firestore → Rules Playground)
 
