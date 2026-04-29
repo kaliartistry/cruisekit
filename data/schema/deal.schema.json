@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cruisekit.app/schema/deal.schema.json",
+  "title": "Deal",
+  "description": "A canonical cruise deal/promotion record. Independent from Sailing — a deal may apply to many sailings (applicableSailingIds).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "cruiseLine",
+    "dealType",
+    "description",
+    "bookingStartDate",
+    "bookingEndDate",
+    "sailingStartDate",
+    "sailingEndDate",
+    "applicableSailingIds",
+    "includedPerks",
+    "exclusions",
+    "directLink",
+    "source",
+    "sourceUrl",
+    "lastVerified",
+    "confidence",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable unique identifier. Convention: <cruiseLine>-deal-<slug>."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Headline as published, e.g. 'Black Friday: Up to 60% off second guest'."
+    },
+    "cruiseLine": {
+      "type": "string",
+      "enum": [
+        "royal-caribbean",
+        "carnival",
+        "norwegian",
+        "msc",
+        "celebrity",
+        "princess",
+        "holland-america",
+        "disney",
+        "virgin-voyages"
+      ]
+    },
+    "dealType": {
+      "type": "string",
+      "enum": [
+        "percent-off-fare",
+        "second-guest-discount",
+        "free-perk",
+        "onboard-credit",
+        "reduced-deposit",
+        "kids-sail-free",
+        "bundled-package",
+        "promo-code"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "1–3 sentence plain-English summary of what the deal does."
+    },
+    "bookingStartDate": {
+      "type": "string",
+      "format": "date",
+      "description": "First date the deal can be booked."
+    },
+    "bookingEndDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Last date the deal can be booked."
+    },
+    "sailingStartDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Earliest sailing departure the deal applies to."
+    },
+    "sailingEndDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Latest sailing departure the deal applies to."
+    },
+    "applicableSailingIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional join: Sailing.id values this deal explicitly applies to. Empty array means 'see source page for eligible sailings'."
+    },
+    "includedPerks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Plain-English perk list, e.g. ['Drink package', 'WiFi', '$200 OBC']."
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Plain-English exclusion list, e.g. ['Suites excluded', 'Not combinable with Casino offers']."
+    },
+    "promoCode": {
+      "type": ["string", "null"],
+      "description": "Optional booking-flow promo code, when applicable."
+    },
+    "directLink": {
+      "type": "string",
+      "format": "uri",
+      "description": "Required. Cruise-line URL where the deal is published."
+    },
+    "affiliateLink": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "source": {
+      "$ref": "#/$defs/SourceMetadata"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "lastVerified": {
+      "type": "string",
+      "format": "date"
+    },
+    "confidence": {
+      "$ref": "#/$defs/Confidence"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$defs": {
+    "Confidence": {
+      "title": "Confidence",
+      "type": "string",
+      "enum": [
+        "verified_from_cruise_line",
+        "itinerary_verified_price_check_required",
+        "editorial_only",
+        "internal_do_not_publish"
+      ]
+    },
+    "SourceMetadata": {
+      "title": "SourceMetadata",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "sourceType",
+        "sourceUrl",
+        "lastImported",
+        "lastVerified",
+        "confidence"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "cruise-line-website",
+            "affiliate-feed",
+            "manual-editorial",
+            "press-release"
+          ]
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "affiliateNetwork": {
+          "type": ["string", "null"]
+        },
+        "advertiserName": {
+          "type": ["string", "null"]
+        },
+        "lastImported": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastVerified": {
+          "type": "string",
+          "format": "date"
+        },
+        "confidence": {
+          "$ref": "#/$defs/Confidence"
+        },
+        "termsNotes": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}

@@ -6,15 +6,22 @@
     "build": "turbo build",
     "lint": "turbo lint",
     "clean": "turbo clean",
-    "test:rules": "firebase emulators:exec --only firestore 'vitest run firestore.rules.test.ts'"
+    "test:rules": "firebase emulators:exec --only firestore 'vitest run firestore.rules.test.ts'",
+    "schema:gen:ts": "quicktype --src-lang schema --lang ts --top-level Sailing --just-types data/schema/sailing.schema.json -o shared/models/ts/sailing.ts && quicktype --src-lang schema --lang ts --top-level Deal --just-types data/schema/deal.schema.json -o shared/models/ts/deal.ts && node scripts/postprocess-ts-models.mjs",
+    "schema:gen:dart": "quicktype --src-lang schema --lang dart --top-level Sailing --use-freezed data/schema/sailing.schema.json -o shared/models/dart/lib/sailing.dart && quicktype --src-lang schema --lang dart --top-level Deal --use-freezed data/schema/deal.schema.json -o shared/models/dart/lib/deal.dart",
+    "schema:gen": "pnpm run schema:gen:ts && pnpm run schema:gen:dart",
+    "schema:validate": "node scripts/validate-seed-records.mjs"
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "^4.0.1",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "firebase": "^12.11.0",
     "firebase-tools": "^13.29.1",
     "playwright": "^1.58.2",
     "playwright-extra": "^4.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "quicktype": "^23.2.6",
     "turbo": "^2",
     "vitest": "^2.1.9"
   },
