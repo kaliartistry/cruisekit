@@ -140,6 +140,25 @@ export default function HowWeMakeMoneyPage() {
             </div>
           </section>
 
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold text-navy mb-4">
+              FTC affiliate disclosure
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              The page above is the plain-English version. The formal
+              FTC-required disclosure of every active affiliate relationship,
+              what each one routes through, and what it does (and
+              doesn&rsquo;t) influence is at{" "}
+              <Link
+                href="/affiliate-disclosure"
+                className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
+              >
+                /affiliate-disclosure
+              </Link>
+              .
+            </p>
+          </section>
+
           <section className="rounded-xl border border-teal/20 bg-teal/5 p-6">
             <h3 className="text-lg font-semibold text-navy mb-2">
               Questions?

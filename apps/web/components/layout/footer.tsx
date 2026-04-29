@@ -30,6 +30,7 @@ const FOOTER_COLUMNS = [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
       { label: "How we make money", href: "/how-we-make-money" },
+      { label: "Affiliate Disclosure", href: "/affiliate-disclosure" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
     ],
