@@ -50,24 +50,9 @@ export interface Ship {
   yearBuilt: number;
 }
 
-/** A sailing/itinerary */
-export interface Sailing {
-  cruiseLine: CruiseLineId;
-  ship: string;
-  departureDate: string;
-  returnDate: string;
-  duration: number;
-  region: CruiseRegion;
-  departurePort: string;
-  ports: PortStop[];
-}
-
-/** A port stop within a sailing */
-export interface PortStop {
-  portSlug: string;
-  portName: string;
-  arrivalTime: string;
-  departureTime: string;
-  isTender: boolean;
-  isSeaDay: boolean;
-}
+/**
+ * Canonical Sailing type — generated from `/data/schema/sailing.schema.json`.
+ * Re-exported here so legacy `import { Sailing } from "@cruise/shared/types"`
+ * keeps resolving while internal code migrates to the canonical model.
+ */
+export type { Sailing } from "../../../shared/models/ts/sailing";

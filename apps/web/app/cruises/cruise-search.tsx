@@ -19,7 +19,6 @@ import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
-import { Switch } from "@/components/ui/switch";
 import {
   Select,
   SelectContent,
@@ -30,27 +29,16 @@ import {
 import { cn } from "@/lib/utils/cn";
 import HeartButton from "@/components/shared/heart-button";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
-import { getBookingLink } from "@/lib/affiliate-config";
+import {
+  confidenceLabel,
+  confidenceBadgeClass,
+  formatLastVerified,
+  priceBasisLabel,
+} from "@/lib/format/confidence";
 
 /* ------------------------------------------------------------------ */
 /*  Constants & helpers                                                 */
 /* ------------------------------------------------------------------ */
-
-const CRUISE_LINE_URLS: Record<string, string> = {
-  "carnival": "https://www.carnival.com",
-  "royal-caribbean": "https://www.royalcaribbean.com",
-  "norwegian": "https://www.ncl.com",
-  "msc": "https://www.msccruisesusa.com",
-  "celebrity": "https://www.celebritycruises.com",
-  "holland-america": "https://www.hollandamerica.com",
-  "disney": "https://disneycruise.disney.go.com",
-  "virgin-voyages": "https://www.virginvoyages.com",
-  "princess": "https://www.princess.com",
-};
-
-function getCruiseLineUrl(cruiseLineId: string): string {
-  return CRUISE_LINE_URLS[cruiseLineId] ?? `https://www.${cruiseLineId}.com`;
-}
 
 const ITEMS_PER_PAGE = 20;
 
@@ -275,30 +263,7 @@ function CheckboxGroup({
 /*  Deal card                                                          */
 /* ------------------------------------------------------------------ */
 
-// Lines where the scraped price already includes taxes & port fees
-const TAXES_INCLUDED_LINES = new Set([
-  "disney",           // Disney API returns total with taxes
-  "royal-caribbean",  // RCI API has areTaxesAndFeesIncluded: true
-  "celebrity",        // Celebrity uses same RCI API, taxes included
-]);
-
-// Estimated tax per night per person for lines where we only have base fare
-// Based on industry averages for Caribbean cruises
-const TAX_ESTIMATES: Record<string, number> = {
-  "carnival": 25,       // Carnival typically $20-30/night
-  "norwegian": 28,      // NCL typically $25-35/night
-  "virgin-voyages": 30, // Virgin ~$30/night
-  "msc": 22,            // MSC typically $20-25/night
-  "holland-america": 27, // HAL typically $25-30/night
-};
-
-function estimateTaxes(deal: RealDeal): number {
-  if (TAXES_INCLUDED_LINES.has(deal.cruiseLineId)) return 0;
-  const perNight = TAX_ESTIMATES[deal.cruiseLineId] || 25;
-  return deal.duration * perNight;
-}
-
-function DealCard({ deal, includeTaxes }: { deal: RealDeal; includeTaxes?: boolean }) {
+function DealCard({ deal }: { deal: RealDeal }) {
   const line = CRUISE_LINES.find((l) => l.id === deal.cruiseLineId);
   const imgSrc = getDealImage(deal);
   const region =
@@ -307,7 +272,10 @@ function DealCard({ deal, includeTaxes }: { deal: RealDeal; includeTaxes?: boole
       .replace(/\s+from\s+.*/i, "")
       .trim() || "Caribbean";
 
+  const ctaHref = deal.affiliateLink ?? deal.directLink ?? null;
   const calcHref = `/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2&fare=${deal.fromPrice}${deal.departureDate ? `&month=${new Date(deal.departureDate).getMonth()}` : ""}`;
+  const basisText = priceBasisLabel(deal.priceBasis);
+  const taxText = deal.taxesAndFeesIncluded ? "taxes & fees included" : "taxes & fees not included";
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[var(--shadow-sm)] transition-all hover:shadow-[var(--shadow-lg)] md:flex-row">
@@ -388,49 +356,58 @@ function DealCard({ deal, includeTaxes }: { deal: RealDeal; includeTaxes?: boole
         </div>
       </div>
 
-      {/* Price + CTA — lead with the gap, not the sticker.
-          ~85% markup approximates the calculator's typical output for
-          Caribbean 7-night voyages w/ drink pkg + WiFi + gratuities +
-          taxes. It's a directional estimate on the card; the "See true
-          cost" button takes users to the real calculation. */}
-      <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[200px]">
-        {(() => {
-          const advertised = includeTaxes
-            ? deal.fromPrice + estimateTaxes(deal)
-            : deal.fromPrice;
-          const estReal = Math.round(advertised * 1.85);
-          return (
-            <div className="text-right">
-              <p className="text-[10px] uppercase tracking-wider text-gray-400">
-                Advertised from
-              </p>
-              <p className="font-price text-sm font-semibold text-navy line-through">
-                ${advertised.toLocaleString()}
-              </p>
-              <p className="text-[10px] uppercase tracking-wider text-coral mt-1.5">
-                Real ~
-              </p>
-              <p className="font-price text-2xl font-bold text-coral leading-none">
-                ${estReal.toLocaleString()}
-              </p>
-              <p className="text-[10px] text-gray-400 mt-1">
-                per person · estimate
-              </p>
-            </div>
-          );
-        })()}
-        <div className="flex flex-col gap-2 mt-2 w-full md:w-auto">
-          <Button asChild size="sm" className="w-full">
-            <Link href={calcHref}>See real cost</Link>
-          </Button>
-          <a
-            href={getBookingLink(deal.bookingUrl, getCruiseLineUrl(deal.cruiseLineId))}
-            target="_blank"
-            rel="noopener noreferrer sponsored nofollow"
-            className="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-xs font-bold text-navy transition-colors hover:bg-gray-50"
+      {/* Price + source attribution + CTA. Headline is the cruise line's
+          own advertised starting price (no synthetic "real cost" estimate
+          here — the TCO breakdown lives in /calculator). Source row is
+          required on every visible card per the canonical schema. */}
+      <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[220px]">
+        <div className="text-right">
+          <p className="text-[10px] uppercase tracking-wider text-gray-400">
+            Starting from
+          </p>
+          {deal.startingPrice !== null ? (
+            <p className="font-price text-2xl font-bold text-navy leading-none">
+              ${deal.startingPrice.toLocaleString()}
+            </p>
+          ) : (
+            <p className="text-sm font-semibold text-gray-500">Price on cruise line site</p>
+          )}
+          {basisText && (
+            <p className="text-[10px] text-gray-500 mt-1">{basisText}</p>
+          )}
+          <p className="text-[10px] text-gray-400 mt-0.5">{taxText}</p>
+        </div>
+
+        <div className="w-full text-right text-[10px] text-gray-500 leading-snug">
+          <span className="block">
+            Source:{" "}
+            <span className="font-medium text-gray-700">{deal.source}</span>
+          </span>
+          <span className="block">Checked: {formatLastVerified(deal.lastVerified)}</span>
+          <span
+            className={cn(
+              "mt-1 inline-block rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide",
+              confidenceBadgeClass(deal.confidence),
+            )}
           >
-            Book with line
-          </a>
+            {confidenceLabel(deal.confidence)}
+          </span>
+        </div>
+
+        <div className="flex flex-col gap-2 w-full md:w-auto">
+          {ctaHref ? (
+            <a
+              href={ctaHref}
+              target="_blank"
+              rel="noopener noreferrer sponsored nofollow"
+              className="inline-flex items-center justify-center rounded-lg bg-teal px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-teal-dark"
+            >
+              Check current price
+            </a>
+          ) : null}
+          <Button asChild size="sm" variant="outline" className="w-full">
+            <Link href={calcHref}>Estimate total cost</Link>
+          </Button>
           <AffiliateDisclosure className="mt-1 text-right md:text-right" />
         </div>
       </div>
@@ -724,7 +701,6 @@ export default function CruiseSearchPage() {
   const [sort, setSort] = useState<SortKey>("price-asc");
   const [page, setPage] = useState(1);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const [includeTaxes, setIncludeTaxes] = useState(false);
 
   /* Filtered + sorted deals */
   const filteredDeals = useMemo(() => {
@@ -790,13 +766,13 @@ export default function CruiseSearchPage() {
             </h1>
           </div>
           <p className="text-sm text-gray-500">
-            Browse {DEAL_STATS.totalDeals} real sailings from{" "}
-            {DEAL_STATS.cruiseLines.length} cruise lines &middot; Updated{" "}
-            {new Date(DEAL_STATS.lastScraped).toLocaleDateString("en-US", {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            })}
+            {DEAL_STATS.totalDeals} hand-verified sailing
+            {DEAL_STATS.totalDeals === 1 ? "" : "s"} from{" "}
+            {DEAL_STATS.cruiseLines.length} cruise line
+            {DEAL_STATS.cruiseLines.length === 1 ? "" : "s"}
+            {DEAL_STATS.lastVerified
+              ? ` · Latest check ${formatLastVerified(DEAL_STATS.lastVerified)}`
+              : ""}
           </p>
         </div>
       </div>
@@ -839,15 +815,6 @@ export default function CruiseSearchPage() {
               </div>
 
               <div className="flex items-center gap-4">
-                {/* Tax toggle */}
-                <label className="hidden sm:flex items-center gap-2 text-xs text-gray-500 cursor-pointer">
-                  <Switch
-                    checked={includeTaxes}
-                    onCheckedChange={setIncludeTaxes}
-                  />
-                  Include taxes &amp; fees
-                </label>
-
                 {/* Sort */}
                 <Select
                   value={sort}
@@ -900,7 +867,7 @@ export default function CruiseSearchPage() {
             ) : (
               <div className="space-y-4">
                 {paginatedDeals.map((deal) => (
-                  <DealCard key={deal.id} deal={deal} includeTaxes={includeTaxes} />
+                  <DealCard key={deal.id} deal={deal} />
                 ))}
               </div>
             )}

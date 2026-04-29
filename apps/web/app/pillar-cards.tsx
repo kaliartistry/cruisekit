@@ -18,6 +18,11 @@ import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { getTopDealsByRegion, DEAL_STATS } from "@/lib/data/real-deals";
 import { getDealImage } from "@/lib/data/port-images";
+import {
+  confidenceLabel,
+  confidenceBadgeClass,
+  formatLastVerified,
+} from "@/lib/format/confidence";
 
 /* Port images and getDealImage imported from @/lib/data/port-images */
 
@@ -71,7 +76,7 @@ function getPortWithCountry(port: string): string {
 /*  Data                                                               */
 /* ------------------------------------------------------------------ */
 
-/* -- Real deals from scraped API data (Carnival + NCL) -- */
+/* -- Top hand-verified Caribbean sailings from /data/seed/sailings.json -- */
 const REAL_TRENDING = getTopDealsByRegion("caribbean", 10);
 const COMPARISONS = [
   {
@@ -170,7 +175,7 @@ const cardVariants = {
 export default function ContentSections() {
   return (
     <>
-      {/* ---- Real Cruise Deals (from scraped API data) ---- */}
+      {/* ---- Hand-verified Caribbean sailings ---- */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
@@ -178,11 +183,15 @@ export default function ContentSections() {
               <div className="flex items-center gap-2 mb-1">
                 <TrendingDown className="h-5 w-5 text-coral" />
                 <h2 className="text-xl font-bold tracking-tight text-navy sm:text-2xl">
-                  Lowest Caribbean Cruise Fares
+                  Hand-Verified Caribbean Sailings
                 </h2>
               </div>
               <p className="text-sm text-gray-500">
-                Real prices from {DEAL_STATS.cruiseLines.length} cruise lines &middot; {DEAL_STATS.totalDeals} sailings tracked &middot; See the{" "}
+                Cruise-line prices from {DEAL_STATS.cruiseLines.length} lines &middot; {DEAL_STATS.totalDeals} sailings
+                {DEAL_STATS.lastVerified
+                  ? ` · Latest check ${formatLastVerified(DEAL_STATS.lastVerified)}`
+                  : ""}{" "}
+                &middot; See the{" "}
                 <span className="font-semibold text-navy">true cost</span> with our calculator
               </p>
             </div>
@@ -225,13 +234,17 @@ export default function ContentSections() {
                     />
                     {/* Dark gradient overlay for text readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/30" />
-                    {/* Price badge */}
+                    {/* Price badge — cruise line's advertised starting price */}
                     <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow">
-                      <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">Interior from</p>
-                      <p className="font-price text-xl font-bold text-coral leading-tight">
-                        ${deal.fromPrice.toLocaleString()}
+                      <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">Starting from</p>
+                      <p className="font-price text-xl font-bold text-navy leading-tight">
+                        {deal.startingPrice !== null
+                          ? `$${deal.startingPrice.toLocaleString()}`
+                          : "See site"}
                       </p>
-                      <p className="font-price text-[10px] text-gray-400">per person (excl. taxes)</p>
+                      <p className="font-price text-[10px] text-gray-400">
+                        {deal.taxesAndFeesIncluded ? "incl. taxes" : "excl. taxes"}
+                      </p>
                     </div>
                     {/* Duration badge */}
                     <div className="absolute top-3 left-3 bg-navy/80 text-white text-xs font-bold px-2 py-1 rounded-md">
@@ -277,16 +290,29 @@ export default function ContentSections() {
                       </div>
                     )}
 
-                    <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
-                      {deal.departureDate && (
-                        <p className="text-xs text-gray-400">
-                          {new Date(deal.departureDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-                        </p>
-                      )}
-                      <span className="flex items-center gap-1 text-xs font-semibold text-teal group-hover:text-teal-dark transition-colors ml-auto">
-                        See true cost
-                        <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
-                      </span>
+                    {/* Source row — every visible card carries provenance */}
+                    <div className="mt-3 pt-3 border-t border-gray-100">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-[10px] text-gray-400 truncate">
+                          {deal.source} &middot; checked {formatLastVerified(deal.lastVerified)}
+                        </span>
+                        <span
+                          className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide ${confidenceBadgeClass(deal.confidence)}`}
+                        >
+                          {confidenceLabel(deal.confidence)}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between mt-2">
+                        {deal.departureDate && (
+                          <p className="text-xs text-gray-400">
+                            {new Date(deal.departureDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                          </p>
+                        )}
+                        <span className="flex items-center gap-1 text-xs font-semibold text-teal group-hover:text-teal-dark transition-colors ml-auto">
+                          See true cost
+                          <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </Link>
