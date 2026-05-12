@@ -5,7 +5,7 @@ import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 
 export const metadata: Metadata = {
-  title: "Help Center — CruiseKit",
+  title: "Help Center",
   description:
     "Get help with CruiseKit's cruise planning tools. Find guides, FAQs, and contact information.",
   keywords: [

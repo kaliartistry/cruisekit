@@ -1,0 +1,286 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cruisekit.app/schema/sailing.schema.json",
+  "title": "Sailing",
+  "description": "A canonical cruise sailing record. Source of truth for both the Next.js web app (cruisekit.app) and the CruiseKit-Mobile Flutter app via Quicktype-generated models.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "cruiseLine",
+    "shipName",
+    "sailingName",
+    "departureDate",
+    "returnDate",
+    "nights",
+    "departurePort",
+    "returnPort",
+    "destinationRegion",
+    "itineraryPorts",
+    "portCoordinates",
+    "startingPrice",
+    "currency",
+    "priceBasis",
+    "taxesAndFeesIncluded",
+    "directLink",
+    "source",
+    "sourceUrl",
+    "lastVerified",
+    "confidence",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable unique identifier. Convention: <cruiseLine>-<shipSlug>-<YYYYMMDD>."
+    },
+    "cruiseLine": {
+      "type": "string",
+      "enum": [
+        "royal-caribbean",
+        "carnival",
+        "norwegian",
+        "msc",
+        "celebrity",
+        "princess",
+        "holland-america",
+        "disney",
+        "virgin-voyages"
+      ],
+      "description": "Canonical cruise line slug."
+    },
+    "shipName": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable ship name as marketed by the cruise line."
+    },
+    "sailingName": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Itinerary or voyage name as published by the cruise line, e.g. 'Eastern Caribbean from Miami'."
+    },
+    "departureDate": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date (YYYY-MM-DD) of embarkation."
+    },
+    "returnDate": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date (YYYY-MM-DD) of disembarkation."
+    },
+    "nights": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 180,
+      "description": "Number of nights aboard."
+    },
+    "departurePort": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Embarkation port name, e.g. 'Cape Liberty (Bayonne, NJ)'."
+    },
+    "returnPort": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Disembarkation port name. Equal to departurePort for round-trip sailings."
+    },
+    "destinationRegion": {
+      "type": "string",
+      "enum": [
+        "caribbean",
+        "bahamas",
+        "bermuda",
+        "mexico",
+        "alaska",
+        "mediterranean",
+        "northern-europe",
+        "transatlantic",
+        "asia",
+        "south-pacific",
+        "hawaii",
+        "mexican-riviera",
+        "california-coast",
+        "middle-east",
+        "other"
+      ],
+      "description": "Primary marketing region for the itinerary."
+    },
+    "itineraryPorts": {
+      "type": "array",
+      "description": "Ordered list of port-of-call names (excluding sea days). Embarkation/return ports may or may not be repeated here; consumers should not assume.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "portCoordinates": {
+      "type": "array",
+      "description": "Required field; may be empty at launch. Lat/lng for berth or port. ShipSafe SDK consumes this; missing entries should be tracked in PORT_COORDINATES_TODO.md and backfilled.",
+      "items": {
+        "$ref": "#/$defs/PortCoordinate"
+      }
+    },
+    "startingPrice": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Cruise line's lowest advertised fare under priceBasis. Null only when the source page does not publish a starting price."
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "ISO 4217 currency code, e.g. 'USD'."
+    },
+    "priceBasis": {
+      "type": "string",
+      "enum": [
+        "per-person-double-occupancy",
+        "per-person-quad-occupancy",
+        "per-cabin",
+        "per-person-solo",
+        "unspecified"
+      ],
+      "description": "How startingPrice is quoted. 'unspecified' is permitted only when the source page does not state a basis."
+    },
+    "taxesAndFeesIncluded": {
+      "type": "boolean",
+      "description": "True if startingPrice already includes taxes and port fees as published; false if those are quoted separately."
+    },
+    "directLink": {
+      "type": "string",
+      "format": "uri",
+      "description": "Required. Direct cruise-line URL to the sailing detail page. CTAs use this when affiliateLink is not yet populated."
+    },
+    "affiliateLink": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Optional. Tracked affiliate URL (Awin, CJ, direct partner). When present, CTAs prefer this over directLink."
+    },
+    "source": {
+      "$ref": "#/$defs/SourceMetadata"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL of the page used to verify this record. Should match source.sourceUrl; held at top level for query/dedup convenience."
+    },
+    "lastVerified": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date the record was last manually verified against the source page."
+    },
+    "confidence": {
+      "$ref": "#/$defs/Confidence"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp the record was first added."
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp the record was last modified (any field)."
+    }
+  },
+  "$defs": {
+    "Confidence": {
+      "title": "Confidence",
+      "type": "string",
+      "enum": [
+        "verified_from_cruise_line",
+        "itinerary_verified_price_check_required",
+        "editorial_only",
+        "internal_do_not_publish"
+      ],
+      "description": "Trust tier. Records with 'internal_do_not_publish' MUST be filtered before render."
+    },
+    "PortCoordinate": {
+      "title": "PortCoordinate",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["portName", "latitude", "longitude"],
+      "properties": {
+        "portName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Must match a value in itineraryPorts (case-sensitive) or be the embarkation/return port."
+        },
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "berth": {
+          "type": ["string", "null"],
+          "description": "Optional berth or terminal name. ShipSafe SDK uses this when a single port has multiple terminals (e.g. Manhattan Pier 88 vs Pier 90)."
+        },
+        "source": {
+          "type": ["string", "null"],
+          "description": "Optional citation for the coordinate (e.g. 'cruise-line port guide', 'OpenStreetMap')."
+        }
+      }
+    },
+    "SourceMetadata": {
+      "title": "SourceMetadata",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "sourceType",
+        "sourceUrl",
+        "lastImported",
+        "lastVerified",
+        "confidence"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Origin of the data, e.g. 'royalcaribbean.com', 'CJ:Norwegian', 'Awin:GoToSea'."
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "cruise-line-website",
+            "affiliate-feed",
+            "manual-editorial",
+            "press-release"
+          ]
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "affiliateNetwork": {
+          "type": ["string", "null"],
+          "description": "Awin, CJ, Impact, etc. Null when sourceType is not 'affiliate-feed'."
+        },
+        "advertiserName": {
+          "type": ["string", "null"]
+        },
+        "lastImported": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastVerified": {
+          "type": "string",
+          "format": "date"
+        },
+        "confidence": {
+          "$ref": "#/$defs/Confidence"
+        },
+        "termsNotes": {
+          "type": ["string", "null"],
+          "description": "Free-text reminder of source-specific ToS constraints (e.g. 'CJ feed: 24h cache TTL')."
+        }
+      }
+    }
+  }
+}

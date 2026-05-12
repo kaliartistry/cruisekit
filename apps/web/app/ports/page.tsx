@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Anchor, Ship, Star, ChevronRight } from "lucide-react";
+import { Anchor, Ship, Footprints, ChevronRight } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { cn } from "@/lib/utils/cn";
@@ -30,28 +30,25 @@ const FILTER_OPTIONS: { key: FilterKey; label: string }[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Safety stars                                                       */
+/*  Walkability indicator                                              */
+/*                                                                     */
+/*  Reuses the existing 0-10 `safetyRating` value from port data and   */
+/*  presents it as walkability — how easy it is to get around the port */
+/*  area on foot. The underlying number reflects port walkability and  */
+/*  is not an authoritative safety score; treat it as a planning hint  */
+/*  only. For travel-safety guidance, point cruisers to official       */
+/*  advisories (e.g. travel.state.gov).                                */
 /* ------------------------------------------------------------------ */
 
-function SafetyStars({ rating }: { rating: number }) {
-  const fullStars = Math.floor(rating / 2);
-  const halfStar = rating % 2 >= 1;
+function WalkabilityBar({ rating }: { rating: number }) {
+  const pct = Math.max(0, Math.min(10, rating)) * 10;
   return (
-    <div className="flex items-center gap-0.5" title={`Safety: ${rating}/10`}>
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Star
-          key={i}
-          className={cn(
-            "h-3.5 w-3.5",
-            i < fullStars
-              ? "fill-amber-400 text-amber-400"
-              : i === fullStars && halfStar
-                ? "fill-amber-400/50 text-amber-400"
-                : "fill-gray-200 text-gray-200"
-          )}
-        />
-      ))}
-      <span className="ml-1 text-xs text-gray-500">{rating}</span>
+    <div className="flex items-center gap-2" title={`Walkability: ${rating}/10`}>
+      <Footprints className="h-3.5 w-3.5 text-teal" />
+      <div className="h-1.5 w-20 overflow-hidden rounded-full bg-gray-200">
+        <div className="h-full bg-teal" style={{ width: `${pct}%` }} />
+      </div>
+      <span className="text-xs text-gray-500">{rating}/10</span>
     </div>
   );
 }
@@ -108,7 +105,7 @@ function PortCard({ port, index }: { port: PortData; index: number }) {
           </h3>
           <p className="text-sm text-gray-500">{port.country}</p>
           <div className="mt-2">
-            <SafetyStars rating={port.safetyRating} />
+            <WalkabilityBar rating={port.safetyRating} />
           </div>
           <div className="mt-3 flex items-center text-sm font-medium text-teal group-hover:text-teal-dark transition-colors">
             View Guide
@@ -183,8 +180,22 @@ export default function PortsPage() {
               Caribbean Port Day Planner
             </h1>
             <p className="mt-3 max-w-2xl text-base text-gray-600 sm:text-lg">
-              Safety ratings, excursion guides, time zone alerts, and local tips
-              for {PORTS.length} popular Caribbean cruise ports. Plan your perfect port day.
+              Walkability hints, excursion guides, time zone alerts, and local
+              tips for {PORTS.length} popular Caribbean cruise ports. Plan your
+              perfect port day.
+            </p>
+            <p className="mt-2 max-w-2xl text-xs text-gray-500">
+              Safety information should be confirmed against official travel
+              advisories (e.g.{" "}
+              <a
+                href="https://travel.state.gov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-navy"
+              >
+                travel.state.gov
+              </a>
+              ) before your trip.
             </p>
           </div>
         </section>

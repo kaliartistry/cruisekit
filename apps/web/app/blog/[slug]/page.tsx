@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: `${post.title} | CruiseKit Blog`,
+    title: `${post.title} (Blog)`,
     description: post.excerpt,
     keywords: post.tags,
     openGraph: {

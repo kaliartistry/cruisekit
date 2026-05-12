@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — CruiseKit",
+  title: "Privacy Policy",
   description:
     "CruiseKit privacy policy. Learn how we handle your data, what we collect, and what we don't.",
 };

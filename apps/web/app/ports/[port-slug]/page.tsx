@@ -62,8 +62,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!port) return {};
 
   return {
-    title: `${port.name}, ${port.country} Cruise Port Guide — Excursions, Tips & Safety | CruiseKit`,
-    description: `Complete cruise port guide for ${port.name}, ${port.country}. Safety rating ${port.safetyRating}/10, top excursions, free activities, time zone alerts, and transport tips.`,
+    title: `${port.name}, ${port.country} Cruise Port Guide — Excursions, Tips & Logistics`,
+    description: `Complete cruise port guide for ${port.name}, ${port.country}. Walkability, top excursions, free activities, time zone alerts, and transport tips for cruise passengers.`,
     keywords: [
       `${port.name} cruise port`,
       `${port.name} excursions`,
@@ -79,7 +79,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /*  Helper Components                                                  */
 /* ------------------------------------------------------------------ */
 
-function SafetyBadge({ rating }: { rating: number }) {
+/**
+ * Reuses the existing 0-10 `safetyRating` value from port data and presents
+ * it as walkability — how easy this port is to navigate on foot from the
+ * cruise terminal. The underlying score is a port-walkability heuristic and
+ * is not an authoritative safety rating. For travel-safety guidance, cruisers
+ * should consult official advisories (travel.state.gov, FCDO, etc.) — see the
+ * note rendered below the badge.
+ */
+function WalkabilityBadge({ rating }: { rating: number }) {
   const color =
     rating >= 9
       ? "bg-green-100 text-green-800 border-green-200"
@@ -87,7 +95,7 @@ function SafetyBadge({ rating }: { rating: number }) {
         ? "bg-teal/10 text-teal border-teal/30"
         : rating >= 5
           ? "bg-amber-100 text-amber-800 border-amber-200"
-          : "bg-red-100 text-red-800 border-red-200";
+          : "bg-gray-100 text-gray-700 border-gray-200";
 
   return (
     <span
@@ -96,8 +104,8 @@ function SafetyBadge({ rating }: { rating: number }) {
         color
       )}
     >
-      <Shield className="h-4 w-4" />
-      Safety: {rating}/10
+      <Footprints className="h-4 w-4" />
+      Walkability: {rating}/10
     </span>
   );
 }
@@ -204,7 +212,7 @@ export default async function PortDetailPage({ params }: Props) {
                 <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   {port.name}
                 </h1>
-                <SafetyBadge rating={port.safetyRating} />
+                <WalkabilityBadge rating={port.safetyRating} />
               </div>
               <p className="mt-2 text-lg text-white/80">{port.country}</p>
               <div className="mt-3 flex flex-wrap items-center gap-3">
@@ -305,6 +313,23 @@ export default async function PortDetailPage({ params }: Props) {
             </h2>
             <p className="max-w-3xl text-base leading-relaxed text-gray-600">
               {port.overview}
+            </p>
+
+            {/* Walkability advisory — the badge in the hero is a walkability
+                hint, not an authoritative safety rating. */}
+            <p className="mt-4 max-w-3xl text-xs leading-relaxed text-gray-500">
+              The walkability score is a planning hint for navigating the port
+              on foot from the terminal. Safety information should be confirmed
+              against official travel advisories (e.g.{" "}
+              <a
+                href="https://travel.state.gov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-navy"
+              >
+                travel.state.gov
+              </a>
+              ) before your trip.
             </p>
 
             {/* All-aboard math — three plain sentences. No GPS, no ETA —

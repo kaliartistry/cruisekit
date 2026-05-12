@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = line.name;
 
   return {
-    title: `${name} True Cost Calculator — What Your Cruise Really Costs | CruiseKit`,
+    title: `${name} True Cost Calculator — What Your Cruise Really Costs`,
     description: `Calculate the real total cost of a ${name} cruise including gratuities, drink packages, WiFi, excursions, and hidden fees. Free calculator tool.`,
     keywords: [
       `${name} cruise cost`,

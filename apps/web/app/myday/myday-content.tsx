@@ -10,6 +10,7 @@ import {
   ArrowRight,
   TrendingUp,
   Smartphone,
+  AlertTriangle,
 } from "lucide-react";
 
 const fadeUp = {
@@ -156,6 +157,18 @@ export default function MyDayContent() {
             ))}
           </motion.div>
         </motion.div>
+      </section>
+
+      {/* ── Planning-aid disclaimer ── */}
+      <section className="border-y border-amber-200 bg-amber-50">
+        <div className="mx-auto flex max-w-4xl items-start gap-3 px-4 py-4 sm:px-6">
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
+          <p className="text-sm leading-relaxed text-amber-900">
+            <span className="font-semibold">MyDay is a planning aid.</span> It
+            does not track your phone or the ship. Always follow your cruise
+            line&rsquo;s official all-aboard time, posted on the gangway daily.
+          </p>
+        </div>
       </section>
 
       {/* ── Feature Grid ── */}

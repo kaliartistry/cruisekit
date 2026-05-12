@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "About CruiseKit — The Cruise Planning Toolkit",
+  title: "About — The Cruise Planning Toolkit",
   description:
     "CruiseKit is an independent cruise planning toolkit built by a solo developer. Plan smarter with real cost data, port guides, group coordination, and more.",
   keywords: [
