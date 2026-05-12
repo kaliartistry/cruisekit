@@ -91,7 +91,11 @@ export default function HeroSection() {
           transition={{ delay: 0.2 }}
           className="flex items-center justify-center gap-3 sm:gap-5 mb-8 flex-wrap"
         >
-          {["9 cruise lines", "994 sailings", "affiliate-only"].map((text) => (
+          {[
+            "9 cruise lines",
+            "Real total cost",
+            "No booking, no upsell",
+          ].map((text) => (
             <span
               key={text}
               className="text-xs sm:text-sm text-white/75 flex items-center gap-1.5"

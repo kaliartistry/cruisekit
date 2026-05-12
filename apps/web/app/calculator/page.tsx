@@ -5,8 +5,7 @@ import PageHeader from "@/components/layout/page-header";
 import CalculatorWithParams from "./calculator-with-params";
 
 export const metadata: Metadata = {
-  title:
-    "True Cost Calculator — See What Your Cruise Really Costs | CruiseKit",
+  title: "True Cost Calculator — See What Your Cruise Really Costs",
   description:
     "Calculate the true cost of your cruise vacation. Our free calculator reveals hidden fees including gratuities, drink packages, WiFi, excursions, port fees, and more for Royal Caribbean, Carnival, Norwegian, Disney, and all major cruise lines.",
 };

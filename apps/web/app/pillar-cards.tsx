@@ -236,14 +236,17 @@ export default function ContentSections() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/30" />
                     {/* Price badge — cruise line's advertised starting price */}
                     <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow">
-                      <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">Starting from</p>
+                      <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">From</p>
                       <p className="font-price text-xl font-bold text-navy leading-tight">
                         {deal.startingPrice !== null
                           ? `$${deal.startingPrice.toLocaleString()}`
                           : "See site"}
                       </p>
-                      <p className="font-price text-[10px] text-gray-400">
-                        {deal.taxesAndFeesIncluded ? "incl. taxes" : "excl. taxes"}
+                      <p className="font-price text-[9px] text-gray-500 leading-tight">
+                        per person, dbl
+                      </p>
+                      <p className="font-price text-[9px] text-gray-400 leading-tight">
+                        {deal.taxesAndFeesIncluded ? "incl. taxes & fees" : "excl. taxes & fees"}
                       </p>
                     </div>
                     {/* Duration badge */}
@@ -302,6 +305,9 @@ export default function ContentSections() {
                           {confidenceLabel(deal.confidence)}
                         </span>
                       </div>
+                      <p className="mt-1 text-[10px] text-gray-400 leading-snug">
+                        Confirm current price on {deal.cruiseLine}.
+                      </p>
                       <div className="flex items-center justify-between mt-2">
                         {deal.departureDate && (
                           <p className="text-xs text-gray-400">

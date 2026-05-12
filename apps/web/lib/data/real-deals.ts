@@ -26,6 +26,16 @@ export type DealRegion =
 /**
  * Canonical sailings, ready for UI rendering. Records with
  * `confidence === "internal_do_not_publish"` are filtered out at load time.
+ *
+ * QUARANTINE NOTE — DO NOT UNHIDE WITHOUT MANUAL REVERIFICATION.
+ * As of 2026-04-28, four Royal Caribbean sailings (Symphony, Anthem, Wonder,
+ * Independence) are quarantined because their `directLink` URLs redirect to a
+ * generic royalcaribbean.com landing page instead of the intended ship page.
+ * Each quarantined record carries a `termsNotes` explanation in sailings.json.
+ * If you flip any of these back to a publishable confidence tier, manually
+ * follow the directLink in a fresh browser session first and confirm it lands
+ * on the ship page. Restoring a broken link in production is a trust
+ * regression — fix the URL or leave the sailing hidden.
  */
 export const SAILINGS: Sailing[] = (seedSailings as Sailing[]).filter(
   (s) => s.confidence !== "internal_do_not_publish",

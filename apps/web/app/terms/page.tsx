@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — CruiseKit",
+  title: "Terms of Service",
   description:
     "CruiseKit terms of service. Understand the terms under which CruiseKit provides its free cruise planning tools.",
 };

@@ -24,14 +24,23 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_TITLE = "CruiseKit — Everything You Need for Your Cruise";
+const SITE_DESCRIPTION =
+  "The all-in-one cruise planning toolkit. Calculate true costs, plan port days, coordinate your group, manage your cruise day, and optimize your loyalty rewards.";
+const OG_IMAGE = {
+  url: "/cruisekit_square.png",
+  width: 512,
+  height: 512,
+  alt: "CruiseKit — cruise planning toolkit",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://cruisekit.app"),
   title: {
-    default: "CruiseKit — Everything You Need for Your Cruise",
+    default: SITE_TITLE,
     template: "%s | CruiseKit",
   },
-  description:
-    "The all-in-one cruise planning toolkit. Calculate true costs, plan port days, coordinate your group, manage your cruise day, and optimize your loyalty rewards.",
+  description: SITE_DESCRIPTION,
   keywords: [
     "cruise cost calculator",
     "cruise planning",
@@ -44,11 +53,18 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     siteName: "CruiseKit",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     type: "website",
     locale: "en_US",
+    url: "/",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,

@@ -5,7 +5,7 @@ import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 
 export const metadata: Metadata = {
-  title: "FAQ — CruiseKit",
+  title: "FAQ",
   description:
     "Frequently asked questions about CruiseKit, the free cruise planning toolkit. Learn about the True Cost Calculator, MyDay, data accuracy, and more.",
   keywords: [

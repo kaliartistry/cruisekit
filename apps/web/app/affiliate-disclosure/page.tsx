@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure — CruiseKit",
+  title: "Affiliate Disclosure",
   description:
     "FTC-required disclosure of CruiseKit's affiliate relationships, what they mean for our recommendations, and what they don't change.",
 };

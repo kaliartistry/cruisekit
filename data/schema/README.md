@@ -74,3 +74,16 @@ The schema treats feed-sourced and manually-verified records identically — con
 - `apps/web/app/cruises/cruise-search.tsx` — `DealCard` renders source/confidence/CTA from the canonical fields.
 - `apps/web/app/pillar-cards.tsx` — homepage carousel.
 - `shared/models/dart/` — pub package consumed by `CruiseKit-Mobile` once mobile-side wiring lands.
+
+## `deals.json` is currently empty — and that's fine
+
+`data/seed/deals.json` is intentionally an empty array (`[]`). No web UI component renders deals today; the cruise cards on the homepage and `/cruises` page are sourced from `sailings.json`. The empty file is validated for shape only, so prebuild stays green.
+
+**If you wire a "Deals" UI surface in the future:** treat the zero-deal state as a hide-the-section path, not a render-skeletons-forever path. Never synthesize placeholder deal records. Example:
+
+```ts
+const deals = await loadDeals();
+if (deals.length === 0) return null; // hide section
+```
+
+Never display fake or estimated deals — every record in `deals.json` must carry real `source` provenance per the schema.

@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 
 export const metadata: Metadata = {
-  title: "How We Make Money | CruiseKit",
+  title: "How We Make Money",
   description:
     "CruiseKit is affiliate-funded. Here's exactly how we earn, what that means for the recommendations you see, and why it never changes the price you pay.",
 };

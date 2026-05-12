@@ -19,16 +19,28 @@ import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 
 export const metadata: Metadata = {
-  title: "Calculator Methodology | CruiseKit",
+  title: "Calculator Methodology",
   description:
     "How the True Cost Calculator works — where each number comes from, how often it's updated, and what it assumes. Plainly written, fully auditable.",
 };
 
-const LAST_VERIFIED = new Date().toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+/**
+ * Frozen review dates per data category. These are the actual dates the
+ * underlying data files were last hand-verified — do NOT replace with
+ * `new Date()`, because doing so makes the page look freshly verified every
+ * day even when nobody touched the data. When you re-verify a category,
+ * update the matching date below.
+ *
+ * Sources of truth:
+ *   - cruise-line published rates → apps/web/lib/data/cruise-costs.ts
+ *   - sailing prices → data/seed/sailings.json (per-record lastVerified)
+ *   - industry averages → reviewed on the cadence noted under each category
+ */
+const REVIEW_DATES = {
+  cruiseLinePublishedRates: "March 28, 2026",
+  sailingPrices: "April 28, 2026",
+  industryAverages: "March 28, 2026",
+} as const;
 
 type CategoryRow = {
   key: string;
@@ -184,22 +196,49 @@ export default function MethodologyPage() {
             </p>
           </section>
 
-          {/* Last verified */}
+          {/* Last reviewed — frozen per-category dates */}
           <section className="mb-10">
-            <div className="flex items-start gap-3 rounded-xl border border-teal/20 bg-teal/5 p-5">
-              <CalendarCheck className="h-6 w-6 flex-shrink-0 text-teal" />
-              <div>
-                <div className="text-sm font-semibold text-navy">
-                  Last verified: {LAST_VERIFIED}
+            <div className="rounded-xl border border-teal/20 bg-teal/5 p-5">
+              <div className="flex items-start gap-3">
+                <CalendarCheck className="h-6 w-6 flex-shrink-0 text-teal" />
+                <div>
+                  <div className="text-sm font-semibold text-navy">
+                    When each data source was last reviewed
+                  </div>
+                  <p className="mt-1 text-sm text-gray-700 leading-relaxed">
+                    The dates below are when the underlying data files were
+                    last hand-verified against their sources. They do not roll
+                    forward automatically — if a date here looks stale,
+                    that&rsquo;s honest signal that a refresh is due.
+                  </p>
                 </div>
-                <p className="mt-1 text-sm text-gray-700 leading-relaxed">
-                  Every cruise-line published rate in the calculator was
-                  cross-checked against the cruise line&rsquo;s own public
-                  pricing pages on this date. Industry-average numbers were
-                  last reviewed against published aggregate data within the
-                  cadence listed in each category below.
-                </p>
               </div>
+              <dl className="mt-4 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-lg bg-white p-3">
+                  <dt className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+                    Cruise-line published rates
+                  </dt>
+                  <dd className="mt-0.5 text-sm font-semibold text-navy">
+                    {REVIEW_DATES.cruiseLinePublishedRates}
+                  </dd>
+                </div>
+                <div className="rounded-lg bg-white p-3">
+                  <dt className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+                    Sailing prices last checked
+                  </dt>
+                  <dd className="mt-0.5 text-sm font-semibold text-navy">
+                    {REVIEW_DATES.sailingPrices}
+                  </dd>
+                </div>
+                <div className="rounded-lg bg-white p-3">
+                  <dt className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+                    Estimate methodology last reviewed
+                  </dt>
+                  <dd className="mt-0.5 text-sm font-semibold text-navy">
+                    {REVIEW_DATES.industryAverages}
+                  </dd>
+                </div>
+              </dl>
             </div>
           </section>
 

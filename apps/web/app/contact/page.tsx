@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Contact CruiseKit",
+  title: "Contact",
   description:
     "Get in touch with the CruiseKit team. Bug reports, feature requests, partnership inquiries, and general feedback.",
   keywords: [

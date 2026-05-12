@@ -274,8 +274,14 @@ function DealCard({ deal }: { deal: RealDeal }) {
 
   const ctaHref = deal.affiliateLink ?? deal.directLink ?? null;
   const calcHref = `/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2&fare=${deal.fromPrice}${deal.departureDate ? `&month=${new Date(deal.departureDate).getMonth()}` : ""}`;
-  const basisText = priceBasisLabel(deal.priceBasis);
-  const taxText = deal.taxesAndFeesIncluded ? "taxes & fees included" : "taxes & fees not included";
+  const basisText = priceBasisLabel(deal.priceBasis) || "per person, double occupancy";
+  const taxText = deal.taxesAndFeesIncluded
+    ? "Taxes, fees, and gratuities included."
+    : "Excludes taxes, fees, and gratuities.";
+  const checkedDate = formatLastVerified(deal.lastVerified);
+  const priceDisclosure = checkedDate
+    ? `Price last checked ${checkedDate}. Confirm current price on ${deal.cruiseLine}.`
+    : `Price estimate. Confirm current price on ${deal.cruiseLine}.`;
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[var(--shadow-sm)] transition-all hover:shadow-[var(--shadow-lg)] md:flex-row">
@@ -367,7 +373,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
           </p>
           {deal.startingPrice !== null ? (
             <p className="font-price text-2xl font-bold text-navy leading-none">
-              ${deal.startingPrice.toLocaleString()}
+              From ${deal.startingPrice.toLocaleString()}
             </p>
           ) : (
             <p className="text-sm font-semibold text-gray-500">Price on cruise line site</p>
@@ -376,6 +382,9 @@ function DealCard({ deal }: { deal: RealDeal }) {
             <p className="text-[10px] text-gray-500 mt-1">{basisText}</p>
           )}
           <p className="text-[10px] text-gray-400 mt-0.5">{taxText}</p>
+          <p className="text-[10px] text-gray-500 mt-1 leading-snug">
+            {priceDisclosure}
+          </p>
         </div>
 
         <div className="w-full text-right text-[10px] text-gray-500 leading-snug">

@@ -520,13 +520,13 @@
       "advertiserName": null,
       "lastImported": "2026-04-28T00:00:00Z",
       "lastVerified": "2026-04-28",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": null
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Hidden 2026-05-12: departs 2026-05-17 (within NCL booking close-out window). Likely off-sale. Re-evaluate by adding a future sailing rather than restoring this one."
     },
     "sourceUrl": "https://www.ncl.com/cruise-ship/escape",
     "lastVerified": "2026-04-28",
-    "confidence": "itinerary_verified_price_check_required",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-04-28T00:00:00Z",
-    "updatedAt": "2026-04-28T00:00:00Z"
+    "updatedAt": "2026-05-12T00:00:00Z"
   }
 ]

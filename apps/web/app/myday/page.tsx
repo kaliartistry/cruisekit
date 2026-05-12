@@ -4,7 +4,7 @@ import Footer from "@/components/layout/footer";
 import MyDayContent from "./myday-content";
 
 export const metadata: Metadata = {
-  title: "MyDay — Your Cruise Day, Handled | CruiseKit",
+  title: "MyDay — Your Cruise Day, Handled",
   description:
     "Daily schedule with ship time clocks, onboard spend tracker with smart tip prompts, and MyCrew status check-ins. Everything you need during your cruise.",
 };

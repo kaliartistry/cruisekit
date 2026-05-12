@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guide) return {};
 
   return {
-    title: `${guide.title} | CruiseKit`,
+    title: guide.title,
     description: guide.description,
     keywords: [
       guide.title,

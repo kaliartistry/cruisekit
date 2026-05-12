@@ -6,7 +6,7 @@ import HomeGuideTeaser from "./home-guide-teaser";
 import ContentSections from "./pillar-cards";
 
 export const metadata: Metadata = {
-  title: "True Cruise Cost Calculator — See What Your Cruise Really Costs | CruiseKit",
+  title: "True Cruise Cost Calculator — See What Your Cruise Really Costs",
   description:
     "Calculate the true total cost of your cruise including drinks, WiFi, gratuities, and hidden fees. Compare 8 major cruise lines side by side. 100% free.",
 };
