@@ -764,6 +764,7 @@ export default function CruiseSearchPage() {
   const paginatedDeals = filteredDeals.slice(0, page * ITEMS_PER_PAGE);
   const hasMore = page * ITEMS_PER_PAGE < filteredDeals.length;
   const groupedDeals = useMemo(() => groupDealsByMonth(paginatedDeals), [paginatedDeals]);
+  const curatedCollections = useMemo(() => buildCuratedCollections(REAL_DEALS), []);
 
   /* Reset page when filters change */
   const setFiltersAndResetPage: typeof setFilters = useCallback(
@@ -772,6 +773,51 @@ export default function CruiseSearchPage() {
       setPage(1);
     },
     []
+  );
+
+  const resetFilters = useCallback(() => {
+    setFiltersAndResetPage({
+      priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
+      regions: new Set(ALL_REGIONS),
+      cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
+      durations: new Set(DURATION_RANGES.map((r) => r.key)),
+      months: new Set(ALL_MONTHS),
+      departurePorts: new Set(ALL_DEPARTURE_PORTS),
+      ships: new Set(ALL_SHIP_NAMES),
+    });
+    setSort("best");
+  }, [setFiltersAndResetPage]);
+
+  const applyCuratedCollection = useCallback(
+    (key: CuratedCollectionKey) => {
+      const nextFilters: FilterState = {
+        priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
+        regions: new Set(ALL_REGIONS),
+        cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
+        durations: new Set(DURATION_RANGES.map((r) => r.key)),
+        months: new Set(ALL_MONTHS),
+        departurePorts: new Set(ALL_DEPARTURE_PORTS),
+        ships: new Set(ALL_SHIP_NAMES),
+      };
+
+      if (key === "under-500") nextFilters.priceRange = [ABSOLUTE_MIN_PRICE, 500];
+      if (key === "short") nextFilters.durations = new Set(["3-4", "5-6"]);
+      if (key === "seven-night-caribbean") {
+        nextFilters.regions = new Set(["caribbean"]);
+        nextFilters.durations = new Set(["7"]);
+      }
+      if (key === "florida") {
+        nextFilters.departurePorts = new Set(
+          ALL_DEPARTURE_PORTS.filter((port) =>
+            /miami|tampa|fort lauderdale|port canaveral|orlando/i.test(port),
+          ),
+        );
+      }
+
+      setFiltersAndResetPage(nextFilters);
+      setSort(key === "soonest" ? "date-asc" : "best");
+    },
+    [setFiltersAndResetPage],
   );
 
   return (
@@ -813,6 +859,12 @@ export default function CruiseSearchPage() {
 
           {/* ---- Results area ---- */}
           <div className="flex-1 min-w-0">
+            <CuratedCollections
+              collections={curatedCollections}
+              onSelect={applyCuratedCollection}
+              onReset={resetFilters}
+            />
+
             {/* Top bar */}
             <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
               <div className="flex items-center gap-3">
@@ -954,6 +1006,107 @@ export default function CruiseSearchPage() {
         </>
       )}
     </>
+  );
+}
+
+type CuratedCollectionKey =
+  | "best"
+  | "under-500"
+  | "short"
+  | "seven-night-caribbean"
+  | "florida"
+  | "soonest";
+
+interface CuratedCollection {
+  key: CuratedCollectionKey;
+  label: string;
+  subtitle: string;
+  count: number;
+  fromPrice: number | null;
+}
+
+function buildCuratedCollections(deals: RealDeal[]): CuratedCollection[] {
+  const collections: Omit<CuratedCollection, "count" | "fromPrice">[] = [
+    { key: "best", label: "Best picks", subtitle: "Highest ranked fares" },
+    { key: "under-500", label: "Under $500", subtitle: "Lowest entry fares" },
+    { key: "short", label: "Short cruises", subtitle: "3-6 night getaways" },
+    { key: "seven-night-caribbean", label: "7-night Caribbean", subtitle: "Classic weeklong trips" },
+    { key: "florida", label: "Leaving from Florida", subtitle: "Miami, Tampa, Port Canaveral" },
+    { key: "soonest", label: "Soonest departures", subtitle: "Upcoming sailings" },
+  ];
+
+  return collections.map((collection) => {
+    const matches = curatedMatches(collection.key, deals);
+    const prices = matches.map((deal) => deal.fromPrice).filter(Number.isFinite);
+    return {
+      ...collection,
+      count: matches.length,
+      fromPrice: prices.length ? Math.min(...prices) : null,
+    };
+  });
+}
+
+function curatedMatches(key: CuratedCollectionKey, deals: RealDeal[]): RealDeal[] {
+  switch (key) {
+    case "under-500":
+      return deals.filter((deal) => deal.fromPrice <= 500);
+    case "short":
+      return deals.filter((deal) => deal.duration >= 3 && deal.duration <= 6);
+    case "seven-night-caribbean":
+      return deals.filter((deal) => deal.duration === 7 && deal.region === "caribbean");
+    case "florida":
+      return deals.filter((deal) => /miami|tampa|fort lauderdale|port canaveral|orlando/i.test(deal.departurePort));
+    case "soonest":
+      return [...deals].sort((a, b) => String(a.departureDate ?? "").localeCompare(String(b.departureDate ?? ""))).slice(0, 12);
+    case "best":
+    default:
+      return [...deals].sort((a, b) => b.dealScore - a.dealScore || a.fromPrice - b.fromPrice).slice(0, 12);
+  }
+}
+
+function CuratedCollections({
+  collections,
+  onSelect,
+  onReset,
+}: {
+  collections: CuratedCollection[];
+  onSelect: (key: CuratedCollectionKey) => void;
+  onReset: () => void;
+}) {
+  return (
+    <section className="mb-5 rounded-xl border border-gray-200 bg-white p-4 shadow-[var(--shadow-sm)]">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <div>
+          <h2 className="text-sm font-bold text-navy">Start with a curated set</h2>
+          <p className="text-xs text-gray-500">Quick entry points before the full month catalog.</p>
+        </div>
+        <button onClick={onReset} className="text-xs font-semibold text-teal hover:text-teal-dark">
+          All cruises
+        </button>
+      </div>
+      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+        {collections.map((collection) => (
+          <button
+            key={collection.key}
+            onClick={() => onSelect(collection.key)}
+            className="min-w-0 rounded-lg border border-gray-200 px-3 py-3 text-left transition-colors hover:border-teal hover:bg-teal/5"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="truncate text-sm font-bold text-navy">{collection.label}</p>
+                <p className="truncate text-xs text-gray-500">{collection.subtitle}</p>
+              </div>
+              <span className="shrink-0 rounded-md bg-gray-100 px-2 py-1 text-[10px] font-semibold text-gray-600">
+                {collection.count}
+              </span>
+            </div>
+            <p className="mt-2 text-xs font-semibold text-teal">
+              {collection.fromPrice != null ? `From $${collection.fromPrice.toLocaleString()}` : "Browse"}
+            </p>
+          </button>
+        ))}
+      </div>
+    </section>
   );
 }
 
