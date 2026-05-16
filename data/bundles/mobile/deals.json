@@ -2038,5 +2038,285 @@
       "Short cruise",
       "Price check required"
     ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260604-4nkw",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "duration": 4,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Key West & Bimini Beach Club",
+    "fromPrice": 1832,
+    "currency": "USD",
+    "departureDate": "2026-06-04",
+    "ports": [
+      "Miami, Florida",
+      "Key West, Florida",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2606044NKW",
+    "region": "bahamas",
+    "monthKey": "2026-06",
+    "monthLabel": "June 2026",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Grand Cayman & Bimini Beach Club",
+    "fromPrice": 1890,
+    "currency": "USD",
+    "departureDate": "2026-06-08",
+    "ports": [
+      "Miami, Florida",
+      "George Town, Grand Cayman",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606085NGCB",
+    "region": "bahamas",
+    "monthKey": "2026-06",
+    "monthLabel": "June 2026",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260613-5ngcb",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Grand Cayman & Bimini Beach Club",
+    "fromPrice": 2090,
+    "currency": "USD",
+    "departureDate": "2026-06-13",
+    "ports": [
+      "Miami, Florida",
+      "George Town, Grand Cayman",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606135NGCB",
+    "region": "bahamas",
+    "monthKey": "2026-06",
+    "monthLabel": "June 2026",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260618-4nkw",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "duration": 4,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Key West & Bimini Beach Club",
+    "fromPrice": 1752,
+    "currency": "USD",
+    "departureDate": "2026-06-18",
+    "ports": [
+      "Miami, Florida",
+      "Key West, Florida",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2606184NKW",
+    "region": "bahamas",
+    "monthKey": "2026-06",
+    "monthLabel": "June 2026",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20261128-5ncm",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Mexico & Bimini Beach Club",
+    "fromPrice": 1090,
+    "currency": "USD",
+    "departureDate": "2026-11-28",
+    "ports": [
+      "Miami, Florida",
+      "Costa Maya, Mexico",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCM&priceType=perCabin&voyageId=SC2611285NCM",
+    "region": "bahamas",
+    "monthKey": "2026-11",
+    "monthLabel": "November 2026",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20270104-5ncm",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Mexico & Bimini Beach Club",
+    "fromPrice": 1310,
+    "currency": "USD",
+    "departureDate": "2027-01-04",
+    "ports": [
+      "Miami, Florida",
+      "Costa Maya, Mexico",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCM&priceType=perCabin&voyageId=SC2701045NCM",
+    "region": "bahamas",
+    "monthKey": "2027-01",
+    "monthLabel": "January 2027",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20270225-4nkw",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "duration": 4,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Key West & Bimini Beach Club",
+    "fromPrice": 952,
+    "currency": "USD",
+    "departureDate": "2027-02-25",
+    "ports": [
+      "Miami, Florida",
+      "Key West, Florida",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=SC2702254NKW",
+    "region": "bahamas",
+    "monthKey": "2027-02",
+    "monthLabel": "February 2027",
+    "dealScore": 46,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20270403-5ntc",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Grand Turk & Bimini Beach Club",
+    "fromPrice": 1290,
+    "currency": "USD",
+    "departureDate": "2027-04-03",
+    "ports": [
+      "Miami, Florida",
+      "Grand Turk, Turks and Caicos",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=SC2704035NTC",
+    "region": "bahamas",
+    "monthKey": "2027-04",
+    "monthLabel": "April 2027",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-valiant-lady-20271206-5ngcb",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Valiant Lady",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Grand Cayman & Bimini Beach Club",
+    "fromPrice": 1190,
+    "currency": "USD",
+    "departureDate": "2027-12-06",
+    "ports": [
+      "Miami, Florida",
+      "George Town, Grand Cayman",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=VL2712065NGCB",
+    "region": "bahamas",
+    "monthKey": "2027-12",
+    "monthLabel": "December 2027",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "virgin-voyages-valiant-lady-20271211-5npp",
+    "cruiseLine": "Virgin Voyages",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Valiant Lady",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "Dominican Republic & Bimini Beach Club",
+    "fromPrice": 1190,
+    "currency": "USD",
+    "departureDate": "2027-12-11",
+    "ports": [
+      "Miami, Florida",
+      "Puerto Plata, Dominican Republic",
+      "The Beach Club at Bimini, Bahamas",
+      "Miami, Florida"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=VL2712115NPP",
+    "region": "bahamas",
+    "monthKey": "2027-12",
+    "monthLabel": "December 2027",
+    "dealScore": 34,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
   }
 ]

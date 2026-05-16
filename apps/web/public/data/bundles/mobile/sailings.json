@@ -3464,5 +3464,494 @@
         "portName": "Miami, Florida"
       }
     ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260604-4nkw",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "shipId": "resilient-lady",
+    "departureDate": "2026-06-04",
+    "returnDate": "2026-06-08",
+    "duration": 4,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Key West, Florida",
+        "portSlug": "key-west-florida",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "shipId": "resilient-lady",
+    "departureDate": "2026-06-08",
+    "returnDate": "2026-06-13",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260613-5ngcb",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "shipId": "resilient-lady",
+    "departureDate": "2026-06-13",
+    "returnDate": "2026-06-18",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260618-4nkw",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "shipId": "resilient-lady",
+    "departureDate": "2026-06-18",
+    "returnDate": "2026-06-22",
+    "duration": 4,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Key West, Florida",
+        "portSlug": "key-west-florida",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20261128-5ncm",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2026-11-28",
+    "returnDate": "2026-12-03",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20270104-5ncm",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2027-01-04",
+    "returnDate": "2027-01-09",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20270225-4nkw",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2027-02-25",
+    "returnDate": "2027-03-01",
+    "duration": 4,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Key West, Florida",
+        "portSlug": "key-west-florida",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20270403-5ntc",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2027-04-03",
+    "returnDate": "2027-04-08",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Grand Turk, Turks and Caicos",
+        "portSlug": "grand-turk-turks-and-caicos",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-valiant-lady-20271206-5ngcb",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Valiant Lady",
+    "shipId": "valiant-lady",
+    "departureDate": "2027-12-06",
+    "returnDate": "2027-12-11",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-valiant-lady-20271211-5npp",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Valiant Lady",
+    "shipId": "valiant-lady",
+    "departureDate": "2027-12-11",
+    "returnDate": "2027-12-16",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
   }
 ]

@@ -279,9 +279,11 @@ function DealCard({ deal }: { deal: RealDeal }) {
   const priceDisclosure = checkedDate
     ? `Price last checked ${checkedDate}. Confirm current price on ${deal.cruiseLine}.`
     : `Price estimate. Confirm current price on ${deal.cruiseLine}.`;
+  const displayedPrice = deal.startingPrice ?? deal.fromPrice;
+  const visiblePorts = deal.ports.slice(0, 4);
 
   return (
-    <div className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[var(--shadow-sm)] transition-all hover:shadow-[var(--shadow-lg)] md:flex-row">
+    <div className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[var(--shadow-sm)] transition-all hover:border-teal/40 hover:shadow-[var(--shadow-lg)] md:flex-row">
       {/* Image */}
       <div className="relative h-48 w-full shrink-0 overflow-hidden md:h-auto md:w-[220px]">
         <Image
@@ -316,11 +318,27 @@ function DealCard({ deal }: { deal: RealDeal }) {
       {/* Content */}
       <div className="flex flex-1 flex-col justify-between p-4 md:p-5">
         <div>
-          <h3 className="font-bold text-navy group-hover:text-teal transition-colors">
+          <div className="mb-2 flex flex-wrap items-center gap-2">
+            <span className="rounded-md bg-teal/10 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-teal">
+              {deal.duration} nights
+            </span>
+            <span
+              className={cn(
+                "rounded-md px-2 py-1 text-[10px] font-bold uppercase tracking-wide",
+                confidenceBadgeClass(deal.confidence),
+              )}
+            >
+              {confidenceLabel(deal.confidence)}
+            </span>
+          </div>
+
+          <h3 className="text-base font-bold leading-tight text-navy transition-colors group-hover:text-teal">
             {deal.itineraryTitle}
           </h3>
 
-          <p className="mt-1 text-xs text-gray-500">
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600">
+            <span className="inline-flex items-center gap-1.5">
+              <CalendarDays className="h-3.5 w-3.5 text-gray-400" />
             {deal.departureDate
               ? new Date(deal.departureDate).toLocaleDateString("en-US", {
                   month: "long",
@@ -328,11 +346,11 @@ function DealCard({ deal }: { deal: RealDeal }) {
                   year: "numeric",
                 })
               : "Multiple dates available"}
-          </p>
-
-          <div className="mt-2 flex items-center gap-1.5 text-xs text-gray-500">
-            <MapPin className="h-3.5 w-3.5 text-gray-400 shrink-0" />
-            <span>Departs from {deal.departurePort}</span>
+            </span>
+            <span className="inline-flex min-w-0 items-center gap-1.5">
+              <MapPin className="h-3.5 w-3.5 shrink-0 text-gray-400" />
+              <span className="truncate">From {deal.departurePort}</span>
+            </span>
           </div>
 
           <div className="mt-2 flex items-center gap-2">
@@ -343,17 +361,20 @@ function DealCard({ deal }: { deal: RealDeal }) {
           </div>
 
           {deal.ports.length > 0 && (
-            <div className="mt-3 flex flex-wrap gap-1">
-              {deal.ports.slice(0, 6).map((port) => (
+            <div className="mt-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2">
+              <p className="mb-1 text-[10px] font-bold uppercase tracking-wide text-gray-400">Ports</p>
+              <div className="flex flex-wrap gap-1">
+              {visiblePorts.map((port) => (
                 <Badge key={port} variant="outline" className="text-[10px]">
                   {getPortWithCountry(port)}
                 </Badge>
               ))}
-              {deal.ports.length > 6 && (
+              {deal.ports.length > visiblePorts.length && (
                 <span className="text-[10px] text-gray-400 self-center">
-                  +{deal.ports.length - 6} more
+                  +{deal.ports.length - visiblePorts.length} more
                 </span>
               )}
+              </div>
             </div>
           )}
 
@@ -376,14 +397,14 @@ function DealCard({ deal }: { deal: RealDeal }) {
           own advertised starting price (no synthetic "real cost" estimate
           here — the TCO breakdown lives in /calculator). Source row is
           required on every visible card per the canonical schema. */}
-      <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[220px]">
+      <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 bg-gray-50/60 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[235px]">
         <div className="text-right">
           <p className="text-[10px] uppercase tracking-wider text-gray-400">
-            Starting from
+            Advertised from
           </p>
-          {deal.startingPrice !== null ? (
+          {displayedPrice !== null ? (
             <p className="font-price text-2xl font-bold text-navy leading-none">
-              From ${deal.startingPrice.toLocaleString()}
+              ${displayedPrice.toLocaleString()}
             </p>
           ) : (
             <p className="text-sm font-semibold text-gray-500">Price on cruise line site</p>
@@ -392,25 +413,12 @@ function DealCard({ deal }: { deal: RealDeal }) {
             <p className="text-[10px] text-gray-500 mt-1">{basisText}</p>
           )}
           <p className="text-[10px] text-gray-400 mt-0.5">{taxText}</p>
-          <p className="text-[10px] text-gray-500 mt-1 leading-snug">
-            {priceDisclosure}
-          </p>
         </div>
 
-        <div className="w-full text-right text-[10px] text-gray-500 leading-snug">
-          <span className="block">
-            Source:{" "}
-            <span className="font-medium text-gray-700">{deal.source}</span>
-          </span>
+        <div className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-right text-[10px] leading-snug text-gray-500">
+          <span className="block font-medium text-gray-700">Source: {deal.source}</span>
           <span className="block">Checked: {formatLastVerified(deal.lastVerified)}</span>
-          <span
-            className={cn(
-              "mt-1 inline-block rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide",
-              confidenceBadgeClass(deal.confidence),
-            )}
-          >
-            {confidenceLabel(deal.confidence)}
-          </span>
+          <span className="mt-1 block">{priceDisclosure}</span>
         </div>
 
         <div className="flex flex-col gap-2 w-full md:w-auto">
@@ -421,7 +429,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center rounded-lg bg-teal px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-teal-dark"
             >
-              Check current price
+              Check live price
             </a>
           ) : null}
           <Button asChild size="sm" variant="outline" className="w-full">
@@ -813,6 +821,7 @@ export default function CruiseSearchPage() {
           ),
         );
       }
+      if (key === "virgin-voyages") nextFilters.cruiseLines = new Set(["virgin-voyages"]);
 
       setFiltersAndResetPage(nextFilters);
       setSort(key === "soonest" ? "date-asc" : "best");
@@ -1015,6 +1024,7 @@ type CuratedCollectionKey =
   | "short"
   | "seven-night-caribbean"
   | "florida"
+  | "virgin-voyages"
   | "soonest";
 
 interface CuratedCollection {
@@ -1032,6 +1042,7 @@ function buildCuratedCollections(deals: RealDeal[]): CuratedCollection[] {
     { key: "short", label: "Short cruises", subtitle: "3-6 night getaways" },
     { key: "seven-night-caribbean", label: "7-night Caribbean", subtitle: "Classic weeklong trips" },
     { key: "florida", label: "Leaving from Florida", subtitle: "Miami, Tampa, Port Canaveral" },
+    { key: "virgin-voyages", label: "Virgin Voyages", subtitle: "Adults-only sailings" },
     { key: "soonest", label: "Soonest departures", subtitle: "Upcoming sailings" },
   ];
 
@@ -1056,6 +1067,8 @@ function curatedMatches(key: CuratedCollectionKey, deals: RealDeal[]): RealDeal[
       return deals.filter((deal) => deal.duration === 7 && deal.region === "caribbean");
     case "florida":
       return deals.filter((deal) => /miami|tampa|fort lauderdale|port canaveral|orlando/i.test(deal.departurePort));
+    case "virgin-voyages":
+      return deals.filter((deal) => deal.cruiseLineId === "virgin-voyages");
     case "soonest":
       return [...deals].sort((a, b) => String(a.departureDate ?? "").localeCompare(String(b.departureDate ?? ""))).slice(0, 12);
     case "best":

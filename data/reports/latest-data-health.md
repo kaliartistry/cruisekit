@@ -1,28 +1,29 @@
 # CruiseKit Data Health Report
 
-Generated: 2026-05-16T05:08:11.001Z
+Generated: 2026-05-16T13:36:55.834Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
-| Seed sailings | 87 |
-| Public sailings | 77 |
+| Seed sailings | 97 |
+| Public sailings | 87 |
 | Seed deals | 0 |
 | Public deals | 0 |
-| Mobile sailings | 77 |
-| Mobile deals | 77 |
+| Mobile sailings | 87 |
+| Mobile deals | 87 |
 
 ## Seed Sailings By Cruise Line
 
 - carnival: 47
 - norwegian: 36
 - royal-caribbean: 4
+- virgin-voyages: 10
 
 ## Seed Sailings By Confidence
 
 - internal_do_not_publish: 10
-- itinerary_verified_price_check_required: 77
+- itinerary_verified_price_check_required: 87
 
 ## Blockers
 

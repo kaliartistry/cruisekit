@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-05-16T13:36:52.629Z",
+  "provider": "virgin-voyages",
+  "runId": "2026-05-16T13-36-52-629Z",
+  "mode": "staging-only",
+  "source": {
+    "url": "https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?currencyCode=USD&priceType=perCabin",
+    "cards": 18
+  },
+  "options": {
+    "maxCards": 18,
+    "maxScrolls": 6
+  },
+  "staging": {
+    "sailings": 33,
+    "deals": 0,
+    "schemaErrors": 0,
+    "minPrice": 952,
+    "maxPrice": 4884
+  },
+  "blockers": [],
+  "warnings": [
+    "Staging records are not production records.",
+    "Virgin prices are captured as per-cabin advertised fares with taxes/fees still check-required.",
+    "Review exact booking URL, cabin category, promotional terms, price basis, taxes/fees, and availability before promotion."
+  ],
+  "paths": {
+    "raw": "data/ingest/raw/virgin-voyages/2026-05-16T13-36-52-629Z",
+    "staging": "data/ingest/staging/virgin-voyages/2026-05-16T13-36-52-629Z",
+    "report": "data/ingest/reports/virgin-voyages/2026-05-16T13-36-52-629Z.json"
+  }
+}
