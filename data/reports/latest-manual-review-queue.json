@@ -1,0 +1,228 @@
+{
+  "generatedAt": "2026-05-16T02:21:04.596Z",
+  "mode": "manual-review-no-api",
+  "counts": {
+    "watchlistEntries": 9,
+    "seedSailings": 17,
+    "byLine": {
+      "royal-caribbean": 4,
+      "carnival": 7,
+      "norwegian": 6
+    },
+    "byConfidence": {
+      "internal_do_not_publish": 10,
+      "itinerary_verified_price_check_required": 7
+    }
+  },
+  "tasks": [
+    {
+      "id": "celebrity-official-deals",
+      "provider": "celebritycruises.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "celebrity",
+      "label": "Celebrity official cruise search",
+      "url": "https://www.celebritycruises.com/cruises",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "high",
+      "currentSeedSailings": 0,
+      "currentPublicSailings": 0,
+      "currentHiddenSailings": 0,
+      "existingIds": []
+    },
+    {
+      "id": "disney-official-deals",
+      "provider": "disneycruise.disney.go.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "disney",
+      "label": "Disney official cruise search",
+      "url": "https://disneycruise.disney.go.com/cruises-destinations/list/",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "high",
+      "currentSeedSailings": 0,
+      "currentPublicSailings": 0,
+      "currentHiddenSailings": 0,
+      "existingIds": []
+    },
+    {
+      "id": "holland-america-official-deals",
+      "provider": "hollandamerica.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "holland-america",
+      "label": "Holland America official cruise search",
+      "url": "https://www.hollandamerica.com/en/us/find-a-cruise",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "high",
+      "currentSeedSailings": 0,
+      "currentPublicSailings": 0,
+      "currentHiddenSailings": 0,
+      "existingIds": []
+    },
+    {
+      "id": "msc-official-deals",
+      "provider": "msccruisesusa.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "msc",
+      "label": "MSC official cruise search",
+      "url": "https://www.msccruisesusa.com/cruise-deals",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "high",
+      "currentSeedSailings": 0,
+      "currentPublicSailings": 0,
+      "currentHiddenSailings": 0,
+      "existingIds": []
+    },
+    {
+      "id": "princess-official-deals",
+      "provider": "princess.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "princess",
+      "label": "Princess official cruise search",
+      "url": "https://www.princess.com/cruise-search/",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "high",
+      "currentSeedSailings": 0,
+      "currentPublicSailings": 0,
+      "currentHiddenSailings": 0,
+      "existingIds": []
+    },
+    {
+      "id": "royal-caribbean-official-deals",
+      "provider": "royalcaribbean.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "royal-caribbean",
+      "label": "Royal Caribbean official cruise deals/search",
+      "url": "https://www.royalcaribbean.com/cruises",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "high",
+      "currentSeedSailings": 4,
+      "currentPublicSailings": 0,
+      "currentHiddenSailings": 4,
+      "existingIds": [
+        "royal-caribbean-anthem-of-the-seas-20260815",
+        "royal-caribbean-independence-of-the-seas-20260524",
+        "royal-caribbean-symphony-of-the-seas-20260712",
+        "royal-caribbean-wonder-of-the-seas-20260906"
+      ]
+    },
+    {
+      "id": "virgin-voyages-official-deals",
+      "provider": "virginvoyages.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "virgin-voyages",
+      "label": "Virgin Voyages official cruise search",
+      "url": "https://www.virginvoyages.com/book/voyage-planner/find-a-voyage",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "high",
+      "currentSeedSailings": 0,
+      "currentPublicSailings": 0,
+      "currentHiddenSailings": 0,
+      "existingIds": []
+    },
+    {
+      "id": "norwegian-official-deals",
+      "provider": "ncl.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "norwegian",
+      "label": "Norwegian official cruise search",
+      "url": "https://www.ncl.com/cruise-deals",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "medium",
+      "currentSeedSailings": 6,
+      "currentPublicSailings": 2,
+      "currentHiddenSailings": 4,
+      "existingIds": [
+        "norwegian-encore-20260823",
+        "norwegian-escape-20260517",
+        "norwegian-getaway-20261004",
+        "norwegian-getaway-20261116",
+        "norwegian-joy-20260712",
+        "norwegian-joy-20260727"
+      ]
+    },
+    {
+      "id": "carnival-official-deals",
+      "provider": "carnival.com",
+      "sourceType": "cruise-line-website",
+      "cruiseLine": "carnival",
+      "label": "Carnival official cruise search",
+      "url": "https://www.carnival.com/cruise-search",
+      "cadence": "weekly",
+      "reviewFields": [
+        "sailing dates",
+        "itinerary",
+        "starting price",
+        "taxes and fees",
+        "direct link"
+      ],
+      "priority": "normal",
+      "currentSeedSailings": 7,
+      "currentPublicSailings": 5,
+      "currentHiddenSailings": 2,
+      "existingIds": [
+        "carnival-celebration-20260802",
+        "carnival-celebration-20261206",
+        "carnival-magic-20260628",
+        "carnival-paradise-20260920",
+        "carnival-paradise-20261101",
+        "carnival-venezia-20260920",
+        "carnival-venezia-20260924"
+      ]
+    }
+  ]
+}

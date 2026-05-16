@@ -2,8 +2,14 @@
 # Check Awin programme approval status for CruiseKit
 # Usage: ./scripts/check-awin-status.sh
 
-API_KEY="64938435-2778-41f7-a8d7-8e21d05adf2f"
-PUB_ID="2850709"
+API_KEY="${AWIN_API_KEY:-}"
+PUB_ID="${AWIN_PUBLISHER_ID:-2850709}"
+
+if [ -z "$API_KEY" ]; then
+  echo "Missing AWIN_API_KEY environment variable."
+  echo "Usage: AWIN_API_KEY=xxx ./scripts/check-awin-status.sh"
+  exit 1
+fi
 
 echo "=== CruiseKit Awin Programme Status ==="
 echo ""

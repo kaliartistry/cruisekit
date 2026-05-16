@@ -1,0 +1,141 @@
+[
+  {
+    "id": "carnival-paradise-20260920",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "itineraryTitle": "4-Night Western Caribbean from Tampa",
+    "fromPrice": 309,
+    "currency": "USD",
+    "departureDate": "2026-09-20",
+    "ports": [
+      "Cozumel, Mexico"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/cruise-ships/carnival-paradise",
+    "region": "caribbean"
+  },
+  {
+    "id": "carnival-celebration-20260802",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Celebration",
+    "duration": 7,
+    "departurePort": "Miami, FL",
+    "itineraryTitle": "7-Night Eastern Caribbean from Miami",
+    "fromPrice": 729,
+    "currency": "USD",
+    "departureDate": "2026-08-02",
+    "ports": [
+      "Celebration Key, Bahamas",
+      "Grand Turk, Turks & Caicos",
+      "San Juan, Puerto Rico",
+      "Amber Cove, Dominican Republic"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/cruise-ships/carnival-celebration",
+    "region": "caribbean"
+  },
+  {
+    "id": "carnival-paradise-20261101",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "itineraryTitle": "4-Day Western Caribbean from Tampa, FL",
+    "fromPrice": 249,
+    "currency": "USD",
+    "departureDate": "2026-11-01",
+    "ports": [
+      "Cozumel, Mexico"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=21641&sailDate=11012026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "caribbean"
+  },
+  {
+    "id": "carnival-celebration-20261206",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Celebration",
+    "duration": 7,
+    "departurePort": "Miami, FL",
+    "itineraryTitle": "7-Day Eastern Caribbean from Miami, FL",
+    "fromPrice": 469,
+    "currency": "USD",
+    "departureDate": "2026-12-06",
+    "ports": [
+      "Nassau, Bahamas",
+      "RelaxAway, Half Moon Cay™",
+      "Amber Cove, Dominican Republic",
+      "Celebration Key™"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=MIA&itinCode=EB4&durDays=7&shipCode=CB&subRegionCode=CE&sailingID=20971&sailDate=12062026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "caribbean"
+  },
+  {
+    "id": "carnival-venezia-20260924",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Venezia",
+    "duration": 5,
+    "departurePort": "Manhattan, New York City, NY",
+    "itineraryTitle": "5-Day Bermuda from Manhattan, New York City, NY",
+    "fromPrice": 509,
+    "currency": "USD",
+    "departureDate": "2026-09-24",
+    "ports": [
+      "Bermuda"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=NYC&itinCode=BR1&durDays=5&shipCode=VX&subRegionCode=BM&sailingID=22834&sailDate=09242026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "bermuda"
+  },
+  {
+    "id": "norwegian-getaway-20261116",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+    "fromPrice": 909,
+    "currency": "USD",
+    "departureDate": "2026-11-16",
+    "ports": [
+      "Great Stirrup Cay, Bahamas",
+      "St. Thomas, US Virgin Islands",
+      "San Juan, Puerto Rico",
+      "Puerto Plata, Dominican Republic"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.ncl.com/vacation-builder?itineraryCode=GETAWAY7PCVNPISTTSJUPOPPCV",
+    "region": "caribbean"
+  },
+  {
+    "id": "norwegian-joy-20260727",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Joy",
+    "duration": 9,
+    "departurePort": "Seattle, Washington",
+    "itineraryTitle": "9-Day Alaska Round-Trip Seattle: Ketchikan & Juneau",
+    "fromPrice": 1169,
+    "currency": "USD",
+    "departureDate": "2026-07-27",
+    "ports": [
+      "Juneau, Alaska",
+      "Icy Strait Point, Alaska",
+      "Victoria, British Columbia",
+      "Sitka, Alaska",
+      "Ketchikan (Ward Cove), Alaska"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.ncl.com/vacation-builder?itineraryCode=JOY9SEASITJNUICYKTNVICSEA",
+    "region": "alaska"
+  }
+]

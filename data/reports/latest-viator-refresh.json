@@ -1,0 +1,6 @@
+{
+  "generatedAt": "2026-05-16T01:36:07.313Z",
+  "provider": "viator",
+  "status": "skipped",
+  "reason": "Missing VIATOR_API_KEY environment variable."
+}

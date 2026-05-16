@@ -1,0 +1,367 @@
+[
+  {
+    "id": "carnival-paradise-20260920",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-09-20",
+    "returnDate": "2026-09-24",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-celebration-20260802",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Celebration",
+    "shipId": "carnival-celebration",
+    "departureDate": "2026-08-02",
+    "returnDate": "2026-08-09",
+    "duration": 7,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Celebration Key, Bahamas",
+        "portSlug": "celebration-key-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Grand Turk, Turks & Caicos",
+        "portSlug": "grand-turk-turks-and-caicos",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "San Juan, Puerto Rico",
+        "portSlug": "san-juan-puerto-rico",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Amber Cove, Dominican Republic",
+        "portSlug": "amber-cove-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-paradise-20261101",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-11-01",
+    "returnDate": "2026-11-05",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-celebration-20261206",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Celebration",
+    "shipId": "carnival-celebration",
+    "departureDate": "2026-12-06",
+    "returnDate": "2026-12-13",
+    "duration": 7,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Nassau, Bahamas",
+        "portSlug": "nassau-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "RelaxAway, Half Moon Cay™",
+        "portSlug": "relaxaway-half-moon-cay",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Amber Cove, Dominican Republic",
+        "portSlug": "amber-cove-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-venezia-20260924",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Venezia",
+    "shipId": "carnival-venezia",
+    "departureDate": "2026-09-24",
+    "returnDate": "2026-09-29",
+    "duration": 5,
+    "departurePort": "Manhattan, New York City, NY",
+    "region": "bermuda",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Manhattan, New York City, NY"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bermuda",
+        "portSlug": "bermuda",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Manhattan, New York City, NY"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-getaway-20261116",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2026-11-16",
+    "returnDate": "2026-11-23",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "San Juan, Puerto Rico",
+        "portSlug": "san-juan-puerto-rico",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-joy-20260727",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Joy",
+    "shipId": "norwegian-joy",
+    "departureDate": "2026-07-27",
+    "returnDate": "2026-08-05",
+    "duration": 9,
+    "departurePort": "Seattle, Washington",
+    "region": "alaska",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seattle, Washington"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Juneau, Alaska",
+        "portSlug": "juneau-alaska",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Icy Strait Point, Alaska",
+        "portSlug": "icy-strait-point-alaska",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Victoria, British Columbia",
+        "portSlug": "victoria-british-columbia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Sitka, Alaska",
+        "portSlug": "sitka-alaska",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ketchikan (Ward Cove), Alaska",
+        "portSlug": "ketchikan-ward-cove-alaska",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Seattle, Washington"
+      }
+    ]
+  }
+]

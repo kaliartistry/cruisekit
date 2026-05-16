@@ -1,15 +1,14 @@
 /**
  * Canonical Sailing loader.
  *
- * Reads /data/seed/sailings.json (validated against /data/schema/sailing.schema.json
- * by `pnpm run schema:validate`), filters out internal_do_not_publish records, and
- * exposes the array as `SAILINGS`.
+ * Reads /data/bundles/canonical/sailings.json (generated from validated seed
+ * records by `pnpm run data:build`) and exposes the array as `SAILINGS`.
  *
  * Compatibility: also exports `REAL_DEALS` and helpers (`getTopDealsByRegion`,
  * `DEAL_STATS`, etc.) under the legacy `RealDeal` shape so existing card UI keeps
  * compiling. New code should import `SAILINGS` and use the canonical fields.
  */
-import seedSailings from "../../../../data/seed/sailings.json";
+import publicSailings from "../../../../data/bundles/canonical/sailings.json";
 import type { Sailing } from "../../../../shared/models/ts/sailing";
 
 export type DealRegion =
@@ -25,21 +24,16 @@ export type DealRegion =
 
 /**
  * Canonical sailings, ready for UI rendering. Records with
- * `confidence === "internal_do_not_publish"` are filtered out at load time.
+ * `confidence === "internal_do_not_publish"` are excluded by the bundle build.
  *
  * QUARANTINE NOTE — DO NOT UNHIDE WITHOUT MANUAL REVERIFICATION.
  * As of 2026-04-28, four Royal Caribbean sailings (Symphony, Anthem, Wonder,
- * Independence) are quarantined because their `directLink` URLs redirect to a
- * generic royalcaribbean.com landing page instead of the intended ship page.
- * Each quarantined record carries a `termsNotes` explanation in sailings.json.
- * If you flip any of these back to a publishable confidence tier, manually
- * follow the directLink in a fresh browser session first and confirm it lands
- * on the ship page. Restoring a broken link in production is a trust
- * regression — fix the URL or leave the sailing hidden.
+ * Independence) are quarantined in the seed data because their `directLink`
+ * URLs redirect to a generic royalcaribbean.com landing page instead of the
+ * intended ship page. If you flip any of these back to a publishable confidence
+ * tier, manually follow the directLink in a fresh browser session first.
  */
-export const SAILINGS: Sailing[] = (seedSailings as Sailing[]).filter(
-  (s) => s.confidence !== "internal_do_not_publish",
-);
+export const SAILINGS: Sailing[] = publicSailings as Sailing[];
 
 /**
  * Legacy view used by the existing DealCard / pillar carousel. Each property is
