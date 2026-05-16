@@ -1,6 +1,6 @@
 # Virgin Voyages Staging Import Report
 
-Generated: 2026-05-16T13:36:52.629Z
+Generated: 2026-05-16T20:06:34.289Z
 
 Mode: staging-only
 
@@ -8,8 +8,8 @@ Mode: staging-only
 
 | Metric | Count |
 | --- | ---: |
-| Source package cards sampled | 18 |
-| Staged sailings | 33 |
+| Source package cards sampled | 24 |
+| Staged sailings | 39 |
 | Schema errors | 0 |
 
 ## Price Observation

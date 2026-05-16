@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-16T05:07:31.928Z",
+  "generatedAt": "2026-05-16T20:06:34.115Z",
   "provider": "norwegian",
-  "runId": "2026-05-16T05-07-31-928Z",
+  "runId": "2026-05-16T20-06-34-114Z",
   "mode": "staging-only",
   "source": "https://www.ncl.com/api/v2/vacations/search",
   "destination": "CARIBBEAN",
@@ -40,8 +40,8 @@
     "Review exact booking URL, price basis, taxes/fees, and terms before promotion."
   ],
   "paths": {
-    "raw": "data/ingest/raw/norwegian/2026-05-16T05-07-31-928Z",
-    "staging": "data/ingest/staging/norwegian/2026-05-16T05-07-31-928Z",
-    "report": "data/ingest/reports/norwegian/2026-05-16T05-07-31-928Z.json"
+    "raw": "data/ingest/raw/norwegian/2026-05-16T20-06-34-114Z",
+    "staging": "data/ingest/staging/norwegian/2026-05-16T20-06-34-114Z",
+    "report": "data/ingest/reports/norwegian/2026-05-16T20-06-34-114Z.json"
   }
 }

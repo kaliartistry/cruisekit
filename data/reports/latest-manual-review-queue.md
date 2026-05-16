@@ -1,6 +1,6 @@
 # CruiseKit Manual Review Queue
 
-Generated: 2026-05-16T02:21:04.596Z
+Generated: 2026-05-16T20:06:34.033Z
 
 This is the temporary no-API workflow. Use browser/manual verification against
 official cruise-line sources, then update canonical seed records only when the
@@ -11,7 +11,7 @@ source page can be cited.
 | Metric | Count |
 | --- | ---: |
 | Watchlist entries | 9 |
-| Seed sailings | 17 |
+| Seed sailings | 97 |
 
 ## Tasks
 
@@ -81,36 +81,36 @@ source page can be cited.
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
-### 7. Virgin Voyages official cruise search
+### 7. Carnival official cruise search
 
-- Priority: high
-- Cruise line: virgin-voyages
-- Source: https://www.virginvoyages.com/book/voyage-planner/find-a-voyage
-- Current seed sailings: 0
-- Current public sailings: 0
-- Current hidden sailings: 0
+- Priority: normal
+- Cruise line: carnival
+- Source: https://www.carnival.com/cruise-search
+- Current seed sailings: 47
+- Current public sailings: 45
+- Current hidden sailings: 2
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
 ### 8. Norwegian official cruise search
 
-- Priority: medium
+- Priority: normal
 - Cruise line: norwegian
 - Source: https://www.ncl.com/cruise-deals
-- Current seed sailings: 6
-- Current public sailings: 2
+- Current seed sailings: 36
+- Current public sailings: 32
 - Current hidden sailings: 4
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
-### 9. Carnival official cruise search
+### 9. Virgin Voyages official cruise search
 
 - Priority: normal
-- Cruise line: carnival
-- Source: https://www.carnival.com/cruise-search
-- Current seed sailings: 7
-- Current public sailings: 5
-- Current hidden sailings: 2
+- Cruise line: virgin-voyages
+- Source: https://www.virginvoyages.com/book/voyage-planner/find-a-voyage
+- Current seed sailings: 10
+- Current public sailings: 10
+- Current hidden sailings: 0
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-16T04:56:56.585Z",
+  "generatedAt": "2026-05-16T20:07:05.695Z",
   "provider": "royal-caribbean",
-  "runId": "2026-05-16T04-56-56-584Z",
+  "runId": "2026-05-16T20-07-05-695Z",
   "mode": "staging-only",
   "source": "https://www.royalcaribbean.com/cruises?destinationIds=CARIB",
   "rawResponses": 0,
@@ -21,8 +21,8 @@
     "Review exact booking URL, price basis, taxes/fees, and terms before promotion."
   ],
   "paths": {
-    "raw": "data/ingest/raw/royal-caribbean/2026-05-16T04-56-56-584Z",
-    "staging": "data/ingest/staging/royal-caribbean/2026-05-16T04-56-56-584Z",
-    "report": "data/ingest/reports/royal-caribbean/2026-05-16T04-56-56-584Z.json"
+    "raw": "data/ingest/raw/royal-caribbean/2026-05-16T20-07-05-695Z",
+    "staging": "data/ingest/staging/royal-caribbean/2026-05-16T20-07-05-695Z",
+    "report": "data/ingest/reports/royal-caribbean/2026-05-16T20-07-05-695Z.json"
   }
 }
