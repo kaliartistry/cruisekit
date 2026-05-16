@@ -105,11 +105,14 @@ The first source-specific staging importer is Carnival:
 
 ```bash
 pnpm run data:ingest:carnival
+pnpm run data:review:carnival
 ```
 
 It reads Carnival's official public cruise search JSON, stores raw snapshots,
 writes canonical-shaped staging sailings, and saves observed cabin prices in a
 separate `observed-prices.json` file. It does not edit production seed data.
+The review command compares staged Carnival records against current seed records
+and writes `data/reports/latest-carnival-staging-review.md`.
 
 ## Publish command
 

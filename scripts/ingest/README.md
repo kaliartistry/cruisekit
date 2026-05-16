@@ -19,6 +19,7 @@ Promotion to public data happens in a separate review step.
   products are port-page excursion content, not canonical cruise sailings.
 - `carnival`: `pnpm run data:ingest:carnival` writes staging-only Carnival
   sailing candidates from Carnival's official public cruise search JSON.
-  Promotion remains manual/review-gated.
+  Run `pnpm run data:review:carnival` afterward to compare staged records with
+  canonical seed records. Promotion remains manual/review-gated.
 - Other cruise sailing providers: pending approved affiliate/direct feed access
   or source-specific staging importers.
