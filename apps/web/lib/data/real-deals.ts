@@ -65,6 +65,10 @@ export interface RealDeal {
   startingPrice: number | null;
   affiliateLink: string | null;
   directLink: string;
+  monthKey: string | null;
+  monthLabel: string | null;
+  dealScore: number;
+  badges: string[];
 }
 
 const CRUISE_LINE_DISPLAY: Record<string, string> = {
@@ -108,6 +112,7 @@ function toLegacyRegion(region: Sailing["destinationRegion"]): DealRegion {
 
 function toRealDeal(s: Sailing): RealDeal {
   const cruiseLineId = s.cruiseLine;
+  const monthKey = s.departureDate.slice(0, 7);
   return {
     id: s.id,
     cruiseLine: CRUISE_LINE_DISPLAY[cruiseLineId] ?? cruiseLineId,
@@ -132,12 +137,50 @@ function toRealDeal(s: Sailing): RealDeal {
     startingPrice: s.startingPrice,
     affiliateLink: s.affiliateLink ?? null,
     directLink: s.directLink,
+    monthKey,
+    monthLabel: formatMonth(monthKey),
+    dealScore: dealScore(s),
+    badges: dealBadges(s),
   };
+}
+
+function formatMonth(monthKey: string): string {
+  const [year, month] = monthKey.split("-").map(Number);
+  return new Date(year, month - 1, 1).toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
+}
+
+function dealScore(s: Sailing): number {
+  let score = 0;
+  const price = s.startingPrice;
+  if (Number.isFinite(price)) {
+    if ((price ?? 0) <= 350) score += 45;
+    else if ((price ?? 0) <= 500) score += 35;
+    else if ((price ?? 0) <= 750) score += 22;
+    else if ((price ?? 0) <= 1000) score += 12;
+  }
+  if (s.nights >= 4 && s.nights <= 6) score += 18;
+  if (s.nights === 7) score += 14;
+  if (s.destinationRegion === "caribbean" || s.destinationRegion === "bahamas") score += 12;
+  if (s.confidence === "verified_from_cruise_line") score += 8;
+  if (s.confidence === "itinerary_verified_price_check_required") score += 4;
+  return score;
+}
+
+function dealBadges(s: Sailing): string[] {
+  const badges: string[] = [];
+  if (Number.isFinite(s.startingPrice) && (s.startingPrice ?? 0) <= 350) badges.push("Low price");
+  if (s.nights >= 3 && s.nights <= 5) badges.push("Short cruise");
+  if (s.nights === 7) badges.push("7-night");
+  if (s.confidence === "itinerary_verified_price_check_required") badges.push("Price check required");
+  return badges.slice(0, 3);
 }
 
 /** Real deals from canonical seed (sorted by price ascending). */
 export const REAL_DEALS: RealDeal[] = SAILINGS.map(toRealDeal).sort(
-  (a, b) => a.fromPrice - b.fromPrice,
+  (a, b) => b.dealScore - a.dealScore || a.fromPrice - b.fromPrice,
 );
 
 /** Get top N deals by lowest price. */

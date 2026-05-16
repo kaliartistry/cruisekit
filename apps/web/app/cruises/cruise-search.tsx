@@ -11,6 +11,7 @@ import {
   X,
   Ship,
   Anchor,
+  CalendarDays,
 } from "lucide-react";
 import { REAL_DEALS, DEAL_STATS, type RealDeal, type DealRegion } from "@/lib/data/real-deals";
 import { getDealImage } from "@/lib/data/port-images";
@@ -59,6 +60,8 @@ function getDurationKey(nights: number): string {
 }
 
 const SORT_OPTIONS = [
+  { value: "best", label: "Best Deals" },
+  { value: "date-asc", label: "Date: Soonest" },
   { value: "price-asc", label: "Price: Low to High" },
   { value: "price-desc", label: "Price: High to Low" },
   { value: "duration-asc", label: "Duration: Short to Long" },
@@ -264,13 +267,7 @@ function CheckboxGroup({
 /* ------------------------------------------------------------------ */
 
 function DealCard({ deal }: { deal: RealDeal }) {
-  const line = CRUISE_LINES.find((l) => l.id === deal.cruiseLineId);
   const imgSrc = getDealImage(deal);
-  const region =
-    deal.itineraryTitle
-      .replace(/^\d+-Night\s+/i, "")
-      .replace(/\s+from\s+.*/i, "")
-      .trim() || "Caribbean";
 
   const ctaHref = deal.affiliateLink ?? deal.directLink ?? null;
   const calcHref = `/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2&fare=${deal.fromPrice}${deal.departureDate ? `&month=${new Date(deal.departureDate).getMonth()}` : ""}`;
@@ -320,7 +317,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
       <div className="flex flex-1 flex-col justify-between p-4 md:p-5">
         <div>
           <h3 className="font-bold text-navy group-hover:text-teal transition-colors">
-            {deal.duration} Night {region} Cruise
+            {deal.itineraryTitle}
           </h3>
 
           <p className="mt-1 text-xs text-gray-500">
@@ -357,6 +354,19 @@ function DealCard({ deal }: { deal: RealDeal }) {
                   +{deal.ports.length - 6} more
                 </span>
               )}
+            </div>
+          )}
+
+          {deal.badges.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {deal.badges.map((badge) => (
+                <span
+                  key={badge}
+                  className="rounded-md bg-teal/10 px-2 py-1 text-[10px] font-semibold text-teal"
+                >
+                  {badge}
+                </span>
+              ))}
             </div>
           )}
         </div>
@@ -466,20 +476,17 @@ function FilterSidebar({
   const portCountsMap = countByField(REAL_DEALS, "departurePort");
   const shipCountsMap = countByField(REAL_DEALS, "shipName");
 
-  const toggleInSet = useCallback(
-    (
-      key: "regions" | "cruiseLines" | "durations" | "months" | "departurePorts" | "ships",
-      value: string
-    ) => {
-      setFilters((prev) => {
-        const next = new Set(prev[key]);
-        if (next.has(value)) next.delete(value);
-        else next.add(value);
-        return { ...prev, [key]: next };
-      });
-    },
-    [setFilters]
-  );
+  const toggleInSet = (
+    key: "regions" | "cruiseLines" | "durations" | "months" | "departurePorts" | "ships",
+    value: string
+  ) => {
+    setFilters((prev) => {
+      const next = new Set(prev[key]);
+      if (next.has(value)) next.delete(value);
+      else next.add(value);
+      return { ...prev, [key]: next };
+    });
+  };
 
   const clearAll = () => {
     setFilters({
@@ -707,7 +714,7 @@ export default function CruiseSearchPage() {
     ships: new Set(ALL_SHIP_NAMES),
   });
 
-  const [sort, setSort] = useState<SortKey>("price-asc");
+  const [sort, setSort] = useState<SortKey>("best");
   const [page, setPage] = useState(1);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
@@ -731,6 +738,10 @@ export default function CruiseSearchPage() {
     /* Sort */
     deals = [...deals].sort((a, b) => {
       switch (sort) {
+        case "best":
+          return b.dealScore - a.dealScore || a.fromPrice - b.fromPrice;
+        case "date-asc":
+          return String(a.departureDate ?? "").localeCompare(String(b.departureDate ?? "")) || a.fromPrice - b.fromPrice;
         case "price-asc":
           return a.fromPrice - b.fromPrice;
         case "price-desc":
@@ -750,9 +761,9 @@ export default function CruiseSearchPage() {
   }, [filters, sort]);
 
   /* Pagination */
-  const totalPages = Math.ceil(filteredDeals.length / ITEMS_PER_PAGE);
   const paginatedDeals = filteredDeals.slice(0, page * ITEMS_PER_PAGE);
   const hasMore = page * ITEMS_PER_PAGE < filteredDeals.length;
+  const groupedDeals = useMemo(() => groupDealsByMonth(paginatedDeals), [paginatedDeals]);
 
   /* Reset page when filters change */
   const setFiltersAndResetPage: typeof setFilters = useCallback(
@@ -874,9 +885,24 @@ export default function CruiseSearchPage() {
                 </button>
               </div>
             ) : (
-              <div className="space-y-4">
-                {paginatedDeals.map((deal) => (
-                  <DealCard key={deal.id} deal={deal} />
+              <div className="space-y-8">
+                {groupedDeals.map((group) => (
+                  <section key={group.monthKey} className="space-y-3">
+                    <div className="flex items-end justify-between gap-3 border-b border-gray-200 pb-2">
+                      <div className="flex items-center gap-2">
+                        <CalendarDays className="h-4 w-4 text-teal" />
+                        <h2 className="text-lg font-bold text-navy">{group.monthLabel}</h2>
+                      </div>
+                      <p className="text-xs text-gray-500">
+                        {group.deals.length} visible
+                      </p>
+                    </div>
+                    <div className="space-y-4">
+                      {group.deals.map((deal) => (
+                        <DealCard key={deal.id} deal={deal} />
+                      ))}
+                    </div>
+                  </section>
                 ))}
               </div>
             )}
@@ -929,4 +955,23 @@ export default function CruiseSearchPage() {
       )}
     </>
   );
+}
+
+function groupDealsByMonth(deals: RealDeal[]): {
+  monthKey: string;
+  monthLabel: string;
+  deals: RealDeal[];
+}[] {
+  const groups = new Map<string, RealDeal[]>();
+  for (const deal of deals) {
+    const key = deal.monthKey ?? "unknown";
+    groups.set(key, [...(groups.get(key) ?? []), deal]);
+  }
+  return [...groups.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([monthKey, monthDeals]) => ({
+      monthKey,
+      monthLabel: monthDeals[0]?.monthLabel ?? "Date TBD",
+      deals: monthDeals,
+    }));
 }

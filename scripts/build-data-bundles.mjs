@@ -99,6 +99,7 @@ function buildMobileItinerary(sailing) {
 }
 
 function toMobileDeal(sailing) {
+  const monthKey = sailing.departureDate.slice(0, 7);
   return {
     id: sailing.id,
     cruiseLine: displayCruiseLine(sailing.cruiseLine),
@@ -114,7 +115,45 @@ function toMobileDeal(sailing) {
     imageUrl: null,
     bookingUrl: sailing.affiliateLink ?? sailing.directLink ?? null,
     region: sailing.destinationRegion,
+    monthKey,
+    monthLabel: formatMonth(monthKey),
+    dealScore: dealScore(sailing),
+    badges: dealBadges(sailing),
   };
+}
+
+function formatMonth(monthKey) {
+  const [year, month] = monthKey.split("-").map(Number);
+  return new Date(year, month - 1, 1).toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
+}
+
+function dealScore(sailing) {
+  let score = 0;
+  const price = sailing.startingPrice;
+  if (Number.isFinite(price)) {
+    if (price <= 350) score += 45;
+    else if (price <= 500) score += 35;
+    else if (price <= 750) score += 22;
+    else if (price <= 1000) score += 12;
+  }
+  if (sailing.nights >= 4 && sailing.nights <= 6) score += 18;
+  if (sailing.nights === 7) score += 14;
+  if (sailing.destinationRegion === "caribbean" || sailing.destinationRegion === "bahamas") score += 12;
+  if (sailing.confidence === "verified_from_cruise_line") score += 8;
+  if (sailing.confidence === "itinerary_verified_price_check_required") score += 4;
+  return score;
+}
+
+function dealBadges(sailing) {
+  const badges = [];
+  if (Number.isFinite(sailing.startingPrice) && sailing.startingPrice <= 350) badges.push("Low price");
+  if (sailing.nights >= 3 && sailing.nights <= 5) badges.push("Short cruise");
+  if (sailing.nights === 7) badges.push("7-night");
+  if (sailing.confidence === "itinerary_verified_price_check_required") badges.push("Price check required");
+  return badges.slice(0, 3);
 }
 
 function displayCruiseLine(slug) {
