@@ -114,6 +114,19 @@ separate `observed-prices.json` file. It does not edit production seed data.
 The review command compares staged Carnival records against current seed records
 and writes `data/reports/latest-carnival-staging-review.md`.
 
+Reviewed Carnival records move live through the promotion command:
+
+```bash
+pnpm run data:promote:carnival -- --dry-run --limit 40
+pnpm run data:promote:carnival -- --apply --limit 40
+pnpm run data:publish
+```
+
+Promotion only uses records from the latest review recommendation set unless
+specific IDs are supplied with `--ids`. Promoted records stay at
+`itinerary_verified_price_check_required`, so they are visible in public bundles
+but still treated as price-check-required until affiliate/API pricing exists.
+
 ## Publish command
 
 ```bash

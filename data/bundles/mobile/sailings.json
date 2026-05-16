@@ -1,43 +1,5 @@
 [
   {
-    "id": "carnival-paradise-20260920",
-    "cruiseLineId": "carnival",
-    "shipName": "Carnival Paradise",
-    "shipId": "carnival-paradise",
-    "departureDate": "2026-09-20",
-    "returnDate": "2026-09-24",
-    "duration": 4,
-    "departurePort": "Tampa, FL",
-    "region": "caribbean",
-    "itinerary": [
-      {
-        "day": 1,
-        "type": "departure",
-        "portName": "Tampa, FL"
-      },
-      {
-        "day": 2,
-        "type": "port",
-        "portName": "Cozumel, Mexico",
-        "portSlug": "cozumel-mexico",
-        "isTender": false
-      },
-      {
-        "day": 3,
-        "type": "sea"
-      },
-      {
-        "day": 4,
-        "type": "sea"
-      },
-      {
-        "day": 5,
-        "type": "arrival",
-        "portName": "Tampa, FL"
-      }
-    ]
-  },
-  {
     "id": "carnival-celebration-20260802",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Celebration",
@@ -97,6 +59,622 @@
     ]
   },
   {
+    "id": "carnival-carnival-paradise-20260823-21626",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-08-23",
+    "returnDate": "2026-08-27",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20260827-21627",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-08-27",
+    "returnDate": "2026-08-31",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20260906-21629",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-09-06",
+    "returnDate": "2026-09-10",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20260914-22090",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-09-14",
+    "returnDate": "2026-09-19",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20260919-22091",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-09-19",
+    "returnDate": "2026-09-24",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-paradise-20260920",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-09-20",
+    "returnDate": "2026-09-24",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20260924-21633",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-09-24",
+    "returnDate": "2026-09-28",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-venezia-20260924",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Venezia",
+    "shipId": "carnival-venezia",
+    "departureDate": "2026-09-24",
+    "returnDate": "2026-09-29",
+    "duration": 5,
+    "departurePort": "Manhattan, New York City, NY",
+    "region": "bermuda",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Manhattan, New York City, NY"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bermuda",
+        "portSlug": "bermuda",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Manhattan, New York City, NY"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20260928-22093",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-09-28",
+    "returnDate": "2026-10-03",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20261004-21635",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-10-04",
+    "returnDate": "2026-10-08",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20261008-21636",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-10-08",
+    "returnDate": "2026-10-12",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261017-22097",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-10-17",
+    "returnDate": "2026-10-22",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20261022-21639",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-10-22",
+    "returnDate": "2026-10-26",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261026-22099",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-10-26",
+    "returnDate": "2026-10-31",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261031-22100",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-10-31",
+    "returnDate": "2026-11-05",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
     "id": "carnival-paradise-20261101",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Paradise",
@@ -131,6 +709,324 @@
         "day": 5,
         "type": "arrival",
         "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20261105-21642",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-11-05",
+    "returnDate": "2026-11-09",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261109-22102",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-11-09",
+    "returnDate": "2026-11-14",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261114-22103",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-11-14",
+    "returnDate": "2026-11-19",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20261115-21644",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-11-15",
+    "returnDate": "2026-11-19",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20261119-21645",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-11-19",
+    "returnDate": "2026-11-23",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261119-22104",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-11-19",
+    "returnDate": "2026-11-23",
+    "duration": 4,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20261203-21648",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-12-03",
+    "returnDate": "2026-12-07",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261203-22107",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-12-03",
+    "returnDate": "2026-12-07",
+    "duration": 4,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
       }
     ]
   },
@@ -194,103 +1090,759 @@
     ]
   },
   {
-    "id": "carnival-venezia-20260924",
+    "id": "carnival-carnival-valor-20261207-22108",
     "cruiseLineId": "carnival",
-    "shipName": "Carnival Venezia",
-    "shipId": "carnival-venezia",
-    "departureDate": "2026-09-24",
-    "returnDate": "2026-09-29",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-12-07",
+    "returnDate": "2026-12-12",
     "duration": 5,
-    "departurePort": "Manhattan, New York City, NY",
-    "region": "bermuda",
-    "itinerary": [
-      {
-        "day": 1,
-        "type": "departure",
-        "portName": "Manhattan, New York City, NY"
-      },
-      {
-        "day": 2,
-        "type": "port",
-        "portName": "Bermuda",
-        "portSlug": "bermuda",
-        "isTender": false
-      },
-      {
-        "day": 3,
-        "type": "sea"
-      },
-      {
-        "day": 4,
-        "type": "sea"
-      },
-      {
-        "day": 5,
-        "type": "sea"
-      },
-      {
-        "day": 6,
-        "type": "arrival",
-        "portName": "Manhattan, New York City, NY"
-      }
-    ]
-  },
-  {
-    "id": "norwegian-getaway-20261116",
-    "cruiseLineId": "norwegian",
-    "shipName": "Norwegian Getaway",
-    "shipId": "norwegian-getaway",
-    "departureDate": "2026-11-16",
-    "returnDate": "2026-11-23",
-    "duration": 7,
-    "departurePort": "Orlando (Port Canaveral), Florida",
+    "departurePort": "New Orleans, LA",
     "region": "caribbean",
     "itinerary": [
       {
         "day": 1,
         "type": "departure",
-        "portName": "Orlando (Port Canaveral), Florida"
+        "portName": "New Orleans, LA"
       },
       {
         "day": 2,
         "type": "port",
-        "portName": "Great Stirrup Cay, Bahamas",
-        "portSlug": "great-stirrup-cay-bahamas",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
         "isTender": false
       },
       {
         "day": 3,
         "type": "port",
-        "portName": "St. Thomas, US Virgin Islands",
-        "portSlug": "st-thomas-us-virgin-islands",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
         "isTender": false
       },
       {
         "day": 4,
-        "type": "port",
-        "portName": "San Juan, Puerto Rico",
-        "portSlug": "san-juan-puerto-rico",
-        "isTender": false
+        "type": "sea"
       },
       {
         "day": 5,
-        "type": "port",
-        "portName": "Puerto Plata, Dominican Republic",
-        "portSlug": "puerto-plata-dominican-republic",
-        "isTender": false
+        "type": "sea"
       },
       {
         "day": 6,
-        "type": "sea"
-      },
-      {
-        "day": 7,
-        "type": "sea"
-      },
-      {
-        "day": 8,
         "type": "arrival",
-        "portName": "Orlando (Port Canaveral), Florida"
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261212-22109",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-12-12",
+    "returnDate": "2026-12-17",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20270109-22115",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2027-01-09",
+    "returnDate": "2027-01-14",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20270114-21657",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-01-14",
+    "returnDate": "2027-01-18",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20270118-22117",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2027-01-18",
+    "returnDate": "2027-01-23",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-breeze-20270121-20918",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Breeze",
+    "shipId": "carnival-breeze",
+    "departureDate": "2027-01-21",
+    "returnDate": "2027-01-25",
+    "duration": 4,
+    "departurePort": "Galveston, TX",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, TX"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Galveston, TX"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20270123-22118",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2027-01-23",
+    "returnDate": "2027-01-28",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20270128-21660",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-01-28",
+    "returnDate": "2027-02-01",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-breeze-20270222-24540",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Breeze",
+    "shipId": "carnival-breeze",
+    "departureDate": "2027-02-22",
+    "returnDate": "2027-02-26",
+    "duration": 4,
+    "departurePort": "Galveston, TX",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, TX"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Galveston, TX"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20270905-24329",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-09-05",
+    "returnDate": "2027-09-09",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20270909-24330",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-09-09",
+    "returnDate": "2027-09-13",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20270919-24332",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-09-19",
+    "returnDate": "2027-09-23",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20270923-24333",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-09-23",
+    "returnDate": "2027-09-27",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20271003-24335",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-10-03",
+    "returnDate": "2027-10-07",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20271017-24338",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-10-17",
+    "returnDate": "2027-10-21",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20271031-24341",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-10-31",
+    "returnDate": "2027-11-04",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20271114-24344",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-11-14",
+    "returnDate": "2027-11-18",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20280113-24357",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2028-01-13",
+    "returnDate": "2028-01-17",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20280127-24360",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2028-01-27",
+    "returnDate": "2028-01-31",
+    "duration": 4,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "arrival",
+        "portName": "Tampa, FL"
       }
     ]
   },
@@ -361,6 +1913,65 @@
         "day": 10,
         "type": "arrival",
         "portName": "Seattle, Washington"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-getaway-20261116",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2026-11-16",
+    "returnDate": "2026-11-23",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "San Juan, Puerto Rico",
+        "portSlug": "san-juan-puerto-rico",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
       }
     ]
   }
