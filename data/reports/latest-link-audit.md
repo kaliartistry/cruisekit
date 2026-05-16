@@ -1,6 +1,6 @@
 # CruiseKit Public Link Audit
 
-Generated: 2026-05-16T04:57:31.408Z
+Generated: 2026-05-16T05:08:11.215Z
 
 Live audit: disabled
 
@@ -8,9 +8,9 @@ Live audit: disabled
 
 | Metric | Count |
 | --- | ---: |
-| Canonical sailing links | 47 |
+| Canonical sailing links | 77 |
 | Viator product links | 0 |
-| Checked links | 47 |
+| Checked links | 77 |
 
 ## Blockers
 

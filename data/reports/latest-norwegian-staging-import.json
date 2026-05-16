@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-05-16T05:07:31.928Z",
+  "provider": "norwegian",
+  "runId": "2026-05-16T05-07-31-928Z",
+  "mode": "staging-only",
+  "source": "https://www.ncl.com/api/v2/vacations/search",
+  "destination": "CARIBBEAN",
+  "maxItineraries": 30,
+  "maxSailingsPerItinerary": 8,
+  "searchPages": [
+    {
+      "offset": 0,
+      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=CARIBBEAN&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
+      "count": 50
+    }
+  ],
+  "staging": {
+    "sailings": 148,
+    "deals": 0,
+    "schemaErrors": 0,
+    "byShip": {
+      "Norwegian Aqua": 32,
+      "Norwegian Bliss": 4,
+      "Norwegian Epic": 18,
+      "Norwegian Escape": 26,
+      "Norwegian Getaway": 19,
+      "Norwegian Joy": 1,
+      "Norwegian Luna": 18,
+      "Norwegian Pearl": 6,
+      "Norwegian Prima": 16,
+      "Norwegian Viva": 8
+    },
+    "minPrice": 439,
+    "maxPrice": 2499
+  },
+  "blockers": [],
+  "warnings": [
+    "Staging records are not production records.",
+    "NCL combinedPrice may include package-specific offer assumptions; review before promotion.",
+    "Review exact booking URL, price basis, taxes/fees, and terms before promotion."
+  ],
+  "paths": {
+    "raw": "data/ingest/raw/norwegian/2026-05-16T05-07-31-928Z",
+    "staging": "data/ingest/staging/norwegian/2026-05-16T05-07-31-928Z",
+    "report": "data/ingest/reports/norwegian/2026-05-16T05-07-31-928Z.json"
+  }
+}

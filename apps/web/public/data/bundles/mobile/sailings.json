@@ -1847,6 +1847,51 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-escape-20260519-58733",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2026-05-19",
+    "returnDate": "2026-05-24",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
     "id": "norwegian-joy-20260727",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Joy",
@@ -1917,6 +1962,318 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-prima-20260830-58198",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Prima",
+    "shipId": "norwegian-prima",
+    "departureDate": "2026-08-30",
+    "returnDate": "2026-09-06",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Falmouth, Jamaica",
+        "portSlug": "falmouth-jamaica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20261028-59658",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2026-10-28",
+    "returnDate": "2026-11-02",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20261106-59659",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2026-11-06",
+    "returnDate": "2026-11-11",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20261111-59660",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2026-11-11",
+    "returnDate": "2026-11-16",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20261113-59221",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2026-11-13",
+    "returnDate": "2026-11-20",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20261114-59200",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-11-14",
+    "returnDate": "2026-11-21",
+    "duration": 7,
+    "departurePort": "Galveston, Texas",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, Texas"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Roatán (Bay Islands), Honduras",
+        "portSlug": "roat-n-bay-islands-honduras",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Harvest Caye, Belize",
+        "portSlug": "harvest-caye-belize",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Galveston, Texas"
+      }
+    ]
+  },
+  {
     "id": "norwegian-getaway-20261116",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Getaway",
@@ -1972,6 +2329,1139 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20261120-59222",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2026-11-20",
+    "returnDate": "2026-11-27",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20261127-59223",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2026-11-27",
+    "returnDate": "2026-12-04",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20261128-59202",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-11-28",
+    "returnDate": "2026-12-05",
+    "duration": 7,
+    "departurePort": "Galveston, Texas",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, Texas"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Roatán (Bay Islands), Honduras",
+        "portSlug": "roat-n-bay-islands-honduras",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Harvest Caye, Belize",
+        "portSlug": "harvest-caye-belize",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Galveston, Texas"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20261129-59102",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "shipId": "norwegian-epic",
+    "departureDate": "2026-11-29",
+    "returnDate": "2026-12-06",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Montego Bay, Jamaica",
+        "portSlug": "montego-bay-jamaica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20261204-59224",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2026-12-04",
+    "returnDate": "2026-12-11",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20261204-59663",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2026-12-04",
+    "returnDate": "2026-12-09",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20261209-59664",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2026-12-09",
+    "returnDate": "2026-12-14",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20261211-59225",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2026-12-11",
+    "returnDate": "2026-12-18",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20261212-59204",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-12-12",
+    "returnDate": "2026-12-19",
+    "duration": 7,
+    "departurePort": "Galveston, Texas",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, Texas"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Roatán (Bay Islands), Honduras",
+        "portSlug": "roat-n-bay-islands-honduras",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Harvest Caye, Belize",
+        "portSlug": "harvest-caye-belize",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Galveston, Texas"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270115-59665",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-01-15",
+    "returnDate": "2027-01-20",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270120-59666",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-01-20",
+    "returnDate": "2027-01-25",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270129-59667",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-01-29",
+    "returnDate": "2027-02-03",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270203-59668",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-02-03",
+    "returnDate": "2027-02-08",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270212-59669",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-02-12",
+    "returnDate": "2027-02-17",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270217-59670",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-02-17",
+    "returnDate": "2027-02-22",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270226-59671",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-02-26",
+    "returnDate": "2027-03-03",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270303-59672",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-03-03",
+    "returnDate": "2027-03-08",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270317-59674",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-03-17",
+    "returnDate": "2027-03-22",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20270428-60474",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2027-04-28",
+    "returnDate": "2027-05-03",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20270512-60477",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2027-05-12",
+    "returnDate": "2027-05-17",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20270526-60480",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2027-05-26",
+    "returnDate": "2027-05-31",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20270721-60492",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2027-07-21",
+    "returnDate": "2027-07-26",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-joy-20271017-61939",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Joy",
+    "shipId": "norwegian-joy",
+    "departureDate": "2027-10-17",
+    "returnDate": "2027-10-22",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
       }
     ]
   }

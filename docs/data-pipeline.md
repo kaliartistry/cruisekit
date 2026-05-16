@@ -127,6 +127,20 @@ specific IDs are supplied with `--ids`. Promoted records stay at
 `itinerary_verified_price_check_required`, so they are visible in public bundles
 but still treated as price-check-required until affiliate/API pricing exists.
 
+Norwegian follows the same staging, review, and promotion pattern:
+
+```bash
+pnpm run data:ingest:norwegian
+pnpm run data:review:norwegian
+pnpm run data:promote:norwegian -- --dry-run --limit 30
+pnpm run data:promote:norwegian -- --apply --limit 30
+pnpm run data:publish
+```
+
+The Norwegian importer uses NCL's public vacation search plus date-specific
+sailings JSON. NCL's `combinedPrice` can reflect package/offers assumptions, so
+promoted records remain `itinerary_verified_price_check_required`.
+
 Royal Caribbean has a matching staging importer:
 
 ```bash
