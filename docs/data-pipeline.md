@@ -127,6 +127,18 @@ specific IDs are supplied with `--ids`. Promoted records stay at
 `itinerary_verified_price_check_required`, so they are visible in public bundles
 but still treated as price-check-required until affiliate/API pricing exists.
 
+Royal Caribbean has a matching staging importer:
+
+```bash
+pnpm run data:ingest:royal-caribbean
+```
+
+Royal Caribbean may return an automated-access block page from some
+environments. When that happens, the importer writes an explicit blocker report
+instead of staging stale or guessed inventory. If official search responses are
+reachable, it captures raw responses, normalizes canonical-shaped staging
+records, validates them, and still requires review before promotion.
+
 ## Publish command
 
 ```bash

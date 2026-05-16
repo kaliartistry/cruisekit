@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-05-16T04:56:56.585Z",
+  "provider": "royal-caribbean",
+  "runId": "2026-05-16T04-56-56-584Z",
+  "mode": "staging-only",
+  "source": "https://www.royalcaribbean.com/cruises?destinationIds=CARIB",
+  "rawResponses": 0,
+  "staging": {
+    "sailings": 0,
+    "deals": 0,
+    "schemaErrors": 0,
+    "minPrice": null,
+    "maxPrice": null
+  },
+  "blockers": [
+    "Royal Caribbean returned its automated-access block page for the search URL."
+  ],
+  "warnings": [
+    "Royal Caribbean may block automated browser sessions from some environments.",
+    "Staged records are not production records.",
+    "Review exact booking URL, price basis, taxes/fees, and terms before promotion."
+  ],
+  "paths": {
+    "raw": "data/ingest/raw/royal-caribbean/2026-05-16T04-56-56-584Z",
+    "staging": "data/ingest/staging/royal-caribbean/2026-05-16T04-56-56-584Z",
+    "report": "data/ingest/reports/royal-caribbean/2026-05-16T04-56-56-584Z.json"
+  }
+}
