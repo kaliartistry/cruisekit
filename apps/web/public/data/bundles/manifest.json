@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-16T02:21:05.131Z",
+  "source": {
+    "sailings": "data/seed/sailings.json",
+    "deals": "data/seed/deals.json",
+    "excludedConfidence": "internal_do_not_publish"
+  },
+  "counts": {
+    "seedSailings": 17,
+    "publicSailings": 7,
+    "seedDeals": 0,
+    "publicDeals": 0
+  },
+  "bundles": {
+    "canonicalSailings": {
+      "path": "canonical/sailings.json",
+      "bytes": 13447,
+      "sha256": "6904583fcecd5af624fda76a3e5171aa53200a36aeeb05525ff909d24aebc2bd",
+      "records": 7
+    },
+    "canonicalDeals": {
+      "path": "canonical/deals.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "records": 0
+    },
+    "mobileSailings": {
+      "path": "mobile/sailings.json",
+      "bytes": 8192,
+      "sha256": "0028713175c4a55cd11c4e5ed1805d6185b7662a64c74ea2b681b2a7c837e3f0",
+      "records": 7
+    },
+    "mobileDeals": {
+      "path": "mobile/deals.json",
+      "bytes": 4861,
+      "sha256": "c9e6e0762c907dcae8f3b0f904f3648c41a750887eaf2a1f8b1869b1f88cc7c7",
+      "records": 7
+    }
+  },
+  "publishedFor": "web-public-assets",
+  "publicBasePath": "/data/bundles/",
+  "manifestUrl": "/data/bundles/manifest.json"
+}

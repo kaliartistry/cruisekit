@@ -16,10 +16,34 @@
       "Philipsburg, St. Maarten"
     ],
     "portCoordinates": [
-      { "portName": "Miami, FL", "latitude": 25.7741, "longitude": -80.1733, "berth": "PortMiami", "source": "PortMiami official site" },
-      { "portName": "Perfect Day at CocoCay", "latitude": 25.8253, "longitude": -77.9344, "berth": null, "source": "Royal Caribbean port guide" },
-      { "portName": "Charlotte Amalie, St. Thomas", "latitude": 18.3419, "longitude": -64.9307, "berth": "Crown Bay/Havensight", "source": "USVI Port Authority" },
-      { "portName": "Philipsburg, St. Maarten", "latitude": 18.0237, "longitude": -63.0458, "berth": "A.C. Wathey Cruise Facility", "source": "Port St. Maarten" }
+      {
+        "portName": "Miami, FL",
+        "latitude": 25.7741,
+        "longitude": -80.1733,
+        "berth": "PortMiami",
+        "source": "PortMiami official site"
+      },
+      {
+        "portName": "Perfect Day at CocoCay",
+        "latitude": 25.8253,
+        "longitude": -77.9344,
+        "berth": null,
+        "source": "Royal Caribbean port guide"
+      },
+      {
+        "portName": "Charlotte Amalie, St. Thomas",
+        "latitude": 18.3419,
+        "longitude": -64.9307,
+        "berth": "Crown Bay/Havensight",
+        "source": "USVI Port Authority"
+      },
+      {
+        "portName": "Philipsburg, St. Maarten",
+        "latitude": 18.0237,
+        "longitude": -63.0458,
+        "berth": "A.C. Wathey Cruise Facility",
+        "source": "Port St. Maarten"
+      }
     ],
     "startingPrice": 859,
     "currency": "USD",
@@ -61,10 +85,34 @@
       "Nassau, Bahamas"
     ],
     "portCoordinates": [
-      { "portName": "Cape Liberty (Bayonne, NJ)", "latitude": 40.6645, "longitude": -74.0788, "berth": "Cape Liberty Cruise Port", "source": "Cape Liberty Cruise Port official" },
-      { "portName": "Port Canaveral, FL", "latitude": 28.4111, "longitude": -80.6045, "berth": null, "source": "Canaveral Port Authority" },
-      { "portName": "Perfect Day at CocoCay", "latitude": 25.8253, "longitude": -77.9344, "berth": null, "source": "Royal Caribbean port guide" },
-      { "portName": "Nassau, Bahamas", "latitude": 25.0823, "longitude": -77.3450, "berth": "Prince George Wharf", "source": "Nassau Cruise Port" }
+      {
+        "portName": "Cape Liberty (Bayonne, NJ)",
+        "latitude": 40.6645,
+        "longitude": -74.0788,
+        "berth": "Cape Liberty Cruise Port",
+        "source": "Cape Liberty Cruise Port official"
+      },
+      {
+        "portName": "Port Canaveral, FL",
+        "latitude": 28.4111,
+        "longitude": -80.6045,
+        "berth": null,
+        "source": "Canaveral Port Authority"
+      },
+      {
+        "portName": "Perfect Day at CocoCay",
+        "latitude": 25.8253,
+        "longitude": -77.9344,
+        "berth": null,
+        "source": "Royal Caribbean port guide"
+      },
+      {
+        "portName": "Nassau, Bahamas",
+        "latitude": 25.0823,
+        "longitude": -77.345,
+        "berth": "Prince George Wharf",
+        "source": "Nassau Cruise Port"
+      }
     ],
     "startingPrice": 1149,
     "currency": "USD",
@@ -107,9 +155,27 @@
       "Cozumel, Mexico"
     ],
     "portCoordinates": [
-      { "portName": "Port Canaveral, FL", "latitude": 28.4111, "longitude": -80.6045, "berth": null, "source": "Canaveral Port Authority" },
-      { "portName": "Perfect Day at CocoCay", "latitude": 25.8253, "longitude": -77.9344, "berth": null, "source": "Royal Caribbean port guide" },
-      { "portName": "Cozumel, Mexico", "latitude": 20.5089, "longitude": -86.9456, "berth": "Punta Langosta / SSA Mexico", "source": "Cozumel cruise terminals" }
+      {
+        "portName": "Port Canaveral, FL",
+        "latitude": 28.4111,
+        "longitude": -80.6045,
+        "berth": null,
+        "source": "Canaveral Port Authority"
+      },
+      {
+        "portName": "Perfect Day at CocoCay",
+        "latitude": 25.8253,
+        "longitude": -77.9344,
+        "berth": null,
+        "source": "Royal Caribbean port guide"
+      },
+      {
+        "portName": "Cozumel, Mexico",
+        "latitude": 20.5089,
+        "longitude": -86.9456,
+        "berth": "Punta Langosta / SSA Mexico",
+        "source": "Cozumel cruise terminals"
+      }
     ],
     "startingPrice": 989,
     "currency": "USD",
@@ -150,9 +216,27 @@
       "Perfect Day at CocoCay"
     ],
     "portCoordinates": [
-      { "portName": "Miami, FL", "latitude": 25.7741, "longitude": -80.1733, "berth": "PortMiami", "source": "PortMiami official site" },
-      { "portName": "Nassau, Bahamas", "latitude": 25.0823, "longitude": -77.3450, "berth": "Prince George Wharf", "source": "Nassau Cruise Port" },
-      { "portName": "Perfect Day at CocoCay", "latitude": 25.8253, "longitude": -77.9344, "berth": null, "source": "Royal Caribbean port guide" }
+      {
+        "portName": "Miami, FL",
+        "latitude": 25.7741,
+        "longitude": -80.1733,
+        "berth": "PortMiami",
+        "source": "PortMiami official site"
+      },
+      {
+        "portName": "Nassau, Bahamas",
+        "latitude": 25.0823,
+        "longitude": -77.345,
+        "berth": "Prince George Wharf",
+        "source": "Nassau Cruise Port"
+      },
+      {
+        "portName": "Perfect Day at CocoCay",
+        "latitude": 25.8253,
+        "longitude": -77.9344,
+        "berth": null,
+        "source": "Royal Caribbean port guide"
+      }
     ],
     "startingPrice": 449,
     "currency": "USD",
@@ -195,9 +279,27 @@
       "Celebration Key, Bahamas"
     ],
     "portCoordinates": [
-      { "portName": "Manhattan Cruise Terminal (NYC)", "latitude": 40.7689, "longitude": -74.0009, "berth": "Pier 88/90", "source": "NYC EDC Cruise Terminal" },
-      { "portName": "Half Moon Cay, Bahamas", "latitude": 24.5667, "longitude": -75.7500, "berth": null, "source": "Holland America/Carnival port guide" },
-      { "portName": "Nassau, Bahamas", "latitude": 25.0823, "longitude": -77.3450, "berth": "Prince George Wharf", "source": "Nassau Cruise Port" }
+      {
+        "portName": "Manhattan Cruise Terminal (NYC)",
+        "latitude": 40.7689,
+        "longitude": -74.0009,
+        "berth": "Pier 88/90",
+        "source": "NYC EDC Cruise Terminal"
+      },
+      {
+        "portName": "Half Moon Cay, Bahamas",
+        "latitude": 24.5667,
+        "longitude": -75.75,
+        "berth": null,
+        "source": "Holland America/Carnival port guide"
+      },
+      {
+        "portName": "Nassau, Bahamas",
+        "latitude": 25.0823,
+        "longitude": -77.345,
+        "berth": "Prince George Wharf",
+        "source": "Nassau Cruise Port"
+      }
     ],
     "startingPrice": 729,
     "currency": "USD",
@@ -211,16 +313,16 @@
       "sourceUrl": "https://www.carnival.com/cruise-ships/carnival-venezia",
       "affiliateNetwork": null,
       "advertiserName": null,
-      "lastImported": "2026-04-28T00:00:00Z",
-      "lastVerified": "2026-04-28",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": null
+      "lastImported": "2026-05-12T22:30:00Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Hidden on 2026-05-12. Exact sailing could not be found during manual official cruise line booking flow verification."
     },
     "sourceUrl": "https://www.carnival.com/cruise-ships/carnival-venezia",
-    "lastVerified": "2026-04-28",
-    "confidence": "itinerary_verified_price_check_required",
+    "lastVerified": "2026-05-12",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-04-28T00:00:00Z",
-    "updatedAt": "2026-04-28T00:00:00Z"
+    "updatedAt": "2026-05-12T22:30:00Z"
   },
   {
     "id": "carnival-magic-20260628",
@@ -239,8 +341,20 @@
       "Amber Cove, Dominican Republic"
     ],
     "portCoordinates": [
-      { "portName": "Miami, FL", "latitude": 25.7741, "longitude": -80.1733, "berth": "PortMiami", "source": "PortMiami official site" },
-      { "portName": "San Juan, Puerto Rico", "latitude": 18.4655, "longitude": -66.1057, "berth": "Pan American/Pier 1-4", "source": "Puerto Rico Ports Authority" }
+      {
+        "portName": "Miami, FL",
+        "latitude": 25.7741,
+        "longitude": -80.1733,
+        "berth": "PortMiami",
+        "source": "PortMiami official site"
+      },
+      {
+        "portName": "San Juan, Puerto Rico",
+        "latitude": 18.4655,
+        "longitude": -66.1057,
+        "berth": "Pan American/Pier 1-4",
+        "source": "Puerto Rico Ports Authority"
+      }
     ],
     "startingPrice": 569,
     "currency": "USD",
@@ -254,16 +368,16 @@
       "sourceUrl": "https://www.carnival.com/cruise-ships/carnival-magic",
       "affiliateNetwork": null,
       "advertiserName": null,
-      "lastImported": "2026-04-28T00:00:00Z",
-      "lastVerified": "2026-04-28",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": null
+      "lastImported": "2026-05-12T22:30:00Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Hidden on 2026-05-12. Exact sailing could not be found during manual official cruise line booking flow verification."
     },
     "sourceUrl": "https://www.carnival.com/cruise-ships/carnival-magic",
-    "lastVerified": "2026-04-28",
-    "confidence": "itinerary_verified_price_check_required",
+    "lastVerified": "2026-05-12",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-04-28T00:00:00Z",
-    "updatedAt": "2026-04-28T00:00:00Z"
+    "updatedAt": "2026-05-12T22:30:00Z"
   },
   {
     "id": "carnival-paradise-20260920",
@@ -280,10 +394,22 @@
       "Cozumel, Mexico"
     ],
     "portCoordinates": [
-      { "portName": "Tampa, FL", "latitude": 27.9367, "longitude": -82.4517, "berth": "Port Tampa Bay", "source": "Port Tampa Bay official" },
-      { "portName": "Cozumel, Mexico", "latitude": 20.5089, "longitude": -86.9456, "berth": "Punta Langosta / SSA Mexico", "source": "Cozumel cruise terminals" }
+      {
+        "portName": "Tampa, FL",
+        "latitude": 27.9367,
+        "longitude": -82.4517,
+        "berth": "Port Tampa Bay",
+        "source": "Port Tampa Bay official"
+      },
+      {
+        "portName": "Cozumel, Mexico",
+        "latitude": 20.5089,
+        "longitude": -86.9456,
+        "berth": "Punta Langosta / SSA Mexico",
+        "source": "Cozumel cruise terminals"
+      }
     ],
-    "startingPrice": 249,
+    "startingPrice": 309,
     "currency": "USD",
     "priceBasis": "per-person-double-occupancy",
     "taxesAndFeesIncluded": false,
@@ -295,16 +421,16 @@
       "sourceUrl": "https://www.carnival.com/cruise-ships/carnival-paradise",
       "affiliateNetwork": null,
       "advertiserName": null,
-      "lastImported": "2026-04-28T00:00:00Z",
-      "lastVerified": "2026-04-28",
+      "lastImported": "2026-05-12T22:30:00Z",
+      "lastVerified": "2026-05-12",
       "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": null
+      "termsNotes": "Manually verified on 2026-05-12 via official Carnival booking flow: exact 2026-09-20 4-Day Western Caribbean from Tampa found. Starting from price in USD with taxes and fees included: Interior from $309. Previous app price $249 was more than 10% below official from price. Re-verify price within 30 days."
     },
     "sourceUrl": "https://www.carnival.com/cruise-ships/carnival-paradise",
-    "lastVerified": "2026-04-28",
+    "lastVerified": "2026-05-12",
     "confidence": "itinerary_verified_price_check_required",
     "createdAt": "2026-04-28T00:00:00Z",
-    "updatedAt": "2026-04-28T00:00:00Z"
+    "updatedAt": "2026-05-12T22:30:00Z"
   },
   {
     "id": "carnival-celebration-20260802",
@@ -324,8 +450,20 @@
       "Amber Cove, Dominican Republic"
     ],
     "portCoordinates": [
-      { "portName": "Miami, FL", "latitude": 25.7741, "longitude": -80.1733, "berth": "PortMiami", "source": "PortMiami official site" },
-      { "portName": "San Juan, Puerto Rico", "latitude": 18.4655, "longitude": -66.1057, "berth": "Pan American/Pier 1-4", "source": "Puerto Rico Ports Authority" }
+      {
+        "portName": "Miami, FL",
+        "latitude": 25.7741,
+        "longitude": -80.1733,
+        "berth": "PortMiami",
+        "source": "PortMiami official site"
+      },
+      {
+        "portName": "San Juan, Puerto Rico",
+        "latitude": 18.4655,
+        "longitude": -66.1057,
+        "berth": "Pan American/Pier 1-4",
+        "source": "Puerto Rico Ports Authority"
+      }
     ],
     "startingPrice": 729,
     "currency": "USD",
@@ -339,16 +477,16 @@
       "sourceUrl": "https://www.carnival.com/cruise-ships/carnival-celebration",
       "affiliateNetwork": null,
       "advertiserName": null,
-      "lastImported": "2026-04-28T00:00:00Z",
-      "lastVerified": "2026-04-28",
+      "lastImported": "2026-05-12T22:30:00Z",
+      "lastVerified": "2026-05-12",
       "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": null
+      "termsNotes": "Link verified 2026-05-12: carnival.com ship page loads 200 (Carnival Celebration confirmed in body, sailing from Miami). Price not verifiable without manual booking-flow check. Re-verify price within 30 days."
     },
     "sourceUrl": "https://www.carnival.com/cruise-ships/carnival-celebration",
-    "lastVerified": "2026-04-28",
+    "lastVerified": "2026-05-12",
     "confidence": "itinerary_verified_price_check_required",
     "createdAt": "2026-04-28T00:00:00Z",
-    "updatedAt": "2026-04-28T00:00:00Z"
+    "updatedAt": "2026-05-12T22:30:00Z"
   },
   {
     "id": "norwegian-joy-20260712",
@@ -367,33 +505,57 @@
       "Nassau, Bahamas"
     ],
     "portCoordinates": [
-      { "portName": "Manhattan Cruise Terminal (NYC)", "latitude": 40.7689, "longitude": -74.0009, "berth": "Pier 88/90", "source": "NYC EDC Cruise Terminal" },
-      { "portName": "Port Canaveral, FL", "latitude": 28.4111, "longitude": -80.6045, "berth": null, "source": "Canaveral Port Authority" },
-      { "portName": "Great Stirrup Cay, Bahamas", "latitude": 25.8233, "longitude": -77.9133, "berth": null, "source": "NCL private island guide" },
-      { "portName": "Nassau, Bahamas", "latitude": 25.0823, "longitude": -77.3450, "berth": "Prince George Wharf", "source": "Nassau Cruise Port" }
+      {
+        "portName": "Manhattan Cruise Terminal (NYC)",
+        "latitude": 40.7689,
+        "longitude": -74.0009,
+        "berth": "Pier 88/90",
+        "source": "NYC EDC Cruise Terminal"
+      },
+      {
+        "portName": "Port Canaveral, FL",
+        "latitude": 28.4111,
+        "longitude": -80.6045,
+        "berth": null,
+        "source": "Canaveral Port Authority"
+      },
+      {
+        "portName": "Great Stirrup Cay, Bahamas",
+        "latitude": 25.8233,
+        "longitude": -77.9133,
+        "berth": null,
+        "source": "NCL private island guide"
+      },
+      {
+        "portName": "Nassau, Bahamas",
+        "latitude": 25.0823,
+        "longitude": -77.345,
+        "berth": "Prince George Wharf",
+        "source": "Nassau Cruise Port"
+      }
     ],
     "startingPrice": 899,
     "currency": "USD",
     "priceBasis": "per-person-double-occupancy",
     "taxesAndFeesIncluded": false,
-    "directLink": "https://www.ncl.com/cruise-ship/joy",
+    "directLink": "https://www.ncl.com/cruise-ships/norwegian-joy",
     "affiliateLink": null,
     "source": {
       "provider": "ncl.com",
       "sourceType": "cruise-line-website",
-      "sourceUrl": "https://www.ncl.com/cruise-ship/joy",
+      "sourceUrl": "https://www.ncl.com/cruise-ships/norwegian-joy",
       "affiliateNetwork": null,
       "advertiserName": null,
-      "lastImported": "2026-04-28T00:00:00Z",
-      "lastVerified": "2026-04-28",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": null
+      "lastImported": "2026-05-12T22:30:00Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Hidden on 2026-05-12. Exact sailing could not be found during manual official cruise line booking flow verification."
     },
-    "sourceUrl": "https://www.ncl.com/cruise-ship/joy",
-    "lastVerified": "2026-04-28",
-    "confidence": "itinerary_verified_price_check_required",
+    "sourceUrl": "https://www.ncl.com/cruise-ships/norwegian-joy",
+    "lastVerified": "2026-05-12",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-04-28T00:00:00Z",
-    "updatedAt": "2026-04-28T00:00:00Z"
+    "updatedAt": "2026-05-12T22:30:00Z"
   },
   {
     "id": "norwegian-encore-20260823",
@@ -413,32 +575,50 @@
       "Cozumel, Mexico"
     ],
     "portCoordinates": [
-      { "portName": "Miami, FL", "latitude": 25.7741, "longitude": -80.1733, "berth": "PortMiami", "source": "PortMiami official site" },
-      { "portName": "Cozumel, Mexico", "latitude": 20.5089, "longitude": -86.9456, "berth": "Punta Langosta / SSA Mexico", "source": "Cozumel cruise terminals" },
-      { "portName": "Harvest Caye, Belize", "latitude": 16.4667, "longitude": -88.4500, "berth": null, "source": "NCL private island guide" }
+      {
+        "portName": "Miami, FL",
+        "latitude": 25.7741,
+        "longitude": -80.1733,
+        "berth": "PortMiami",
+        "source": "PortMiami official site"
+      },
+      {
+        "portName": "Cozumel, Mexico",
+        "latitude": 20.5089,
+        "longitude": -86.9456,
+        "berth": "Punta Langosta / SSA Mexico",
+        "source": "Cozumel cruise terminals"
+      },
+      {
+        "portName": "Harvest Caye, Belize",
+        "latitude": 16.4667,
+        "longitude": -88.45,
+        "berth": null,
+        "source": "NCL private island guide"
+      }
     ],
     "startingPrice": 779,
     "currency": "USD",
     "priceBasis": "per-person-double-occupancy",
     "taxesAndFeesIncluded": false,
-    "directLink": "https://www.ncl.com/cruise-ship/encore",
+    "directLink": "https://www.ncl.com/cruise-ships/norwegian-encore",
     "affiliateLink": null,
     "source": {
       "provider": "ncl.com",
       "sourceType": "cruise-line-website",
-      "sourceUrl": "https://www.ncl.com/cruise-ship/encore",
+      "sourceUrl": "https://www.ncl.com/cruise-ships/norwegian-encore",
       "affiliateNetwork": null,
       "advertiserName": null,
-      "lastImported": "2026-04-28T00:00:00Z",
-      "lastVerified": "2026-04-28",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": null
+      "lastImported": "2026-05-12T22:30:00Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Hidden on 2026-05-12. Exact sailing could not be found during manual official cruise line booking flow verification."
     },
-    "sourceUrl": "https://www.ncl.com/cruise-ship/encore",
-    "lastVerified": "2026-04-28",
-    "confidence": "itinerary_verified_price_check_required",
+    "sourceUrl": "https://www.ncl.com/cruise-ships/norwegian-encore",
+    "lastVerified": "2026-05-12",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-04-28T00:00:00Z",
-    "updatedAt": "2026-04-28T00:00:00Z"
+    "updatedAt": "2026-05-12T22:30:00Z"
   },
   {
     "id": "norwegian-getaway-20261004",
@@ -457,32 +637,50 @@
       "Great Stirrup Cay, Bahamas"
     ],
     "portCoordinates": [
-      { "portName": "Port Canaveral, FL", "latitude": 28.4111, "longitude": -80.6045, "berth": null, "source": "Canaveral Port Authority" },
-      { "portName": "Charlotte Amalie, St. Thomas", "latitude": 18.3419, "longitude": -64.9307, "berth": "Crown Bay/Havensight", "source": "USVI Port Authority" },
-      { "portName": "Great Stirrup Cay, Bahamas", "latitude": 25.8233, "longitude": -77.9133, "berth": null, "source": "NCL private island guide" }
+      {
+        "portName": "Port Canaveral, FL",
+        "latitude": 28.4111,
+        "longitude": -80.6045,
+        "berth": null,
+        "source": "Canaveral Port Authority"
+      },
+      {
+        "portName": "Charlotte Amalie, St. Thomas",
+        "latitude": 18.3419,
+        "longitude": -64.9307,
+        "berth": "Crown Bay/Havensight",
+        "source": "USVI Port Authority"
+      },
+      {
+        "portName": "Great Stirrup Cay, Bahamas",
+        "latitude": 25.8233,
+        "longitude": -77.9133,
+        "berth": null,
+        "source": "NCL private island guide"
+      }
     ],
     "startingPrice": 729,
     "currency": "USD",
     "priceBasis": "per-person-double-occupancy",
     "taxesAndFeesIncluded": false,
-    "directLink": "https://www.ncl.com/cruise-ship/getaway",
+    "directLink": "https://www.ncl.com/cruise-ships/norwegian-getaway",
     "affiliateLink": null,
     "source": {
       "provider": "ncl.com",
       "sourceType": "cruise-line-website",
-      "sourceUrl": "https://www.ncl.com/cruise-ship/getaway",
+      "sourceUrl": "https://www.ncl.com/cruise-ships/norwegian-getaway",
       "affiliateNetwork": null,
       "advertiserName": null,
-      "lastImported": "2026-04-28T00:00:00Z",
-      "lastVerified": "2026-04-28",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": null
+      "lastImported": "2026-05-12T22:30:00Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Hidden on 2026-05-12. Exact sailing could not be found during manual official cruise line booking flow verification."
     },
-    "sourceUrl": "https://www.ncl.com/cruise-ship/getaway",
-    "lastVerified": "2026-04-28",
-    "confidence": "itinerary_verified_price_check_required",
+    "sourceUrl": "https://www.ncl.com/cruise-ships/norwegian-getaway",
+    "lastVerified": "2026-05-12",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-04-28T00:00:00Z",
-    "updatedAt": "2026-04-28T00:00:00Z"
+    "updatedAt": "2026-05-12T22:30:00Z"
   },
   {
     "id": "norwegian-escape-20260517",
@@ -502,9 +700,27 @@
       "Costa Maya, Mexico"
     ],
     "portCoordinates": [
-      { "portName": "New Orleans, LA", "latitude": 29.9462, "longitude": -90.0594, "berth": "Julia Street/Erato Street", "source": "Port NOLA" },
-      { "portName": "Cozumel, Mexico", "latitude": 20.5089, "longitude": -86.9456, "berth": "Punta Langosta / SSA Mexico", "source": "Cozumel cruise terminals" },
-      { "portName": "Harvest Caye, Belize", "latitude": 16.4667, "longitude": -88.4500, "berth": null, "source": "NCL private island guide" }
+      {
+        "portName": "New Orleans, LA",
+        "latitude": 29.9462,
+        "longitude": -90.0594,
+        "berth": "Julia Street/Erato Street",
+        "source": "Port NOLA"
+      },
+      {
+        "portName": "Cozumel, Mexico",
+        "latitude": 20.5089,
+        "longitude": -86.9456,
+        "berth": "Punta Langosta / SSA Mexico",
+        "source": "Cozumel cruise terminals"
+      },
+      {
+        "portName": "Harvest Caye, Belize",
+        "latitude": 16.4667,
+        "longitude": -88.45,
+        "berth": null,
+        "source": "NCL private island guide"
+      }
     ],
     "startingPrice": 649,
     "currency": "USD",
@@ -528,5 +744,205 @@
     "confidence": "internal_do_not_publish",
     "createdAt": "2026-04-28T00:00:00Z",
     "updatedAt": "2026-05-12T00:00:00Z"
+  },
+  {
+    "id": "carnival-paradise-20261101",
+    "cruiseLine": "carnival",
+    "shipName": "Carnival Paradise",
+    "sailingName": "4-Day Western Caribbean from Tampa, FL",
+    "departureDate": "2026-11-01",
+    "returnDate": "2026-11-05",
+    "nights": 4,
+    "departurePort": "Tampa, FL",
+    "returnPort": "Tampa, FL",
+    "destinationRegion": "caribbean",
+    "itineraryPorts": [
+      "Cozumel, Mexico"
+    ],
+    "portCoordinates": [],
+    "startingPrice": 249,
+    "currency": "USD",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": true,
+    "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=21641&sailDate=11012026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "affiliateLink": null,
+    "source": {
+      "provider": "carnival.com",
+      "sourceType": "cruise-line-website",
+      "sourceUrl": "https://www.carnival.com/cruise-search?shipCode=PA",
+      "affiliateNetwork": null,
+      "advertiserName": null,
+      "lastImported": "2026-05-13T00:12:48Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "itinerary_verified_price_check_required",
+      "termsNotes": "Manually verified on 2026-05-12 via official Carnival cruise search: exact 2026-11-01 4-Day Western Caribbean from Tampa, FL found. Starting from price in USD with taxes and fees included: Interior from $249. Re-verify price within 30 days."
+    },
+    "sourceUrl": "https://www.carnival.com/cruise-search?shipCode=PA",
+    "lastVerified": "2026-05-12",
+    "confidence": "itinerary_verified_price_check_required",
+    "createdAt": "2026-05-13T00:12:48Z",
+    "updatedAt": "2026-05-13T00:12:48Z"
+  },
+  {
+    "id": "carnival-celebration-20261206",
+    "cruiseLine": "carnival",
+    "shipName": "Carnival Celebration",
+    "sailingName": "7-Day Eastern Caribbean from Miami, FL",
+    "departureDate": "2026-12-06",
+    "returnDate": "2026-12-13",
+    "nights": 7,
+    "departurePort": "Miami, FL",
+    "returnPort": "Miami, FL",
+    "destinationRegion": "caribbean",
+    "itineraryPorts": [
+      "Nassau, Bahamas",
+      "RelaxAway, Half Moon Cay™",
+      "Amber Cove, Dominican Republic",
+      "Celebration Key™"
+    ],
+    "portCoordinates": [],
+    "startingPrice": 469,
+    "currency": "USD",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": true,
+    "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=EB4&durDays=7&shipCode=CB&subRegionCode=CE&sailingID=20971&sailDate=12062026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "affiliateLink": null,
+    "source": {
+      "provider": "carnival.com",
+      "sourceType": "cruise-line-website",
+      "sourceUrl": "https://www.carnival.com/cruise-search?shipCode=CB",
+      "affiliateNetwork": null,
+      "advertiserName": null,
+      "lastImported": "2026-05-13T00:12:48Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "itinerary_verified_price_check_required",
+      "termsNotes": "Manually verified on 2026-05-12 via official Carnival cruise search: exact 2026-12-06 7-Day Eastern Caribbean from Miami, FL found. Starting from price in USD with taxes and fees included: Interior from $469. Re-verify price within 30 days."
+    },
+    "sourceUrl": "https://www.carnival.com/cruise-search?shipCode=CB",
+    "lastVerified": "2026-05-12",
+    "confidence": "itinerary_verified_price_check_required",
+    "createdAt": "2026-05-13T00:12:48Z",
+    "updatedAt": "2026-05-13T00:12:48Z"
+  },
+  {
+    "id": "carnival-venezia-20260924",
+    "cruiseLine": "carnival",
+    "shipName": "Carnival Venezia",
+    "sailingName": "5-Day Bermuda from Manhattan, New York City, NY",
+    "departureDate": "2026-09-24",
+    "returnDate": "2026-09-29",
+    "nights": 5,
+    "departurePort": "Manhattan, New York City, NY",
+    "returnPort": "Manhattan, New York City, NY",
+    "destinationRegion": "bermuda",
+    "itineraryPorts": [
+      "Bermuda"
+    ],
+    "portCoordinates": [],
+    "startingPrice": 509,
+    "currency": "USD",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": true,
+    "directLink": "https://www.carnival.com/booking?embkCode=NYC&itinCode=BR1&durDays=5&shipCode=VX&subRegionCode=BM&sailingID=22834&sailDate=09242026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "affiliateLink": null,
+    "source": {
+      "provider": "carnival.com",
+      "sourceType": "cruise-line-website",
+      "sourceUrl": "https://www.carnival.com/cruise-search?shipCode=VX",
+      "affiliateNetwork": null,
+      "advertiserName": null,
+      "lastImported": "2026-05-13T00:12:48Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "itinerary_verified_price_check_required",
+      "termsNotes": "Manually verified on 2026-05-12 via official Carnival cruise search: exact 2026-09-24 5-Day Bermuda from Manhattan, New York City, NY found. Starting from price in USD with taxes and fees included: Interior from $509. Re-verify price within 30 days."
+    },
+    "sourceUrl": "https://www.carnival.com/cruise-search?shipCode=VX",
+    "lastVerified": "2026-05-12",
+    "confidence": "itinerary_verified_price_check_required",
+    "createdAt": "2026-05-13T00:12:48Z",
+    "updatedAt": "2026-05-13T00:12:48Z"
+  },
+  {
+    "id": "norwegian-getaway-20261116",
+    "cruiseLine": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+    "departureDate": "2026-11-16",
+    "returnDate": "2026-11-23",
+    "nights": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "returnPort": "Orlando (Port Canaveral), Florida",
+    "destinationRegion": "caribbean",
+    "itineraryPorts": [
+      "Great Stirrup Cay, Bahamas",
+      "St. Thomas, US Virgin Islands",
+      "San Juan, Puerto Rico",
+      "Puerto Plata, Dominican Republic"
+    ],
+    "portCoordinates": [],
+    "startingPrice": 909,
+    "currency": "USD",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": true,
+    "directLink": "https://www.ncl.com/vacation-builder?itineraryCode=GETAWAY7PCVNPISTTSJUPOPPCV",
+    "affiliateLink": null,
+    "source": {
+      "provider": "ncl.com",
+      "sourceType": "cruise-line-website",
+      "sourceUrl": "https://www.ncl.com/vacations?ships=GETAWAY",
+      "affiliateNetwork": null,
+      "advertiserName": null,
+      "lastImported": "2026-05-13T00:12:48Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "itinerary_verified_price_check_required",
+      "termsNotes": "Manually verified on 2026-05-12 via official NCL vacations search and official NCL sailings endpoint: exact 2026-11-16 7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic found. Official displayed from price in USD: Inside from $909. Result card states 'Includes taxes, fees and port expenses.' Public itinerary URL found, but no public date-specific booking URL was exposed before date selection. Re-verify price within 30 days."
+    },
+    "sourceUrl": "https://www.ncl.com/vacations?ships=GETAWAY",
+    "lastVerified": "2026-05-12",
+    "confidence": "itinerary_verified_price_check_required",
+    "createdAt": "2026-05-13T00:12:48Z",
+    "updatedAt": "2026-05-13T00:12:48Z"
+  },
+  {
+    "id": "norwegian-joy-20260727",
+    "cruiseLine": "norwegian",
+    "shipName": "Norwegian Joy",
+    "sailingName": "9-Day Alaska Round-Trip Seattle: Ketchikan & Juneau",
+    "departureDate": "2026-07-27",
+    "returnDate": "2026-08-05",
+    "nights": 9,
+    "departurePort": "Seattle, Washington",
+    "returnPort": "Seattle, Washington",
+    "destinationRegion": "alaska",
+    "itineraryPorts": [
+      "Juneau, Alaska",
+      "Icy Strait Point, Alaska",
+      "Victoria, British Columbia",
+      "Sitka, Alaska",
+      "Ketchikan (Ward Cove), Alaska"
+    ],
+    "portCoordinates": [],
+    "startingPrice": 1169,
+    "currency": "USD",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": true,
+    "directLink": "https://www.ncl.com/vacation-builder?itineraryCode=JOY9SEASITJNUICYKTNVICSEA",
+    "affiliateLink": null,
+    "source": {
+      "provider": "ncl.com",
+      "sourceType": "cruise-line-website",
+      "sourceUrl": "https://www.ncl.com/vacations?ships=JOY",
+      "affiliateNetwork": null,
+      "advertiserName": null,
+      "lastImported": "2026-05-13T00:12:48Z",
+      "lastVerified": "2026-05-12",
+      "confidence": "itinerary_verified_price_check_required",
+      "termsNotes": "Manually verified on 2026-05-12 via official NCL vacations search and official NCL sailings endpoint: exact 2026-07-27 9-Day Alaska Round-Trip Seattle: Ketchikan & Juneau found. Official displayed from price in USD: Inside from $1169. Result card states 'Includes taxes, fees and port expenses.' Public itinerary URL found, but no public date-specific booking URL was exposed before date selection. Re-verify price within 30 days."
+    },
+    "sourceUrl": "https://www.ncl.com/vacations?ships=JOY",
+    "lastVerified": "2026-05-12",
+    "confidence": "itinerary_verified_price_check_required",
+    "createdAt": "2026-05-13T00:12:48Z",
+    "updatedAt": "2026-05-13T00:12:48Z"
   }
 ]

@@ -34,7 +34,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Next.js static export
-        run: cd apps/web && npx next build
+        run: pnpm --filter web build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

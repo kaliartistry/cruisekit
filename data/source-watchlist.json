@@ -1,0 +1,92 @@
+[
+  {
+    "id": "royal-caribbean-official-deals",
+    "provider": "royalcaribbean.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "royal-caribbean",
+    "label": "Royal Caribbean official cruise deals/search",
+    "url": "https://www.royalcaribbean.com/cruises",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  },
+  {
+    "id": "carnival-official-deals",
+    "provider": "carnival.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "carnival",
+    "label": "Carnival official cruise search",
+    "url": "https://www.carnival.com/cruise-search",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  },
+  {
+    "id": "norwegian-official-deals",
+    "provider": "ncl.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "norwegian",
+    "label": "Norwegian official cruise search",
+    "url": "https://www.ncl.com/cruise-deals",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  },
+  {
+    "id": "celebrity-official-deals",
+    "provider": "celebritycruises.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "celebrity",
+    "label": "Celebrity official cruise search",
+    "url": "https://www.celebritycruises.com/cruises",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  },
+  {
+    "id": "princess-official-deals",
+    "provider": "princess.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "princess",
+    "label": "Princess official cruise search",
+    "url": "https://www.princess.com/cruise-search/",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  },
+  {
+    "id": "holland-america-official-deals",
+    "provider": "hollandamerica.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "holland-america",
+    "label": "Holland America official cruise search",
+    "url": "https://www.hollandamerica.com/en/us/find-a-cruise",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  },
+  {
+    "id": "msc-official-deals",
+    "provider": "msccruisesusa.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "msc",
+    "label": "MSC official cruise search",
+    "url": "https://www.msccruisesusa.com/cruise-deals",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  },
+  {
+    "id": "disney-official-deals",
+    "provider": "disneycruise.disney.go.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "disney",
+    "label": "Disney official cruise search",
+    "url": "https://disneycruise.disney.go.com/cruises-destinations/list/",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  },
+  {
+    "id": "virgin-voyages-official-deals",
+    "provider": "virginvoyages.com",
+    "sourceType": "cruise-line-website",
+    "cruiseLine": "virgin-voyages",
+    "label": "Virgin Voyages official cruise search",
+    "url": "https://www.virginvoyages.com/book/voyage-planner/find-a-voyage",
+    "cadence": "weekly",
+    "reviewFields": ["sailing dates", "itinerary", "starting price", "taxes and fees", "direct link"]
+  }
+]

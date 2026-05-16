@@ -14,6 +14,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = path.join(__dirname, '../apps/web/public/data/viator');
+const REPORT_DIR = path.join(__dirname, '../data/reports');
 
 const VIATOR_API_KEY = process.env.VIATOR_API_KEY;
 const BASE_URL = process.env.VIATOR_API_BASE_URL || 'https://api.sandbox.viator.com/partner';
@@ -115,10 +116,18 @@ function formatDuration(duration) {
 }
 
 async function main() {
+  fs.mkdirSync(REPORT_DIR, { recursive: true });
+
   if (!VIATOR_API_KEY) {
-    console.error('Missing VIATOR_API_KEY environment variable.');
-    console.log('Usage: VIATOR_API_KEY=xxx node scripts/update-viator-products.mjs');
-    process.exit(1);
+    const report = {
+      generatedAt: new Date().toISOString(),
+      provider: 'viator',
+      status: 'skipped',
+      reason: 'Missing VIATOR_API_KEY environment variable.',
+    };
+    writeReport(report);
+    console.warn('Skipping Viator refresh: missing VIATOR_API_KEY environment variable.');
+    process.exit(0);
   }
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
@@ -134,6 +143,7 @@ async function main() {
   const slugs = Object.keys(DESTINATIONS);
   let success = 0;
   let failed = 0;
+  const ports = [];
 
   for (const slug of slugs) {
     try {
@@ -144,6 +154,7 @@ async function main() {
         JSON.stringify({ products, totalCount: products.length }, null, 2)
       );
       console.log(`✓ ${slug} → ${products.length} products`);
+      ports.push({ slug, status: 'ok', products: products.length });
       success++;
 
       // Rate limiting — be gentle
@@ -153,11 +164,50 @@ async function main() {
       // Write empty so the app doesn't break
       const outPath = path.join(OUT_DIR, `${slug}.json`);
       fs.writeFileSync(outPath, JSON.stringify({ products: [], totalCount: 0 }));
+      ports.push({ slug, status: 'failed', products: 0, error: err.message });
       failed++;
     }
   }
 
+  const report = {
+    generatedAt: new Date().toISOString(),
+    provider: 'viator',
+    status: failed > 0 ? 'completed_with_failures' : 'completed',
+    baseUrl: BASE_URL,
+    success,
+    failed,
+    privateIslands: PRIVATE_ISLANDS.length,
+    ports,
+  };
+  writeReport(report);
+
   console.log(`\nDone: ${success} succeeded, ${failed} failed, ${PRIVATE_ISLANDS.length} private islands.`);
+}
+
+function writeReport(report) {
+  fs.writeFileSync(
+    path.join(REPORT_DIR, 'latest-viator-refresh.json'),
+    `${JSON.stringify(report, null, 2)}\n`,
+  );
+  const lines = [
+    '# CruiseKit Viator Refresh Report',
+    '',
+    `Generated: ${report.generatedAt}`,
+    '',
+    `Status: ${report.status}`,
+    '',
+  ];
+  if (report.reason) {
+    lines.push(`Reason: ${report.reason}`, '');
+  }
+  if (report.ports) {
+    lines.push('| Port | Status | Products |', '| --- | --- | ---: |');
+    for (const port of report.ports) {
+      lines.push(`| ${port.slug} | ${port.status} | ${port.products} |`);
+    }
+    lines.push('');
+  }
+  fs.writeFileSync(path.join(REPORT_DIR, 'latest-viator-refresh.md'), `${lines.join('\n')}\n`);
 }
 
 main();

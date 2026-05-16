@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node ../../scripts/validate-seed-records.mjs",
+    "prebuild": "node ../../scripts/build-data-bundles.mjs && node ../../scripts/publish-data-bundles.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
