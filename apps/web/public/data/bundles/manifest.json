@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-05-16T22:29:47.541Z",
+  "generatedAt": "2026-05-16T22:38:25.390Z",
   "source": {
     "sailings": "data/seed/sailings.json",
     "deals": "data/seed/deals.json",
@@ -33,8 +33,8 @@
     },
     "mobileDeals": {
       "path": "mobile/deals.json",
-      "bytes": 86953,
-      "sha256": "c3d21040f5963ce9f34ac91790398ecf2f04b3e3fec99485ca3895c75eba708c",
+      "bytes": 106911,
+      "sha256": "fecaad7f29de2ae9d5d752470e0b472937eab6f65d14dbb84f9088b5cc8b2994",
       "records": 97
     }
   },
