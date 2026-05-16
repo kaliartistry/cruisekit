@@ -77,10 +77,10 @@ export default function PrivacyPage() {
               </h3>
               <p className="mb-4">
                 In the mobile app, CruiseKit may request location permission
-                for active GoTime return-to-ship guidance and for one-time
-                MyCrew check-ins that you choose to share. MyCrew check-ins
-                are intentional status updates; CruiseKit does not use MyCrew
-                as continuous live tracking.
+                for active return-to-ship guidance and for one-time MyCrew
+                check-ins that you choose to share. MyCrew check-ins are
+                intentional status updates; CruiseKit does not use MyCrew as
+                continuous live tracking.
               </p>
               <h3 className="mb-2 text-lg font-semibold text-gray-800">
                 2.5 Deal and Support Requests
@@ -111,8 +111,8 @@ export default function PrivacyPage() {
                 </li>
                 <li>
                   <strong>No always-on MyCrew tracking.</strong> MyCrew uses
-                  one-time check-ins. GoTime location guidance is used only
-                  while active return-to-ship guidance is running.
+                  one-time check-ins. Location guidance is used only while
+                  active return-to-ship guidance is running.
                 </li>
               </ul>
             </section>

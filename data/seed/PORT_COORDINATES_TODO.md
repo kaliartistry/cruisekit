@@ -1,6 +1,6 @@
 # Port Coordinates — TODO
 
-The Sailing schema requires `portCoordinates: PortCoordinate[]` on every record (may be empty), but ShipSafe SDK consumers (CruiseKit-Mobile MyDay pillar, future "all aboard" warning) need lat/lng for *every* itinerary port to function correctly. This file tracks ports that appear in `data/seed/sailings.json` but don't yet have coordinates populated.
+The Sailing schema requires `portCoordinates: PortCoordinate[]` on every record (may be empty), but the CruiseKit-Mobile MyDay pillar and future "all aboard" warnings need lat/lng for *every* itinerary port to function correctly. This file tracks ports that appear in `data/seed/sailings.json` but don't yet have coordinates populated.
 
 ## Verification status of seed records
 
@@ -33,7 +33,7 @@ These ports appear in `itineraryPorts[]` for one or more sailings but have no en
 
 ## Process for backfilling
 
-1. Confirm the **berth** (not the city center) — a 2km error here breaks the ShipSafe SDK "time-to-walk-back" calculation.
+1. Confirm the **berth** (not the city center) — a 2km error here breaks the "time-to-walk-back" calculation.
 2. Add to the relevant sailing's `portCoordinates[]` array with `portName` matching the string in `itineraryPorts[]` (case-sensitive).
 3. Optionally fill `berth` with the terminal/pier name and `source` with the citation.
 4. Run `pnpm run schema:validate` to confirm the record still passes.

@@ -86,25 +86,10 @@ export default function TermsPage() {
               </p>
             </section>
 
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                5. GoTime and Location Guidance
-              </h2>
-              <p>
-                GoTime and return-to-ship guidance are supplemental tools.
-                Walking times, route availability, alerts, and location
-                estimates can be wrong or delayed because of network coverage,
-                GPS accuracy, device battery settings, map data, local road
-                conditions, weather, crowds, closures, and other factors.
-                CruiseKit is not a substitute for your cruise line&rsquo;s
-                official instructions, local authorities, or your own judgment.
-              </p>
-            </section>
-
             {/* 5 */}
             <section>
               <h2 className="mb-3 text-xl font-bold text-navy">
-                6. Informational Content
+                5. Informational Content
               </h2>
               <p>
                 All content on CruiseKit, including guides, blog posts, port
@@ -120,7 +105,7 @@ export default function TermsPage() {
             {/* 6 */}
             <section>
               <h2 className="mb-3 text-xl font-bold text-navy">
-                7. Affiliate Disclosure
+                6. Affiliate Disclosure
               </h2>
               <p>
                 CruiseKit contains affiliate links to cruise lines and
@@ -134,7 +119,7 @@ export default function TermsPage() {
             {/* 7 */}
             <section>
               <h2 className="mb-3 text-xl font-bold text-navy">
-                8. User Accounts
+                7. User Accounts
               </h2>
               <p>
                 Some features (such as saving trips) require you to sign in
@@ -148,7 +133,7 @@ export default function TermsPage() {
             {/* 8 */}
             <section>
               <h2 className="mb-3 text-xl font-bold text-navy">
-                9. Intellectual Property
+                8. Intellectual Property
               </h2>
               <p>
                 All content, design, code, and data compilations on CruiseKit
@@ -162,7 +147,7 @@ export default function TermsPage() {
             {/* 9 */}
             <section>
               <h2 className="mb-3 text-xl font-bold text-navy">
-                10. Limitation of Liability
+                9. Limitation of Liability
               </h2>
               <p>
                 CruiseKit is provided &ldquo;as is&rdquo; and &ldquo;as
@@ -179,7 +164,7 @@ export default function TermsPage() {
             {/* 10 */}
             <section>
               <h2 className="mb-3 text-xl font-bold text-navy">
-                11. Changes to These Terms
+                10. Changes to These Terms
               </h2>
               <p>
                 We may update these Terms of Service from time to time. If we
@@ -193,7 +178,7 @@ export default function TermsPage() {
             {/* 11 */}
             <section>
               <h2 className="mb-3 text-xl font-bold text-navy">
-                12. Contact
+                11. Contact
               </h2>
               <p>
                 If you have questions about these Terms of Service, contact

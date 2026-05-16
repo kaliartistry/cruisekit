@@ -2,11 +2,10 @@
 
 /* ============================================
    CruiseKit — Design System
-   Evolved from ShipSafe SDK brand DNA
    ============================================ */
 
 :root {
-  /* Primary palette — inherited from ShipSafe */
+  /* Primary palette */
   --navy: #0C2340;
   --ocean: #0077B6;
   --teal: #00B4D8;

@@ -59,8 +59,9 @@ class Sailing with _$Sailing {
         ///Number of nights aboard.
         required int nights,
         
-        ///Required field; may be empty at launch. Lat/lng for berth or port. ShipSafe SDK consumes
-        ///this; missing entries should be tracked in PORT_COORDINATES_TODO.md and backfilled.
+        ///Required field; may be empty at launch. Lat/lng for berth or port, used for
+        ///return-to-ship walking-time calculations. Missing entries should be tracked in
+        ///PORT_COORDINATES_TODO.md and backfilled.
         required List<PortCoordinate> portCoordinates,
         
         ///How startingPrice is quoted. 'unspecified' is permitted only when the source page does
@@ -184,7 +185,7 @@ final destinationRegionValues = EnumValues({
 class PortCoordinate with _$PortCoordinate {
     const factory PortCoordinate({
         
-        ///Optional berth or terminal name. ShipSafe SDK uses this when a single port has multiple
+        ///Optional berth or terminal name. Used to disambiguate when a single port has multiple
         ///terminals (e.g. Manhattan Pier 88 vs Pier 90).
         String? berth,
         required double latitude,

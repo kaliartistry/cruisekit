@@ -56,8 +56,9 @@ export interface Sailing {
      */
     nights: number;
     /**
-     * Required field; may be empty at launch. Lat/lng for berth or port. ShipSafe SDK consumes
-     * this; missing entries should be tracked in PORT_COORDINATES_TODO.md and backfilled.
+     * Required field; may be empty at launch. Lat/lng for berth or port, used for
+     * return-to-ship walking-time calculations. Missing entries should be tracked in
+     * PORT_COORDINATES_TODO.md and backfilled.
      */
     portCoordinates: PortCoordinate[];
     /**
@@ -152,7 +153,7 @@ export enum DestinationRegion {
 
 export interface PortCoordinate {
     /**
-     * Optional berth or terminal name. ShipSafe SDK uses this when a single port has multiple
+     * Optional berth or terminal name. Used to disambiguate when a single port has multiple
      * terminals (e.g. Manhattan Pier 88 vs Pier 90).
      */
     berth?:    null | string;

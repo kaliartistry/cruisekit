@@ -58,7 +58,7 @@ When a real-time feed comes online (Awin, CJ, direct partner), the import pipeli
 2. **Source** — populate `source` with `provider` (e.g. `Awin:GoToSea`), `sourceType: "affiliate-feed"`, `affiliateNetwork: "Awin"`, `advertiserName`, `lastImported` (now), `lastVerified` (now), `confidence: "verified_from_cruise_line"` (feed-fresh data).
 3. **Links** — set `affiliateLink` to the tracked URL from the feed; keep `directLink` pointed at the cruise-line page (used as fallback if affiliateLink ever 404s or the program is paused).
 4. **Pricing** — set `priceBasis` based on what the feed publishes; default to `unspecified` only when the feed truly doesn't say.
-5. **Coordinates** — `portCoordinates` is required but may be `[]`. ShipSafe SDK consumers detect missing entries and fall back to port-name lookups.
+5. **Coordinates** — `portCoordinates` is required but may be `[]`. Consumers detect missing entries and fall back to port-name lookups.
 
 The schema treats feed-sourced and manually-verified records identically — confidence/source fields carry the provenance. Don't add a `feedRecord` flag.
 
