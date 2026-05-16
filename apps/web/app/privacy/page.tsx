@@ -18,7 +18,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="mt-2 text-sm text-gray-500">
-            Last updated: March 30, 2026
+            Last updated: May 16, 2026
           </p>
 
           <div className="mt-10 space-y-8 text-base leading-relaxed text-gray-700">
@@ -30,10 +30,11 @@ export default function PrivacyPage() {
               <p>
                 CruiseKit (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
                 &ldquo;our&rdquo;) operates the website at{" "}
-                <strong>cruisekit.app</strong>. This Privacy Policy explains
-                what information we collect, how we use it, and the choices
-                you have. We are committed to protecting your privacy and
-                being transparent about our data practices.
+                <strong>cruisekit.app</strong> and the CruiseKit mobile app.
+                This Privacy Policy explains what information we collect, how
+                we use it, and the choices you have. We are committed to
+                protecting your privacy and being transparent about our data
+                practices.
               </p>
             </section>
 
@@ -63,12 +64,31 @@ export default function PrivacyPage() {
               <h3 className="mb-2 text-lg font-semibold text-gray-800">
                 2.3 Analytics Data
               </h3>
+              <p className="mb-4">
+                We use Google Analytics and Firebase Analytics to understand
+                how visitors and app testers use CruiseKit. Analytics events
+                may include pages viewed, feature usage, deal shortlist
+                actions, deal handoff actions, device type, and general
+                geographic region. Deal funnel analytics do not include lead
+                form names, emails, phone numbers, or notes.
+              </p>
+              <h3 className="mb-2 text-lg font-semibold text-gray-800">
+                2.4 Location Data
+              </h3>
+              <p className="mb-4">
+                In the mobile app, CruiseKit may request location permission
+                for active GoTime return-to-ship guidance and for one-time
+                MyCrew check-ins that you choose to share. MyCrew check-ins
+                are intentional status updates; CruiseKit does not use MyCrew
+                as continuous live tracking.
+              </p>
+              <h3 className="mb-2 text-lg font-semibold text-gray-800">
+                2.5 Deal and Support Requests
+              </h3>
               <p>
-                We use Google Analytics to understand how visitors use
-                CruiseKit. Google Analytics collects standard usage data such
-                as pages visited, time on site, device type, and general
-                geographic region. This data is aggregated and does not
-                personally identify you.
+                If you ask CruiseKit for help with a deal or contact support,
+                we may collect the name, email address, phone number, and note
+                you provide so we can respond to your request.
               </p>
             </section>
 
@@ -90,10 +110,9 @@ export default function PrivacyPage() {
                   data.
                 </li>
                 <li>
-                  <strong>No background location tracking.</strong> The
-                  website does not collect GPS location. MyDay is positioned
-                  around user-entered schedule, spend, and crew status data,
-                  not server-side location tracking.
+                  <strong>No always-on MyCrew tracking.</strong> MyCrew uses
+                  one-time check-ins. GoTime location guidance is used only
+                  while active return-to-ship guidance is running.
                 </li>
               </ul>
             </section>
@@ -113,6 +132,10 @@ export default function PrivacyPage() {
                 </li>
                 <li>
                   Understand usage patterns so we can improve the product
+                </li>
+                <li>
+                  Measure deal shortlist, handoff, and booking-link funnel
+                  performance
                 </li>
                 <li>
                   Respond to support requests and feedback
@@ -139,6 +162,10 @@ export default function PrivacyPage() {
                 <li>
                   <strong>Google Analytics</strong> &mdash; for anonymized
                   usage analytics
+                </li>
+                <li>
+                  <strong>Firebase Analytics</strong> &mdash; for mobile app
+                  usage and deal funnel analytics
                 </li>
               </ul>
             </section>
