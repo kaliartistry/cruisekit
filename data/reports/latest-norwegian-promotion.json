@@ -1,27 +1,32 @@
 {
-  "generatedAt": "2026-05-16T05:08:10.358Z",
+  "generatedAt": "2026-05-16T22:29:11.719Z",
   "provider": "norwegian",
   "mode": "apply",
-  "sourceRunId": "2026-05-16T05-07-31-928Z",
-  "sourceReviewGeneratedAt": "2026-05-16T05:07:58.971Z",
+  "sourceRunId": "2026-05-16T20-06-34-114Z",
+  "sourceReviewGeneratedAt": "2026-05-16T20:06:54.710Z",
   "options": {
     "apply": true,
     "limit": 30,
-    "ids": []
+    "ids": [
+      "norwegian-norwegian-getaway-20270312-59673",
+      "norwegian-norwegian-prima-20260816-58196",
+      "norwegian-norwegian-prima-20260906-58199",
+      "norwegian-norwegian-prima-20260920-58201"
+    ]
   },
   "counts": {
-    "seedBefore": 57,
-    "seedAfter": 87,
-    "promotedNew": 30,
+    "seedBefore": 103,
+    "seedAfter": 107,
+    "promotedNew": 4,
     "skippedExisting": 0
   },
   "promoted": [
     {
-      "id": "norwegian-norwegian-getaway-20261204-59663",
+      "id": "norwegian-norwegian-getaway-20270312-59673",
       "shipName": "Norwegian Getaway",
       "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-      "departureDate": "2026-12-04",
-      "returnDate": "2026-12-09",
+      "departureDate": "2027-03-12",
+      "returnDate": "2027-03-17",
       "nights": 5,
       "departurePort": "Orlando (Port Canaveral), Florida",
       "destinationRegion": "caribbean",
@@ -29,383 +34,16 @@
         "Cozumel, Mexico",
         "Great Stirrup Cay, Bahamas"
       ],
-      "startingPrice": 469,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468014",
+      "startingPrice": 859,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468021",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "norwegian-norwegian-getaway-20261106-59659",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-11-06",
-      "returnDate": "2026-11-11",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 539,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468070",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20261111-59660",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-11-11",
-      "returnDate": "2026-11-16",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 539,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468071",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20261028-59658",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-10-28",
-      "returnDate": "2026-11-02",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 549,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468069",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20261209-59664",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-      "departureDate": "2026-12-09",
-      "returnDate": "2026-12-14",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 569,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468015",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20270428-60474",
-      "shipName": "Norwegian Escape",
-      "sailingName": "5-Day Caribbean from Orlando (Port Canaveral): Puerto Plata & Great Stirrup Cay",
-      "departureDate": "2027-04-28",
-      "returnDate": "2027-05-03",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 669,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223939",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-joy-20271017-61939",
-      "shipName": "Norwegian Joy",
-      "sailingName": "5-Day Eastern Caribbean from Miami: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2027-10-17",
-      "returnDate": "2027-10-22",
-      "nights": 5,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Puerto Plata, Dominican Republic"
-      ],
-      "startingPrice": 699,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JOY5MIANPIPOPMIA&guests=2&gateway=NONE&packageId=26522335",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270120-59666",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2027-01-20",
-      "returnDate": "2027-01-25",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 699,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468072",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20270512-60477",
-      "shipName": "Norwegian Escape",
-      "sailingName": "5-Day Caribbean from Orlando (Port Canaveral): Puerto Plata & Great Stirrup Cay",
-      "departureDate": "2027-05-12",
-      "returnDate": "2027-05-17",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 699,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223940",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20260519-58733",
-      "shipName": "Norwegian Escape",
-      "sailingName": "5-Day Caribbean Round-Trip Miami: Great Stirrup Cay & Cozumel",
-      "departureDate": "2026-05-19",
-      "returnDate": "2026-05-24",
-      "nights": 5,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 439,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5MIANPICZMMIA&guests=2&gateway=NONE&packageId=22997518",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270115-59665",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-      "departureDate": "2027-01-15",
-      "returnDate": "2027-01-20",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 739,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468016",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-epic-20261129-59102",
-      "shipName": "Norwegian Epic",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Cozumel",
-      "departureDate": "2026-11-29",
-      "returnDate": "2026-12-06",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Montego Bay, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 749,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIMBJGECCZMPCV&guests=2&gateway=NONE&packageId=23361659",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270129-59667",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-      "departureDate": "2027-01-29",
-      "returnDate": "2027-02-03",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 759,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468017",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20261127-59223",
-      "shipName": "Norwegian Escape",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-11-27",
-      "returnDate": "2026-12-04",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 779,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369103",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20261204-59224",
-      "shipName": "Norwegian Escape",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-12-04",
-      "returnDate": "2026-12-11",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 779,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369104",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20261211-59225",
-      "shipName": "Norwegian Escape",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-12-11",
-      "returnDate": "2026-12-18",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 779,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369105",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20270526-60480",
-      "shipName": "Norwegian Escape",
-      "sailingName": "5-Day Caribbean from Orlando (Port Canaveral): Puerto Plata & Great Stirrup Cay",
-      "departureDate": "2027-05-26",
-      "returnDate": "2027-05-31",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 779,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223941",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20261113-59221",
-      "shipName": "Norwegian Escape",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-11-13",
-      "returnDate": "2026-11-20",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 799,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369101",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270217-59670",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2027-02-17",
-      "returnDate": "2027-02-22",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 799,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468073",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270203-59668",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-      "departureDate": "2027-02-03",
-      "returnDate": "2027-02-08",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 799,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468018",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270303-59672",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2027-03-03",
-      "returnDate": "2027-03-08",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 809,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468074",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270226-59671",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-      "departureDate": "2027-02-26",
-      "returnDate": "2027-03-03",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 819,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468020",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20260830-58198",
+      "id": "norwegian-norwegian-prima-20260816-58196",
       "shipName": "Norwegian Prima",
       "sailingName": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
-      "departureDate": "2026-08-30",
-      "returnDate": "2026-09-06",
+      "departureDate": "2026-08-16",
+      "returnDate": "2026-08-23",
       "nights": 7,
       "departurePort": "Orlando (Port Canaveral), Florida",
       "destinationRegion": "caribbean",
@@ -415,88 +53,16 @@
         "George Town, Grand Cayman",
         "Cozumel, Mexico"
       ],
-      "startingPrice": 829,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925675",
+      "startingPrice": 879,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925674",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "norwegian-norwegian-viva-20261128-59202",
-      "shipName": "Norwegian Viva",
-      "sailingName": "7-Day Caribbean Round-trip Galveston: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-11-28",
-      "returnDate": "2026-12-05",
-      "nights": 7,
-      "departurePort": "Galveston, Texas",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 829,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369080",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270317-59674",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2027-03-17",
-      "returnDate": "2027-03-22",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 839,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468075",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270212-59669",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Caribbean from Orlando (Port Canaveral): Cozumel",
-      "departureDate": "2027-02-12",
-      "returnDate": "2027-02-17",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 839,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMCMAPCV&guests=2&gateway=NONE&packageId=23468019",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-viva-20261114-59200",
-      "shipName": "Norwegian Viva",
-      "sailingName": "7-Day Caribbean Round-trip Galveston: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-11-14",
-      "returnDate": "2026-11-21",
-      "nights": 7,
-      "departurePort": "Galveston, Texas",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 849,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369078",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20261120-59222",
-      "shipName": "Norwegian Escape",
+      "id": "norwegian-norwegian-prima-20260906-58199",
+      "shipName": "Norwegian Prima",
       "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-11-20",
-      "returnDate": "2026-11-27",
+      "departureDate": "2026-09-06",
+      "returnDate": "2026-09-13",
       "nights": 7,
       "departurePort": "Orlando (Port Canaveral), Florida",
       "destinationRegion": "caribbean",
@@ -506,44 +72,27 @@
         "Tortola, British Virgin Islands",
         "Great Stirrup Cay, Bahamas"
       ],
-      "startingPrice": 849,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369102",
+      "startingPrice": 879,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925660",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "norwegian-norwegian-viva-20261212-59204",
-      "shipName": "Norwegian Viva",
-      "sailingName": "7-Day Caribbean Round-trip Galveston: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-12-12",
-      "returnDate": "2026-12-19",
+      "id": "norwegian-norwegian-prima-20260920-58201",
+      "shipName": "Norwegian Prima",
+      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "departureDate": "2026-09-20",
+      "returnDate": "2026-09-27",
       "nights": 7,
-      "departurePort": "Galveston, Texas",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 859,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369082",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20270721-60492",
-      "shipName": "Norwegian Escape",
-      "sailingName": "5-Day Caribbean from Orlando (Port Canaveral): Puerto Plata & Great Stirrup Cay",
-      "departureDate": "2027-07-21",
-      "returnDate": "2027-07-26",
-      "nights": 5,
       "departurePort": "Orlando (Port Canaveral), Florida",
       "destinationRegion": "caribbean",
       "itineraryPorts": [
         "Puerto Plata, Dominican Republic",
+        "St. Thomas, US Virgin Islands",
+        "Tortola, British Virgin Islands",
         "Great Stirrup Cay, Bahamas"
       ],
-      "startingPrice": 859,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223945",
+      "startingPrice": 879,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925661",
       "confidence": "itinerary_verified_price_check_required"
     }
   ],

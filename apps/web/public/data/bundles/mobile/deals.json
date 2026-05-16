@@ -80,6 +80,59 @@
     ]
   },
   {
+    "id": "carnival-carnival-magic-20260830-21895",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "itineraryTitle": "6-Day Eastern Caribbean from Miami, FL",
+    "fromPrice": 384,
+    "currency": "USD",
+    "departureDate": "2026-08-30",
+    "ports": [
+      "Celebration Key™",
+      "Amber Cove",
+      "Nassau"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CEB&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21895&sailDate=08302026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "caribbean",
+    "monthKey": "2026-08",
+    "monthLabel": "August 2026",
+    "dealScore": 69,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "carnival-carnival-sunrise-20260831-22008",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunrise",
+    "duration": 5,
+    "departurePort": "Miami, FL",
+    "itineraryTitle": "5-Day Eastern Caribbean from Miami, FL",
+    "fromPrice": 379,
+    "currency": "USD",
+    "departureDate": "2026-08-31",
+    "ports": [
+      "Grand Turk",
+      "RelaxAway, Half Moon Cay™",
+      "Celebration Key™"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CEJ&durDays=5&shipCode=SN&subRegionCode=CE&sailingID=22008&sailDate=08312026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "caribbean",
+    "monthKey": "2026-08",
+    "monthLabel": "August 2026",
+    "dealScore": 69,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
     "id": "carnival-carnival-paradise-20260906-21629",
     "cruiseLine": "Carnival Cruise Line",
     "cruiseLineId": "carnival",
@@ -102,6 +155,32 @@
     "badges": [
       "Low price",
       "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "carnival-carnival-magic-20260913-21897",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "itineraryTitle": "6-Day Eastern Caribbean from Miami, FL",
+    "fromPrice": 379,
+    "currency": "USD",
+    "departureDate": "2026-09-13",
+    "ports": [
+      "Celebration Key™",
+      "Amber Cove",
+      "Grand Turk"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21897&sailDate=09132026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "caribbean",
+    "monthKey": "2026-09",
+    "monthLabel": "September 2026",
+    "dealScore": 69,
+    "badges": [
       "Price check required"
     ]
   },
@@ -233,6 +312,32 @@
     "dealScore": 44,
     "badges": [
       "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "carnival-carnival-magic-20260927-21899",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "itineraryTitle": "6-Day Eastern Caribbean from Miami, FL",
+    "fromPrice": 359,
+    "currency": "USD",
+    "departureDate": "2026-09-27",
+    "ports": [
+      "Celebration Key™",
+      "Amber Cove",
+      "Grand Turk"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21899&sailDate=09272026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "caribbean",
+    "monthKey": "2026-09",
+    "monthLabel": "September 2026",
+    "dealScore": 69,
+    "badges": [
       "Price check required"
     ]
   },
@@ -714,6 +819,32 @@
     ]
   },
   {
+    "id": "carnival-carnival-magic-20261212-21910",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "itineraryTitle": "6-Day Eastern Caribbean from Miami, FL",
+    "fromPrice": 379,
+    "currency": "USD",
+    "departureDate": "2026-12-12",
+    "ports": [
+      "RelaxAway, Half Moon Cay™",
+      "Amber Cove",
+      "Grand Turk"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE3&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21910&sailDate=12122026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "caribbean",
+    "monthKey": "2026-12",
+    "monthLabel": "December 2026",
+    "dealScore": 69,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "carnival-carnival-valor-20261212-22109",
     "cruiseLine": "Carnival Cruise Line",
     "cruiseLineId": "carnival",
@@ -737,6 +868,32 @@
     "badges": [
       "Low price",
       "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "carnival-carnival-magic-20270103-21913",
+    "cruiseLine": "Carnival Cruise Line",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "itineraryTitle": "6-Day Eastern Caribbean from Miami, FL",
+    "fromPrice": 384,
+    "currency": "USD",
+    "departureDate": "2027-01-03",
+    "ports": [
+      "Celebration Key™",
+      "Amber Cove",
+      "Grand Turk"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21913&sailDate=01032027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+    "region": "caribbean",
+    "monthKey": "2027-01",
+    "monthLabel": "January 2027",
+    "dealScore": 69,
+    "badges": [
       "Price check required"
     ]
   },
@@ -1238,6 +1395,34 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-prima-20260816-58196",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Prima",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "itineraryTitle": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
+    "fromPrice": 879,
+    "currency": "USD",
+    "departureDate": "2026-08-16",
+    "ports": [
+      "Great Stirrup Cay, Bahamas",
+      "Falmouth, Jamaica",
+      "George Town, Grand Cayman",
+      "Cozumel, Mexico"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925674",
+    "region": "caribbean",
+    "monthKey": "2026-08",
+    "monthLabel": "August 2026",
+    "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260830-58198",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -1259,6 +1444,62 @@
     "region": "caribbean",
     "monthKey": "2026-08",
     "monthLabel": "August 2026",
+    "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-prima-20260906-58199",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Prima",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+    "fromPrice": 879,
+    "currency": "USD",
+    "departureDate": "2026-09-06",
+    "ports": [
+      "Puerto Plata, Dominican Republic",
+      "St. Thomas, US Virgin Islands",
+      "Tortola, British Virgin Islands",
+      "Great Stirrup Cay, Bahamas"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925660",
+    "region": "caribbean",
+    "monthKey": "2026-09",
+    "monthLabel": "September 2026",
+    "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-prima-20260920-58201",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Prima",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "itineraryTitle": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+    "fromPrice": 879,
+    "currency": "USD",
+    "departureDate": "2026-09-20",
+    "ports": [
+      "Puerto Plata, Dominican Republic",
+      "St. Thomas, US Virgin Islands",
+      "Tortola, British Virgin Islands",
+      "Great Stirrup Cay, Bahamas"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925661",
+    "region": "caribbean",
+    "monthKey": "2026-09",
+    "monthLabel": "September 2026",
     "dealScore": 42,
     "badges": [
       "7-night",
@@ -1874,6 +2115,32 @@
     ],
     "imageUrl": null,
     "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468074",
+    "region": "caribbean",
+    "monthKey": "2027-03",
+    "monthLabel": "March 2027",
+    "dealScore": 46,
+    "badges": [
+      "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270312-59673",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "itineraryTitle": "5-Day Western Caribbean from Orlando (Port Canaveral)",
+    "fromPrice": 859,
+    "currency": "USD",
+    "departureDate": "2027-03-12",
+    "ports": [
+      "Cozumel, Mexico",
+      "Great Stirrup Cay, Bahamas"
+    ],
+    "imageUrl": null,
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468021",
     "region": "caribbean",
     "monthKey": "2027-03",
     "monthLabel": "March 2027",

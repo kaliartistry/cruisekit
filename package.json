@@ -24,6 +24,7 @@
     "data:review:virgin-voyages": "node scripts/review-virgin-voyages-staging.mjs",
     "data:promote:carnival": "node scripts/promote-carnival-staging.mjs",
     "data:promote:norwegian": "node scripts/promote-norwegian-staging.mjs",
+    "data:promote:starter-batch": "node scripts/promote-starter-batch.mjs",
     "data:promote:virgin-voyages": "node scripts/promote-virgin-voyages-staging.mjs",
     "data:audit:links": "node scripts/audit-public-links.mjs",
     "data:review:manual": "node scripts/generate-manual-review-queue.mjs",

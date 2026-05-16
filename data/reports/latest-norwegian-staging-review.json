@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-16T20:06:54.710Z",
+  "generatedAt": "2026-05-16T22:29:47.296Z",
   "provider": "norwegian",
   "sourceRunId": "2026-05-16T20-06-34-114Z",
   "mode": "review-only",
@@ -9,33 +9,16 @@
     "maxRecommendations": 40
   },
   "counts": {
-    "seedNorwegian": 36,
+    "seedNorwegian": 40,
     "stagedNorwegian": 148,
-    "exactMatches": 31,
+    "exactMatches": 35,
     "hiddenMatches": 0,
     "priceChanges": 0,
-    "newCandidates": 117,
+    "newCandidates": 113,
     "missingFromStaging": 5,
     "recommendedNew": 40
   },
   "recommendedNew": [
-    {
-      "id": "norwegian-norwegian-getaway-20270312-59673",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-      "departureDate": "2027-03-12",
-      "returnDate": "2027-03-17",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 859,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468021",
-      "confidence": "itinerary_verified_price_check_required"
-    },
     {
       "id": "norwegian-norwegian-epic-20280107-61512",
       "shipName": "Norwegian Epic",
@@ -53,63 +36,6 @@
       ],
       "startingPrice": 869,
       "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334775",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20260816-58196",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
-      "departureDate": "2026-08-16",
-      "returnDate": "2026-08-23",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Falmouth, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 879,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925674",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20260906-58199",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-09-06",
-      "returnDate": "2026-09-13",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 879,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925660",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20260920-58201",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-09-20",
-      "returnDate": "2026-09-27",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 879,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925661",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
@@ -763,6 +689,82 @@
       ],
       "startingPrice": 1049,
       "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925673",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-luna-20261205-59162",
+      "shipName": "Norwegian Luna",
+      "sailingName": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
+      "departureDate": "2026-12-05",
+      "returnDate": "2026-12-12",
+      "nights": 7,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Roatán (Bay Islands), Honduras",
+        "Harvest Caye, Belize",
+        "Costa Maya, Mexico",
+        "Cozumel, Mexico"
+      ],
+      "startingPrice": 1049,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367513",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-luna-20261212-59163",
+      "shipName": "Norwegian Luna",
+      "sailingName": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
+      "departureDate": "2026-12-12",
+      "returnDate": "2026-12-19",
+      "nights": 7,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Roatán (Bay Islands), Honduras",
+        "Harvest Caye, Belize",
+        "Costa Maya, Mexico",
+        "Cozumel, Mexico"
+      ],
+      "startingPrice": 1049,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367514",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-aqua-20261213-59055",
+      "shipName": "Norwegian Aqua",
+      "sailingName": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
+      "departureDate": "2026-12-13",
+      "returnDate": "2026-12-20",
+      "nights": 7,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Puerto Plata, Dominican Republic",
+        "St. Thomas, US Virgin Islands",
+        "Tortola, British Virgin Islands",
+        "Great Stirrup Cay, Bahamas"
+      ],
+      "startingPrice": 1059,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=AQUA7MIAPOPSTTTOVNPIMIA&guests=2&gateway=NONE&packageId=23353045",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-luna-20270109-59167",
+      "shipName": "Norwegian Luna",
+      "sailingName": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
+      "departureDate": "2027-01-09",
+      "returnDate": "2027-01-16",
+      "nights": 7,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Roatán (Bay Islands), Honduras",
+        "Harvest Caye, Belize",
+        "Costa Maya, Mexico",
+        "Cozumel, Mexico"
+      ],
+      "startingPrice": 1059,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367518",
       "confidence": "itinerary_verified_price_check_required"
     }
   ],

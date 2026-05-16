@@ -135,6 +135,106 @@
     ]
   },
   {
+    "id": "carnival-carnival-magic-20260830-21895",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "shipId": "carnival-magic",
+    "departureDate": "2026-08-30",
+    "returnDate": "2026-09-05",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Amber Cove",
+        "portSlug": "amber-cove",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Nassau",
+        "portSlug": "nassau",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-sunrise-20260831-22008",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunrise",
+    "shipId": "carnival-sunrise",
+    "departureDate": "2026-08-31",
+    "returnDate": "2026-09-05",
+    "duration": 5,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Grand Turk",
+        "portSlug": "grand-turk",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "RelaxAway, Half Moon Cay™",
+        "portSlug": "relaxaway-half-moon-cay",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
     "id": "carnival-carnival-paradise-20260906-21629",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Paradise",
@@ -169,6 +269,58 @@
         "day": 5,
         "type": "arrival",
         "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-magic-20260913-21897",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "shipId": "carnival-magic",
+    "departureDate": "2026-09-13",
+    "returnDate": "2026-09-19",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Amber Cove",
+        "portSlug": "amber-cove",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Grand Turk",
+        "portSlug": "grand-turk",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "Miami, FL"
       }
     ]
   },
@@ -377,6 +529,58 @@
         "day": 6,
         "type": "arrival",
         "portName": "Manhattan, New York City, NY"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-magic-20260927-21899",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "shipId": "carnival-magic",
+    "departureDate": "2026-09-27",
+    "returnDate": "2026-10-03",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Amber Cove",
+        "portSlug": "amber-cove",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Grand Turk",
+        "portSlug": "grand-turk",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "Miami, FL"
       }
     ]
   },
@@ -1135,6 +1339,58 @@
     ]
   },
   {
+    "id": "carnival-carnival-magic-20261212-21910",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "shipId": "carnival-magic",
+    "departureDate": "2026-12-12",
+    "returnDate": "2026-12-18",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "RelaxAway, Half Moon Cay™",
+        "portSlug": "relaxaway-half-moon-cay",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Amber Cove",
+        "portSlug": "amber-cove",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Grand Turk",
+        "portSlug": "grand-turk",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
     "id": "carnival-carnival-valor-20261212-22109",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Valor",
@@ -1176,6 +1432,58 @@
         "day": 6,
         "type": "arrival",
         "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-magic-20270103-21913",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "shipId": "carnival-magic",
+    "departureDate": "2027-01-03",
+    "returnDate": "2027-01-09",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Amber Cove",
+        "portSlug": "amber-cove",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Grand Turk",
+        "portSlug": "grand-turk",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "Miami, FL"
       }
     ]
   },
@@ -1962,6 +2270,65 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-prima-20260816-58196",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Prima",
+    "shipId": "norwegian-prima",
+    "departureDate": "2026-08-16",
+    "returnDate": "2026-08-23",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Falmouth, Jamaica",
+        "portSlug": "falmouth-jamaica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260830-58198",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -2003,6 +2370,124 @@
         "type": "port",
         "portName": "Cozumel, Mexico",
         "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-prima-20260906-58199",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Prima",
+    "shipId": "norwegian-prima",
+    "departureDate": "2026-09-06",
+    "returnDate": "2026-09-13",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-prima-20260920-58201",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Prima",
+    "shipId": "norwegian-prima",
+    "departureDate": "2026-09-20",
+    "returnDate": "2026-09-27",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
         "isTender": false
       },
       {
@@ -3171,6 +3656,51 @@
         "type": "port",
         "portName": "Puerto Plata, Dominican Republic",
         "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-getaway-20270312-59673",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-03-12",
+    "returnDate": "2027-03-17",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
         "isTender": false
       },
       {

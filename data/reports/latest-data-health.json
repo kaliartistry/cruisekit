@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-05-16T13:36:55.834Z",
-  "manifestGeneratedAt": "2026-05-16T13:36:55.782Z",
+  "generatedAt": "2026-05-16T22:29:12.375Z",
+  "manifestGeneratedAt": "2026-05-16T22:29:12.323Z",
   "counts": {
-    "seedSailings": 97,
-    "publicSailings": 87,
+    "seedSailings": 107,
+    "publicSailings": 97,
     "seedDeals": 0,
     "publicDeals": 0,
-    "mobileSailings": 87,
-    "mobileDeals": 87
+    "mobileSailings": 97,
+    "mobileDeals": 97
   },
   "byCruiseLine": {
-    "carnival": 47,
-    "norwegian": 36,
+    "carnival": 53,
+    "norwegian": 40,
     "royal-caribbean": 4,
     "virgin-voyages": 10
   },
   "byConfidence": {
     "internal_do_not_publish": 10,
-    "itinerary_verified_price_check_required": 87
+    "itinerary_verified_price_check_required": 97
   },
   "blockers": [],
   "warnings": []

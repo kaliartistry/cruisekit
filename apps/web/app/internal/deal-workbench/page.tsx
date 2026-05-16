@@ -35,6 +35,17 @@ type ImportReport = {
   warnings?: string[];
 };
 
+type StarterBatchReport = {
+  generatedAt: string;
+  mode: "dry-run" | "apply";
+  providers: Array<{
+    provider: string;
+    label: string;
+    selected: Array<Candidate & { score?: number }>;
+    command: string;
+  }>;
+};
+
 export const metadata: Metadata = {
   title: "Deal Promotion Workbench",
   robots: { index: false, follow: false },
@@ -105,6 +116,7 @@ export default function DealPromotionWorkbenchPage() {
   const statuses = statusFiles
     .map((file) => readJson<ImportReport>(file))
     .filter((report): report is ImportReport => report !== null);
+  const starterBatch = readJson<StarterBatchReport>("latest-starter-batch-promotion.json");
 
   const candidates = reviews.flatMap((report) =>
     (report.recommendedNew ?? []).map((candidate) => ({
@@ -153,6 +165,8 @@ export default function DealPromotionWorkbenchPage() {
           <Metric label="Recommended queue" value={totalRecommended} />
           <Metric label="Price checks required" value={totalPriceChecks} tone="warning" />
         </section>
+
+        {starterBatch && <StarterBatchPanel report={starterBatch} />}
 
         <section className="grid gap-4 lg:grid-cols-4">
           {reviews.map((report) => (
@@ -222,6 +236,46 @@ export default function DealPromotionWorkbenchPage() {
         </section>
       </div>
     </main>
+  );
+}
+
+function StarterBatchPanel({ report }: { report: StarterBatchReport }) {
+  const selectedCount = report.providers.reduce((sum, provider) => sum + provider.selected.length, 0);
+  return (
+    <section className="rounded-sm border border-emerald-200 bg-emerald-50 p-5">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <h2 className="text-lg font-semibold text-slate-950">Latest Starter Batch</h2>
+          <p className="mt-1 text-sm text-slate-700">
+            {selectedCount} selected · {report.mode === "apply" ? "Applied to live catalog" : "Dry run only"} ·{" "}
+            {dateLabel(report.generatedAt.slice(0, 10))}
+          </p>
+        </div>
+        <code className="rounded-sm bg-white px-3 py-2 text-xs font-semibold text-slate-800">
+          pnpm run data:promote:starter-batch -- --apply
+        </code>
+      </div>
+      <div className="mt-4 grid gap-3 lg:grid-cols-2">
+        {report.providers.map((provider) => (
+          <div key={provider.provider} className="rounded-sm border border-emerald-200 bg-white p-3">
+            <div className="flex items-center justify-between gap-3">
+              <h3 className="font-semibold text-slate-950">{provider.label}</h3>
+              <span className="text-sm font-semibold text-emerald-700">{provider.selected.length} selected</span>
+            </div>
+            <div className="mt-3 grid gap-2">
+              {provider.selected.slice(0, 4).map((candidate) => (
+                <CandidateRow
+                  key={`${provider.provider}-${candidate.id}`}
+                  candidate={candidate}
+                  provider={provider.provider}
+                  status={report.mode === "apply" ? "Live, price check" : "Planned"}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 

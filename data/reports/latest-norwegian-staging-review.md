@@ -1,6 +1,6 @@
 # Norwegian Staging Review
 
-Generated: 2026-05-16T20:06:54.710Z
+Generated: 2026-05-16T22:29:47.296Z
 
 Mode: review-only
 
@@ -10,23 +10,19 @@ Source run: 2026-05-16T20-06-34-114Z
 
 | Metric | Count |
 | --- | ---: |
-| Seed Norwegian records | 36 |
+| Seed Norwegian records | 40 |
 | Staged Norwegian records | 148 |
-| Exact matches | 31 |
+| Exact matches | 35 |
 | Hidden seed matches | 0 |
 | Price changes above threshold | 0 |
-| New candidates | 117 |
+| New candidates | 113 |
 | Missing from staging | 5 |
 
 ## Recommended New Candidates
 
 | Ship | Date | Nights | Price | Status | Link |
 | --- | --- | ---: | ---: | --- | --- |
-| Norwegian Getaway | 2027-03-12 | 5 | $859 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468021) |
 | Norwegian Epic | 2028-01-07 | 7 | $869 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334775) |
-| Norwegian Prima | 2026-08-16 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925674) |
-| Norwegian Prima | 2026-09-06 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925660) |
-| Norwegian Prima | 2026-09-20 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925661) |
 | Norwegian Viva | 2026-12-05 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369081) |
 | Norwegian Epic | 2028-01-14 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334776) |
 | Norwegian Epic | 2027-01-24 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361667) |
@@ -62,6 +58,10 @@ Source run: 2026-05-16T20-06-34-114Z
 | Norwegian Luna | 2026-11-07 | 7 | $1,029 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367509) |
 | Norwegian Luna | 2026-11-14 | 7 | $1,029 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICZMNPIMIA&guests=2&gateway=NONE&packageId=23367510) |
 | Norwegian Prima | 2026-08-02 | 7 | $1,049 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925673) |
+| Norwegian Luna | 2026-12-05 | 7 | $1,049 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367513) |
+| Norwegian Luna | 2026-12-12 | 7 | $1,049 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367514) |
+| Norwegian Aqua | 2026-12-13 | 7 | $1,059 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=AQUA7MIAPOPSTTTOVNPIMIA&guests=2&gateway=NONE&packageId=23353045) |
+| Norwegian Luna | 2027-01-09 | 7 | $1,059 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367518) |
 
 ## Price Changes To Review
 

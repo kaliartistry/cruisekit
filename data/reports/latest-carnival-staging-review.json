@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-16T20:06:37.974Z",
+  "generatedAt": "2026-05-16T22:29:47.106Z",
   "provider": "carnival",
   "sourceRunId": "2026-05-16T20-06-34-062Z",
   "mode": "review-only",
@@ -9,12 +9,12 @@
     "maxRecommendations": 40
   },
   "counts": {
-    "seedCarnival": 47,
+    "seedCarnival": 53,
     "stagedCarnival": 1134,
-    "exactMatches": 44,
+    "exactMatches": 50,
     "hiddenMatches": 0,
     "priceChanges": 1,
-    "newCandidates": 1090,
+    "newCandidates": 1084,
     "missingFromStaging": 3,
     "recommendedNew": 40
   },
@@ -183,26 +183,6 @@
       ],
       "startingPrice": 359,
       "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=WC2&durDays=5&shipCode=BR&subRegionCode=CW&sailingID=20919&sailDate=01252027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-magic-20260927-21899",
-      "shipName": "Carnival Magic",
-      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-      "departureDate": "2026-09-27",
-      "returnDate": "2026-10-03",
-      "nights": 6,
-      "departurePort": "Miami, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Miami",
-        "Celebration Key™",
-        "Amber Cove",
-        "Grand Turk",
-        "Miami"
-      ],
-      "startingPrice": 359,
-      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21899&sailDate=09272026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
@@ -519,26 +499,6 @@
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-magic-20260913-21897",
-      "shipName": "Carnival Magic",
-      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-      "departureDate": "2026-09-13",
-      "returnDate": "2026-09-19",
-      "nights": 6,
-      "departurePort": "Miami, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Miami",
-        "Celebration Key™",
-        "Amber Cove",
-        "Grand Turk",
-        "Miami"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21897&sailDate=09132026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
       "id": "carnival-carnival-paradise-20270109-21656",
       "shipName": "Carnival Paradise",
       "sailingName": "5-Day Western Caribbean from Tampa, FL",
@@ -555,46 +515,6 @@
       ],
       "startingPrice": 379,
       "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WCI&durDays=5&shipCode=PA&subRegionCode=CW&sailingID=21656&sailDate=01092027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-sunrise-20260831-22008",
-      "shipName": "Carnival Sunrise",
-      "sailingName": "5-Day Eastern Caribbean from Miami, FL",
-      "departureDate": "2026-08-31",
-      "returnDate": "2026-09-05",
-      "nights": 5,
-      "departurePort": "Miami, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Miami",
-        "Grand Turk",
-        "RelaxAway, Half Moon Cay™",
-        "Celebration Key™",
-        "Miami"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CEJ&durDays=5&shipCode=SN&subRegionCode=CE&sailingID=22008&sailDate=08312026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-magic-20261212-21910",
-      "shipName": "Carnival Magic",
-      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-      "departureDate": "2026-12-12",
-      "returnDate": "2026-12-18",
-      "nights": 6,
-      "departurePort": "Miami, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Miami",
-        "RelaxAway, Half Moon Cay™",
-        "Amber Cove",
-        "Grand Turk",
-        "Miami"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE3&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21910&sailDate=12122026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
@@ -671,26 +591,6 @@
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-magic-20270103-21913",
-      "shipName": "Carnival Magic",
-      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-      "departureDate": "2027-01-03",
-      "returnDate": "2027-01-09",
-      "nights": 6,
-      "departurePort": "Miami, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Miami",
-        "Celebration Key™",
-        "Amber Cove",
-        "Grand Turk",
-        "Miami"
-      ],
-      "startingPrice": 384,
-      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21913&sailDate=01032027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
       "id": "carnival-carnival-magic-20270131-21917",
       "shipName": "Carnival Magic",
       "sailingName": "6-Day Eastern Caribbean from Miami, FL",
@@ -730,26 +630,6 @@
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-magic-20260830-21895",
-      "shipName": "Carnival Magic",
-      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-      "departureDate": "2026-08-30",
-      "returnDate": "2026-09-05",
-      "nights": 6,
-      "departurePort": "Miami, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Miami",
-        "Celebration Key™",
-        "Amber Cove",
-        "Nassau",
-        "Miami"
-      ],
-      "startingPrice": 384,
-      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CEB&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21895&sailDate=08302026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
       "id": "carnival-carnival-magic-20270117-21915",
       "shipName": "Carnival Magic",
       "sailingName": "6-Day Western Caribbean from Miami, FL",
@@ -767,6 +647,119 @@
       ],
       "startingPrice": 384,
       "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CWM&durDays=6&shipCode=MC&subRegionCode=CW&sailingID=21915&sailDate=01172027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "carnival-carnival-valor-20260827-22086",
+      "shipName": "Carnival Valor",
+      "sailingName": "4-Day Western Caribbean from New Orleans, LA",
+      "departureDate": "2026-08-27",
+      "returnDate": "2026-08-31",
+      "nights": 4,
+      "departurePort": "New Orleans, LA",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "New Orleans",
+        "Cozumel",
+        "New Orleans"
+      ],
+      "startingPrice": 387,
+      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=WCD&durDays=4&shipCode=VA&subRegionCode=CW&sailingID=22086&sailDate=08272026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "carnival-carnival-valor-20261128-22106",
+      "shipName": "Carnival Valor",
+      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
+      "departureDate": "2026-11-28",
+      "returnDate": "2026-12-03",
+      "nights": 5,
+      "departurePort": "New Orleans, LA",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "New Orleans",
+        "Cozumel",
+        "Progreso, Yucatán",
+        "New Orleans"
+      ],
+      "startingPrice": 389,
+      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22106&sailDate=11282026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "carnival-carnival-breeze-20270218-20924",
+      "shipName": "Carnival Breeze",
+      "sailingName": "4-Day Western Caribbean from Galveston, TX",
+      "departureDate": "2027-02-18",
+      "returnDate": "2027-02-22",
+      "nights": 4,
+      "departurePort": "Galveston, TX",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Galveston",
+        "Cozumel",
+        "Galveston"
+      ],
+      "startingPrice": 389,
+      "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=GLB&durDays=4&shipCode=BR&subRegionCode=CW&sailingID=20924&sailDate=02182027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "carnival-carnival-breeze-20261205-20908",
+      "shipName": "Carnival Breeze",
+      "sailingName": "5-Day Western Caribbean from Galveston, TX",
+      "departureDate": "2026-12-05",
+      "returnDate": "2026-12-10",
+      "nights": 5,
+      "departurePort": "Galveston, TX",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Galveston",
+        "Cozumel",
+        "Progreso, Yucatán",
+        "Galveston"
+      ],
+      "startingPrice": 389,
+      "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=WC2&durDays=5&shipCode=BR&subRegionCode=CW&sailingID=20908&sailDate=12052026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "carnival-carnival-magic-20261025-21903",
+      "shipName": "Carnival Magic",
+      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
+      "departureDate": "2026-10-25",
+      "returnDate": "2026-10-31",
+      "nights": 6,
+      "departurePort": "Miami, FL",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Miami",
+        "Celebration Key™",
+        "Amber Cove",
+        "Grand Turk",
+        "Miami"
+      ],
+      "startingPrice": 389,
+      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21903&sailDate=10252026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "carnival-carnival-paradise-20261128-21647",
+      "shipName": "Carnival Paradise",
+      "sailingName": "5-Day Western Caribbean from Tampa, FL",
+      "departureDate": "2026-11-28",
+      "returnDate": "2026-12-03",
+      "nights": 5,
+      "departurePort": "Tampa, FL",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Tampa",
+        "Isla Tropicale, Roatan",
+        "Cozumel",
+        "Tampa"
+      ],
+      "startingPrice": 389,
+      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WCI&durDays=5&shipCode=PA&subRegionCode=CW&sailingID=21647&sailDate=11282026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     }
   ],

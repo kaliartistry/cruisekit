@@ -1,304 +1,139 @@
 {
-  "generatedAt": "2026-05-16T04:25:04.427Z",
+  "generatedAt": "2026-05-16T22:29:11.465Z",
   "provider": "carnival",
   "mode": "apply",
-  "sourceRunId": "2026-05-16T02-36-05-410Z",
-  "sourceReviewGeneratedAt": "2026-05-16T04:05:51.227Z",
+  "sourceRunId": "2026-05-16T20-06-34-062Z",
+  "sourceReviewGeneratedAt": "2026-05-16T20:06:37.974Z",
   "options": {
     "apply": true,
     "limit": 40,
-    "ids": [],
+    "ids": [
+      "carnival-carnival-magic-20260927-21899",
+      "carnival-carnival-sunrise-20260831-22008",
+      "carnival-carnival-magic-20260913-21897",
+      "carnival-carnival-magic-20261212-21910",
+      "carnival-carnival-magic-20260830-21895",
+      "carnival-carnival-magic-20270103-21913"
+    ],
     "includePriceChanges": false
   },
   "counts": {
-    "seedBefore": 57,
-    "seedAfter": 57,
-    "promotedNew": 0,
-    "skippedExisting": 40,
+    "seedBefore": 97,
+    "seedAfter": 103,
+    "promotedNew": 6,
+    "skippedExisting": 0,
     "priceUpdates": 0
   },
-  "promoted": [],
-  "skippedExisting": [
+  "promoted": [
     {
-      "id": "carnival-carnival-paradise-20261115-21644",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-11-15",
-      "startingPrice": 259
+      "id": "carnival-carnival-magic-20260927-21899",
+      "shipName": "Carnival Magic",
+      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
+      "departureDate": "2026-09-27",
+      "returnDate": "2026-10-03",
+      "nights": 6,
+      "departurePort": "Miami, FL",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Celebration Key™",
+        "Amber Cove",
+        "Grand Turk"
+      ],
+      "startingPrice": 359,
+      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21899&sailDate=09272026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-paradise-20261004-21635",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-10-04",
-      "startingPrice": 289
-    },
-    {
-      "id": "carnival-carnival-paradise-20261105-21642",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-11-05",
-      "startingPrice": 299
-    },
-    {
-      "id": "carnival-carnival-paradise-20260823-21626",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-08-23",
-      "startingPrice": 309
-    },
-    {
-      "id": "carnival-carnival-paradise-20260906-21629",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-09-06",
-      "startingPrice": 309
-    },
-    {
-      "id": "carnival-carnival-paradise-20261022-21639",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-10-22",
-      "startingPrice": 309
-    },
-    {
-      "id": "carnival-carnival-paradise-20261119-21645",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-11-19",
-      "startingPrice": 309
-    },
-    {
-      "id": "carnival-carnival-paradise-20270905-24329",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-09-05",
-      "startingPrice": 309
-    },
-    {
-      "id": "carnival-carnival-paradise-20270919-24332",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-09-19",
-      "startingPrice": 309
-    },
-    {
-      "id": "carnival-carnival-paradise-20271114-24344",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-11-14",
-      "startingPrice": 309
-    },
-    {
-      "id": "carnival-carnival-paradise-20260924-21633",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-09-24",
-      "startingPrice": 314
-    },
-    {
-      "id": "carnival-carnival-paradise-20261203-21648",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-12-03",
-      "startingPrice": 319
-    },
-    {
-      "id": "carnival-carnival-paradise-20270114-21657",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-01-14",
-      "startingPrice": 319
-    },
-    {
-      "id": "carnival-carnival-paradise-20270128-21660",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-01-28",
-      "startingPrice": 319
-    },
-    {
-      "id": "carnival-carnival-paradise-20271003-24335",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-10-03",
-      "startingPrice": 319
-    },
-    {
-      "id": "carnival-carnival-paradise-20271017-24338",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-10-17",
-      "startingPrice": 319
-    },
-    {
-      "id": "carnival-carnival-paradise-20271031-24341",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-10-31",
-      "startingPrice": 319
-    },
-    {
-      "id": "carnival-carnival-valor-20261114-22103",
-      "shipName": "Carnival Valor",
+      "id": "carnival-carnival-sunrise-20260831-22008",
+      "shipName": "Carnival Sunrise",
+      "sailingName": "5-Day Eastern Caribbean from Miami, FL",
+      "departureDate": "2026-08-31",
+      "returnDate": "2026-09-05",
       "nights": 5,
-      "departureDate": "2026-11-14",
-      "startingPrice": 319
+      "departurePort": "Miami, FL",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Grand Turk",
+        "RelaxAway, Half Moon Cay™",
+        "Celebration Key™"
+      ],
+      "startingPrice": 379,
+      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CEJ&durDays=5&shipCode=SN&subRegionCode=CE&sailingID=22008&sailDate=08312026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-valor-20260928-22093",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2026-09-28",
-      "startingPrice": 324
+      "id": "carnival-carnival-magic-20260913-21897",
+      "shipName": "Carnival Magic",
+      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
+      "departureDate": "2026-09-13",
+      "returnDate": "2026-09-19",
+      "nights": 6,
+      "departurePort": "Miami, FL",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Celebration Key™",
+        "Amber Cove",
+        "Grand Turk"
+      ],
+      "startingPrice": 379,
+      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21897&sailDate=09132026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-valor-20261026-22099",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2026-10-26",
-      "startingPrice": 329
-    },
-    {
-      "id": "carnival-carnival-valor-20270118-22117",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2027-01-18",
-      "startingPrice": 329
-    },
-    {
-      "id": "carnival-carnival-valor-20270123-22118",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2027-01-23",
-      "startingPrice": 329
-    },
-    {
-      "id": "carnival-carnival-valor-20261119-22104",
-      "shipName": "Carnival Valor",
-      "nights": 4,
-      "departureDate": "2026-11-19",
-      "startingPrice": 329
-    },
-    {
-      "id": "carnival-carnival-paradise-20260827-21627",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-08-27",
-      "startingPrice": 334
-    },
-    {
-      "id": "carnival-carnival-valor-20261109-22102",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2026-11-09",
-      "startingPrice": 334
-    },
-    {
-      "id": "carnival-carnival-breeze-20270222-24540",
-      "shipName": "Carnival Breeze",
-      "nights": 4,
-      "departureDate": "2027-02-22",
-      "startingPrice": 334
-    },
-    {
-      "id": "carnival-carnival-paradise-20261008-21636",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2026-10-08",
-      "startingPrice": 339
-    },
-    {
-      "id": "carnival-carnival-valor-20260914-22090",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2026-09-14",
-      "startingPrice": 339
-    },
-    {
-      "id": "carnival-carnival-valor-20261017-22097",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2026-10-17",
-      "startingPrice": 339
-    },
-    {
-      "id": "carnival-carnival-valor-20261031-22100",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2026-10-31",
-      "startingPrice": 339
-    },
-    {
-      "id": "carnival-carnival-valor-20261207-22108",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2026-12-07",
-      "startingPrice": 339
-    },
-    {
-      "id": "carnival-carnival-valor-20261212-22109",
-      "shipName": "Carnival Valor",
-      "nights": 5,
+      "id": "carnival-carnival-magic-20261212-21910",
+      "shipName": "Carnival Magic",
+      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
       "departureDate": "2026-12-12",
-      "startingPrice": 339
+      "returnDate": "2026-12-18",
+      "nights": 6,
+      "departurePort": "Miami, FL",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "RelaxAway, Half Moon Cay™",
+        "Amber Cove",
+        "Grand Turk"
+      ],
+      "startingPrice": 379,
+      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE3&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21910&sailDate=12122026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-valor-20261203-22107",
-      "shipName": "Carnival Valor",
-      "nights": 4,
-      "departureDate": "2026-12-03",
-      "startingPrice": 339
+      "id": "carnival-carnival-magic-20260830-21895",
+      "shipName": "Carnival Magic",
+      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
+      "departureDate": "2026-08-30",
+      "returnDate": "2026-09-05",
+      "nights": 6,
+      "departurePort": "Miami, FL",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Celebration Key™",
+        "Amber Cove",
+        "Nassau"
+      ],
+      "startingPrice": 384,
+      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CEB&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21895&sailDate=08302026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-breeze-20270121-20918",
-      "shipName": "Carnival Breeze",
-      "nights": 4,
-      "departureDate": "2027-01-21",
-      "startingPrice": 339
-    },
-    {
-      "id": "carnival-carnival-paradise-20280113-24357",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2028-01-13",
-      "startingPrice": 344
-    },
-    {
-      "id": "carnival-carnival-paradise-20280127-24360",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2028-01-27",
-      "startingPrice": 344
-    },
-    {
-      "id": "carnival-carnival-valor-20260919-22091",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2026-09-19",
-      "startingPrice": 344
-    },
-    {
-      "id": "carnival-carnival-valor-20270109-22115",
-      "shipName": "Carnival Valor",
-      "nights": 5,
-      "departureDate": "2027-01-09",
-      "startingPrice": 344
-    },
-    {
-      "id": "carnival-carnival-paradise-20270909-24330",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-09-09",
-      "startingPrice": 354
-    },
-    {
-      "id": "carnival-carnival-paradise-20270923-24333",
-      "shipName": "Carnival Paradise",
-      "nights": 4,
-      "departureDate": "2027-09-23",
-      "startingPrice": 354
+      "id": "carnival-carnival-magic-20270103-21913",
+      "shipName": "Carnival Magic",
+      "sailingName": "6-Day Eastern Caribbean from Miami, FL",
+      "departureDate": "2027-01-03",
+      "returnDate": "2027-01-09",
+      "nights": 6,
+      "departurePort": "Miami, FL",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Celebration Key™",
+        "Amber Cove",
+        "Grand Turk"
+      ],
+      "startingPrice": 384,
+      "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21913&sailDate=01032027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "confidence": "itinerary_verified_price_check_required"
     }
   ],
+  "skippedExisting": [],
   "priceUpdates": []
 }
