@@ -17,4 +17,8 @@ Promotion to public data happens in a separate review step.
 
 - `viator`: handled by `scripts/update-viator-products.mjs` because Viator
   products are port-page excursion content, not canonical cruise sailings.
-- Cruise sailing providers: pending approved affiliate/direct feed access.
+- `carnival`: `pnpm run data:ingest:carnival` writes staging-only Carnival
+  sailing candidates from Carnival's official public cruise search JSON.
+  Promotion remains manual/review-gated.
+- Other cruise sailing providers: pending approved affiliate/direct feed access
+  or source-specific staging importers.

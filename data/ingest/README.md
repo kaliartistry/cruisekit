@@ -22,6 +22,17 @@ data/ingest/
 - Prices, promos, taxes/fees, and sold-out status stay review-gated until the
   provider has multiple clean report-only runs.
 
+## Current temporary importers
+
+```bash
+pnpm run data:ingest:carnival
+```
+
+This imports Carnival candidate sailings into staging only. It saves observed
+room/category prices separately in `observed-prices.json` so public canonical
+records do not accidentally treat transient scrape observations as verified
+booking prices.
+
 ## Source priority
 
 1. Affiliate feeds or direct partner APIs.

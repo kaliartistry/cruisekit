@@ -13,6 +13,7 @@
     "schema:validate": "node scripts/validate-seed-records.mjs",
     "data:build": "node scripts/build-data-bundles.mjs",
     "data:refresh:viator": "node scripts/update-viator-products.mjs",
+    "data:ingest:carnival": "node scripts/ingest/carnival.mjs",
     "data:audit:links": "node scripts/audit-public-links.mjs",
     "data:review:manual": "node scripts/generate-manual-review-queue.mjs",
     "data:report": "pnpm run data:build && node scripts/data-quality-report.mjs && pnpm run data:audit:links",

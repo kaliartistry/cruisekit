@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-05-16T02:36:05.411Z",
+  "provider": "carnival",
+  "runId": "2026-05-16T02-36-05-410Z",
+  "mode": "staging-only",
+  "source": "https://www.carnival.com/cruisesearch/api/search",
+  "destination": "C",
+  "maxPages": 3,
+  "pageSize": 50,
+  "rawPages": [
+    {
+      "page": 1,
+      "url": "https://www.carnival.com/cruisesearch/api/search?dest=C&numAdults=2&pageNumber=1&pageSize=50&showBest=true&excludeResults=false&currency=USD&locality=1",
+      "totalResults": 247
+    },
+    {
+      "page": 2,
+      "url": "https://www.carnival.com/cruisesearch/api/search?dest=C&numAdults=2&pageNumber=2&pageSize=50&showBest=true&excludeResults=false&currency=USD&locality=1",
+      "totalResults": 247
+    },
+    {
+      "page": 3,
+      "url": "https://www.carnival.com/cruisesearch/api/search?dest=C&numAdults=2&pageNumber=3&pageSize=50&showBest=true&excludeResults=false&currency=USD&locality=1",
+      "totalResults": 247
+    }
+  ],
+  "staging": {
+    "sailings": 1135,
+    "deals": 0,
+    "schemaErrors": 0,
+    "byShip": {
+      "Carnival Breeze": 104,
+      "Carnival Celebration": 88,
+      "Carnival Dream": 95,
+      "Carnival Festivale": 23,
+      "Carnival Firenze": 14,
+      "Carnival Freedom": 20,
+      "Carnival Horizon": 113,
+      "Carnival Jubilee": 50,
+      "Carnival Legend": 10,
+      "Carnival Liberty": 62,
+      "Carnival Magic": 94,
+      "Carnival Miracle": 14,
+      "Carnival Paradise": 123,
+      "Carnival Spirit": 8,
+      "Carnival Sunrise": 9,
+      "Carnival Sunshine": 26,
+      "Carnival Valor": 78,
+      "Carnival Venezia": 64,
+      "Carnival Vista": 92,
+      "Mardi Gras": 48
+    },
+    "minPrice": 259,
+    "maxPrice": 1454
+  },
+  "blockers": [],
+  "warnings": [
+    "Staging records are not production records.",
+    "Review exact booking URL, price basis, taxes/fees, and terms before promotion.",
+    "Observed cabin prices are saved separately and are not part of the canonical public schema."
+  ],
+  "paths": {
+    "raw": "data/ingest/raw/carnival/2026-05-16T02-36-05-410Z",
+    "staging": "data/ingest/staging/carnival/2026-05-16T02-36-05-410Z",
+    "report": "data/ingest/reports/carnival/2026-05-16T02-36-05-410Z.json"
+  }
+}

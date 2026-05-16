@@ -101,6 +101,16 @@ Rules for this temporary workflow:
   access exists.
 - Quarantine uncertain records with `confidence: "internal_do_not_publish"`.
 
+The first source-specific staging importer is Carnival:
+
+```bash
+pnpm run data:ingest:carnival
+```
+
+It reads Carnival's official public cruise search JSON, stores raw snapshots,
+writes canonical-shaped staging sailings, and saves observed cabin prices in a
+separate `observed-prices.json` file. It does not edit production seed data.
+
 ## Publish command
 
 ```bash

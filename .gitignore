@@ -55,3 +55,8 @@ CruiseKit-Design-Review.md
 CruiseKit-Screenshots.pdf
 cruisekit-design-review.zip
 myday-wireframe.html
+
+# Provider ingestion run artifacts (reproducible, can be large)
+data/ingest/raw/
+data/ingest/staging/
+data/ingest/reports/
