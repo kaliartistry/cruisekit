@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-05-16T20:19:17.900Z",
+  "provider": "princess",
+  "runId": "2026-05-16T20-19-17-900Z",
+  "mode": "staging-only",
+  "source": "https://gw.api.princess.com/pcl-web/internal/resdb/p1.0/products?agencyCountry=US&cruiseType=C&voyageStatus=A&webDisplay=Y&promoFilter=all&light=true",
+  "sourcePage": "https://www.princess.com/cruise-search/?trade=all&resType=C",
+  "maxProducts": null,
+  "sourceCounts": {
+    "ships": 17,
+    "trades": 15,
+    "ports": 380,
+    "products": 872,
+    "productsSampled": 872
+  },
+  "staging": {
+    "sailings": 1931,
+    "deals": 0,
+    "schemaErrors": 0,
+    "minPrice": null,
+    "maxPrice": null,
+    "byRegion": {
+      "alaska": 352,
+      "asia": 264,
+      "california-coast": 44,
+      "caribbean": 484,
+      "hawaii": 40,
+      "mediterranean": 367,
+      "mexico": 70,
+      "other": 123,
+      "south-pacific": 151,
+      "transatlantic": 36
+    },
+    "byShip": {
+      "Caribbean Princess": 87,
+      "Coral Princess": 97,
+      "Crown Princess": 110,
+      "Diamond Princess": 153,
+      "Discovery Princess": 118,
+      "Emerald Princess": 119,
+      "Enchanted Princess": 121,
+      "Grand Princess": 110,
+      "Island Princess": 85,
+      "Majestic Princess": 54,
+      "Regal Princess": 184,
+      "Royal Princess": 98,
+      "Ruby Princess": 60,
+      "Sapphire Princess": 124,
+      "Sky Princess": 88,
+      "Star Princess": 119,
+      "Sun Princess": 204
+    }
+  },
+  "blockers": [],
+  "warnings": [
+    "Princess light search JSON does not publish reliable starting fares.",
+    "Staged records are inventory candidates, not public deals.",
+    "Review exact itinerary, price, taxes/fees, and booking link before promotion."
+  ],
+  "paths": {
+    "raw": "data/ingest/raw/princess/2026-05-16T20-19-17-900Z",
+    "staging": "data/ingest/staging/princess/2026-05-16T20-19-17-900Z",
+    "report": "data/ingest/reports/princess/2026-05-16T20-19-17-900Z.json"
+  }
+}
