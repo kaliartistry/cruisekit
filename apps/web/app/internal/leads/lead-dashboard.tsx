@@ -144,6 +144,8 @@ const FILTERS: Array<{ key: FilterKey; label: string }> = [
   { key: "archived", label: "Archived" },
 ];
 
+const OPS_TIME_ZONE = "America/New_York";
+
 function readString(value: unknown) {
   return typeof value === "string" ? value : "";
 }
@@ -191,7 +193,31 @@ function formatDateTime(value: Date | null) {
     day: "numeric",
     hour: "numeric",
     minute: "2-digit",
+    timeZone: OPS_TIME_ZONE,
+    timeZoneName: "short",
   }).format(value);
+}
+
+function leadActivityLabel(lead: LeadRequest) {
+  if (lead.lastCustomerReplyAt) {
+    return `Last reply ${formatDateTime(lead.lastCustomerReplyAt)}`;
+  }
+  if (lead.bookedAt) {
+    return `Booked ${formatDateTime(lead.bookedAt)}`;
+  }
+  if (lead.lostAt) {
+    return `Lost ${formatDateTime(lead.lostAt)}`;
+  }
+  if (lead.archivedAt) {
+    return `Archived ${formatDateTime(lead.archivedAt)}`;
+  }
+  if (lead.contactedAt) {
+    return `Contacted ${formatDateTime(lead.contactedAt)}`;
+  }
+  if (lead.emailRetriedAt) {
+    return `Retried ${formatDateTime(lead.emailRetriedAt)}`;
+  }
+  return `Received ${formatDateTime(lead.createdAt)}`;
 }
 
 function formatMoney(value: number | null, currency: string) {
@@ -566,7 +592,7 @@ export default function LeadDashboard() {
             </p>
             <h1 className="mt-2 text-3xl font-bold text-navy">Lead Dashboard</h1>
             <p className="mt-2 text-sm text-slate-600">
-              Deal requests from the app, backed by Firestore and Resend notifications.
+              Deal requests from the app, backed by Firestore and Resend notifications. Times are shown in Eastern Time.
             </p>
           </div>
           <Button variant="outline" onClick={() => void loadLeads()} disabled={loading}>
@@ -767,7 +793,7 @@ function LeadRow({
           <div className="flex flex-wrap items-center gap-2">
             <StatusBadge status={lead.status} />
             <span className="text-xs font-medium text-slate-500">
-              {formatDateTime(lead.createdAt)}
+              {leadActivityLabel(lead)}
             </span>
           </div>
           <h2 className="mt-2 truncate text-base font-bold text-navy">
