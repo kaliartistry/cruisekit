@@ -34,6 +34,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Next.js static export
+        env:
+          NEXT_PUBLIC_ENABLE_LEAD_DASHBOARD: "true"
         run: pnpm --filter web build
 
       - name: Setup Pages

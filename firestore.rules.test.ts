@@ -8,6 +8,7 @@ import {
   doc,
   setDoc,
   getDoc,
+  getDocs,
   updateDoc,
   deleteDoc,
   addDoc,
@@ -23,6 +24,7 @@ const PROJECT_ID = "cruisekit-app-test";
 const ALICE = "alice-uid";
 const BOB = "bob-uid";
 const CAROL = "carol-uid";
+const ADMIN = "admin-uid";
 const GROUP_ID = "g1";
 
 let env: RulesTestEnvironment;
@@ -52,6 +54,49 @@ function validSavedDeal() {
     bookingUrl: "https://example.com/book",
     savedAt: new Date().toISOString(),
   };
+}
+
+function validLeadRequest(uid = ALICE) {
+  return {
+    createdAt: serverTimestamp(),
+    status: "new",
+    sourcePlatform: "mobile",
+    sourceSurface: "deal_handoff_sheet",
+    requesterUid: uid,
+    requesterIsAnonymous: true,
+    contactName: "Alice Traveler",
+    contactEmail: "alice@example.com",
+    contactPhone: "555-123-4567",
+    note: "Looking for a balcony cabin and current total price.",
+    dealId: "carnival-vista-20260912",
+    cruiseLineId: "carnival",
+    cruiseLine: "Carnival",
+    shipName: "Carnival Vista",
+    itineraryTitle: "Western Caribbean",
+    departureDate: "2026-09-12",
+    fromPrice: 599,
+    currency: "USD",
+    lastVerified: "2026-05-16",
+    bookingUrl: "https://example.com/book",
+  };
+}
+
+async function grantAdmin(uid = ADMIN) {
+  await env.withSecurityRulesDisabled(async (ctx) => {
+    await setDoc(doc(ctx.firestore(), "adminUsers", uid), {
+      createdAt: serverTimestamp(),
+      email: "kali@example.com",
+    });
+  });
+}
+
+async function seedLeadRequest(id = "lead1", uid = ALICE) {
+  await env.withSecurityRulesDisabled(async (ctx) => {
+    await setDoc(
+      doc(ctx.firestore(), "dealLeadRequests", id),
+      validLeadRequest(uid),
+    );
+  });
 }
 
 beforeAll(async () => {
@@ -201,6 +246,137 @@ describe("default deny", () => {
   it("denies authed read of arbitrary collection", async () => {
     const db = env.authenticatedContext(ALICE).firestore();
     await assertFails(getDoc(doc(db, "randomCollection", "foo")));
+  });
+});
+
+describe("dealLeadRequests/{requestId}", () => {
+  it("allows an authenticated user to create a valid lead request", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertSucceeds(
+      addDoc(collection(db, "dealLeadRequests"), validLeadRequest(ALICE)),
+    );
+  });
+
+  it("denies unauthenticated create", async () => {
+    const db = env.unauthenticatedContext().firestore();
+    await assertFails(
+      addDoc(collection(db, "dealLeadRequests"), validLeadRequest(ALICE)),
+    );
+  });
+
+  it("denies create when requesterUid does not match auth uid", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      addDoc(collection(db, "dealLeadRequests"), validLeadRequest(BOB)),
+    );
+  });
+
+  it("denies create with extra fields", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      addDoc(collection(db, "dealLeadRequests"), {
+        ...validLeadRequest(ALICE),
+        internalPriority: "high",
+      }),
+    );
+  });
+
+  it("denies create without a plausible email address", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      addDoc(collection(db, "dealLeadRequests"), {
+        ...validLeadRequest(ALICE),
+        contactEmail: "alice.example.com",
+      }),
+    );
+  });
+
+  it("denies create with whitespace in email address", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      addDoc(collection(db, "dealLeadRequests"), {
+        ...validLeadRequest(ALICE),
+        contactEmail: "alice @example.com",
+      }),
+    );
+  });
+
+  it("denies create unless status is new", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      addDoc(collection(db, "dealLeadRequests"), {
+        ...validLeadRequest(ALICE),
+        status: "contacted",
+      }),
+    );
+  });
+
+  it("denies overlong notes", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      addDoc(collection(db, "dealLeadRequests"), {
+        ...validLeadRequest(ALICE),
+        note: "x".repeat(2001),
+      }),
+    );
+  });
+
+  it("denies client reads of lead requests", async () => {
+    await seedLeadRequest();
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(getDoc(doc(db, "dealLeadRequests", "lead1")));
+  });
+
+  it("denies client updates and deletes", async () => {
+    await seedLeadRequest();
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      updateDoc(doc(db, "dealLeadRequests", "lead1"), { status: "contacted" }),
+    );
+    await assertFails(deleteDoc(doc(db, "dealLeadRequests", "lead1")));
+  });
+
+  it("allows an admin user to read the lead queue", async () => {
+    await grantAdmin();
+    await seedLeadRequest();
+    const db = env.authenticatedContext(ADMIN).firestore();
+    await assertSucceeds(getDoc(doc(db, "dealLeadRequests", "lead1")));
+    await assertSucceeds(getDocs(collection(db, "dealLeadRequests")));
+  });
+
+  it("allows an admin user to update operational lead status fields", async () => {
+    await grantAdmin();
+    await seedLeadRequest();
+    const db = env.authenticatedContext(ADMIN).firestore();
+    await assertSucceeds(
+      updateDoc(doc(db, "dealLeadRequests", "lead1"), {
+        status: "contacted",
+        internalNote: "Reached out by email.",
+        updatedAt: serverTimestamp(),
+        updatedBy: ADMIN,
+        contactedAt: serverTimestamp(),
+      }),
+    );
+  });
+
+  it("denies admin updates to captured customer or deal fields", async () => {
+    await grantAdmin();
+    await seedLeadRequest();
+    const db = env.authenticatedContext(ADMIN).firestore();
+    await assertFails(
+      updateDoc(doc(db, "dealLeadRequests", "lead1"), {
+        contactEmail: "changed@example.com",
+        updatedAt: serverTimestamp(),
+        updatedBy: ADMIN,
+      }),
+    );
+  });
+
+  it("denies admin deleting lead requests", async () => {
+    await grantAdmin();
+    await seedLeadRequest();
+    const db = env.authenticatedContext(ADMIN).firestore();
+    await assertFails(deleteDoc(doc(db, "dealLeadRequests", "lead1")));
   });
 });
 

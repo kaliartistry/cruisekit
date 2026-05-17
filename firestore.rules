@@ -27,6 +27,80 @@ service cloud.firestore {
              get(/databases/$(database)/documents/groups/$(groupId)).data.organizerId;
     }
 
+    function validLeadString(field, maxLength) {
+      return request.resource.data[field] is string
+        && request.resource.data[field].size() <= maxLength;
+    }
+
+    function validLeadEmail() {
+      return request.resource.data.contactEmail is string
+        && request.resource.data.contactEmail.size() >= 6
+        && request.resource.data.contactEmail.size() <= 320
+        && request.resource.data.contactEmail.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]{2,}$');
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/adminUsers/$(request.auth.uid));
+    }
+
+    function validOptionalLeadString(field, maxLength) {
+      return !request.resource.data.keys().hasAny([field])
+        || (request.resource.data[field] is string
+          && request.resource.data[field].size() <= maxLength);
+    }
+
+    function validAdminLeadStatus() {
+      return request.resource.data.status in [
+        'new',
+        'email_sent',
+        'email_failed',
+        'contacted',
+        'booked',
+        'lost',
+        'archived'
+      ];
+    }
+
+    function validAdminLeadTimestamp(field) {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny([field])
+        || request.resource.data[field] == request.time;
+    }
+
+    function validAdminLeadUpdate() {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'status',
+          'internalNote',
+          'updatedAt',
+          'updatedBy',
+          'contactedAt',
+          'bookedAt',
+          'lostAt',
+          'archivedAt'
+        ])
+        && request.resource.data.diff(resource.data).affectedKeys().hasAll([
+          'updatedAt',
+          'updatedBy'
+        ])
+        && request.resource.data.updatedAt == request.time
+        && request.resource.data.updatedBy == request.auth.uid
+        && validAdminLeadStatus()
+        && validOptionalLeadString('internalNote', 2000)
+        && validAdminLeadTimestamp('contactedAt')
+        && validAdminLeadTimestamp('bookedAt')
+        && validAdminLeadTimestamp('lostAt')
+        && validAdminLeadTimestamp('archivedAt');
+    }
+
+    // ───── adminUsers/{uid} (ops access gate) ─────
+    //
+    // Membership is managed through trusted Admin SDK / console operations.
+    // Client code can only confirm its own admin marker exists.
+    match /adminUsers/{uid} {
+      allow read: if isOwner(uid);
+      allow write: if false;
+    }
+
     // ───── users/{uid} (web) ─────
     match /users/{uid} {
       allow read: if isOwner(uid);
@@ -118,6 +192,83 @@ service cloud.firestore {
         // Messages are append-only.
         allow update, delete: if false;
       }
+    }
+
+    // ───── dealLeadRequests/{requestId} (Flutter deal handoff) ─────
+    //
+    // Mobile clients can create lead requests. Only explicit admins can read
+    // or update the operational queue, and they cannot change customer/deal
+    // source fields captured at submission time.
+    match /dealLeadRequests/{requestId} {
+      allow create: if isSignedIn()
+        && request.resource.data.keys().hasOnly([
+          'createdAt',
+          'status',
+          'sourcePlatform',
+          'sourceSurface',
+          'requesterUid',
+          'requesterIsAnonymous',
+          'contactName',
+          'contactEmail',
+          'contactPhone',
+          'note',
+          'dealId',
+          'cruiseLineId',
+          'cruiseLine',
+          'shipName',
+          'itineraryTitle',
+          'departureDate',
+          'fromPrice',
+          'currency',
+          'lastVerified',
+          'bookingUrl'
+        ])
+        && request.resource.data.keys().hasAll([
+          'createdAt',
+          'status',
+          'sourcePlatform',
+          'sourceSurface',
+          'requesterUid',
+          'requesterIsAnonymous',
+          'contactName',
+          'contactEmail',
+          'contactPhone',
+          'note',
+          'dealId',
+          'cruiseLineId',
+          'cruiseLine',
+          'shipName',
+          'itineraryTitle',
+          'departureDate',
+          'fromPrice',
+          'currency',
+          'lastVerified',
+          'bookingUrl'
+        ])
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.status == 'new'
+        && request.resource.data.requesterUid == request.auth.uid
+        && request.resource.data.requesterIsAnonymous is bool
+        && request.resource.data.fromPrice is number
+        && validLeadString('sourcePlatform', 32)
+        && validLeadString('sourceSurface', 64)
+        && validLeadString('contactName', 120)
+        && validLeadEmail()
+        && validLeadString('contactPhone', 40)
+        && validLeadString('note', 2000)
+        && validLeadString('dealId', 160)
+        && validLeadString('cruiseLineId', 80)
+        && validLeadString('cruiseLine', 120)
+        && validLeadString('shipName', 160)
+        && validLeadString('itineraryTitle', 240)
+        && validLeadString('departureDate', 32)
+        && validLeadString('currency', 8)
+        && validLeadString('lastVerified', 32)
+        && validLeadString('bookingUrl', 2048);
+
+      allow read: if isAdmin();
+      allow update: if isAdmin() && validAdminLeadUpdate();
+      allow delete: if false;
     }
 
     // ───── default deny ─────

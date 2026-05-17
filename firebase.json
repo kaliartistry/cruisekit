@@ -3,6 +3,10 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
+  "functions": {
+    "source": "functions",
+    "runtime": "nodejs22"
+  },
   "emulators": {
     "firestore": { "port": 8181 },
     "ui": { "enabled": true, "port": 4000 }

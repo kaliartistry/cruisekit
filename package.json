@@ -5,6 +5,7 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
+    "functions:lint": "pnpm --filter cruisekit-functions lint",
     "clean": "turbo clean",
     "test:rules": "firebase emulators:exec --only firestore 'vitest run firestore.rules.test.ts'",
     "schema:gen:ts": "quicktype --src-lang schema --lang ts --top-level Sailing --just-types data/schema/sailing.schema.json -o shared/models/ts/sailing.ts && quicktype --src-lang schema --lang ts --top-level Deal --just-types data/schema/deal.schema.json -o shared/models/ts/deal.ts && node scripts/postprocess-ts-models.mjs",
