@@ -38,6 +38,7 @@
     "cruiseLine": {
       "type": "string",
       "enum": [
+        "azamara",
         "royal-caribbean",
         "carnival",
         "norwegian",
@@ -46,6 +47,7 @@
         "princess",
         "holland-america",
         "disney",
+        "viking",
         "virgin-voyages"
       ],
       "description": "Canonical cruise line slug."

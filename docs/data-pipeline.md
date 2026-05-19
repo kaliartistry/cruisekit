@@ -141,6 +141,21 @@ The Norwegian importer uses NCL's public vacation search plus date-specific
 sailings JSON. NCL's `combinedPrice` can reflect package/offers assumptions, so
 promoted records remain `itinerary_verified_price_check_required`.
 
+Azamara uses browser-assisted official-source staging:
+
+```bash
+pnpm run data:ingest:azamara
+pnpm run data:review:azamara
+pnpm run data:promote:azamara -- --dry-run --limit 10
+pnpm run data:promote:azamara -- --apply --limit 10
+```
+
+Azamara currently stages dated cards from the official search page for target
+regions such as Caribbean and Alaska, then enriches records from detail-page
+itinerary markup when reachable. Treat records as review-only until embark and
+return ports, detailed itinerary ports, current fare basis, taxes/fees language,
+and booking links are verified.
+
 Royal Caribbean has a matching staging importer:
 
 ```bash
@@ -152,6 +167,50 @@ environments. When that happens, the importer writes an explicit blocker report
 instead of staging stale or guessed inventory. If official search responses are
 reachable, it captures raw responses, normalizes canonical-shaped staging
 records, validates them, and still requires review before promotion.
+
+Royal Caribbean is now treated as a compliance-gated source, not a scraping
+target. Do not add bypass logic, CAPTCHA workarounds, residential proxies, or
+headless-browser evasion to this importer. The approved workarounds are:
+
+1. Approved affiliate/network feeds that provide Royal Caribbean or authorized
+   Royal Caribbean retail offers with usable deep links.
+2. Licensed cruise inventory providers such as Traveltek, Widgety, Odysseus, or
+   a GDS/host-agency feed, once commercial access is available.
+3. CruisingPower/Espresso or other Royal Caribbean B2B exports only through
+   proper agency, host-agency, or partner credentials.
+4. Manual editorial review for itinerary-only placeholders while feed access is
+   pending.
+
+Royal Caribbean records must remain staging-only or
+`internal_do_not_publish` unless the record has a compliant source URL, source
+market, USD price basis, taxes/fees notes, and current booking/deep-link path.
+
+MSC and Viking use browser-assisted official-source staging:
+
+```bash
+pnpm run data:ingest:msc
+pnpm run data:ingest:viking
+```
+
+MSC currently stages records from an accessible MSC market page because the USA
+site routes automation into a waiting-room/service-unavailable flow. Treat those
+records as review-only until market, currency, fare basis, taxes/fees, and
+booking links are verified. Viking's search page exposes itinerary-level cards,
+not dated sailing inventory, so its importer writes
+`itinerary-candidates.json` for manual or partner-feed follow-up.
+
+Holland America uses browser-assisted official-source staging:
+
+```bash
+pnpm run data:ingest:holland-america
+pnpm run data:review:holland-america
+pnpm run data:promote:holland-america -- --dry-run --limit 10
+pnpm run data:promote:holland-america -- --apply --limit 10
+```
+
+Holland America currently stages dated search-card records from the official US
+site. Treat those records as review-only until detailed itinerary ports, price
+basis, taxes/fees language, and booking links are verified.
 
 ## Publish command
 
@@ -281,6 +340,8 @@ flutter build ios \
   --dart-define=CRUISEKIT_DATA_MANIFEST_URL=https://cruisekit.app/data/bundles/manifest.json
 ```
 
-Or configure the same key in the mobile `.env` file during development.
-`CRUISEKIT_DATA_BUNDLE_BASE_URL` is optional when the manifest is served from
-`/data/bundles/` because bundle paths are relative to the manifest URL.
+Do not bundle a real `.env` file into the mobile app. Runtime keys such as
+Mapbox, ShipSafe, and data bundle URLs should be passed as `--dart-define`
+values or injected by the release build system. `CRUISEKIT_DATA_BUNDLE_BASE_URL`
+is optional when the manifest is served from `/data/bundles/` because bundle
+paths are relative to the manifest URL.

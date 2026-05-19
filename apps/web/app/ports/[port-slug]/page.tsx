@@ -31,7 +31,6 @@ import { hasViatorProducts } from "@/lib/data/viator-destinations";
 import { getHotelLink, getBoatRentalLink, getMedEvacLink } from "@/lib/affiliate-config";
 import { cn } from "@/lib/utils/cn";
 import {
-  PORTS,
   getPortBySlug,
   getAllPortSlugs,
   REGION_LABELS,

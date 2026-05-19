@@ -1,5 +1,6 @@
 /** Core cruise line identifiers */
 export type CruiseLineId =
+  | "azamara"
   | "royal-caribbean"
   | "carnival"
   | "norwegian"
@@ -8,6 +9,7 @@ export type CruiseLineId =
   | "princess"
   | "holland-america"
   | "disney"
+  | "viking"
   | "virgin-voyages";
 
 /** Cabin categories */

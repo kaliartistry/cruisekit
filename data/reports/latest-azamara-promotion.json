@@ -1,0 +1,197 @@
+{
+  "generatedAt": "2026-05-19T12:40:49.764Z",
+  "provider": "azamara",
+  "label": "Azamara",
+  "mode": "apply",
+  "sourceRunId": "2026-05-19T12-37-06-689Z",
+  "sourceReviewGeneratedAt": "2026-05-19T12:40:29.210Z",
+  "options": {
+    "provider": "azamara",
+    "apply": true,
+    "limit": 8,
+    "ids": []
+  },
+  "counts": {
+    "seedBefore": 143,
+    "seedAfter": 151,
+    "promotedNew": 8,
+    "skippedExisting": 0
+  },
+  "promoted": [
+    {
+      "id": "azamara-azamara-journey-20261212-jr261212-006",
+      "shipName": "Azamara Journey",
+      "sailingName": "EASTERN CARIBBEAN CRUISE: SAINT LUCIA, DOMINICA & SINT MAARTEN",
+      "departureDate": "2026-12-12",
+      "returnDate": "2026-12-18",
+      "nights": 6,
+      "departurePort": "Bridgetown, Barbados",
+      "returnPort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Castries, Saint Lucia",
+        "Roseau, Dominica",
+        "Basseterre, St.Kitts, Saint Kitts-Nevis",
+        "Charlestown, Nevis, Saint Kitts-Nevis",
+        "Philipsburg, Sint Maarten"
+      ],
+      "startingPrice": 1379,
+      "directLink": "https://www.azamara.com/cruises/jr261212-006-eastern-caribbean-cruise-saint-lucia-dominica-sint-maarten",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "azamara-azamara-journey-20261205-jr261205-007",
+      "shipName": "Azamara Journey",
+      "sailingName": "SOUTHERN CARIBBEAN CRUISE: ANTIGUA, MARTINIQUE & GRENADA",
+      "departureDate": "2026-12-05",
+      "returnDate": "2026-12-12",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "returnPort": "Bridgetown, Barbados",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Virgin Gorda, British Virgin Islands",
+        "St. John's, Antigua",
+        "Saint- Pierre, Martinique",
+        "Port Elizabeth, Bequia, Saint Vincent and the Grenadines",
+        "Saint George's, Grenada",
+        "Scarborough, Tobago, Trinidad and Tobago"
+      ],
+      "startingPrice": 1609,
+      "directLink": "https://www.azamara.com/cruises/jr261205-007-southern-caribbean-cruise-antigua-martinique-grenada",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "azamara-azamara-journey-20261121-jr261121-007",
+      "shipName": "Azamara Journey",
+      "sailingName": "SOUTHERN CARIBBEAN CRUISE: BEQUIA, GRENADA & TOBAGO",
+      "departureDate": "2026-11-21",
+      "returnDate": "2026-11-28",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "returnPort": "Bridgetown, Barbados",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Virgin Gorda, British Virgin Islands",
+        "St. John's, Antigua",
+        "Saint- Pierre, Martinique",
+        "Port Elizabeth, Bequia, Saint Vincent and the Grenadines",
+        "Saint George's, Grenada",
+        "Scarborough, Tobago, Trinidad and Tobago"
+      ],
+      "startingPrice": 1629,
+      "directLink": "https://www.azamara.com/cruises/jr261121-007-southern-caribbean-cruise-bequia-grenada-tobago",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "azamara-azamara-journey-20261114-jr261114-007",
+      "shipName": "Azamara Journey",
+      "sailingName": "EASTERN CARIBBEAN CRUISE: BARBADOS, SAINT LUCIA & BRITISH VIRGIN ISLANDS",
+      "departureDate": "2026-11-14",
+      "returnDate": "2026-11-21",
+      "nights": 7,
+      "departurePort": "Bridgetown, Barbados",
+      "returnPort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Castries, Saint Lucia",
+        "Roseau, Dominica",
+        "Basseterre, St.Kitts, Saint Kitts-Nevis",
+        "Charlestown, Nevis, Saint Kitts-Nevis",
+        "Philipsburg, Sint Maarten",
+        "Road Town, Tortola, British Virgin Islands"
+      ],
+      "startingPrice": 1649,
+      "directLink": "https://www.azamara.com/cruises/jr261114-007-eastern-caribbean-cruise-barbados-saint-lucia-british-virgin-islands",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "azamara-azamara-journey-20261128-jr261128-007",
+      "shipName": "Azamara Journey",
+      "sailingName": "Eastern Caribbean Cruise: Saint Kitts, Nevis & Saint Barthélemy",
+      "departureDate": "2026-11-28",
+      "returnDate": "2026-12-05",
+      "nights": 7,
+      "departurePort": "Bridgetown, Barbados",
+      "returnPort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Castries, Saint Lucia",
+        "Roseau, Dominica",
+        "Basseterre, St.Kitts, Saint Kitts-Nevis",
+        "Charlestown, Nevis, Saint Kitts-Nevis",
+        "Philipsburg, Sint Maarten",
+        "Gustavia, Saint Barthélemy"
+      ],
+      "startingPrice": 1669,
+      "directLink": "https://www.azamara.com/cruises/jr261128-007-eastern-caribbean-cruise-saint-kitts-nevis-saint-barthelemy",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "azamara-azamara-journey-20261107-jr261107-007",
+      "shipName": "Azamara Journey",
+      "sailingName": "SOUTHERN CARIBBEAN CRUISE: BRITISH VIRGIN ISLANDS, MARTINIQUE & GRENADA",
+      "departureDate": "2026-11-07",
+      "returnDate": "2026-11-14",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "returnPort": "Bridgetown, Barbados",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Virgin Gorda, British Virgin Islands",
+        "St. John's, Antigua",
+        "Saint- Pierre, Martinique",
+        "Port Elizabeth, Bequia, Saint Vincent and the Grenadines",
+        "Saint George's, Grenada",
+        "Scarborough, Tobago, Trinidad and Tobago"
+      ],
+      "startingPrice": 1789,
+      "directLink": "https://www.azamara.com/cruises/jr261107-007-southern-caribbean-cruise-british-virgin-islands-martinique-grenada",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "azamara-azamara-journey-20261029-jr261029-009",
+      "shipName": "Azamara Journey",
+      "sailingName": "BERMUDA, SINT MAARTEN & BRITISH VIRGIN ISLANDS CRUISE: HAMILTON, PHILIPSBURG & ROAD TOWN",
+      "departureDate": "2026-10-29",
+      "returnDate": "2026-11-07",
+      "nights": 9,
+      "departurePort": "New York City, New York, United States",
+      "returnPort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Hamilton, Bermuda",
+        "Philipsburg, Sint Maarten",
+        "Road Town, Tortola, British Virgin Islands"
+      ],
+      "startingPrice": 1439,
+      "directLink": "https://www.azamara.com/cruises/jr261029-009-bermuda-sint-maarten-british-virgin-islands-cruise-hamilton-philipsburg-road-town",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "azamara-azamara-journey-20261218-jr261218-010",
+      "shipName": "Azamara Journey",
+      "sailingName": "CARIBBEAN HOLIDAY CRUISE: ANTIGUA, MARTINIQUE & SAINT BARTHÉLEMY",
+      "departureDate": "2026-12-18",
+      "returnDate": "2026-12-28",
+      "nights": 10,
+      "departurePort": "San Juan, Puerto Rico",
+      "returnPort": "Bridgetown, Barbados",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "Charlotte Amalie, St. Thomas, U.S. Virgin Islands",
+        "Virgin Gorda, British Virgin Islands",
+        "St. John's, Antigua",
+        "Gustavia, Saint Barthélemy",
+        "Saint- Pierre, Martinique",
+        "Port Elizabeth, Bequia, Saint Vincent and the Grenadines",
+        "Scarborough, Tobago, Trinidad and Tobago",
+        "Mayreau, Grenadines, Saint Vincent and the Grenadines"
+      ],
+      "startingPrice": 2439,
+      "directLink": "https://www.azamara.com/cruises/jr261218-010-caribbean-holiday-cruise-antigua-martinique-saint-barthelemy",
+      "confidence": "itinerary_verified_price_check_required"
+    }
+  ],
+  "skippedExisting": []
+}

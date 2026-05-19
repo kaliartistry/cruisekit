@@ -17,6 +17,166 @@ const outRoot = resolve(repoRoot, "data/bundles");
 const canonicalOut = resolve(outRoot, "canonical");
 const mobileOut = resolve(outRoot, "mobile");
 
+const PORT_IMAGE_SLUGS = new Set([
+  "amber-cove",
+  "amsterdam",
+  "antigua",
+  "aruba",
+  "auckland",
+  "baltimore",
+  "barbados",
+  "barcelona",
+  "belize-city",
+  "bermuda",
+  "bimini",
+  "bonaire",
+  "busan",
+  "cabo-san-lucas",
+  "cartagena",
+  "catalina-island",
+  "celebration-key",
+  "chania-souda",
+  "cococay",
+  "copenhagen",
+  "costa-maya",
+  "cozumel",
+  "curacao",
+  "dominica",
+  "dover",
+  "dubrovnik",
+  "ensenada",
+  "falmouth",
+  "fort-lauderdale",
+  "freeport",
+  "funchal",
+  "galveston",
+  "grand-cayman",
+  "grand-turk",
+  "great-stirrup-cay",
+  "grenada",
+  "guadeloupe",
+  "half-moon-cay",
+  "halifax",
+  "hamburg",
+  "harvest-caye",
+  "icy-strait-point",
+  "jeju",
+  "juneau",
+  "ketchikan",
+  "key-west",
+  "kusadasi",
+  "la-romana",
+  "labadee",
+  "le-havre",
+  "lisbon",
+  "los-angeles",
+  "manhattan",
+  "martinique",
+  "mazatlan",
+  "miami",
+  "mobile",
+  "montego-bay",
+  "mykonos",
+  "naples",
+  "nassau",
+  "new-orleans",
+  "norfolk",
+  "ocean-cay",
+  "ocho-rios",
+  "olympia-katakolon",
+  "oslo",
+  "port-canaveral",
+  "port-royal",
+  "princess-cays",
+  "progreso",
+  "puerto-plata",
+  "puerto-vallarta",
+  "roatan",
+  "rome-civitavecchia",
+  "samana",
+  "san-diego",
+  "san-juan",
+  "santorini",
+  "seattle",
+  "shanghai",
+  "sicily-messina",
+  "sitka",
+  "skagway",
+  "southampton",
+  "st-croix",
+  "st-kitts",
+  "st-lucia",
+  "st-maarten",
+  "st-thomas",
+  "st-vincent",
+  "stockholm",
+  "sydney",
+  "tampa",
+  "tenerife",
+  "tortola",
+  "valletta",
+  "vancouver",
+  "victoria",
+]);
+
+const PORT_IMAGE_ALIASES = {
+  "belize": "belize-city",
+  "belize city": "belize-city",
+  "cape liberty": "manhattan",
+  "charlotte amalie": "st-thomas",
+  "civitavecchia": "rome-civitavecchia",
+  "ephesus": "kusadasi",
+  "george town": "grand-cayman",
+  "grand cayman": "grand-cayman",
+  "great stirrup cay": "great-stirrup-cay",
+  "half moon": "half-moon-cay",
+  "half moon cay": "half-moon-cay",
+  "icy strait": "icy-strait-point",
+  "katakolon": "olympia-katakolon",
+  "kralendijk": "bonaire",
+  "malta": "valletta",
+  "messina": "sicily-messina",
+  "new york": "manhattan",
+  "oranjestad": "aruba",
+  "orlando": "port-canaveral",
+  "paris": "le-havre",
+  "perfect day": "cococay",
+  "philipsburg": "st-maarten",
+  "progreso yucatan": "progreso",
+  "relaxaway half moon cay": "half-moon-cay",
+  "road town": "tortola",
+  "rome": "rome-civitavecchia",
+  "saint kitts": "st-kitts",
+  "saint lucia": "st-lucia",
+  "san miguel de cozumel": "cozumel",
+  "sicily": "sicily-messina",
+  "souda": "chania-souda",
+  "st kitts": "st-kitts",
+  "st lucia": "st-lucia",
+  "st maarten": "st-maarten",
+  "st thomas": "st-thomas",
+  "st. kitts": "st-kitts",
+  "st. lucia": "st-lucia",
+  "st. maarten": "st-maarten",
+  "st. thomas": "st-thomas",
+  "willemstad": "curacao",
+};
+
+const REGION_IMAGE_SLUGS = {
+  alaska: "juneau",
+  bahamas: "nassau",
+  caribbean: "nassau",
+  "california-coast": "san-diego",
+  europe: "barcelona",
+  hawaii: "miami",
+  mediterranean: "barcelona",
+  mexico: "cozumel",
+  "mexican-riviera": "cabo-san-lucas",
+  "northern-europe": "hamburg",
+  "south-pacific": "sydney",
+  transatlantic: "barcelona",
+};
+
 async function loadJson(relPath) {
   return JSON.parse(await readFile(resolve(repoRoot, relPath), "utf8"));
 }
@@ -112,7 +272,7 @@ function toMobileDeal(sailing) {
     currency: sailing.currency,
     departureDate: sailing.departureDate,
     ports: sailing.itineraryPorts,
-    imageUrl: null,
+    imageUrl: mobileImagePathForSailing(sailing),
     bookingUrl: sailing.affiliateLink ?? sailing.directLink ?? null,
     region: sailing.destinationRegion,
     source: sailing.source?.provider ?? sailing.cruiseLine,
@@ -125,6 +285,70 @@ function toMobileDeal(sailing) {
     dealScore: dealScore(sailing),
     badges: dealBadges(sailing),
   };
+}
+
+function mobileImagePathForSailing(sailing) {
+  const slug = imageSlugForSailing(sailing);
+  return slug ? `assets/images/ports/${slug}.jpg` : null;
+}
+
+function imageSlugForSailing(sailing) {
+  const candidates = [
+    ...sailing.itineraryPorts,
+    sailing.sailingName,
+    sailing.departurePort,
+    sailing.destinationRegion,
+  ];
+
+  for (const candidate of candidates) {
+    const slug = resolvePortImageSlug(candidate);
+    if (slug) return slug;
+  }
+
+  return REGION_IMAGE_SLUGS[sailing.destinationRegion] ?? null;
+}
+
+function resolvePortImageSlug(value) {
+  const normalized = normalizeImageText(value);
+  if (!normalized) return null;
+
+  const candidates = new Set([
+    normalized,
+    normalized.split(",")[0]?.trim(),
+    normalized.split("/")[0]?.trim(),
+    normalized.replace(/\s*\([^)]*\)\s*/g, " ").replace(/\s+/g, " ").trim(),
+  ]);
+
+  for (const candidate of candidates) {
+    if (!candidate) continue;
+    const aliasSlug = PORT_IMAGE_ALIASES[candidate];
+    if (aliasSlug) return aliasSlug;
+
+    const directSlug = slugify(candidate);
+    if (PORT_IMAGE_SLUGS.has(directSlug)) return directSlug;
+  }
+
+  for (const [key, slug] of Object.entries(PORT_IMAGE_ALIASES)) {
+    if (normalized.includes(key)) return slug;
+  }
+
+  for (const slug of PORT_IMAGE_SLUGS) {
+    if (normalized.includes(slug.replace(/-/g, " "))) return slug;
+  }
+
+  return null;
+}
+
+function normalizeImageText(value) {
+  return String(value ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[™®]/g, "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9(),/.\s-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function formatMonth(monthKey) {
@@ -163,6 +387,7 @@ function dealBadges(sailing) {
 
 function displayCruiseLine(slug) {
   const names = {
+    azamara: "Azamara",
     carnival: "Carnival Cruise Line",
     celebrity: "Celebrity Cruises",
     disney: "Disney Cruise Line",
@@ -171,6 +396,7 @@ function displayCruiseLine(slug) {
     norwegian: "Norwegian Cruise Line",
     princess: "Princess Cruises",
     "royal-caribbean": "Royal Caribbean International",
+    viking: "Viking",
     "virgin-voyages": "Virgin Voyages",
   };
   return names[slug] ?? slug;

@@ -7,8 +7,7 @@ import { cn } from "@/lib/utils/cn";
 /*  Label                                                              */
 /* ------------------------------------------------------------------ */
 
-export interface LabelProps
-  extends React.LabelHTMLAttributes<HTMLLabelElement> {}
+export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement>;
 
 const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
   ({ className, ...props }, ref) => (
@@ -40,7 +39,8 @@ export interface InputProps
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type = "text", error, label, inputId, ...props }, ref) => {
-    const id = inputId ?? props.id ?? React.useId();
+    const generatedId = React.useId();
+    const id = inputId ?? props.id ?? generatedId;
     const hasError = Boolean(error);
     const errorMessage = typeof error === "string" ? error : undefined;
 

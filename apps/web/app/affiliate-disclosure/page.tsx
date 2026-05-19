@@ -125,10 +125,10 @@ export default function AffiliateDisclosurePage() {
                 a recommendation that earns us a commission and isn&rsquo;t
                 disclosed, please email{" "}
                 <a
-                  href="mailto:hello@cruisekit.app"
+                  href="mailto:info@cruisekit.app"
                   className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
                 >
-                  hello@cruisekit.app
+                  info@cruisekit.app
                 </a>{" "}
                 so we can fix it.
               </p>
@@ -162,10 +162,10 @@ export default function AffiliateDisclosurePage() {
                 Questions about a specific link or our affiliate practices?
                 Email{" "}
                 <a
-                  href="mailto:hello@cruisekit.app"
+                  href="mailto:info@cruisekit.app"
                   className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
                 >
-                  hello@cruisekit.app
+                  info@cruisekit.app
                 </a>
                 .
               </p>

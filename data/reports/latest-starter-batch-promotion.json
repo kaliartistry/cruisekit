@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-16T22:29:11.251Z",
+  "generatedAt": "2026-05-19T06:02:23.420Z",
   "mode": "apply",
   "options": {
     "apply": true,
@@ -7,7 +7,10 @@
       "carnival",
       "norwegian"
     ],
-    "limits": {}
+    "limits": {
+      "carnival": 20,
+      "norwegian": 10
+    }
   },
   "providers": [
     {
@@ -15,11 +18,32 @@
       "label": "Carnival",
       "selected": [
         {
-          "id": "carnival-carnival-magic-20260927-21899",
+          "id": "carnival-carnival-magic-20270117-21915",
+          "shipName": "Carnival Magic",
+          "sailingName": "6-Day Western Caribbean from Miami, FL",
+          "departureDate": "2027-01-17",
+          "returnDate": "2027-01-23",
+          "nights": 6,
+          "departurePort": "Miami, FL",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Miami",
+            "Celebration Key™",
+            "Montego Bay",
+            "Grand Cayman",
+            "Miami"
+          ],
+          "startingPrice": 384,
+          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CWM&durDays=6&shipCode=MC&subRegionCode=CW&sailingID=21915&sailDate=01172027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 16
+        },
+        {
+          "id": "carnival-carnival-magic-20270131-21917",
           "shipName": "Carnival Magic",
           "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-          "departureDate": "2026-09-27",
-          "returnDate": "2026-10-03",
+          "departureDate": "2027-01-31",
+          "returnDate": "2027-02-06",
           "nights": 6,
           "departurePort": "Miami, FL",
           "destinationRegion": "caribbean",
@@ -30,119 +54,375 @@
             "Grand Turk",
             "Miami"
           ],
-          "startingPrice": 359,
-          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21899&sailDate=09272026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "startingPrice": 384,
+          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21917&sailDate=01312027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
           "confidence": "itinerary_verified_price_check_required",
           "score": 16
         },
         {
-          "id": "carnival-carnival-sunrise-20260831-22008",
-          "shipName": "Carnival Sunrise",
-          "sailingName": "5-Day Eastern Caribbean from Miami, FL",
+          "id": "carnival-carnival-magic-20261025-21903",
+          "shipName": "Carnival Magic",
+          "sailingName": "6-Day Eastern Caribbean from Miami, FL",
+          "departureDate": "2026-10-25",
+          "returnDate": "2026-10-31",
+          "nights": 6,
+          "departurePort": "Miami, FL",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Miami",
+            "Celebration Key™",
+            "Amber Cove",
+            "Grand Turk",
+            "Miami"
+          ],
+          "startingPrice": 389,
+          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21903&sailDate=10252026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 16
+        },
+        {
+          "id": "carnival-carnival-valor-20260822-22085",
+          "shipName": "Carnival Valor",
+          "sailingName": "5-Day Western Caribbean from New Orleans, LA",
+          "departureDate": "2026-08-22",
+          "returnDate": "2026-08-27",
+          "nights": 5,
+          "departurePort": "New Orleans, LA",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "New Orleans",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "New Orleans"
+          ],
+          "startingPrice": 352,
+          "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22085&sailDate=08222026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-valor-20270201-22120",
+          "shipName": "Carnival Valor",
+          "sailingName": "5-Day Western Caribbean from New Orleans, LA",
+          "departureDate": "2027-02-01",
+          "returnDate": "2027-02-06",
+          "nights": 5,
+          "departurePort": "New Orleans, LA",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "New Orleans",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "New Orleans"
+          ],
+          "startingPrice": 354,
+          "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22120&sailDate=02012027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-breeze-20270116-20917",
+          "shipName": "Carnival Breeze",
+          "sailingName": "5-Day Western Caribbean from Galveston, TX",
+          "departureDate": "2027-01-16",
+          "returnDate": "2027-01-21",
+          "nights": 5,
+          "departurePort": "Galveston, TX",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Galveston",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "Galveston"
+          ],
+          "startingPrice": 359,
+          "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=WC2&durDays=5&shipCode=BR&subRegionCode=CW&sailingID=20917&sailDate=01162027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-breeze-20270125-20919",
+          "shipName": "Carnival Breeze",
+          "sailingName": "5-Day Western Caribbean from Galveston, TX",
+          "departureDate": "2027-01-25",
+          "returnDate": "2027-01-30",
+          "nights": 5,
+          "departurePort": "Galveston, TX",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Galveston",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "Galveston"
+          ],
+          "startingPrice": 359,
+          "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=WC2&durDays=5&shipCode=BR&subRegionCode=CW&sailingID=20919&sailDate=01252027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-valor-20260905-22088",
+          "shipName": "Carnival Valor",
+          "sailingName": "5-Day Western Caribbean from New Orleans, LA",
+          "departureDate": "2026-09-05",
+          "returnDate": "2026-09-10",
+          "nights": 5,
+          "departurePort": "New Orleans, LA",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "New Orleans",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "New Orleans"
+          ],
+          "startingPrice": 364,
+          "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22088&sailDate=09052026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-valor-20260831-22087",
+          "shipName": "Carnival Valor",
+          "sailingName": "5-Day Western Caribbean from New Orleans, LA",
           "departureDate": "2026-08-31",
           "returnDate": "2026-09-05",
           "nights": 5,
-          "departurePort": "Miami, FL",
+          "departurePort": "New Orleans, LA",
           "destinationRegion": "caribbean",
           "itineraryPorts": [
-            "Miami",
-            "Grand Turk",
-            "RelaxAway, Half Moon Cay™",
-            "Celebration Key™",
-            "Miami"
+            "New Orleans",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "New Orleans"
           ],
-          "startingPrice": 379,
-          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CEJ&durDays=5&shipCode=SN&subRegionCode=CE&sailingID=22008&sailDate=08312026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "startingPrice": 369,
+          "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22087&sailDate=08312026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
           "confidence": "itinerary_verified_price_check_required",
-          "score": 16
+          "score": 15
         },
         {
-          "id": "carnival-carnival-magic-20260913-21897",
-          "shipName": "Carnival Magic",
-          "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-          "departureDate": "2026-09-13",
-          "returnDate": "2026-09-19",
-          "nights": 6,
-          "departurePort": "Miami, FL",
-          "destinationRegion": "caribbean",
-          "itineraryPorts": [
-            "Miami",
-            "Celebration Key™",
-            "Amber Cove",
-            "Grand Turk",
-            "Miami"
-          ],
-          "startingPrice": 379,
-          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21897&sailDate=09132026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-          "confidence": "itinerary_verified_price_check_required",
-          "score": 16
-        },
-        {
-          "id": "carnival-carnival-magic-20261212-21910",
-          "shipName": "Carnival Magic",
-          "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-          "departureDate": "2026-12-12",
-          "returnDate": "2026-12-18",
-          "nights": 6,
-          "departurePort": "Miami, FL",
-          "destinationRegion": "caribbean",
-          "itineraryPorts": [
-            "Miami",
-            "RelaxAway, Half Moon Cay™",
-            "Amber Cove",
-            "Grand Turk",
-            "Miami"
-          ],
-          "startingPrice": 379,
-          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE3&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21910&sailDate=12122026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-          "confidence": "itinerary_verified_price_check_required",
-          "score": 16
-        },
-        {
-          "id": "carnival-carnival-magic-20260830-21895",
-          "shipName": "Carnival Magic",
-          "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-          "departureDate": "2026-08-30",
-          "returnDate": "2026-09-05",
-          "nights": 6,
-          "departurePort": "Miami, FL",
-          "destinationRegion": "caribbean",
-          "itineraryPorts": [
-            "Miami",
-            "Celebration Key™",
-            "Amber Cove",
-            "Nassau",
-            "Miami"
-          ],
-          "startingPrice": 384,
-          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CEB&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21895&sailDate=08302026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-          "confidence": "itinerary_verified_price_check_required",
-          "score": 16
-        },
-        {
-          "id": "carnival-carnival-magic-20270103-21913",
-          "shipName": "Carnival Magic",
-          "sailingName": "6-Day Eastern Caribbean from Miami, FL",
-          "departureDate": "2027-01-03",
+          "id": "carnival-carnival-valor-20270104-22114",
+          "shipName": "Carnival Valor",
+          "sailingName": "5-Day Western Caribbean from New Orleans, LA",
+          "departureDate": "2027-01-04",
           "returnDate": "2027-01-09",
-          "nights": 6,
-          "departurePort": "Miami, FL",
+          "nights": 5,
+          "departurePort": "New Orleans, LA",
           "destinationRegion": "caribbean",
           "itineraryPorts": [
-            "Miami",
-            "Celebration Key™",
-            "Amber Cove",
-            "Grand Turk",
-            "Miami"
+            "New Orleans",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "New Orleans"
+          ],
+          "startingPrice": 374,
+          "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22114&sailDate=01042027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-paradise-20270201-21661",
+          "shipName": "Carnival Paradise",
+          "sailingName": "5-Day Western Caribbean from Tampa, FL",
+          "departureDate": "2027-02-01",
+          "returnDate": "2027-02-06",
+          "nights": 5,
+          "departurePort": "Tampa, FL",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Tampa",
+            "Grand Cayman",
+            "Cozumel",
+            "Tampa"
+          ],
+          "startingPrice": 374,
+          "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WCB&durDays=5&shipCode=PA&subRegionCode=CW&sailingID=21661&sailDate=02012027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-breeze-20261130-20907",
+          "shipName": "Carnival Breeze",
+          "sailingName": "5-Day Western Caribbean from Galveston, TX",
+          "departureDate": "2026-11-30",
+          "returnDate": "2026-12-05",
+          "nights": 5,
+          "departurePort": "Galveston, TX",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Galveston",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "Galveston"
+          ],
+          "startingPrice": 379,
+          "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=WC2&durDays=5&shipCode=BR&subRegionCode=CW&sailingID=20907&sailDate=11302026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-paradise-20270109-21656",
+          "shipName": "Carnival Paradise",
+          "sailingName": "5-Day Western Caribbean from Tampa, FL",
+          "departureDate": "2027-01-09",
+          "returnDate": "2027-01-14",
+          "nights": 5,
+          "departurePort": "Tampa, FL",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Tampa",
+            "Isla Tropicale, Roatan",
+            "Cozumel",
+            "Tampa"
+          ],
+          "startingPrice": 379,
+          "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WCI&durDays=5&shipCode=PA&subRegionCode=CW&sailingID=21656&sailDate=01092027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-breeze-20270111-20916",
+          "shipName": "Carnival Breeze",
+          "sailingName": "5-Day Western Caribbean from Galveston, TX",
+          "departureDate": "2027-01-11",
+          "returnDate": "2027-01-16",
+          "nights": 5,
+          "departurePort": "Galveston, TX",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Galveston",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "Galveston"
+          ],
+          "startingPrice": 379,
+          "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=WC2&durDays=5&shipCode=BR&subRegionCode=CW&sailingID=20916&sailDate=01112027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-breeze-20270130-20920",
+          "shipName": "Carnival Breeze",
+          "sailingName": "5-Day Western Caribbean from Galveston, TX",
+          "departureDate": "2027-01-30",
+          "returnDate": "2027-02-04",
+          "nights": 5,
+          "departurePort": "Galveston, TX",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Galveston",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "Galveston"
+          ],
+          "startingPrice": 379,
+          "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=WC2&durDays=5&shipCode=BR&subRegionCode=CW&sailingID=20920&sailDate=01302027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-paradise-20270104-21655",
+          "shipName": "Carnival Paradise",
+          "sailingName": "5-Day Western Caribbean from Tampa, FL",
+          "departureDate": "2027-01-04",
+          "returnDate": "2027-01-09",
+          "nights": 5,
+          "departurePort": "Tampa, FL",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Tampa",
+            "Grand Cayman",
+            "Cozumel",
+            "Tampa"
           ],
           "startingPrice": 384,
-          "directLink": "https://www.carnival.com/booking?embkCode=MIA&itinCode=CE9&durDays=6&shipCode=MC&subRegionCode=CE&sailingID=21913&sailDate=01032027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WCB&durDays=5&shipCode=PA&subRegionCode=CW&sailingID=21655&sailDate=01042027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
           "confidence": "itinerary_verified_price_check_required",
-          "score": 16
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-valor-20270220-22124",
+          "shipName": "Carnival Valor",
+          "sailingName": "5-Day Western Caribbean from New Orleans, LA",
+          "departureDate": "2027-02-20",
+          "returnDate": "2027-02-25",
+          "nights": 5,
+          "departurePort": "New Orleans, LA",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "New Orleans",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "New Orleans"
+          ],
+          "startingPrice": 384,
+          "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22124&sailDate=02202027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-valor-20261128-22106",
+          "shipName": "Carnival Valor",
+          "sailingName": "5-Day Western Caribbean from New Orleans, LA",
+          "departureDate": "2026-11-28",
+          "returnDate": "2026-12-03",
+          "nights": 5,
+          "departurePort": "New Orleans, LA",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "New Orleans",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "New Orleans"
+          ],
+          "startingPrice": 389,
+          "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22106&sailDate=11282026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-paradise-20261128-21647",
+          "shipName": "Carnival Paradise",
+          "sailingName": "5-Day Western Caribbean from Tampa, FL",
+          "departureDate": "2026-11-28",
+          "returnDate": "2026-12-03",
+          "nights": 5,
+          "departurePort": "Tampa, FL",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Tampa",
+            "Isla Tropicale, Roatan",
+            "Cozumel",
+            "Tampa"
+          ],
+          "startingPrice": 389,
+          "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WCI&durDays=5&shipCode=PA&subRegionCode=CW&sailingID=21647&sailDate=11282026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
+        },
+        {
+          "id": "carnival-carnival-breeze-20261205-20908",
+          "shipName": "Carnival Breeze",
+          "sailingName": "5-Day Western Caribbean from Galveston, TX",
+          "departureDate": "2026-12-05",
+          "returnDate": "2026-12-10",
+          "nights": 5,
+          "departurePort": "Galveston, TX",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Galveston",
+            "Cozumel",
+            "Progreso, Yucatán",
+            "Galveston"
+          ],
+          "startingPrice": 389,
+          "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=WC2&durDays=5&shipCode=BR&subRegionCode=CW&sailingID=20908&sailDate=12052026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 15
         }
       ],
-      "command": "pnpm run data:promote:carnival -- --apply --ids=carnival-carnival-magic-20260927-21899,carnival-carnival-sunrise-20260831-22008,carnival-carnival-magic-20260913-21897,carnival-carnival-magic-20261212-21910,carnival-carnival-magic-20260830-21895,carnival-carnival-magic-20270103-21913",
-      "stdout": "> cruisekit@ data:promote:carnival /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/promote-carnival-staging.mjs -- --apply --ids=carnival-carnival-magic-20260927-21899,carnival-carnival-sunrise-20260831-22008,carnival-carnival-magic-20260913-21897,carnival-carnival-magic-20261212-21910,carnival-carnival-magic-20260830-21895,carnival-carnival-magic-20270103-21913\n\nCarnival promotion apply: 6 promoted, 0 skipped existing, 0 price update(s).\nReport written to data/reports/latest-carnival-promotion.md",
+      "command": "pnpm run data:promote:carnival -- --apply --ids=carnival-carnival-magic-20270117-21915,carnival-carnival-magic-20270131-21917,carnival-carnival-magic-20261025-21903,carnival-carnival-valor-20260822-22085,carnival-carnival-valor-20270201-22120,carnival-carnival-breeze-20270116-20917,carnival-carnival-breeze-20270125-20919,carnival-carnival-valor-20260905-22088,carnival-carnival-valor-20260831-22087,carnival-carnival-valor-20270104-22114,carnival-carnival-paradise-20270201-21661,carnival-carnival-breeze-20261130-20907,carnival-carnival-paradise-20270109-21656,carnival-carnival-breeze-20270111-20916,carnival-carnival-breeze-20270130-20920,carnival-carnival-paradise-20270104-21655,carnival-carnival-valor-20270220-22124,carnival-carnival-valor-20261128-22106,carnival-carnival-paradise-20261128-21647,carnival-carnival-breeze-20261205-20908",
+      "stdout": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:promote:carnival /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/promote-carnival-staging.mjs -- --apply --ids=carnival-carnival-magic-20270117-21915,carnival-carnival-magic-20270131-21917,carnival-carnival-magic-20261025-21903,carnival-carnival-valor-20260822-22085,carnival-carnival-valor-20270201-22120,carnival-carnival-breeze-20270116-20917,carnival-carnival-breeze-20270125-20919,carnival-carnival-valor-20260905-22088,carnival-carnival-valor-20260831-22087,carnival-carnival-valor-20270104-22114,carnival-carnival-paradise-20270201-21661,carnival-carnival-breeze-20261130-20907,carnival-carnival-paradise-20270109-21656,carnival-carnival-breeze-20270111-20916,carnival-carnival-breeze-20270130-20920,carnival-carnival-paradise-20270104-21655,carnival-carnival-valor-20270220-22124,carnival-carnival-valor-20261128-22106,carnival-carnival-paradise-20261128-21647,carnival-carnival-breeze-20261205-20908\n\nCarnival promotion apply: 20 promoted, 0 skipped existing, 0 price update(s).\nReport written to data/reports/latest-carnival-promotion.md",
       "stderr": ""
     },
     {
@@ -150,49 +430,89 @@
       "label": "Norwegian",
       "selected": [
         {
-          "id": "norwegian-norwegian-getaway-20270312-59673",
-          "shipName": "Norwegian Getaway",
-          "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-          "departureDate": "2027-03-12",
-          "returnDate": "2027-03-17",
-          "nights": 5,
-          "departurePort": "Orlando (Port Canaveral), Florida",
-          "destinationRegion": "caribbean",
-          "itineraryPorts": [
-            "Cozumel, Mexico",
-            "Great Stirrup Cay, Bahamas"
-          ],
-          "startingPrice": 859,
-          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468021",
-          "confidence": "itinerary_verified_price_check_required",
-          "score": 13
-        },
-        {
-          "id": "norwegian-norwegian-prima-20260816-58196",
-          "shipName": "Norwegian Prima",
-          "sailingName": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
-          "departureDate": "2026-08-16",
-          "returnDate": "2026-08-23",
+          "id": "norwegian-norwegian-epic-20270117-59109",
+          "shipName": "Norwegian Epic",
+          "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Cozumel",
+          "departureDate": "2027-01-17",
+          "returnDate": "2027-01-24",
           "nights": 7,
           "departurePort": "Orlando (Port Canaveral), Florida",
           "destinationRegion": "caribbean",
           "itineraryPorts": [
             "Great Stirrup Cay, Bahamas",
-            "Falmouth, Jamaica",
+            "Montego Bay, Jamaica",
             "George Town, Grand Cayman",
             "Cozumel, Mexico"
           ],
           "startingPrice": 879,
-          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925674",
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIMBJGECCZMPCV&guests=2&gateway=NONE&packageId=23361666",
           "confidence": "itinerary_verified_price_check_required",
           "score": 13
         },
         {
-          "id": "norwegian-norwegian-prima-20260906-58199",
-          "shipName": "Norwegian Prima",
+          "id": "norwegian-norwegian-epic-20270124-59110",
+          "shipName": "Norwegian Epic",
+          "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Cozumel",
+          "departureDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "nights": 7,
+          "departurePort": "Orlando (Port Canaveral), Florida",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Great Stirrup Cay, Bahamas",
+            "Ocho Rios, Jamaica",
+            "George Town, Grand Cayman",
+            "Cozumel, Mexico"
+          ],
+          "startingPrice": 879,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361667",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 13
+        },
+        {
+          "id": "norwegian-norwegian-getaway-20270331-59676",
+          "shipName": "Norwegian Getaway",
+          "sailingName": "5-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+          "departureDate": "2027-03-31",
+          "returnDate": "2027-04-05",
+          "nights": 5,
+          "departurePort": "Orlando (Port Canaveral), Florida",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Puerto Plata, Dominican Republic",
+            "Great Stirrup Cay, Bahamas"
+          ],
+          "startingPrice": 879,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468076",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 13
+        },
+        {
+          "id": "norwegian-norwegian-epic-20261122-59101",
+          "shipName": "Norwegian Epic",
+          "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Cozumel",
+          "departureDate": "2026-11-22",
+          "returnDate": "2026-11-29",
+          "nights": 7,
+          "departurePort": "Orlando (Port Canaveral), Florida",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Great Stirrup Cay, Bahamas",
+            "Montego Bay, Jamaica",
+            "George Town, Grand Cayman",
+            "Cozumel, Mexico"
+          ],
+          "startingPrice": 889,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIMBJGECCZMPCV&guests=2&gateway=NONE&packageId=23361658",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 13
+        },
+        {
+          "id": "norwegian-norwegian-escape-20270115-59230",
+          "shipName": "Norwegian Escape",
           "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-          "departureDate": "2026-09-06",
-          "returnDate": "2026-09-13",
+          "departureDate": "2027-01-15",
+          "returnDate": "2027-01-22",
           "nights": 7,
           "departurePort": "Orlando (Port Canaveral), Florida",
           "destinationRegion": "caribbean",
@@ -202,17 +522,17 @@
             "Tortola, British Virgin Islands",
             "Great Stirrup Cay, Bahamas"
           ],
-          "startingPrice": 879,
-          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925660",
+          "startingPrice": 889,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369110",
           "confidence": "itinerary_verified_price_check_required",
           "score": 13
         },
         {
-          "id": "norwegian-norwegian-prima-20260920-58201",
-          "shipName": "Norwegian Prima",
+          "id": "norwegian-norwegian-escape-20270122-59231",
+          "shipName": "Norwegian Escape",
           "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-          "departureDate": "2026-09-20",
-          "returnDate": "2026-09-27",
+          "departureDate": "2027-01-22",
+          "returnDate": "2027-01-29",
           "nights": 7,
           "departurePort": "Orlando (Port Canaveral), Florida",
           "destinationRegion": "caribbean",
@@ -222,14 +542,92 @@
             "Tortola, British Virgin Islands",
             "Great Stirrup Cay, Bahamas"
           ],
-          "startingPrice": 879,
-          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925661",
+          "startingPrice": 889,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369111",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 13
+        },
+        {
+          "id": "norwegian-norwegian-escape-20270129-59232",
+          "shipName": "Norwegian Escape",
+          "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+          "departureDate": "2027-01-29",
+          "returnDate": "2027-02-05",
+          "nights": 7,
+          "departurePort": "Orlando (Port Canaveral), Florida",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Puerto Plata, Dominican Republic",
+            "St. Thomas, US Virgin Islands",
+            "Tortola, British Virgin Islands",
+            "Great Stirrup Cay, Bahamas"
+          ],
+          "startingPrice": 889,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369112",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 13
+        },
+        {
+          "id": "norwegian-norwegian-escape-20270804-60495",
+          "shipName": "Norwegian Escape",
+          "sailingName": "5-Day Caribbean from Orlando (Port Canaveral): Puerto Plata & Great Stirrup Cay",
+          "departureDate": "2027-08-04",
+          "returnDate": "2027-08-09",
+          "nights": 5,
+          "departurePort": "Orlando (Port Canaveral), Florida",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Puerto Plata, Dominican Republic",
+            "Great Stirrup Cay, Bahamas"
+          ],
+          "startingPrice": 889,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223946",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 13
+        },
+        {
+          "id": "norwegian-norwegian-escape-20260705-58718",
+          "shipName": "Norwegian Escape",
+          "sailingName": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
+          "departureDate": "2026-07-05",
+          "returnDate": "2026-07-12",
+          "nights": 7,
+          "departurePort": "Miami, Florida",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Cozumel, Mexico",
+            "Roatán (Bay Islands), Honduras",
+            "Harvest Caye, Belize",
+            "Costa Maya, Mexico"
+          ],
+          "startingPrice": 899,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997526",
+          "confidence": "itinerary_verified_price_check_required",
+          "score": 13
+        },
+        {
+          "id": "norwegian-norwegian-escape-20260712-58719",
+          "shipName": "Norwegian Escape",
+          "sailingName": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
+          "departureDate": "2026-07-12",
+          "returnDate": "2026-07-19",
+          "nights": 7,
+          "departurePort": "Miami, Florida",
+          "destinationRegion": "caribbean",
+          "itineraryPorts": [
+            "Cozumel, Mexico",
+            "Roatán (Bay Islands), Honduras",
+            "Harvest Caye, Belize",
+            "Costa Maya, Mexico"
+          ],
+          "startingPrice": 899,
+          "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997527",
           "confidence": "itinerary_verified_price_check_required",
           "score": 13
         }
       ],
-      "command": "pnpm run data:promote:norwegian -- --apply --ids=norwegian-norwegian-getaway-20270312-59673,norwegian-norwegian-prima-20260816-58196,norwegian-norwegian-prima-20260906-58199,norwegian-norwegian-prima-20260920-58201",
-      "stdout": "> cruisekit@ data:promote:norwegian /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/promote-norwegian-staging.mjs -- --apply --ids=norwegian-norwegian-getaway-20270312-59673,norwegian-norwegian-prima-20260816-58196,norwegian-norwegian-prima-20260906-58199,norwegian-norwegian-prima-20260920-58201\n\nNorwegian promotion apply: 4 promoted, 0 skipped existing.\nReport written to data/reports/latest-norwegian-promotion.md",
+      "command": "pnpm run data:promote:norwegian -- --apply --ids=norwegian-norwegian-epic-20270117-59109,norwegian-norwegian-epic-20270124-59110,norwegian-norwegian-getaway-20270331-59676,norwegian-norwegian-epic-20261122-59101,norwegian-norwegian-escape-20270115-59230,norwegian-norwegian-escape-20270122-59231,norwegian-norwegian-escape-20270129-59232,norwegian-norwegian-escape-20270804-60495,norwegian-norwegian-escape-20260705-58718,norwegian-norwegian-escape-20260712-58719",
+      "stdout": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:promote:norwegian /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/promote-norwegian-staging.mjs -- --apply --ids=norwegian-norwegian-epic-20270117-59109,norwegian-norwegian-epic-20270124-59110,norwegian-norwegian-getaway-20270331-59676,norwegian-norwegian-epic-20261122-59101,norwegian-norwegian-escape-20270115-59230,norwegian-norwegian-escape-20270122-59231,norwegian-norwegian-escape-20270129-59232,norwegian-norwegian-escape-20270804-60495,norwegian-norwegian-escape-20260705-58718,norwegian-norwegian-escape-20260712-58719\n\nNorwegian promotion apply: 10 promoted, 0 skipped existing.\nReport written to data/reports/latest-norwegian-promotion.md",
       "stderr": ""
     }
   ]

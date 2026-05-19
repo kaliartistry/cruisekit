@@ -2,7 +2,7 @@
 
 You are working in the `Cruise Travel Agent/` monorepo, which contains two apps:
 
-- `apps/web/` — Next.js 15 website (TypeScript, Tailwind, shadcn-style components)
+- `apps/web/` — Next.js 16 website (TypeScript, Tailwind, shadcn-style components)
 - `CruiseKit-Mobile/` — Flutter app
 
 A human-led UX audit found that most of the original critique was already resolved in source. What remains is a surgical polish pass: **7 small tasks, ~200 LOC total, no new features**.

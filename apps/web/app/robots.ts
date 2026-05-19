@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/my-trips/'],
+      disallow: ['/api/', '/my-trips/', '/internal/'],
     },
     sitemap: 'https://cruisekit.app/sitemap.xml',
   };

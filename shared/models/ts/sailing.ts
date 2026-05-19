@@ -119,6 +119,7 @@ export enum Confidence {
  * Canonical cruise line slug.
  */
 export enum CruiseLine {
+    Azamara = "azamara",
     Carnival = "carnival",
     Celebrity = "celebrity",
     Disney = "disney",
@@ -127,6 +128,7 @@ export enum CruiseLine {
     Norwegian = "norwegian",
     Princess = "princess",
     RoyalCaribbean = "royal-caribbean",
+    Viking = "viking",
     VirginVoyages = "virgin-voyages",
 }
 

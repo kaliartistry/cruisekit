@@ -266,11 +266,6 @@ export default function CalculatorForm({
     return fareEstimate?.mid ?? 0;
   }, [baseFare, fareEstimate]);
 
-  const isUsingEstimate = useMemo(() => {
-    const userFare = parseFloat(baseFare);
-    return (isNaN(userFare) || userFare <= 0) && fareEstimate !== null;
-  }, [baseFare, fareEstimate]);
-
   // When duration changes update default ports
   const handleDurationChange = useCallback(
     (d: number) => {
@@ -340,7 +335,7 @@ export default function CalculatorForm({
     if (!insuranceOn || !costs) return 0;
     const fare = effectiveBaseFare;
     return (fare * costs.travelInsurancePercent) / 100;
-  }, [insuranceOn, costs, baseFare]);
+  }, [insuranceOn, costs, effectiveBaseFare]);
 
   const parkingImpact = useMemo(() => {
     if (!parkingOn) return 0;
@@ -366,7 +361,7 @@ export default function CalculatorForm({
       parkingImpact
     );
   }, [
-    baseFare,
+    effectiveBaseFare,
     costs,
     adults,
     children,
@@ -406,7 +401,7 @@ export default function CalculatorForm({
     adults,
     children,
     cabinType,
-    baseFare,
+    effectiveBaseFare,
     drinkPackageOn,
     drinkTier,
     wifiOn,

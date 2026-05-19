@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title>Viking</title>
+  <rect width="160" height="160" rx="24" fill="#6D1F2D"/>
+  <path d="M80 31c-22 0-40 18-40 40 0 29 40 58 40 58s40-29 40-58c0-22-18-40-40-40zm0 17c13 0 23 10 23 23 0 14-12 30-23 41-11-11-23-27-23-41 0-13 10-23 23-23z" fill="#fff"/>
+  <path d="M80 58c-7 0-13 6-13 13s6 13 13 13 13-6 13-13-6-13-13-13z" fill="#6D1F2D"/>
+</svg>

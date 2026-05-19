@@ -195,10 +195,10 @@ export default function PrivacyPage() {
                 have an active account. If you wish to delete your data,
                 contact us at{" "}
                 <a
-                  href="mailto:hello@cruisekit.app"
+                  href="mailto:info@cruisekit.app"
                   className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
                 >
-                  hello@cruisekit.app
+                  info@cruisekit.app
                 </a>{" "}
                 and we will delete your account and all associated data
                 within 30 days.
@@ -239,10 +239,10 @@ export default function PrivacyPage() {
                 If you have questions about this Privacy Policy, contact us
                 at{" "}
                 <a
-                  href="mailto:hello@cruisekit.app"
+                  href="mailto:info@cruisekit.app"
                   className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
                 >
-                  hello@cruisekit.app
+                  info@cruisekit.app
                 </a>
                 .
               </p>

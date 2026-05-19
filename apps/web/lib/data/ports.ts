@@ -98,7 +98,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(52) 872-4574 (Consular Agency Cozumel)",
     },
     region: "western",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/cozumel-mexico/1920x1080.jpg",
+    imageUrl: "/assets/ports/cozumel.jpg",
   },
 
   /* ================================================================ */

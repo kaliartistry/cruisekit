@@ -1,6 +1,6 @@
 # Norwegian Promotion Report
 
-Generated: 2026-05-16T22:29:11.719Z
+Generated: 2026-05-19T06:02:23.882Z
 
 Mode: apply
 
@@ -8,19 +8,25 @@ Mode: apply
 
 | Metric | Count |
 | --- | ---: |
-| Seed records before | 103 |
-| Seed records after | 107 |
-| Promoted new records | 4 |
+| Seed records before | 133 |
+| Seed records after | 143 |
+| Promoted new records | 10 |
 | Selected records already live | 0 |
 
 ## Promoted New Records
 
 | Ship | Date | Nights | Price | ID |
 | --- | --- | ---: | ---: | --- |
-| Norwegian Getaway | 2027-03-12 | 5 | $859 | `norwegian-norwegian-getaway-20270312-59673` |
-| Norwegian Prima | 2026-08-16 | 7 | $879 | `norwegian-norwegian-prima-20260816-58196` |
-| Norwegian Prima | 2026-09-06 | 7 | $879 | `norwegian-norwegian-prima-20260906-58199` |
-| Norwegian Prima | 2026-09-20 | 7 | $879 | `norwegian-norwegian-prima-20260920-58201` |
+| Norwegian Epic | 2027-01-17 | 7 | $879 | `norwegian-norwegian-epic-20270117-59109` |
+| Norwegian Epic | 2027-01-24 | 7 | $879 | `norwegian-norwegian-epic-20270124-59110` |
+| Norwegian Getaway | 2027-03-31 | 5 | $879 | `norwegian-norwegian-getaway-20270331-59676` |
+| Norwegian Epic | 2026-11-22 | 7 | $889 | `norwegian-norwegian-epic-20261122-59101` |
+| Norwegian Escape | 2027-01-15 | 7 | $889 | `norwegian-norwegian-escape-20270115-59230` |
+| Norwegian Escape | 2027-01-22 | 7 | $889 | `norwegian-norwegian-escape-20270122-59231` |
+| Norwegian Escape | 2027-01-29 | 7 | $889 | `norwegian-norwegian-escape-20270129-59232` |
+| Norwegian Escape | 2027-08-04 | 5 | $889 | `norwegian-norwegian-escape-20270804-60495` |
+| Norwegian Escape | 2026-07-05 | 7 | $899 | `norwegian-norwegian-escape-20260705-58718` |
+| Norwegian Escape | 2026-07-12 | 7 | $899 | `norwegian-norwegian-escape-20260712-58719` |
 
 ## Selected Records Already Live
 

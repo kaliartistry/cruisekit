@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-05-19T06:18:05.036Z",
+  "provider": "msc",
+  "runId": "2026-05-19T06-18-05-036Z",
+  "mode": "staging-only",
+  "sourceUrl": "https://www.msccruises.fi/search-result?ships=AM",
+  "sourceMarket": "FI",
+  "currency": "EUR",
+  "capturedGraphqlResponses": 2,
+  "staging": {
+    "sailings": 40,
+    "deals": 0,
+    "schemaErrors": 0,
+    "byShip": {
+      "MSC World America": 40
+    },
+    "priceRange": {
+      "min": 519,
+      "max": 2399
+    }
+  },
+  "schemaErrors": [],
+  "paths": {
+    "raw": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/raw/msc/2026-05-19T06-18-05-036Z",
+    "staging": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/staging/msc/2026-05-19T06-18-05-036Z",
+    "report": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/reports/msc"
+  },
+  "notes": [
+    "MSC USA currently routes automated/headless sessions into a waiting-room or service-unavailable flow.",
+    "These records are captured from MSC's official search GraphQL through an accessible MSC market page and must be market/currency reviewed before promotion."
+  ]
+}

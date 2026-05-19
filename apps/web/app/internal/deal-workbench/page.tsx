@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type Candidate = {
   id: string;
@@ -110,6 +111,10 @@ function scoreCandidate(candidate: Candidate) {
 }
 
 export default function DealPromotionWorkbenchPage() {
+  if (process.env.NEXT_PUBLIC_ENABLE_INTERNAL_TOOLS !== "true") {
+    notFound();
+  }
+
   const reviews = reviewFiles
     .map((file) => readJson<ReviewReport>(file))
     .filter((report): report is ReviewReport => report !== null);

@@ -1,23 +1,23 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-05-16T22:38:25.390Z",
+  "generatedAt": "2026-05-19T17:33:39.723Z",
   "source": {
     "sailings": "data/seed/sailings.json",
     "deals": "data/seed/deals.json",
     "excludedConfidence": "internal_do_not_publish"
   },
   "counts": {
-    "seedSailings": 107,
-    "publicSailings": 97,
+    "seedSailings": 159,
+    "publicSailings": 149,
     "seedDeals": 0,
     "publicDeals": 0
   },
   "bundles": {
     "canonicalSailings": {
       "path": "canonical/sailings.json",
-      "bytes": 192755,
-      "sha256": "03eeae5279a0e1a498acadd270003b53ceca095157f24bd3ba2e8cf718065ba4",
-      "records": 97
+      "bytes": 295702,
+      "sha256": "5b358da20e89ba76eb7902fdc1de8a8606b9a88aae9e0ff6a723f3ce2b76323a",
+      "records": 149
     },
     "canonicalDeals": {
       "path": "canonical/deals.json",
@@ -27,15 +27,15 @@
     },
     "mobileSailings": {
       "path": "mobile/sailings.json",
-      "bytes": 101780,
-      "sha256": "67d7ce1903ef23febaad0b34eef3011ad041ba9b3196f7c2b5be519366ef5281",
-      "records": 97
+      "bytes": 165005,
+      "sha256": "56594b38c5fc678eec7462e6646e52a163ff307465f34ddb04850fd2b2cd696a",
+      "records": 149
     },
     "mobileDeals": {
       "path": "mobile/deals.json",
-      "bytes": 106911,
-      "sha256": "fecaad7f29de2ae9d5d752470e0b472937eab6f65d14dbb84f9088b5cc8b2994",
-      "records": 97
+      "bytes": 169123,
+      "sha256": "2f917b63d90f11b6a847e6afad1cd83717b159d22f9c8dcd661c5bc2fe81a190",
+      "records": 149
     }
   },
   "publishedFor": "web-public-assets",

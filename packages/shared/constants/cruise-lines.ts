@@ -2,6 +2,15 @@ import type { CruiseLine } from "../types";
 
 export const CRUISE_LINES: CruiseLine[] = [
   {
+    id: "azamara",
+    name: "Azamara",
+    shortName: "AZA",
+    logo: "/images/cruise-lines/azamara.svg",
+    color: "#5A2A82",
+    website: "https://www.azamara.com",
+    loyaltyProgram: "Azamara Circle",
+  },
+  {
     id: "royal-caribbean",
     name: "Royal Caribbean International",
     shortName: "RCI",
@@ -72,6 +81,15 @@ export const CRUISE_LINES: CruiseLine[] = [
     color: "#0066B2",
     website: "https://disneycruise.disney.go.com",
     loyaltyProgram: "Castaway Club",
+  },
+  {
+    id: "viking",
+    name: "Viking",
+    shortName: "VIK",
+    logo: "/images/cruise-lines/viking.svg",
+    color: "#6D1F2D",
+    website: "https://www.vikingcruises.com",
+    loyaltyProgram: "Viking Explorer Society",
   },
   {
     id: "virgin-voyages",

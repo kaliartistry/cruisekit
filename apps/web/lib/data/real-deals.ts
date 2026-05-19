@@ -10,6 +10,7 @@
  */
 import publicSailings from "../../../../data/bundles/canonical/sailings.json";
 import type { Sailing } from "../../../../shared/models/ts/sailing";
+import { getDealImage } from "./port-images";
 
 export type DealRegion =
   | "caribbean"
@@ -113,7 +114,7 @@ function toLegacyRegion(region: Sailing["destinationRegion"]): DealRegion {
 function toRealDeal(s: Sailing): RealDeal {
   const cruiseLineId = s.cruiseLine;
   const monthKey = s.departureDate.slice(0, 7);
-  return {
+  const deal: RealDeal = {
     id: s.id,
     cruiseLine: CRUISE_LINE_DISPLAY[cruiseLineId] ?? cruiseLineId,
     cruiseLineId,
@@ -141,6 +142,11 @@ function toRealDeal(s: Sailing): RealDeal {
     monthLabel: formatMonth(monthKey),
     dealScore: dealScore(s),
     badges: dealBadges(s),
+  };
+
+  return {
+    ...deal,
+    imageUrl: getDealImage(deal),
   };
 }
 

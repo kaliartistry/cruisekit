@@ -184,10 +184,10 @@ export default function TermsPage() {
                 If you have questions about these Terms of Service, contact
                 us at{" "}
                 <a
-                  href="mailto:hello@cruisekit.app"
+                  href="mailto:info@cruisekit.app"
                   className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
                 >
-                  hello@cruisekit.app
+                  info@cruisekit.app
                 </a>
                 .
               </p>

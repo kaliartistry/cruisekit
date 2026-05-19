@@ -175,7 +175,7 @@ const cardVariants = {
 export default function ContentSections() {
   return (
     <>
-      {/* ---- Hand-verified Caribbean sailings ---- */}
+      {/* ---- Reviewed Caribbean sailings ---- */}
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
@@ -183,7 +183,7 @@ export default function ContentSections() {
               <div className="flex items-center gap-2 mb-1">
                 <TrendingDown className="h-5 w-5 text-coral" />
                 <h2 className="text-xl font-bold tracking-tight text-navy sm:text-2xl">
-                  Hand-Verified Caribbean Sailings
+                  Reviewed Caribbean Sailings
                 </h2>
               </div>
               <p className="text-sm text-gray-500">

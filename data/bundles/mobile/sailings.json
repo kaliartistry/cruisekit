@@ -1,5 +1,535 @@
 [
   {
+    "id": "azamara-azamara-journey-20261029-jr261029-009",
+    "cruiseLineId": "azamara",
+    "shipName": "Azamara Journey",
+    "shipId": "azamara-journey",
+    "departureDate": "2026-10-29",
+    "returnDate": "2026-11-07",
+    "duration": 9,
+    "departurePort": "New York City, New York, United States",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New York City, New York, United States"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hamilton, Bermuda",
+        "portSlug": "hamilton-bermuda",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Philipsburg, Sint Maarten",
+        "portSlug": "philipsburg-sint-maarten",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Road Town, Tortola, British Virgin Islands",
+        "portSlug": "road-town-tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "San Juan, Puerto Rico"
+      }
+    ]
+  },
+  {
+    "id": "azamara-azamara-journey-20261107-jr261107-007",
+    "cruiseLineId": "azamara",
+    "shipName": "Azamara Journey",
+    "shipId": "azamara-journey",
+    "departureDate": "2026-11-07",
+    "returnDate": "2026-11-14",
+    "duration": 7,
+    "departurePort": "San Juan, Puerto Rico",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "San Juan, Puerto Rico"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Virgin Gorda, British Virgin Islands",
+        "portSlug": "virgin-gorda-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. John's, Antigua",
+        "portSlug": "st-john-s-antigua",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Saint- Pierre, Martinique",
+        "portSlug": "saint-pierre-martinique",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Port Elizabeth, Bequia, Saint Vincent and the Grenadines",
+        "portSlug": "port-elizabeth-bequia-saint-vincent-and-the-grenadines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Saint George's, Grenada",
+        "portSlug": "saint-george-s-grenada",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Scarborough, Tobago, Trinidad and Tobago",
+        "portSlug": "scarborough-tobago-trinidad-and-tobago",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Bridgetown, Barbados"
+      }
+    ]
+  },
+  {
+    "id": "azamara-azamara-journey-20261114-jr261114-007",
+    "cruiseLineId": "azamara",
+    "shipName": "Azamara Journey",
+    "shipId": "azamara-journey",
+    "departureDate": "2026-11-14",
+    "returnDate": "2026-11-21",
+    "duration": 7,
+    "departurePort": "Bridgetown, Barbados",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Bridgetown, Barbados"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Castries, Saint Lucia",
+        "portSlug": "castries-saint-lucia",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Roseau, Dominica",
+        "portSlug": "roseau-dominica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Basseterre, St.Kitts, Saint Kitts-Nevis",
+        "portSlug": "basseterre-st-kitts-saint-kitts-nevis",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Charlestown, Nevis, Saint Kitts-Nevis",
+        "portSlug": "charlestown-nevis-saint-kitts-nevis",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Philipsburg, Sint Maarten",
+        "portSlug": "philipsburg-sint-maarten",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Road Town, Tortola, British Virgin Islands",
+        "portSlug": "road-town-tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "San Juan, Puerto Rico"
+      }
+    ]
+  },
+  {
+    "id": "azamara-azamara-journey-20261121-jr261121-007",
+    "cruiseLineId": "azamara",
+    "shipName": "Azamara Journey",
+    "shipId": "azamara-journey",
+    "departureDate": "2026-11-21",
+    "returnDate": "2026-11-28",
+    "duration": 7,
+    "departurePort": "San Juan, Puerto Rico",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "San Juan, Puerto Rico"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Virgin Gorda, British Virgin Islands",
+        "portSlug": "virgin-gorda-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. John's, Antigua",
+        "portSlug": "st-john-s-antigua",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Saint- Pierre, Martinique",
+        "portSlug": "saint-pierre-martinique",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Port Elizabeth, Bequia, Saint Vincent and the Grenadines",
+        "portSlug": "port-elizabeth-bequia-saint-vincent-and-the-grenadines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Saint George's, Grenada",
+        "portSlug": "saint-george-s-grenada",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Scarborough, Tobago, Trinidad and Tobago",
+        "portSlug": "scarborough-tobago-trinidad-and-tobago",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Bridgetown, Barbados"
+      }
+    ]
+  },
+  {
+    "id": "azamara-azamara-journey-20261128-jr261128-007",
+    "cruiseLineId": "azamara",
+    "shipName": "Azamara Journey",
+    "shipId": "azamara-journey",
+    "departureDate": "2026-11-28",
+    "returnDate": "2026-12-05",
+    "duration": 7,
+    "departurePort": "Bridgetown, Barbados",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Bridgetown, Barbados"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Castries, Saint Lucia",
+        "portSlug": "castries-saint-lucia",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Roseau, Dominica",
+        "portSlug": "roseau-dominica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Basseterre, St.Kitts, Saint Kitts-Nevis",
+        "portSlug": "basseterre-st-kitts-saint-kitts-nevis",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Charlestown, Nevis, Saint Kitts-Nevis",
+        "portSlug": "charlestown-nevis-saint-kitts-nevis",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Philipsburg, Sint Maarten",
+        "portSlug": "philipsburg-sint-maarten",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Gustavia, Saint Barthélemy",
+        "portSlug": "gustavia-saint-barth-lemy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "San Juan, Puerto Rico"
+      }
+    ]
+  },
+  {
+    "id": "azamara-azamara-journey-20261205-jr261205-007",
+    "cruiseLineId": "azamara",
+    "shipName": "Azamara Journey",
+    "shipId": "azamara-journey",
+    "departureDate": "2026-12-05",
+    "returnDate": "2026-12-12",
+    "duration": 7,
+    "departurePort": "San Juan, Puerto Rico",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "San Juan, Puerto Rico"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Virgin Gorda, British Virgin Islands",
+        "portSlug": "virgin-gorda-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. John's, Antigua",
+        "portSlug": "st-john-s-antigua",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Saint- Pierre, Martinique",
+        "portSlug": "saint-pierre-martinique",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Port Elizabeth, Bequia, Saint Vincent and the Grenadines",
+        "portSlug": "port-elizabeth-bequia-saint-vincent-and-the-grenadines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Saint George's, Grenada",
+        "portSlug": "saint-george-s-grenada",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Scarborough, Tobago, Trinidad and Tobago",
+        "portSlug": "scarborough-tobago-trinidad-and-tobago",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Bridgetown, Barbados"
+      }
+    ]
+  },
+  {
+    "id": "azamara-azamara-journey-20261212-jr261212-006",
+    "cruiseLineId": "azamara",
+    "shipName": "Azamara Journey",
+    "shipId": "azamara-journey",
+    "departureDate": "2026-12-12",
+    "returnDate": "2026-12-18",
+    "duration": 6,
+    "departurePort": "Bridgetown, Barbados",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Bridgetown, Barbados"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Castries, Saint Lucia",
+        "portSlug": "castries-saint-lucia",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Roseau, Dominica",
+        "portSlug": "roseau-dominica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Basseterre, St.Kitts, Saint Kitts-Nevis",
+        "portSlug": "basseterre-st-kitts-saint-kitts-nevis",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Charlestown, Nevis, Saint Kitts-Nevis",
+        "portSlug": "charlestown-nevis-saint-kitts-nevis",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Philipsburg, Sint Maarten",
+        "portSlug": "philipsburg-sint-maarten",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "San Juan, Puerto Rico"
+      }
+    ]
+  },
+  {
+    "id": "azamara-azamara-journey-20261218-jr261218-010",
+    "cruiseLineId": "azamara",
+    "shipName": "Azamara Journey",
+    "shipId": "azamara-journey",
+    "departureDate": "2026-12-18",
+    "returnDate": "2026-12-28",
+    "duration": 10,
+    "departurePort": "San Juan, Puerto Rico",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "San Juan, Puerto Rico"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Charlotte Amalie, St. Thomas, U.S. Virgin Islands",
+        "portSlug": "charlotte-amalie-st-thomas-u-s-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Virgin Gorda, British Virgin Islands",
+        "portSlug": "virgin-gorda-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "St. John's, Antigua",
+        "portSlug": "st-john-s-antigua",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Gustavia, Saint Barthélemy",
+        "portSlug": "gustavia-saint-barth-lemy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Saint- Pierre, Martinique",
+        "portSlug": "saint-pierre-martinique",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Port Elizabeth, Bequia, Saint Vincent and the Grenadines",
+        "portSlug": "port-elizabeth-bequia-saint-vincent-and-the-grenadines",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Scarborough, Tobago, Trinidad and Tobago",
+        "portSlug": "scarborough-tobago-trinidad-and-tobago",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Mayreau, Grenadines, Saint Vincent and the Grenadines",
+        "portSlug": "mayreau-grenadines-saint-vincent-and-the-grenadines",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Bridgetown, Barbados"
+      }
+    ]
+  },
+  {
     "id": "carnival-celebration-20260802",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Celebration",
@@ -55,6 +585,51 @@
         "day": 8,
         "type": "arrival",
         "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20260822-22085",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-08-22",
+    "returnDate": "2026-08-27",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
       }
     ]
   },
@@ -231,6 +806,96 @@
         "day": 6,
         "type": "arrival",
         "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20260831-22087",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-08-31",
+    "returnDate": "2026-09-05",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20260905-22088",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-09-05",
+    "returnDate": "2026-09-10",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
       }
     ]
   },
@@ -789,6 +1454,58 @@
     ]
   },
   {
+    "id": "carnival-carnival-magic-20261025-21903",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "shipId": "carnival-magic",
+    "departureDate": "2026-10-25",
+    "returnDate": "2026-10-31",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Amber Cove",
+        "portSlug": "amber-cove",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Grand Turk",
+        "portSlug": "grand-turk",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
     "id": "carnival-carnival-valor-20261026-22099",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Valor",
@@ -1159,6 +1876,141 @@
     ]
   },
   {
+    "id": "carnival-carnival-paradise-20261128-21647",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2026-11-28",
+    "returnDate": "2026-12-03",
+    "duration": 5,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Isla Tropicale, Roatan",
+        "portSlug": "isla-tropicale-roatan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20261128-22106",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2026-11-28",
+    "returnDate": "2026-12-03",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-breeze-20261130-20907",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Breeze",
+    "shipId": "carnival-breeze",
+    "departureDate": "2026-11-30",
+    "returnDate": "2026-12-05",
+    "duration": 5,
+    "departurePort": "Galveston, TX",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, TX"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Galveston, TX"
+      }
+    ]
+  },
+  {
     "id": "carnival-carnival-paradise-20261203-21648",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Paradise",
@@ -1231,6 +2083,51 @@
         "day": 5,
         "type": "arrival",
         "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-breeze-20261205-20908",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Breeze",
+    "shipId": "carnival-breeze",
+    "departureDate": "2026-12-05",
+    "returnDate": "2026-12-10",
+    "duration": 5,
+    "departurePort": "Galveston, TX",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, TX"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Galveston, TX"
       }
     ]
   },
@@ -1488,6 +2385,141 @@
     ]
   },
   {
+    "id": "carnival-carnival-paradise-20270104-21655",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-01-04",
+    "returnDate": "2027-01-09",
+    "duration": 5,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Grand Cayman",
+        "portSlug": "grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20270104-22114",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2027-01-04",
+    "returnDate": "2027-01-09",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20270109-21656",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-01-09",
+    "returnDate": "2027-01-14",
+    "duration": 5,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Isla Tropicale, Roatan",
+        "portSlug": "isla-tropicale-roatan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
     "id": "carnival-carnival-valor-20270109-22115",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Valor",
@@ -1533,6 +2565,51 @@
     ]
   },
   {
+    "id": "carnival-carnival-breeze-20270111-20916",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Breeze",
+    "shipId": "carnival-breeze",
+    "departureDate": "2027-01-11",
+    "returnDate": "2027-01-16",
+    "duration": 5,
+    "departurePort": "Galveston, TX",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, TX"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Galveston, TX"
+      }
+    ]
+  },
+  {
     "id": "carnival-carnival-paradise-20270114-21657",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Paradise",
@@ -1567,6 +2644,103 @@
         "day": 5,
         "type": "arrival",
         "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-breeze-20270116-20917",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Breeze",
+    "shipId": "carnival-breeze",
+    "departureDate": "2027-01-16",
+    "returnDate": "2027-01-21",
+    "duration": 5,
+    "departurePort": "Galveston, TX",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, TX"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Galveston, TX"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-magic-20270117-21915",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "shipId": "carnival-magic",
+    "departureDate": "2027-01-17",
+    "returnDate": "2027-01-23",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Montego Bay",
+        "portSlug": "montego-bay",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Grand Cayman",
+        "portSlug": "grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "Miami, FL"
       }
     ]
   },
@@ -1699,6 +2873,51 @@
     ]
   },
   {
+    "id": "carnival-carnival-breeze-20270125-20919",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Breeze",
+    "shipId": "carnival-breeze",
+    "departureDate": "2027-01-25",
+    "returnDate": "2027-01-30",
+    "duration": 5,
+    "departurePort": "Galveston, TX",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, TX"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Galveston, TX"
+      }
+    ]
+  },
+  {
     "id": "carnival-carnival-paradise-20270128-21660",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Paradise",
@@ -1733,6 +2952,238 @@
         "day": 5,
         "type": "arrival",
         "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-breeze-20270130-20920",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Breeze",
+    "shipId": "carnival-breeze",
+    "departureDate": "2027-01-30",
+    "returnDate": "2027-02-04",
+    "duration": 5,
+    "departurePort": "Galveston, TX",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Galveston, TX"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Galveston, TX"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-magic-20270131-21917",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Magic",
+    "shipId": "carnival-magic",
+    "departureDate": "2027-01-31",
+    "returnDate": "2027-02-06",
+    "duration": 6,
+    "departurePort": "Miami, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Celebration Key™",
+        "portSlug": "celebration-key",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Amber Cove",
+        "portSlug": "amber-cove",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Grand Turk",
+        "portSlug": "grand-turk",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "arrival",
+        "portName": "Miami, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-paradise-20270201-21661",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Paradise",
+    "shipId": "carnival-paradise",
+    "departureDate": "2027-02-01",
+    "returnDate": "2027-02-06",
+    "duration": 5,
+    "departurePort": "Tampa, FL",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tampa, FL"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Grand Cayman",
+        "portSlug": "grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20270201-22120",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2027-02-01",
+    "returnDate": "2027-02-06",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-valor-20270220-22124",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Valor",
+    "shipId": "carnival-valor",
+    "departureDate": "2027-02-20",
+    "returnDate": "2027-02-25",
+    "duration": 5,
+    "departurePort": "New Orleans, LA",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "New Orleans, LA"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel",
+        "portSlug": "cozumel",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Progreso, Yucatán",
+        "portSlug": "progreso-yucat-n",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "New Orleans, LA"
       }
     ]
   },
@@ -2155,6 +3606,410 @@
     ]
   },
   {
+    "id": "holland-america-eurodam-20260523-7-day-alaska-explorer",
+    "cruiseLineId": "holland-america",
+    "shipName": "Eurodam",
+    "shipId": "eurodam",
+    "departureDate": "2026-05-23",
+    "returnDate": "2026-05-30",
+    "duration": 7,
+    "departurePort": "Seattle, Washington, US",
+    "region": "alaska",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seattle, Washington, US"
+      },
+      {
+        "day": 2,
+        "type": "sea"
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Seattle, Washington, US"
+      }
+    ]
+  },
+  {
+    "id": "holland-america-koningsdam-20260523-7-day-alaska-inside-passage",
+    "cruiseLineId": "holland-america",
+    "shipName": "Koningsdam",
+    "shipId": "koningsdam",
+    "departureDate": "2026-05-23",
+    "returnDate": "2026-05-30",
+    "duration": 7,
+    "departurePort": "Vancouver, B.C., CA",
+    "region": "alaska",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Vancouver, B.C., CA"
+      },
+      {
+        "day": 2,
+        "type": "sea"
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Vancouver, B.C., CA"
+      }
+    ]
+  },
+  {
+    "id": "holland-america-westerdam-20260621-7-day-glacier-discovery-northbound",
+    "cruiseLineId": "holland-america",
+    "shipName": "Westerdam",
+    "shipId": "westerdam",
+    "departureDate": "2026-06-21",
+    "returnDate": "2026-06-28",
+    "duration": 7,
+    "departurePort": "Vancouver, B.C., CA",
+    "region": "other",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Vancouver, B.C., CA"
+      },
+      {
+        "day": 2,
+        "type": "sea"
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Whittier, Alaska, US"
+      }
+    ]
+  },
+  {
+    "id": "holland-america-oosterdam-20260628-7-day-mediterranean-greece-to-turkey",
+    "cruiseLineId": "holland-america",
+    "shipName": "Oosterdam",
+    "shipId": "oosterdam",
+    "departureDate": "2026-06-28",
+    "returnDate": "2026-07-05",
+    "duration": 7,
+    "departurePort": "Piraeus (Athens), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Piraeus (Athens), Greece"
+      },
+      {
+        "day": 2,
+        "type": "sea"
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Piraeus (Athens), Greece"
+      }
+    ]
+  },
+  {
+    "id": "holland-america-noordam-20260705-7-day-alaska-explorer",
+    "cruiseLineId": "holland-america",
+    "shipName": "Noordam",
+    "shipId": "noordam",
+    "departureDate": "2026-07-05",
+    "returnDate": "2026-07-12",
+    "duration": 7,
+    "departurePort": "Seattle, Washington, US",
+    "region": "alaska",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seattle, Washington, US"
+      },
+      {
+        "day": 2,
+        "type": "sea"
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Seattle, Washington, US"
+      }
+    ]
+  },
+  {
+    "id": "holland-america-nieuw-amsterdam-20260726-14-day-alaska-roundtrip-collectors-voyage",
+    "cruiseLineId": "holland-america",
+    "shipName": "Nieuw Amsterdam",
+    "shipId": "nieuw-amsterdam",
+    "departureDate": "2026-07-26",
+    "returnDate": "2026-08-09",
+    "duration": 14,
+    "departurePort": "Vancouver, B.C., CA",
+    "region": "alaska",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Vancouver, B.C., CA"
+      },
+      {
+        "day": 2,
+        "type": "sea"
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "sea"
+      },
+      {
+        "day": 15,
+        "type": "arrival",
+        "portName": "Vancouver, B.C., CA"
+      }
+    ]
+  },
+  {
+    "id": "holland-america-zaandam-20260729-7-day-alaska-inside-passage",
+    "cruiseLineId": "holland-america",
+    "shipName": "Zaandam",
+    "shipId": "zaandam",
+    "departureDate": "2026-07-29",
+    "returnDate": "2026-08-05",
+    "duration": 7,
+    "departurePort": "Vancouver, B.C., CA",
+    "region": "alaska",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Vancouver, B.C., CA"
+      },
+      {
+        "day": 2,
+        "type": "sea"
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Vancouver, B.C., CA"
+      }
+    ]
+  },
+  {
+    "id": "holland-america-oosterdam-20260822-7-day-mediterranean-splendor-sicily",
+    "cruiseLineId": "holland-america",
+    "shipName": "Oosterdam",
+    "shipId": "oosterdam",
+    "departureDate": "2026-08-22",
+    "returnDate": "2026-08-29",
+    "duration": 7,
+    "departurePort": "Piraeus (Athens), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Piraeus (Athens), Greece"
+      },
+      {
+        "day": 2,
+        "type": "sea"
+      },
+      {
+        "day": 3,
+        "type": "sea"
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Civitavecchia (Rome), Italy"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20260519-58733",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Escape",
@@ -2194,6 +4049,124 @@
       },
       {
         "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20260705-58718",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2026-07-05",
+    "returnDate": "2026-07-12",
+    "duration": 7,
+    "departurePort": "Miami, Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Roatán (Bay Islands), Honduras",
+        "portSlug": "roat-n-bay-islands-honduras",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Harvest Caye, Belize",
+        "portSlug": "harvest-caye-belize",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20260712-58719",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2026-07-12",
+    "returnDate": "2026-07-19",
+    "duration": 7,
+    "departurePort": "Miami, Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Roatán (Bay Islands), Honduras",
+        "portSlug": "roat-n-bay-islands-honduras",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Harvest Caye, Belize",
+        "portSlug": "harvest-caye-belize",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
         "type": "arrival",
         "portName": "Miami, Florida"
       }
@@ -2877,6 +4850,65 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-epic-20261122-59101",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "shipId": "norwegian-epic",
+    "departureDate": "2026-11-22",
+    "returnDate": "2026-11-29",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Montego Bay, Jamaica",
+        "portSlug": "montego-bay-jamaica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20261127-59223",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Escape",
@@ -3321,6 +5353,65 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-escape-20270115-59230",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2027-01-15",
+    "returnDate": "2027-01-22",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270115-59665",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Getaway",
@@ -3366,6 +5457,65 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-epic-20270117-59109",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "shipId": "norwegian-epic",
+    "departureDate": "2027-01-17",
+    "returnDate": "2027-01-24",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Montego Bay, Jamaica",
+        "portSlug": "montego-bay-jamaica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270120-59666",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Getaway",
@@ -3405,6 +5555,183 @@
       },
       {
         "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20270122-59231",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2027-01-22",
+    "returnDate": "2027-01-29",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20270124-59110",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "shipId": "norwegian-epic",
+    "departureDate": "2027-01-24",
+    "returnDate": "2027-01-31",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Ocho Rios, Jamaica",
+        "portSlug": "ocho-rios-jamaica",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "George Town, Grand Cayman",
+        "portSlug": "george-town-grand-cayman",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cozumel, Mexico",
+        "portSlug": "cozumel-mexico",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-escape-20270129-59232",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2027-01-29",
+    "returnDate": "2027-02-05",
+    "duration": 7,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "St. Thomas, US Virgin Islands",
+        "portSlug": "st-thomas-us-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tortola, British Virgin Islands",
+        "portSlug": "tortola-british-virgin-islands",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "sea"
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
       }
@@ -3771,6 +6098,51 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-getaway-20270331-59676",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Getaway",
+    "shipId": "norwegian-getaway",
+    "departureDate": "2027-03-31",
+    "returnDate": "2027-04-05",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20270428-60474",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Escape",
@@ -3951,6 +6323,51 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-escape-20270804-60495",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Escape",
+    "shipId": "norwegian-escape",
+    "departureDate": "2027-08-04",
+    "returnDate": "2027-08-09",
+    "duration": 5,
+    "departurePort": "Orlando (Port Canaveral), Florida",
+    "region": "caribbean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Orlando (Port Canaveral), Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Great Stirrup Cay, Bahamas",
+        "portSlug": "great-stirrup-cay-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "sea"
+      },
+      {
+        "day": 5,
+        "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-joy-20271017-61939",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Joy",
@@ -3987,6 +6404,57 @@
       {
         "day": 5,
         "type": "sea"
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260525-5npp",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "shipId": "resilient-lady",
+    "departureDate": "2026-05-25",
+    "returnDate": "2026-05-30",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
       },
       {
         "day": 6,
@@ -4182,6 +6650,303 @@
         "day": 5,
         "type": "arrival",
         "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-valiant-lady-20260621-7nbb3",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Valiant Lady",
+    "shipId": "valiant-lady",
+    "departureDate": "2026-06-21",
+    "returnDate": "2026-06-28",
+    "duration": 7,
+    "departurePort": "Barcelona",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Tuscany/Cinque Terre (La Spezia), Italy",
+        "portSlug": "tuscany-cinque-terre-la-spezia-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cannes, France",
+        "portSlug": "cannes-france",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260622-5ncm",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "shipId": "resilient-lady",
+    "departureDate": "2026-06-22",
+    "returnDate": "2026-06-27",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Costa Maya, Mexico",
+        "portSlug": "costa-maya-mexico",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-valiant-lady-20260704-7nbcf",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Valiant Lady",
+    "shipId": "valiant-lady",
+    "departureDate": "2026-07-04",
+    "returnDate": "2026-07-11",
+    "duration": 7,
+    "departurePort": "Barcelona",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cannes, France",
+        "portSlug": "cannes-france",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-resilient-lady-20260706-5npp",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Resilient Lady",
+    "shipId": "resilient-lady",
+    "departureDate": "2026-07-06",
+    "returnDate": "2026-07-11",
+    "duration": 5,
+    "departurePort": "Miami, Florida",
+    "region": "bahamas",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Miami, Florida"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Puerto Plata, Dominican Republic",
+        "portSlug": "puerto-plata-dominican-republic",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "The Beach Club at Bimini, Bahamas",
+        "portSlug": "the-beach-club-at-bimini-bahamas",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-valiant-lady-20260719-7nbta",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Valiant Lady",
+    "shipId": "valiant-lady",
+    "departureDate": "2026-07-19",
+    "returnDate": "2026-07-26",
+    "duration": 7,
+    "departurePort": "Barcelona",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Provence (Toulon), France",
+        "portSlug": "provence-toulon-france",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Ajaccio, Corsica, France",
+        "portSlug": "ajaccio-corsica-france",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona"
       }
     ]
   },

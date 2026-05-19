@@ -7,6 +7,10 @@
  * contract as Carnival: it captures official search responses when reachable,
  * validates canonical-shaped staging records, and writes an explicit blocker
  * report when the source denies automated access.
+ *
+ * Do not add bot-mitigation bypasses here. Royal Caribbean data must come from
+ * reachable official responses, approved affiliate feeds, licensed inventory
+ * providers, or B2B/partner exports.
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
@@ -227,7 +231,7 @@ ${report.blockers.length === 0 ? "- None\n" : report.blockers.map((blocker) => `
 
 - This importer never edits \`data/seed/*.json\`.
 - Promote only reviewed records after source links and current prices are verified.
-- If Royal Caribbean blocks automated access, use this report as the source-status record and retry from an allowed environment.
+- If Royal Caribbean blocks automated access, use this report as the source-status record and pursue affiliate, aggregator, or authorized B2B access instead of adding bypass logic.
 `;
 
   await mkdir(reportsDir, { recursive: true });

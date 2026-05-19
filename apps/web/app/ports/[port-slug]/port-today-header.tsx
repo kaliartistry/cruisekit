@@ -21,20 +21,15 @@ export default function PortTodayHeader({
   timezone,
   timeZoneAlert,
 }: PortTodayHeaderProps) {
-  const [now, setNow] = useState<Date | null>(null);
+  const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
-    setNow(new Date());
     const t = setInterval(() => setNow(new Date()), 30_000);
     return () => clearInterval(t);
   }, []);
 
-  const portTime = now
-    ? formatInTimeZone(now, extractIanaZone(timezone))
-    : null;
-  const deviceTime = now
-    ? now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })
-    : null;
+  const portTime = formatInTimeZone(now, extractIanaZone(timezone));
+  const deviceTime = now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
   const offsetLabel = now
     ? timezoneOffsetLabel(now, extractIanaZone(timezone))
     : null;

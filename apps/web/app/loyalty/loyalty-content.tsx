@@ -14,7 +14,6 @@ import {
   LOYALTY_PROGRAMS,
   getMemberTier,
   type LoyaltyProgram,
-  type LoyaltyTier,
 } from "@/lib/data/loyalty-programs";
 
 /* ------------------------------------------------------------------ */
@@ -449,9 +448,6 @@ const FAQS = [
 /* ------------------------------------------------------------------ */
 
 export default function LoyaltyContent() {
-  const [selectedProgram, setSelectedProgram] = useState<string | null>(
-    null
-  );
   const [expandedPrograms, setExpandedPrograms] = useState<Set<string>>(
     new Set()
   );

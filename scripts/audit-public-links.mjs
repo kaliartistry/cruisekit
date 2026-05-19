@@ -15,6 +15,7 @@ const reportDir = resolve(repoRoot, "data/reports");
 const liveAudit = process.env.LIVE_LINK_AUDIT === "1";
 const allowedCruiseDomains = [
   "carnival.com",
+  "azamara.com",
   "ncl.com",
   "royalcaribbean.com",
   "celebritycruises.com",

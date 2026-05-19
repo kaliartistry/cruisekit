@@ -1,6 +1,6 @@
 /**
  * Port image mapping for deal cards and homepage.
- * Uses local images harvested from Google Places API.
+ * Uses local destination images from the public asset bundle.
  */
 
 export const PORT_IMAGES: Record<string, string> = {
@@ -117,6 +117,13 @@ export function getDealImage(deal: {
   itineraryTitle: string;
   departurePort: string;
 }): string {
+  if (deal.imageUrl) {
+    if (deal.imageUrl.startsWith("assets/images/")) {
+      return `/${deal.imageUrl.replace(/^assets\/images\//, "assets/")}`;
+    }
+    return deal.imageUrl;
+  }
+
   // 1. Match by ports of call (local images — always reliable)
   for (const port of deal.ports) {
     const portLower = port.toLowerCase();

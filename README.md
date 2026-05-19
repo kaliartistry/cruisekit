@@ -4,7 +4,7 @@ Cruise planning toolkit. Web app at [cruisekit.app](https://cruisekit.app).
 
 ## Workspace layout
 
-- [`apps/web`](apps/web) — Next.js 15 + TypeScript site
+- [`apps/web`](apps/web) — Next.js 16 + TypeScript site
 - [`packages`](packages) — shared workspace packages
 - [`scripts`](scripts), [`tools`](tools) — data export and utility scripts
 

@@ -1,6 +1,6 @@
 # Virgin Voyages Promotion Report
 
-Generated: 2026-05-16T13:36:55.212Z
+Generated: 2026-05-19T06:02:23.448Z
 
 Mode: apply
 
@@ -8,25 +8,21 @@ Mode: apply
 
 | Metric | Count |
 | --- | ---: |
-| Seed records before | 87 |
-| Seed records after | 97 |
-| Promoted new records | 10 |
+| Seed records before | 107 |
+| Seed records after | 113 |
+| Promoted new records | 6 |
 | Selected records already live | 0 |
 
 ## Promoted New Records
 
 | Ship | Date | Nights | Price | ID |
 | --- | --- | ---: | ---: | --- |
-| Scarlet Lady | 2027-02-25 | 4 | $952 | `virgin-voyages-scarlet-lady-20270225-4nkw` |
-| Scarlet Lady | 2026-11-28 | 5 | $1,090 | `virgin-voyages-scarlet-lady-20261128-5ncm` |
-| Valiant Lady | 2027-12-11 | 5 | $1,190 | `virgin-voyages-valiant-lady-20271211-5npp` |
-| Valiant Lady | 2027-12-06 | 5 | $1,190 | `virgin-voyages-valiant-lady-20271206-5ngcb` |
-| Scarlet Lady | 2027-04-03 | 5 | $1,290 | `virgin-voyages-scarlet-lady-20270403-5ntc` |
-| Scarlet Lady | 2027-01-04 | 5 | $1,310 | `virgin-voyages-scarlet-lady-20270104-5ncm` |
-| Resilient Lady | 2026-06-18 | 4 | $1,752 | `virgin-voyages-resilient-lady-20260618-4nkw` |
-| Resilient Lady | 2026-06-04 | 4 | $1,832 | `virgin-voyages-resilient-lady-20260604-4nkw` |
-| Resilient Lady | 2026-06-08 | 5 | $1,890 | `virgin-voyages-resilient-lady-20260608-5ngcb` |
-| Resilient Lady | 2026-06-13 | 5 | $2,090 | `virgin-voyages-resilient-lady-20260613-5ngcb` |
+| Resilient Lady | 2026-06-22 | 5 | $2,190 | `virgin-voyages-resilient-lady-20260622-5ncm` |
+| Resilient Lady | 2026-07-06 | 5 | $2,390 | `virgin-voyages-resilient-lady-20260706-5npp` |
+| Valiant Lady | 2026-06-21 | 7 | $2,366 | `virgin-voyages-valiant-lady-20260621-7nbb3` |
+| Valiant Lady | 2026-07-04 | 7 | $2,366 | `virgin-voyages-valiant-lady-20260704-7nbcf` |
+| Valiant Lady | 2026-07-19 | 7 | $2,366 | `virgin-voyages-valiant-lady-20260719-7nbta` |
+| Resilient Lady | 2026-05-25 | 5 | $2,490 | `virgin-voyages-resilient-lady-20260525-5npp` |
 
 ## Notes
 

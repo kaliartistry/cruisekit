@@ -34,12 +34,14 @@ interface LineConfig {
 
 /** Canonical config — shared source of truth with the Flutter app. */
 const LINES: Record<string, LineConfig> = {
+  azamara: { monogram: "AZA", theme: "onLight" },
   "royal-caribbean": { monogram: "RCI", theme: "onLight" },
   carnival: { monogram: "CCL", theme: "onLight" },
   norwegian: { monogram: "NCL", theme: "onLight" },
   celebrity: { monogram: "CEL", theme: "onLight" },
   princess: { monogram: "PCL", theme: "onLight" },
   disney: { monogram: "DCL", theme: "onLight" },
+  viking: { monogram: "VIK", theme: "onLight" },
   "virgin-voyages": { monogram: "VV", theme: "onLight" },
   // Official marks are white — must sit on dark.
   "holland-america": { monogram: "HAL", theme: "onDark" },
