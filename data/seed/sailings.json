@@ -3622,14 +3622,14 @@
       "advertiserName": null,
       "lastImported": "2026-05-16T05:07:31.928Z",
       "lastVerified": "2026-05-16",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": "Promoted from NCL public search/date-specific staging. Price remains check-required; verify package inclusions, fare basis, taxes/fees, and availability near booking."
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Promoted from NCL public search/date-specific staging. Price remains check-required; verify package inclusions, fare basis, taxes/fees, and availability near booking. Quarantined on 2026-05-20 because the departure date is now in the past."
     },
     "sourceUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5MIANPICZMMIA&guests=2&gateway=NONE&packageId=22997518",
     "lastVerified": "2026-05-16",
-    "confidence": "itinerary_verified_price_check_required",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-05-16T05:07:31.928Z",
-    "updatedAt": "2026-05-16T05:08:10.358Z"
+    "updatedAt": "2026-05-20T13:29:48.212Z"
   },
   {
     "id": "norwegian-norwegian-escape-20260705-58718",

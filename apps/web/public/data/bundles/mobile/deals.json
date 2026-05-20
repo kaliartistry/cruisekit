@@ -2714,37 +2714,6 @@
     ]
   },
   {
-    "id": "norwegian-norwegian-escape-20260519-58733",
-    "cruiseLine": "Norwegian Cruise Line",
-    "cruiseLineId": "norwegian",
-    "shipName": "Norwegian Escape",
-    "duration": 5,
-    "departurePort": "Miami, Florida",
-    "itineraryTitle": "5-Day Caribbean Round-Trip Miami: Great Stirrup Cay & Cozumel",
-    "fromPrice": 439,
-    "currency": "USD",
-    "departureDate": "2026-05-19",
-    "ports": [
-      "Great Stirrup Cay, Bahamas",
-      "Cozumel, Mexico"
-    ],
-    "imageUrl": "assets/images/ports/great-stirrup-cay.jpg",
-    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5MIANPICZMMIA&guests=2&gateway=NONE&packageId=22997518",
-    "region": "caribbean",
-    "source": "ncl.com",
-    "lastVerified": "2026-05-16",
-    "confidence": "itinerary_verified_price_check_required",
-    "priceBasis": "per-person-double-occupancy",
-    "taxesAndFeesIncluded": false,
-    "monthKey": "2026-05",
-    "monthLabel": "May 2026",
-    "dealScore": 69,
-    "badges": [
-      "Short cruise",
-      "Price check required"
-    ]
-  },
-  {
     "id": "norwegian-norwegian-escape-20260705-58718",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",

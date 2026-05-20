@@ -1,0 +1,136 @@
+{
+  "generatedAt": "2026-05-20T13:34:40.663Z",
+  "counts": {
+    "seedSailings": 159,
+    "publicSailings": 148,
+    "mobileSailings": 148,
+    "priorityLines": 11,
+    "missingPriority": 5,
+    "seedOnlyPriority": 1
+  },
+  "rows": [
+    {
+      "cruiseLine": "carnival",
+      "seed": 73,
+      "public": 71,
+      "mobile": 71,
+      "status": "public"
+    },
+    {
+      "cruiseLine": "royal-caribbean",
+      "seed": 4,
+      "public": 0,
+      "mobile": 0,
+      "status": "seed-only"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "seed": 50,
+      "public": 45,
+      "mobile": 45,
+      "status": "public"
+    },
+    {
+      "cruiseLine": "msc",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    },
+    {
+      "cruiseLine": "princess",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    },
+    {
+      "cruiseLine": "holland-america",
+      "seed": 8,
+      "public": 8,
+      "mobile": 8,
+      "status": "public"
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "seed": 16,
+      "public": 16,
+      "mobile": 16,
+      "status": "public"
+    },
+    {
+      "cruiseLine": "azamara",
+      "seed": 8,
+      "public": 8,
+      "mobile": 8,
+      "status": "public"
+    },
+    {
+      "cruiseLine": "viking",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    },
+    {
+      "cruiseLine": "disney",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    }
+  ],
+  "missingPriority": [
+    {
+      "cruiseLine": "msc",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    },
+    {
+      "cruiseLine": "princess",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    },
+    {
+      "cruiseLine": "viking",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    },
+    {
+      "cruiseLine": "celebrity",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    },
+    {
+      "cruiseLine": "disney",
+      "seed": 0,
+      "public": 0,
+      "mobile": 0,
+      "status": "missing"
+    }
+  ],
+  "seedOnlyPriority": [
+    {
+      "cruiseLine": "royal-caribbean",
+      "seed": 4,
+      "public": 0,
+      "mobile": 0,
+      "status": "seed-only"
+    }
+  ]
+}

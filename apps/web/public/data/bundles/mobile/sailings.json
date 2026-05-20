@@ -4010,51 +4010,6 @@
     ]
   },
   {
-    "id": "norwegian-norwegian-escape-20260519-58733",
-    "cruiseLineId": "norwegian",
-    "shipName": "Norwegian Escape",
-    "shipId": "norwegian-escape",
-    "departureDate": "2026-05-19",
-    "returnDate": "2026-05-24",
-    "duration": 5,
-    "departurePort": "Miami, Florida",
-    "region": "caribbean",
-    "itinerary": [
-      {
-        "day": 1,
-        "type": "departure",
-        "portName": "Miami, Florida"
-      },
-      {
-        "day": 2,
-        "type": "port",
-        "portName": "Great Stirrup Cay, Bahamas",
-        "portSlug": "great-stirrup-cay-bahamas",
-        "isTender": false
-      },
-      {
-        "day": 3,
-        "type": "port",
-        "portName": "Cozumel, Mexico",
-        "portSlug": "cozumel-mexico",
-        "isTender": false
-      },
-      {
-        "day": 4,
-        "type": "sea"
-      },
-      {
-        "day": 5,
-        "type": "sea"
-      },
-      {
-        "day": 6,
-        "type": "arrival",
-        "portName": "Miami, Florida"
-      }
-    ]
-  },
-  {
     "id": "norwegian-norwegian-escape-20260705-58718",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Escape",

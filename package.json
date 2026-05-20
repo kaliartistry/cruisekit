@@ -36,8 +36,13 @@
     "data:promote:starter-batch": "node scripts/promote-starter-batch.mjs",
     "data:promote:virgin-voyages": "node scripts/promote-virgin-voyages-staging.mjs",
     "data:audit:links": "node scripts/audit-public-links.mjs",
+    "data:audit:images": "node scripts/audit-bundle-images.mjs",
     "data:review:manual": "node scripts/generate-manual-review-queue.mjs",
-    "data:report": "pnpm run data:build && node scripts/data-quality-report.mjs && pnpm run data:audit:links",
+    "data:coverage": "node scripts/cruise-line-coverage-report.mjs",
+    "data:ingest:weekly-report": "node scripts/run-weekly-ingest-report.mjs",
+    "data:report": "pnpm run data:build && node scripts/data-quality-report.mjs && pnpm run data:audit:links && pnpm run data:audit:images",
+    "data:automation:daily": "node scripts/run-daily-data-automation.mjs",
+    "data:automation:monthly": "pnpm run data:coverage",
     "data:publish": "pnpm run data:report && node scripts/publish-data-bundles.mjs"
   },
   "devDependencies": {

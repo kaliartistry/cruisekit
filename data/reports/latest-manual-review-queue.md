@@ -1,6 +1,6 @@
 # CruiseKit Manual Review Queue
 
-Generated: 2026-05-16T20:06:34.033Z
+Generated: 2026-05-20T13:34:41.422Z
 
 This is the temporary no-API workflow. Use browser/manual verification against
 official cruise-line sources, then update canonical seed records only when the
@@ -11,7 +11,7 @@ source page can be cited.
 | Metric | Count |
 | --- | ---: |
 | Watchlist entries | 9 |
-| Seed sailings | 97 |
+| Seed sailings | 159 |
 
 ## Tasks
 
@@ -37,18 +37,7 @@ source page can be cited.
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
-### 3. Holland America official cruise search
-
-- Priority: high
-- Cruise line: holland-america
-- Source: https://www.hollandamerica.com/en/us/find-a-cruise
-- Current seed sailings: 0
-- Current public sailings: 0
-- Current hidden sailings: 0
-- Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
-- Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
-
-### 4. MSC official cruise search
+### 3. MSC official cruise search
 
 - Priority: high
 - Cruise line: msc
@@ -59,7 +48,7 @@ source page can be cited.
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
-### 5. Princess official cruise search
+### 4. Princess official cruise search
 
 - Priority: high
 - Cruise line: princess
@@ -70,7 +59,7 @@ source page can be cited.
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
-### 6. Royal Caribbean official cruise deals/search
+### 5. Royal Caribbean official cruise deals/search
 
 - Priority: high
 - Cruise line: royal-caribbean
@@ -81,14 +70,25 @@ source page can be cited.
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
-### 7. Carnival official cruise search
+### 6. Carnival official cruise search
 
 - Priority: normal
 - Cruise line: carnival
 - Source: https://www.carnival.com/cruise-search
-- Current seed sailings: 47
-- Current public sailings: 45
+- Current seed sailings: 73
+- Current public sailings: 71
 - Current hidden sailings: 2
+- Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
+- Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
+
+### 7. Holland America official cruise search
+
+- Priority: normal
+- Cruise line: holland-america
+- Source: https://www.hollandamerica.com/en/us/find-a-cruise
+- Current seed sailings: 8
+- Current public sailings: 8
+- Current hidden sailings: 0
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
@@ -97,9 +97,9 @@ source page can be cited.
 - Priority: normal
 - Cruise line: norwegian
 - Source: https://www.ncl.com/cruise-deals
-- Current seed sailings: 36
-- Current public sailings: 32
-- Current hidden sailings: 4
+- Current seed sailings: 50
+- Current public sailings: 45
+- Current hidden sailings: 5
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 
@@ -108,8 +108,8 @@ source page can be cited.
 - Priority: normal
 - Cruise line: virgin-voyages
 - Source: https://www.virginvoyages.com/book/voyage-planner/find-a-voyage
-- Current seed sailings: 10
-- Current public sailings: 10
+- Current seed sailings: 16
+- Current public sailings: 16
 - Current hidden sailings: 0
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.

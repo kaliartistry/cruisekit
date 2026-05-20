@@ -3412,45 +3412,6 @@
     "updatedAt": "2026-05-19T12:41:08.245Z"
   },
   {
-    "id": "norwegian-norwegian-escape-20260519-58733",
-    "cruiseLine": "norwegian",
-    "shipName": "Norwegian Escape",
-    "sailingName": "5-Day Caribbean Round-Trip Miami: Great Stirrup Cay & Cozumel",
-    "departureDate": "2026-05-19",
-    "returnDate": "2026-05-24",
-    "nights": 5,
-    "departurePort": "Miami, Florida",
-    "returnPort": "Miami, Florida",
-    "destinationRegion": "caribbean",
-    "itineraryPorts": [
-      "Great Stirrup Cay, Bahamas",
-      "Cozumel, Mexico"
-    ],
-    "portCoordinates": [],
-    "startingPrice": 439,
-    "currency": "USD",
-    "priceBasis": "per-person-double-occupancy",
-    "taxesAndFeesIncluded": false,
-    "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5MIANPICZMMIA&guests=2&gateway=NONE&packageId=22997518",
-    "affiliateLink": null,
-    "source": {
-      "provider": "ncl.com",
-      "sourceType": "cruise-line-website",
-      "sourceUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5MIANPICZMMIA&guests=2&gateway=NONE&packageId=22997518",
-      "affiliateNetwork": null,
-      "advertiserName": null,
-      "lastImported": "2026-05-16T05:07:31.928Z",
-      "lastVerified": "2026-05-16",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": "Promoted from NCL public search/date-specific staging. Price remains check-required; verify package inclusions, fare basis, taxes/fees, and availability near booking."
-    },
-    "sourceUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5MIANPICZMMIA&guests=2&gateway=NONE&packageId=22997518",
-    "lastVerified": "2026-05-16",
-    "confidence": "itinerary_verified_price_check_required",
-    "createdAt": "2026-05-16T05:07:31.928Z",
-    "updatedAt": "2026-05-16T05:08:10.358Z"
-  },
-  {
     "id": "norwegian-norwegian-escape-20260705-58718",
     "cruiseLine": "norwegian",
     "shipName": "Norwegian Escape",

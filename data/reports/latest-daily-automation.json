@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-05-20T13:34:41.432Z",
+  "ok": true,
+  "failedSteps": [],
+  "results": [
+    {
+      "name": "build bundles",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:build /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/build-data-bundles.mjs\n\nBuilt data bundles at /Users/kaliartistry-mac/Cruise Travel Agent/data/bundles\nPublic sailings: 148/159\nPublic deals: 0/0\n",
+      "stderrTail": ""
+    },
+    {
+      "name": "data health",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "Data health: 0 blocker(s), 0 warning(s).\nReport written to data/reports/latest-data-health.md\n",
+      "stderrTail": ""
+    },
+    {
+      "name": "link audit",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:audit:links /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/audit-public-links.mjs\n\nLink audit: 0 blocker(s), 0 warning(s).\nReport written to data/reports/latest-link-audit.md\n",
+      "stderrTail": ""
+    },
+    {
+      "name": "image audit",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:audit:images /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/audit-bundle-images.mjs\n\nImage audit: 0 blocker(s), 0 warning(s).\nReport written to data/reports/latest-image-audit.md\n",
+      "stderrTail": ""
+    },
+    {
+      "name": "manual review queue",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:review:manual /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/generate-manual-review-queue.mjs\n\nManual review queue: 9 official source(s).\nReport written to data/reports/latest-manual-review-queue.md\n",
+      "stderrTail": ""
+    }
+  ]
+}
