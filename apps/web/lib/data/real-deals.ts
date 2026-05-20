@@ -87,9 +87,8 @@ const CRUISE_LINE_DISPLAY: Record<string, string> = {
 function toLegacyRegion(region: Sailing["destinationRegion"]): DealRegion {
   switch (region) {
     case "caribbean":
-      return "caribbean";
     case "bahamas":
-      return "bahamas";
+      return "caribbean";
     case "mexico":
     case "mexican-riviera":
       return "mexico";
@@ -252,8 +251,8 @@ export function getDealById(id: string): RealDeal | undefined {
 /** Summary stats. */
 export const DEAL_STATS = {
   totalDeals: REAL_DEALS.length,
-  lowestPrice: REAL_DEALS.length > 0 ? REAL_DEALS[0].fromPrice : 0,
-  highestPrice: REAL_DEALS.length > 0 ? REAL_DEALS[REAL_DEALS.length - 1].fromPrice : 0,
+  lowestPrice: REAL_DEALS.length > 0 ? Math.min(...REAL_DEALS.map((d) => d.fromPrice)) : 0,
+  highestPrice: REAL_DEALS.length > 0 ? Math.max(...REAL_DEALS.map((d) => d.fromPrice)) : 0,
   cruiseLines: [...new Set(REAL_DEALS.map((d) => d.cruiseLineId))],
   ships: [...new Set(REAL_DEALS.map((d) => d.shipName))],
   /** Latest verification date across the seed set — used in the page header. */

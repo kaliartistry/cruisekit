@@ -143,6 +143,61 @@ const REGION_LABELS: Record<DealRegion, string> = {
 };
 const ALL_REGIONS = [...new Set(REAL_DEALS.map((d) => d.region))] as DealRegion[];
 
+const PORT_HIGHLIGHTS = [
+  { key: "bahamas", label: "Bahamas stop" },
+  { key: "private-island", label: "Private island stop" },
+  { key: "mexico", label: "Mexico stop" },
+  { key: "dominican-republic", label: "Dominican Republic stop" },
+  { key: "jamaica", label: "Jamaica stop" },
+  { key: "grand-cayman", label: "Grand Cayman stop" },
+] as const;
+
+type PortHighlightKey = (typeof PORT_HIGHLIGHTS)[number]["key"];
+
+function getPortHighlightKeys(deal: RealDeal): Set<PortHighlightKey> {
+  const text = [deal.itineraryTitle, ...deal.ports].join(" ").toLowerCase();
+  const keys = new Set<PortHighlightKey>();
+
+  if (
+    /bahamas|bimini|nassau|cococay|great stirrup|half moon cay|celebration key|ocean cay|princess cays/.test(
+      text,
+    )
+  ) {
+    keys.add("bahamas");
+  }
+  if (
+    /private island|beach club|cococay|great stirrup|half moon cay|celebration key|ocean cay|princess cays|harvest caye|labadee/.test(
+      text,
+    )
+  ) {
+    keys.add("private-island");
+  }
+  if (/mexico|cozumel|costa maya|progreso|cabo san lucas|puerto vallarta|mazatlan|ensenada/.test(text)) {
+    keys.add("mexico");
+  }
+  if (/dominican republic|puerto plata|amber cove|la romana|samana/.test(text)) {
+    keys.add("dominican-republic");
+  }
+  if (/jamaica|falmouth|ocho rios|montego bay/.test(text)) {
+    keys.add("jamaica");
+  }
+  if (/grand cayman|george town/.test(text)) {
+    keys.add("grand-cayman");
+  }
+
+  return keys;
+}
+
+function countByPortHighlight(deals: RealDeal[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const deal of deals) {
+    for (const key of getPortHighlightKeys(deal)) {
+      counts.set(key, (counts.get(key) ?? 0) + 1);
+    }
+  }
+  return counts;
+}
+
 function getDepartureMonth(date: string | null): string | null {
   if (!date) return null;
   const d = new Date(date);
@@ -449,6 +504,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
 interface FilterState {
   priceRange: [number, number];
   regions: Set<string>;
+  portHighlights: Set<string>;
   cruiseLines: Set<string>;
   durations: Set<string>;
   months: Set<string>;
@@ -471,6 +527,7 @@ function FilterSidebar({
 }) {
   /* Counts based on unfiltered data */
   const regionCountsMap = countByField(REAL_DEALS, "region");
+  const portHighlightCountsMap = countByPortHighlight(REAL_DEALS);
   const lineCountsMap = countByField(REAL_DEALS, "cruiseLineId");
   const durationCountsMap = countByDuration(REAL_DEALS);
   const monthCountsMap = (() => {
@@ -485,7 +542,14 @@ function FilterSidebar({
   const shipCountsMap = countByField(REAL_DEALS, "shipName");
 
   const toggleInSet = (
-    key: "regions" | "cruiseLines" | "durations" | "months" | "departurePorts" | "ships",
+    key:
+      | "regions"
+      | "portHighlights"
+      | "cruiseLines"
+      | "durations"
+      | "months"
+      | "departurePorts"
+      | "ships",
     value: string
   ) => {
     setFilters((prev) => {
@@ -500,6 +564,7 @@ function FilterSidebar({
     setFilters({
       priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
       regions: new Set(ALL_REGIONS),
+      portHighlights: new Set(),
       cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
       durations: new Set(DURATION_RANGES.map((r) => r.key)),
       months: new Set(ALL_MONTHS),
@@ -513,6 +578,12 @@ function FilterSidebar({
     label: REGION_LABELS[r] || r,
     count: regionCountsMap.get(r) ?? 0,
   })).sort((a, b) => b.count - a.count);
+
+  const portHighlightItems = PORT_HIGHLIGHTS.map((highlight) => ({
+    value: highlight.key,
+    label: highlight.label,
+    count: portHighlightCountsMap.get(highlight.key) ?? 0,
+  })).filter((item) => item.count > 0);
 
   /* Cruise line items with display names */
   const cruiseLineItems = ALL_CRUISE_LINE_IDS.map((id) => {
@@ -643,12 +714,21 @@ function FilterSidebar({
           </div>
         </FilterSection>
 
-        {/* Destination */}
-        <FilterSection title="Destination">
+        {/* Destination region */}
+        <FilterSection title="Destination Region">
           <CheckboxGroup
             items={regionItems}
             selected={filters.regions}
             onChange={(v) => toggleInSet("regions", v)}
+          />
+        </FilterSection>
+
+        {/* Port highlights */}
+        <FilterSection title="Stops Include" defaultOpen={false}>
+          <CheckboxGroup
+            items={portHighlightItems}
+            selected={filters.portHighlights}
+            onChange={(v) => toggleInSet("portHighlights", v)}
           />
         </FilterSection>
 
@@ -714,7 +794,8 @@ export default function CruiseSearchPage() {
   /* Filter state */
   const [filters, setFilters] = useState<FilterState>({
     priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
-    regions: new Set(["caribbean", "bahamas", "mexico"]),
+    regions: new Set(ALL_REGIONS),
+    portHighlights: new Set(),
     cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
     durations: new Set(DURATION_RANGES.map((r) => r.key)),
     months: new Set(ALL_MONTHS),
@@ -732,6 +813,12 @@ export default function CruiseSearchPage() {
       if (d.fromPrice < filters.priceRange[0]) return false;
       if (d.fromPrice > filters.priceRange[1]) return false;
       if (!filters.regions.has(d.region)) return false;
+      if (filters.portHighlights.size > 0) {
+        const dealHighlights = getPortHighlightKeys(d);
+        if (![...filters.portHighlights].some((key) => dealHighlights.has(key as PortHighlightKey))) {
+          return false;
+        }
+      }
       if (!filters.cruiseLines.has(d.cruiseLineId)) return false;
       if (!filters.durations.has(getDurationKey(d.duration))) return false;
       if (filters.months.size < ALL_MONTHS.length) {
@@ -787,6 +874,7 @@ export default function CruiseSearchPage() {
     setFiltersAndResetPage({
       priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
       regions: new Set(ALL_REGIONS),
+      portHighlights: new Set(),
       cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
       durations: new Set(DURATION_RANGES.map((r) => r.key)),
       months: new Set(ALL_MONTHS),
@@ -801,6 +889,7 @@ export default function CruiseSearchPage() {
       const nextFilters: FilterState = {
         priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
         regions: new Set(ALL_REGIONS),
+        portHighlights: new Set(),
         cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
         durations: new Set(DURATION_RANGES.map((r) => r.key)),
         months: new Set(ALL_MONTHS),
@@ -933,6 +1022,7 @@ export default function CruiseSearchPage() {
                     setFiltersAndResetPage({
                       priceRange: [ABSOLUTE_MIN_PRICE, ABSOLUTE_MAX_PRICE],
                       regions: new Set(ALL_REGIONS),
+                      portHighlights: new Set(),
                       cruiseLines: new Set(ALL_CRUISE_LINE_IDS),
                       durations: new Set(DURATION_RANGES.map((r) => r.key)),
                       months: new Set(ALL_MONTHS),
