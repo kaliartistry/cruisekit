@@ -131,7 +131,7 @@ const ALL_DEPARTURE_PORTS = [
 const ALL_SHIP_NAMES = [...new Set(REAL_DEALS.map((d) => d.shipName))].sort();
 
 const REGION_LABELS: Record<DealRegion, string> = {
-  caribbean: "Caribbean",
+  caribbean: "Caribbean & Bahamas",
   bahamas: "Bahamas",
   mexico: "Mexico",
   mediterranean: "Mediterranean",
@@ -141,7 +141,9 @@ const REGION_LABELS: Record<DealRegion, string> = {
   asia: "Asia",
   other: "Other",
 };
-const ALL_REGIONS = [...new Set(REAL_DEALS.map((d) => d.region))] as DealRegion[];
+const ALL_REGIONS = [
+  ...new Set(REAL_DEALS.map((d) => normalizeFilterRegion(d.region))),
+] as DealRegion[];
 
 const PORT_HIGHLIGHTS = [
   { key: "bahamas", label: "Bahamas stop" },
@@ -188,6 +190,14 @@ function getPortHighlightKeys(deal: RealDeal): Set<PortHighlightKey> {
   return keys;
 }
 
+function normalizeFilterRegion(region: DealRegion): DealRegion {
+  return region === "bahamas" ? "caribbean" : region;
+}
+
+function matchesRegionFilter(deal: RealDeal, selectedRegions: Set<string>): boolean {
+  return selectedRegions.has(normalizeFilterRegion(deal.region));
+}
+
 function countByPortHighlight(deals: RealDeal[]): Map<string, number> {
   const counts = new Map<string, number>();
   for (const deal of deals) {
@@ -224,6 +234,15 @@ function countByField(
   for (const d of deals) {
     const val = String(d[field]);
     counts.set(val, (counts.get(val) || 0) + 1);
+  }
+  return counts;
+}
+
+function countByNormalizedRegion(deals: RealDeal[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const deal of deals) {
+    const region = normalizeFilterRegion(deal.region);
+    counts.set(region, (counts.get(region) || 0) + 1);
   }
   return counts;
 }
@@ -526,7 +545,7 @@ function FilterSidebar({
   onClose?: () => void;
 }) {
   /* Counts based on unfiltered data */
-  const regionCountsMap = countByField(REAL_DEALS, "region");
+  const regionCountsMap = countByNormalizedRegion(REAL_DEALS);
   const portHighlightCountsMap = countByPortHighlight(REAL_DEALS);
   const lineCountsMap = countByField(REAL_DEALS, "cruiseLineId");
   const durationCountsMap = countByDuration(REAL_DEALS);
@@ -812,7 +831,7 @@ export default function CruiseSearchPage() {
     let deals = REAL_DEALS.filter((d) => {
       if (d.fromPrice < filters.priceRange[0]) return false;
       if (d.fromPrice > filters.priceRange[1]) return false;
-      if (!filters.regions.has(d.region)) return false;
+      if (!matchesRegionFilter(d, filters.regions)) return false;
       if (filters.portHighlights.size > 0) {
         const dealHighlights = getPortHighlightKeys(d);
         if (![...filters.portHighlights].some((key) => dealHighlights.has(key as PortHighlightKey))) {
