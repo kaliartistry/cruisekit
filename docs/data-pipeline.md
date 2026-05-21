@@ -323,9 +323,10 @@ The pipeline should block or quarantine records when:
 3. Extend the scheduled Codex automation from report-only to report + publish +
    deployment once the deployment command is confirmed.
 4. Add a guarded auto-merge/publish path only after report-only runs are stable.
-5. Add an image trust pass for deals: map each voyage to ship, port, or region
-   image allowlists, block obvious non-cruise imagery such as planes/airports,
-   and generate a QA report for image mismatches before bundles publish.
+5. Done: `scripts/audit-bundle-images.mjs` now includes a deal image trust
+   pass. It maps each voyage to port/region image expectations, blocks obvious
+   non-cruise imagery such as planes/airports, and writes image usage plus
+   mismatch findings into `data/reports/latest-image-audit.*`.
 
 ## Mobile refresh configuration
 
