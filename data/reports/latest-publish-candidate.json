@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-05-23T20:57:57.722Z",
+  "mode": "guarded-publish-candidate",
+  "ready": true,
+  "publishedAssets": true,
+  "blockerCount": 0,
+  "warningCount": 0,
+  "counts": {
+    "publicSailings": 148,
+    "mobileSailings": 148,
+    "mobileDeals": 148
+  },
+  "steps": [
+    {
+      "name": "build data bundles",
+      "command": "pnpm run data:build",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:build /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/build-data-bundles.mjs\n\nBuilt data bundles at /Users/kaliartistry-mac/Cruise Travel Agent/data/bundles\nPublic sailings: 148/159\nPublic deals: 0/0\n",
+      "stderrTail": ""
+    },
+    {
+      "name": "data health",
+      "command": "node scripts/data-quality-report.mjs",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "Data health: 0 blocker(s), 0 warning(s).\nReport written to data/reports/latest-data-health.md\n",
+      "stderrTail": ""
+    },
+    {
+      "name": "link audit",
+      "command": "pnpm run data:audit:links",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:audit:links /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/audit-public-links.mjs\n\nLink audit: 0 blocker(s), 0 warning(s).\nReport written to data/reports/latest-link-audit.md\n",
+      "stderrTail": ""
+    },
+    {
+      "name": "image audit",
+      "command": "pnpm run data:audit:images",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:audit:images /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/audit-bundle-images.mjs\n\nImage audit: 0 blocker(s), 0 warning(s).\nReport written to data/reports/latest-image-audit.md\n",
+      "stderrTail": ""
+    },
+    {
+      "name": "prepare public data bundles",
+      "command": "node scripts/publish-data-bundles.mjs",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "Published data bundles to /Users/kaliartistry-mac/Cruise Travel Agent/apps/web/public/data/bundles\nManifest URL after web deploy: /data/bundles/manifest.json\n",
+      "stderrTail": ""
+    }
+  ],
+  "gates": {
+    "dataHealth": {
+      "blockers": [],
+      "warnings": []
+    },
+    "linkAudit": {
+      "blockers": [],
+      "warnings": []
+    },
+    "imageAudit": {
+      "blockers": [],
+      "warnings": []
+    }
+  },
+  "gitStatus": [
+    " M apps/web/app/sitemap.ts",
+    " M apps/web/public/data/bundles/manifest.json",
+    " M data/bundles/manifest.json",
+    " M data/reports/latest-daily-automation.json",
+    " M data/reports/latest-daily-automation.md",
+    " M data/reports/latest-data-health.json",
+    " M data/reports/latest-data-health.md",
+    " M data/reports/latest-image-audit.json",
+    " M data/reports/latest-image-audit.md",
+    " M data/reports/latest-link-audit.json",
+    " M data/reports/latest-link-audit.md",
+    " M data/reports/latest-manual-review-queue.json",
+    " M data/reports/latest-manual-review-queue.md",
+    " M docs/data-pipeline.md",
+    " M package.json",
+    "?? data/reports/latest-launch-readiness.json",
+    "?? data/reports/latest-launch-readiness.md",
+    "?? data/reports/latest-publish-candidate.json",
+    "?? data/reports/latest-publish-candidate.md",
+    "?? scripts/run-launch-readiness-report.mjs",
+    "?? scripts/run-publish-candidate.mjs"
+  ],
+  "guardrails": [
+    "No commit was created.",
+    "No push was performed.",
+    "No GitHub Pages deploy was triggered by this script.",
+    "New cruise-line records, affiliate links, and source promotions still require human review."
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-05-23T20:57:58.378Z",
+  "baseUrl": "https://cruisekit.app",
+  "ok": true,
+  "pages": [
+    {
+      "path": "/",
+      "url": "https://cruisekit.app/",
+      "status": 200,
+      "ok": true,
+      "bytes": 123684
+    },
+    {
+      "path": "/cruises/",
+      "url": "https://cruisekit.app/cruises/",
+      "status": 200,
+      "ok": true,
+      "bytes": 212392
+    },
+    {
+      "path": "/calculator/",
+      "url": "https://cruisekit.app/calculator/",
+      "status": 200,
+      "ok": true,
+      "bytes": 53182
+    },
+    {
+      "path": "/ports/",
+      "url": "https://cruisekit.app/ports/",
+      "status": 200,
+      "ok": true,
+      "bytes": 252437
+    },
+    {
+      "path": "/guides/",
+      "url": "https://cruisekit.app/guides/",
+      "status": 200,
+      "ok": true,
+      "bytes": 40349
+    },
+    {
+      "path": "/blog/",
+      "url": "https://cruisekit.app/blog/",
+      "status": 200,
+      "ok": true,
+      "bytes": 77454
+    },
+    {
+      "path": "/privacy/",
+      "url": "https://cruisekit.app/privacy/",
+      "status": 200,
+      "ok": true,
+      "bytes": 58388
+    },
+    {
+      "path": "/terms/",
+      "url": "https://cruisekit.app/terms/",
+      "status": 200,
+      "ok": true,
+      "bytes": 55394
+    },
+    {
+      "path": "/contact/",
+      "url": "https://cruisekit.app/contact/",
+      "status": 200,
+      "ok": true,
+      "bytes": 55074
+    },
+    {
+      "path": "/affiliate-disclosure/",
+      "url": "https://cruisekit.app/affiliate-disclosure/",
+      "status": 200,
+      "ok": true,
+      "bytes": 54353
+    },
+    {
+      "path": "/sitemap.xml",
+      "url": "https://cruisekit.app/sitemap.xml",
+      "status": 200,
+      "ok": true,
+      "bytes": 20149
+    },
+    {
+      "path": "/robots.txt",
+      "url": "https://cruisekit.app/robots.txt",
+      "status": 200,
+      "ok": true,
+      "bytes": 125
+    },
+    {
+      "path": "/data/bundles/manifest.json",
+      "url": "https://cruisekit.app/data/bundles/manifest.json",
+      "status": 200,
+      "ok": true,
+      "bytes": 1264
+    }
+  ],
+  "counts": {
+    "checkedUrls": 13,
+    "liveMobileSailings": 148,
+    "liveMobileDeals": 148,
+    "livePublicSailings": 148
+  },
+  "liveManifestGeneratedAt": "2026-05-21T01:16:50.597Z",
+  "localManifestGeneratedAt": "2026-05-23T20:57:57.144Z",
+  "blockers": [],
+  "warnings": [
+    {
+      "severity": "warning",
+      "id": "sitemap.xml",
+      "message": "Missing expected sitemap URL: /affiliate-disclosure",
+      "url": "https://cruisekit.app/sitemap.xml"
+    },
+    {
+      "severity": "warning",
+      "id": "manifest",
+      "message": "Live manifest generatedAt (2026-05-21T01:16:50.597Z) differs from local public manifest (2026-05-23T20:57:57.144Z).",
+      "url": "https://cruisekit.app/data/bundles/manifest.json"
+    }
+  ]
+}

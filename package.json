@@ -43,7 +43,9 @@
     "data:report": "pnpm run data:build && node scripts/data-quality-report.mjs && pnpm run data:audit:links && pnpm run data:audit:images",
     "data:automation:daily": "node scripts/run-daily-data-automation.mjs",
     "data:automation:monthly": "pnpm run data:coverage",
-    "data:publish": "pnpm run data:report && node scripts/publish-data-bundles.mjs"
+    "data:publish": "pnpm run data:report && node scripts/publish-data-bundles.mjs",
+    "data:publish:candidate": "node scripts/run-publish-candidate.mjs",
+    "site:readiness": "node scripts/run-launch-readiness-report.mjs"
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "^4.0.1",

@@ -230,6 +230,37 @@ available at:
 | `/data/bundles/canonical/sailings.json` | Public canonical sailing bundle. |
 | `/data/bundles/canonical/deals.json` | Public canonical deal bundle. |
 
+## Guarded publish candidate
+
+Use this command when the data looks ready but still needs a human approval
+before it goes live:
+
+```bash
+pnpm run data:publish:candidate
+```
+
+The command builds bundles, runs the data health report, link audit, and image
+audit, then prepares public bundles only when there are zero blockers and zero
+warnings. It writes:
+
+| Report | Purpose |
+| --- | --- |
+| `data/reports/latest-publish-candidate.md` | Human-readable go/no-go summary. |
+| `data/reports/latest-publish-candidate.json` | Structured publish candidate report. |
+
+This command never commits, pushes, or deploys. If the candidate is ready,
+review the pending diff, then commit and push to `main` to trigger the website
+deploy.
+
+Use this command to check the live website before pushing traffic harder:
+
+```bash
+pnpm run site:readiness
+```
+
+It checks important public pages, sitemap/robots basics, live bundle counts, and
+manifest freshness, then writes `data/reports/latest-launch-readiness.*`.
+
 ## Target operating model
 
 ```text
