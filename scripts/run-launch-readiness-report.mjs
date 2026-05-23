@@ -84,6 +84,19 @@ function manifestCounts(manifest) {
   };
 }
 
+function manifestBundleSignature(manifest) {
+  const bundles = manifest?.bundles ?? {};
+  return {
+    counts: manifestCounts(manifest),
+    hashes: {
+      canonicalSailings: bundles.canonicalSailings?.sha256 ?? null,
+      canonicalDeals: bundles.canonicalDeals?.sha256 ?? null,
+      mobileSailings: bundles.mobileSailings?.sha256 ?? null,
+      mobileDeals: bundles.mobileDeals?.sha256 ?? null,
+    },
+  };
+}
+
 async function loadLocalJson(relPath) {
   return JSON.parse(await readFile(resolve(repoRoot, relPath), "utf8"));
 }
@@ -158,12 +171,14 @@ async function main() {
 
   const localGeneratedAt = localManifest?.generatedAt ?? null;
   const liveGeneratedAt = liveManifestJson?.generatedAt ?? null;
-  if (localGeneratedAt && liveGeneratedAt && localGeneratedAt !== liveGeneratedAt) {
+  const localSignature = localManifest ? manifestBundleSignature(localManifest) : null;
+  const liveSignature = liveManifestJson ? manifestBundleSignature(liveManifestJson) : null;
+  if (localSignature && liveSignature && JSON.stringify(localSignature) !== JSON.stringify(liveSignature)) {
     add(
       warnings,
       "warning",
       "manifest",
-      `Live manifest generatedAt (${liveGeneratedAt}) differs from local public manifest (${localGeneratedAt}).`,
+      "Live manifest bundle counts or hashes differ from the local public manifest.",
       liveManifest.url,
     );
   }
@@ -181,6 +196,8 @@ async function main() {
     },
     liveManifestGeneratedAt: liveGeneratedAt,
     localManifestGeneratedAt: localGeneratedAt,
+    liveManifestSignature: liveSignature,
+    localManifestSignature: localSignature,
     blockers,
     warnings,
   };

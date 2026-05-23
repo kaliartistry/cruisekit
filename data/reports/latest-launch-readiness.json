@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T20:57:58.378Z",
+  "generatedAt": "2026-05-23T21:02:00.556Z",
   "baseUrl": "https://cruisekit.app",
   "ok": true,
   "pages": [
@@ -78,7 +78,7 @@
       "url": "https://cruisekit.app/sitemap.xml",
       "status": 200,
       "ok": true,
-      "bytes": 20149
+      "bytes": 20482
     },
     {
       "path": "/robots.txt",
@@ -101,21 +101,34 @@
     "liveMobileDeals": 148,
     "livePublicSailings": 148
   },
-  "liveManifestGeneratedAt": "2026-05-21T01:16:50.597Z",
+  "liveManifestGeneratedAt": "2026-05-23T20:59:49.369Z",
   "localManifestGeneratedAt": "2026-05-23T20:57:57.144Z",
-  "blockers": [],
-  "warnings": [
-    {
-      "severity": "warning",
-      "id": "sitemap.xml",
-      "message": "Missing expected sitemap URL: /affiliate-disclosure",
-      "url": "https://cruisekit.app/sitemap.xml"
+  "liveManifestSignature": {
+    "counts": {
+      "publicSailings": 148,
+      "mobileSailings": 148,
+      "mobileDeals": 148
     },
-    {
-      "severity": "warning",
-      "id": "manifest",
-      "message": "Live manifest generatedAt (2026-05-21T01:16:50.597Z) differs from local public manifest (2026-05-23T20:57:57.144Z).",
-      "url": "https://cruisekit.app/data/bundles/manifest.json"
+    "hashes": {
+      "canonicalSailings": "fb7c719910f2aa61fde4ff641d994a627d2496579e26a8bcac427d2ce100e42d",
+      "canonicalDeals": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "mobileSailings": "707da3c428a4d31dde6dca8786d7f2bab3370805411823c8a0d04e351e7d9753",
+      "mobileDeals": "1c331d0dd884e83f9c74719e2d7e254c8c545d12230f955bb9a4c733748303da"
     }
-  ]
+  },
+  "localManifestSignature": {
+    "counts": {
+      "publicSailings": 148,
+      "mobileSailings": 148,
+      "mobileDeals": 148
+    },
+    "hashes": {
+      "canonicalSailings": "fb7c719910f2aa61fde4ff641d994a627d2496579e26a8bcac427d2ce100e42d",
+      "canonicalDeals": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "mobileSailings": "707da3c428a4d31dde6dca8786d7f2bab3370805411823c8a0d04e351e7d9753",
+      "mobileDeals": "1c331d0dd884e83f9c74719e2d7e254c8c545d12230f955bb9a4c733748303da"
+    }
+  },
+  "blockers": [],
+  "warnings": []
 }
