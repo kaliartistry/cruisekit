@@ -261,6 +261,26 @@ pnpm run site:readiness
 It checks important public pages, sitemap/robots basics, live bundle counts, and
 manifest freshness, then writes `data/reports/latest-launch-readiness.*`.
 
+## Cloud automation
+
+The recurring website/data checks run in GitHub Actions, so they do not depend
+on the local Mac being awake:
+
+| Schedule | Workflow job | Command | Output |
+| --- | --- | --- | --- |
+| Daily | `daily` | `pnpm run data:automation:daily` | `cruisekit-daily-data-reports` artifact |
+| Monday/Wednesday/Friday | `publish-candidate` | `pnpm run data:publish:candidate` | `cruisekit-publish-candidate` artifact |
+| Monday | `weekly-ingest` | `pnpm run data:ingest:weekly-report` | `cruisekit-weekly-ingest-reports` artifact |
+| Friday | `launch-readiness` | `pnpm run site:readiness` | `cruisekit-launch-readiness` artifact |
+| Monthly | `monthly-coverage` | `pnpm run data:automation:monthly` | `cruisekit-monthly-coverage-report` artifact |
+
+These jobs are report-only. They do not commit, push, deploy, promote cruise
+records, or upload mobile builds. GitHub Pages deploys still happen from the
+separate deploy workflow when changes are pushed to `main`.
+
+Manual GitHub runs can target a single job by choosing the `job` workflow input
+instead of running every automation job at once.
+
 ## Target operating model
 
 ```text

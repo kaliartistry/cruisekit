@@ -2,11 +2,28 @@ name: CruiseKit Data Automation
 
 on:
   workflow_dispatch:
+    inputs:
+      job:
+        description: "Automation job to run"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - all
+          - daily
+          - publish-candidate
+          - weekly-ingest
+          - launch-readiness
+          - monthly-coverage
   schedule:
     # Daily data health, link, image, and manual-review reports.
     - cron: "21 10 * * *"
+    # Guarded publish-candidate report, no commit or deploy.
+    - cron: "17 13 * * 1,3,5"
     # Weekly report-only cruise-line ingest pass.
     - cron: "34 11 * * 1"
+    # Weekly live website launch-readiness check.
+    - cron: "43 14 * * 5"
     # Monthly cruise-line coverage report.
     - cron: "47 12 1 * *"
 
@@ -15,7 +32,10 @@ permissions:
 
 jobs:
   daily:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '21 10 * * *'
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+      (github.event.inputs.job == 'all' || github.event.inputs.job == 'daily')) ||
+      github.event.schedule == '21 10 * * *'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,8 +53,39 @@ jobs:
           name: cruisekit-daily-data-reports
           path: data/reports/
 
+  publish-candidate:
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+      (github.event.inputs.job == 'all' || github.event.inputs.job == 'publish-candidate')) ||
+      github.event.schedule == '17 13 * * 1,3,5'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
+      - name: Run guarded publish-candidate report
+        run: pnpm run data:publish:candidate
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cruisekit-publish-candidate
+          if-no-files-found: warn
+          path: |
+            data/reports/latest-publish-candidate.*
+            data/reports/latest-data-health.*
+            data/reports/latest-link-audit.*
+            data/reports/latest-image-audit.*
+            apps/web/public/data/bundles/manifest.json
+
   weekly-ingest:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '34 11 * * 1'
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+      (github.event.inputs.job == 'all' || github.event.inputs.job == 'weekly-ingest')) ||
+      github.event.schedule == '34 11 * * 1'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -57,8 +108,38 @@ jobs:
             data/reports/
             data/ingest/reports/
 
+  launch-readiness:
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+      (github.event.inputs.job == 'all' || github.event.inputs.job == 'launch-readiness')) ||
+      github.event.schedule == '43 14 * * 5'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
+      - name: Prepare local data bundle signature
+        run: pnpm run data:build && node scripts/publish-data-bundles.mjs
+      - name: Run live launch-readiness check
+        run: pnpm run site:readiness
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cruisekit-launch-readiness
+          if-no-files-found: warn
+          path: |
+            data/reports/latest-launch-readiness.*
+            apps/web/public/data/bundles/manifest.json
+
   monthly-coverage:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '47 12 1 * *'
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+      (github.event.inputs.job == 'all' || github.event.inputs.job == 'monthly-coverage')) ||
+      github.event.schedule == '47 12 1 * *'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
