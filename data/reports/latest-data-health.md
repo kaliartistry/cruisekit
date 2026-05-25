@@ -1,17 +1,17 @@
 # CruiseKit Data Health Report
 
-Generated: 2026-05-23T20:57:57.209Z
+Generated: 2026-05-25T15:06:41.191Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
 | Seed sailings | 159 |
-| Public sailings | 148 |
+| Public sailings | 146 |
 | Seed deals | 0 |
 | Public deals | 0 |
-| Mobile sailings | 148 |
-| Mobile deals | 148 |
+| Mobile sailings | 146 |
+| Mobile deals | 146 |
 
 ## Seed Sailings By Cruise Line
 
@@ -24,8 +24,8 @@ Generated: 2026-05-23T20:57:57.209Z
 
 ## Seed Sailings By Confidence
 
-- internal_do_not_publish: 11
-- itinerary_verified_price_check_required: 148
+- internal_do_not_publish: 13
+- itinerary_verified_price_check_required: 146
 
 ## Blockers
 

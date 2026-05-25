@@ -1,14 +1,14 @@
 # CruiseKit Bundle Image Audit
 
-Generated: 2026-05-23T20:57:57.638Z
+Generated: 2026-05-25T15:06:41.611Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
 | Canonical deals | 0 |
-| Mobile deals | 148 |
-| Checked image references | 148 |
+| Mobile deals | 146 |
+| Checked image references | 146 |
 
 ## Blockers
 
@@ -27,16 +27,16 @@ Generated: 2026-05-23T20:57:57.638Z
 - celebration-key: 8
 - great-stirrup-cay: 8
 - barcelona: 4
-- vancouver: 4
 - antigua: 3
 - st-lucia: 3
+- vancouver: 3
 - bermuda: 2
 - grand-cayman: 2
 - roatan: 2
-- seattle: 2
 - grand-turk: 1
 - half-moon-cay: 1
 - juneau: 1
 - nassau: 1
+- seattle: 1
 - sicily-messina: 1
 - st-thomas: 1

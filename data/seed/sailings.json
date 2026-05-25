@@ -3268,14 +3268,14 @@
       "advertiserName": null,
       "lastImported": "2026-05-19T12:00:57.038Z",
       "lastVerified": "2026-05-19",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": "Promoted from official-source staging. Price remains check-required; verify fare basis, taxes/fees, source link, and availability near booking."
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Promoted from official-source staging. Price remains check-required; verify fare basis, taxes/fees, source link, and availability near booking. Quarantined on 2026-05-25 because the departure date is now in the past."
     },
     "sourceUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-05-23T00%3A00%3A00Z%20TO%202026-05-23T00%3A00%3A00Z%5D&ships:(Eurodam)",
     "lastVerified": "2026-05-19",
-    "confidence": "itinerary_verified_price_check_required",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-05-19T12:00:57.038Z",
-    "updatedAt": "2026-05-19T12:41:08.245Z"
+    "updatedAt": "2026-05-25T15:05:39.000Z"
   },
   {
     "id": "holland-america-koningsdam-20260523-7-day-alaska-inside-passage",
@@ -3304,14 +3304,14 @@
       "advertiserName": null,
       "lastImported": "2026-05-19T12:00:57.038Z",
       "lastVerified": "2026-05-19",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": "Promoted from official-source staging. Price remains check-required; verify fare basis, taxes/fees, source link, and availability near booking."
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Promoted from official-source staging. Price remains check-required; verify fare basis, taxes/fees, source link, and availability near booking. Quarantined on 2026-05-25 because the departure date is now in the past."
     },
     "sourceUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-05-23T00%3A00%3A00Z%20TO%202026-05-23T00%3A00%3A00Z%5D&ships:(Koningsdam)",
     "lastVerified": "2026-05-19",
-    "confidence": "itinerary_verified_price_check_required",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-05-19T12:00:57.038Z",
-    "updatedAt": "2026-05-19T12:41:08.245Z"
+    "updatedAt": "2026-05-25T15:05:39.000Z"
   },
   {
     "id": "holland-america-westerdam-20260621-7-day-glacier-discovery-northbound",

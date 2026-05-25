@@ -1,6 +1,6 @@
 # CruiseKit Publish Candidate
 
-Generated: 2026-05-23T20:57:57.722Z
+Generated: 2026-05-25T15:06:41.692Z
 
 Status: READY FOR MANUAL REVIEW
 
@@ -10,9 +10,9 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 
 | Metric | Value |
 | --- | ---: |
-| Public sailings | 148 |
-| Mobile sailings | 148 |
-| Mobile deals | 148 |
+| Public sailings | 146 |
+| Mobile sailings | 146 |
+| Mobile deals | 146 |
 | Blockers | 0 |
 | Warnings | 0 |
 | Public bundles prepared | yes |
@@ -46,9 +46,14 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 
 ## Pending Git Changes
 
-- ` M apps/web/app/sitemap.ts`
+- ` M apps/web/public/data/bundles/canonical/sailings.json`
 - ` M apps/web/public/data/bundles/manifest.json`
+- ` M apps/web/public/data/bundles/mobile/deals.json`
+- ` M apps/web/public/data/bundles/mobile/sailings.json`
+- ` M data/bundles/canonical/sailings.json`
 - ` M data/bundles/manifest.json`
+- ` M data/bundles/mobile/deals.json`
+- ` M data/bundles/mobile/sailings.json`
 - ` M data/reports/latest-daily-automation.json`
 - ` M data/reports/latest-daily-automation.md`
 - ` M data/reports/latest-data-health.json`
@@ -59,14 +64,10 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 - ` M data/reports/latest-link-audit.md`
 - ` M data/reports/latest-manual-review-queue.json`
 - ` M data/reports/latest-manual-review-queue.md`
-- ` M docs/data-pipeline.md`
-- ` M package.json`
-- `?? data/reports/latest-launch-readiness.json`
-- `?? data/reports/latest-launch-readiness.md`
-- `?? data/reports/latest-publish-candidate.json`
-- `?? data/reports/latest-publish-candidate.md`
-- `?? scripts/run-launch-readiness-report.mjs`
-- `?? scripts/run-publish-candidate.mjs`
+- ` M data/reports/latest-publish-candidate.json`
+- ` M data/reports/latest-publish-candidate.md`
+- ` M data/seed/sailings.json`
+- `?? docs/cruise-data-vendor-tracker.md`
 
 ## Manual Next Step
 

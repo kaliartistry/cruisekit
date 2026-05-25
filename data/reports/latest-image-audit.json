@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-23T20:57:57.638Z",
+  "generatedAt": "2026-05-25T15:06:41.611Z",
   "counts": {
     "canonicalDeals": 0,
-    "mobileDeals": 148,
-    "checkedImages": 148
+    "mobileDeals": 146,
+    "checkedImages": 146
   },
   "imageUsage": {
     "cozumel": 68,
@@ -12,17 +12,17 @@
     "celebration-key": 8,
     "great-stirrup-cay": 8,
     "barcelona": 4,
-    "vancouver": 4,
     "antigua": 3,
     "st-lucia": 3,
+    "vancouver": 3,
     "bermuda": 2,
     "grand-cayman": 2,
     "roatan": 2,
-    "seattle": 2,
     "grand-turk": 1,
     "half-moon-cay": 1,
     "juneau": 1,
     "nassau": 1,
+    "seattle": 1,
     "sicily-messina": 1,
     "st-thomas": 1
   },

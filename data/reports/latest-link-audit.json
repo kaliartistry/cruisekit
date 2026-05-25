@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-23T20:57:57.415Z",
+  "generatedAt": "2026-05-25T15:06:41.399Z",
   "liveAudit": false,
   "counts": {
-    "canonicalSailingLinks": 148,
+    "canonicalSailingLinks": 146,
     "viatorProductLinks": 0,
-    "checkedLinks": 148
+    "checkedLinks": 146
   },
   "blockers": [],
   "warnings": []

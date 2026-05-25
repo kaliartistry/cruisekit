@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T13:34:41.422Z",
+  "generatedAt": "2026-05-25T15:06:35.976Z",
   "mode": "manual-review-no-api",
   "counts": {
     "watchlistEntries": 9,
@@ -13,8 +13,8 @@
       "virgin-voyages": 16
     },
     "byConfidence": {
-      "itinerary_verified_price_check_required": 148,
-      "internal_do_not_publish": 11
+      "itinerary_verified_price_check_required": 146,
+      "internal_do_not_publish": 13
     }
   },
   "tasks": [
@@ -240,8 +240,8 @@
       ],
       "priority": "normal",
       "currentSeedSailings": 8,
-      "currentPublicSailings": 8,
-      "currentHiddenSailings": 0,
+      "currentPublicSailings": 6,
+      "currentHiddenSailings": 2,
       "existingIds": [
         "holland-america-eurodam-20260523-7-day-alaska-explorer",
         "holland-america-koningsdam-20260523-7-day-alaska-inside-passage",
