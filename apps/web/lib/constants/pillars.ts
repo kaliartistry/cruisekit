@@ -72,7 +72,7 @@ export const PILLARS: Record<PillarKey, Pillar> = {
     borderClass: "border-warning/30",
     tagline: "Your cruise day, handled",
     description:
-      "Daily schedule, onboard spend tracker, and real-time MyCrew coordination — everything you need during your cruise.",
+      "Daily schedule, onboard spend tracker, and MyCrew status coordination — everything you need during your cruise.",
     href: "/myday",
   },
   optimize: {
@@ -85,7 +85,7 @@ export const PILLARS: Record<PillarKey, Pillar> = {
     borderClass: "border-[#8B5CF6]/30",
     tagline: "Loyalty & savings",
     description:
-      "Track loyalty points, find the best deals, and maximize every dollar across all major cruise lines.",
+      "Track loyalty points, find better value, and maximize every dollar across all major cruise lines.",
     href: "/loyalty",
   },
 };

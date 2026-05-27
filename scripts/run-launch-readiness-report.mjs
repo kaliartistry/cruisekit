@@ -28,7 +28,7 @@ const requiredPaths = [
 
 const metadataPages = [
   { path: "/", mustContain: ["CruiseKit", "cruise planning"] },
-  { path: "/cruises/", mustContain: ["Cruise Deals", "hand-verified"] },
+  { path: "/cruises/", mustContain: ["Curated Sailings", "planning-ready"] },
   { path: "/privacy/", mustContain: ["Privacy"] },
   { path: "/affiliate-disclosure/", mustContain: ["Affiliate"] },
 ];
@@ -145,8 +145,9 @@ async function main() {
     add(warnings, "warning", "robots.txt", "Robots file does not advertise the CruiseKit sitemap.", robots.url);
   }
   if (sitemap.ok) {
+    const canonicalSiteBase = "https://cruisekit.app";
     for (const required of ["/cruises", "/privacy", "/terms", "/contact", "/affiliate-disclosure"]) {
-      if (!sitemap.text.includes(`${baseUrl}${required}`)) {
+      if (!sitemap.text.includes(`${canonicalSiteBase}${required}`)) {
         add(warnings, "warning", "sitemap.xml", `Missing expected sitemap URL: ${required}`, sitemap.url);
       }
     }
@@ -178,7 +179,7 @@ async function main() {
       warnings,
       "warning",
       "manifest",
-      "Live manifest bundle counts or hashes differ from the local public manifest.",
+      "Fetched manifest bundle counts or hashes differ from the local public manifest.",
       liveManifest.url,
     );
   }
@@ -213,9 +214,9 @@ Base URL: ${baseUrl}
 | Metric | Count |
 | --- | ---: |
 | Checked URLs | ${report.counts.checkedUrls} |
-| Live public sailings | ${report.counts.livePublicSailings ?? "unknown"} |
-| Live mobile sailings | ${report.counts.liveMobileSailings ?? "unknown"} |
-| Live mobile deals | ${report.counts.liveMobileDeals ?? "unknown"} |
+| Public sailings | ${report.counts.livePublicSailings ?? "unknown"} |
+| Mobile sailings | ${report.counts.liveMobileSailings ?? "unknown"} |
+| Mobile deals | ${report.counts.liveMobileDeals ?? "unknown"} |
 | Blockers | ${blockers.length} |
 | Warnings | ${warnings.length} |
 

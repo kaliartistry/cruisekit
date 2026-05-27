@@ -26,7 +26,7 @@ const CATEGORY_COLORS: Record<BlogCategory, string> = {
 };
 
 const CATEGORY_LABELS: Record<BlogCategory, string> = {
-  deals: "Deals",
+  deals: "Sailings",
   tips: "Tips",
   comparison: "Comparison",
   news: "News",

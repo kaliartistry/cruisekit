@@ -7,7 +7,7 @@ import CalculatorWithParams from "./calculator-with-params";
 export const metadata: Metadata = {
   title: "True Cost Calculator — See What Your Cruise Really Costs",
   description:
-    "Calculate the true cost of your cruise vacation. Our free calculator reveals hidden fees including gratuities, drink packages, WiFi, excursions, port fees, and more for Royal Caribbean, Carnival, Norwegian, Disney, and all major cruise lines.",
+    "Calculate the estimated total cost of your cruise vacation. Our free calculator itemizes common add-ons including gratuities, drink packages, WiFi, excursions, port fees, and more for major cruise lines.",
 };
 
 export default function CalculatorPage() {
@@ -42,7 +42,7 @@ export default function CalculatorPage() {
                 <p className="mt-1 text-xs text-gray-500">Royal Caribbean, Carnival, Norwegian, Celebrity, Princess, Holland America, MSC, Disney, Virgin Voyages</p>
               </div>
               <div className="rounded-lg bg-white p-4 border border-gray-200">
-                <p className="text-sm font-semibold text-navy">Real Cost Data</p>
+                <p className="text-sm font-semibold text-navy">Published Cost Inputs</p>
                 <p className="mt-1 text-xs text-gray-500">Gratuities, drink packages, WiFi, dining, excursions, insurance, and port fees — all itemized</p>
               </div>
               <div className="rounded-lg bg-white p-4 border border-gray-200">

@@ -60,7 +60,7 @@ function getDurationKey(nights: number): string {
 }
 
 const SORT_OPTIONS = [
-  { value: "best", label: "Best Deals" },
+  { value: "best", label: "Best Matches" },
   { value: "date-asc", label: "Date: Soonest" },
   { value: "price-asc", label: "Price: Low to High" },
   { value: "price-desc", label: "Price: High to Low" },
@@ -351,8 +351,8 @@ function DealCard({ deal }: { deal: RealDeal }) {
     : "Excludes taxes, fees, and gratuities.";
   const checkedDate = formatLastVerified(deal.lastVerified);
   const priceDisclosure = checkedDate
-    ? `Price last checked ${checkedDate}. Confirm current price on ${deal.cruiseLine}.`
-    : `Price estimate. Confirm current price on ${deal.cruiseLine}.`;
+    ? `Planning fare last checked ${checkedDate}. Confirm current price and availability on ${deal.cruiseLine}.`
+    : `Planning fare only. Confirm current price and availability on ${deal.cruiseLine}.`;
   const displayedPrice = deal.startingPrice ?? deal.fromPrice;
   const visiblePorts = deal.ports.slice(0, 4);
 
@@ -467,14 +467,14 @@ function DealCard({ deal }: { deal: RealDeal }) {
         </div>
       </div>
 
-      {/* Price + source attribution + CTA. Headline is the cruise line's
-          own advertised starting price (no synthetic "real cost" estimate
-          here — the TCO breakdown lives in /calculator). Source row is
+      {/* Price + source attribution + CTA. Headline is a planning fare from
+          the source data, not a live quote. The TCO breakdown lives in
+          /calculator. Source row is
           required on every visible card per the canonical schema. */}
       <div className="flex shrink-0 flex-col gap-3 border-t border-gray-100 bg-gray-50/60 px-5 py-4 md:items-end md:justify-center md:border-t-0 md:border-l md:p-5 md:w-[235px]">
         <div className="text-right">
           <p className="text-[10px] uppercase tracking-wider text-gray-400">
-            Advertised from
+            Planning fare from
           </p>
           {displayedPrice !== null ? (
             <p className="font-price text-2xl font-bold text-navy leading-none">
@@ -503,7 +503,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center rounded-lg bg-teal px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-teal-dark"
             >
-              Check live price
+              Check with source
             </a>
           ) : null}
           <Button asChild size="sm" variant="outline" className="w-full">
@@ -943,19 +943,20 @@ export default function CruiseSearchPage() {
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-1">
-            <Anchor className="h-5 w-5 text-teal" />
+              <Anchor className="h-5 w-5 text-teal" />
             <h1 className="text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-              Cruise Deals
+              Curated Sailings
             </h1>
           </div>
           <p className="text-sm text-gray-500">
-            {DEAL_STATS.totalDeals} hand-verified sailing
+            {DEAL_STATS.totalDeals} planning-ready sailing
             {DEAL_STATS.totalDeals === 1 ? "" : "s"} from{" "}
             {DEAL_STATS.cruiseLines.length} cruise line
             {DEAL_STATS.cruiseLines.length === 1 ? "" : "s"}
             {DEAL_STATS.lastVerified
               ? ` · Latest check ${formatLastVerified(DEAL_STATS.lastVerified)}`
               : ""}
+            {" "}· Final fares and availability must be confirmed with the source.
           </p>
         </div>
       </div>
@@ -1146,7 +1147,7 @@ interface CuratedCollection {
 
 function buildCuratedCollections(deals: RealDeal[]): CuratedCollection[] {
   const collections: Omit<CuratedCollection, "count" | "fromPrice">[] = [
-    { key: "best", label: "Best picks", subtitle: "Highest ranked fares" },
+    { key: "best", label: "Best picks", subtitle: "Useful starting points" },
     { key: "under-500", label: "Under $500", subtitle: "Lowest entry fares" },
     { key: "short", label: "Short cruises", subtitle: "3-6 night getaways" },
     { key: "seven-night-caribbean", label: "7-night Caribbean", subtitle: "Classic weeklong trips" },

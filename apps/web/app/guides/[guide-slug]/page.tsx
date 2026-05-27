@@ -120,16 +120,16 @@ function ArticleJsonLd({
         author: {
           "@type": "Organization",
           name: "CruiseKit",
-          url: "https://cruisekit.com",
+          url: "https://cruisekit.app",
         },
         publisher: {
           "@type": "Organization",
           name: "CruiseKit",
-          url: "https://cruisekit.com",
+          url: "https://cruisekit.app",
         },
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": `https://cruisekit.com/guides/${guide.slug}`,
+          "@id": `https://cruisekit.app/guides/${guide.slug}`,
         },
       },
       {

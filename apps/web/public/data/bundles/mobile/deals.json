@@ -4099,39 +4099,6 @@
     ]
   },
   {
-    "id": "virgin-voyages-resilient-lady-20260525-5npp",
-    "cruiseLine": "Virgin Voyages",
-    "cruiseLineId": "virgin-voyages",
-    "shipName": "Resilient Lady",
-    "duration": 5,
-    "departurePort": "Miami, Florida",
-    "itineraryTitle": "Dominican Republic & Bimini Beach Club",
-    "fromPrice": 2490,
-    "currency": "USD",
-    "departureDate": "2026-05-25",
-    "ports": [
-      "Miami, Florida",
-      "Puerto Plata, Dominican Republic",
-      "The Beach Club at Bimini, Bahamas",
-      "Miami, Florida"
-    ],
-    "imageUrl": "assets/images/ports/miami.jpg",
-    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=RS2605255NPP",
-    "region": "bahamas",
-    "source": "virginvoyages.com",
-    "lastVerified": "2026-05-19",
-    "confidence": "itinerary_verified_price_check_required",
-    "priceBasis": "per-cabin",
-    "taxesAndFeesIncluded": false,
-    "monthKey": "2026-05",
-    "monthLabel": "May 2026",
-    "dealScore": 34,
-    "badges": [
-      "Short cruise",
-      "Price check required"
-    ]
-  },
-  {
     "id": "virgin-voyages-resilient-lady-20260604-4nkw",
     "cruiseLine": "Virgin Voyages",
     "cruiseLineId": "virgin-voyages",

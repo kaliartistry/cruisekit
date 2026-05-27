@@ -13,7 +13,7 @@ const HERO_PROOF = [
   {
     icon: Calculator,
     label: "Calculator",
-    value: "See the real cost. No sticker-price tricks.",
+    value: "Estimate the full cost. No sticker-price tricks.",
     href: "/calculator",
   },
   {
@@ -25,7 +25,7 @@ const HERO_PROOF = [
   {
     icon: Navigation,
     label: "MyDay",
-    value: "Your cruise day, handled on your phone.",
+    value: "Cruise-day tools coming to mobile.",
     href: "/myday",
   },
 ] as const;
@@ -74,8 +74,8 @@ export default function HeroSection() {
           className="text-base sm:text-lg text-white/85 mb-6 max-w-2xl mx-auto"
         >
           Cruises look cheap on the sticker and expensive on the folio.
-          CruiseKit tells you the real cost, the real schedule, and the real
-          logistics — before you board.
+          CruiseKit helps you estimate the full cost, plan the schedule, and
+          understand the logistics before you board.
         </motion.p>
 
         <Link
@@ -92,8 +92,8 @@ export default function HeroSection() {
           className="flex items-center justify-center gap-3 sm:gap-5 mb-8 flex-wrap"
         >
           {[
-            "9 cruise lines",
-            "Real total cost",
+            "Major cruise lines",
+            "Transparent cost estimates",
             "No booking, no upsell",
           ].map((text) => (
             <span
@@ -170,7 +170,7 @@ export default function HeroSection() {
             onClick={handleSubmit}
             className="w-full bg-teal hover:bg-teal-dark text-white font-bold py-4 px-6 rounded-xl text-base transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
           >
-            See the true cost of my cruise
+            Estimate my cruise cost
             <span aria-hidden="true">&rarr;</span>
           </button>
         </motion.div>

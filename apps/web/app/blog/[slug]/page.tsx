@@ -63,7 +63,7 @@ const CATEGORY_COLORS: Record<BlogCategory, string> = {
 };
 
 const CATEGORY_LABELS: Record<BlogCategory, string> = {
-  deals: "Deals",
+  deals: "Sailings",
   tips: "Tips",
   comparison: "Comparison",
   news: "News",
@@ -141,20 +141,20 @@ function ArticleJsonLd({ post }: { post: BlogPost }) {
     author: {
       "@type": "Organization",
       name: post.author,
-      url: "https://cruisekit.com",
+      url: "https://cruisekit.app",
     },
     publisher: {
       "@type": "Organization",
       name: "CruiseKit",
-      url: "https://cruisekit.com",
+      url: "https://cruisekit.app",
       logo: {
         "@type": "ImageObject",
-        url: "https://cruisekit.com/images/logo.png",
+        url: "https://cruisekit.app/cruisekit_square.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://cruisekit.com/blog/${post.slug}`,
+      "@id": `https://cruisekit.app/blog/${post.slug}`,
     },
     wordCount,
     keywords: post.tags.join(", "),
@@ -176,7 +176,7 @@ function ArticleJsonLd({ post }: { post: BlogPost }) {
 /* ------------------------------------------------------------------ */
 
 function SocialShareButtons({ post }: { post: BlogPost }) {
-  const url = `https://cruisekit.com/blog/${post.slug}`;
+  const url = `https://cruisekit.app/blog/${post.slug}`;
   const text = encodeURIComponent(post.title);
   const encodedUrl = encodeURIComponent(url);
 
@@ -337,10 +337,10 @@ function CtaBanners({ post }: { post: BlogPost }) {
           )}
         >
           <div>
-            <p className="text-lg font-bold text-navy">Browse Cruise Deals</p>
+            <p className="text-lg font-bold text-navy">Browse Curated Sailings</p>
             <p className="mt-1 text-sm text-gray-600">
-              Compare real-time pricing from every major cruise line. Updated
-              daily with the latest fares.
+              Browse planning-ready sailings with source dates. Confirm final
+              fare and availability with the cruise line or booking platform.
             </p>
           </div>
           <svg
@@ -404,6 +404,10 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPostBySlug(slug);
 
   if (!post) notFound();
+  const showPriceDisclaimer =
+    post.category === "deals" ||
+    post.category === "tips" ||
+    post.category === "comparison";
 
   return (
     <>
@@ -559,6 +563,14 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Article content */}
         <section className="mx-auto max-w-4xl px-4 pb-12 sm:px-6 lg:px-8">
+          {showPriceDisclaimer && (
+            <div className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">
+              Fare examples in this article are planning references, not live
+              quotes. Cruise prices and availability change frequently; confirm
+              final pricing with the cruise line or booking platform before you
+              book.
+            </div>
+          )}
           <article className="prose prose-gray max-w-none">
             {post.content.map((section) => (
               <div

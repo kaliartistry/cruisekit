@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer";
 export const metadata: Metadata = {
   title: "About — The Cruise Planning Toolkit",
   description:
-    "CruiseKit is an independent cruise planning toolkit built by a solo developer. Plan smarter with real cost data, port guides, group coordination, and more.",
+    "CruiseKit is an independent cruise planning toolkit built by a solo developer. Plan smarter with cost estimates, port guides, group coordination, and more.",
   keywords: [
     "about cruisekit",
     "cruise planning tool",
@@ -96,8 +96,8 @@ export default function AboutPage() {
                 </span>
                 <span>
                   <strong className="text-navy">Plan</strong> &mdash; The True
-                  Cost Calculator breaks down every hidden fee across 9 major
-                  cruise lines so you see the real price before you book.
+                  Cost Calculator breaks down common add-ons across major
+                  cruise lines so you can estimate the full price before you book.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <span>
                   <strong className="text-navy">MyDay</strong> &mdash;
                   Your daily cruise command center with schedule management,
-                  onboard spend tracking, and real-time MyCrew coordination
+                  onboard spend tracking, and MyCrew status coordination
                   so everyone stays connected.
                 </span>
               </li>
@@ -157,8 +157,8 @@ export default function AboutPage() {
             <p>
               CruiseKit flips that model. We show you the full picture first,
               then let you decide. Some of our links are affiliate links and
-              we earn a small commission if you book through them, but our
-              recommendations and data are never influenced by those
+              we may earn a small commission if you make a purchase through
+              them, but our recommendations and data are never influenced by those
               partnerships.
             </p>
 
@@ -166,10 +166,10 @@ export default function AboutPage() {
               Our Technology
             </h2>
             <p>
-              CruiseKit is built on proprietary cruise data infrastructure
-              and patent-pending safety technology. Every tool on the platform
-              is designed with accuracy, offline reliability, and real-world
-              cruising conditions in mind.
+              CruiseKit is built on a curated cruise data model and
+              safety-focused planning technology. Every tool on the platform
+              is designed around transparent sources, practical estimates, and
+              real-world cruising conditions.
             </p>
           </div>
         </section>

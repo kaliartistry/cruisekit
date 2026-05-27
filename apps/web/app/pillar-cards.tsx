@@ -187,7 +187,7 @@ export default function ContentSections() {
                 </h2>
               </div>
               <p className="text-sm text-gray-500">
-                Cruise-line prices from {DEAL_STATS.cruiseLines.length} lines &middot; {DEAL_STATS.totalDeals} sailings
+                Curated sailing fares from {DEAL_STATS.cruiseLines.length} lines &middot; {DEAL_STATS.totalDeals} sailings
                 {DEAL_STATS.lastVerified
                   ? ` · Latest check ${formatLastVerified(DEAL_STATS.lastVerified)}`
                   : ""}{" "}
@@ -234,7 +234,7 @@ export default function ContentSections() {
                     />
                     {/* Dark gradient overlay for text readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/30" />
-                    {/* Price badge — cruise line's advertised starting price */}
+                    {/* Price badge — planning fare from the source data */}
                     <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow">
                       <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">From</p>
                       <p className="font-price text-xl font-bold text-navy leading-tight">
@@ -443,7 +443,7 @@ export default function ContentSections() {
               Cruise lines we cover
             </h2>
             <p className="mt-3 text-base text-gray-500 sm:text-lg">
-              Detailed cost data for all major cruise lines, updated regularly.
+              Published cost inputs and planning estimates for major cruise lines.
             </p>
           </div>
 

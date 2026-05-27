@@ -6,7 +6,7 @@ const FOOTER_COLUMNS = [
   {
     title: "Platform",
     links: [
-      { label: "Cruise Deals", href: "/cruises" },
+      { label: "Browse Sailings", href: "/cruises" },
       { label: "True Cost Calculator", href: "/calculator" },
       { label: "Port Day Planner", href: "/ports" },
       { label: "MyDay", href: "/myday" },
@@ -38,10 +38,10 @@ const FOOTER_COLUMNS = [
   {
     title: "Connect",
     links: [
-      { label: "Twitter / X", href: "https://cruisekit.app" },
-      { label: "Instagram", href: "https://cruisekit.app" },
-      { label: "Facebook", href: "https://cruisekit.app" },
-      { label: "YouTube", href: "https://cruisekit.app" },
+      { label: "Email CruiseKit", href: "mailto:info@cruisekit.app" },
+      { label: "Contact", href: "/contact" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Data corrections", href: "/contact" },
     ],
   },
 ];
@@ -101,7 +101,7 @@ export default function Footer() {
               Built for cruisers, by cruisers
             </span>
             <span className="inline-flex items-center rounded-full border border-white/15 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-gray-400">
-              Patent Pending
+              Independent Toolkit
             </span>
           </div>
         </div>
