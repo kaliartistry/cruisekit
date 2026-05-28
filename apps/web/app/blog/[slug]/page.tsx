@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils/cn";
 import {
   getBlogPostBySlug,
   getAllBlogSlugs,
+  getCanonicalBlogUrl,
   getRelatedPosts,
   type BlogCategory,
   type BlogPost,
@@ -19,35 +20,182 @@ import RelatedContent from "@/components/shared/related-content";
 /*  Cruise-line detection from post metadata                           */
 /* ------------------------------------------------------------------ */
 
-const CRUISE_LINE_TAG_MAP: Record<string, string> = {
-  "royal caribbean": "royal-caribbean",
-  rci: "royal-caribbean",
-  carnival: "carnival",
-  norwegian: "norwegian",
-  ncl: "norwegian",
-  msc: "msc",
-  celebrity: "celebrity",
-  princess: "princess",
-  "holland america": "holland-america",
-  disney: "disney",
-  "virgin voyages": "virgin-voyages",
-};
+const CRUISE_LINE_PATTERNS = [
+  {
+    id: "royal-caribbean",
+    label: "Royal Caribbean",
+    keywords: ["royal caribbean", "royal-caribbean", "rci"],
+  },
+  {
+    id: "carnival",
+    label: "Carnival",
+    keywords: ["carnival"],
+  },
+  {
+    id: "norwegian",
+    label: "Norwegian",
+    keywords: ["norwegian", "ncl"],
+  },
+  {
+    id: "msc",
+    label: "MSC",
+    keywords: ["msc"],
+  },
+  {
+    id: "celebrity",
+    label: "Celebrity",
+    keywords: ["celebrity"],
+  },
+  {
+    id: "princess",
+    label: "Princess",
+    keywords: ["princess"],
+  },
+  {
+    id: "holland-america",
+    label: "Holland America",
+    keywords: ["holland america", "holland-america"],
+  },
+  {
+    id: "disney",
+    label: "Disney",
+    keywords: ["disney"],
+  },
+  {
+    id: "virgin-voyages",
+    label: "Virgin Voyages",
+    keywords: ["virgin voyages", "virgin-voyages"],
+  },
+] as const;
+
+const COST_RELATED_KEYWORDS = [
+  "cost",
+  "costs",
+  "price",
+  "pricing",
+  "fare",
+  "budget",
+  "hidden fee",
+  "hidden fees",
+  "gratuity",
+  "gratuities",
+  "drink package",
+  "cheers",
+  "free at sea",
+  "taxes",
+  "port fees",
+  "wi-fi",
+  "wifi",
+  "excursion",
+  "excursions",
+  "compare",
+  "comparison",
+  "cheaper",
+  "worth it",
+] as const;
+
+type DetectedCruiseLineId = (typeof CRUISE_LINE_PATTERNS)[number]["id"];
+
+function getCruiseLineLabel(id: string) {
+  return (
+    CRUISE_LINE_PATTERNS.find((line) => line.id === id)?.label ?? id
+  );
+}
+
+function getPostSearchText(post: BlogPost) {
+  return [
+    post.slug.replace(/-/g, " "),
+    post.title,
+    post.excerpt,
+    post.tags.join(" "),
+    post.content
+      .map((section) => [section.heading, ...section.paragraphs].join(" "))
+      .join(" "),
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+
+function getPostMetadataSearchText(post: BlogPost) {
+  return [
+    post.slug.replace(/-/g, " "),
+    post.title,
+    post.excerpt,
+    post.tags.join(" "),
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+
+function detectCruiseLineIds(post: BlogPost): DetectedCruiseLineId[] {
+  const text = getPostMetadataSearchText(post);
+
+  return CRUISE_LINE_PATTERNS.map((line) => {
+    const firstIndex = Math.min(
+      ...line.keywords
+        .map((keyword) => text.indexOf(keyword))
+        .filter((index) => index >= 0)
+    );
+
+    return Number.isFinite(firstIndex)
+      ? { id: line.id, firstIndex }
+      : undefined;
+  })
+    .filter(
+      (match): match is { id: DetectedCruiseLineId; firstIndex: number } =>
+        Boolean(match)
+    )
+    .sort((a, b) => a.firstIndex - b.firstIndex)
+    .map((match) => match.id);
+}
 
 function detectCruiseLineId(post: BlogPost): string | undefined {
-  // Check slug first for line-specific cost posts
-  for (const [, id] of Object.entries(CRUISE_LINE_TAG_MAP)) {
-    if (post.slug.startsWith(id + "-cruise-cost") || post.slug.includes(id)) {
-      return id;
-    }
+  return detectCruiseLineIds(post)[0];
+}
+
+function isCostRelatedPost(post: BlogPost) {
+  const text = getPostSearchText(post);
+  return COST_RELATED_KEYWORDS.some((keyword) => text.includes(keyword));
+}
+
+function buildCalculatorCta(post: BlogPost) {
+  if (!isCostRelatedPost(post)) return null;
+
+  const lineIds = detectCruiseLineIds(post).slice(0, 2);
+  const lineLinks = lineIds.map((id) => ({
+    id,
+    label: getCruiseLineLabel(id),
+    href: `/calculator/${id}`,
+  }));
+
+  if (lineLinks.length === 1) {
+    const line = lineLinks[0];
+    return {
+      href: line.href,
+      title: `${line.label} Cruise Cost Calculator`,
+      description: `Enter the ${line.label} fare you found, then estimate gratuities, drink packages, WiFi, excursions, and other common add-ons.`,
+      lineLinks,
+    };
   }
-  // Then check tags
-  for (const tag of post.tags) {
-    const lower = tag.toLowerCase();
-    for (const [keyword, id] of Object.entries(CRUISE_LINE_TAG_MAP)) {
-      if (lower.includes(keyword)) return id;
-    }
+
+  if (lineLinks.length > 1) {
+    const labels = lineLinks.map((line) => line.label);
+    return {
+      href: `/calculator?line=${lineLinks.map((line) => line.id).join(",")}`,
+      title: `${labels.join(" vs ")} Cost Calculator`,
+      description:
+        "Pre-load both cruise lines and compare the same trip assumptions side by side before you book.",
+      lineLinks,
+    };
   }
-  return undefined;
+
+  return {
+    href: "/calculator",
+    title: "Cruise Cost Calculator",
+    description:
+      "Estimate the real cruise price including gratuities, drink packages, WiFi, excursions, port fees, and other common add-ons.",
+    lineLinks,
+  };
 }
 
 /* ------------------------------------------------------------------ */
@@ -63,7 +211,7 @@ const CATEGORY_COLORS: Record<BlogCategory, string> = {
 };
 
 const CATEGORY_LABELS: Record<BlogCategory, string> = {
-  deals: "Deals",
+  deals: "Sailings",
   tips: "Tips",
   comparison: "Comparison",
   news: "News",
@@ -97,6 +245,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} (Blog)`,
     description: post.excerpt,
     keywords: post.tags,
+    alternates: {
+      canonical: getCanonicalBlogUrl(post.slug),
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -141,20 +292,20 @@ function ArticleJsonLd({ post }: { post: BlogPost }) {
     author: {
       "@type": "Organization",
       name: post.author,
-      url: "https://cruisekit.com",
+      url: "https://cruisekit.app",
     },
     publisher: {
       "@type": "Organization",
       name: "CruiseKit",
-      url: "https://cruisekit.com",
+      url: "https://cruisekit.app",
       logo: {
         "@type": "ImageObject",
-        url: "https://cruisekit.com/images/logo.png",
+        url: "https://cruisekit.app/cruisekit_square.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://cruisekit.com/blog/${post.slug}`,
+      "@id": getCanonicalBlogUrl(post.slug),
     },
     wordCount,
     keywords: post.tags.join(", "),
@@ -176,7 +327,7 @@ function ArticleJsonLd({ post }: { post: BlogPost }) {
 /* ------------------------------------------------------------------ */
 
 function SocialShareButtons({ post }: { post: BlogPost }) {
-  const url = `https://cruisekit.com/blog/${post.slug}`;
+  const url = `https://cruisekit.app/blog/${post.slug}`;
   const text = encodeURIComponent(post.title);
   const encodedUrl = encodeURIComponent(url);
 
@@ -288,44 +439,63 @@ function RelatedPosts({ currentSlug }: { currentSlug: string }) {
 /* ------------------------------------------------------------------ */
 
 function CtaBanners({ post }: { post: BlogPost }) {
-  const showCalculator =
-    post.category === "tips" || post.category === "comparison";
+  const calculatorCta = buildCalculatorCta(post);
   const showDeals = post.category === "deals";
   const showPorts = post.category === "port-guides";
 
   return (
     <div className="mt-12 space-y-4">
-      {showCalculator && (
-        <Link
-          href="/calculator"
-          className={cn(
-            "flex items-center justify-between rounded-xl border-2 border-teal/30 bg-teal/5 p-6",
-            "transition-all hover:border-teal/50 hover:bg-teal/10"
-          )}
-        >
-          <div>
-            <p className="text-lg font-bold text-navy">
-              Use Our True Cost Calculator
-            </p>
-            <p className="mt-1 text-sm text-gray-600">
-              See your real cruise cost including drink packages, gratuities,
-              WiFi, and excursions — no surprises.
-            </p>
-          </div>
-          <svg
-            className="h-6 w-6 shrink-0 text-teal"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+      {calculatorCta && (
+        <div className="rounded-xl border-2 border-teal/30 bg-teal/5 p-6">
+          <Link
+            href={calculatorCta.href}
+            className={cn(
+              "flex items-center justify-between gap-4",
+              "transition-colors hover:text-teal"
+            )}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </Link>
+            <div>
+              <p className="text-lg font-bold text-navy">
+                {calculatorCta.title}
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                {calculatorCta.description}
+              </p>
+            </div>
+            <svg
+              className="h-6 w-6 shrink-0 text-teal"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </Link>
+
+          <div className="mt-4 flex flex-wrap gap-2 border-t border-teal/15 pt-4">
+            <Link
+              href="/cruise-costs"
+              className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+            >
+              Cruise costs hub
+            </Link>
+            {calculatorCta.lineLinks.length > 1 &&
+              calculatorCta.lineLinks.map((line) => (
+                <Link
+                  key={line.href}
+                  href={line.href}
+                  className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                >
+                  {line.label} calculator
+                </Link>
+              ))}
+          </div>
+        </div>
       )}
 
       {showDeals && (
@@ -337,10 +507,10 @@ function CtaBanners({ post }: { post: BlogPost }) {
           )}
         >
           <div>
-            <p className="text-lg font-bold text-navy">Browse Cruise Deals</p>
+            <p className="text-lg font-bold text-navy">Browse Curated Sailings</p>
             <p className="mt-1 text-sm text-gray-600">
-              Compare real-time pricing from every major cruise line. Updated
-              daily with the latest fares.
+              Browse planning-ready sailings with source dates. Confirm final
+              fare and availability with the cruise line or booking platform.
             </p>
           </div>
           <svg
@@ -404,6 +574,10 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPostBySlug(slug);
 
   if (!post) notFound();
+  const showPriceDisclaimer =
+    post.category === "deals" ||
+    post.category === "tips" ||
+    post.category === "comparison";
 
   return (
     <>
@@ -559,6 +733,14 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Article content */}
         <section className="mx-auto max-w-4xl px-4 pb-12 sm:px-6 lg:px-8">
+          {showPriceDisclaimer && (
+            <div className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">
+              Fare examples in this article are planning references, not live
+              quotes. Cruise prices and availability change frequently; confirm
+              final pricing with the cruise line or booking platform before you
+              book.
+            </div>
+          )}
           <article className="prose prose-gray max-w-none">
             {post.content.map((section) => (
               <div

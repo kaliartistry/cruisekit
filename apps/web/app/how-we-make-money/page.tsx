@@ -28,10 +28,9 @@ export default function HowWeMakeMoneyPage() {
               The short version
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              When you click a &ldquo;Book&rdquo; button on CruiseKit and
-              complete a purchase on a partner&rsquo;s site (Viator,
-              GetYourGuide, Booking.com, CruiseDirect, and a handful of others),
-              that partner pays us a small commission. The price you pay is
+              When you click a clearly disclosed affiliate link on CruiseKit and
+              complete a purchase on an approved partner&rsquo;s site, that
+              partner may pay us a small commission. The price you pay is
               identical to what you&rsquo;d pay going direct &mdash; we never
               mark it up and we don&rsquo;t get a special &ldquo;kickback
               rate&rdquo; that changes what you see.
@@ -83,9 +82,7 @@ export default function HowWeMakeMoneyPage() {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[
                 { name: "Viator", role: "Shore excursions and tours" },
-                { name: "GetYourGuide", role: "Shore excursions and tours" },
                 { name: "Booking.com", role: "Pre- and post-cruise hotels" },
-                { name: "CruiseDirect", role: "Cruise fare bookings" },
                 { name: "Medjet", role: "Medical evacuation insurance" },
                 { name: "SamBoat", role: "Private boat and yacht charters" },
               ].map((p) => (

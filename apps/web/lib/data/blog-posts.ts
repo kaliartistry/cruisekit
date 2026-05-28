@@ -36,7 +36,7 @@ export const BLOG_CATEGORIES: {
   label: string;
 }[] = [
   { key: "all", label: "All Posts" },
-  { key: "deals", label: "Deals" },
+  { key: "deals", label: "Sailings" },
   { key: "tips", label: "Tips" },
   { key: "comparison", label: "Comparison" },
   { key: "news", label: "News" },
@@ -335,7 +335,7 @@ const bestPortsPost: BlogPost = {
       heading: "Honorable Mentions and What to Skip",
       paragraphs: [
         "Other solid ports for first-timers include Labadee, Haiti (Royal Caribbean's private resort \u2014 extremely safe and controlled), CocoCay, Bahamas (RCI's private island with waterpark and beaches), and Nassau, Bahamas (great beaches but the area near the port can be overwhelming and pushy). Each of these offers a more curated experience that can be ideal if you are nervous about exploring independently.",
-        "One honest warning: some ports look great on the itinerary but are underwhelming in person. Costa Maya is essentially a shopping mall built for cruise passengers with little authentic culture within walking distance. Belize City requires a tender and is not particularly walkable or safe near the port. If your itinerary includes these, book a ship-sponsored excursion to get away from the terminal area. Browse our full Port Day Planner for detailed guides, safety scores, and real-time excursion options for every Caribbean cruise port.",
+        "One honest warning: some ports look great on the itinerary but are underwhelming in person. Costa Maya is essentially a shopping mall built for cruise passengers with little authentic culture within walking distance. Belize City requires a tender and is not particularly walkable or safe near the port. If your itinerary includes these, book a ship-sponsored excursion to get away from the terminal area. Browse our full Port Day Planner for detailed guides, safety scores, and partner excursion options for Caribbean cruise ports.",
       ],
     },
   ],
@@ -1895,6 +1895,19 @@ export const BLOG_POSTS: BlogPost[] = [
   carnivalVsRoyalCaribbeanComparisonPost,
 ];
 
+export const BLOG_CANONICAL_URLS: Record<string, string> = {
+  "hidden-cruise-costs-nobody-tells-you":
+    "https://cruisekit.app/blog/hidden-cruise-costs",
+};
+
+export const INDEXABLE_BLOG_POSTS = BLOG_POSTS.filter(
+  (post) => !BLOG_CANONICAL_URLS[post.slug]
+);
+
+export function getCanonicalBlogUrl(slug: string): string {
+  return BLOG_CANONICAL_URLS[slug] ?? `https://cruisekit.app/blog/${slug}`;
+}
+
 /** Look up a single blog post by slug. */
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
@@ -1905,15 +1918,20 @@ export function getAllBlogSlugs(): string[] {
   return BLOG_POSTS.map((p) => p.slug);
 }
 
+/** Get blog slugs that should be promoted in sitemaps and indexes. */
+export function getIndexableBlogSlugs(): string[] {
+  return INDEXABLE_BLOG_POSTS.map((p) => p.slug);
+}
+
 /** Get related posts (same category, excluding current). */
 export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {
   const current = getBlogPostBySlug(slug);
-  if (!current) return BLOG_POSTS.slice(0, limit);
+  if (!current) return INDEXABLE_BLOG_POSTS.slice(0, limit);
 
-  const sameCategory = BLOG_POSTS.filter(
+  const sameCategory = INDEXABLE_BLOG_POSTS.filter(
     (p) => p.slug !== slug && p.category === current.category
   );
-  const others = BLOG_POSTS.filter(
+  const others = INDEXABLE_BLOG_POSTS.filter(
     (p) => p.slug !== slug && p.category !== current.category
   );
 

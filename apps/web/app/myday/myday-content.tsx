@@ -43,7 +43,7 @@ const FEATURES = [
     icon: CalendarDays,
     title: "Daily Schedule",
     description:
-      "Add dinner reservations, show times, spa appointments, and excursions. Get push notification reminders.",
+      "Add dinner reservations, show times, spa appointments, and excursions, with reminders planned for the mobile app.",
     color: "text-teal-500",
     bg: "bg-teal-500/10",
   },
@@ -136,7 +136,7 @@ export default function MyDayContent() {
           >
             Ship time drift. Surprise charges on your folio. Dinner plans
             scattered across texts. MyDay pulls the day into one calm view
-            &mdash; clocks, schedule, spend, and MyCrew check-ins, even on
+            &mdash; clocks, schedule, spend, and MyCrew check-ins, designed for
             unreliable cruise WiFi.
           </motion.p>
 
@@ -284,7 +284,7 @@ export default function MyDayContent() {
           >
             <Smartphone className="h-4 w-4 text-amber-500" />
             <span className="text-sm font-semibold text-amber-600">
-              Available in the CruiseKit app
+              Coming to the CruiseKit app
             </span>
           </motion.div>
           <motion.h2

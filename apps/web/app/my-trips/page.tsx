@@ -176,7 +176,7 @@ function EmptyState() {
       <Button asChild className="mt-6">
         <Link href="/cruises">
           <Anchor className="h-4 w-4 mr-1.5" />
-          Browse Deals
+          Browse Sailings
         </Link>
       </Button>
     </div>
@@ -199,7 +199,7 @@ function SignInPrompt() {
         Sign in to see your trips
       </h2>
       <p className="mt-1 text-sm text-gray-500 max-w-sm">
-        Save your favorite cruise deals and access them from any device.
+        Save your favorite cruise sailings and access them from any device.
       </p>
       <Button onClick={() => setShowModal(true)} className="mt-6">
         Sign In

@@ -14,11 +14,11 @@ const HEADLINES: Record<NonNullable<AppHandoffProps["variant"]>, { title: string
   },
   "saved-trip": {
     title: "Your cruise, in your pocket.",
-    body: "Your saved trip is already waiting in the CruiseKit app when you install it.",
+    body: "Your saved trip will be ready for the CruiseKit app when mobile launch is complete.",
   },
   footer: {
     title: "Your cruise, in your pocket.",
-    body: "CruiseKit on mobile: ship-time clocks, port-day planning, and spend tracking — works on spotty ship Wi-Fi.",
+    body: "CruiseKit on mobile: ship-time clocks, port-day planning, and spend tracking, designed for cruise Wi-Fi conditions.",
   },
 };
 

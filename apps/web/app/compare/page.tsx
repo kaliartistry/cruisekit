@@ -28,7 +28,7 @@ export default function ComparePage() {
         <PageHeader
           pillar="plan"
           title="Compare Cruise Lines"
-          subtitle="Side-by-side cost comparison across 9 major cruise lines. Real prices, not marketing — find where your money goes."
+          subtitle="Side-by-side cost comparison across 9 major cruise lines. Published rates and planning estimates help you see where your money goes."
           breadcrumbs={[{ label: "Compare Cruise Lines" }]}
         />
         <CompareContent />

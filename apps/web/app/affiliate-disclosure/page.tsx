@@ -41,10 +41,10 @@ export default function AffiliateDisclosurePage() {
               </h2>
               <ul className="list-disc space-y-2 pl-5">
                 <li>
-                  &ldquo;Check current price&rdquo; buttons on cruise listings
-                  &mdash; these go to a cruise line&rsquo;s booking page
-                  (sometimes routed through an affiliate network like Awin or
-                  CJ).
+                  &ldquo;Check with source&rdquo; buttons on sailing listings
+                  &mdash; these may go to a cruise line or booking platform.
+                  Some are plain source links, and some may be affiliate links
+                  when an approved affiliate relationship exists.
                 </li>
                 <li>
                   Shore excursion suggestions on port pages &mdash; routed

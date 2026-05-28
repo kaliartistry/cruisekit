@@ -5921,12 +5921,12 @@
       "advertiserName": null,
       "lastImported": "2026-05-16T20:06:34.289Z",
       "lastVerified": "2026-05-19",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": "Promoted from Virgin Voyages public voyage planner staging. Price remains check-required; verify cabin category, promotional terms, taxes/fees, and availability near booking."
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Hidden 2026-05-27: departure date is in the past. Replace with a future Virgin Voyages sailing after manual review."
     },
     "sourceUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=RS2605255NPP",
     "lastVerified": "2026-05-19",
-    "confidence": "itinerary_verified_price_check_required",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-05-16T20:06:34.289Z",
     "updatedAt": "2026-05-19T06:02:23.448Z"
   },

@@ -26,17 +26,22 @@ const FAQS = [
   {
     question: "Is CruiseKit a travel agency?",
     answer:
-      "No. CruiseKit does not sell, book, or arrange cruises. We are a planning tool that helps you research and compare before you book directly with a cruise line or your preferred travel agent. Some links on our site are affiliate links, which means we may earn a small commission if you book through them, but we never handle bookings ourselves.",
+      "No. CruiseKit does not sell, book, or arrange cruises. We are a planning tool that helps you research and compare before you book directly with a cruise line or your preferred travel agent. Some links on our site are affiliate links, which means we may earn a small commission if you make a purchase through them, but we never handle bookings ourselves.",
   },
   {
     question: "How accurate is the True Cost Calculator?",
     answer:
-      "The True Cost Calculator uses publicly available pricing data for gratuities, drink packages, Wi-Fi, specialty dining, and other common add-ons across 9 major cruise lines. Prices are updated regularly but are estimates — actual costs may vary based on your sailing date, ship, cabin category, and current promotions. Always confirm final pricing directly with the cruise line before booking.",
+      "The True Cost Calculator uses publicly available and manually reviewed pricing inputs for gratuities, drink packages, Wi-Fi, specialty dining, and other common add-ons across major cruise lines. The result is an estimate, not a booking quote. Actual costs may vary based on sailing date, ship, cabin category, and current promotions. Always confirm final pricing directly with the cruise line or booking platform before booking.",
   },
   {
     question: "Where does the pricing data come from?",
     answer:
-      "Our pricing data is sourced from official cruise line websites, public fare listings, and published add-on pricing schedules. We cross-reference multiple sources and update data regularly. However, cruise lines frequently adjust their pricing, so we recommend verifying any numbers that are critical to your booking decision.",
+      "Our pricing inputs come from official cruise line websites, public fare listings where available, and published add-on pricing schedules. We do not scrape restricted consumer booking pages. Cruise lines change pricing frequently, so CruiseKit treats fares as planning references and recommends verifying any number that matters to your booking decision.",
+  },
+  {
+    question: "Why don't I see live Royal Caribbean prices?",
+    answer:
+      "Some cruise lines, including Royal Caribbean, restrict how third parties can access or redistribute live pricing and availability. CruiseKit will not scrape prohibited booking pages or publish unverified live fares. You can still use the calculator for Royal Caribbean by entering the fare you see on Royal Caribbean's site or from your travel agent.",
   },
   {
     question: "Is my data safe?",
@@ -56,12 +61,12 @@ const FAQS = [
   {
     question: "Is CruiseKit free?",
     answer:
-      "Yes, CruiseKit is completely free to use. We sustain the platform through affiliate links — when you click through to a cruise line's website and book, we may earn a small commission at no extra cost to you. This model lets us keep all tools free and accessible.",
+      "Yes, CruiseKit is free to use. We may sustain the platform through clearly disclosed affiliate links for approved partners such as excursions, hotels, insurance, or booking platforms. Those links do not change the price you pay, and CruiseKit does not handle your booking.",
   },
   {
     question: "Can I use CruiseKit on my phone?",
     answer:
-      "Yes. CruiseKit is fully responsive and works on mobile browsers. The MyDay feature is specifically designed for mobile use during your cruise. No app download is required — just visit cruisekit.app in your phone's browser.",
+      "Yes. CruiseKit works on mobile browsers today. The Android app is being prepared for launch, and MyDay is designed for the app experience during a cruise. Until the app is live, you can use the web version at cruisekit.app.",
   },
   {
     question: "How do I contact you?",

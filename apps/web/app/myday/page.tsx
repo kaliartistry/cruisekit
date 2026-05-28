@@ -6,7 +6,7 @@ import MyDayContent from "./myday-content";
 export const metadata: Metadata = {
   title: "MyDay — Your Cruise Day, Handled",
   description:
-    "Daily schedule with ship time clocks, onboard spend tracker with smart tip prompts, and MyCrew status check-ins. Everything you need during your cruise.",
+    "Coming mobile cruise-day planner with ship time clocks, onboard spend tracking, smart tip prompts, and MyCrew status check-ins.",
 };
 
 export default function MyDayPage() {

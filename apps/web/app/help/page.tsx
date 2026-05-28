@@ -21,7 +21,7 @@ const TOOLS = [
   {
     name: "True Cost Calculator",
     description:
-      "Calculate the real cost of a cruise including gratuities, drink packages, Wi-Fi, excursions, and more across 9 major cruise lines.",
+      "Calculate the estimated full cost of a cruise including gratuities, drink packages, Wi-Fi, excursions, and more across 9 major cruise lines.",
     href: "/calculator",
     icon: (
       <svg
@@ -45,9 +45,9 @@ const TOOLS = [
     ),
   },
   {
-    name: "Cruise Deals",
+    name: "Curated Sailings",
     description:
-      "Browse current cruise deals and compare pricing across cruise lines. See estimated true costs, not just base fares.",
+      "Browse curated cruise sailings with planning fares, source dates, and calculator handoff. Confirm final fares with the source before booking.",
     href: "/cruises",
     icon: (
       <svg

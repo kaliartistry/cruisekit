@@ -58,7 +58,7 @@ export default function TermsPage() {
               </h2>
               <p>
                 The pricing information displayed on CruiseKit, including
-                data from the True Cost Calculator, cruise deal listings, and
+                data from the True Cost Calculator, cruise sailing listings, and
                 cost comparisons, consists of{" "}
                 <strong>estimates based on publicly available data</strong>.
                 Prices are subject to change at any time and may not reflect

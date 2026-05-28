@@ -1,22 +1,23 @@
 # Cruise Data Vendor Tracker
 
-Last updated: May 25, 2026
+Last updated: May 27, 2026
 
 ## Working Decisions
 
 - Launch should be data-first, not booking-first.
 - Do not scrape prohibited consumer booking pages.
-- Do not pay for agency or host-agency setup just to start.
+- Do not pay for agency setup, host-agency setup, vendor setup fees, monthly data licenses, or API access until CruiseKit is earning money or has committed funding for data.
 - First test lines: Royal Caribbean and Norwegian Cruise Line.
 - Show "from" prices only when the provider can support current advertised pricing in USD with mandatory taxes, fees, port expenses, or non-commissionable charges where available.
 - Cabin-level selection is not required for launch, but cabin-category pricing should be captured if available.
+- Paid vendor paths are paused. Widgety and Traveltek remain relationship/roadmap options, not active implementation dependencies.
 
 ## Outreach Status
 
 | Provider | Contact path | Status | Date | Main ask | Follow-up |
 | --- | --- | --- | --- | --- | --- |
-| Widgety | `sales@widgety.co.uk` | Email sent from `info@cruisekit.app` | May 25, 2026 | USA/USD test API for Royal Caribbean and Norwegian with full pricing/content, plus pricing/access rules | Follow up May 29 if no reply |
-| Traveltek | Official contact/demo form | Replied: Neil Welsh, Head of Sales, requested discovery Zoom via Calendly | May 25, 2026 | Cruise API/CruiseConnect demo, sandbox, U.S./USD coverage, and credential requirements | Book discovery call and keep call focused on data-first access, Royal Caribbean/Norwegian, pricing, and credential path |
+| Widgety | `sales@widgety.co.uk` | Replied: software-company licensing allowed, but no USD pricing for Royal/Celebrity without Royal commercial agreement | May 26, 2026 | USA/USD test API for Royal Caribbean and Norwegian with full pricing/content, plus pricing/access rules | Reply asking for trial with Norwegian + one non-Royal operator, and whether Royal/Celebrity content-only can be included |
+| Traveltek | Official contact/demo form and discovery call | Call completed with Neil Welsh, Head of Sales | May 27, 2026 | Cruise API/CruiseConnect demo, sandbox, U.S./USD coverage, and credential requirements | Await emailed product/cache-file info; evaluate cache file at $1,500 setup + $800/month floor |
 | CRUISEHOST / CRUISE-API | `sales@cruisehost.net` | Email sent from `info@cruisekit.app` | May 25, 2026 | CRUISE-API USA/USD access, content-only catalogue, Royal Caribbean/Norwegian test access, pricing/credential rules | Follow up May 29 if no reply |
 | Odysseus Solutions | Official request-a-demo form | Submitted | May 25, 2026 | Cruise Data Cache, Cruise Static Content, and longer-term Cruise Booking Engine path | Follow up May 29 if no reply |
 
@@ -43,6 +44,19 @@ Use these questions to score each reply:
 
 Best near-term candidate for licensed content plus search/pricing data. The request asked whether CruiseKit can license data as a software company before becoming a travel agency.
 
+Response received May 26, 2026 from Sandra Barnes-Keywood, Sales Director:
+- CruiseKit can license Widgety as a software/technology company before becoming a travel agency.
+- Widgety cannot offer USD pricing for Royal Caribbean or Celebrity because Royal does not want pricing distributed to businesses without a commercial agreement with them.
+- Widgety does have all other Royal/Celebrity content.
+- Production pricing depends on number of operators, amount of content, and usage location.
+- No setup fee.
+- Minimum term: 90 days.
+- No refresh/caching rules were stated.
+- Deck plans/images, port imagery, itinerary coordinates/UN/LOCODE, and cabin-linked pricing are available for supported operators.
+- Current product should be treated as pre-booking/research data.
+- Booking API expected Summer 2026, subject to operator integrations.
+- Trial: 4-week free trial, up to two operators.
+
 Key reply items to capture:
 - Test key availability.
 - Production monthly/API cost.
@@ -51,11 +65,29 @@ Key reply items to capture:
 - Whether taxes/fees/non-commissionable charges are exposed.
 - Whether booking/deep links exist or Widgety should be treated as research-only.
 
+Current recommendation:
+- Do not spend the two-operator trial on Royal Caribbean if it cannot include pricing.
+- Ask for Norwegian + Carnival, MSC, or Princess with full USA/USD pricing.
+- Ask whether Royal Caribbean and Celebrity content-only can be included in the trial or priced separately from full pricing operators.
+- Keep Traveltek as the best path to Royal Caribbean pricing through credentialed/commercial access.
+
 ### Traveltek
 
 Best long-term live pricing, availability, repricing, and booking candidate if startup/API access is feasible.
 
 Response received May 25, 2026 from Neil Welsh, Head of Sales. He asked to schedule a discovery Zoom call through Calendly.
+
+Discovery call notes from May 27, 2026:
+- Traveltek has 30+ cruise lines directly integrated.
+- Their normal customers are enterprise travel companies; examples mentioned included large U.S./global cruise/OTA/airline businesses.
+- They do not have a free/startup program.
+- The direct API is likely not useful until CruiseKit has cruise-line commercial agreements/API keys or a fulfillment/host-agency partner with those credentials.
+- API pricing expectation: about $1,400-$2,000/month.
+- Content/cache file may be a better near-term fit because it does not require direct cruise-line deals.
+- Cache/content file includes cruise-line, ship, itinerary, and port content plus a level of pricing: latest gross/travel-agent price by broad cabin category such as inside, outside/oceanview, balcony, and suite.
+- Cache/content delivery: FTP file plus webhook notifications when Traveltek receives updates from cruise lines.
+- Cache/content pricing expectation: $1,500 setup fee plus a monthly floor of $800/month.
+- Neil offered to email additional information and examples.
 
 Key reply items to capture:
 - Whether Cruise API can be used data-only before agency credentials.
@@ -64,12 +96,11 @@ Key reply items to capture:
 - Sandbox availability.
 - Cost, setup fee, minimum term, and implementation timeline.
 
-Call stance:
-- CruiseKit is launching data-first, not checkout-first.
-- We need licensed U.S./USD cruise inventory and display rights.
-- Royal Caribbean and Norwegian are the proof-point lines.
-- Booking/reprice can be phase two, but we need to understand the path and credentials now.
-- Do not imply CruiseKit will scrape or use unofficial cruise-line endpoints.
+Current recommendation:
+- Do not pursue the full API immediately unless a host agency/fulfillment partner provides credentials and economics.
+- Ask for a sample cache file/schema before paying setup.
+- Confirm whether the cache includes Royal Caribbean pricing, whether display is allowed for a consumer-facing planning app, and whether taxes/fees/port expenses or non-commissionable charges are included.
+- Compare Traveltek cache economics against Widgety and CruiseHost before committing.
 
 ### CRUISEHOST / CRUISE-API
 

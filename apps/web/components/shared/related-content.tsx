@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
-import { BLOG_POSTS, type BlogPost } from "@/lib/data/blog-posts";
+import {
+  INDEXABLE_BLOG_POSTS as BLOG_POSTS,
+  type BlogPost,
+} from "@/lib/data/blog-posts";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -141,8 +144,8 @@ function buildLinks({
       });
       links.push({
         href: `/cruises?line=${cruiseLineId}`,
-        title: `${name} Deals`,
-        description: `Browse the latest ${name} fares updated daily.`,
+        title: `${name} Sailings`,
+        description: `Browse available ${name} planning references where CruiseKit has publishable source data.`,
         icon: "deals",
       });
     }
@@ -174,7 +177,7 @@ function buildLinks({
   if (type === "port") {
     links.push({
       href: "/cruises" + (portSlug ? `?port=${portSlug}` : ""),
-      title: "Deals Stopping Here",
+      title: "Sailings Stopping Here",
       description: "Find cruises with this port on the itinerary.",
       icon: "deals",
     });
@@ -206,8 +209,8 @@ function buildLinks({
       const name = CRUISE_LINE_NAMES[cruiseLineId] ?? cruiseLineId;
       links.push({
         href: `/cruises?line=${cruiseLineId}`,
-        title: `${name} Deals`,
-        description: `See live ${name} fares to pair with your cost estimate.`,
+        title: `${name} Sailings`,
+        description: `Pair your cost estimate with publishable ${name} sailing references when available.`,
         icon: "deals",
       });
       // Find blog posts mentioning this cruise line
@@ -236,8 +239,8 @@ function buildLinks({
     });
     links.push({
       href: "/cruises",
-      title: "Browse All Deals",
-      description: "Compare real-time pricing from every major cruise line.",
+      title: "Browse Curated Sailings",
+      description: "Compare planning fares with source dates and verification notes.",
       icon: "deals",
     });
   }
