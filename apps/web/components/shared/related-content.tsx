@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
-import { BLOG_POSTS, type BlogPost } from "@/lib/data/blog-posts";
+import {
+  INDEXABLE_BLOG_POSTS as BLOG_POSTS,
+  type BlogPost,
+} from "@/lib/data/blog-posts";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */

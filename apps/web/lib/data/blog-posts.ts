@@ -1895,6 +1895,19 @@ export const BLOG_POSTS: BlogPost[] = [
   carnivalVsRoyalCaribbeanComparisonPost,
 ];
 
+export const BLOG_CANONICAL_URLS: Record<string, string> = {
+  "hidden-cruise-costs-nobody-tells-you":
+    "https://cruisekit.app/blog/hidden-cruise-costs",
+};
+
+export const INDEXABLE_BLOG_POSTS = BLOG_POSTS.filter(
+  (post) => !BLOG_CANONICAL_URLS[post.slug]
+);
+
+export function getCanonicalBlogUrl(slug: string): string {
+  return BLOG_CANONICAL_URLS[slug] ?? `https://cruisekit.app/blog/${slug}`;
+}
+
 /** Look up a single blog post by slug. */
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
@@ -1905,15 +1918,20 @@ export function getAllBlogSlugs(): string[] {
   return BLOG_POSTS.map((p) => p.slug);
 }
 
+/** Get blog slugs that should be promoted in sitemaps and indexes. */
+export function getIndexableBlogSlugs(): string[] {
+  return INDEXABLE_BLOG_POSTS.map((p) => p.slug);
+}
+
 /** Get related posts (same category, excluding current). */
 export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {
   const current = getBlogPostBySlug(slug);
-  if (!current) return BLOG_POSTS.slice(0, limit);
+  if (!current) return INDEXABLE_BLOG_POSTS.slice(0, limit);
 
-  const sameCategory = BLOG_POSTS.filter(
+  const sameCategory = INDEXABLE_BLOG_POSTS.filter(
     (p) => p.slug !== slug && p.category === current.category
   );
-  const others = BLOG_POSTS.filter(
+  const others = INDEXABLE_BLOG_POSTS.filter(
     (p) => p.slug !== slug && p.category !== current.category
   );
 

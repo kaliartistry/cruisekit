@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils/cn";
 import {
   getBlogPostBySlug,
   getAllBlogSlugs,
+  getCanonicalBlogUrl,
   getRelatedPosts,
   type BlogCategory,
   type BlogPost,
@@ -244,6 +245,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} (Blog)`,
     description: post.excerpt,
     keywords: post.tags,
+    alternates: {
+      canonical: getCanonicalBlogUrl(post.slug),
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -301,7 +305,7 @@ function ArticleJsonLd({ post }: { post: BlogPost }) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://cruisekit.app/blog/${post.slug}`,
+      "@id": getCanonicalBlogUrl(post.slug),
     },
     wordCount,
     keywords: post.tags.join(", "),
@@ -473,9 +477,15 @@ function CtaBanners({ post }: { post: BlogPost }) {
             </svg>
           </Link>
 
-          {calculatorCta.lineLinks.length > 1 && (
-            <div className="mt-4 flex flex-wrap gap-2 border-t border-teal/15 pt-4">
-              {calculatorCta.lineLinks.map((line) => (
+          <div className="mt-4 flex flex-wrap gap-2 border-t border-teal/15 pt-4">
+            <Link
+              href="/cruise-costs"
+              className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+            >
+              Cruise costs hub
+            </Link>
+            {calculatorCta.lineLinks.length > 1 &&
+              calculatorCta.lineLinks.map((line) => (
                 <Link
                   key={line.href}
                   href={line.href}
@@ -484,8 +494,7 @@ function CtaBanners({ post }: { post: BlogPost }) {
                   {line.label} calculator
                 </Link>
               ))}
-            </div>
-          )}
+          </div>
         </div>
       )}
 

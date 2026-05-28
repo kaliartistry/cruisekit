@@ -127,6 +127,12 @@ export default function CalculatorPage() {
                 final pricing. Treat the result as a planning estimate and
                 confirm the final quote with the cruise line or booking partner.
               </p>
+              <Link
+                href="/cruise-costs"
+                className="mt-4 inline-flex items-center text-sm font-semibold text-teal transition-colors hover:text-teal-dark"
+              >
+                Browse the full cruise costs hub -&gt;
+              </Link>
             </div>
 
             <div className="mt-8">

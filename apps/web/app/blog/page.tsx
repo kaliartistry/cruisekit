@@ -8,7 +8,7 @@ import Footer from "@/components/layout/footer";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils/cn";
 import {
-  BLOG_POSTS,
+  INDEXABLE_BLOG_POSTS as BLOG_POSTS,
   BLOG_CATEGORIES,
   type BlogCategory,
 } from "@/lib/data/blog-posts";

@@ -18,6 +18,7 @@ const FOOTER_COLUMNS = [
     title: "Resources",
     links: [
       { label: "Cruise Guides", href: "/guides" },
+      { label: "Cruise Costs", href: "/cruise-costs" },
       { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/faq" },
       { label: "Help Center", href: "/help" },

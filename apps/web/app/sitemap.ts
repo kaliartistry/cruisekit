@@ -4,7 +4,7 @@ export const dynamic = 'force-static';
 
 import { getAllPortSlugs } from '@/lib/data/ports';
 import { getAllGuideSlugs } from '@/lib/data/guides';
-import { getAllBlogSlugs } from '@/lib/data/blog-posts';
+import { getIndexableBlogSlugs } from '@/lib/data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cruisekit.app';
@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     '',
     '/calculator',
+    '/cruise-costs',
     '/cruises',
     '/compare',
     '/ports',
@@ -53,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   /* ---- Dynamic blog pages ------------------------------------------ */
-  const blogPages = getAllBlogSlugs().map((slug) => ({
+  const blogPages = getIndexableBlogSlugs().map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
