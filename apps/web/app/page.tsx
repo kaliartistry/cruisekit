@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer";
 import HeroSection from "./hero-section";
 import HomeGuideTeaser from "./home-guide-teaser";
 import ContentSections from "./pillar-cards";
+import MobileLaunchSection from "./mobile-launch-section";
 
 export const metadata: Metadata = {
   title: "True Cruise Cost Calculator — See What Your Cruise Really Costs",
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Navbar />
       <main className="flex-1">
         <HeroSection />
+        <MobileLaunchSection />
         <HomeGuideTeaser />
         <ContentSections />
       </main>
