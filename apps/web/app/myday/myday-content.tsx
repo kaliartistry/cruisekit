@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Clock,
@@ -11,7 +13,13 @@ import {
   TrendingUp,
   Smartphone,
   AlertTriangle,
+  Apple,
 } from "lucide-react";
+import {
+  APP_STORE_STATUS,
+  APP_STORE_URL,
+  isStoreLive,
+} from "@/lib/config/app-store-urls";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -43,7 +51,7 @@ const FEATURES = [
     icon: CalendarDays,
     title: "Daily Schedule",
     description:
-      "Add dinner reservations, show times, spa appointments, and excursions, with reminders planned for the mobile app.",
+      "Add dinner reservations, show times, spa appointments, and excursions so your cruise day is not scattered across notes.",
     color: "text-teal-500",
     bg: "bg-teal-500/10",
   },
@@ -109,54 +117,148 @@ const TABS = [
   },
 ];
 
+const APP_SCREENSHOTS = [
+  {
+    eyebrow: "Today",
+    title: "Ship time, port time, and what is next",
+    description:
+      "The Today tab keeps clocks, all-aboard context, open venues, and your daily schedule in one cruise-day view.",
+    src: "/assets/app-screenshots/myday-today.png",
+    alt: "CruiseKit iPhone MyDay Today tab showing ship time, port time, venues, and schedule",
+  },
+  {
+    eyebrow: "Itinerary",
+    title: "The day makes sense in context",
+    description:
+      "CruiseKit anchors MyDay to the sailing itinerary, so sea days, port days, and all-aboard timing stay easy to scan.",
+    src: "/assets/app-screenshots/myday-itinerary.png",
+    alt: "CruiseKit iPhone itinerary screen showing current cruise day and upcoming ports",
+  },
+  {
+    eyebrow: "MyCrew",
+    title: "Check-ins without constant location tracking",
+    description:
+      "MyCrew uses simple status updates and map context for group coordination without turning the app into always-on GPS tracking.",
+    src: "/assets/app-screenshots/myday-crew-map.png",
+    alt: "CruiseKit iPhone MyCrew tab showing a port map, group check-ins, and status buttons",
+  },
+] as const;
+
 export default function MyDayContent() {
+  const appStoreLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
+
   return (
     <div className="min-h-screen">
       {/* ── Hero ── */}
-      <section className="bg-gradient-to-b from-navy to-[#0a1d38] px-4 pb-20 pt-24 text-center text-white">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <motion.h1
-            custom={0}
-            variants={fadeUp}
-            className="mx-auto mt-6 max-w-3xl text-4xl font-black leading-tight sm:text-5xl"
-            style={{ color: '#ffffff' }}
-          >
-            Your phone says 2pm.{" "}
-            <span className="text-amber-400">The ship says 1pm.</span>
-          </motion.h1>
-
-          <motion.p
-            custom={1}
-            variants={fadeUp}
-            className="mx-auto mt-5 max-w-2xl text-lg text-white/90"
-          >
-            Ship time drift. Surprise charges on your folio. Dinner plans
-            scattered across texts. MyDay pulls the day into one calm view
-            &mdash; clocks, schedule, spend, and MyCrew check-ins, designed for
-            unreliable cruise WiFi.
-          </motion.p>
-
-          {/* 3-tab preview */}
+      <section className="overflow-hidden bg-gradient-to-b from-navy to-[#0a1d38] px-4 pb-20 pt-20 text-white sm:pt-24">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <motion.div
-            custom={3}
-            variants={fadeUp}
-            className="mx-auto mt-10 flex max-w-md justify-center gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center lg:text-left"
           >
-            {TABS.map((tab) => (
-              <div
-                key={tab.name}
-                className="flex flex-col items-center gap-2 rounded-xl bg-white/10 px-6 py-4 backdrop-blur-sm"
+            <motion.div
+              custom={0}
+              variants={fadeUp}
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-semibold text-teal backdrop-blur-sm"
+            >
+              <Apple className="h-4 w-4" strokeWidth={2.2} />
+              Available in the iPhone app
+            </motion.div>
+
+            <motion.h1
+              custom={1}
+              variants={fadeUp}
+              className="mx-auto mt-6 max-w-3xl text-4xl font-black leading-tight sm:text-5xl lg:mx-0"
+              style={{ color: "#ffffff" }}
+            >
+              Your phone says 2pm.{" "}
+              <span className="text-amber-400">The ship says 1pm.</span>
+            </motion.h1>
+
+            <motion.p
+              custom={2}
+              variants={fadeUp}
+              className="mx-auto mt-5 max-w-2xl text-lg text-white/90 lg:mx-0"
+            >
+              Ship time drift. Surprise charges on your folio. Dinner plans
+              scattered across texts. MyDay pulls the day into one calm view
+              &mdash; clocks, schedule, spend, and MyCrew check-ins, designed
+              for unreliable cruise WiFi.
+            </motion.p>
+
+            <motion.div
+              custom={3}
+              variants={fadeUp}
+              className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start"
+            >
+              {appStoreLive && (
+                <a
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-colors hover:bg-teal hover:text-white"
+                >
+                  <Apple className="h-4 w-4" strokeWidth={2.2} />
+                  Download the iPhone app
+                </a>
+              )}
+              <Link
+                href="#app-screenshots"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
               >
-                <tab.icon className="h-6 w-6 text-amber-400" />
-                <span className="text-sm font-semibold">{tab.name}</span>
-              </div>
-            ))}
+                See app screenshots
+                <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
+              </Link>
+            </motion.div>
+
+            {/* 3-tab preview */}
+            <motion.div
+              custom={4}
+              variants={fadeUp}
+              className="mx-auto mt-10 hidden max-w-md grid-cols-3 gap-3 sm:grid lg:mx-0"
+            >
+              {TABS.map((tab) => (
+                <div
+                  key={tab.name}
+                  className="flex flex-col items-center gap-2 rounded-xl bg-white/10 px-4 py-4 text-center backdrop-blur-sm"
+                >
+                  <tab.icon className="h-6 w-6 text-amber-400" />
+                  <span className="text-sm font-semibold">{tab.name}</span>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55, delay: 0.2, ease: "easeOut" }}
+            className="relative mx-auto w-full max-w-[500px]"
+          >
+            <div className="absolute left-4 top-12 hidden w-[30%] -rotate-6 opacity-70 blur-[0.2px] sm:block">
+              <PhoneFrame
+                src="/assets/app-screenshots/myday-itinerary.png"
+                alt="CruiseKit itinerary screenshot"
+              />
+            </div>
+            <div className="absolute bottom-8 right-2 hidden w-[32%] rotate-6 opacity-80 blur-[0.2px] sm:block">
+              <PhoneFrame
+                src="/assets/app-screenshots/myday-crew-map.png"
+                alt="CruiseKit MyCrew map screenshot"
+              />
+            </div>
+            <div className="relative z-10 mx-auto mt-2 w-[62%] min-w-[220px] max-w-[270px] sm:mt-0">
+              <PhoneFrame
+                src="/assets/app-screenshots/myday-today.png"
+                alt="CruiseKit MyDay Today screenshot"
+                priority
+              />
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* ── Planning-aid disclaimer ── */}
@@ -168,6 +270,72 @@ export default function MyDayContent() {
             does not track your phone or the ship. Always follow your cruise
             line&rsquo;s official all-aboard time, posted on the gangway daily.
           </p>
+        </div>
+      </section>
+
+      {/* ── App Store Screenshots ── */}
+      <section id="app-screenshots" className="scroll-mt-28 bg-white px-4 py-20">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <motion.div
+              custom={0}
+              variants={fadeUp}
+              className="inline-flex items-center gap-2 rounded-full bg-teal/10 px-4 py-1.5 text-sm font-semibold text-teal-dark"
+            >
+              <Smartphone className="h-4 w-4" strokeWidth={2.2} />
+              Screenshots from the live app
+            </motion.div>
+            <motion.h2
+              custom={1}
+              variants={fadeUp}
+              className="mt-5 text-3xl font-black text-navy sm:text-4xl"
+            >
+              See what you get after you tap App Store.
+            </motion.h2>
+            <motion.p
+              custom={2}
+              variants={fadeUp}
+              className="mt-3 text-base leading-relaxed text-muted"
+            >
+              MyDay is not just a website promise. The iPhone app already
+              includes the cruise-day screens people need most: time context,
+              itinerary context, and group coordination.
+            </motion.p>
+          </motion.div>
+
+          <div className="mt-14 grid gap-8 lg:grid-cols-3">
+            {APP_SCREENSHOTS.map((shot, index) => (
+              <motion.figure
+                key={shot.title}
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="flex flex-col items-center text-center"
+              >
+                <div className="w-full max-w-[270px]">
+                  <PhoneFrame src={shot.src} alt={shot.alt} />
+                </div>
+                <figcaption className="mt-6 max-w-sm">
+                  <div className="text-xs font-bold uppercase tracking-wider text-teal">
+                    {shot.eyebrow}
+                  </div>
+                  <h3 className="mt-2 text-xl font-black text-navy">
+                    {shot.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {shot.description}
+                  </p>
+                </figcaption>
+              </motion.figure>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -284,7 +452,7 @@ export default function MyDayContent() {
           >
             <Smartphone className="h-4 w-4 text-amber-500" />
             <span className="text-sm font-semibold text-amber-600">
-              Coming to the CruiseKit app
+              Available in the CruiseKit iPhone app
             </span>
           </motion.div>
           <motion.h2
@@ -299,12 +467,48 @@ export default function MyDayContent() {
             variants={fadeUp}
             className="mx-auto mt-3 max-w-lg text-muted"
           >
-            MyDay joins Plan, Explore, Coordinate, and Optimize to give you
-            the complete cruise planning toolkit — before, during, and after
-            your voyage.
+            MyDay joins Plan, Explore, Coordinate, and Optimize to give you the
+            complete cruise planning toolkit before, during, and after your
+            voyage.
           </motion.p>
+          {appStoreLive && (
+            <motion.a
+              custom={3}
+              variants={fadeUp}
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-extrabold text-white shadow-lg transition-colors hover:bg-teal"
+            >
+              <Apple className="h-4 w-4" strokeWidth={2.2} />
+              Download CruiseKit for iPhone
+            </motion.a>
+          )}
         </motion.div>
       </section>
+    </div>
+  );
+}
+
+function PhoneFrame({
+  src,
+  alt,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  priority?: boolean;
+}) {
+  return (
+    <div className="relative aspect-[1290/2796] overflow-hidden rounded-[2rem] border border-white/20 bg-navy shadow-2xl ring-1 ring-black/10">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(min-width: 1024px) 270px, 70vw"
+        priority={priority}
+        className="object-cover"
+      />
     </div>
   );
 }
