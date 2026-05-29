@@ -21,7 +21,7 @@ const HEADLINES: Record<NonNullable<AppHandoffProps["variant"]>, { title: string
   },
   "saved-trip": {
     title: "Your cruise, in your pocket.",
-    body: "Your saved trip will be ready for the CruiseKit app when mobile launch is complete.",
+    body: "Download CruiseKit for iPhone to keep trip planning, MyDay, and spend tracking closer than a browser tab.",
   },
   footer: {
     title: "Your cruise, in your pocket.",

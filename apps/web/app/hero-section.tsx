@@ -5,9 +5,14 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Ship, Check, Calculator, Map, Navigation, ArrowRight } from "lucide-react";
+import { Ship, Check, Calculator, Map, Navigation, ArrowRight, Apple } from "lucide-react";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
+import {
+  APP_STORE_STATUS,
+  APP_STORE_URL,
+  isStoreLive,
+} from "@/lib/config/app-store-urls";
 
 const HERO_PROOF = [
   {
@@ -25,7 +30,7 @@ const HERO_PROOF = [
   {
     icon: Navigation,
     label: "MyDay",
-    value: "Cruise-day tools coming to mobile.",
+    value: "Ship-time, schedule, and spend tools in the app.",
     href: "/myday",
   },
 ] as const;
@@ -34,6 +39,7 @@ export default function HeroSection() {
   const router = useRouter();
   const [selectedLine, setSelectedLine] = useState("");
   const hasSelectedLine = selectedLine !== "";
+  const appStoreLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
 
   const handleSubmit = () => {
     const params = new URLSearchParams();
@@ -77,6 +83,32 @@ export default function HeroSection() {
           CruiseKit helps you estimate the full cost, plan the schedule, and
           understand the logistics before you board.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.18 }}
+          className="mb-5 flex flex-col items-center justify-center gap-3 sm:flex-row"
+        >
+          {appStoreLive && (
+            <a
+              href={APP_STORE_URL ?? undefined}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-all hover:bg-teal hover:text-white sm:w-auto"
+            >
+              <Apple className="h-4 w-4" strokeWidth={2.2} />
+              Download the free iPhone app
+            </a>
+          )}
+          <Link
+            href="/calculator"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20 sm:w-auto"
+          >
+            Use the web calculator
+            <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
+          </Link>
+        </motion.div>
 
         <Link
           href="/methodology"
