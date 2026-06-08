@@ -6,6 +6,8 @@ Files here are **not part of the build** and **are not imported** by any shipped
 
 - `scraped-sailings-2026-04/scraped/` — per-cruise-line JSON files captured between March 28–29, 2026 from cruise-line public booking APIs (and one set of intercepted GraphQL responses). Pricing in these files is stale and itinerary structures may have changed. Do not reuse pricing or deep links without re-verifying against the cruise line's current public page.
 - `scripts/` — the scraping scripts that produced the JSON files above. They are kept as evidence of provenance but should not be re-run; the project moved away from scraping in favor of canonical hand-curated seeds and (eventually) affiliate-network feeds.
+- `content-drafts/` — unpublished marketing/editorial drafts that are not wired into the website content system.
+- `product-notes/` — product strategy and roadmap notes retained for reference, not active implementation scope.
 
 ## Why archived rather than deleted
 
