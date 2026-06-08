@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-27T22:06:02.693Z",
-  "manifestGeneratedAt": "2026-05-27T22:06:02.641Z",
+  "generatedAt": "2026-06-08T14:50:17.986Z",
+  "manifestGeneratedAt": "2026-06-08T14:50:17.931Z",
   "counts": {
     "seedSailings": 159,
-    "publicSailings": 145,
+    "publicSailings": 144,
     "seedDeals": 0,
     "publicDeals": 0,
-    "mobileSailings": 145,
-    "mobileDeals": 145
+    "mobileSailings": 144,
+    "mobileDeals": 144
   },
   "byCruiseLine": {
     "azamara": 8,
@@ -18,8 +18,8 @@
     "virgin-voyages": 16
   },
   "byConfidence": {
-    "internal_do_not_publish": 14,
-    "itinerary_verified_price_check_required": 145
+    "internal_do_not_publish": 15,
+    "itinerary_verified_price_check_required": 144
   },
   "blockers": [],
   "warnings": []

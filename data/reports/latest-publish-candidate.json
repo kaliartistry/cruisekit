@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-25T15:06:41.692Z",
+  "generatedAt": "2026-06-08T14:50:17.494Z",
   "mode": "guarded-publish-candidate",
   "ready": true,
   "publishedAssets": true,
   "blockerCount": 0,
   "warningCount": 0,
   "counts": {
-    "publicSailings": 146,
-    "mobileSailings": 146,
-    "mobileDeals": 146
+    "publicSailings": 144,
+    "mobileSailings": 144,
+    "mobileDeals": 144
   },
   "steps": [
     {
@@ -16,7 +16,7 @@
       "command": "pnpm run data:build",
       "exitCode": 0,
       "ok": true,
-      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:build /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/build-data-bundles.mjs\n\nBuilt data bundles at /Users/kaliartistry-mac/Cruise Travel Agent/data/bundles\nPublic sailings: 146/159\nPublic deals: 0/0\n",
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:build /Users/kaliartistry-mac/Cruise Travel Agent\n> node scripts/build-data-bundles.mjs\n\nBuilt data bundles at /Users/kaliartistry-mac/Cruise Travel Agent/data/bundles\nPublic sailings: 144/159\nPublic deals: 0/0\n",
       "stderrTail": ""
     },
     {
@@ -87,8 +87,7 @@
     " M data/reports/latest-manual-review-queue.md",
     " M data/reports/latest-publish-candidate.json",
     " M data/reports/latest-publish-candidate.md",
-    " M data/seed/sailings.json",
-    "?? docs/cruise-data-vendor-tracker.md"
+    " M data/seed/sailings.json"
   ],
   "guardrails": [
     "No commit was created.",

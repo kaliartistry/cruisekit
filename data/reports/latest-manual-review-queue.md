@@ -1,6 +1,6 @@
 # CruiseKit Manual Review Queue
 
-Generated: 2026-05-25T15:06:35.976Z
+Generated: 2026-06-08T14:50:18.614Z
 
 This is the temporary no-API workflow. Use browser/manual verification against
 official cruise-line sources, then update canonical seed records only when the
@@ -109,8 +109,8 @@ source page can be cited.
 - Cruise line: virgin-voyages
 - Source: https://www.virginvoyages.com/book/voyage-planner/find-a-voyage
 - Current seed sailings: 16
-- Current public sailings: 16
-- Current hidden sailings: 0
+- Current public sailings: 14
+- Current hidden sailings: 2
 - Review fields: sailing dates, itinerary, starting price, taxes and fees, direct link
 - Required action: verify exact sailing/date/link on the official source before promoting or editing public records.
 

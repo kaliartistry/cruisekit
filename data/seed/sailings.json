@@ -5962,12 +5962,12 @@
       "advertiserName": null,
       "lastImported": "2026-05-16T13:36:52.629Z",
       "lastVerified": "2026-05-16",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": "Promoted from Virgin Voyages public voyage planner staging. Price remains check-required; verify cabin category, promotional terms, taxes/fees, and availability near booking."
+      "confidence": "internal_do_not_publish",
+      "termsNotes": "Hidden 2026-06-08: departure date is in the past. Replace with a future Virgin Voyages sailing after manual review."
     },
     "sourceUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2606044NKW",
     "lastVerified": "2026-05-16",
-    "confidence": "itinerary_verified_price_check_required",
+    "confidence": "internal_do_not_publish",
     "createdAt": "2026-05-16T13:36:52.629Z",
     "updatedAt": "2026-05-16T13:36:55.212Z"
   },

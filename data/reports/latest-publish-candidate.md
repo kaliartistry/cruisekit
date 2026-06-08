@@ -1,6 +1,6 @@
 # CruiseKit Publish Candidate
 
-Generated: 2026-05-25T15:06:41.692Z
+Generated: 2026-06-08T14:50:17.494Z
 
 Status: READY FOR MANUAL REVIEW
 
@@ -10,9 +10,9 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 
 | Metric | Value |
 | --- | ---: |
-| Public sailings | 146 |
-| Mobile sailings | 146 |
-| Mobile deals | 146 |
+| Public sailings | 144 |
+| Mobile sailings | 144 |
+| Mobile deals | 144 |
 | Blockers | 0 |
 | Warnings | 0 |
 | Public bundles prepared | yes |
@@ -67,7 +67,6 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 - ` M data/reports/latest-publish-candidate.json`
 - ` M data/reports/latest-publish-candidate.md`
 - ` M data/seed/sailings.json`
-- `?? docs/cruise-data-vendor-tracker.md`
 
 ## Manual Next Step
 

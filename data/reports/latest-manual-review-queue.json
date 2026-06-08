@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T15:06:35.976Z",
+  "generatedAt": "2026-06-08T14:50:18.614Z",
   "mode": "manual-review-no-api",
   "counts": {
     "watchlistEntries": 9,
@@ -13,8 +13,8 @@
       "virgin-voyages": 16
     },
     "byConfidence": {
-      "itinerary_verified_price_check_required": 146,
-      "internal_do_not_publish": 13
+      "itinerary_verified_price_check_required": 144,
+      "internal_do_not_publish": 15
     }
   },
   "tasks": [
@@ -342,8 +342,8 @@
       ],
       "priority": "normal",
       "currentSeedSailings": 16,
-      "currentPublicSailings": 16,
-      "currentHiddenSailings": 0,
+      "currentPublicSailings": 14,
+      "currentHiddenSailings": 2,
       "existingIds": [
         "virgin-voyages-resilient-lady-20260525-5npp",
         "virgin-voyages-resilient-lady-20260604-4nkw",

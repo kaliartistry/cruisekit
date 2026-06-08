@@ -4099,39 +4099,6 @@
     ]
   },
   {
-    "id": "virgin-voyages-resilient-lady-20260604-4nkw",
-    "cruiseLine": "Virgin Voyages",
-    "cruiseLineId": "virgin-voyages",
-    "shipName": "Resilient Lady",
-    "duration": 4,
-    "departurePort": "Miami, Florida",
-    "itineraryTitle": "Key West & Bimini Beach Club",
-    "fromPrice": 1832,
-    "currency": "USD",
-    "departureDate": "2026-06-04",
-    "ports": [
-      "Miami, Florida",
-      "Key West, Florida",
-      "The Beach Club at Bimini, Bahamas",
-      "Miami, Florida"
-    ],
-    "imageUrl": "assets/images/ports/miami.jpg",
-    "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2606044NKW",
-    "region": "bahamas",
-    "source": "virginvoyages.com",
-    "lastVerified": "2026-05-16",
-    "confidence": "itinerary_verified_price_check_required",
-    "priceBasis": "per-cabin",
-    "taxesAndFeesIncluded": false,
-    "monthKey": "2026-06",
-    "monthLabel": "June 2026",
-    "dealScore": 34,
-    "badges": [
-      "Short cruise",
-      "Price check required"
-    ]
-  },
-  {
     "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
     "cruiseLine": "Virgin Voyages",
     "cruiseLineId": "virgin-voyages",
