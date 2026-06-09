@@ -17,27 +17,24 @@ const MOBILE_FEATURES = [
 
 export default function MobileLaunchSection() {
   const iosLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
-  const androidInReview = PLAY_STORE_STATUS === "review";
+  const androidLive = isStoreLive(PLAY_STORE_STATUS, PLAY_STORE_URL);
 
   return (
-    <section className="border-y border-gray-200 bg-white">
+    <section id="download" className="scroll-mt-28 border-y border-gray-200 bg-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:px-8 lg:py-16">
         <div>
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-teal/20 bg-teal/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-dark">
             <Smartphone className="h-3.5 w-3.5" />
-            {iosLive ? "Available for iPhone" : "iPhone app submitted"}
+            {iosLive && androidLive ? "Available for iPhone and Android" : "Mobile app launch"}
           </div>
 
           <h2 className="max-w-2xl text-3xl font-extrabold leading-tight text-navy sm:text-4xl">
-            CruiseKit is now available for iPhone.
+            CruiseKit is now available for iPhone and Android.
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
-            The website stays useful today, and the iPhone app gives cruisers
+            The website stays useful today, and the mobile app gives cruisers
             the onboard tools they need for planning, port days, MyDay, and
-            trip costs.{" "}
-            {androidInReview
-              ? "Android is in Google Play production review and will be linked here when the public listing is live."
-              : "Android can follow without holding back the launch."}
+            trip costs.
           </p>
 
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">

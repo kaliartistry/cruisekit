@@ -21,11 +21,11 @@ const HEADLINES: Record<NonNullable<AppHandoffProps["variant"]>, { title: string
   },
   "saved-trip": {
     title: "Your cruise, in your pocket.",
-    body: "Download CruiseKit for iPhone to keep trip planning, MyDay, and spend tracking closer than a browser tab.",
+    body: "Download CruiseKit to keep trip planning, MyDay, and spend tracking closer than a browser tab.",
   },
   footer: {
     title: "Your cruise, in your pocket.",
-    body: "CruiseKit is now available for iPhone, with Android in Google Play production review. Ship-time clocks, port-day planning, and spend tracking are built for cruise Wi-Fi conditions.",
+    body: "CruiseKit is now available for iPhone and Android. Ship-time clocks, port-day planning, and spend tracking are built for cruise Wi-Fi conditions.",
   },
 };
 
@@ -45,11 +45,16 @@ export default function AppHandoff({
   className = "",
 }: AppHandoffProps) {
   const { title, body } = HEADLINES[variant];
-  const mobileStatusLabel = isStoreLive(APP_STORE_STATUS, APP_STORE_URL)
-    ? "Available for iPhone"
-    : APP_STORE_STATUS === "review"
-      ? "iPhone app submitted"
-      : "Coming soon to mobile";
+  const iosLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
+  const androidLive = isStoreLive(PLAY_STORE_STATUS, PLAY_STORE_URL);
+  const mobileStatusLabel =
+    iosLive && androidLive
+      ? "Available on iPhone and Android"
+      : iosLive
+        ? "Available for iPhone"
+        : APP_STORE_STATUS === "review"
+          ? "iPhone app submitted"
+          : "Coming soon to mobile";
 
   return (
     <div

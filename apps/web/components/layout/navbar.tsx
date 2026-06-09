@@ -17,8 +17,8 @@ import {
   Heart,
   LogOut,
   Scale,
-  Apple,
   ArrowRight,
+  Smartphone,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { useAuth } from "@/lib/firebase/auth";
@@ -26,6 +26,8 @@ import SignInModal from "@/components/shared/sign-in-modal";
 import {
   APP_STORE_STATUS,
   APP_STORE_URL,
+  PLAY_STORE_STATUS,
+  PLAY_STORE_URL,
   isStoreLive,
 } from "@/lib/config/app-store-urls";
 
@@ -46,7 +48,6 @@ export default function Navbar() {
   const [showSignIn, setShowSignIn] = useState(false);
   const { user, loading: authLoading, signOut } = useAuth();
   const userMenuRef = useRef<HTMLDivElement>(null);
-  const appStoreLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,6 +86,15 @@ export default function Navbar() {
     : user?.email
       ? user.email.charAt(0).toUpperCase()
       : "?";
+  const iosLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
+  const androidLive = isStoreLive(PLAY_STORE_STATUS, PLAY_STORE_URL);
+  const mobileAppLive = iosLive || androidLive;
+  const mobileLaunchText =
+    iosLive && androidLive
+      ? "CruiseKit is live on iPhone and Android."
+      : iosLive
+        ? "CruiseKit for iPhone is live."
+        : "CruiseKit for Android is live.";
 
   return (
     <header
@@ -96,22 +106,20 @@ export default function Navbar() {
           : "border-b border-transparent"
       )}
     >
-      {appStoreLive && (
+      {mobileAppLive && (
         <div className="border-b border-white/10 bg-navy text-white">
           <div className="mx-auto flex min-h-10 max-w-7xl items-center justify-between gap-3 px-4 py-2 text-xs sm:px-6 lg:px-8">
             <div className="flex min-w-0 items-center gap-2 font-semibold">
-              <Apple className="h-3.5 w-3.5 shrink-0 text-teal" strokeWidth={2.2} />
-              <span className="truncate">CruiseKit for iPhone is live.</span>
+              <Smartphone className="h-3.5 w-3.5 shrink-0 text-teal" strokeWidth={2.2} />
+              <span className="truncate">{mobileLaunchText}</span>
             </div>
-            <a
-              href={APP_STORE_URL ?? undefined}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/#download"
               className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-bold text-navy transition-colors hover:bg-teal hover:text-white"
             >
               Download free
               <ArrowRight className="h-3 w-3" strokeWidth={2.4} />
-            </a>
+            </Link>
           </div>
         </div>
       )}
@@ -228,11 +236,9 @@ export default function Navbar() {
             </>
           )}
 
-          {appStoreLive ? (
-            <a
-              href={APP_STORE_URL ?? undefined}
-              target="_blank"
-              rel="noopener noreferrer"
+          {mobileAppLive ? (
+            <Link
+              href="/#download"
               className={cn(
                 "hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold",
                 "bg-navy text-white shadow-sm",
@@ -240,9 +246,9 @@ export default function Navbar() {
                 "active:scale-[0.97]"
               )}
             >
-              <Apple className="h-4 w-4" strokeWidth={2.2} />
-              Get iPhone App
-            </a>
+              <Smartphone className="h-4 w-4" strokeWidth={2.2} />
+              Get the App
+            </Link>
           ) : (
             <Link
               href="/calculator"
@@ -292,29 +298,27 @@ export default function Navbar() {
             className="lg:hidden overflow-hidden border-t border-gray-100"
           >
             <div className="mx-auto max-w-7xl px-4 pb-4 pt-2 sm:px-6">
-              {appStoreLive && (
-                <a
-                  href={APP_STORE_URL ?? undefined}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              {mobileAppLive && (
+                <Link
+                  href="/#download"
                   onClick={() => setMobileOpen(false)}
                   className="mb-3 flex items-center justify-between gap-3 rounded-xl border border-teal/20 bg-teal/10 px-4 py-3 text-left"
                 >
                   <span className="flex items-center gap-3">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy text-white">
-                      <Apple className="h-4 w-4" strokeWidth={2.2} />
+                      <Smartphone className="h-4 w-4" strokeWidth={2.2} />
                     </span>
                     <span>
                       <span className="block text-sm font-bold text-navy">
-                        Download CruiseKit for iPhone
+                        Download CruiseKit
                       </span>
                       <span className="block text-xs text-gray-600">
-                        Free on the App Store
+                        Free on App Store and Google Play
                       </span>
                     </span>
                   </span>
                   <ArrowRight className="h-4 w-4 shrink-0 text-teal" strokeWidth={2.4} />
-                </a>
+                </Link>
               )}
 
               <ul className="flex flex-col gap-1">
@@ -391,12 +395,10 @@ export default function Navbar() {
               )}
 
               <div className="mt-3 pt-3 border-t border-gray-100">
-                {appStoreLive ? (
+                {mobileAppLive ? (
                   <div className="grid gap-2">
-                    <a
-                      href={APP_STORE_URL ?? undefined}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/#download"
                       onClick={() => setMobileOpen(false)}
                       className={cn(
                         "flex w-full items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold",
@@ -405,9 +407,9 @@ export default function Navbar() {
                         "active:scale-[0.97]"
                       )}
                     >
-                      <Apple className="h-4 w-4" strokeWidth={2.2} />
-                      Download iPhone App
-                    </a>
+                      <Smartphone className="h-4 w-4" strokeWidth={2.2} />
+                      Download the App
+                    </Link>
                     <Link
                       href="/calculator"
                       onClick={() => setMobileOpen(false)}

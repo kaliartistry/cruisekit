@@ -5,12 +5,14 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Ship, Check, Calculator, Map, Navigation, ArrowRight, Apple } from "lucide-react";
+import { Ship, Check, Calculator, Map, Navigation, ArrowRight, Smartphone } from "lucide-react";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import {
   APP_STORE_STATUS,
   APP_STORE_URL,
+  PLAY_STORE_STATUS,
+  PLAY_STORE_URL,
   isStoreLive,
 } from "@/lib/config/app-store-urls";
 
@@ -39,7 +41,9 @@ export default function HeroSection() {
   const router = useRouter();
   const [selectedLine, setSelectedLine] = useState("");
   const hasSelectedLine = selectedLine !== "";
-  const appStoreLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
+  const mobileAppLive =
+    isStoreLive(APP_STORE_STATUS, APP_STORE_URL) ||
+    isStoreLive(PLAY_STORE_STATUS, PLAY_STORE_URL);
 
   const handleSubmit = () => {
     const params = new URLSearchParams();
@@ -90,16 +94,14 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.18 }}
           className="mb-5 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
-          {appStoreLive && (
-            <a
-              href={APP_STORE_URL ?? undefined}
-              target="_blank"
-              rel="noopener noreferrer"
+          {mobileAppLive && (
+            <Link
+              href="#download"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-all hover:bg-teal hover:text-white sm:w-auto"
             >
-              <Apple className="h-4 w-4" strokeWidth={2.2} />
-              Download the free iPhone app
-            </a>
+              <Smartphone className="h-4 w-4" strokeWidth={2.2} />
+              Download the free app
+            </Link>
           )}
           <Link
             href="/calculator"

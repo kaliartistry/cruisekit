@@ -12,7 +12,7 @@ export const APP_STORE_STATUS: StoreStatus = "live";
 
 export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.cruisekit.mobile";
-export const PLAY_STORE_STATUS: StoreStatus = "review";
+export const PLAY_STORE_STATUS: StoreStatus = "live";
 
 export function isStoreLive(status: StoreStatus, href: string | null) {
   return status === "live" && Boolean(href);

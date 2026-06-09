@@ -66,7 +66,7 @@ const FAQS = [
   {
     question: "Can I use CruiseKit on my phone?",
     answer:
-      "Yes. CruiseKit is available for iPhone on the App Store, and the website still works in mobile browsers. Android is being prepared for launch. For during-cruise tools like MyDay, ship-time context, and spend tracking, we recommend the iPhone app when available.",
+      "Yes. CruiseKit is available for iPhone on the App Store and Android on Google Play. The website still works in mobile browsers, but for during-cruise tools like MyDay, ship-time context, and spend tracking, we recommend the app.",
   },
   {
     question: "How do I contact you?",

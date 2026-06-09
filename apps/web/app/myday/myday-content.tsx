@@ -18,6 +18,8 @@ import {
 import {
   APP_STORE_STATUS,
   APP_STORE_URL,
+  PLAY_STORE_STATUS,
+  PLAY_STORE_URL,
   isStoreLive,
 } from "@/lib/config/app-store-urls";
 
@@ -146,6 +148,14 @@ const APP_SCREENSHOTS = [
 
 export default function MyDayContent() {
   const appStoreLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
+  const playStoreLive = isStoreLive(PLAY_STORE_STATUS, PLAY_STORE_URL);
+  const mobileAppLive = appStoreLive || playStoreLive;
+  const appAvailabilityLabel =
+    appStoreLive && playStoreLive
+      ? "Available on iPhone and Android"
+      : appStoreLive
+        ? "Available in the iPhone app"
+        : "Available in the Android app";
 
   return (
     <div className="min-h-screen">
@@ -163,8 +173,8 @@ export default function MyDayContent() {
               variants={fadeUp}
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-semibold text-teal backdrop-blur-sm"
             >
-              <Apple className="h-4 w-4" strokeWidth={2.2} />
-              Available in the iPhone app
+              <Smartphone className="h-4 w-4" strokeWidth={2.2} />
+              {appAvailabilityLabel}
             </motion.div>
 
             <motion.h1
@@ -193,16 +203,31 @@ export default function MyDayContent() {
               variants={fadeUp}
               className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start"
             >
-              {appStoreLive && (
-                <a
-                  href={APP_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-colors hover:bg-teal hover:text-white"
-                >
-                  <Apple className="h-4 w-4" strokeWidth={2.2} />
-                  Download the iPhone app
-                </a>
+              {mobileAppLive && (
+                <>
+                  {appStoreLive && (
+                    <a
+                      href={APP_STORE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-colors hover:bg-teal hover:text-white"
+                    >
+                      <Apple className="h-4 w-4" strokeWidth={2.2} />
+                      Download on App Store
+                    </a>
+                  )}
+                  {playStoreLive && (
+                    <a
+                      href={PLAY_STORE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-colors hover:bg-teal hover:text-white"
+                    >
+                      <Smartphone className="h-4 w-4" strokeWidth={2.2} />
+                      Get it on Google Play
+                    </a>
+                  )}
+                </>
               )}
               <Link
                 href="#app-screenshots"
@@ -295,14 +320,14 @@ export default function MyDayContent() {
               variants={fadeUp}
               className="mt-5 text-3xl font-black text-navy sm:text-4xl"
             >
-              See what you get after you tap App Store.
+              See what you get after you tap download.
             </motion.h2>
             <motion.p
               custom={2}
               variants={fadeUp}
               className="mt-3 text-base leading-relaxed text-muted"
             >
-              MyDay is not just a website promise. The iPhone app already
+              MyDay is not just a website promise. The mobile app already
               includes the cruise-day screens people need most: time context,
               itinerary context, and group coordination.
             </motion.p>
@@ -452,7 +477,7 @@ export default function MyDayContent() {
           >
             <Smartphone className="h-4 w-4 text-amber-500" />
             <span className="text-sm font-semibold text-amber-600">
-              Available in the CruiseKit iPhone app
+              Available in the CruiseKit mobile app
             </span>
           </motion.div>
           <motion.h2
@@ -471,18 +496,35 @@ export default function MyDayContent() {
             complete cruise planning toolkit before, during, and after your
             voyage.
           </motion.p>
-          {appStoreLive && (
-            <motion.a
+          {mobileAppLive && (
+            <motion.div
               custom={3}
               variants={fadeUp}
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-extrabold text-white shadow-lg transition-colors hover:bg-teal"
+              className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row"
             >
-              <Apple className="h-4 w-4" strokeWidth={2.2} />
-              Download CruiseKit for iPhone
-            </motion.a>
+              {appStoreLive && (
+                <a
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-extrabold text-white shadow-lg transition-colors hover:bg-teal"
+                >
+                  <Apple className="h-4 w-4" strokeWidth={2.2} />
+                  Download on App Store
+                </a>
+              )}
+              {playStoreLive && (
+                <a
+                  href={PLAY_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-extrabold text-white shadow-lg transition-colors hover:bg-teal"
+                >
+                  <Smartphone className="h-4 w-4" strokeWidth={2.2} />
+                  Get it on Google Play
+                </a>
+              )}
+            </motion.div>
           )}
         </motion.div>
       </section>
