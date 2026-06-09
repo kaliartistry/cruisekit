@@ -17,6 +17,7 @@ const MOBILE_FEATURES = [
 
 export default function MobileLaunchSection() {
   const iosLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
+  const androidInReview = PLAY_STORE_STATUS === "review";
 
   return (
     <section className="border-y border-gray-200 bg-white">
@@ -33,7 +34,10 @@ export default function MobileLaunchSection() {
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
             The website stays useful today, and the iPhone app gives cruisers
             the onboard tools they need for planning, port days, MyDay, and
-            trip costs. Android can follow without holding back the launch.
+            trip costs.{" "}
+            {androidInReview
+              ? "Android is in Google Play production review and will be linked here when the public listing is live."
+              : "Android can follow without holding back the launch."}
           </p>
 
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -85,7 +89,7 @@ function StorePanel({
     status === "live"
       ? `${platform} available now`
       : status === "review"
-        ? `${platform} in App Store review`
+        ? `${platform} in store review`
         : `${platform} coming soon`;
   const Icon = icon === "apple" ? Apple : Smartphone;
   const indicator = live ? CheckCircle2 : Clock3;

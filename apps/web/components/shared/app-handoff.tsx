@@ -25,7 +25,7 @@ const HEADLINES: Record<NonNullable<AppHandoffProps["variant"]>, { title: string
   },
   footer: {
     title: "Your cruise, in your pocket.",
-    body: "CruiseKit is now available for iPhone, with Android coming next. Ship-time clocks, port-day planning, and spend tracking are built for cruise Wi-Fi conditions.",
+    body: "CruiseKit is now available for iPhone, with Android in Google Play production review. Ship-time clocks, port-day planning, and spend tracking are built for cruise Wi-Fi conditions.",
   },
 };
 
@@ -121,7 +121,7 @@ function StoreBadge({
     status === "live"
       ? `${platform} - available now`
       : status === "review"
-        ? `${platform} - App Store review`
+        ? `${platform} - store review`
         : `${platform} - coming soon`;
 
   const content = (
