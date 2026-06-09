@@ -1,95 +1,95 @@
 {
-  "generatedAt": "2026-05-27T22:10:50.917Z",
-  "baseUrl": "http://localhost:3000",
+  "generatedAt": "2026-06-09T22:47:48.207Z",
+  "baseUrl": "https://cruisekit.app",
   "ok": true,
   "pages": [
     {
       "path": "/",
-      "url": "http://localhost:3000/",
+      "url": "https://cruisekit.app/",
       "status": 200,
       "ok": true,
-      "bytes": 139962
+      "bytes": 139227
     },
     {
       "path": "/cruises/",
-      "url": "http://localhost:3000/cruises/",
+      "url": "https://cruisekit.app/cruises/",
       "status": 200,
       "ok": true,
-      "bytes": 228666
+      "bytes": 215208
     },
     {
       "path": "/calculator/",
-      "url": "http://localhost:3000/calculator/",
+      "url": "https://cruisekit.app/calculator/",
       "status": 200,
       "ok": true,
-      "bytes": 86670
+      "bytes": 68450
     },
     {
       "path": "/ports/",
-      "url": "http://localhost:3000/ports/",
+      "url": "https://cruisekit.app/ports/",
       "status": 200,
       "ok": true,
-      "bytes": 262610
+      "bytes": 254210
     },
     {
       "path": "/guides/",
-      "url": "http://localhost:3000/guides/",
+      "url": "https://cruisekit.app/guides/",
       "status": 200,
       "ok": true,
-      "bytes": 50764
+      "bytes": 42122
     },
     {
       "path": "/blog/",
-      "url": "http://localhost:3000/blog/",
+      "url": "https://cruisekit.app/blog/",
       "status": 200,
       "ok": true,
-      "bytes": 87400
+      "bytes": 77480
     },
     {
       "path": "/privacy/",
-      "url": "http://localhost:3000/privacy/",
+      "url": "https://cruisekit.app/privacy/",
       "status": 200,
       "ok": true,
-      "bytes": 74978
+      "bytes": 60565
     },
     {
       "path": "/terms/",
-      "url": "http://localhost:3000/terms/",
+      "url": "https://cruisekit.app/terms/",
       "status": 200,
       "ok": true,
-      "bytes": 71448
+      "bytes": 57577
     },
     {
       "path": "/contact/",
-      "url": "http://localhost:3000/contact/",
+      "url": "https://cruisekit.app/contact/",
       "status": 200,
       "ok": true,
-      "bytes": 71034
+      "bytes": 57250
     },
     {
       "path": "/affiliate-disclosure/",
-      "url": "http://localhost:3000/affiliate-disclosure/",
+      "url": "https://cruisekit.app/affiliate-disclosure/",
       "status": 200,
       "ok": true,
-      "bytes": 70661
+      "bytes": 56636
     },
     {
       "path": "/sitemap.xml",
-      "url": "http://localhost:3000/sitemap.xml",
+      "url": "https://cruisekit.app/sitemap.xml",
       "status": 200,
       "ok": true,
-      "bytes": 20482
+      "bytes": 20453
     },
     {
       "path": "/robots.txt",
-      "url": "http://localhost:3000/robots.txt",
+      "url": "https://cruisekit.app/robots.txt",
       "status": 200,
       "ok": true,
       "bytes": 125
     },
     {
       "path": "/data/bundles/manifest.json",
-      "url": "http://localhost:3000/data/bundles/manifest.json",
+      "url": "https://cruisekit.app/data/bundles/manifest.json",
       "status": 200,
       "ok": true,
       "bytes": 1264
@@ -97,36 +97,36 @@
   ],
   "counts": {
     "checkedUrls": 13,
-    "liveMobileSailings": 145,
-    "liveMobileDeals": 145,
-    "livePublicSailings": 145
+    "liveMobileSailings": 143,
+    "liveMobileDeals": 143,
+    "livePublicSailings": 143
   },
-  "liveManifestGeneratedAt": "2026-05-27T22:08:27.598Z",
-  "localManifestGeneratedAt": "2026-05-27T22:08:27.598Z",
+  "liveManifestGeneratedAt": "2026-06-09T21:09:27.358Z",
+  "localManifestGeneratedAt": "2026-06-09T22:47:21.389Z",
   "liveManifestSignature": {
     "counts": {
-      "publicSailings": 145,
-      "mobileSailings": 145,
-      "mobileDeals": 145
+      "publicSailings": 143,
+      "mobileSailings": 143,
+      "mobileDeals": 143
     },
     "hashes": {
-      "canonicalSailings": "2957f28364be7bccf7d79ab38708fe02184efed74058f8346378d90d84a717b0",
+      "canonicalSailings": "b3d369fd2015198ec95675b35b273518491a6e2fdce58c3e153aefa7922642c5",
       "canonicalDeals": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-      "mobileSailings": "28c294194410cb4e5426cb982f503fee7a04411bf1f968cb34cc9af028937db3",
-      "mobileDeals": "4d766204788894d83db3e2a2813cab7d6c922d4267cf6cfa0dedd6eaa1df0a98"
+      "mobileSailings": "84cf5e6f4bf1a9ee8dce677da544f0b9090a51760c7c00fab7f18cd57b96543e",
+      "mobileDeals": "de36426b15052e3e6d5f48e045158219b3c1b5de2f5670df2f6ec3d367f98f5a"
     }
   },
   "localManifestSignature": {
     "counts": {
-      "publicSailings": 145,
-      "mobileSailings": 145,
-      "mobileDeals": 145
+      "publicSailings": 143,
+      "mobileSailings": 143,
+      "mobileDeals": 143
     },
     "hashes": {
-      "canonicalSailings": "2957f28364be7bccf7d79ab38708fe02184efed74058f8346378d90d84a717b0",
+      "canonicalSailings": "b3d369fd2015198ec95675b35b273518491a6e2fdce58c3e153aefa7922642c5",
       "canonicalDeals": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-      "mobileSailings": "28c294194410cb4e5426cb982f503fee7a04411bf1f968cb34cc9af028937db3",
-      "mobileDeals": "4d766204788894d83db3e2a2813cab7d6c922d4267cf6cfa0dedd6eaa1df0a98"
+      "mobileSailings": "84cf5e6f4bf1a9ee8dce677da544f0b9090a51760c7c00fab7f18cd57b96543e",
+      "mobileDeals": "de36426b15052e3e6d5f48e045158219b3c1b5de2f5670df2f6ec3d367f98f5a"
     }
   },
   "blockers": [],

@@ -1,17 +1,17 @@
 # CruiseKit Launch Readiness Report
 
-Generated: 2026-05-27T22:10:50.917Z
+Generated: 2026-06-09T22:47:48.207Z
 
-Base URL: http://localhost:3000
+Base URL: https://cruisekit.app
 
 ## Summary
 
 | Metric | Count |
 | --- | ---: |
 | Checked URLs | 13 |
-| Public sailings | 145 |
-| Mobile sailings | 145 |
-| Mobile deals | 145 |
+| Public sailings | 143 |
+| Mobile sailings | 143 |
+| Mobile deals | 143 |
 | Blockers | 0 |
 | Warnings | 0 |
 
@@ -19,17 +19,17 @@ Base URL: http://localhost:3000
 
 | Path | Status | Bytes |
 | --- | ---: | ---: |
-| / | 200 | 139962 |
-| /cruises/ | 200 | 228666 |
-| /calculator/ | 200 | 86670 |
-| /ports/ | 200 | 262610 |
-| /guides/ | 200 | 50764 |
-| /blog/ | 200 | 87400 |
-| /privacy/ | 200 | 74978 |
-| /terms/ | 200 | 71448 |
-| /contact/ | 200 | 71034 |
-| /affiliate-disclosure/ | 200 | 70661 |
-| /sitemap.xml | 200 | 20482 |
+| / | 200 | 139227 |
+| /cruises/ | 200 | 215208 |
+| /calculator/ | 200 | 68450 |
+| /ports/ | 200 | 254210 |
+| /guides/ | 200 | 42122 |
+| /blog/ | 200 | 77480 |
+| /privacy/ | 200 | 60565 |
+| /terms/ | 200 | 57577 |
+| /contact/ | 200 | 57250 |
+| /affiliate-disclosure/ | 200 | 56636 |
+| /sitemap.xml | 200 | 20453 |
 | /robots.txt | 200 | 125 |
 | /data/bundles/manifest.json | 200 | 1264 |
 
