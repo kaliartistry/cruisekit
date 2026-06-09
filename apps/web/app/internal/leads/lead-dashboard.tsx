@@ -23,6 +23,7 @@ import {
   ExternalLink,
   Inbox,
   Loader2,
+  LogOut,
   Mail,
   Phone,
   RefreshCw,
@@ -311,7 +312,7 @@ function statusCounts(leads: LeadRequest[]) {
 }
 
 export default function LeadDashboard() {
-  const { user, loading: authLoading } = useAuth();
+  const { user, loading: authLoading, signOut } = useAuth();
   const [showSignIn, setShowSignIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [adminChecked, setAdminChecked] = useState(false);
@@ -572,10 +573,16 @@ export default function LeadDashboard() {
           title="No lead dashboard access"
           body={`${user.email ?? "This account"} is signed in, but it is not in adminUsers.`}
           action={
-            <Button variant="outline" onClick={() => void loadLeads()}>
-              <RefreshCw className="h-4 w-4" />
-              Recheck
-            </Button>
+            <div className="flex flex-wrap justify-center gap-2">
+              <Button variant="outline" onClick={() => void loadLeads()}>
+                <RefreshCw className="h-4 w-4" />
+                Recheck
+              </Button>
+              <Button variant="outline" onClick={() => void signOut()}>
+                <LogOut className="h-4 w-4" />
+                Sign out
+              </Button>
+            </div>
           }
         />
       </main>
@@ -595,10 +602,16 @@ export default function LeadDashboard() {
               Deal requests from the app, backed by Firestore and Resend notifications. Times are shown in Eastern Time.
             </p>
           </div>
-          <Button variant="outline" onClick={() => void loadLeads()} disabled={loading}>
-            <RefreshCw className={cn("h-4 w-4", loading && "animate-spin")} />
-            Refresh
-          </Button>
+          <div className="flex flex-wrap gap-2">
+            <Button variant="outline" onClick={() => void loadLeads()} disabled={loading}>
+              <RefreshCw className={cn("h-4 w-4", loading && "animate-spin")} />
+              Refresh
+            </Button>
+            <Button variant="outline" onClick={() => void signOut()}>
+              <LogOut className="h-4 w-4" />
+              Sign out
+            </Button>
+          </div>
         </header>
 
         {error && (
