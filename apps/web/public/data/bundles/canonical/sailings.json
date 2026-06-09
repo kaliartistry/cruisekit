@@ -5142,47 +5142,6 @@
     "updatedAt": "2026-05-16T05:08:10.358Z"
   },
   {
-    "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
-    "cruiseLine": "virgin-voyages",
-    "shipName": "Resilient Lady",
-    "sailingName": "Grand Cayman & Bimini Beach Club",
-    "departureDate": "2026-06-08",
-    "returnDate": "2026-06-13",
-    "nights": 5,
-    "departurePort": "Miami, Florida",
-    "returnPort": "Miami, Florida",
-    "destinationRegion": "bahamas",
-    "itineraryPorts": [
-      "Miami, Florida",
-      "George Town, Grand Cayman",
-      "The Beach Club at Bimini, Bahamas",
-      "Miami, Florida"
-    ],
-    "portCoordinates": [],
-    "startingPrice": 1890,
-    "currency": "USD",
-    "priceBasis": "per-cabin",
-    "taxesAndFeesIncluded": false,
-    "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606085NGCB",
-    "affiliateLink": null,
-    "source": {
-      "provider": "virginvoyages.com",
-      "sourceType": "cruise-line-website",
-      "sourceUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606085NGCB",
-      "affiliateNetwork": null,
-      "advertiserName": null,
-      "lastImported": "2026-05-16T13:36:52.629Z",
-      "lastVerified": "2026-05-16",
-      "confidence": "itinerary_verified_price_check_required",
-      "termsNotes": "Promoted from Virgin Voyages public voyage planner staging. Price remains check-required; verify cabin category, promotional terms, taxes/fees, and availability near booking."
-    },
-    "sourceUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606085NGCB",
-    "lastVerified": "2026-05-16",
-    "confidence": "itinerary_verified_price_check_required",
-    "createdAt": "2026-05-16T13:36:52.629Z",
-    "updatedAt": "2026-05-16T13:36:55.212Z"
-  },
-  {
     "id": "virgin-voyages-resilient-lady-20260613-5ngcb",
     "cruiseLine": "virgin-voyages",
     "shipName": "Resilient Lady",

@@ -35,7 +35,10 @@ The command validates seed records against the canonical schemas and writes:
 | `data/bundles/mobile/deals.json` | Mobile-compatible deal shape. |
 
 Records with `confidence: "internal_do_not_publish"` are excluded from public
-bundles.
+bundles. Sailing records with a departure date before the current UTC date are
+also excluded from public bundles, while remaining in `data/seed/sailings.json`
+for history and provenance. Set `CRUISEKIT_TODAY=YYYY-MM-DD` when verifying this
+date filter deterministically.
 
 ## Report command
 
@@ -273,10 +276,15 @@ on the local Mac being awake:
 | Monday | `weekly-ingest` | `pnpm run data:ingest:weekly-report` | `cruisekit-weekly-ingest-reports` artifact |
 | Friday | `launch-readiness` | `pnpm run site:readiness` | `cruisekit-launch-readiness` artifact |
 | Monthly | `monthly-coverage` | `pnpm run data:automation:monthly` | `cruisekit-monthly-coverage-report` artifact |
+| Daily | `Deploy CruiseKit to GitHub Pages` | `pnpm --filter web build` | GitHub Pages deploy |
 
-These jobs are report-only. They do not commit, push, deploy, promote cruise
-records, or upload mobile builds. GitHub Pages deploys still happen from the
-separate deploy workflow when changes are pushed to `main`.
+The `CruiseKit Data Automation` jobs are report-only. They do not commit, push,
+deploy, promote cruise records, or upload mobile builds. GitHub Pages deploys
+happen from the separate deploy workflow when changes are pushed to `main`, when
+the workflow is run manually, and once per day on the schedule above. That daily
+deploy rebuilds the web app and data bundles from the current approved seed
+records without committing generated files, so expired sailings age out of the
+live `/data/bundles/` output automatically.
 
 Manual GitHub runs can target a single job by choosing the `job` workflow input
 instead of running every automation job at once.
@@ -361,7 +369,7 @@ The pipeline should block or quarantine records when:
 - The record fails JSON Schema validation.
 - A public record has no source URL.
 - A public record has no valid direct or affiliate link.
-- A published sailing has a departure date in the past.
+- A generated public bundle contains a sailing with a departure date in the past.
 - A price changes beyond the configured threshold.
 - A cruise-line page redirects to a generic landing page.
 - A provider returns materially fewer records than the previous successful run.
@@ -371,8 +379,8 @@ The pipeline should block or quarantine records when:
 1. Deploy the website so `/data/bundles/manifest.json` is live.
 2. Add `scripts/ingest/` with provider-specific importers that output canonical
    staging records.
-3. Extend the scheduled Codex automation from report-only to report + publish +
-   deployment once the deployment command is confirmed.
+3. Done: the deploy workflow now runs daily, rebuilding and publishing public
+   bundles without committing generated files.
 4. Add a guarded auto-merge/publish path only after report-only runs are stable.
 5. Done: `scripts/audit-bundle-images.mjs` now includes a deal image trust
    pass. It maps each voyage to port/region image expectations, blocks obvious

@@ -1,6 +1,6 @@
 # CruiseKit Manual Review Queue
 
-Generated: 2026-06-08T14:50:18.614Z
+Generated: 2026-06-09T14:12:19.512Z
 
 This is the temporary no-API workflow. Use browser/manual verification against
 official cruise-line sources, then update canonical seed records only when the

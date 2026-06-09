@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-06-08T14:50:17.986Z",
-  "manifestGeneratedAt": "2026-06-08T14:50:17.931Z",
+  "generatedAt": "2026-06-09T14:12:18.899Z",
+  "manifestGeneratedAt": "2026-06-09T14:12:18.847Z",
   "counts": {
     "seedSailings": 159,
-    "publicSailings": 144,
+    "publicSailings": 143,
     "seedDeals": 0,
     "publicDeals": 0,
-    "mobileSailings": 144,
-    "mobileDeals": 144
+    "mobileSailings": 143,
+    "mobileDeals": 143,
+    "filteredExpiredSeedSailings": 1
   },
   "byCruiseLine": {
     "azamara": 8,
@@ -21,6 +22,14 @@
     "internal_do_not_publish": 15,
     "itinerary_verified_price_check_required": 144
   },
+  "currentDate": "2026-06-09",
   "blockers": [],
-  "warnings": []
+  "warnings": [],
+  "info": [
+    {
+      "severity": "info",
+      "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
+      "message": "Expired seed sailing filtered from public bundles for 2026-06-09."
+    }
+  ]
 }

@@ -11,6 +11,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
+import { currentUtcDateOnly, dateOnly } from "./lib/date.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outRoot = resolve(repoRoot, "data/bundles");
@@ -189,7 +190,13 @@ function sha256(content) {
   return createHash("sha256").update(content).digest("hex");
 }
 
-function isPublic(record) {
+function isPublicSailing(record, today) {
+  if (record.confidence === "internal_do_not_publish") return false;
+  const departureDate = dateOnly(record.departureDate);
+  return departureDate !== null && departureDate >= today;
+}
+
+function isPublicDeal(record) {
   return record.confidence !== "internal_do_not_publish";
 }
 
@@ -444,8 +451,9 @@ async function main() {
     process.exit(1);
   }
 
-  const publicSailings = seedSailings.filter(isPublic);
-  const publicDeals = seedDeals.filter(isPublic);
+  const today = currentUtcDateOnly();
+  const publicSailings = seedSailings.filter((sailing) => isPublicSailing(sailing, today));
+  const publicDeals = seedDeals.filter(isPublicDeal);
   const mobileSailings = publicSailings.map(toMobileSailing);
   const mobileDeals = publicSailings.map(toMobileDeal);
   const generatedAt = new Date().toISOString();

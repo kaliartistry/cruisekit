@@ -8,23 +8,14 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { currentUtcDateOnly, dateOnly, daysBetween, formatDateOnly } from "./lib/date.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const reportDir = resolve(repoRoot, "data/reports");
-const today = new Date();
-today.setUTCHours(0, 0, 0, 0);
+const today = currentUtcDateOnly();
 
 async function loadJson(relPath) {
   return JSON.parse(await readFile(resolve(repoRoot, relPath), "utf8"));
-}
-
-function dateOnly(value) {
-  const date = new Date(`${value}T00:00:00.000Z`);
-  return Number.isNaN(date.getTime()) ? null : date;
-}
-
-function daysBetween(start, end) {
-  return Math.round((end.getTime() - start.getTime()) / 86_400_000);
 }
 
 function countBy(records, keyFn) {
@@ -61,7 +52,8 @@ async function main() {
 
   const blockers = [];
   const warnings = [];
-  const publicIds = new Set();
+  const info = [];
+  const publicIds = new Set(publicSailings.map((s) => s.id));
   const mobileIds = new Set(mobileSailings.map((s) => s.id));
   const seedIds = new Set();
 
@@ -70,10 +62,19 @@ async function main() {
       addFinding(blockers, "blocker", sailing.id, "Duplicate sailing id in seed data.");
     }
     seedIds.add(sailing.id);
+
+    const departureDate = dateOnly(sailing.departureDate);
+    if (
+      sailing.confidence !== "internal_do_not_publish" &&
+      departureDate &&
+      departureDate < today &&
+      !publicIds.has(sailing.id)
+    ) {
+      addFinding(info, "info", sailing.id, `Expired seed sailing filtered from public bundles for ${formatDateOnly(today)}.`);
+    }
   }
 
   for (const sailing of publicSailings) {
-    publicIds.add(sailing.id);
     const departureDate = dateOnly(sailing.departureDate);
     const returnDate = dateOnly(sailing.returnDate);
     const verifiedDate = dateOnly(sailing.lastVerified);
@@ -137,11 +138,14 @@ async function main() {
       publicDeals: canonicalDeals.length,
       mobileSailings: mobileSailings.length,
       mobileDeals: mobileDeals.length,
+      filteredExpiredSeedSailings: info.length,
     },
     byCruiseLine: countBy(seedSailings, (s) => s.cruiseLine),
     byConfidence: countBy(seedSailings, (s) => s.confidence),
+    currentDate: formatDateOnly(today),
     blockers,
     warnings,
+    info,
   };
 
   const markdown = `# CruiseKit Data Health Report
@@ -158,6 +162,7 @@ Generated: ${summary.generatedAt}
 | Public deals | ${summary.counts.publicDeals} |
 | Mobile sailings | ${summary.counts.mobileSailings} |
 | Mobile deals | ${summary.counts.mobileDeals} |
+| Filtered expired seed sailings | ${summary.counts.filteredExpiredSeedSailings} |
 
 ## Seed Sailings By Cruise Line
 
@@ -177,6 +182,9 @@ ${formatFindings(blockers)}
 ## Warnings
 
 ${formatFindings(warnings)}
+## Info
+
+${formatFindings(info)}
 `;
 
   await mkdir(reportDir, { recursive: true });

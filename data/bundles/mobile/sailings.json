@@ -6274,57 +6274,6 @@
     ]
   },
   {
-    "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
-    "cruiseLineId": "virgin-voyages",
-    "shipName": "Resilient Lady",
-    "shipId": "resilient-lady",
-    "departureDate": "2026-06-08",
-    "returnDate": "2026-06-13",
-    "duration": 5,
-    "departurePort": "Miami, Florida",
-    "region": "bahamas",
-    "itinerary": [
-      {
-        "day": 1,
-        "type": "departure",
-        "portName": "Miami, Florida"
-      },
-      {
-        "day": 2,
-        "type": "port",
-        "portName": "Miami, Florida",
-        "portSlug": "miami-florida",
-        "isTender": false
-      },
-      {
-        "day": 3,
-        "type": "port",
-        "portName": "George Town, Grand Cayman",
-        "portSlug": "george-town-grand-cayman",
-        "isTender": false
-      },
-      {
-        "day": 4,
-        "type": "port",
-        "portName": "The Beach Club at Bimini, Bahamas",
-        "portSlug": "the-beach-club-at-bimini-bahamas",
-        "isTender": false
-      },
-      {
-        "day": 5,
-        "type": "port",
-        "portName": "Miami, Florida",
-        "portSlug": "miami-florida",
-        "isTender": false
-      },
-      {
-        "day": 6,
-        "type": "arrival",
-        "portName": "Miami, Florida"
-      }
-    ]
-  },
-  {
     "id": "virgin-voyages-resilient-lady-20260613-5ngcb",
     "cruiseLineId": "virgin-voyages",
     "shipName": "Resilient Lady",

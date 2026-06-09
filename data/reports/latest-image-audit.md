@@ -1,14 +1,14 @@
 # CruiseKit Bundle Image Audit
 
-Generated: 2026-06-08T14:50:18.408Z
+Generated: 2026-06-09T14:12:19.305Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
 | Canonical deals | 0 |
-| Mobile deals | 144 |
-| Checked image references | 144 |
+| Mobile deals | 143 |
+| Checked image references | 143 |
 
 ## Blockers
 
@@ -23,7 +23,7 @@ Generated: 2026-06-08T14:50:18.408Z
 
 - cozumel: 68
 - puerto-plata: 23
-- miami: 11
+- miami: 10
 - celebration-key: 8
 - great-stirrup-cay: 8
 - barcelona: 4

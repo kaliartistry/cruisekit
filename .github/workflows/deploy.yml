@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Daily commitless rebuild/deploy after the data automation check window.
+    - cron: "16 12 * * *"
 
 permissions:
   contents: read
