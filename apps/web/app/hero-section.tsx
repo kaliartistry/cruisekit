@@ -15,6 +15,10 @@ import {
   PLAY_STORE_URL,
   isStoreLive,
 } from "@/lib/config/app-store-urls";
+import {
+  trackCalculatorCtaClicked,
+  trackDownloadCtaClicked,
+} from "@/lib/analytics";
 
 const HERO_PROOF = [
   {
@@ -46,6 +50,7 @@ export default function HeroSection() {
     isStoreLive(PLAY_STORE_STATUS, PLAY_STORE_URL);
 
   const handleSubmit = () => {
+    trackCalculatorCtaClicked("homepage_hero");
     const params = new URLSearchParams();
     if (selectedLine) params.set("line", selectedLine);
     router.push(`/calculator?${params.toString()}`);
@@ -96,7 +101,8 @@ export default function HeroSection() {
         >
           {mobileAppLive && (
             <Link
-              href="#download"
+              href="/app"
+              onClick={() => trackDownloadCtaClicked("unknown", "homepage_hero")}
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-all hover:bg-teal hover:text-white sm:w-auto"
             >
               <Smartphone className="h-4 w-4" strokeWidth={2.2} />
@@ -105,6 +111,7 @@ export default function HeroSection() {
           )}
           <Link
             href="/calculator"
+            onClick={() => trackCalculatorCtaClicked("homepage_hero")}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20 sm:w-auto"
           >
             Use the web calculator

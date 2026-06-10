@@ -6,6 +6,7 @@ import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { db } from "@/lib/firebase/config";
 import { useAuth } from "@/lib/firebase/auth";
 import SignInModal from "@/components/shared/sign-in-modal";
+import AppHandoff from "@/components/shared/app-handoff";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
@@ -326,15 +327,18 @@ export default function MyTripsPage() {
           ) : deals.length === 0 ? (
             <EmptyState />
           ) : (
-            <div className="space-y-4">
-              {deals.map((deal) => (
-                <SavedDealCard
-                  key={deal.id}
-                  deal={deal}
-                  onRemove={handleRemove}
-                />
-              ))}
-            </div>
+            <>
+              <div className="space-y-4">
+                {deals.map((deal) => (
+                  <SavedDealCard
+                    key={deal.id}
+                    deal={deal}
+                    onRemove={handleRemove}
+                  />
+                ))}
+              </div>
+              <AppHandoff variant="saved-trip" className="mt-8" />
+            </>
           )}
         </div>
       </main>

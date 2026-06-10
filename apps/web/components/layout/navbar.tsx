@@ -30,6 +30,7 @@ import {
   PLAY_STORE_URL,
   isStoreLive,
 } from "@/lib/config/app-store-urls";
+import { trackDownloadCtaClicked } from "@/lib/analytics";
 
 const NAV_LINKS = [
   { label: "Compare", href: "/compare", icon: Scale },
@@ -95,6 +96,7 @@ export default function Navbar() {
       : iosLive
         ? "CruiseKit for iPhone is live."
         : "CruiseKit for Android is live.";
+  const trackAppDownload = () => trackDownloadCtaClicked("unknown", "other");
 
   return (
     <header
@@ -114,7 +116,8 @@ export default function Navbar() {
               <span className="truncate">{mobileLaunchText}</span>
             </div>
             <Link
-              href="/#download"
+              href="/app"
+              onClick={trackAppDownload}
               className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-bold text-navy transition-colors hover:bg-teal hover:text-white"
             >
               Download free
@@ -238,7 +241,8 @@ export default function Navbar() {
 
           {mobileAppLive ? (
             <Link
-              href="/#download"
+              href="/app"
+              onClick={trackAppDownload}
               className={cn(
                 "hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold",
                 "bg-navy text-white shadow-sm",
@@ -300,8 +304,11 @@ export default function Navbar() {
             <div className="mx-auto max-w-7xl px-4 pb-4 pt-2 sm:px-6">
               {mobileAppLive && (
                 <Link
-                  href="/#download"
-                  onClick={() => setMobileOpen(false)}
+                  href="/app"
+                  onClick={() => {
+                    setMobileOpen(false);
+                    trackAppDownload();
+                  }}
                   className="mb-3 flex items-center justify-between gap-3 rounded-xl border border-teal/20 bg-teal/10 px-4 py-3 text-left"
                 >
                   <span className="flex items-center gap-3">
@@ -398,8 +405,11 @@ export default function Navbar() {
                 {mobileAppLive ? (
                   <div className="grid gap-2">
                     <Link
-                      href="/#download"
-                      onClick={() => setMobileOpen(false)}
+                      href="/app"
+                      onClick={() => {
+                        setMobileOpen(false);
+                        trackAppDownload();
+                      }}
                       className={cn(
                         "flex w-full items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold",
                         "bg-navy text-white",

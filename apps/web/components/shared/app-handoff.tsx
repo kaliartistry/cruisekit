@@ -1,12 +1,12 @@
+"use client";
+
+import { useEffect } from "react";
 import { Smartphone, Calendar, DollarSign, Users } from "lucide-react";
+import { StoreButtonRow } from "@/components/shared/store-buttons";
 import {
-  APP_STORE_STATUS,
-  APP_STORE_URL,
-  PLAY_STORE_STATUS,
-  PLAY_STORE_URL,
-  type StoreStatus,
-  isStoreLive,
-} from "@/lib/config/app-store-urls";
+  trackAppHandoffViewed,
+  type SourceSurface,
+} from "@/lib/analytics";
 
 interface AppHandoffProps {
   /** The tone of the headline — tailored to where it appears. */
@@ -45,16 +45,11 @@ export default function AppHandoff({
   className = "",
 }: AppHandoffProps) {
   const { title, body } = HEADLINES[variant];
-  const iosLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
-  const androidLive = isStoreLive(PLAY_STORE_STATUS, PLAY_STORE_URL);
-  const mobileStatusLabel =
-    iosLive && androidLive
-      ? "Available on iPhone and Android"
-      : iosLive
-        ? "Available for iPhone"
-        : APP_STORE_STATUS === "review"
-          ? "iPhone app submitted"
-          : "Coming soon to mobile";
+  const sourceSurface = sourceSurfaceForVariant(variant);
+
+  useEffect(() => {
+    trackAppHandoffViewed(sourceSurface);
+  }, [sourceSurface]);
 
   return (
     <div
@@ -64,7 +59,7 @@ export default function AppHandoff({
         <div>
           <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-teal border border-white/10">
             <Smartphone className="h-3 w-3" />
-            {mobileStatusLabel}
+            Free on iPhone and Android
           </div>
           <h3 className="mb-2 text-xl sm:text-2xl font-extrabold leading-tight tracking-tight">
             {title}
@@ -85,20 +80,11 @@ export default function AppHandoff({
             ))}
           </ul>
 
-          <div className="flex flex-wrap gap-3">
-            <StoreBadge
-              label="App Store"
-              platform="iPhone"
-              href={APP_STORE_URL}
-              status={APP_STORE_STATUS}
-            />
-            <StoreBadge
-              label="Google Play"
-              platform="Android"
-              href={PLAY_STORE_URL}
-              status={PLAY_STORE_STATUS}
-            />
-          </div>
+          <StoreButtonRow
+            sourceSurface={sourceSurface}
+            variant="dark"
+            className="sm:grid-cols-2"
+          />
         </div>
 
         {/* Phone mock — pure CSS, no asset required */}
@@ -110,56 +96,12 @@ export default function AppHandoff({
   );
 }
 
-function StoreBadge({
-  label,
-  platform,
-  href,
-  status,
-}: {
-  label: string;
-  platform: string;
-  href: string | null;
-  status: StoreStatus;
-}) {
-  const live = isStoreLive(status, href);
-  const sub =
-    status === "live"
-      ? `${platform} - available now`
-      : status === "review"
-        ? `${platform} - store review`
-        : `${platform} - coming soon`;
-
-  const content = (
-    <div>
-      <div className="text-[10px] uppercase tracking-wider text-white/60">
-        {live ? "Get on" : "Status"}
-      </div>
-      <div className="text-sm font-semibold text-white">{label}</div>
-      <div className="text-[10px] text-white/50 mt-0.5">{sub}</div>
-    </div>
-  );
-
-  if (live) {
-    return (
-      <a
-        href={href ?? undefined}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-left"
-      >
-        {content}
-      </a>
-    );
-  }
-
-  return (
-    <button
-      disabled
-      className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-left cursor-not-allowed opacity-80"
-    >
-      {content}
-    </button>
-  );
+function sourceSurfaceForVariant(
+  variant: NonNullable<AppHandoffProps["variant"]>,
+): SourceSurface {
+  if (variant === "calculator-result") return "calculator_result";
+  if (variant === "saved-trip") return "saved_trip";
+  return "footer";
 }
 
 function PhoneMock() {

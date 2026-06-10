@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/firebase/auth";
+import AnalyticsLoader from "@/components/shared/analytics-loader";
+import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/config/app-store-urls";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -26,7 +28,7 @@ const jetbrains = JetBrains_Mono({
 
 const SITE_TITLE = "CruiseKit — Everything You Need for Your Cruise";
 const SITE_DESCRIPTION =
-  "The all-in-one cruise planning toolkit. Calculate true costs, plan port days, coordinate your group, manage your cruise day, and optimize your loyalty rewards.";
+  "Free cruise planner app and true cruise cost calculator for hidden costs, ship time, port time, MyDay planning, and port days on iPhone and Android.";
 const OG_IMAGE = {
   url: "/cruisekit_square.png",
   width: 512,
@@ -84,6 +86,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <AuthProvider>{children}</AuthProvider>
+        <AnalyticsLoader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -95,12 +98,25 @@ export default function RootLayout({
                   name: "CruiseKit",
                   url: "https://cruisekit.app",
                   description:
-                    "The all-in-one cruise planning toolkit. Calculate true costs, plan port days, coordinate your group, and optimize your loyalty rewards.",
+                    "Free cruise planning toolkit for true cruise costs, ship time, port time, MyDay planning, and port days.",
                 },
                 {
                   "@type": "WebSite",
                   name: "CruiseKit",
                   url: "https://cruisekit.app",
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  name: "CruiseKit",
+                  applicationCategory: "TravelApplication",
+                  operatingSystem: "iOS, Android",
+                  url: "https://cruisekit.app",
+                  downloadUrl: [APP_STORE_URL, PLAY_STORE_URL],
+                  offers: {
+                    "@type": "Offer",
+                    price: "0",
+                    priceCurrency: "USD",
+                  },
                 },
               ],
             }),

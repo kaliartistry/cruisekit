@@ -36,6 +36,10 @@ import AnimatedCounter from "@/components/shared/animated-counter";
 import CruiseLineSelector from "./cruise-line-selector";
 import CostBreakdown from "./cost-breakdown";
 import { cn } from "@/lib/utils/cn";
+import {
+  trackCalculatorCompleted,
+  trackCalculatorStarted,
+} from "@/lib/analytics";
 
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
@@ -469,6 +473,8 @@ export default function CalculatorForm({
     selectedLines.length >= 1 && (parseFloat(baseFare) > 0 || fareEstimate !== null);
 
   const goNext = () => {
+    if (step === 1) trackCalculatorStarted();
+    if (step === 2) trackCalculatorCompleted();
     setDirection(1);
     setStep((s) => Math.min(3, s + 1));
     window.scrollTo({ top: 0, behavior: "smooth" });

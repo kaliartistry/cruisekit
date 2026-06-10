@@ -1,11 +1,9 @@
 export type StoreStatus = "live" | "review" | "coming-soon";
 
 /**
- * Launch-day toggle.
- *
- * Store URLs are stable before each public listing is visible. Keep each
- * status at "review" until the store listing resolves publicly, then switch it
- * to "live".
+ * App store links used by every public download surface.
+ * Both public listings are live; keep status values only as a guarded config
+ * escape hatch for future store incidents.
  */
 export const APP_STORE_URL = "https://apps.apple.com/us/app/cruisekit/id6770305548";
 export const APP_STORE_STATUS: StoreStatus = "live";

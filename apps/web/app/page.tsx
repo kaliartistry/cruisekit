@@ -7,9 +7,9 @@ import ContentSections from "./pillar-cards";
 import MobileLaunchSection from "./mobile-launch-section";
 
 export const metadata: Metadata = {
-  title: "True Cruise Cost Calculator — See What Your Cruise Really Costs",
+  title: "Free Cruise Planner App + True Cruise Cost Calculator",
   description:
-    "Calculate the estimated total cost of your cruise including drinks, WiFi, gratuities, and common add-ons. Compare major cruise lines side by side. 100% free.",
+    "Download CruiseKit for iPhone and Android or use the free web calculator to plan hidden cruise costs, ship time, port time, MyDay, and port days.",
 };
 
 export default function HomePage() {

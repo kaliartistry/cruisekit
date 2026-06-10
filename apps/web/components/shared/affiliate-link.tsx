@@ -1,5 +1,7 @@
 "use client";
 
+import { trackEvent } from "@/lib/analytics";
+
 /**
  * Client-side affiliate link component.
  * Opens affiliate URLs in a new tab with tracking via analytics events.
@@ -65,23 +67,7 @@ export default function AffiliateLink({
   className,
 }: AffiliateLinkProps) {
   const handleClick = () => {
-    // Log to console (replace with analytics in production)
-    console.log("[CruiseKit Affiliate Click]", {
-      partner,
-      source,
-      destination: href,
-      timestamp: new Date().toISOString(),
-    });
-
-    // Fire Google Analytics event if available
-    if (typeof window !== "undefined" && "gtag" in window) {
-      const gtag = (window as unknown as { gtag: (...args: unknown[]) => void }).gtag;
-      gtag("event", "affiliate_click", {
-        partner,
-        source,
-        destination: href,
-      });
-    }
+    trackEvent("affiliate_click", { partner, source });
   };
 
   if (!isAllowedDomain(href)) {

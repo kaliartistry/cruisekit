@@ -13,15 +13,8 @@ import {
   TrendingUp,
   Smartphone,
   AlertTriangle,
-  Apple,
 } from "lucide-react";
-import {
-  APP_STORE_STATUS,
-  APP_STORE_URL,
-  PLAY_STORE_STATUS,
-  PLAY_STORE_URL,
-  isStoreLive,
-} from "@/lib/config/app-store-urls";
+import { StoreButtonRow } from "@/components/shared/store-buttons";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -147,16 +140,6 @@ const APP_SCREENSHOTS = [
 ] as const;
 
 export default function MyDayContent() {
-  const appStoreLive = isStoreLive(APP_STORE_STATUS, APP_STORE_URL);
-  const playStoreLive = isStoreLive(PLAY_STORE_STATUS, PLAY_STORE_URL);
-  const mobileAppLive = appStoreLive || playStoreLive;
-  const appAvailabilityLabel =
-    appStoreLive && playStoreLive
-      ? "Available on iPhone and Android"
-      : appStoreLive
-        ? "Available in the iPhone app"
-        : "Available in the Android app";
-
   return (
     <div className="min-h-screen">
       {/* ── Hero ── */}
@@ -174,7 +157,7 @@ export default function MyDayContent() {
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-semibold text-teal backdrop-blur-sm"
             >
               <Smartphone className="h-4 w-4" strokeWidth={2.2} />
-              {appAvailabilityLabel}
+              Available on iPhone and Android
             </motion.div>
 
             <motion.h1
@@ -203,32 +186,11 @@ export default function MyDayContent() {
               variants={fadeUp}
               className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start"
             >
-              {mobileAppLive && (
-                <>
-                  {appStoreLive && (
-                    <a
-                      href={APP_STORE_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-colors hover:bg-teal hover:text-white"
-                    >
-                      <Apple className="h-4 w-4" strokeWidth={2.2} />
-                      Download on App Store
-                    </a>
-                  )}
-                  {playStoreLive && (
-                    <a
-                      href={PLAY_STORE_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-colors hover:bg-teal hover:text-white"
-                    >
-                      <Smartphone className="h-4 w-4" strokeWidth={2.2} />
-                      Get it on Google Play
-                    </a>
-                  )}
-                </>
-              )}
+              <StoreButtonRow
+                sourceSurface="other"
+                variant="dark"
+                className="w-full max-w-xl sm:grid-cols-2"
+              />
               <Link
                 href="#app-screenshots"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
@@ -496,36 +458,9 @@ export default function MyDayContent() {
             complete cruise planning toolkit before, during, and after your
             voyage.
           </motion.p>
-          {mobileAppLive && (
-            <motion.div
-              custom={3}
-              variants={fadeUp}
-              className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row"
-            >
-              {appStoreLive && (
-                <a
-                  href={APP_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-extrabold text-white shadow-lg transition-colors hover:bg-teal"
-                >
-                  <Apple className="h-4 w-4" strokeWidth={2.2} />
-                  Download on App Store
-                </a>
-              )}
-              {playStoreLive && (
-                <a
-                  href={PLAY_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-extrabold text-white shadow-lg transition-colors hover:bg-teal"
-                >
-                  <Smartphone className="h-4 w-4" strokeWidth={2.2} />
-                  Get it on Google Play
-                </a>
-              )}
-            </motion.div>
-          )}
+          <motion.div custom={3} variants={fadeUp} className="mx-auto mt-7 max-w-xl">
+            <StoreButtonRow sourceSurface="other" variant="light" />
+          </motion.div>
         </motion.div>
       </section>
     </div>

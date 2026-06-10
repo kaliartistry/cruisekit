@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   /* ---- Static pages ------------------------------------------------ */
   const staticPages = [
     '',
+    '/app',
     '/calculator',
     '/cruise-costs',
     '/cruises',
