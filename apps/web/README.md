@@ -10,6 +10,12 @@ pnpm --filter web lint
 pnpm --filter web build
 ```
 
+## Analytics
+
+Web conversion events load only when `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set.
+Without that environment variable, the shared analytics wrapper no-ops and
+click/navigation behavior is unchanged.
+
 The web build runs the data bundle pipeline first:
 
 ```text
