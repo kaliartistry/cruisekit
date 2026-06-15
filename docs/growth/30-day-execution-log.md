@@ -128,3 +128,12 @@ Facebook Page cover:
 - Uploaded the cover image to the CruiseKit Facebook Page.
 - Verified the Page header no longer appears blank and shows the CruiseKit cover image.
 - Switched Facebook back to the user's Kali McCarthy identity after the upload.
+
+LinkedIn Page setup:
+
+- Created the CruiseKit LinkedIn Page at `https://www.linkedin.com/company/cruisekit/`.
+- Configured public URL slug, website, industry, organization size, organization type, tagline, logo, overview, and cover image.
+- Created `docs/growth/assets/cruisekit-linkedin-cover-2026-06-15.png`.
+- Created `docs/growth/linkedin-page-setup-log-2026-06-15.md`.
+- Verified the member-facing Page shows the CruiseKit cover image, logo, tagline, overview, website, industry, and company size.
+- Did not create posts, invite connections, send DMs, create jobs, start ads, upgrade Premium, or touch billing.
