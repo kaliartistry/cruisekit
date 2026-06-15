@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const reportDir = resolve(repoRoot, "data/reports");
+const reportOnly = process.env.CRUISEKIT_REPORT_ONLY === "1";
 
 const gateReports = [
   { key: "dataHealth", label: "Data health", path: "data/reports/latest-data-health.json" },
@@ -21,9 +22,21 @@ const gateReports = [
   { key: "imageAudit", label: "Image audit", path: "data/reports/latest-image-audit.json" },
 ];
 
-function runCommand(name, command, args, extraEnv = {}) {
+async function hasFreshReport(relPath, startedAt) {
+  if (!relPath) return false;
+  try {
+    const report = JSON.parse(await readFile(resolve(repoRoot, relPath), "utf8"));
+    const generatedAt = Date.parse(report.generatedAt);
+    return Number.isFinite(generatedAt) && generatedAt >= startedAt - 5000;
+  } catch {
+    return false;
+  }
+}
+
+function runCommand(name, command, args, extraEnv = {}, options = {}) {
   return new Promise((resolveRun) => {
     console.log(`\n=== Publish candidate: ${name} ===`);
+    const startedAt = Date.now();
     const child = spawn(command, args, {
       cwd: repoRoot,
       stdio: ["ignore", "pipe", "pipe"],
@@ -42,12 +55,16 @@ function runCommand(name, command, args, extraEnv = {}) {
       stderr += text;
       process.stderr.write(text);
     });
-    child.on("close", (code) => {
+    child.on("close", async (code) => {
+      const reportBlocked =
+        code !== 0 && options.softFailure && (await hasFreshReport(options.reportPath, startedAt));
+      const status = code === 0 ? "ok" : reportBlocked ? "blocked" : "failed";
       resolveRun({
         name,
         command: [command, ...args].join(" "),
         exitCode: code,
         ok: code === 0,
+        status,
         stdoutTail: stdout.split("\n").slice(-30).join("\n"),
         stderrTail: stderr.split("\n").slice(-30).join("\n"),
       });
@@ -91,9 +108,24 @@ async function gitStatus() {
 async function main() {
   const steps = [];
   steps.push(await runCommand("build data bundles", "pnpm", ["run", "data:build"]));
-  steps.push(await runCommand("data health", "node", ["scripts/data-quality-report.mjs"]));
-  steps.push(await runCommand("link audit", "pnpm", ["run", "data:audit:links"]));
-  steps.push(await runCommand("image audit", "pnpm", ["run", "data:audit:images"]));
+  steps.push(
+    await runCommand("data health", "node", ["scripts/data-quality-report.mjs"], {}, {
+      softFailure: true,
+      reportPath: "data/reports/latest-data-health.json",
+    }),
+  );
+  steps.push(
+    await runCommand("link audit", "pnpm", ["run", "data:audit:links"], {}, {
+      softFailure: true,
+      reportPath: "data/reports/latest-link-audit.json",
+    }),
+  );
+  steps.push(
+    await runCommand("image audit", "pnpm", ["run", "data:audit:images"], {}, {
+      softFailure: true,
+      reportPath: "data/reports/latest-image-audit.json",
+    }),
+  );
 
   const loadedReports = {};
   const gateSummaries = {};
@@ -111,7 +143,8 @@ async function main() {
 
   const blockerCount = Object.values(gateSummaries).reduce((sum, gate) => sum + gate.blockers.length, 0);
   const warningCount = Object.values(gateSummaries).reduce((sum, gate) => sum + gate.warnings.length, 0);
-  const prePublishStepsOk = steps.every((step) => step.ok);
+  const automationFailures = steps.filter((step) => step.status === "failed");
+  const prePublishStepsOk = automationFailures.length === 0 && steps.every((step) => step.status !== "blocked");
   const gatesClean = prePublishStepsOk && blockerCount === 0 && warningCount === 0;
 
   let publishedAssets = false;
@@ -131,9 +164,11 @@ async function main() {
     generatedAt: new Date().toISOString(),
     mode: "guarded-publish-candidate",
     ready,
+    reportOnly,
     publishedAssets,
     blockerCount,
     warningCount,
+    failedSteps: automationFailures.map((step) => step.name),
     counts,
     steps,
     gates: gateSummaries,
@@ -169,7 +204,7 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 
 | Step | Status | Exit |
 | --- | --- | ---: |
-${steps.map((step) => `| ${step.name} | ${step.ok ? "ok" : "blocked"} | ${step.exitCode} |`).join("\n")}
+${steps.map((step) => `| ${step.name} | ${step.status} | ${step.exitCode} |`).join("\n")}
 
 ## Findings
 
@@ -198,7 +233,7 @@ ${ready
 
   console.log(`Publish candidate: ${ready ? "ready" : "blocked"}.`);
   console.log("Report written to data/reports/latest-publish-candidate.md");
-  if (!ready) process.exit(1);
+  if (automationFailures.length > 0 || (!reportOnly && !ready)) process.exit(1);
 }
 
 main().catch((error) => {

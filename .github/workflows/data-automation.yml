@@ -30,6 +30,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: cruisekit-data-automation-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   daily:
     if: >-
@@ -37,6 +41,7 @@ jobs:
       (github.event.inputs.job == 'all' || github.event.inputs.job == 'daily')) ||
       github.event.schedule == '21 10 * * *'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v6
@@ -47,6 +52,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Run daily data automation
         run: pnpm run data:automation:daily
+        env:
+          CRUISEKIT_REPORT_ONLY: "1"
       - uses: actions/upload-artifact@v7
         if: always()
         with:
@@ -59,6 +66,7 @@ jobs:
       (github.event.inputs.job == 'all' || github.event.inputs.job == 'publish-candidate')) ||
       github.event.schedule == '17 13 * * 1,3,5'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v6
@@ -69,6 +77,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Run guarded publish-candidate report
         run: pnpm run data:publish:candidate
+        env:
+          CRUISEKIT_REPORT_ONLY: "1"
       - uses: actions/upload-artifact@v7
         if: always()
         with:
@@ -114,6 +124,7 @@ jobs:
       (github.event.inputs.job == 'all' || github.event.inputs.job == 'launch-readiness')) ||
       github.event.schedule == '43 14 * * 5'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v6
@@ -141,6 +152,7 @@ jobs:
       (github.event.inputs.job == 'all' || github.event.inputs.job == 'monthly-coverage')) ||
       github.event.schedule == '47 12 1 * *'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v6
