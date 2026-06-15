@@ -106,3 +106,10 @@ Next:
 
 - User manually copy-edits one Facebook draft at a time and posts no-link answers only where comments are open and community rules allow participation.
 - No CruiseKit links unless rules clearly allow it and affiliation is disclosed.
+
+Posted with user approval:
+
+- Posted three no-link Facebook comments from the user's logged-in Chrome session.
+- Posted to Carnival first-cruise drink-package thread, Disney folio/budget thread, and MSC first-cruise package thread.
+- Created `docs/growth/facebook-posting-log-2026-06-15.md` with exact posted text and URLs.
+- Did not post links, mention CruiseKit, send DMs, react, join groups, or change account state.
