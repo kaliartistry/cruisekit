@@ -1,0 +1,133 @@
+{
+  "base": "https://cruisekit.app",
+  "measurement_id": "G-X6NEBF4X3N",
+  "deploy_evidence": {
+    "ga4_deploy_commit": "84880fd",
+    "github_pages_workflow_run": "27517472182",
+    "status": "success"
+  },
+  "qa_runs": [
+    {
+      "run_id": "ga4_live_qa_1781485420852",
+      "timestamp_utc": "2026-06-15T01:04:26.198Z",
+      "notes": "Main production GA4 network QA run. The blog CTA row in this first run clicked a global header calculator link, so a corrected targeted blog CTA run follows.",
+      "results": [
+        {
+          "event": "utm_landing_visit",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Loaded /calculator/ with unique QA UTM parameters."
+        },
+        {
+          "event": "calculator_started",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Clicked calculator Next: Add-Ons after selecting Carnival and entering fare."
+        },
+        {
+          "event": "calculator_completed",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Clicked See Results from the add-ons step."
+        },
+        {
+          "event": "result_shared",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Clicked Share this gap on the calculator result page."
+        },
+        {
+          "event": "app_store_click",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Clicked App Store badge from calculator/result surface."
+        },
+        {
+          "event": "google_play_click",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Clicked Google Play badge from calculator/result surface."
+        },
+        {
+          "event": "save_trip_clicked",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Clicked first Save this cruise heart on /cruises/."
+        },
+        {
+          "event": "blog_cta_click",
+          "status": "not_observed",
+          "observed_count": 0,
+          "interaction": "Clicked the global header calculator link during the first blog page probe."
+        },
+        {
+          "event": "outbound_affiliate_click",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Clicked first Viator/affiliate link on /ports/cozumel/."
+        },
+        {
+          "event": "port_page_affiliate_click",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Same port affiliate click emitted the port-page-specific event."
+        }
+      ]
+    },
+    {
+      "run_id": "ga4_blog_cta_qa_1781485498068",
+      "timestamp_utc": "2026-06-15T01:04:58Z",
+      "notes": "Targeted correction run for the tracked in-article blog CTA.",
+      "results": [
+        {
+          "event": "blog_cta_click",
+          "status": "observed",
+          "observed_count": 1,
+          "interaction": "Clicked the in-article 'Calculate your real cruise total before you book' CTA on /blog/hidden-cruise-costs/."
+        }
+      ]
+    }
+  ],
+  "required_events_final_status": [
+    {
+      "event": "utm_landing_visit",
+      "status": "observed"
+    },
+    {
+      "event": "calculator_started",
+      "status": "observed"
+    },
+    {
+      "event": "calculator_completed",
+      "status": "observed"
+    },
+    {
+      "event": "result_shared",
+      "status": "observed"
+    },
+    {
+      "event": "app_store_click",
+      "status": "observed"
+    },
+    {
+      "event": "google_play_click",
+      "status": "observed"
+    },
+    {
+      "event": "save_trip_clicked",
+      "status": "observed"
+    },
+    {
+      "event": "blog_cta_click",
+      "status": "observed"
+    },
+    {
+      "event": "outbound_affiliate_click",
+      "status": "observed"
+    },
+    {
+      "event": "port_page_affiliate_click",
+      "status": "observed"
+    }
+  ]
+}

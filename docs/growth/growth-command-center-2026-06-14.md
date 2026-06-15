@@ -2,11 +2,14 @@
 
 ## Current State
 
-- Branch: `codex/seo-batch-1`
+- Branch: `main`
 - Deployment status: deployed to GitHub Pages from `main`
 - Merge status: `codex/seo-batch-1` fast-forward merged into `main`
 - Deployment commit: `9a5e98a`
 - GitHub Pages workflow run: `27516588884`
+- GA4 deploy commit: `84880fd`
+- GA4 deploy workflow run: `27517472182`
+- Production GA4 measurement ID: `G-X6NEBF4X3N`
 - Primary acquisition hook: cost calculator
 - Retention hook: app save/planning workflow
 - Keyword source of truth: `docs/seo/keyword-map-2026-06-14-v2-authenticated.csv`
@@ -64,5 +67,4 @@ Weekly:
 
 ## Open Approvals Needed
 
-- CruiseKit GA4 measurement ID if a production stream exists.
 - Approval before any community, creator, paid, or affiliate activation.

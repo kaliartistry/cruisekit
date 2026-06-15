@@ -2,7 +2,7 @@
 
 ## Status
 
-Partially implemented in Batch 1 and locally reviewed.
+Implemented in Batch 1 and validated on production after GA4 configuration was fixed.
 
 ## Code Surface
 
@@ -18,16 +18,13 @@ Partially implemented in Batch 1 and locally reviewed.
 ## QA Notes
 
 - Local typecheck and lint passed after Batch 2 edits.
-- Production analytics delivery is blocked until a real CruiseKit GA4 measurement ID is configured.
 - Deployment commit `9a5e98a` is live on GitHub Pages.
-- Browser share behavior should still be re-checked across desktop and mobile because GA4 is not configured and full event delivery cannot be verified yet.
+- Production GA4 measurement ID `G-X6NEBF4X3N` is live.
+- `result_shared` was observed in a production GA4 collect request after clicking `Share this gap` on the calculator result page.
 
 ## Follow-Up
 
-1. Open the deployed calculator.
-2. Complete an estimate.
-3. Trigger share.
-4. Confirm copy/share output is readable.
-5. Confirm `result_shared` in GA4 DebugView or Realtime.
+1. Re-check share behavior on a real mobile device before a mobile-focused campaign.
+2. Monitor `result_shared / calculator_completed` weekly as the share-loop rate.
 
-No additional share-loop code was implemented in this cycle.
+No additional share-loop code was implemented after Batch 1.

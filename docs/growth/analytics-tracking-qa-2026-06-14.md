@@ -13,8 +13,9 @@ Event helper:
 Environment state:
 
 - `apps/web/.env.local` exists.
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID` was not present during local QA.
-- Production GA4 delivery was not validated because no CruiseKit GA4 measurement ID/property was configured locally.
+- Production GA4 is configured on the live site with measurement ID `G-X6NEBF4X3N`.
+- Live homepage HTML exposes `gtag` and `G-X6NEBF4X3N`.
+- GitHub Pages workflow run `27517472182` completed successfully with the GA4 deploy configuration.
 
 ## Event Wiring
 
@@ -33,33 +34,47 @@ Environment state:
 
 ## QA Result
 
-Local event-name wiring is present. Browser/network validation against GA4 is blocked until a real CruiseKit GA4 stream ID is configured.
+Local event-name wiring is present, and production browser/network validation now confirms all required GA4 event names are emitted by the deployed site.
 
 ## Post-Deployment Check
 
 Deployment commit: `9a5e98a`
+GA4 configuration deploy commit: `84880fd`
+GA4 configuration deploy: GitHub Pages workflow run `27517472182`
 
 Live checks after deployment:
 
 - Priority pages loaded on `https://cruisekit.app/`.
-- Live homepage HTML did not expose a GA4 measurement ID or `gtag` script.
-- GitHub Pages workflow env only exposes `NEXT_PUBLIC_ENABLE_LEAD_DASHBOARD`; no `NEXT_PUBLIC_GA_MEASUREMENT_ID` is configured in the deploy workflow.
-- Production GA4 event delivery remains blocked until a CruiseKit GA4 stream ID is added to the deployed environment.
+- Live homepage HTML exposes `googletagmanager`, `gtag`, and `G-X6NEBF4X3N`.
+- Live GA4 network requests were observed with Playwright against production.
 
 No unrelated GA4 property was used.
 
+## Live Event QA
+
+Run time: 2026-06-14 21:04 ET / 2026-06-15T01:04Z
+
+Evidence file: `docs/growth/ga4-live-event-qa-2026-06-14.json`
+
+| Event | Live GA4 network status | Interaction tested |
+| --- | --- | --- |
+| `utm_landing_visit` | Observed | Loaded `/calculator/` with unique QA UTM parameters. |
+| `calculator_started` | Observed | Selected Carnival, entered fare, clicked `Next: Add-Ons`. |
+| `calculator_completed` | Observed | Clicked `See Results` from the calculator add-ons step. |
+| `result_shared` | Observed | Clicked `Share this gap` on the calculator result. |
+| `app_store_click` | Observed | Clicked the App Store badge from the calculator/result surface. |
+| `google_play_click` | Observed | Clicked the Google Play badge from the calculator/result surface. |
+| `save_trip_clicked` | Observed | Clicked the first `Save this cruise` heart on `/cruises/`. |
+| `blog_cta_click` | Observed | Clicked the tracked in-article CTA on `/blog/hidden-cruise-costs/`. |
+| `outbound_affiliate_click` | Observed | Clicked the first Viator/affiliate link on `/ports/cozumel/`. |
+| `port_page_affiliate_click` | Observed | Same port affiliate click emitted the port-page-specific event. |
+
+Note: an initial blog CTA probe clicked the global header calculator link and did not emit `blog_cta_click`; the corrected probe clicked the in-article `Calculate your real cruise total before you book` CTA and observed the event.
+
 ## Required Follow-Up
 
-When the production GA4 stream exists:
-
-1. Add `NEXT_PUBLIC_GA_MEASUREMENT_ID` to the deployed web environment.
-2. Open the deployed site with `?utm_source=qa&utm_medium=test&utm_campaign=batch_1_tracking_qa`.
-3. Confirm `utm_landing_visit` in GA4 DebugView or Realtime.
-4. Start and complete calculator flow; confirm `calculator_started` and `calculator_completed`.
-5. Share calculator result; confirm `result_shared`.
-6. Click app badges; confirm `app_store_click` and `google_play_click`.
-7. Click blog CTA; confirm `blog_cta_click`.
-8. Click excursion/affiliate link from a port page; confirm `port_page_affiliate_click`.
-9. Click affiliate link outside port page; confirm `outbound_affiliate_click`.
+1. Build the weekly scorecard from Search Console and GA4 once enough post-deploy data accumulates.
+2. Monitor calculator start/completion, result share, app store click, save trip, and affiliate click rates by source/medium/campaign.
+3. Keep using unique QA UTM campaigns for future event testing to avoid session dedupe.
 
 Do not use an unrelated analytics property for CruiseKit QA.

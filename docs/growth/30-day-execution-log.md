@@ -34,17 +34,27 @@ Completed:
 - Verified live sitemap includes approved calculator URLs and excludes unapproved placeholder URLs.
 - Submitted `sitemap.xml` in Search Console; status reported `Success` with 131 discovered pages.
 - Inspected eight priority URLs in Search Console and requested indexing once for each.
+- Confirmed production GA4 measurement ID `G-X6NEBF4X3N` is live after GitHub Pages workflow run `27517472182`.
+- Completed production GA4 network QA for all required events:
+  - `calculator_started`
+  - `calculator_completed`
+  - `result_shared`
+  - `app_store_click`
+  - `google_play_click`
+  - `save_trip_clicked`
+  - `blog_cta_click`
+  - `outbound_affiliate_click`
+  - `port_page_affiliate_click`
+  - `utm_landing_visit`
 
 Blocked:
 
-- GA4 production event QA requires a CruiseKit GA4 measurement ID/property.
 - Community posting, creator outreach, paid ads, and affiliate activations require exact approval.
 
 Next:
 
-- Complete low-risk SEO Batch 2 changes.
-- Re-run the full validation set.
-- Ask for explicit merge/deploy approval.
+- Start weekly scorecard monitoring once Search Console and GA4 have enough post-deploy data.
+- Keep community posting, creator outreach, paid ads, and affiliate activations gated behind exact approval.
 
 ## Day 6 Review Gate - Pending
 
@@ -61,7 +71,7 @@ Implement only approved deploy-bound SEO updates and monitor Search Console afte
 
 ## Days 13-17 - Pending
 
-Validate GA4, share-result behavior, UTM links, and dashboard reporting once the production measurement stream is available.
+GA4, share-result behavior, UTM links, and required event delivery are validated. Build dashboard reporting once enough post-deploy data exists.
 
 ## Days 18-23 - Pending
 
