@@ -26,10 +26,17 @@ Completed:
   - `pnpm --filter web exec tsc --noEmit`
   - `pnpm --filter web build`
 - Reverted unrelated build-generated data bundle side effects after verification.
+- Committed approved SEO/growth work as `9a5e98a`.
+- Fast-forward merged `codex/seo-batch-1` into `main`.
+- Pushed `main` to GitHub.
+- GitHub Pages deploy workflow `27516588884` completed successfully.
+- Verified priority live pages served the expected titles/descriptions.
+- Verified live sitemap includes approved calculator URLs and excludes unapproved placeholder URLs.
+- Submitted `sitemap.xml` in Search Console; status reported `Success` with 131 discovered pages.
+- Inspected eight priority URLs in Search Console and requested indexing once for each.
 
 Blocked:
 
-- Search Console URL inspection requires deployment and authenticated Search Console access.
 - GA4 production event QA requires a CruiseKit GA4 measurement ID/property.
 - Community posting, creator outreach, paid ads, and affiliate activations require exact approval.
 

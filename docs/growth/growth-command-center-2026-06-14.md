@@ -3,8 +3,10 @@
 ## Current State
 
 - Branch: `codex/seo-batch-1`
-- Deployment status: not deployed from this branch
-- Merge status: not staged, committed, merged, or pushed by this review
+- Deployment status: deployed to GitHub Pages from `main`
+- Merge status: `codex/seo-batch-1` fast-forward merged into `main`
+- Deployment commit: `9a5e98a`
+- GitHub Pages workflow run: `27516588884`
 - Primary acquisition hook: cost calculator
 - Retention hook: app save/planning workflow
 - Keyword source of truth: `docs/seo/keyword-map-2026-06-14-v2-authenticated.csv`
@@ -62,7 +64,5 @@ Weekly:
 
 ## Open Approvals Needed
 
-- Approval to merge/deploy after final local validation.
-- Chrome login/access for Google Search Console after deployment.
 - CruiseKit GA4 measurement ID if a production stream exists.
 - Approval before any community, creator, paid, or affiliate activation.

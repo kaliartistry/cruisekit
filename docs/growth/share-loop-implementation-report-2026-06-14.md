@@ -19,7 +19,8 @@ Partially implemented in Batch 1 and locally reviewed.
 
 - Local typecheck and lint passed after Batch 2 edits.
 - Production analytics delivery is blocked until a real CruiseKit GA4 measurement ID is configured.
-- Browser share behavior should be re-checked after deployment across desktop and mobile.
+- Deployment commit `9a5e98a` is live on GitHub Pages.
+- Browser share behavior should still be re-checked across desktop and mobile because GA4 is not configured and full event delivery cannot be verified yet.
 
 ## Follow-Up
 

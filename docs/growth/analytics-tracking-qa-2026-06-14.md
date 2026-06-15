@@ -35,6 +35,19 @@ Environment state:
 
 Local event-name wiring is present. Browser/network validation against GA4 is blocked until a real CruiseKit GA4 stream ID is configured.
 
+## Post-Deployment Check
+
+Deployment commit: `9a5e98a`
+
+Live checks after deployment:
+
+- Priority pages loaded on `https://cruisekit.app/`.
+- Live homepage HTML did not expose a GA4 measurement ID or `gtag` script.
+- GitHub Pages workflow env only exposes `NEXT_PUBLIC_ENABLE_LEAD_DASHBOARD`; no `NEXT_PUBLIC_GA_MEASUREMENT_ID` is configured in the deploy workflow.
+- Production GA4 event delivery remains blocked until a CruiseKit GA4 stream ID is added to the deployed environment.
+
+No unrelated GA4 property was used.
+
 ## Required Follow-Up
 
 When the production GA4 stream exists:
