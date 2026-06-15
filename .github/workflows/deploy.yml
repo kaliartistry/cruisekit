@@ -39,6 +39,7 @@ jobs:
       - name: Build Next.js static export
         env:
           NEXT_PUBLIC_ENABLE_LEAD_DASHBOARD: "true"
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ vars.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
         run: pnpm --filter web build
 
       - name: Setup Pages
