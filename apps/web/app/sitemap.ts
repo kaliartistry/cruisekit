@@ -38,6 +38,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === '' ? 1.0 : 0.8,
   }));
 
+  /* ---- Existing line calculator pages with mapped demand ------------ */
+  const lineCalculatorPages = [
+    'royal-caribbean',
+    'carnival',
+    'norwegian',
+    'msc',
+    'disney',
+    'celebrity',
+    'princess',
+    'holland-america',
+  ].map((slug) => ({
+    url: `${baseUrl}/calculator/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.75,
+  }));
+
   /* ---- Dynamic port pages ------------------------------------------ */
   const portPages = getAllPortSlugs().map((slug) => ({
     url: `${baseUrl}/ports/${slug}`,
@@ -62,5 +79,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...portPages, ...guidePages, ...blogPages];
+  return [
+    ...staticPages,
+    ...lineCalculatorPages,
+    ...portPages,
+    ...guidePages,
+    ...blogPages,
+  ];
 }

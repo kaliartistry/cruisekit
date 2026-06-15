@@ -265,74 +265,99 @@ function RelatedGuides({ currentSlug }: { currentSlug: string }) {
 /* ------------------------------------------------------------------ */
 
 function CtaBanners({ slug }: { slug: string }) {
+  const costGuideCtas: Record<
+    string,
+    {
+      title: string;
+      description: string;
+      href: string;
+      links: { href: string; label: string }[];
+    }
+  > = {
+    "drink-package-guide": {
+      title: "Calculate your full cruise cost with drinks included",
+      description:
+        "Estimate your full cruise cost, including drinks, gratuities, WiFi, excursions, and port spending.",
+      href: "/calculator",
+      links: [
+        { href: "/calculator/royal-caribbean", label: "Royal Caribbean" },
+        { href: "/calculator/carnival", label: "Carnival" },
+        { href: "/calculator/norwegian", label: "Norwegian" },
+        { href: "/calculator/msc", label: "MSC" },
+      ],
+    },
+    "cruise-tipping-guide": {
+      title: "Add gratuities to your real cruise budget",
+      description:
+        "Estimate automatic gratuities, cash tips, drinks, WiFi, excursions, and port spending before you book.",
+      href: "/calculator",
+      links: [
+        { href: "/calculator/royal-caribbean", label: "Royal Caribbean" },
+        { href: "/calculator/carnival", label: "Carnival" },
+        { href: "/calculator/norwegian", label: "Norwegian" },
+        { href: "/calculator/disney", label: "Disney" },
+        { href: "/calculator/msc", label: "MSC" },
+      ],
+    },
+    "port-day-tips": {
+      title: "Budget port spending before your sailing",
+      description:
+        "Add port spending, excursions, tips, and cash needs to your full cruise estimate.",
+      href: "/calculator",
+      links: [
+        { href: "/ports", label: "Port guides" },
+        { href: "/guides/cruise-tipping-guide", label: "Tipping guide" },
+        { href: "/blog/hidden-cruise-costs", label: "Hidden costs" },
+      ],
+    },
+  };
+  const costGuideCta = costGuideCtas[slug];
+
   return (
     <div className="mt-12 space-y-4">
-      {/* Calculator CTA — show on drink-package and tipping guides */}
-      {(slug === "drink-package-guide" || slug === "cruise-tipping-guide") && (
-        <Link
-          href="/calculator"
-          className={cn(
-            "flex items-center justify-between rounded-xl border-2 border-teal/30 bg-teal/5 p-6",
-            "transition-all hover:border-teal/50 hover:bg-teal/10"
-          )}
-        >
-          <div>
-            <p className="text-lg font-bold text-navy">
-              Use our True Cost Calculator
-            </p>
-            <p className="mt-1 text-sm text-gray-600">
-              See your real cruise cost including drink packages, gratuities,
-              WiFi, and excursions — no surprises.
-            </p>
-          </div>
-          <svg
-            className="h-6 w-6 shrink-0 text-teal"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+      {costGuideCta && (
+        <div className="rounded-xl border-2 border-teal/30 bg-teal/5 p-6">
+          <Link
+            href={costGuideCta.href}
+            className={cn(
+              "flex items-center justify-between gap-4",
+              "transition-colors hover:text-teal"
+            )}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </Link>
-      )}
-
-      {/* Port planner CTA — show on port-day guide */}
-      {slug === "port-day-tips" && (
-        <Link
-          href="/ports"
-          className={cn(
-            "flex items-center justify-between rounded-xl border-2 border-success/30 bg-success/5 p-6",
-            "transition-all hover:border-success/50 hover:bg-success/10"
-          )}
-        >
-          <div>
-            <p className="text-lg font-bold text-navy">
-              Browse our Port Day Planner
-            </p>
-            <p className="mt-1 text-sm text-gray-600">
-              Explore ports of call, find excursions, and build day-by-day
-              itineraries for every stop on your voyage.
-            </p>
+            <div>
+              <p className="text-lg font-bold text-navy">
+                {costGuideCta.title}
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                {costGuideCta.description}
+              </p>
+            </div>
+            <svg
+              className="h-6 w-6 shrink-0 text-teal"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </Link>
+          <div className="mt-4 flex flex-wrap gap-2 border-t border-teal/15 pt-4">
+            {costGuideCta.links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
-          <svg
-            className="h-6 w-6 shrink-0 text-success"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </Link>
+        </div>
       )}
 
       {/* Medjet CTA — show on first-timer, packing, port-day, and insurance guides */}

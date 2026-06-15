@@ -15,6 +15,7 @@ import {
   type BlogPost,
 } from "@/lib/data/blog-posts";
 import RelatedContent from "@/components/shared/related-content";
+import BlogCtaLink from "@/components/shared/blog-cta-link";
 
 /* ------------------------------------------------------------------ */
 /*  Cruise-line detection from post metadata                           */
@@ -242,7 +243,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: `${post.title} (Blog)`,
+    title: post.title,
     description: post.excerpt,
     keywords: post.tags,
     alternates: {
@@ -447,8 +448,9 @@ function CtaBanners({ post }: { post: BlogPost }) {
     <div className="mt-12 space-y-4">
       {calculatorCta && (
         <div className="rounded-xl border-2 border-teal/30 bg-teal/5 p-6">
-          <Link
+          <BlogCtaLink
             href={calculatorCta.href}
+            source={`blog-${post.slug}-calculator-cta`}
             className={cn(
               "flex items-center justify-between gap-4",
               "transition-colors hover:text-teal"
@@ -475,24 +477,26 @@ function CtaBanners({ post }: { post: BlogPost }) {
                 d="M9 5l7 7-7 7"
               />
             </svg>
-          </Link>
+          </BlogCtaLink>
 
           <div className="mt-4 flex flex-wrap gap-2 border-t border-teal/15 pt-4">
-            <Link
+            <BlogCtaLink
               href="/cruise-costs"
+              source={`blog-${post.slug}-cruise-costs-link`}
               className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
             >
               Cruise costs hub
-            </Link>
+            </BlogCtaLink>
             {calculatorCta.lineLinks.length > 1 &&
               calculatorCta.lineLinks.map((line) => (
-                <Link
+                <BlogCtaLink
                   key={line.href}
                   href={line.href}
+                  source={`blog-${post.slug}-line-calculator-link`}
                   className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
                 >
                   {line.label} calculator
-                </Link>
+                </BlogCtaLink>
               ))}
           </div>
         </div>
@@ -739,6 +743,66 @@ export default async function BlogPostPage({ params }: Props) {
               quotes. Cruise prices and availability change frequently; confirm
               final pricing with the cruise line or booking platform before you
               book.
+            </div>
+          )}
+
+          {post.slug === "hidden-cruise-costs" && (
+            <div className="mb-8 rounded-xl border-2 border-teal/30 bg-teal/5 p-5">
+              <BlogCtaLink
+                href="/calculator"
+                source="blog-hidden-cruise-costs-above-fold"
+                className="flex items-center justify-between gap-4 transition-colors hover:text-teal"
+              >
+                <div>
+                  <p className="text-lg font-bold text-navy">
+                    Calculate your real cruise total before you book
+                  </p>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Add gratuities, taxes, drinks, WiFi, excursions, port
+                    spending, parking, insurance, and onboard extras in one
+                    estimate.
+                  </p>
+                </div>
+                <svg
+                  className="h-6 w-6 shrink-0 text-teal"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </BlogCtaLink>
+              <div className="mt-4 flex flex-wrap gap-2 border-t border-teal/15 pt-4">
+                {[
+                  { href: "/cruise-costs", label: "Cruise costs hub" },
+                  {
+                    href: "/guides/drink-package-guide",
+                    label: "Drink package math",
+                  },
+                  {
+                    href: "/guides/cruise-tipping-guide",
+                    label: "Gratuity guide",
+                  },
+                  {
+                    href: "/guides/port-day-tips",
+                    label: "Port cash budget",
+                  },
+                ].map((link) => (
+                  <BlogCtaLink
+                    key={link.href}
+                    href={link.href}
+                    source="blog-hidden-cruise-costs-above-fold-link"
+                    className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                  >
+                    {link.label}
+                  </BlogCtaLink>
+                ))}
+              </div>
             </div>
           )}
           <article className="prose prose-gray max-w-none">

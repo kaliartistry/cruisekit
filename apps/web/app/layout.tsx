@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/firebase/auth";
 import AnalyticsLoader from "@/components/shared/analytics-loader";
+import UtmLandingTracker from "@/components/shared/utm-landing-tracker";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/config/app-store-urls";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -87,6 +88,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <AuthProvider>{children}</AuthProvider>
         <AnalyticsLoader />
+        <UtmLandingTracker />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

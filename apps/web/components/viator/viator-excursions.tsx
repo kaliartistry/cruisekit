@@ -11,6 +11,7 @@ import {
   getViatorDestinationLink,
 } from "@/lib/affiliate-config";
 import { VIATOR_DESTINATIONS } from "@/lib/data/viator-destinations";
+import { trackOutboundAffiliateClick } from "@/lib/analytics";
 
 interface ViatorExcursionsProps {
   portSlug: string;
@@ -97,7 +98,11 @@ export default function ViatorExcursions({
       {!loading && !error && products.length > 0 && (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
-            <ViatorProductCard key={product.productCode} product={product} />
+            <ViatorProductCard
+              key={product.productCode}
+              product={product}
+              portSlug={portSlug}
+            />
           ))}
         </div>
       )}
@@ -109,6 +114,7 @@ export default function ViatorExcursions({
           href={getViatorDestinationLink(destinationId, portName)}
           target="_blank"
           rel="noopener noreferrer noindex nofollow"
+          onClick={() => trackOutboundAffiliateClick("viator", `port-${portSlug}`)}
           className="group flex items-center justify-between rounded-xl border border-teal/30 bg-teal/5 p-5 transition-colors hover:bg-teal/10"
         >
           <div>
@@ -142,7 +148,13 @@ export default function ViatorExcursions({
 /*  Product Card                                                       */
 /* ------------------------------------------------------------------ */
 
-function ViatorProductCard({ product }: { product: ViatorProduct }) {
+function ViatorProductCard({
+  product,
+  portSlug,
+}: {
+  product: ViatorProduct;
+  portSlug: string;
+}) {
   // Viator Partner API URLs are usually pre-attributed, but some paths
   // (manual curation, cached exports) may not be — getExcursionLink is
   // a no-op when `pid=` is already present.
@@ -152,6 +164,7 @@ function ViatorProductCard({ product }: { product: ViatorProduct }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer noindex nofollow"
+      onClick={() => trackOutboundAffiliateClick("viator", `port-${portSlug}`)}
       className={cn(
         "group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white",
         "transition-all hover:shadow-lg hover:border-teal/30"

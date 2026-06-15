@@ -30,6 +30,7 @@ import { Button } from "@/components/ui/button";
 import { getHotelLink, getMedEvacLink } from "@/lib/affiliate-config";
 import { getDeckPlanLink } from "@/lib/data/deck-plan-urls";
 import { cn } from "@/lib/utils/cn";
+import { trackResultShared } from "@/lib/analytics";
 
 interface CostBreakdownProps {
   breakdown: CostBreakdownType;
@@ -115,14 +116,20 @@ function DeltaHero({
   const hiddenPct = 100 - advertisedPct;
 
   const shareText =
-    `My ${lineName} cruise costs ${percentOver}% more than the sticker price. ` +
-    `$${advertised.toLocaleString()} advertised → $${Math.round(real).toLocaleString()} real. ` +
+    `I ran the numbers for a cruise. Fare: $${advertised.toLocaleString()}. ` +
+    `Estimated real total: $${Math.round(real).toLocaleString()} after gratuities, drinks, WiFi, excursions, and port spending. ` +
     `Calculate yours at cruisekit.app/calculator`;
 
   const handleShare = async () => {
     if (typeof navigator !== "undefined" && "share" in navigator) {
       try {
         await navigator.share({ text: shareText });
+        trackResultShared({
+          cruiseLineId,
+          fare: advertised,
+          estimatedTotal: real,
+          method: "native_share",
+        });
         return;
       } catch {
         // User cancelled or share unavailable — fall through to clipboard.
@@ -130,6 +137,12 @@ function DeltaHero({
     }
     try {
       await navigator.clipboard.writeText(shareText);
+      trackResultShared({
+        cruiseLineId,
+        fare: advertised,
+        estimatedTotal: real,
+        method: "clipboard",
+      });
       setCopied(true);
       setTimeout(() => setCopied(false), 2200);
     } catch {

@@ -21,11 +21,14 @@ import { CRUISE_LINES } from "@cruise/shared/constants";
 import { cn } from "@/lib/utils/cn";
 
 export const metadata: Metadata = {
-  title: "Cruise Costs Hub: Calculator, Hidden Fees & Line-by-Line Guides",
+  title: "Cruise Costs Guide: Fare, Fees, Tips, Drinks, WiFi & Extras",
   description:
-    "Plan the real cost of a cruise with CruiseKit's cruise costs hub: cost calculator, hidden fees, gratuities, drink packages, WiFi, excursions, and line-by-line cost guides.",
+    "See how cruise pricing works and estimate the real total after fare, taxes, port fees, gratuities, drinks, WiFi, excursions, port spending, and extras.",
   keywords: [
     "cruise costs",
+    "cruise expenses",
+    "how does cruise pricing work",
+    "are cruise prices per person or room",
     "cruise cost calculator",
     "hidden cruise costs",
     "cruise gratuities",
@@ -36,6 +39,13 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://cruisekit.app/cruise-costs",
+  },
+  openGraph: {
+    title: "Cruise Costs Guide: Fare, Fees, Tips, Drinks, WiFi & Extras",
+    description:
+      "Estimate the real total after fare, taxes, port fees, gratuities, drinks, WiFi, excursions, port spending, and extras.",
+    url: "https://cruisekit.app/cruise-costs",
+    type: "website",
   },
 };
 
@@ -145,6 +155,34 @@ const comparisonLinks = [
   },
 ];
 
+const costFaqs = [
+  {
+    question: "Are cruise prices per person or room?",
+    answer:
+      "Cruise prices are usually shown per person based on double occupancy, not as the full room total. Taxes, port fees, gratuities, drinks, WiFi, excursions, insurance, parking, and port spending can be separate from the first fare you see.",
+  },
+  {
+    question: "What cruise expenses should I budget for?",
+    answer:
+      "Budget for the fare, taxes and port fees, daily gratuities, drink packages or pay-per-drink spending, WiFi, shore excursions, specialty dining, spa or photos, parking, hotel nights, travel insurance, and cash for port days.",
+  },
+  {
+    question: "How does cruise pricing work?",
+    answer:
+      "The advertised fare usually covers the cabin, transportation between ports, included dining, entertainment, pools, and basic ship activities. Cruise lines then add mandatory fees and optional onboard spending, which is why the real total can be much higher than the headline fare.",
+  },
+  {
+    question: "Are cruise taxes and port fees included?",
+    answer:
+      "Taxes and port fees may not be included in the first price shown during cruise search. They usually appear before checkout, and they commonly add hundreds of dollars to a 7-night cruise for two people.",
+  },
+  {
+    question: "What costs are not included in a cruise fare?",
+    answer:
+      "Common costs not included in a base fare are gratuities, drinks, WiFi, excursions, specialty dining, room service fees, casino spend, photos, spa treatments, transportation, parking, hotels, travel insurance, and port spending.",
+  },
+];
+
 const lineCostSlugs = new Set([
   "royal-caribbean",
   "carnival",
@@ -204,8 +242,8 @@ export default function CruiseCostsPage() {
       <main className="flex-1">
         <PageHeader
           pillar="plan"
-          title="Cruise Costs Hub"
-          subtitle="A single place for CruiseKit's calculator, hidden-fee checklist, line-by-line cost pages, and the biggest add-ons that change the real price of a cruise"
+          title="Cruise Costs Guide"
+          subtitle="See how cruise pricing works, what is not included in the fare, and which add-ons change the real price before you book."
           breadcrumbs={[{ label: "Cruise Costs" }]}
         />
 
@@ -236,6 +274,74 @@ export default function CruiseCostsPage() {
             <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {categoryLinks.map((item) => (
                 <CardLink key={item.href} item={item} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-gray-200 bg-white">
+          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-wider text-teal">
+                Cruise Pricing FAQ
+              </p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy sm:text-3xl">
+                How cruise pricing works before add-ons
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600 sm:text-base">
+                These are the broad cost questions this hub owns. For a
+                personalized estimate, start with the calculator and then use
+                the guides below for the specific add-ons you care about.
+              </p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
+              {costFaqs.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group rounded-lg border border-gray-200 bg-gray-50/60"
+                >
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 p-5 text-sm font-bold text-navy [&::-webkit-details-marker]:hidden">
+                    {faq.question}
+                    <ChevronRight
+                      className="h-4 w-4 shrink-0 text-gray-300 transition-transform group-open:rotate-90"
+                      aria-hidden="true"
+                    />
+                  </summary>
+                  <p className="border-t border-gray-200 px-5 py-4 text-sm leading-relaxed text-gray-600">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-2">
+              {[
+                { href: "/calculator", label: "Calculate my cruise cost" },
+                {
+                  href: "/blog/how-much-does-a-cruise-really-cost-2026",
+                  label: "Real cruise cost examples",
+                },
+                {
+                  href: "/blog/hidden-cruise-costs",
+                  label: "Hidden cruise fees",
+                },
+                {
+                  href: "/guides/cruise-tipping-guide",
+                  label: "Gratuity guide",
+                },
+                {
+                  href: "/guides/drink-package-guide",
+                  label: "Drink package math",
+                },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                >
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>

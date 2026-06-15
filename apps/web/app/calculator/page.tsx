@@ -8,9 +8,10 @@ import { CRUISE_LINES } from "@cruise/shared/constants";
 import CalculatorWithParams from "./calculator-with-params";
 
 export const metadata: Metadata = {
-  title: "Cruise Cost Calculator: Estimate the Real Price of Your Cruise",
+  title:
+    "Free Cruise Cost Calculator: Estimate Fare, Fees, Drinks, WiFi & Excursions",
   description:
-    "Use CruiseKit's free cruise cost calculator to estimate the real price of your cruise, including gratuities, drink packages, WiFi, excursions, port fees, and other common add-ons.",
+    "Use CruiseKit's free cruise cost calculator to estimate the real total beyond the advertised fare, including gratuities, taxes, drinks, WiFi, excursions, port spending, parking, insurance, and onboard extras.",
   keywords: [
     "cruise cost calculator",
     "cruise budget calculator",
@@ -19,6 +20,14 @@ export const metadata: Metadata = {
     "cruise gratuity calculator",
     "cruise drink package calculator",
   ],
+  openGraph: {
+    title:
+      "Free Cruise Cost Calculator: Estimate Fare, Fees, Drinks, WiFi & Excursions",
+    description:
+      "Estimate the real total before you book: fare, taxes, gratuities, drinks, WiFi, excursions, port spending, insurance, and onboard extras.",
+    url: "https://cruisekit.app/calculator",
+    type: "website",
+  },
 };
 
 const calculatorJsonLd = {
@@ -56,7 +65,7 @@ export default function CalculatorPage() {
         <PageHeader
           pillar="plan"
           title="Cruise Cost Calculator"
-          subtitle="Estimate the real price of your cruise before you book, including the add-ons that rarely fit in the advertised fare"
+          subtitle="Cruise fares leave out gratuities, taxes, drinks, WiFi, excursions, port spending, parking, insurance, and onboard extras. CruiseKit adds it up before you commit."
           breadcrumbs={[{ label: "Cruise Cost Calculator" }]}
         />
         <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -133,6 +142,106 @@ export default function CalculatorPage() {
               >
                 Browse the full cruise costs hub -&gt;
               </Link>
+            </div>
+
+            <div className="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+              <h3 className="text-lg font-bold text-navy">
+                Cruise Cost Calculator Questions
+              </h3>
+              <div className="mt-4 space-y-4">
+                <div>
+                  <h4 className="text-sm font-semibold text-navy">
+                    What does a cruise cost calculator include?
+                  </h4>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                    A useful cruise cost calculator includes the advertised
+                    fare, taxes and port fees, daily gratuities, drink packages,
+                    WiFi, specialty dining, excursions, port spending, parking,
+                    insurance, and other onboard extras. CruiseKit keeps those
+                    line items visible so the estimate reflects the trip you
+                    actually plan to take.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-navy">
+                    How do I estimate the true total cruise cost?
+                  </h4>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                    Start with the fare you found, then add the mandatory costs
+                    you cannot skip and the optional add-ons you are likely to
+                    buy. If you are still deciding, use the default fare
+                    estimates and adjust the choices until the total matches
+                    your travel style.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-navy">
+                    Are taxes, port fees, and gratuities included in cruise prices?
+                  </h4>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                    Taxes and port fees are usually added during checkout, and
+                    gratuities are commonly charged daily to your onboard
+                    account or prepaid before sailing. That is why the
+                    advertised fare can be much lower than the real cruise
+                    total.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-navy">
+                    How much spending money should I budget for a cruise?
+                  </h4>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                    Budget beyond the ship: cash tips, taxis, independent food
+                    and drinks, local purchases, and emergency buffer money can
+                    matter as much as onboard extras. The port-day guide covers
+                    the cash and excursion side of the estimate.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-navy">
+                    Can I estimate drinks, WiFi, excursions, and port spending?
+                  </h4>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                    Yes. CruiseKit includes drink packages, WiFi tiers,
+                    specialty dining, excursions by port, parking, insurance,
+                    and manual fare inputs so you can compare the base fare
+                    against a realistic total.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-2 border-t border-gray-100 pt-5">
+                <Link
+                  href="/guides/drink-package-guide"
+                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                >
+                  Drink package break-even math
+                </Link>
+                <Link
+                  href="/guides/cruise-tipping-guide"
+                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                >
+                  Cruise gratuities
+                </Link>
+                <Link
+                  href="/guides/port-day-tips"
+                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                >
+                  Port spending and cash
+                </Link>
+                <Link
+                  href="/blog/hidden-cruise-costs"
+                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                >
+                  Hidden cruise costs
+                </Link>
+                <Link
+                  href="/cruise-costs"
+                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                >
+                  Cruise costs hub
+                </Link>
+              </div>
             </div>
 
             <div className="mt-8">

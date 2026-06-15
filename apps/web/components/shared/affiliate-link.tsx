@@ -1,6 +1,6 @@
 "use client";
 
-import { trackEvent } from "@/lib/analytics";
+import { trackOutboundAffiliateClick } from "@/lib/analytics";
 
 /**
  * Client-side affiliate link component.
@@ -67,7 +67,7 @@ export default function AffiliateLink({
   className,
 }: AffiliateLinkProps) {
   const handleClick = () => {
-    trackEvent("affiliate_click", { partner, source });
+    trackOutboundAffiliateClick(partner, source);
   };
 
   if (!isAllowedDomain(href)) {

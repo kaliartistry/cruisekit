@@ -5,19 +5,65 @@ import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Cruise Cost FAQ: Hidden Fees, Tips, WiFi, Drinks & Budgeting",
   description:
-    "Frequently asked questions about CruiseKit, the free cruise planning toolkit. Learn about the True Cost Calculator, MyDay, data accuracy, and more.",
+    "Answers to cruise cost questions about hidden fees, taxes, port fees, gratuities, drink packages, WiFi, cash, CruiseKit's calculator, and saved trip planning.",
   keywords: [
+    "cruise cost faq",
+    "hidden cruise fees",
+    "what costs are not included in a cruise",
+    "are cruise prices per person or room",
+    "cruise gratuities",
+    "cruise drink package worth it",
     "cruisekit faq",
     "cruise planning questions",
     "true cost calculator help",
     "cruise day planner",
     "cruise planning tool help",
   ],
+  alternates: {
+    canonical: "https://cruisekit.app/faq",
+  },
+  openGraph: {
+    title: "Cruise Cost FAQ: Hidden Fees, Tips, WiFi, Drinks & Budgeting",
+    description:
+      "Answers to cruise cost questions about hidden fees, taxes, port fees, gratuities, drink packages, WiFi, cash, and CruiseKit's calculator.",
+    url: "https://cruisekit.app/faq",
+    type: "website",
+  },
 };
 
 const FAQS = [
+  {
+    question: "What costs are not included on a cruise?",
+    answer:
+      "Most base fares do not include taxes, port fees, daily gratuities, drink packages, WiFi, shore excursions, specialty dining, spa treatments, photos, casino spend, parking, hotels, travel insurance, or port spending. CruiseKit's calculator is built to add those items before you book.",
+  },
+  {
+    question: "Are cruise prices per person or room?",
+    answer:
+      "Cruise prices are usually shown per person based on double occupancy. The first price you see may not be the room total, and it may not include taxes, port fees, gratuities, or onboard extras.",
+  },
+  {
+    question: "How do I calculate the real cruise cost before booking?",
+    answer:
+      "Start with the fare you found, then add guests, nights, cabin type, taxes and port fees, gratuities, drinks, WiFi, excursions, dining, insurance, transportation, and port spending. The CruiseKit True Cost Calculator keeps those assumptions in one estimate.",
+  },
+  {
+    question: "Are taxes, port fees, and gratuities included in cruise prices?",
+    answer:
+      "Taxes and port fees often appear later in checkout, while gratuities are usually prepaid or charged daily on the ship. They are not always included in the first advertised fare, so they should be part of every cruise budget.",
+  },
+  {
+    question: "How much cash should I bring on a cruise?",
+    answer:
+      "Bring enough cash for port-day taxis, tips, small vendors, beach clubs, and backup spending. Many onboard purchases are cashless, but port days can still require small bills, especially outside major terminals.",
+  },
+  {
+    question: "Is the drink package worth it?",
+    answer:
+      "A drink package is worth it only if your daily drinks, specialty coffees, bottled water, and cabin rules beat the package price plus service charge. Couples should calculate the average across both adults because many lines require every adult in the cabin to buy the package.",
+  },
   {
     question: "What is CruiseKit?",
     answer:
@@ -98,6 +144,42 @@ export default function FAQPage() {
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-teal/20 bg-teal/5 p-6">
+            <h3 className="text-lg font-bold text-navy">
+              Planning the real cost?
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-gray-600">
+              Use the calculator first, then compare the guide pages for the
+              add-ons that change your total most.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {[
+                { href: "/calculator", label: "Calculate my real cruise cost" },
+                { href: "/cruise-costs", label: "Cruise costs guide" },
+                {
+                  href: "/blog/hidden-cruise-costs",
+                  label: "Hidden cruise costs",
+                },
+                {
+                  href: "/guides/drink-package-guide",
+                  label: "Drink package math",
+                },
+                {
+                  href: "/guides/cruise-tipping-guide",
+                  label: "Gratuity guide",
+                },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* CTA */}

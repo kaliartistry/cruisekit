@@ -8,6 +8,7 @@ import { db } from "@/lib/firebase/config";
 import { useAuth } from "@/lib/firebase/auth";
 import SignInModal from "@/components/shared/sign-in-modal";
 import { cn } from "@/lib/utils/cn";
+import { trackSaveTripClicked } from "@/lib/analytics";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -107,6 +108,10 @@ export default function HeartButton({
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+
+    if (!saved) {
+      trackSaveTripClicked("cruises");
+    }
 
     if (!user) {
       setPendingSave(true);

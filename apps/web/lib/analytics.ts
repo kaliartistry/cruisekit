@@ -7,6 +7,10 @@ export type SourceSurface =
   | "app_page"
   | "calculator_result"
   | "saved_trip"
+  | "blog"
+  | "guide"
+  | "port_page"
+  | "cruises"
   | "other";
 
 type AnalyticsParam = string | number | boolean | null | undefined;
@@ -46,8 +50,14 @@ export function trackStoreBadgeClicked(
   platform: StorePlatform,
   sourceSurface: SourceSurface,
 ) {
-  trackEvent("store_badge_clicked", {
-    platform,
+  const eventName =
+    platform === "ios"
+      ? "app_store_click"
+      : platform === "android"
+        ? "google_play_click"
+        : "store_badge_clicked";
+
+  trackEvent(eventName, {
     source_surface: sourceSurface,
   });
 }
@@ -68,6 +78,65 @@ export function trackCalculatorStarted() {
 
 export function trackCalculatorCompleted() {
   trackEvent("calculator_completed");
+}
+
+export function trackResultShared(params: {
+  cruiseLineId?: string;
+  fare?: number;
+  estimatedTotal?: number;
+  method: "native_share" | "clipboard";
+}) {
+  trackEvent("result_shared", {
+    cruise_line_id: params.cruiseLineId,
+    fare: params.fare,
+    estimated_total: params.estimatedTotal,
+    method: params.method,
+  });
+}
+
+export function trackBlogCtaClick(source: string, href: string) {
+  trackEvent("blog_cta_click", {
+    source,
+    href,
+  });
+}
+
+export function trackUtmLandingVisit(params: {
+  landingPath: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmContent?: string;
+  utmTerm?: string;
+}) {
+  trackEvent("utm_landing_visit", {
+    landing_path: params.landingPath,
+    utm_source: params.utmSource,
+    utm_medium: params.utmMedium,
+    utm_campaign: params.utmCampaign,
+    utm_content: params.utmContent,
+    utm_term: params.utmTerm,
+  });
+}
+
+export function trackOutboundAffiliateClick(partner: string, source: string) {
+  trackEvent("outbound_affiliate_click", {
+    partner,
+    source,
+  });
+
+  if (source.startsWith("port-") || source.startsWith("port_page")) {
+    trackEvent("port_page_affiliate_click", {
+      partner,
+      source,
+    });
+  }
+}
+
+export function trackSaveTripClicked(sourceSurface: SourceSurface) {
+  trackEvent("save_trip_clicked", {
+    source_surface: sourceSurface,
+  });
 }
 
 export function trackAppHandoffViewed(sourceSurface: SourceSurface) {

@@ -325,9 +325,9 @@ const packingGuide: Guide = {
 
 const drinkPackageGuide: Guide = {
   slug: "drink-package-guide",
-  title: "Is the Drink Package Worth It? The 2026 Break-Even Math",
+  title: "Cruise Drink Package Calculator: Is It Worth It?",
   description:
-    "A line-by-line breakdown of every major cruise line's drink package pricing, break-even points, and whether it's actually worth it for you.",
+    "Use drink package break-even math to decide whether a cruise beverage package is worth it, then add the real drink cost to your full cruise budget.",
   category: "budget",
   icon: "\uD83C\uDF79",
   readTime: "12 min read",
@@ -335,18 +335,42 @@ const drinkPackageGuide: Guide = {
   sections: [
     {
       id: "break-even-math",
-      title: "Break-Even Math: How Many Drinks Do You Need?",
+      title: "How Many Drinks Break Even on a Cruise Drink Package?",
       content: [
         {
-          question: "How do I figure out if the drink package is worth it for me?",
+          question: "How many drinks break even on a cruise drink package?",
           answer:
-            "The math is simple: divide the daily package price (including service charge/gratuity) by the average price of the drinks you'd order. If the package costs $92/day after gratuity and your average cocktail is $14, you need to drink about 6.5 drinks per day to break even. That's doable for some people on a vacation, but remember — that's every single day for the entire cruise, including embarkation day (when you board late) and port days (when you're off the ship for hours). Most casual drinkers average 3-4 drinks per day and won't break even. Heavy social drinkers who enjoy poolside cocktails, wine with lunch, drinks at dinner, and nightcaps will come out ahead. Specialty coffee drinkers should factor those in too — a $7 latte twice a day adds up.",
+            "Divide the daily package price, including service charge or gratuity, by the average price of the drinks you would actually order. If the package costs $92 per day after gratuity and your average cocktail is $14, you need about 6.5 drinks per day to break even. That has to happen every day of the cruise, including embarkation day and port days when you may be off the ship for hours.",
           appliesTo: "All cruise lines",
           productRecommendation: {
             name: "CruiseKit True Cost Calculator",
             description:
               "Use our calculator to see your true drink package cost and whether you'll break even based on your actual drinking habits.",
           },
+        },
+        {
+          question: "Is a cruise drink package worth it?",
+          answer:
+            "A cruise drink package is worth it when your realistic daily drink value is higher than the package cost after gratuity. It is usually harder to justify for casual drinkers, port-heavy itineraries, families, or couples where one adult drinks much less but both adults must buy the package.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "How many drinks per day make the package worth it?",
+          answer:
+            "For most major lines, the break-even point lands around 5 to 8 paid alcoholic drinks per day. Specialty coffee, bottled water, soda, mocktails, and fresh juice can lower the break-even point if they are included in your package and you would buy them anyway.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "Does the drink package price include gratuity?",
+          answer:
+            "Not always. Carnival, Royal Caribbean, Celebrity, Holland America, and several other lines add a beverage gratuity or service charge to the package price. Some bundles include the service charge in the advertised bundle price. Always compare the all-in daily price, not the headline package price.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "Should I use a cruise drink package calculator?",
+          answer:
+            "Yes if the package will materially change your trip budget. A calculator helps you compare the package against your actual drinking habits, sea days, port days, cabin rules, and the rest of the cruise costs you still need to budget for.",
+          appliesTo: "All cruise lines",
         },
         {
           question: "Do all adults in the cabin have to buy the drink package?",
@@ -436,9 +460,9 @@ const drinkPackageGuide: Guide = {
 
 const tippingGuide: Guide = {
   slug: "cruise-tipping-guide",
-  title: "Cruise Tipping Guide 2026: Auto-Gratuities, Cash Tips & More",
+  title: "Cruise Gratuity Calculator + Tipping Guide",
   description:
-    "Understand cruise ship gratuities — how much, who to tip, and whether you can remove auto-gratuities. Updated rates for all 9 major cruise lines.",
+    "Estimate cruise gratuities, cash tips, service charges, and how tipping changes the real cost of your cruise.",
   category: "budget",
   icon: "\uD83D\uDCB0",
   readTime: "10 min read",
@@ -446,13 +470,48 @@ const tippingGuide: Guide = {
   sections: [
     {
       id: "auto-gratuities",
-      title: "Auto-Gratuities Explained",
+      title: "Cruise Gratuity Calculator Questions",
       content: [
+        {
+          question: "How much are cruise gratuities per day?",
+          answer:
+            "Most major cruise lines charge about $16 to $25 per person per day in automatic gratuities, depending on the line and cabin type. Suites usually cost more. For two adults on a 7-night cruise, automatic gratuities can add roughly $224 to $350 before any extra cash tips.",
+          appliesTo: "All cruise lines",
+        },
         {
           question: "What are auto-gratuities and how do they work?",
           answer:
             "Auto-gratuities (also called \"daily service charges\" or \"crew appreciation\") are a fixed daily charge added automatically to your onboard account. They typically range from $16-25 per person per day depending on the cruise line and cabin category, and they're designed to compensate the behind-the-scenes crew who make your cruise possible — cabin stewards, dining room staff, kitchen workers, and other service personnel. These charges appear on your final bill and are paid with whatever payment method you linked to your cruise card. On a 7-night cruise for two people, auto-gratuities alone can add $224-$350 to your total cost. This is one of the biggest \"hidden\" costs that surprises first-time cruisers.",
           appliesTo: "All cruise lines",
+        },
+        {
+          question: "Are cruise gratuities mandatory?",
+          answer:
+            "Automatic gratuities are treated as a standard part of the cruise bill on most lines. Some lines technically allow adjustments at Guest Services, but drink package gratuities, bundle gratuities, and prepaid service charges are often non-removable. The practical budgeting answer is to treat gratuities as mandatory unless your fare explicitly includes them.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "Should I prepay gratuities or pay onboard?",
+          answer:
+            "Prepaying gratuities can make your final onboard bill easier to manage and locks that cost into the trip budget before you sail. Paying onboard gives you flexibility if plans change, but it also means a larger bill at the end of the cruise.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "How do cruise gratuities affect the real cost of a cruise?",
+          answer:
+            "Gratuities can add hundreds of dollars to the real trip total and are rarely visible in the first advertised fare. They also interact with drink packages, spa treatments, specialty dining, and room service because those items may add separate service charges.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "Can I include gratuities in my cruise budget?",
+          answer:
+            "Yes. Add the cruise line's daily gratuity rate, number of guests, number of nights, cabin type, and any extra cash tips to your budget. CruiseKit's calculator is built to include those costs alongside fare, taxes, drinks, WiFi, excursions, and port spending.",
+          appliesTo: "All cruise lines",
+          productRecommendation: {
+            name: "CruiseKit True Cost Calculator",
+            description:
+              "Estimate automatic gratuities and cash tips as part of your full cruise budget.",
+          },
         },
         {
           question:
@@ -509,14 +568,55 @@ const tippingGuide: Guide = {
 
 const portDayGuide: Guide = {
   slug: "port-day-tips",
-  title: "Port Day Tips: How to Make the Most of Every Stop",
+  title: "How Much Cash to Bring on a Cruise: Tips, Ports & Excursions",
   description:
-    "Passport requirements, ship time vs. local time, booking excursions, and everything else you need to know for stress-free port days.",
+    "Plan cash, port spending, excursion budgets, tips, ship time, and documentation for stress-free cruise port days.",
   category: "port-days",
   icon: "\uD83C\uDFDD\uFE0F",
   readTime: "10 min read",
   updatedDate: "2026-03-28",
   sections: [
+    {
+      id: "cash-port-spending-excursion-budget",
+      title: "Cash, Port Spending, and Excursion Budgets",
+      content: [
+        {
+          question: "How much cash should I bring on a cruise?",
+          answer:
+            "For most Caribbean and Bahamas cruises, bring $100 to $200 in small bills for port taxis, tips, local vendors, beach chairs, luggage porters, and small purchases. Bring more if you plan to use cash for independent excursions or markets. Keep most of it in the cabin safe and carry only what you need for each port day.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "Do I need cash on the ship or only in port?",
+          answer:
+            "Most onboard spending goes on your cruise card, so cash is mainly useful for luggage porters, extra crew tips, casino play, and port days. Ports are where small bills matter most because taxis, beach vendors, guides, and markets may prefer or require cash.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "How much should I budget for cruise excursions?",
+          answer:
+            "A practical starting point is $85 to $100 per person per port for cruise-line excursions, or less if you book independent tours or plan free beach and walking days. A couple visiting three ports can easily spend $510 to $600 on excursions alone.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "What port-day expenses should I plan for?",
+          answer:
+            "Plan for excursions, taxis, guide and driver tips, beach chairs, lockers, food and drinks off the ship, souvenirs, currency conversion, ATM fees, and emergency transportation back to the ship. These small line items are why port spending belongs in the full cruise budget.",
+          appliesTo: "All cruise lines",
+        },
+        {
+          question: "How much spending money do I need for a 7-day cruise?",
+          answer:
+            "For a 7-day cruise, many travelers should budget at least $300 to $600 per couple for port spending and cash tips before excursions. Add more if you want paid tours, beach clubs, specialty dining, casino play, spa treatments, or significant shopping.",
+          appliesTo: "All cruise lines",
+          productRecommendation: {
+            name: "CruiseKit True Cost Calculator",
+            description:
+              "Add port cash, excursions, tips, and onboard extras to estimate the real trip total.",
+          },
+        },
+      ],
+    },
     {
       id: "passport-requirements",
       title: "Passport & Documentation Requirements",

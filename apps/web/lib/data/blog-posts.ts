@@ -347,9 +347,9 @@ const bestPortsPost: BlogPost = {
 
 const carnivalCheersPost: BlogPost = {
   slug: "carnival-cheers-drink-package-worth-it",
-  title: "Carnival Cruise Drink Package: Is CHEERS! Worth It in 2026?",
+  title: "Carnival CHEERS Drink Package: Is It Worth It in 2026?",
   excerpt:
-    "We did the math on Carnival's CHEERS! drink package. At $82.54 per day, you need 6 to 7 cocktails daily to break even. Here is exactly how to decide.",
+    "Use Carnival drink package calculator math to decide whether CHEERS is worth it after the daily price, service charge, cabin rule, and your real drink count.",
   category: "tips",
   author: "CruiseKit Editorial",
   publishedDate: "2026-02-20",
@@ -360,10 +360,18 @@ const carnivalCheersPost: BlogPost = {
     "Carnival",
     "drink package",
     "CHEERS",
+    "Carnival drink package calculator",
     "cruise tips",
     "beverage package",
   ],
   content: [
+    {
+      heading: "Carnival Drink Package Calculator: Start With Your Break-Even Point",
+      paragraphs: [
+        "The fastest way to decide whether CHEERS is worth it is to calculate your break-even point before you buy it. Start with Carnival's daily package price, add the service charge, multiply by every adult in the cabin, then compare that number with the drinks, specialty coffees, bottled water, and sodas you would actually buy.",
+        "For many cruisers, the math is not about whether one person can drink enough. It is whether the cabin average beats the combined package cost. Use the Carnival calculator page when you already have a fare and want the full trip total with CHEERS, WiFi, gratuities, excursions, and port spending included.",
+      ],
+    },
     {
       heading: "The Real Price: $82.54 Per Day, Not $69.95",
       paragraphs: [
@@ -414,18 +422,38 @@ const carnivalCheersPost: BlogPost = {
 
 const norwegianFreeAtSeaPost: BlogPost = {
   slug: "norwegian-free-at-sea-explained",
-  title:
-    "Norwegian Free at Sea: What's Actually Included (and What's Not)",
+  title: "NCL Free at Sea Cost: What Is Actually Included?",
   excerpt:
-    "\"Free\" is doing a lot of heavy lifting in \"Free at Sea.\" We break down every perk, every hidden gratuity, and whether the upgrade to Plus is worth $49.99 per day.",
+    "\"Free\" is doing a lot of heavy lifting in Free at Sea. See the real NCL Free at Sea cost, perk gratuities, WiFi limits, and Plus upgrade math.",
   category: "tips",
   author: "CruiseKit Editorial",
   publishedDate: "2026-02-15",
   readTime: "8 min read",
   imageUrl:
     "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/grand-turk-turks-caicos/overview/grand-turk-island-coast.jpg",
-  tags: ["Norwegian", "Free at Sea", "NCL", "drink package", "cruise perks"],
+  tags: [
+    "Norwegian",
+    "Free at Sea",
+    "NCL",
+    "NCL Free at Sea cost",
+    "drink package",
+    "cruise perks",
+  ],
   content: [
+    {
+      heading: "NCL Free at Sea Cost: What Is Actually Included?",
+      paragraphs: [
+        "Free at Sea can be valuable, but it is not the same as a zero-cost all-inclusive fare. Norwegian bakes some perk value into the cruise price, then still charges mandatory gratuities, upgrade fees, or limits on certain perks depending on what you select.",
+        "The right question is not simply whether Free at Sea is good. The better question is whether your fare plus perk costs beats another cruise line's fare plus a la carte drinks, WiFi, specialty dining, and excursions.",
+      ],
+    },
+    {
+      heading: "Is NCL Free at Sea Really Free?",
+      paragraphs: [
+        "No. The open bar may be included as a promotion, but beverage gratuities still apply. The WiFi perk gives limited minutes unless you upgrade. Specialty dining and excursion credits can help, but they rarely remove the full cost of those categories.",
+        "Treat Free at Sea like a bundle. It can save money if you use the perks, and it can be misleading if you compare only the advertised fare.",
+      ],
+    },
     {
       heading: "\"Free\" Is Doing a Lot of Heavy Lifting Here",
       paragraphs: [
@@ -469,7 +497,7 @@ const norwegianFreeAtSeaPost: BlogPost = {
       ],
     },
     {
-      heading: "Free at Sea Plus: Is $49.99 Per Day Worth It?",
+      heading: "NCL Free at Sea Plus Cost: Is $49.99 Per Day Worth It?",
       paragraphs: [
         "Free at Sea Plus upgrades every perk. The open bar covers drinks up to $25 instead of $15, WiFi upgrades from 150 minutes to unlimited streaming-speed internet, specialty dining adds more meals, and the excursion credit increases. At $49.99 per person per day plus gratuities, the Plus upgrade adds $350 to $500 per person for a 7-night cruise.",
         "If you value unlimited fast WiFi and want to order top-shelf drinks without paying the difference, Plus can be worthwhile. But for casual cruisers who are happy with well drinks and do not need constant connectivity, standard Free at Sea is sufficient. Run the numbers for your specific habits before upgrading.",
@@ -823,9 +851,9 @@ const norwegianCruiseCostPost: BlogPost = {
 
 const mscCruiseCostPost: BlogPost = {
   slug: "msc-cruise-cost",
-  title: "How Much Does an MSC Cruise Really Cost?",
+  title: "MSC Cruise Cost: Fare, Drinks, WiFi, Tips & Real Total",
   excerpt:
-    "MSC offers the lowest base fares in the industry starting at $249, but the Premium Extra package at $85/day and $16/day gratuities change the math. Full breakdown inside.",
+    "MSC can look cheap at the fare level. See the real MSC cruise cost after drinks package prices, WiFi, gratuities, excursions, and onboard extras.",
   category: "tips",
   author: "CruiseKit",
   publishedDate: "2026-03-26",
@@ -835,11 +863,34 @@ const mscCruiseCostPost: BlogPost = {
   tags: [
     "MSC",
     "cruise cost",
+    "MSC drink package cost",
+    "MSC cruise WiFi cost",
     "budget cruise",
     "hidden fees",
     "MSC Cruises",
   ],
   content: [
+    {
+      heading: "MSC Cruise Cost: The Fare Is Only the Start",
+      paragraphs: [
+        "MSC is one of the strongest value plays in cruising when you skip extras or choose the right bundle. It can also become a very different budget once you add drinks, WiFi, excursions, specialty dining, gratuities, and port spending.",
+        "Use this guide for the line-specific assumptions, then use the MSC calculator when you have a fare and want the full pre-booking total.",
+      ],
+    },
+    {
+      heading: "MSC Drink Package Cost and Drinks Package Prices",
+      paragraphs: [
+        "MSC drink package pricing depends on market, ship, timing, and fare type. CruiseKit's planning data uses Premium Extra as the main alcoholic package input and keeps alcohol-free package assumptions separate so you can compare the real daily impact.",
+        "The important budget question is whether you need a package every day. Port-heavy itineraries can make pay-as-you-go cheaper, while sea-day-heavy itineraries can make a package easier to justify.",
+      ],
+    },
+    {
+      heading: "MSC Cruise WiFi Cost",
+      paragraphs: [
+        "MSC WiFi is a separate line item unless your fare type includes it. Basic browsing can be enough for messages and email, while streaming-capable internet costs more and should be multiplied by the number of devices you actually need.",
+        "Before comparing MSC against Carnival, Royal Caribbean, or Norwegian, include the internet tier you expect to buy. A cheap fare with two connected devices can stop looking quite as cheap.",
+      ],
+    },
     {
       heading: "The Lowest Fares in the Industry Come With Asterisks",
       paragraphs: [
@@ -1067,9 +1118,9 @@ const hollandAmericaCostPost: BlogPost = {
 
 const disneyCruiseCostPost: BlogPost = {
   slug: "disney-cruise-cost",
-  title: "How Much Does a Disney Cruise Really Cost?",
+  title: "Disney Cruise Budget: WiFi, Gratuities, Family Costs & Real Total",
   excerpt:
-    "Disney Cruise Line has no drink packages, charges $16/day gratuities, and starts at $1,309 per person. Here is why families still line up to book and what the real total looks like.",
+    "Plan a Disney cruise budget with the real family total after fare, WiFi, gratuities, adult dining, excursions, photos, and port spending.",
   category: "tips",
   author: "CruiseKit",
   publishedDate: "2026-03-21",
@@ -1078,12 +1129,36 @@ const disneyCruiseCostPost: BlogPost = {
     "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/900/160/75/dam/disney-cruise-line/cruise-products/san-diego/san-diego-adobeStock_82570608-32x9.jpg?1693498622655",
   tags: [
     "Disney",
+    "Disney cruise budget",
+    "Disney cruise WiFi cost",
+    "Disney cruise gratuity calculator",
     "cruise cost",
     "family cruise",
     "Disney Cruise Line",
     "kids",
   ],
   content: [
+    {
+      heading: "Disney Cruise Budget: Start With the Family Total",
+      paragraphs: [
+        "Disney Cruise Line pricing has to be judged as a family total, not as a per-person headline fare. The right budget includes the fare, taxes, gratuities, WiFi by device, adult dining, excursions, photos, transportation, hotel nights, and port spending.",
+        "Disney includes more family entertainment and rotational dining than many mainstream lines, but that does not remove the need to calculate the real total before booking.",
+      ],
+    },
+    {
+      heading: "Disney Cruise WiFi Cost",
+      paragraphs: [
+        "Disney WiFi is priced by plan and device need. A light messaging plan may work for one adult, but families who need multiple devices, email, or streaming-style access should budget substantially more across a 7-night sailing.",
+        "The easiest mistake is pricing one device when the actual trip needs two parent phones, a tablet, or occasional work access. Multiply the WiFi tier by the number of devices and nights before deciding the fare works.",
+      ],
+    },
+    {
+      heading: "Disney Cruise Gratuity Calculator",
+      paragraphs: [
+        "Disney gratuities are added per person per day, so they scale with every adult and child in the room. Families should calculate gratuities alongside taxes and port fees before comparing Disney with Royal Caribbean, Carnival, or Norwegian.",
+        "The calculator keeps Disney gratuities, WiFi, adult dining, excursions, and port spending in one place so the family budget reflects what you are likely to pay.",
+      ],
+    },
     {
       heading: "The Most Expensive Mainstream Cruise — and Worth Every Penny?",
       paragraphs: [
@@ -1578,17 +1653,46 @@ const disneyVsCarnivalFamiliesPost: BlogPost = {
 
 const howMuchCruiseCost2026Post: BlogPost = {
   slug: "how-much-does-a-cruise-really-cost-2026",
-  title: "How Much Does a Cruise Really Cost in 2026?",
+  title: "How Much Does a Cruise Really Cost in 2026? Fare + Fees",
   excerpt:
-    "The advertised fare is just the starting line. We broke down every real cost — mandatory fees, add-ons, and the extras nobody warns you about — so you can budget with confidence before you book.",
+    "See how much a cruise really costs after the fare, taxes, port fees, gratuities, drinks, WiFi, excursions, and onboard extras.",
   category: "tips",
   author: "CruiseKit Editorial",
   publishedDate: "2026-04-11",
   readTime: "10 min read",
   imageUrl:
     "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg?w=1200&q=80",
-  tags: ["cruise cost", "cruise budget", "hidden costs", "cruise planning"],
+  tags: [
+    "cruise cost",
+    "cruise budget",
+    "how much does a cruise cost",
+    "7 day cruise cost",
+    "hidden costs",
+    "cruise planning",
+  ],
   content: [
+    {
+      heading: "How Much Does a Cruise Really Cost?",
+      paragraphs: [
+        "A cruise really costs the fare plus mandatory fees plus the extras you are likely to buy. The fare covers the cabin, included dining, transportation between ports, basic entertainment, pools, and some activities. The real total adds taxes, port fees, daily gratuities, drinks, WiFi, excursions, specialty dining, insurance, transportation, parking, and port spending.",
+        "That is why two people can see an $800 advertised fare and finish with a $3,000-plus vacation total. The fare is real, but it is not the whole trip.",
+      ],
+    },
+    {
+      heading: "How Much Does a 7 Day Cruise Cost Per Person?",
+      paragraphs: [
+        "For a 7-night mainstream cruise, a bare-bones budget can be close to the fare plus $250 to $300 per person in taxes, port fees, and gratuities. A mid-range budget with drinks, WiFi, excursions, and a few extras can be much higher.",
+        "Per-person math is useful for comparing fares, but families and couples should always convert the estimate into the full cabin or group total before booking.",
+      ],
+    },
+    {
+      heading:
+        "How Much Is a Cruise After Taxes, Gratuities, Drinks, WiFi, and Excursions?",
+      paragraphs: [
+        "For a couple on a 7-night Caribbean sailing, taxes and gratuities alone can add roughly $500 to $600. Add one-device WiFi, a drink package or pay-per-drink budget, and a few excursions, and the difference between advertised fare and real total can reach hundreds or thousands of dollars.",
+        "The examples below show why CruiseKit treats the calculator as the first planning step, not an afterthought.",
+      ],
+    },
     {
       heading: "The Base Fare Illusion",
       paragraphs: [
@@ -1645,17 +1749,44 @@ const howMuchCruiseCost2026Post: BlogPost = {
 
 const fifteenHiddenCostsPost: BlogPost = {
   slug: "hidden-cruise-costs",
-  title: "15 Hidden Cruise Costs You Need to Know Before Booking",
+  title: "Hidden Cruise Costs: 15 Fees to Budget Before You Book",
   excerpt:
-    "From mandatory gratuities to casino holds on your credit card, these 15 costs add $1,000 to $3,000 to your cruise bill. Every price is verified for 2026.",
+    "See the cruise fees and add-ons that are not in the advertised fare, including gratuities, taxes, drinks, WiFi, excursions, port spending, and onboard extras.",
   category: "tips",
   author: "CruiseKit Editorial",
   publishedDate: "2026-04-11",
   readTime: "12 min read",
   imageUrl:
     "https://www.royalcaribbean.com/content/dam/royal/data/ports/falmouth-jamaica/falmouth-jamaica-port-aerial-coast.jpg",
-  tags: ["hidden costs", "cruise budget", "cruise tips", "first time cruise"],
+  tags: [
+    "hidden cruise costs",
+    "cruise budget",
+    "cruise fees",
+    "first time cruise",
+  ],
   content: [
+    {
+      heading: "What Costs Are Not Included in a Cruise Fare?",
+      paragraphs: [
+        "Most advertised cruise fares do not show the full vacation cost. The base fare usually covers your cabin, included dining, basic entertainment, and transportation between ports. It often leaves out taxes, port fees, daily gratuities, drink packages, WiFi, shore excursions, specialty dining, room service fees, parking, hotels, travel insurance, and port spending.",
+        "That gap is why a cheap cruise can look affordable on the search page and still become expensive by final payment or checkout. Before you compare sailings, compare the real total: fare plus mandatory fees plus the add-ons you are likely to buy.",
+      ],
+    },
+    {
+      heading:
+        "Are Taxes, Port Fees, Gratuities, Drinks, WiFi, and Excursions Included?",
+      paragraphs: [
+        "Taxes and port fees are usually added before final checkout, but they may not appear in the first price you see. Gratuities are often charged daily on the ship or prepaid before sailing. Drinks, WiFi, specialty dining, spa treatments, photos, and shore excursions are usually extra unless you buy a bundle or sail on a line that includes that specific item.",
+        "The most common first-cruise surprise is not one huge fee. It is the stack: gratuities, drink-package gratuity, internet, port transportation, excursion tips, parking, and one or two onboard purchases. Each line item is understandable on its own, but together they can add hundreds or thousands of dollars.",
+      ],
+    },
+    {
+      heading: "How Hidden Cruise Costs Change the Real Total",
+      paragraphs: [
+        "Drinks, WiFi, gratuities, and excursions are the biggest swing factors because they scale by guest, night, or port. A couple on a 7-night cruise can add several hundred dollars in gratuities, more than $150 for one-device WiFi, $500 or more in excursions, and more than $800 if both adults buy a drink package.",
+        "Use the list below as a budget checklist, then run the numbers in the cruise cost calculator so your comparison includes the add-ons you actually want instead of only the advertised fare.",
+      ],
+    },
     {
       heading: "1. Automatic Gratuities — $224 to $350 for Two People",
       paragraphs: [
@@ -1765,7 +1896,7 @@ const fifteenHiddenCostsPost: BlogPost = {
       heading: "The Real Total: Stop Guessing and Calculate",
       paragraphs: [
         "Add up all 15 of these hidden costs and a \"cheap\" cruise can easily cost $1,500 to $3,000 more than the advertised fare. For two adults on a 7-night cruise, here is a realistic breakdown of hidden and add-on costs alone — not including the base fare: gratuities $238 to $350, port fees $280 to $308, drink packages $840 to $1,540, WiFi $154 to $280, excursions $510 to $600, two specialty dinners $120 to $280, parking $105 to $175, one hotel night $100 to $250, room service $20 to $40, port cash and ATM fees $20 to $50, luggage tips $16 to $40. Total add-on costs: $2,403 to $3,913.",
-        "That is why a $500 per person cruise becomes a $3,500 to $5,000 vacation. There is nothing wrong with that — a week-long, all-inclusive vacation for $4,000 is genuinely good value. But you need to budget for the real number, not the fantasy number on the booking page. Use our free True Cost Calculator at /calculator to see exactly what your specific cruise will cost. Plug in your cruise line, ship, cabin type, and the add-ons you actually want, and we will show you the real total — no surprises.",
+        "That is why a $500 per person cruise becomes a $3,500 to $5,000 vacation. There is nothing wrong with that — a week-long, all-inclusive vacation for $4,000 is genuinely good value. But you need to budget for the real number, not the fantasy number on the booking page. Use CruiseKit's free True Cost Calculator to see exactly what your specific cruise will cost. Plug in your cruise line, ship, cabin type, and the add-ons you actually want, and we will show you the real total — no surprises.",
       ],
     },
   ],
