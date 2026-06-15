@@ -90,3 +90,87 @@ No-link answer angle:
 > The fare might be real and still incomplete. I would add taxes/port fees, daily gratuities, drinks, WiFi, excursions, insurance, parking/hotel, and port cash before deciding whether it is actually cheap.
 
 Link status: no link.
+
+## 2026-06-15 Live Response Pack
+
+These are written for manual copy/edit only. Do not paste them unchanged across multiple threads.
+
+### Draft 9 - Royal Caribbean Drink Package Break-Even
+
+Target source: `https://www.reddit.com/r/royalcaribbean/comments/1u4ypok/heres_a_tip_to_make_the_drink_package_worth_it/`
+
+> One nuance I would add: the break-even is really cabin + itinerary math, not just drink count. Take the full package price after gratuity, divide it by cruise days, then subtract the non-alcoholic stuff you would buy anyway like coffees, bottled water, soda, smoothies, or mocktails. Then redo the math for port days because you have fewer onboard hours. If it only works when you force extra drinks, pay as you go. If it works on a normal day for your cabin, the package is buying convenience plus savings.
+
+Link status: no link.
+
+### Draft 10 - Actual Spend Beats Theoretical Max
+
+Target source: `https://www.reddit.com/r/royalcaribbean/comments/1tuv62i/drink_package_cost_vs_what_we_actually_spent/`
+
+> This is the best way to judge it: compare the package against what you actually drank, not what you could theoretically drink. For light or uneven drinkers, the refreshment package plus a few a la carte alcoholic drinks can beat the deluxe package. I would also separate sea days from port days because the average often drops hard when you are off the ship most of the day.
+
+Link status: no link.
+
+### Draft 11 - NCL Free At Sea Charges
+
+Target source: `https://www.reddit.com/r/NCL/comments/1q2o01e/freeatsea_unlimited_open_bar_package/`
+
+> The confusing part is that NCL can show a few different charges that sound similar. I would separate them into buckets: cruise fare, taxes/port fees, daily service charge for crew, beverage package charge/gratuity, specialty dining charge, and any Free at Sea Plus upgrade. The daily service charge is not the same thing as the beverage-package charge. The cleanest check is to look at the invoice line by line and ask, "Would this disappear if I removed the beverage/dining perk?"
+
+Link status: no link.
+
+### Draft 12 - NCL Free At Sea Plus Worth It
+
+Target source: `https://www.reddit.com/r/NCL/comments/1s2vmqv/is_free_at_sea_plus_really_worth_it_as_i_already/`
+
+> I would decide Free at Sea Plus by what you would buy anyway, not by the headline value. List the extras you would actually use: premium drinks above the included limit, upgraded WiFi/streaming, extra specialty dining, bottled water or Starbucks if relevant, and excursion credits. If those normal-use items beat the per-person-per-day upgrade cost, it can make sense. If you have to change your behavior to "get value," it is probably not worth it.
+
+Link status: no link.
+
+### Draft 13 - Eight-Day Cruise Budget
+
+Target source: `https://www.reddit.com/r/Cruise/comments/1qwyw5j/how_much_money_do_i_need_for_my_8_day_cruise/`
+
+> I would budget in buckets instead of one big number: mandatory gratuities/service charges, onboard extras, port/excursion spending, cash tips, gambling/spa/classes if you do those, and a backup buffer. The ship itself is mostly cashless, but ports and extra tips are where small bills help. If you already prepaid excursions and gratuities, your "extra" budget can be much lower than someone buying drinks, WiFi, spa, and tours onboard.
+
+Link status: no link.
+
+### Draft 14 - Cruise WiFi
+
+Target source: `https://www.reddit.com/r/Cruise/comments/1rifnlb/wifi_on_cruise/`
+
+> I would decide WiFi by use case: messaging only, email/basic browsing, streaming, or work calls. Phone international plans are usually useful in port, but at sea the ship/cellular-at-sea charges can get ugly depending on carrier. If you need reliable access while sailing, buy the ship plan. If you just want check-ins, you may be able to use port days and skip or buy one device only.
+
+Link status: no link.
+
+### Draft 15 - Current Royal Caribbean Drink Package Prices
+
+Target source: `https://www.reddit.com/r/royalcaribbean/comments/1qu1nim/current_drink_packages/`
+
+> I would ignore the "percent off" language and compare the final daily price after gratuity. If the package is refundable in your cruise planner, book at a price you can live with, then cancel and rebook if it drops. Also check the cabin rule: if every adult in the stateroom has to buy it, the break-even should be based on the whole cabin, not the heaviest drinker.
+
+Link status: no link.
+
+### Draft 16 - Disney Family Budget
+
+Target pattern: Facebook public snippets around Disney onboard extras and gratuities.
+
+> For Disney, I would budget by family total instead of cabin fare: fare, taxes, gratuities for every guest, WiFi, photos, adult dining, excursions, hotel/transportation, souvenirs, and port spending. The included entertainment helps a lot, but the per-person/per-night items add up fast when you multiply by every adult and child.
+
+Link status: no link.
+
+### Draft 17 - Carnival CHEERS
+
+Target pattern: Facebook public snippets around Carnival CHEERS worth-it questions.
+
+> For CHEERS, I would do the math for the whole cabin, not just the person most likely to drink. Add the daily package price plus service charge for every adult who has to buy it, then subtract things you would buy anyway like specialty coffee, soda, energy drinks, bottled water, or milkshakes. Port days usually lower the average because you are off the ship for several hours.
+
+Link status: no link.
+
+### Draft 18 - When It Is Okay To Mention CruiseKit
+
+Use only if links/business participation are allowed and you are comfortable disclosing affiliation:
+
+> Disclosure: I'm affiliated with CruiseKit, so I won't drop a link unless that is allowed here. The way I'd think about this is to add fare + taxes/fees + gratuities + drinks + WiFi + excursions + port spending before comparing cruise lines. The advertised fare alone usually does not answer the real budget question.
+
+Link status: link only if explicitly allowed by community rules.

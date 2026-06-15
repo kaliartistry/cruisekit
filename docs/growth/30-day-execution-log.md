@@ -80,3 +80,27 @@ Produce and queue short-form and creator materials from mapped questions. Do not
 ## Days 24-30 - Pending
 
 Review Search Console movement, CTR changes, calculator conversion, store clicks, saved trips, and affiliate clicks. Decide the next sprint based on measured impact.
+
+## Day 2 - 2026-06-15
+
+Status: in progress
+
+Completed:
+
+- Ran public community opportunity discovery for Reddit, Facebook-visible snippets, and Cruise Critic/forum threads around cruise budget, drink packages, WiFi, gratuities, NCL Free at Sea, Disney extras, and Carnival CHEERS.
+- Created `docs/growth/community-response-opportunities-2026-06-15.md`.
+- Added current Reddit opportunities to `docs/growth/reddit-opportunities.csv`.
+- Added Facebook-visible question patterns to `docs/growth/facebook-group-research.csv`.
+- Added Cruise Critic/forum targets to `docs/growth/community-targets.csv`.
+- Added copy-ready no-link response drafts to `docs/growth/community-draft-queue.md`.
+
+Blocked:
+
+- Reddit direct JSON/search requests were blocked by Reddit network policy; public search results and browser-readable pages were used instead.
+- Facebook direct group/post pages returned login or temporary-block screens; only public search snippets were used.
+
+Next:
+
+- User manually reviews target thread context and group rules.
+- User copy-edits and posts no-link answers only where comments are open and community rules allow participation.
+- No CruiseKit links unless rules clearly allow it and affiliation is disclosed.
