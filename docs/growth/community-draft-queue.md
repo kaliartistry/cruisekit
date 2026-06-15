@@ -174,3 +174,71 @@ Use only if links/business participation are allowed and you are comfortable dis
 > Disclosure: I'm affiliated with CruiseKit, so I won't drop a link unless that is allowed here. The way I'd think about this is to add fare + taxes/fees + gratuities + drinks + WiFi + excursions + port spending before comparing cruise lines. The advertised fare alone usually does not answer the real budget question.
 
 Link status: link only if explicitly allowed by community rules.
+
+## 2026-06-15 Facebook Verified Response Pack
+
+Prepared after logged-in Chrome review. No comments were posted.
+
+### Draft F11 - Carnival First Cruise Drink Package
+
+Target source: `https://www.facebook.com/groups/CarnivalCruiseLines/posts/26057222537221567/`
+
+> I would treat it as a math question plus a convenience question. Take the daily package price, add the service charge, multiply by every adult in the cabin who has to buy it, then compare that against what you would realistically drink on sea days and port days. Also count non-alcoholic items you would buy anyway like specialty coffee, soda, energy drinks, bottled water, or milkshakes. If the math only works when you force extra drinks, skip it. If it works on a normal vacation day, the package can be worth it for convenience.
+
+Link status: no link. Do not mention CruiseKit.
+
+### Draft F12 - Carnival CHEERS Worth It
+
+Target source: `https://www.facebook.com/groups/1544317262570957/posts/2701966160139389/`
+
+> CHEERS is usually worth it only if the whole cabin math works. I would not judge it by one person's best day. Add the full daily cost for every adult required to buy it, then subtract drinks you would buy anyway: cocktails, wine, specialty coffee, bottled water, soda, energy drinks, and milkshakes. Port days matter because you have fewer onboard hours. If you are close to break-even, convenience may be the deciding factor.
+
+Link status: no link. Do not mention CruiseKit.
+
+### Draft F13 - Royal Caribbean Drink Package Value
+
+Target source: `https://www.facebook.com/groups/jennandlaurenrccl/posts/1350647243449873/`
+
+> I would ignore the sale percentage and compare the final all-in daily price against your normal use. Sea days and port days should be counted separately because port days usually lower the average. If you are light or uneven drinkers, refreshment package plus a few a la carte alcoholic drinks can beat the deluxe package. If everyone in the room naturally hits the daily number, the deluxe package can be worth it for convenience.
+
+Link status: no link. Do not mention CruiseKit. Avoid tipping/gratuity debate in this group.
+
+### Draft F14 - Disney Folio / Extra Expense Budget
+
+Target source: `https://www.facebook.com/groups/728117328930593/posts/998983258510664/`
+
+> I would split the onboard budget into buckets: WiFi, photos, adult dining, excursions, souvenirs, extra snacks/drinks, laundry, extra tips, and transportation or hotel costs around the cruise. Disney includes a lot, so you can keep spending low if you skip shopping and paid extras. The expensive surprises are usually photos, excursions, WiFi, spa, and merchandise.
+
+Link status: no link. Do not mention CruiseKit.
+
+### Draft F15 - Disney Family Onboard Spending
+
+Target source: `https://www.facebook.com/groups/437902075291251/posts/1006555065092613/`
+
+> For a Disney budget, I would think in family total, not cabin fare. Multiply per-person/per-night items by everyone traveling, then add WiFi, photos, adult dining, excursions, souvenirs, laundry, port spending, and any extra tips you plan to give. You can absolutely keep the folio small, but Disney also makes it very easy to spend a lot if you do photos, shops, excursions, and specialty add-ons.
+
+Link status: no link. Do not mention CruiseKit or any travel-planning business.
+
+### Draft F16 - First MSC Cruise Package Question
+
+Target source: `https://www.facebook.com/groups/849988213221869/posts/1508766064010744/`
+
+> For a first cruise, I would price the drink package by normal behavior, not vacation optimism. If you mostly want water, soda, coffee, or a few alcoholic drinks, pay-as-you-go or a lighter package may be cheaper. If you want the bill prepaid and will use it every day, the package can be more about convenience than pure savings. Port-heavy itineraries usually make packages harder to justify.
+
+Link status: no link. Do not mention CruiseKit.
+
+### Draft F17 - Royal Caribbean Deluxe vs Refreshment Package
+
+Target source: `https://www.facebook.com/groups/jennandlaurenrccl/posts/1267933915054540/`
+
+> If one person drinks alcohol and the other does not, I would price the refreshment package plus a la carte alcohol before buying deluxe. The refreshment package can cover mocktails, soda, coffees, bottled water, and similar items, then you only pay for alcoholic drinks separately. That can beat deluxe if the alcohol drinker is not consistently drinking enough every day.
+
+Link status: no link. Do not mention CruiseKit.
+
+### Draft F18 - Royal Caribbean Team DX Package
+
+Target source: `https://www.facebook.com/groups/657504621667854/posts/2118740305544271/`
+
+> The deluxe package can make sense if you use the whole package, not just alcohol: specialty coffees, bottled water, fresh juices, soda, mocktails, smoothies, and alcoholic drinks. I would compare it against your normal daily pattern and the itinerary. Sea-day-heavy trips make it easier to use; port-heavy trips make it harder unless you still drink a lot onboard at night.
+
+Link status: no link. Do not mention CruiseKit.

@@ -102,6 +102,8 @@ Suggested no-link answer:
 
 ## Facebook Opportunities Requiring Manual Review
 
+Update after logged-in Chrome review: the Facebook targets below were later opened successfully in the user's Chrome session and verified as visible with comment controls. Use `docs/growth/facebook-response-opportunities-2026-06-15.md` as the current source of truth for Facebook drafts and rule notes.
+
 These are not ready-to-post from automation because Facebook direct access was blocked. Use them as search targets, then manually verify group rules, thread context, and whether comments are still open.
 
 | Source | Visible public pattern | Suggested answer angle |

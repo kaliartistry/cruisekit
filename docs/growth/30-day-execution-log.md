@@ -93,14 +93,16 @@ Completed:
 - Added Facebook-visible question patterns to `docs/growth/facebook-group-research.csv`.
 - Added Cruise Critic/forum targets to `docs/growth/community-targets.csv`.
 - Added copy-ready no-link response drafts to `docs/growth/community-draft-queue.md`.
+- Used the user's logged-in Chrome session to verify Facebook target posts F11-F18 were visible and showed comment controls.
+- Created `docs/growth/facebook-response-opportunities-2026-06-15.md`.
+- Updated Facebook rows and drafts with logged-in Chrome verification, group-rule risk notes, and no-link response language.
 
 Blocked:
 
 - Reddit direct JSON/search requests were blocked by Reddit network policy; public search results and browser-readable pages were used instead.
-- Facebook direct group/post pages returned login or temporary-block screens; only public search snippets were used.
+- Facebook search results were noisy and did not expose clean group-post URLs, so verified direct target posts were used instead.
 
 Next:
 
-- User manually reviews target thread context and group rules.
-- User copy-edits and posts no-link answers only where comments are open and community rules allow participation.
+- User manually copy-edits one Facebook draft at a time and posts no-link answers only where comments are open and community rules allow participation.
 - No CruiseKit links unless rules clearly allow it and affiliation is disclosed.
