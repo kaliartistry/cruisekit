@@ -146,3 +146,17 @@ LinkedIn content pack:
 - Created five PNG visuals plus a contact sheet under `docs/growth/assets/linkedin-posts/`.
 - Added LinkedIn UTM rows to `docs/growth/utm-campaigns.csv`.
 - Did not publish any LinkedIn posts; exact copy and visual approval is still required before posting.
+
+LinkedIn publishing:
+
+- Published `LI01` from the CruiseKit LinkedIn Page with the approved visual and alt text.
+- Published URL: `https://www.linkedin.com/feed/update/urn:li:share:7472301688914182145?actorCompanyId=132024242`.
+- Created `docs/growth/linkedin-posting-log-2026-06-15.md`.
+- Did not boost the post, try Premium Page, tag followers, invite connections, send DMs, create ads, or touch billing.
+
+Reddit and Quora profile publishing research:
+
+- Confirmed Reddit profile posts are a possible owned publishing surface, but not a dependable pure backlink tactic.
+- Treated `Aura` as likely `Quora` and documented Quora Spaces/answer strategy.
+- Created `docs/growth/reddit-quora-profile-publishing-plan-2026-06-15.md`.
+- Did not publish to Reddit, Quora, communities, Spaces, or forums.
