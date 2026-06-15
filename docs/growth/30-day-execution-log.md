@@ -137,3 +137,12 @@ LinkedIn Page setup:
 - Created `docs/growth/linkedin-page-setup-log-2026-06-15.md`.
 - Verified the member-facing Page shows the CruiseKit cover image, logo, tagline, overview, website, industry, and company size.
 - Did not create posts, invite connections, send DMs, create jobs, start ads, upgrade Premium, or touch billing.
+
+LinkedIn content pack:
+
+- Created five draft LinkedIn Page posts with one branded square visual per post.
+- Created `docs/growth/linkedin-post-pack-2026-06-15.md`.
+- Created `docs/growth/linkedin-post-calendar-2026-06-15.csv`.
+- Created five PNG visuals plus a contact sheet under `docs/growth/assets/linkedin-posts/`.
+- Added LinkedIn UTM rows to `docs/growth/utm-campaigns.csv`.
+- Did not publish any LinkedIn posts; exact copy and visual approval is still required before posting.
