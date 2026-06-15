@@ -121,3 +121,10 @@ Facebook Page setup:
 - Added CruiseKit website, App Store, Google Play, and EventSync links to the user's personal profile while preserving the existing Kali Artistry link.
 - Created `docs/growth/facebook-page-setup-log-2026-06-15.md`.
 - Did not invite friends, connect WhatsApp, create an announcement post, start ads, add billing, or add EventSync to the CruiseKit Page.
+
+Facebook Page cover:
+
+- Created `docs/growth/assets/cruisekit-facebook-cover-2026-06-15.png`.
+- Uploaded the cover image to the CruiseKit Facebook Page.
+- Verified the Page header no longer appears blank and shows the CruiseKit cover image.
+- Switched Facebook back to the user's Kali McCarthy identity after the upload.

@@ -12,6 +12,7 @@ Page URL: `https://www.facebook.com/profile.php?id=61590924745850`
 - Category: `Travel Company`
 - Bio: `See what your cruise will actually cost before you book. CruiseKit adds up fares, gratuities, drinks, WiFi, excursions, port spending, and onboard extras.`
 - Profile image: `apps/web/public/cruisekit-logo-square.png`
+- Cover image: `docs/growth/assets/cruisekit-facebook-cover-2026-06-15.png`
 - Website: `https://cruisekit.app/`
 - Action button: `Learn more`
 - Action button destination: `https://cruisekit.app/`
@@ -47,3 +48,4 @@ Verified in the user's personal profile Links section:
 
 - Page notifications remained on.
 - Meta marketing/promotional emails for the new Page were turned off during setup.
+- Facebook was switched back to the user's personal profile after the Page setup and cover upload work.
