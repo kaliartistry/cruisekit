@@ -113,3 +113,11 @@ Posted with user approval:
 - Posted to Carnival first-cruise drink-package thread, Disney folio/budget thread, and MSC first-cruise package thread.
 - Created `docs/growth/facebook-posting-log-2026-06-15.md` with exact posted text and URLs.
 - Did not post links, mention CruiseKit, send DMs, react, join groups, or change account state.
+
+Facebook Page setup:
+
+- Created the CruiseKit Facebook Page and configured category, bio, profile image, website, and Learn More CTA.
+- Added CruiseKit website, App Store, and Google Play links to the CruiseKit Page.
+- Added CruiseKit website, App Store, Google Play, and EventSync links to the user's personal profile while preserving the existing Kali Artistry link.
+- Created `docs/growth/facebook-page-setup-log-2026-06-15.md`.
+- Did not invite friends, connect WhatsApp, create an announcement post, start ads, add billing, or add EventSync to the CruiseKit Page.
