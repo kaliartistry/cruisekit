@@ -36,6 +36,7 @@ const FOOTER_COLUMNS = [
   {
     title: "Company",
     links: [
+      { label: "What is CruiseKit?", href: "/what-is-cruisekit" },
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
       { label: "How we make money", href: "/how-we-make-money" },
