@@ -197,7 +197,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Jamaica. UK Governor's Office: (345) 244-2401",
     },
     region: "western",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/george-town-grand-cayman/george-town-grand-cayman-stingray-city.jpg",
+    imageUrl: "/assets/ports/grand-cayman.jpg",
   },
 
   /* ================================================================ */
@@ -246,7 +246,7 @@ export const PORTS: PortData[] = [
       hospital: "Schneider Regional Medical Center",
     },
     region: "eastern",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/charlotte-amalie-st-thomas/charlotte-amalie-st-thomas-magens-bay.jpg",
+    imageUrl: "/assets/ports/st-thomas.jpg",
   },
 
   /* ================================================================ */
@@ -493,7 +493,7 @@ export const PORTS: PortData[] = [
       hospital: "Lower Keys Medical Center",
     },
     region: "western",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/key/key-west-florida-southernmost-point.jpg",
+    imageUrl: "/assets/ports/key-west.jpg",
   },
 
   /* ================================================================ */
@@ -542,7 +542,7 @@ export const PORTS: PortData[] = [
       usConsulate: "No US Consulate — nearest in Nassau, Bahamas",
     },
     region: "eastern",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/grand-turk-turks-caicos/overview/grand-turk-island-coast.jpg",
+    imageUrl: "/assets/ports/grand-turk.jpg",
   },
 
   /* ================================================================ */
@@ -690,7 +690,7 @@ export const PORTS: PortData[] = [
       hospital: "First aid station on island; medical center on ship",
     },
     region: "bahamas",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/destinations/perfect-day/arrivals-plaza-perfect-day-at-cococay-aerial-view.jpg",
+    imageUrl: "/assets/ports/cococay.jpg",
   },
 
   /* ================================================================ */
@@ -738,7 +738,7 @@ export const PORTS: PortData[] = [
       hospital: "First aid station on site; medical center on ship",
     },
     region: "eastern",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/labadee-haiti/labadee-haiti-zipline-coast.jpg",
+    imageUrl: "/assets/ports/labadee.jpg",
   },
 
   /* ================================================================ */
@@ -788,7 +788,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(809) 567-7775 (Santo Domingo)",
     },
     region: "eastern",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/ports-and-destinations/ports/cabo-rojo-dominican-republic/overview/beach-playa-cabo-rojo-north-bahia-de-las-aguilas-around-pedernales-jaragua-national-park-dominican-republic.jpg",
+    imageUrl: "/assets/ports/amber-cove.jpg",
   },
 
   /* ================================================================ */
@@ -838,7 +838,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(501) 822-4011 (US Embassy Belmopan)",
     },
     region: "western",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/belize-city-belize/belize-crystal-caves-limestone.jpg",
+    imageUrl: "/assets/ports/belize-city.jpg",
   },
 
   /* ================================================================ */
@@ -888,7 +888,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(876) 702-6000 (US Embassy Kingston)",
     },
     region: "western",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/falmouth-jamaica/falmouth-jamaica-port-aerial-coast.jpg",
+    imageUrl: "/assets/ports/falmouth.jpg",
   },
 
   /* ================================================================ */
@@ -988,7 +988,7 @@ export const PORTS: PortData[] = [
       usConsulate: "(441) 295-1342",
     },
     region: "eastern",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/kings-wharf-bermuda/kings-wharf-bermuda-horseshoe-bay-rock-formations.jpg",
+    imageUrl: "/assets/ports/bermuda.jpg",
   },
 
   /* ================================================================ */
@@ -1186,7 +1186,7 @@ export const PORTS: PortData[] = [
       usConsulate: "Bogotá +57 1 275-2000",
     },
     region: "southern",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/cartagena-colombia/overview/cartagena-colombia-close-up-church-of-st-peter-claver.jpg",
+    imageUrl: "/assets/ports/cartagena.jpg",
   },
 
   /* ================================================================ */
@@ -1479,7 +1479,7 @@ export const PORTS: PortData[] = [
       hospital: "On-site medical facility, coordinates with ship medical staff",
     },
     region: "western",
-    imageUrl: "https://www.royalcaribbean.com/content/dam/royal/data/ports/belize-city-belize/belize-crystal-caves-limestone.jpg",
+    imageUrl: "/assets/ports/harvest-caye.jpg",
   },
 
   /* ================================================================ */

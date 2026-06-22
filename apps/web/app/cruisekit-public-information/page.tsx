@@ -125,6 +125,20 @@ const PRODUCT_LINKS: ReferenceLink[] = [
     icon: MapPinned,
   },
   {
+    title: "Cruise planning guides",
+    description:
+      "Read first-time cruise, packing, drink package, tipping, port day, and insurance guides.",
+    href: "/guides",
+    icon: FileText,
+  },
+  {
+    title: "CruiseKit FAQ",
+    description:
+      "Find concise answers about the app, calculators, port guides, downloads, privacy, and support.",
+    href: "/faq",
+    icon: HelpCircle,
+  },
+  {
     title: "Help and contact",
     description:
       "Find support links, FAQs, and contact information for corrections or questions.",

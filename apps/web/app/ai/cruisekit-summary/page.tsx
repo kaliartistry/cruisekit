@@ -33,6 +33,10 @@ const LINKS = [
   { href: "/app", label: "Download CruiseKit" },
   { href: "/calculator", label: "True Cost Calculator" },
   { href: "/ports", label: "Cruise Port Guides" },
+  { href: "/guides", label: "Cruise Planning Guides" },
+  { href: "/faq", label: "CruiseKit FAQ" },
+  { href: "/methodology", label: "Calculator Methodology" },
+  { href: "/how-we-make-money", label: "How CruiseKit Makes Money" },
   { href: "/features/cruise-route-map", label: "Cruise Route Map" },
   { href: "/features/explore-map", label: "Explore Map" },
 ];
