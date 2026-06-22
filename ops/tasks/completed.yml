@@ -19,3 +19,12 @@ tasks:
       - ops/reports/audits/route-duplication-decisions-2026-06-22.md
       - https://github.com/kaliartistry/cruisekit/pull/8
     summary: Existing `/calculator` was kept as the canonical calculator route, with `/cruise-cost-calculator` deferred unless implemented as a redirect or canonical alias.
+  - id: phase3-001
+    completed_at: "2026-06-22"
+    evidence:
+      - apps/web/app/what-is-cruisekit/page.tsx
+      - apps/web/app/sitemap.ts
+      - apps/web/public/llms.txt
+      - ops/reports/audits/preflight-day4-what-is-cruisekit-2026-06-22.json
+      - https://github.com/kaliartistry/cruisekit/pull/9
+    summary: Drafted and published the first public authority page for `/what-is-cruisekit`, with sitemap, footer, AI-summary, and llms.txt discovery links.

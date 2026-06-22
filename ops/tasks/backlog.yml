@@ -73,7 +73,7 @@ tasks:
     title: Draft /what-is-cruisekit authority page
     phase: "Phase 3: Core authority pages"
     priority: high
-    status: queued
+    status: completed
     allowed_auto: true
     approval_required: false
     risk_level: medium

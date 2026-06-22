@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     '',
     '/app',
+    '/what-is-cruisekit',
     '/calculator',
     '/cruise-costs',
     '/cruises',
