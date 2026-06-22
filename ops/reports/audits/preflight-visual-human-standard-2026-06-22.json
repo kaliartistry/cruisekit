@@ -1,0 +1,61 @@
+﻿{
+  "generatedAt": "2026-06-22T15:36:34.516Z",
+  "checks": {
+    "path": {
+      "ok": true,
+      "output": "C:\\Users\\ilak_\\Projects\\cruisekit"
+    },
+    "status": {
+      "ok": true,
+      "output": "## codex/growthops-visual-human-page-standard"
+    },
+    "remote": {
+      "ok": true,
+      "output": "origin\thttps://github.com/kaliartistry/cruisekit.git (fetch)\norigin\thttps://github.com/kaliartistry/cruisekit.git (push)"
+    },
+    "fetch": {
+      "ok": true,
+      "output": ""
+    },
+    "branch": {
+      "ok": true,
+      "output": "codex/growthops-visual-human-page-standard"
+    },
+    "ghPrs": {
+      "ok": true,
+      "output": "[]"
+    },
+    "ghIssues": {
+      "ok": true,
+      "output": "[{\"number\":4,\"state\":\"OPEN\",\"title\":\"CruiseKit GrowthOps approvals needed\",\"url\":\"https://github.com/kaliartistry/cruisekit/issues/4\"}]"
+    },
+    "branchGuard": {
+      "ok": true,
+      "output": "Current branch: codex/growthops-visual-human-page-standard"
+    }
+  },
+  "duplicateRoutes": [],
+  "routeCount": 37,
+  "contentPageCount": 32,
+  "schemaCount": 9,
+  "approvalRequiredPatterns": [
+    "pricing",
+    "subscriptions",
+    "paid tools",
+    "API credits",
+    "paid ads",
+    "creator payments",
+    "legal",
+    "privacy",
+    "affiliate agreements",
+    "partnership contracts",
+    "external outreach",
+    "#1",
+    "official",
+    "partnered",
+    "certified"
+  ],
+  "inventoryReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\initial-inventory-2026-06-22.md",
+  "initialInventoryRefreshed": false,
+  "auditReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\preflight-2026-06-22.json"
+}

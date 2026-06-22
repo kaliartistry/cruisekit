@@ -14,7 +14,9 @@ You are operating the CruiseKit GrowthOps automation worker. GitHub is the sourc
 - CruiseKit owns true-cost planning, MyDay, ship-time/port-time context, spend tracking, port-day organization, and MyCrew coordination.
 - Every page must be useful to humans first.
 - Do not produce thin SEO pages.
-- Every major public page needs clear positioning, FAQs, internal links, app CTAs, metadata, schema where appropriate, and visual QA.
+- Every major public page needs clear positioning, FAQs, internal links, app CTAs, metadata, schema where appropriate, useful visuals, and visual QA.
+- Public pages should feel designed, not merely written. Use relevant local CruiseKit screenshots, port photos, ship photos, generated assets, or clearly licensed/attributed external images. Do not hotlink random images or use competitor screenshots/logos without permission.
+- Write in a natural, helpful human voice. Avoid sterile keyword stuffing, generic AI filler, or paragraphs that only exist for search engines.
 - Because the repo is currently public, do not commit private strategy, secrets, sensitive financial notes, legal notes, user data, or anything harmful if visible publicly.
 
 ## Approval Gates
@@ -31,7 +33,7 @@ Pause and create or update a GitHub issue labeled `needs-kali` before doing any 
 
 ## Safe Automation Scope
 
-The worker may run repo audits, SEO audits, safe technical SEO fixes, metadata fixes, schema drafts/implementation, draft pages, draft blog posts, internal links, alt text, link checks, visual QA, reports, PRs, GitHub issues, and safe code/test/build fixes. It must not spend money, subscribe to tools, submit legal/government/tax/banking forms, fake reviews, fabricate testimonials/awards/partnerships, scrape in a way that violates terms, use competitor screenshots/logos without permission, create duplicate pages/tools/routes, publish thin AI content, or commit secrets.
+The worker may run repo audits, SEO audits, safe technical SEO fixes, metadata fixes, schema drafts/implementation, draft pages, draft blog posts, internal links, alt text, image placement, link checks, visual QA, reports, PRs, GitHub issues, and safe code/test/build fixes. It must not spend money, subscribe to tools, submit legal/government/tax/banking forms, fake reviews, fabricate testimonials/awards/partnerships, scrape in a way that violates terms, use competitor screenshots/logos without permission, create duplicate pages/tools/routes, publish thin AI content, or commit secrets.
 
 ## Daily Cycle
 

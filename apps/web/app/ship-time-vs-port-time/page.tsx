@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   AlarmClock,
@@ -87,6 +88,30 @@ const COMMON_MISTAKES = [
   "Trusting a phone that auto-changed time zones without checking ship time.",
   "Planning an independent excursion that returns too close to all aboard time.",
   "Reading a third-party tour time without confirming whether it is local time or ship time.",
+];
+
+const TIME_VISUALS = [
+  {
+    src: "/assets/ports/nassau.jpg",
+    alt: "Nassau cruise port waterfront",
+    title: "Port days happen on land",
+    description:
+      "Once you step off the ship, local signs, taxis, and tours may be running on port time. That is why the ship's instruction matters.",
+  },
+  {
+    src: "/assets/app-screenshots/myday-itinerary.png",
+    alt: "CruiseKit itinerary screen for cruise day planning",
+    title: "Keep the plan visible",
+    description:
+      "Use the app for reminders and day structure, then check official onboard information before committing to the timing.",
+  },
+  {
+    src: "/assets/ports/cozumel.jpg",
+    alt: "Cozumel cruise port waterfront",
+    title: "Build in a buffer",
+    description:
+      "Independent exploring is easier when the return plan leaves room for traffic, tender lines, weather, and time-zone confusion.",
+  },
 ];
 
 const FAQS = [
@@ -201,6 +226,18 @@ export default function ShipTimeVsPortTimePage() {
                 <Clock3 className="h-3.5 w-3.5" />
                 Port-day time check
               </p>
+              <div className="relative mt-5 aspect-[16/9] overflow-hidden rounded-xl bg-white lg:hidden">
+                <Image
+                  src="/assets/ports/nassau.jpg"
+                  alt="Nassau cruise port waterfront on a port day"
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  priority
+                />
+              </div>
               <h2 className="mt-5 text-3xl font-bold tracking-tight text-navy">
                 The clock that gets you back onboard is the clock the ship tells
                 you to follow.
@@ -232,6 +269,18 @@ export default function ShipTimeVsPortTimePage() {
             </div>
 
             <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+              <div className="relative mb-5 aspect-[16/9] overflow-hidden rounded-xl bg-white">
+                <Image
+                  src="/assets/ports/nassau.jpg"
+                  alt="Nassau cruise port waterfront on a port day"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  priority
+                />
+              </div>
               <ShieldAlert className="h-7 w-7 text-amber-600" />
               <h2 className="mt-4 text-xl font-bold text-navy">
                 Official information wins
@@ -273,6 +322,43 @@ export default function ShipTimeVsPortTimePage() {
                 </section>
               );
             })}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+          <div className="mb-8 max-w-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-navy sm:text-3xl">
+              A port-day clock problem is easy to miss
+            </h2>
+            <p className="mt-3 text-base leading-7 text-gray-600">
+              The risk is not that cruisers ignore the time. It is that there
+              can be more than one clock in play. These are the moments where a
+              little visual planning and a clear return buffer help.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {TIME_VISUALS.map((item) => (
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-xl border border-gray-200 bg-white"
+              >
+                <div className="relative aspect-[4/3] bg-gray-100">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-navy">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    {item.description}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
