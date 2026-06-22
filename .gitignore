@@ -16,9 +16,15 @@ build/
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*
+!.env.example
 
 # Turbo
 .turbo/
+
+# Local automation/tool state
+$CODEX_HOME/
+.playwright-cli/
 
 # OS
 .DS_Store
@@ -41,7 +47,20 @@ pnpm-debug.log*
 firebase-debug.log
 firestore-debug.log
 *service-account*.json
+serviceAccount*.json
 *-firebase-adminsdk-*.json
+
+# Credentials and signing material
+*.pem
+*.key
+*.p8
+*.p12
+*.keystore
+*.jks
+GoogleService-Info.plist
+google-services.json
+.vercel/
+coverage/
 
 # Misc
 *.tsbuildinfo
