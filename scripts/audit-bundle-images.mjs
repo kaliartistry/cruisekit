@@ -51,6 +51,50 @@ async function assetExistsFor(imageUrl) {
   return { ok: false, path: candidates[0] };
 }
 
+function imageFormatForBytes(bytes) {
+  if (bytes.length >= 3 && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) {
+    return "jpg";
+  }
+  if (
+    bytes.length >= 8 &&
+    bytes[0] === 0x89 &&
+    bytes[1] === 0x50 &&
+    bytes[2] === 0x4e &&
+    bytes[3] === 0x47 &&
+    bytes[4] === 0x0d &&
+    bytes[5] === 0x0a &&
+    bytes[6] === 0x1a &&
+    bytes[7] === 0x0a
+  ) {
+    return "png";
+  }
+  if (
+    bytes.length >= 12 &&
+    bytes[0] === 0x52 &&
+    bytes[1] === 0x49 &&
+    bytes[2] === 0x46 &&
+    bytes[3] === 0x46 &&
+    bytes[8] === 0x57 &&
+    bytes[9] === 0x45 &&
+    bytes[10] === 0x42 &&
+    bytes[11] === 0x50
+  ) {
+    return "webp";
+  }
+  return null;
+}
+
+async function imageAssetFormat(relPath) {
+  const extension = relPath.split(".").pop()?.toLowerCase();
+  if (!["jpg", "jpeg", "png", "webp"].includes(extension ?? "")) return null;
+  const bytes = await readFile(resolve(repoRoot, relPath));
+  const detected = imageFormatForBytes(bytes);
+  return {
+    expected: extension === "jpeg" ? "jpg" : extension,
+    detected,
+  };
+}
+
 function imageSlugFor(imageUrl) {
   if (!imageUrl) return null;
   const clean = imageUrl.split(/[?#]/)[0].replace(/\\/g, "/");
@@ -157,6 +201,17 @@ async function main() {
 
     if (!asset.ok) {
       add(blockers, "blocker", id, `Missing bundled image asset: ${asset.path}`);
+      continue;
+    }
+
+    const assetFormat = await imageAssetFormat(asset.path);
+    if (assetFormat && assetFormat.detected !== assetFormat.expected) {
+      add(
+        blockers,
+        "blocker",
+        id,
+        `Bundled image asset has invalid bytes for .${assetFormat.expected}: ${asset.path}`,
+      );
       continue;
     }
 
