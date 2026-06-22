@@ -7,6 +7,7 @@ CruiseKit helps cruise travelers estimate realistic cruise costs, organize cruis
 Key public pages:
 - https://cruisekit.app/what-is-cruisekit
 - https://cruisekit.app/cruisekit-facts
+- https://cruisekit.app/ship-time-vs-port-time
 - https://cruisekit.app/app
 - https://cruisekit.app/calculator
 - https://cruisekit.app/ports

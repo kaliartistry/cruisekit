@@ -27,6 +27,7 @@ const FOOTER_COLUMNS = [
         href: "/features/cruise-itinerary-planner",
       },
       { label: "Cruise Costs", href: "/cruise-costs" },
+      { label: "Ship Time vs Port Time", href: "/ship-time-vs-port-time" },
       { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/faq" },
       { label: "Help Center", href: "/help" },
