@@ -1,0 +1,244 @@
+{
+  "generatedAt": "2026-06-22T04:58:42.037Z",
+  "sourceRoot": "apps/web/app",
+  "routes": [
+    {
+      "route": "/",
+      "file": "apps/web/app/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/about",
+      "file": "apps/web/app/about/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/affiliate-disclosure",
+      "file": "apps/web/app/affiliate-disclosure/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/ai/cruisekit-summary",
+      "file": "apps/web/app/ai/cruisekit-summary/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/app",
+      "file": "apps/web/app/app/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/blog",
+      "file": "apps/web/app/blog/page.tsx",
+      "hasMetadata": false,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/blog/:slug",
+      "file": "apps/web/app/blog/[slug]/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
+      "route": "/calculator",
+      "file": "apps/web/app/calculator/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
+      "route": "/calculator/:cruise-line",
+      "file": "apps/web/app/calculator/[cruise-line]/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
+      "route": "/compare",
+      "file": "apps/web/app/compare/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/contact",
+      "file": "apps/web/app/contact/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/cruise-costs",
+      "file": "apps/web/app/cruise-costs/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/cruises",
+      "file": "apps/web/app/cruises/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/faq",
+      "file": "apps/web/app/faq/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/features/cruise-itinerary-planner",
+      "file": "apps/web/app/features/cruise-itinerary-planner/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/features/cruise-port-guides",
+      "file": "apps/web/app/features/cruise-port-guides/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/features/cruise-route-map",
+      "file": "apps/web/app/features/cruise-route-map/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/features/explore-map",
+      "file": "apps/web/app/features/explore-map/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/groups",
+      "file": "apps/web/app/groups/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/guides",
+      "file": "apps/web/app/guides/page.tsx",
+      "hasMetadata": false,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/guides/:guide-slug",
+      "file": "apps/web/app/guides/[guide-slug]/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
+      "route": "/help",
+      "file": "apps/web/app/help/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/how-we-make-money",
+      "file": "apps/web/app/how-we-make-money/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/internal/deal-workbench",
+      "file": "apps/web/app/internal/deal-workbench/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": true
+    },
+    {
+      "route": "/internal/leads",
+      "file": "apps/web/app/internal/leads/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": true
+    },
+    {
+      "route": "/loyalty",
+      "file": "apps/web/app/loyalty/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/methodology",
+      "file": "apps/web/app/methodology/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/my-trips",
+      "file": "apps/web/app/my-trips/page.tsx",
+      "hasMetadata": false,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/myday",
+      "file": "apps/web/app/myday/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/ports",
+      "file": "apps/web/app/ports/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
+      "route": "/ports/:port-slug",
+      "file": "apps/web/app/ports/[port-slug]/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
+      "route": "/privacy",
+      "file": "apps/web/app/privacy/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/terms",
+      "file": "apps/web/app/terms/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/track",
+      "file": "apps/web/app/track/page.tsx",
+      "hasMetadata": false,
+      "hasSchema": false,
+      "internal": false
+    }
+  ]
+}

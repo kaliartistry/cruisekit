@@ -1,0 +1,197 @@
+{
+  "generatedAt": "2026-06-22T04:58:42.037Z",
+  "contentPages": [
+    {
+      "type": "blog",
+      "route": "/blog/best-caribbean-cruise-ports-first-timers",
+      "title": "Best Caribbean Cruise Ports for First-Timers (2026 Guide)",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/carnival-cheers-drink-package-worth-it",
+      "title": "Carnival CHEERS Drink Package: Is It Worth It in 2026?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/carnival-cruise-cost",
+      "title": "How Much Does a Carnival Cruise Really Cost?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/carnival-vs-msc",
+      "title": "Carnival vs MSC: The Real Budget Cruise Comparison",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/carnival-vs-royal-caribbean-comparison",
+      "title": "Carnival vs Royal Caribbean: Which Cruise Line Is Actually Better?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/celebrity-cruise-cost",
+      "title": "How Much Does a Celebrity Cruise Really Cost?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/celebrity-vs-princess",
+      "title": "Celebrity vs Princess: Which Premium Line Costs Less?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/cruise-ship-time-vs-local-time",
+      "title": "Cruise Ship Time vs Local Time: How Not to Miss Your Ship",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/disney-cruise-cost",
+      "title": "Disney Cruise Budget: WiFi, Gratuities, Family Costs & Real Total",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/disney-cruise-vs-royal-caribbean-families",
+      "title": "Disney Cruise vs Royal Caribbean: Which Is Better for Families?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/disney-vs-carnival-families",
+      "title": "Disney vs Carnival: Family Cruise Cost Breakdown",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/hidden-cruise-costs",
+      "title": "Hidden Cruise Costs: 15 Fees to Budget Before You Book",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/hidden-cruise-costs-nobody-tells-you",
+      "title": "10 Hidden Cruise Costs Nobody Tells You About",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/holland-america-cruise-cost",
+      "title": "How Much Does a Holland America Cruise Really Cost?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/how-much-does-a-cruise-really-cost-2026",
+      "title": "How Much Does a Cruise Really Cost in 2026? Fare + Fees",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/how-much-does-caribbean-cruise-cost-2026",
+      "title": "How Much Does a Caribbean Cruise Really Cost in 2026?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/msc-cruise-cost",
+      "title": "MSC Cruise Cost: Fare, Drinks, WiFi, Tips & Real Total",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/msc-vs-norwegian",
+      "title": "MSC vs Norwegian: Budget vs Bundle Battle",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/norwegian-cruise-cost",
+      "title": "How Much Does a Norwegian Cruise Really Cost?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/norwegian-free-at-sea-explained",
+      "title": "NCL Free at Sea Cost: What Is Actually Included?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/norwegian-vs-royal-caribbean",
+      "title": "Norwegian vs Royal Caribbean: True Cost Comparison",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/princess-cruise-cost",
+      "title": "How Much Does a Princess Cruise Really Cost?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/royal-caribbean-cruise-cost",
+      "title": "How Much Does a Royal Caribbean Cruise Really Cost?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/royal-caribbean-vs-carnival-cost-comparison",
+      "title": "Royal Caribbean vs Carnival: Which Cruise Line Is Actually Cheaper?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/virgin-voyages-cruise-cost",
+      "title": "How Much Does a Virgin Voyages Cruise Really Cost?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/virgin-voyages-vs-celebrity",
+      "title": "Virgin Voyages vs Celebrity: Adults-Only Showdown",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "guide",
+      "route": "/guides/cruise-insurance-explained",
+      "title": null,
+      "source": "apps/web/lib/data/guides.ts"
+    },
+    {
+      "type": "guide",
+      "route": "/guides/cruise-packing-list",
+      "title": null,
+      "source": "apps/web/lib/data/guides.ts"
+    },
+    {
+      "type": "guide",
+      "route": "/guides/cruise-tipping-guide",
+      "title": null,
+      "source": "apps/web/lib/data/guides.ts"
+    },
+    {
+      "type": "guide",
+      "route": "/guides/drink-package-guide",
+      "title": null,
+      "source": "apps/web/lib/data/guides.ts"
+    },
+    {
+      "type": "guide",
+      "route": "/guides/first-time-cruise-guide",
+      "title": null,
+      "source": "apps/web/lib/data/guides.ts"
+    },
+    {
+      "type": "guide",
+      "route": "/guides/port-day-tips",
+      "title": null,
+      "source": "apps/web/lib/data/guides.ts"
+    }
+  ]
+}

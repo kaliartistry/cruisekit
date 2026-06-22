@@ -7,7 +7,7 @@
     "lint": "turbo lint",
     "functions:lint": "pnpm --filter cruisekit-functions lint",
     "clean": "turbo clean",
-    "test:rules": "firebase emulators:exec --only firestore 'vitest run firestore.rules.test.ts'",
+    "test:rules": "firebase emulators:exec --only firestore \"vitest run firestore.rules.test.ts\"",
     "schema:gen:ts": "quicktype --src-lang schema --lang ts --top-level Sailing --just-types data/schema/sailing.schema.json -o shared/models/ts/sailing.ts && quicktype --src-lang schema --lang ts --top-level Deal --just-types data/schema/deal.schema.json -o shared/models/ts/deal.ts && node scripts/postprocess-ts-models.mjs",
     "schema:gen:dart": "quicktype --src-lang schema --lang dart --top-level Sailing --use-freezed data/schema/sailing.schema.json -o shared/models/dart/lib/sailing.dart && quicktype --src-lang schema --lang dart --top-level Deal --use-freezed data/schema/deal.schema.json -o shared/models/dart/lib/deal.dart",
     "schema:gen": "pnpm run schema:gen:ts && pnpm run schema:gen:dart",

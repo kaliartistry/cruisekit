@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-06-22T04:58:42.038Z",
+  "schema": [
+    {
+      "route": "/blog/:slug",
+      "file": "apps/web/app/blog/[slug]/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/calculator",
+      "file": "apps/web/app/calculator/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/calculator/:cruise-line",
+      "file": "apps/web/app/calculator/[cruise-line]/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/guides/:guide-slug",
+      "file": "apps/web/app/guides/[guide-slug]/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/ports",
+      "file": "apps/web/app/ports/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/ports/:port-slug",
+      "file": "apps/web/app/ports/[port-slug]/page.tsx",
+      "schemaDetected": true
+    }
+  ]
+}

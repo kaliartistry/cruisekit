@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-06-22",
+  "publicSafe": true,
+  "positioningBoundaries": [
+    {
+      "name": "Shipmate",
+      "owns": ["community", "reviews", "roll calls", "cruise tracking"],
+      "rules": ["Do not use screenshots or logos without permission.", "Avoid unsupported superiority claims."]
+    },
+    {
+      "name": "CruiseMapper",
+      "owns": ["ship tracking", "port schedules"],
+      "rules": ["Do not imply CruiseKit replaces authoritative ship tracking.", "Avoid unsupported operational claims."]
+    },
+    {
+      "name": "TripIt",
+      "owns": ["general travel itinerary management"],
+      "rules": ["Position CruiseKit around cruise-specific context, not generic itinerary dominance."]
+    },
+    {
+      "name": "Cruise line apps",
+      "owns": ["official onboard account access", "dining", "onboard services"],
+      "rules": ["Do not imply official partnership.", "Tell users to verify official account and onboard service details in the cruise line app."]
+    }
+  ]
+}
