@@ -1,1 +1,21 @@
-tasks: []
+tasks:
+  - id: phase1-001
+    completed_at: "2026-06-22"
+    evidence:
+      - ops/reports/audits/preflight-2026-06-22.json
+      - ops/reports/audits/postflight-2026-06-22.json
+      - https://github.com/kaliartistry/cruisekit/pull/7
+    summary: GrowthOps branch hygiene and preflight/postflight audit guardrails were added and merged.
+  - id: phase2-001
+    completed_at: "2026-06-22"
+    evidence:
+      - ops/reports/audits/preflight-day2-technical-seo-2026-06-22.json
+      - ops/reports/audits/technical-seo-baseline-2026-06-22.md
+      - https://github.com/kaliartistry/cruisekit/pull/8
+    summary: Sitemap, robots, metadata, and structured data coverage were audited, and the public `/groups` page was added to the sitemap.
+  - id: phase3-009
+    completed_at: "2026-06-22"
+    evidence:
+      - ops/reports/audits/route-duplication-decisions-2026-06-22.md
+      - https://github.com/kaliartistry/cruisekit/pull/8
+    summary: Existing `/calculator` was kept as the canonical calculator route, with `/cruise-cost-calculator` deferred unless implemented as a redirect or canonical alias.

@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/features/cruise-port-guides',
     '/features/explore-map',
     '/features/cruise-itinerary-planner',
+    '/groups',
     '/ports',
     '/guides',
     '/blog',

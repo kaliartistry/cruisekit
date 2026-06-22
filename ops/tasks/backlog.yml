@@ -3,7 +3,7 @@ tasks:
     title: Keep GrowthOps branch hygiene and preflight/postflight checks mandatory
     phase: "Phase 1: Foundation and repo control"
     priority: high
-    status: ready
+    status: completed
     allowed_auto: true
     approval_required: false
     risk_level: low
@@ -38,7 +38,7 @@ tasks:
     title: Audit sitemap, robots, metadata, and structured data coverage
     phase: "Phase 2: Technical SEO and AI-readability"
     priority: high
-    status: ready
+    status: completed
     allowed_auto: true
     approval_required: false
     risk_level: low
@@ -200,7 +200,7 @@ tasks:
     title: Evaluate /cruise-cost-calculator route need against existing /calculator
     phase: "Phase 3: Core authority pages"
     priority: high
-    status: ready
+    status: completed
     allowed_auto: true
     approval_required: false
     risk_level: low
