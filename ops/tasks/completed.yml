@@ -28,3 +28,12 @@ tasks:
       - ops/reports/audits/preflight-day4-what-is-cruisekit-2026-06-22.json
       - https://github.com/kaliartistry/cruisekit/pull/9
     summary: Drafted and published the first public authority page for `/what-is-cruisekit`, with sitemap, footer, AI-summary, and llms.txt discovery links.
+  - id: phase3-002
+    completed_at: "2026-06-22"
+    evidence:
+      - apps/web/app/cruisekit-facts/page.tsx
+      - apps/web/app/sitemap.ts
+      - apps/web/public/llms.txt
+      - ops/reports/audits/preflight-day5-cruisekit-facts-2026-06-22.json
+      - https://github.com/kaliartistry/cruisekit/pull/10
+    summary: Drafted the public `/cruisekit-facts` authority page with sitemap, footer, AI-summary, llms.txt, and `/what-is-cruisekit` discovery links.

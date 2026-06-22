@@ -137,6 +137,7 @@ const FAQS = [
 ];
 
 const NEXT_LINKS = [
+  { href: "/cruisekit-facts", label: "CruiseKit facts" },
   { href: "/calculator", label: "Use the calculator" },
   { href: "/app", label: "Download the app" },
   { href: "/ports", label: "Explore ports" },
