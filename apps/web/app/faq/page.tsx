@@ -204,6 +204,12 @@ export default function FAQPage() {
               >
                 Help Center
               </Link>
+              <Link
+                href="/cruisekit-public-information"
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:border-navy hover:text-navy"
+              >
+                Public Information
+              </Link>
             </div>
           </div>
         </section>

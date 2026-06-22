@@ -6,6 +6,7 @@ import HomeGuideTeaser from "./home-guide-teaser";
 import ContentSections from "./pillar-cards";
 import MobileLaunchSection from "./mobile-launch-section";
 import MapFeatureTeaser from "./map-feature-teaser";
+import AuthorityHubTeaser from "./authority-hub-teaser";
 
 export const metadata: Metadata = {
   title: "Free Cruise Planner App With Route Maps + Port Guides",
@@ -28,6 +29,7 @@ export default function HomePage() {
         <HeroSection />
         <MobileLaunchSection />
         <MapFeatureTeaser />
+        <AuthorityHubTeaser />
         <HomeGuideTeaser />
         <ContentSections />
       </main>

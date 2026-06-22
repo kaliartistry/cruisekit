@@ -194,6 +194,16 @@ export default function MethodologyPage() {
               totals to make partner bookings look better, and we show you the
               source of every line.
             </p>
+            <p className="mt-4 text-sm leading-6 text-gray-600">
+              Looking for the broader CruiseKit reference trail? Start with the{" "}
+              <Link
+                href="/cruisekit-public-information"
+                className="font-semibold text-teal-dark underline underline-offset-4"
+              >
+                public information hub
+              </Link>
+              , then use this page for calculator-specific methodology.
+            </p>
           </section>
 
           {/* Last reviewed — frozen per-category dates */}

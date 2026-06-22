@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T15:32:12.136Z",
+  "generatedAt": "2026-06-22T17:03:21.386Z",
   "schema": [
     {
       "route": "/blog/:slug",
@@ -19,6 +19,11 @@
     {
       "route": "/cruisekit-facts",
       "file": "apps/web/app/cruisekit-facts/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/cruisekit-public-information",
+      "file": "apps/web/app/cruisekit-public-information/page.tsx",
       "schemaDetected": true
     },
     {

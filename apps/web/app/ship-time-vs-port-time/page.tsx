@@ -92,8 +92,8 @@ const COMMON_MISTAKES = [
 
 const TIME_VISUALS = [
   {
-    src: "/assets/ports/nassau.jpg",
-    alt: "Nassau cruise port waterfront",
+    src: "/assets/ports/miami.jpg",
+    alt: "Miami cruise port waterfront",
     title: "Port days happen on land",
     description:
       "Once you step off the ship, local signs, taxis, and tours may be running on port time. That is why the ship's instruction matters.",
