@@ -25,6 +25,30 @@ function readApprovalItems() {
 
 const status = run("git", ["status", "--short", "--branch"]);
 const prs = run("gh", ["pr", "list", "--limit", "10", "--json", "number,title,url,state"]);
+const snapshot = [
+  "",
+  `## Automation Snapshot - ${new Date().toISOString()}`,
+  "",
+  `- Current git status: \`${status.replace(/\r?\n/g, " | ")}\``,
+  "",
+  "### Open PRs",
+  "",
+  prs && prs.startsWith("[") ? `\`\`\`json\n${prs}\n\`\`\`` : `- ${prs || "Unavailable."}`,
+  "",
+  "### Approval items for Kali",
+  "",
+  readApprovalItems(),
+  "",
+].join("\n");
+
+fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+
+if (fs.existsSync(reportPath) && !process.argv.includes("--overwrite")) {
+  fs.appendFileSync(reportPath, snapshot);
+  console.log(reportPath);
+  process.exit(0);
+}
+
 const lines = [
   `# CruiseKit GrowthOps Daily Report - ${today}`,
   "",
@@ -71,6 +95,5 @@ const lines = [
   "",
 ];
 
-fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${lines.join("\n")}\n`);
 console.log(reportPath);

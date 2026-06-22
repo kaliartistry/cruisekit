@@ -126,6 +126,10 @@ function writeInventory(routes, contentPages, schema, checks) {
   });
 
   const reportPath = path.join(root, "ops", "reports", "audits", `initial-inventory-${today}.md`);
+  if (fs.existsSync(reportPath) && !process.argv.includes("--refresh-initial-inventory")) {
+    return reportPath;
+  }
+
   const lines = [
     `# Initial GrowthOps Inventory - ${today}`,
     "",
@@ -202,6 +206,10 @@ const checks = {
   ghPrs: run("gh", ["pr", "list", "--limit", "20", "--json", "number,title,headRefName,state,url"]),
   ghIssues: run("gh", ["issue", "list", "--label", "needs-kali", "--limit", "20", "--json", "number,title,state,url"]),
 };
+checks.branchGuard = {
+  ok: !/^(main|master)$/.test(checks.branch.output || ""),
+  output: checks.branch.output ? `Current branch: ${checks.branch.output}` : "Unable to determine branch",
+};
 
 const routes = collectRoutes();
 const contentPages = collectContentPages();
@@ -234,12 +242,18 @@ const report = {
   ],
 };
 
+const initialInventoryPath = path.join(root, "ops", "reports", "audits", `initial-inventory-${today}.md`);
+const initialInventoryExistedBefore = fs.existsSync(initialInventoryPath);
+
 if (process.argv.includes("--write-inventory")) {
   report.inventoryReport = writeInventory(routes, contentPages, schema, checks);
+  report.initialInventoryRefreshed = process.argv.includes("--refresh-initial-inventory") || !initialInventoryExistedBefore;
 }
+report.auditReport = path.join(root, "ops", "reports", "audits", `preflight-${today}.json`);
+writeJson(report.auditReport, report);
 
 console.log(JSON.stringify(report, null, 2));
 
-if (!checks.path.ok || dupes.length > 0) {
+if (!checks.path.ok || !checks.branchGuard.ok || dupes.length > 0) {
   process.exitCode = 1;
 }
