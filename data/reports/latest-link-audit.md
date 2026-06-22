@@ -1,6 +1,6 @@
 # CruiseKit Public Link Audit
 
-Generated: 2026-06-09T14:12:19.106Z
+Generated: 2026-06-22T18:07:33.704Z
 
 Live audit: disabled
 

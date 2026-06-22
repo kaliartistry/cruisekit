@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import {
+  Calculator,
+  HelpCircle,
+  Mail,
+  MapPinned,
+  ShieldCheck,
+  Smartphone,
+} from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
+
+const PAGE_URL = "https://cruisekit.app/faq";
 
 export const metadata: Metadata = {
   title: "Cruise Cost FAQ: Hidden Fees, Tips, WiFi, Drinks & Budgeting",
@@ -30,6 +41,14 @@ export const metadata: Metadata = {
       "Answers to cruise cost questions about hidden fees, taxes, port fees, gratuities, drink packages, WiFi, cash, and CruiseKit's calculator.",
     url: "https://cruisekit.app/faq",
     type: "website",
+    images: [
+      {
+        url: "/assets/app-screenshots/myday-today.png",
+        width: 1290,
+        height: 2796,
+        alt: "CruiseKit MyDay app screen",
+      },
+    ],
   },
 };
 
@@ -121,9 +140,69 @@ const FAQS = [
   },
 ];
 
+const FAQ_STARTERS = [
+  {
+    title: "Real cruise cost",
+    description:
+      "Start with fare, taxes, fees, gratuities, drinks, WiFi, excursions, and port spending.",
+    href: "/calculator",
+    icon: Calculator,
+  },
+  {
+    title: "Port-day planning",
+    description:
+      "Use port guides when the question is about cash, taxis, excursions, food, or getting around.",
+    href: "/ports",
+    icon: MapPinned,
+  },
+  {
+    title: "App and data basics",
+    description:
+      "Read how CruiseKit works, what it stores, and where to verify public facts.",
+    href: "/cruisekit-public-information",
+    icon: ShieldCheck,
+  },
+];
+
+function JsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${PAGE_URL}#webpage`,
+        url: PAGE_URL,
+        name: "CruiseKit FAQ",
+        description:
+          "Frequently asked questions about CruiseKit, cruise costs, hidden fees, app features, privacy, and cruise planning.",
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${PAGE_URL}#faq`,
+        mainEntity: FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export default function FAQPage() {
   return (
     <>
+      <JsonLd />
       <Navbar />
       <main className="flex-1">
         <PageHeader
@@ -132,8 +211,88 @@ export default function FAQPage() {
           breadcrumbs={[{ label: "FAQ" }]}
         />
 
+        <section className="border-b border-gray-200 bg-white">
+          <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 lg:py-14">
+            <div>
+              <p className="inline-flex items-center gap-2 rounded-full border border-teal/25 bg-teal/10 px-3 py-1 text-xs font-bold uppercase text-teal-dark">
+                <HelpCircle className="h-3.5 w-3.5" />
+                Fast answers
+              </p>
+              <h2 className="mt-5 text-3xl font-bold tracking-tight text-navy">
+                The common cruise planning questions, answered in one place.
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-gray-600">
+                Use this page when you need a quick answer about hidden cruise
+                costs, CruiseKit, saved trips, privacy, app downloads, or where
+                the calculator numbers come from.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {FAQ_STARTERS.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-xl border border-gray-200 bg-gray-50 p-4 transition-colors hover:border-teal/50 hover:bg-white"
+                    >
+                      <Icon className="h-5 w-5 text-teal" />
+                      <p className="mt-3 text-sm font-bold text-navy">
+                        {item.title}
+                      </p>
+                      <p className="mt-1 text-xs leading-5 text-gray-500">
+                        {item.description}
+                      </p>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-[0.88fr_1.12fr]">
+              <div className="relative min-h-[220px] overflow-hidden rounded-xl bg-gray-100">
+                <Image
+                  src="/assets/ports/miami.jpg"
+                  alt="Cruise ship terminal in Miami for cruise planning questions"
+                  fill
+                  sizes="(min-width: 1024px) 22vw, 45vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="grid gap-3">
+                <div className="relative min-h-[225px] overflow-hidden rounded-xl bg-gray-100">
+                  <Image
+                    src="/assets/app-screenshots/myday-today.png"
+                    alt="CruiseKit MyDay app screen for cruise day planning"
+                    fill
+                    sizes="(min-width: 1024px) 26vw, 55vw"
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+                <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                  <Smartphone className="h-5 w-5 text-teal" />
+                  <p className="mt-3 text-sm font-bold leading-5 text-navy">
+                    Answers connect to the app, calculator, public references,
+                    and guide pages.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl divide-y divide-gray-200">
+          <div className="mx-auto mb-8 max-w-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-navy">
+              CruiseKit FAQ
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Short answers for travelers, search engines, and AI assistants.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-3xl divide-y divide-gray-200 rounded-xl border border-gray-200 bg-white px-5 sm:px-6">
             {FAQS.map((faq, index) => (
               <div key={index} className="py-8 first:pt-0 last:pb-0">
                 <h2 className="text-lg font-bold text-navy">
@@ -196,6 +355,7 @@ export default function FAQPage() {
                 href="mailto:info@cruisekit.app"
                 className="inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy/90"
               >
+                <Mail className="h-4 w-4" />
                 Email Us
               </a>
               <Link
