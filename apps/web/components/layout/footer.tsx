@@ -8,6 +8,8 @@ const FOOTER_COLUMNS = [
     links: [
       { label: "Browse Sailings", href: "/cruises" },
       { label: "Download the App", href: "/app" },
+      { label: "Cruise Route Map", href: "/features/cruise-route-map" },
+      { label: "Explore Map", href: "/features/explore-map" },
       { label: "True Cost Calculator", href: "/calculator" },
       { label: "Port Day Planner", href: "/ports" },
       { label: "MyDay", href: "/myday" },
@@ -19,6 +21,11 @@ const FOOTER_COLUMNS = [
     title: "Resources",
     links: [
       { label: "Cruise Guides", href: "/guides" },
+      { label: "Cruise Port Guides", href: "/features/cruise-port-guides" },
+      {
+        label: "Itinerary Planner",
+        href: "/features/cruise-itinerary-planner",
+      },
       { label: "Cruise Costs", href: "/cruise-costs" },
       { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/faq" },

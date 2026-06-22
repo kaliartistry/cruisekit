@@ -1,0 +1,29 @@
+# CruiseKit
+
+CruiseKit is a free cruise planning app for iPhone and Android.
+
+CruiseKit helps cruise travelers estimate realistic cruise costs, organize cruise itineraries, visualize cruise routes, and explore cruise port guides. Public website pages include a true cost calculator, cruise port guides, cruise planning content, and feature pages for route maps, port guide snapshots, Explore Map, and itinerary planning.
+
+Key public pages:
+- https://cruisekit.app/app
+- https://cruisekit.app/calculator
+- https://cruisekit.app/ports
+- https://cruisekit.app/features/cruise-route-map
+- https://cruisekit.app/features/cruise-port-guides
+- https://cruisekit.app/features/explore-map
+- https://cruisekit.app/features/cruise-itinerary-planner
+- https://cruisekit.app/ai/cruisekit-summary
+
+Important product boundaries:
+- CruiseKit map-style features are for planning and destination discovery.
+- Port guide snapshot cards are custom visuals and do not require live map tiles.
+- The optional Explore Map is a separate view that only loads when enabled and opened by the user.
+- CruiseKit does not request location permission for port guide snapshot cards.
+- CruiseKit does not sell unsupported offers or hide core launch planning features behind a paywall.
+
+App availability:
+- iOS: https://apps.apple.com/us/app/cruisekit/id6770305548
+- Android: https://play.google.com/store/apps/details?id=com.cruisekit.mobile
+
+Contact:
+- https://cruisekit.app/contact

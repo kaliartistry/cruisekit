@@ -5,11 +5,19 @@ import HeroSection from "./hero-section";
 import HomeGuideTeaser from "./home-guide-teaser";
 import ContentSections from "./pillar-cards";
 import MobileLaunchSection from "./mobile-launch-section";
+import MapFeatureTeaser from "./map-feature-teaser";
 
 export const metadata: Metadata = {
-  title: "Free Cruise Planner App + True Cruise Cost Calculator",
+  title: "Free Cruise Planner App With Route Maps + Port Guides",
   description:
-    "Download CruiseKit for iPhone and Android or use the free web calculator to plan hidden cruise costs, ship time, port time, MyDay, and port days.",
+    "Download CruiseKit for iPhone and Android to visualize cruise routes, explore cruise port guides, compare destinations, and calculate true cruise costs.",
+  keywords: [
+    "cruise app with map",
+    "cruise route map app",
+    "cruise port guide app",
+    "free cruise planning app",
+    "cruise itinerary planner",
+  ],
 };
 
 export default function HomePage() {
@@ -19,6 +27,7 @@ export default function HomePage() {
       <main className="flex-1">
         <HeroSection />
         <MobileLaunchSection />
+        <MapFeatureTeaser />
         <HomeGuideTeaser />
         <ContentSections />
       </main>

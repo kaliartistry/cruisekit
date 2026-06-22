@@ -10,7 +10,6 @@ import {
   AlertTriangle,
   Utensils,
   Bus,
-  Shield,
   Anchor,
   Star,
   ChevronRight,
@@ -28,12 +27,13 @@ import ViatorExcursions from "@/components/viator/viator-excursions";
 import PortTodayHeader from "./port-today-header";
 import PortSectionNav from "./port-section-nav";
 import { hasViatorProducts } from "@/lib/data/viator-destinations";
-import { getHotelLink, getBoatRentalLink, getMedEvacLink } from "@/lib/affiliate-config";
+import { getHotelLink, getBoatRentalLink } from "@/lib/affiliate-config";
 import { cn } from "@/lib/utils/cn";
 import {
   getPortBySlug,
   getAllPortSlugs,
   REGION_LABELS,
+  type PortData,
   type PortRegion,
 } from "@/lib/data/ports";
 
@@ -60,17 +60,43 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const port = getPortBySlug(slug);
   if (!port) return {};
 
+  const title = `${port.name}, ${port.country} Cruise Port Guide`;
+  const description = `CruiseKit guide to ${port.name}, ${port.country}: walkability, tender or dock status, port hours, currency, Wi-Fi, excursions, food, and a non-live destination snapshot.`;
+  const url = `/ports/${port.slug}`;
+
   return {
-    title: `${port.name}, ${port.country} Cruise Port Guide — Excursions, Tips & Logistics`,
-    description: `Complete cruise port guide for ${port.name}, ${port.country}. Walkability, top excursions, free activities, time zone alerts, and transport tips for cruise passengers.`,
+    title,
+    description,
     keywords: [
       `${port.name} cruise port`,
       `${port.name} excursions`,
       `${port.name} cruise tips`,
       `things to do in ${port.name}`,
       "cruise port guide",
+      "cruise destination snapshot",
       "Caribbean cruise ports",
     ],
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      images: [
+        {
+          url: port.imageUrl,
+          alt: `${port.name}, ${port.country} cruise port`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [port.imageUrl],
+    },
   };
 }
 
@@ -78,14 +104,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /*  Helper Components                                                  */
 /* ------------------------------------------------------------------ */
 
-/**
- * Reuses the existing 0-10 `safetyRating` value from port data and presents
- * it as walkability — how easy this port is to navigate on foot from the
- * cruise terminal. The underlying score is a port-walkability heuristic and
- * is not an authoritative safety rating. For travel-safety guidance, cruisers
- * should consult official advisories (travel.state.gov, FCDO, etc.) — see the
- * note rendered below the badge.
- */
 function WalkabilityBadge({ rating }: { rating: number }) {
   const color =
     rating >= 9
@@ -106,6 +124,134 @@ function WalkabilityBadge({ rating }: { rating: number }) {
       <Footprints className="h-4 w-4" />
       Walkability: {rating}/10
     </span>
+  );
+}
+
+type PortFaq = {
+  question: string;
+  answer: string;
+};
+
+function getPortFaqs(port: PortData): PortFaq[] {
+  return [
+    {
+      question: `Is ${port.name} a tender port or a docked port?`,
+      answer: port.isTenderPort
+        ? `${port.name} is commonly handled as a tender port in CruiseKit's guide, so cruise guests should build their port-day plan around tender boat operations.`
+        : `${port.name} is listed as a docked cruise port in CruiseKit's guide, which usually makes the port area simpler to plan than a tender stop.`,
+    },
+    {
+      question: `How walkable is ${port.name} from the cruise port?`,
+      answer: `${port.name} has a CruiseKit walkability score of ${port.walkabilityRating}/10. The port-area note is: ${port.walkingDistanceToTown}.`,
+    },
+    {
+      question: `What currency is used in ${port.name}?`,
+      answer: `${port.currency} is the local currency for ${port.name}. ${port.usdAccepted ? "US dollars are commonly accepted in many visitor-facing places." : "Plan to use local currency or a payment card where accepted."}`,
+    },
+    {
+      question: `Does this ${port.name} page use a live map provider?`,
+      answer:
+        "No. This port guide uses a static destination snapshot for planning. CruiseKit's optional Explore Map is a separate app view and is only loaded when enabled and opened by the user.",
+    },
+  ];
+}
+
+function DestinationSnapshot({ port }: { port: PortData }) {
+  const highlights = [
+    port.freeActivities[0]?.name,
+    port.excursionCategories[0]?.name,
+    port.restaurants[0]?.name,
+  ].filter((highlight): highlight is string => Boolean(highlight));
+
+  return (
+    <div className="mt-8 grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <div className="relative h-64 bg-[linear-gradient(135deg,rgba(0,180,216,.16),rgba(244,232,209,.94))] p-6">
+          <div className="absolute -right-14 -top-16 h-48 w-48 rounded-full bg-white/45" />
+          <div className="absolute bottom-0 right-0 h-44 w-2/3 rounded-tl-[4rem] bg-sand/80" />
+          <div className="absolute bottom-12 right-12 h-2 w-36 rotate-[-18deg] rounded-full bg-white/90" />
+          <div className="absolute bottom-20 right-32 h-2 w-28 rotate-[24deg] rounded-full bg-white/90" />
+          <div className="absolute bottom-10 left-10 flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-teal text-white shadow-lg">
+            {port.isTenderPort ? (
+              <Anchor className="h-5 w-5" />
+            ) : (
+              <Ship className="h-5 w-5" />
+            )}
+          </div>
+          <div className="absolute bottom-24 right-20 flex h-11 w-11 items-center justify-center rounded-full border-4 border-white bg-coral text-white shadow-lg">
+            <MapPin className="h-5 w-5" />
+          </div>
+          <div className="relative max-w-sm">
+            <p className="text-xs font-bold uppercase tracking-wider text-teal-dark">
+              Destination Snapshot
+            </p>
+            <h3 className="mt-2 text-2xl font-extrabold tracking-tight text-navy">
+              {port.name}
+            </h3>
+            <p className="text-sm font-semibold text-ocean">{port.country}</p>
+          </div>
+        </div>
+      </div>
+      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+        <h3 className="text-lg font-bold text-navy">
+          Port-area planning notes
+        </h3>
+        <div className="mt-4 grid gap-3">
+          <QuickStat
+            icon={port.isTenderPort ? Anchor : Ship}
+            label="Arrival Style"
+            value={port.isTenderPort ? "Tender port" : "Docked port"}
+          />
+          <QuickStat
+            icon={Footprints}
+            label="Walkability"
+            value={`${port.walkabilityRating}/10`}
+          />
+          <QuickStat
+            icon={Wifi}
+            label="Connectivity"
+            value={`${port.wifiAvailability} Wi-Fi, ${port.cellularCoverage} cell`}
+          />
+        </div>
+        {highlights.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {highlights.map((highlight) => (
+              <span
+                key={highlight}
+                className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-gray-600"
+              >
+                {highlight}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function PortFaqSection({ faqs }: { faqs: PortFaq[] }) {
+  return (
+    <section id="faq" className="mb-12 scroll-mt-[160px]">
+      <h2 className="mb-5 text-2xl font-bold tracking-tight text-navy">
+        {faqs.length > 0 ? "Cruise Port FAQ" : "FAQ"}
+      </h2>
+      <div className="grid gap-4 md:grid-cols-2">
+        {faqs.map((faq) => (
+          <div
+            key={faq.question}
+            className="rounded-xl border border-gray-200 bg-white p-5"
+          >
+            <h3 className="font-semibold leading-6 text-navy">
+              {faq.question}
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-gray-600">
+              {faq.answer}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -143,6 +289,9 @@ export default async function PortDetailPage({ params }: Props) {
 
   if (!port) notFound();
 
+  const faqs = getPortFaqs(port);
+  const canonicalUrl = `https://cruisekit.app/ports/${port.slug}`;
+
   return (
     <>
       <script
@@ -150,15 +299,56 @@ export default async function PortDetailPage({ params }: Props) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "TouristDestination",
-            name: `${port.name} Cruise Port`,
-            description: port.overview,
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: port.coordinates.lat,
-              longitude: port.coordinates.lng,
-            },
-            touristType: "Cruise passengers",
+            "@graph": [
+              {
+                "@type": "TouristDestination",
+                "@id": `${canonicalUrl}#destination`,
+                name: `${port.name} Cruise Port`,
+                url: canonicalUrl,
+                image: port.imageUrl,
+                description: port.overview,
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: port.coordinates.lat,
+                  longitude: port.coordinates.lng,
+                },
+                touristType: "Cruise passengers",
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://cruisekit.app",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Cruise Port Guides",
+                    item: "https://cruisekit.app/ports",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: `${port.name} Cruise Port Guide`,
+                    item: canonicalUrl,
+                  },
+                ],
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
+                  },
+                })),
+              },
+            ],
           }),
         }}
       />
@@ -211,7 +401,7 @@ export default async function PortDetailPage({ params }: Props) {
                 <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                   {port.name}
                 </h1>
-                <WalkabilityBadge rating={port.safetyRating} />
+                <WalkabilityBadge rating={port.walkabilityRating} />
               </div>
               <p className="mt-2 text-lg text-white/80">{port.country}</p>
               <div className="mt-3 flex flex-wrap items-center gap-3">
@@ -310,53 +500,21 @@ export default async function PortDetailPage({ params }: Props) {
             <h2 className="mb-4 text-2xl font-bold tracking-tight text-navy">
               Overview
             </h2>
+            <div className="mb-5 max-w-3xl rounded-xl border border-teal/25 bg-seafoam/60 p-5">
+              <p className="text-xs font-bold uppercase tracking-wider text-teal-dark">
+                Direct answer
+              </p>
+              <p className="mt-2 text-base font-semibold leading-7 text-navy">
+                {port.name} is a {port.isTenderPort ? "tender" : "docked"}{" "}
+                cruise port with {port.walkabilityRating}/10 walkability,
+                about {port.typicalPortHours} typical port hours, and{" "}
+                {port.currency} as the local currency.
+              </p>
+            </div>
             <p className="max-w-3xl text-base leading-relaxed text-gray-600">
               {port.overview}
             </p>
-
-            {/* Walkability advisory — the badge in the hero is a walkability
-                hint, not an authoritative safety rating. */}
-            <p className="mt-4 max-w-3xl text-xs leading-relaxed text-gray-500">
-              The walkability score is a planning hint for navigating the port
-              on foot from the terminal. Safety information should be confirmed
-              against official travel advisories (e.g.{" "}
-              <a
-                href="https://travel.state.gov"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:text-navy"
-              >
-                travel.state.gov
-              </a>
-              ) before your trip.
-            </p>
-
-            {/* All-aboard math — three plain sentences. No GPS, no ETA —
-                just the logic every cruiser needs to do in their head. */}
-            <div className="mt-6 max-w-3xl rounded-xl border-l-4 border-teal bg-teal/5 px-5 py-4">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-teal">
-                All-aboard math
-              </p>
-              <p className="text-sm leading-relaxed text-navy">
-                All-aboard in {port.name} is typically 30&ndash;60 minutes
-                before your ship departs &mdash; confirm the exact time on the
-                day&rsquo;s ship newsletter.{" "}
-                {port.isTenderPort && (
-                  <>
-                    This is a{" "}
-                    <span className="font-semibold text-coral">tender port</span>,
-                    so add ~20 minutes for the tender queue on a full ship and
-                    head back earlier than you think.{" "}
-                  </>
-                )}
-                {port.timeZoneAlert && (
-                  <>
-                    <span className="font-semibold">Time-zone note:</span>{" "}
-                    {port.timeZoneAlert}
-                  </>
-                )}
-              </p>
-            </div>
+            <DestinationSnapshot port={port} />
           </section>
 
           {/* ============================================================ */}
@@ -533,6 +691,8 @@ export default async function PortDetailPage({ params }: Props) {
             </div>
           </section>
 
+          <PortFaqSection faqs={faqs} />
+
           {/* ============================================================ */}
           {/*  9. Emergency Info                                            */}
           {/* ============================================================ */}
@@ -568,42 +728,6 @@ export default async function PortDetailPage({ params }: Props) {
                   </p>
                 </div>
               )}
-            </div>
-          </section>
-
-          {/* ============================================================ */}
-          {/*  9b. Medjet — Medical Evacuation                              */}
-          {/* ============================================================ */}
-          <section className="mb-12">
-            <div className="rounded-xl border border-amber-200 bg-amber-50/50 p-6">
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
-                  <Shield className="h-5 w-5" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold text-navy">
-                    Medical Evacuation Coverage
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-600">
-                    Helicopter evacuations from ports like {port.name} can cost
-                    $50,000+. Medjet covers medical transport to your home
-                    hospital — not just the nearest facility.
-                  </p>
-                  <AffiliateLink
-                    href={getMedEvacLink("https://www.medjetassist.com/")}
-                    partner="medjet"
-                    source={`port-${slug}`}
-                    className={cn(
-                      "mt-3 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold",
-                      "bg-amber-500 text-white hover:bg-amber-600 transition-colors"
-                    )}
-                  >
-                    Learn About Medjet
-                    <ChevronRight className="h-4 w-4" />
-                  </AffiliateLink>
-                  <AffiliateDisclosure className="mt-2" />
-                </div>
-              </div>
             </div>
           </section>
 
