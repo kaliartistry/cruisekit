@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/navbar";
@@ -39,6 +40,43 @@ const CATEGORY_LABELS: Record<GuideCategory, string> = {
   insurance: "Insurance",
 };
 
+const GUIDE_VISUALS: Record<
+  string,
+  {
+    src: string;
+    alt: string;
+  }
+> = {
+  "first-time-cruise-guide": {
+    src: "/assets/app-screenshots/myday-itinerary.png",
+    alt: "CruiseKit itinerary screen for planning cruise days",
+  },
+  "cruise-packing-list": {
+    src: "/assets/ships/oasis-of-the-seas.jpg",
+    alt: "Cruise ship at sea for packing and boarding preparation",
+  },
+  "drink-package-guide": {
+    src: "/assets/ports/cozumel.jpg",
+    alt: "Sunny cruise port scene for onboard drink package planning",
+  },
+  "cruise-tipping-guide": {
+    src: "/assets/ships/carnival-celebration.jpg",
+    alt: "Cruise ship deck scene for planning gratuities and cash tips",
+  },
+  "port-day-tips": {
+    src: "/assets/ports/nassau.jpg",
+    alt: "Nassau cruise port scene for port day planning",
+  },
+  "cruise-insurance-explained": {
+    src: "/assets/ports/san-juan.jpg",
+    alt: "San Juan cruise port scene for trip insurance planning",
+  },
+};
+
+function getGuideVisual(slug: string) {
+  return GUIDE_VISUALS[slug] ?? GUIDE_VISUALS["first-time-cruise-guide"];
+}
+
 /* ------------------------------------------------------------------ */
 /*  Static Generation                                                  */
 /* ------------------------------------------------------------------ */
@@ -61,10 +99,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { "guide-slug": slug } = await params;
   const guide = getGuideBySlug(slug);
   if (!guide) return {};
+  const visual = getGuideVisual(guide.slug);
 
   return {
     title: guide.title,
     description: guide.description,
+    alternates: { canonical: `/guides/${guide.slug}` },
     keywords: [
       guide.title,
       "cruise guide",
@@ -76,8 +116,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: guide.title,
       description: guide.description,
       type: "article",
+      url: `/guides/${guide.slug}`,
+      images: [
+        {
+          url: visual.src,
+          width: 1200,
+          height: 630,
+          alt: visual.alt,
+        },
+      ],
       publishedTime: guide.updatedDate,
       modifiedTime: guide.updatedDate,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: guide.title,
+      description: guide.description,
+      images: [visual.src],
     },
   };
 }
@@ -551,6 +606,7 @@ export default async function GuideDetailPage({ params }: Props) {
   const guide = getGuideBySlug(slug);
 
   if (!guide) notFound();
+  const visual = getGuideVisual(guide.slug);
 
   return (
     <>
@@ -559,116 +615,151 @@ export default async function GuideDetailPage({ params }: Props) {
       <main className="flex-1">
         {/* Hero */}
         <section className="border-b border-gray-200 bg-gray-50/60">
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
-            {/* Breadcrumbs */}
-            <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex items-center gap-1 text-sm text-gray-500">
-                <li>
-                  <Link
-                    href="/"
-                    className="transition-colors hover:text-navy"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li className="flex items-center gap-1">
-                  <svg
-                    className="h-3.5 w-3.5 text-gray-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                  <Link
-                    href="/guides"
-                    className="transition-colors hover:text-navy"
-                  >
-                    Guides
-                  </Link>
-                </li>
-                <li className="flex items-center gap-1">
-                  <svg
-                    className="h-3.5 w-3.5 text-gray-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                  <span className="font-medium text-gray-700">
-                    {guide.title}
-                  </span>
-                </li>
-              </ol>
-            </nav>
+          <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-14">
+            <div>
+              <nav aria-label="Breadcrumb" className="mb-4">
+                <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-500">
+                  <li>
+                    <Link href="/" className="transition-colors hover:text-navy">
+                      Home
+                    </Link>
+                  </li>
+                  <li className="flex items-center gap-1">
+                    <svg
+                      className="h-3.5 w-3.5 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <Link
+                      href="/guides"
+                      className="transition-colors hover:text-navy"
+                    >
+                      Guides
+                    </Link>
+                  </li>
+                  <li className="flex min-w-0 items-center gap-1">
+                    <svg
+                      className="h-3.5 w-3.5 shrink-0 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="truncate font-medium text-gray-700">
+                      {guide.title}
+                    </span>
+                  </li>
+                </ol>
+              </nav>
 
-            {/* Category badge */}
-            <div className="mb-3">
-              <Badge
-                className={cn(
-                  "text-xs",
-                  CATEGORY_COLORS[guide.category]
-                )}
-              >
+              <Badge className={cn("text-xs", CATEGORY_COLORS[guide.category])}>
                 {CATEGORY_LABELS[guide.category]}
               </Badge>
+
+              <h1 className="mt-4 text-3xl font-bold tracking-tight text-navy sm:text-4xl lg:text-5xl">
+                {guide.title}
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-gray-700 sm:text-lg sm:leading-8">
+                {guide.description}
+              </p>
+
+              <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                <span className="flex items-center gap-1.5">
+                  <svg
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  {guide.readTime}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <svg
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Updated{" "}
+                  {new Date(guide.updatedDate).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </span>
+              </div>
             </div>
 
-            {/* Title */}
-            <h1 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl lg:text-5xl">
-              {guide.title}
-            </h1>
-
-            {/* Meta row */}
-            <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-gray-500">
-              <span className="flex items-center gap-1.5">
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                {guide.readTime}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                Updated{" "}
-                {new Date(guide.updatedDate).toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </span>
+            <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <div className="relative aspect-[16/10] bg-gray-100">
+                <Image
+                  src={visual.src}
+                  alt={visual.alt}
+                  fill
+                  sizes="(min-width: 1024px) 44vw, 100vw"
+                  className="object-cover"
+                  priority
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </div>
+              <div className="grid grid-cols-3 divide-x divide-gray-200 border-t border-gray-200 text-center">
+                <div className="px-3 py-4">
+                  <p className="text-[11px] font-bold uppercase text-gray-400">
+                    Read
+                  </p>
+                  <p className="mt-1 text-sm font-bold text-navy">
+                    {guide.readTime.replace(" read", "")}
+                  </p>
+                </div>
+                <div className="px-3 py-4">
+                  <p className="text-[11px] font-bold uppercase text-gray-400">
+                    Topic
+                  </p>
+                  <p className="mt-1 text-sm font-bold text-navy">
+                    {CATEGORY_LABELS[guide.category]}
+                  </p>
+                </div>
+                <div className="px-3 py-4">
+                  <p className="text-[11px] font-bold uppercase text-gray-400">
+                    Updated
+                  </p>
+                  <p className="mt-1 text-sm font-bold text-navy">
+                    {new Date(guide.updatedDate).toLocaleDateString("en-US", {
+                      month: "short",
+                      year: "numeric",
+                    })}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
