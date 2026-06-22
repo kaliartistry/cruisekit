@@ -1,0 +1,55 @@
+﻿{
+  "generatedAt": "2026-06-22T04:58:42.037Z",
+  "checks": {
+    "path": {
+      "ok": true,
+      "output": "C:\\Users\\ilak_\\Projects\\cruisekit"
+    },
+    "status": {
+      "ok": true,
+      "output": "## growthops/bootstrap-automation-worker\nA  .env.example\nA  .github/workflows/growthops-audit.yml\nA  .github/workflows/pr-checks.yml\nA  ops/inventory/app_store_copy.json\nA  ops/inventory/competitors.json\nA  ops/inventory/content_pages.json\nA  ops/inventory/play_store_copy.json\nA  ops/inventory/routes.json\nA  ops/inventory/schema.json\nA  ops/prompts/content_writer.md\nA  ops/prompts/daily_report.md\nA  ops/prompts/publisher.md\nA  ops/prompts/seo_auditor.md\nA  ops/prompts/system.md\nA  ops/prompts/three_day_audit.md\nA  ops/prompts/visual_qa.md\nA  ops/prompts/weekly_strategy_audit.md\nA  ops/reports/audits/initial-inventory-2026-06-22.md\nA  ops/reports/audits/postflight-bootstrap-2026-06-22.json\nA  ops/reports/audits/preflight-bootstrap-2026-06-22.json\nA  ops/reports/daily/2026-06-22.md\nA  ops/scripts/create-approval-issue.js\nA  ops/scripts/daily-report.js\nA  ops/scripts/duplicate-check.js\nA  ops/scripts/link-check.js\nAM ops/scripts/postflight-audit.js\nA  ops/scripts/preflight-audit.js\nA  ops/scripts/run-cycle.ps1\nA  ops/scripts/run-cycle.sh\nA  ops/scripts/send-notification.js\nA  ops/tasks/active.yml\nA  ops/tasks/approval_queue.yml\nA  ops/tasks/backlog.yml\nA  ops/tasks/completed.yml"
+    },
+    "remote": {
+      "ok": true,
+      "output": "origin\thttps://github.com/kaliartistry/cruisekit.git (fetch)\norigin\thttps://github.com/kaliartistry/cruisekit.git (push)"
+    },
+    "fetch": {
+      "ok": true,
+      "output": ""
+    },
+    "branch": {
+      "ok": true,
+      "output": "growthops/bootstrap-automation-worker"
+    },
+    "ghPrs": {
+      "ok": true,
+      "output": "[]"
+    },
+    "ghIssues": {
+      "ok": true,
+      "output": "[{\"number\":4,\"state\":\"OPEN\",\"title\":\"CruiseKit GrowthOps approvals needed\",\"url\":\"https://github.com/kaliartistry/cruisekit/issues/4\"}]"
+    }
+  },
+  "duplicateRoutes": [],
+  "routeCount": 34,
+  "contentPageCount": 32,
+  "schemaCount": 6,
+  "approvalRequiredPatterns": [
+    "pricing",
+    "subscriptions",
+    "paid tools",
+    "API credits",
+    "paid ads",
+    "creator payments",
+    "legal",
+    "privacy",
+    "affiliate agreements",
+    "partnership contracts",
+    "external outreach",
+    "#1",
+    "official",
+    "partnered",
+    "certified"
+  ],
+  "inventoryReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\initial-inventory-2026-06-22.md"
+}

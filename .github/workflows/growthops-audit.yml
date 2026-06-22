@@ -1,0 +1,33 @@
+name: GrowthOps Audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run public-safe preflight inventory
+        run: node ops/scripts/preflight-audit.js --write-inventory
+
+      - name: Run public-safe daily report generator
+        run: node ops/scripts/daily-report.js

@@ -1,0 +1,45 @@
+name: PR Checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: Setup Java for Firestore emulator
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Web lint
+        run: pnpm --filter web lint
+
+      - name: Functions lint
+        run: pnpm --filter cruisekit-functions lint
+
+      - name: Firestore rules tests
+        run: pnpm run test:rules
+
+      - name: GrowthOps duplicate route check
+        run: node ops/scripts/duplicate-check.js

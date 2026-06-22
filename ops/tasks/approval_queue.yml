@@ -1,0 +1,22 @@
+approval_items:
+  - id: approval-001
+    title: Confirm whether GitHub repo should remain public.
+    reason: Repo is currently public and GitHub Pages deployment is active. Making it private may affect hosting depending on GitHub plan and deploy setup.
+    status: unresolved
+    created_at: 2026-06-22
+  - id: approval-002
+    title: Email notifications not configured.
+    reason: Until SMTP/email credentials are provided, GitHub Issues labeled "needs-kali" will be used as fallback.
+    status: unresolved
+    created_at: 2026-06-22
+  - id: approval-003
+    title: Public-safe ops policy.
+    reason: Because the repo is public, private strategy reports should not be committed unless Kali approves a private repo or separate private ops repo.
+    status: unresolved
+    created_at: 2026-06-22
+  - id: approval-004
+    title: Java/JDK installed for Firestore emulator rules tests.
+    reason: Temurin JDK 21 was installed with winget on 2026-06-22, and pnpm run test:rules now passes after the package script was adjusted to use Windows-safe command quoting.
+    status: resolved
+    created_at: 2026-06-22
+    resolved_at: 2026-06-22

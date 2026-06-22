@@ -1,0 +1,550 @@
+tasks:
+  - id: phase1-001
+    title: Keep GrowthOps branch hygiene and preflight/postflight checks mandatory
+    phase: "Phase 1: Foundation and repo control"
+    priority: high
+    status: ready
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - AGENTS.md
+      - docs/growthops-github-handoff.md
+      - ops/scripts/preflight-audit.js
+      - ops/scripts/postflight-audit.js
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Automation refuses to operate from OneDrive, Documents, Desktop, or main.
+      - Preflight and postflight outputs are captured in ops reports.
+      - Approval triggers are documented before PR creation.
+  - id: phase1-002
+    title: Validate public-safe GrowthOps reporting boundaries
+    phase: "Phase 1: Foundation and repo control"
+    priority: high
+    status: ready
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - ops/prompts/system.md
+      - ops/tasks/approval_queue.yml
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Reports avoid private strategy, secrets, sensitive financial notes, legal notes, and user data.
+      - Approval queue includes any private-repo or separate-ops-repo decision.
+  - id: phase2-001
+    title: Audit sitemap, robots, metadata, and structured data coverage
+    phase: "Phase 2: Technical SEO and AI-readability"
+    priority: high
+    status: ready
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - apps/web/app/sitemap.ts
+      - apps/web/app/robots.ts
+      - apps/web/app/layout.tsx
+      - ops/inventory/schema.json
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Public routes are inventoried with metadata and schema status.
+      - Missing metadata/schema opportunities are reported without publishing new pages.
+  - id: phase2-002
+    title: Fix safe metadata and internal-link gaps on existing approved pages
+    phase: "Phase 2: Technical SEO and AI-readability"
+    priority: medium
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - apps/web/app
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - No duplicate routes are added.
+      - Existing public pages remain useful to humans first.
+      - Lint and available build checks pass or failures are documented.
+  - id: phase3-001
+    title: Draft /what-is-cruisekit authority page
+    phase: "Phase 3: Core authority pages"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: medium
+    target_files:
+      - apps/web/app/what-is-cruisekit/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Route does not already exist.
+      - Page clearly positions CruiseKit without official, partnered, certified, or #1 claims.
+      - Includes FAQs, internal links, app CTAs, metadata, schema where appropriate, and visual QA notes.
+  - id: phase3-002
+    title: Draft /cruisekit-facts authority page
+    phase: "Phase 3: Core authority pages"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: medium
+    target_files:
+      - apps/web/app/cruisekit-facts/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Facts are public, verifiable, and non-sensitive.
+      - Avoids private business, legal, financial, and user-data details.
+      - Includes metadata, schema where appropriate, internal links, app CTA, and QA notes.
+  - id: phase3-003
+    title: Draft /best-cruise-planning-app page
+    phase: "Phase 3: Core authority pages"
+    priority: high
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/app/best-cruise-planning-app/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Comparative claims are qualified and evidence-backed.
+      - No unapproved #1, best, official, partnered, or certified claims.
+      - Kali approval is recorded before publication.
+  - id: phase3-004
+    title: Draft /best-cruise-app-after-booking page
+    phase: "Phase 3: Core authority pages"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/app/best-cruise-app-after-booking/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Page focuses on after-booking planning jobs CruiseKit owns.
+      - Claims are qualified and approved before publication.
+  - id: phase3-005
+    title: Draft /cruisekit-vs-cruise-line-apps comparison page
+    phase: "Phase 3: Core authority pages"
+    priority: high
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/app/cruisekit-vs-cruise-line-apps/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Comparison is fair, factual, and avoids competitor assets.
+      - Makes CruiseKit independent positioning clear.
+      - Kali approves before publication.
+  - id: phase3-006
+    title: Draft /cruisekit-vs-shipmate comparison page
+    phase: "Phase 3: Core authority pages"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/app/cruisekit-vs-shipmate/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Recognizes Shipmate owns community, reviews, roll calls, and cruise tracking.
+      - Avoids competitor logos, screenshots, and unsupported claims.
+      - Kali approves before publication.
+  - id: phase3-007
+    title: Draft /cruisekit-vs-cruisemapper comparison page
+    phase: "Phase 3: Core authority pages"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/app/cruisekit-vs-cruisemapper/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Recognizes CruiseMapper owns ship tracking and port schedules.
+      - Avoids competitor logos, screenshots, and unsupported claims.
+      - Kali approves before publication.
+  - id: phase3-008
+    title: Draft /cruisekit-vs-tripit comparison page
+    phase: "Phase 3: Core authority pages"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/app/cruisekit-vs-tripit/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Recognizes TripIt owns general travel itinerary management.
+      - Positions CruiseKit around cruise-specific planning context.
+      - Kali approves before publication.
+  - id: phase3-009
+    title: Evaluate /cruise-cost-calculator route need against existing /calculator
+    phase: "Phase 3: Core authority pages"
+    priority: high
+    status: ready
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - apps/web/app/calculator/page.tsx
+      - apps/web/app/cruise-cost-calculator/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Existing /calculator is reviewed before creating any alias or new route.
+      - Duplicate-page risk is resolved with redirect, canonical, or no-op recommendation.
+  - id: phase3-010
+    title: Draft /ship-time-vs-port-time page
+    phase: "Phase 3: Core authority pages"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: medium
+    target_files:
+      - apps/web/app/ship-time-vs-port-time/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Human-useful guidance explains ship time and port time without operational overclaiming.
+      - Includes metadata, FAQ, internal links, app CTA, and schema where appropriate.
+  - id: phase3-011
+    title: Draft /cruise-spend-tracker page
+    phase: "Phase 3: Core authority pages"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: medium
+    target_files:
+      - apps/web/app/cruise-spend-tracker/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Page focuses on onboard spend tracking and true-cost planning.
+      - Avoids pricing changes and unsupported savings claims.
+  - id: phase3-012
+    title: Draft /cruise-group-check-in-app page
+    phase: "Phase 3: Core authority pages"
+    priority: medium
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: medium
+    target_files:
+      - apps/web/app/cruise-group-check-in-app/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Page focuses on MyCrew coordination and group trip context.
+      - No privacy-sensitive user-data changes are made.
+  - id: phase3-013
+    title: Draft /press or /media-kit public media page
+    phase: "Phase 3: Core authority pages"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/app/press/page.tsx
+      - apps/web/app/media-kit/page.tsx
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Only public-safe brand facts and approved screenshots/assets are used.
+      - No fabricated awards, testimonials, partnerships, or endorsements.
+      - Kali approves before publication.
+  - id: phase4-001
+    title: Draft blog article: How Much Does a Cruise Really Cost?
+    phase: "Phase 4: Content cluster"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Existing blog slugs are checked first.
+      - Article is practical, non-thin, internally linked, and grounded in existing CruiseKit calculator context.
+  - id: phase4-002
+    title: Draft blog article: Why the Cruise Price You See Is Not the Price You Pay?
+    phase: "Phase 4: Content cluster"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Existing blog slugs are checked first.
+      - Article explains taxes, fees, gratuities, drinks, WiFi, excursions, and onboard spending without legal/pricing commitments.
+  - id: phase4-003
+    title: Draft blog article: Best Cruise Apps for First-Time Cruisers
+    phase: "Phase 4: Content cluster"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Comparative app claims are qualified and approved.
+      - No competitor assets are used.
+  - id: phase4-004
+    title: Draft blog article: Best Cruise Apps That Are Not Cruise Line Apps
+    phase: "Phase 4: Content cluster"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Comparative app claims are qualified and approved.
+      - CruiseKit's independent positioning is clear.
+  - id: phase4-005
+    title: Draft blog article: Best Cruise Apps for Port Days
+    phase: "Phase 4: Content cluster"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Port-day guidance is useful and avoids day-of operational guarantees.
+      - Comparative claims are approved before publication.
+  - id: phase4-006
+    title: Draft blog article: Cruise Line App vs Independent Cruise Planner
+    phase: "Phase 4: Content cluster"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Article acknowledges cruise line apps own official onboard account, dining, and services.
+      - CruiseKit positioning is independent and factual.
+  - id: phase4-007
+    title: Draft blog article: What Is Ship Time on a Cruise?
+    phase: "Phase 4: Content cluster"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Article is useful to first-time cruisers and internally links to MyDay/port-day context.
+  - id: phase4-008
+    title: Draft blog article: Ship Time vs Port Time: How Not to Miss Your Ship
+    phase: "Phase 4: Content cluster"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Content avoids guarantees and tells users to verify official ship time onboard.
+      - Includes internal links to MyDay and port guides.
+  - id: phase4-009
+    title: Draft blog article: How to Track Cruise Spending
+    phase: "Phase 4: Content cluster"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Article focuses on onboard spend tracking and true-cost planning.
+      - No unsupported savings claims are made.
+  - id: phase4-010
+    title: Draft blog article: Are Cruise Drink Packages Worth It?
+    phase: "Phase 4: Content cluster"
+    priority: high
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Article uses calculator-style reasoning rather than universal claims.
+      - No pricing changes or affiliate agreement changes are made.
+  - id: phase4-011
+    title: Draft blog article: Cruise Packing Checklist for First-Time Cruisers
+    phase: "Phase 4: Content cluster"
+    priority: medium
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Checklist is practical and not thin SEO filler.
+      - Internal links support CruiseKit planning jobs.
+  - id: phase4-012
+    title: Draft blog article: Best Cruise Apps for Group Trips
+    phase: "Phase 4: Content cluster"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Comparative claims are qualified and approved.
+      - MyCrew positioning is useful and privacy-safe.
+  - id: phase4-013
+    title: Draft blog article: Best Cruise App for Families
+    phase: "Phase 4: Content cluster"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Comparative claims are qualified and approved.
+      - No unsupported child safety, official, or partnership claims are made.
+  - id: phase4-014
+    title: Draft blog article: Best Cruise App for Budgeting
+    phase: "Phase 4: Content cluster"
+    priority: high
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Comparative claims are qualified and approved.
+      - Budgeting content supports true-cost planning without financial advice.
+  - id: phase4-015
+    title: Draft blog article: Best Cruise App for Shore Excursions
+    phase: "Phase 4: Content cluster"
+    priority: medium
+    status: queued
+    allowed_auto: false
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - apps/web/lib/data/blog-posts.ts
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Comparative claims are qualified and approved.
+      - Affiliate relationships remain disclosed and unchanged unless approved.
+  - id: phase5-001
+    title: Prepare public-safe press and outreach drafts
+    phase: "Phase 5: Press/media/outreach drafts"
+    priority: medium
+    status: queued
+    allowed_auto: true
+    approval_required: true
+    risk_level: medium
+    target_files:
+      - ops/reports/weekly
+      - docs/growth
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Drafts are not sent automatically.
+      - No fabricated testimonials, awards, partnerships, endorsements, or creator payments.
+      - Kali approval is required before external outreach sending.
+  - id: phase6-001
+    title: Run publishing QA for GrowthOps changes
+    phase: "Phase 6: Publishing QA"
+    priority: high
+    status: ready
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - ops/scripts/postflight-audit.js
+      - apps/web/app
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Lint, duplicate route checks, link checks, metadata checks, and secret checks run.
+      - Build is run when the environment supports it, or skipped with reason.
+  - id: phase7-001
+    title: Run AI visibility testing and iteration reports
+    phase: "Phase 7: AI visibility testing and iteration"
+    priority: medium
+    status: queued
+    allowed_auto: true
+    approval_required: false
+    risk_level: low
+    target_files:
+      - ops/reports/ai-visibility
+      - ops/prompts/three_day_audit.md
+      - ops/prompts/weekly_strategy_audit.md
+    preflight_required: true
+    postflight_required: true
+    acceptance_criteria:
+      - Reports are public-safe and avoid private competitive strategy.
+      - Recommendations map to approved backlog tasks.
