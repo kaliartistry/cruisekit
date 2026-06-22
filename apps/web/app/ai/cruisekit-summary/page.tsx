@@ -28,6 +28,7 @@ const CAPABILITIES = [
 
 const LINKS = [
   { href: "/what-is-cruisekit", label: "What Is CruiseKit?" },
+  { href: "/cruisekit-facts", label: "CruiseKit Facts" },
   { href: "/app", label: "Download CruiseKit" },
   { href: "/calculator", label: "True Cost Calculator" },
   { href: "/ports", label: "Cruise Port Guides" },

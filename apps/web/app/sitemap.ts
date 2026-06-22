@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/app',
     '/what-is-cruisekit',
+    '/cruisekit-facts',
     '/calculator',
     '/cruise-costs',
     '/cruises',
