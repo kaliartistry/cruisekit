@@ -83,12 +83,17 @@ Before adding any new GrowthOps page, check `apps/web/app`, `apps/web/lib/data/b
    git switch -c codex/growthops-task-name
    ```
 
-4. Run preflight checks before editing:
+4. Run preflight checks before editing. Write-mode preflight captures route, content, and schema inventory under `ops/inventory` and writes the audit JSON to `ops/reports/audits/preflight-YYYY-MM-DD.json`, so run it from the task branch:
 
    ```sh
-   git status --short --branch
-   git remote -v
+   node ops/scripts/preflight-audit.js --write-inventory
    ```
 
-5. Never commit secrets, `.env` files, local signing files, or paid-tool credentials.
-6. Use GitHub issues with the `needs-kali` label whenever approval is required.
+5. Run postflight before commit. It writes `ops/reports/audits/postflight-YYYY-MM-DD.json` and fails from `main`/`master`, unsafe local paths, duplicate routes, lint failures, or link-scan failures:
+
+   ```sh
+   node ops/scripts/postflight-audit.js
+   ```
+
+6. Never commit secrets, `.env` files, local signing files, or paid-tool credentials.
+7. Use GitHub issues with the `needs-kali` label whenever approval is required.

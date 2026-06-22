@@ -1,0 +1,61 @@
+﻿{
+  "generatedAt": "2026-06-22T14:51:16.150Z",
+  "checks": {
+    "path": {
+      "ok": true,
+      "output": "C:\\Users\\ilak_\\Projects\\cruisekit"
+    },
+    "status": {
+      "ok": true,
+      "output": "## codex/growthops-phase1-001-audit-guards\nM  docs/growthops-github-handoff.md\nM  ops/inventory/content_pages.json\nM  ops/inventory/routes.json\nM  ops/inventory/schema.json\nM  ops/reports/audits/initial-inventory-2026-06-22.md\nAD ops/reports/audits/postflight-2026-06-22.json\nAD ops/reports/audits/preflight-2026-06-22.json\nM  ops/reports/daily/2026-06-22.md\n M ops/scripts/daily-report.js\nM  ops/scripts/postflight-audit.js\nM  ops/scripts/preflight-audit.js"
+    },
+    "remote": {
+      "ok": true,
+      "output": "origin\thttps://github.com/kaliartistry/cruisekit.git (fetch)\norigin\thttps://github.com/kaliartistry/cruisekit.git (push)"
+    },
+    "fetch": {
+      "ok": true,
+      "output": ""
+    },
+    "branch": {
+      "ok": true,
+      "output": "codex/growthops-phase1-001-audit-guards"
+    },
+    "ghPrs": {
+      "ok": true,
+      "output": "[]"
+    },
+    "ghIssues": {
+      "ok": true,
+      "output": "[{\"number\":4,\"state\":\"OPEN\",\"title\":\"CruiseKit GrowthOps approvals needed\",\"url\":\"https://github.com/kaliartistry/cruisekit/issues/4\"}]"
+    },
+    "branchGuard": {
+      "ok": true,
+      "output": "Current branch: codex/growthops-phase1-001-audit-guards"
+    }
+  },
+  "duplicateRoutes": [],
+  "routeCount": 34,
+  "contentPageCount": 32,
+  "schemaCount": 6,
+  "approvalRequiredPatterns": [
+    "pricing",
+    "subscriptions",
+    "paid tools",
+    "API credits",
+    "paid ads",
+    "creator payments",
+    "legal",
+    "privacy",
+    "affiliate agreements",
+    "partnership contracts",
+    "external outreach",
+    "#1",
+    "official",
+    "partnered",
+    "certified"
+  ],
+  "inventoryReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\initial-inventory-2026-06-22.md",
+  "initialInventoryRefreshed": false,
+  "auditReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\preflight-2026-06-22.json"
+}

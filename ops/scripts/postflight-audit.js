@@ -1,7 +1,24 @@
 #!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
 const { execFileSync } = require("child_process");
 
 const root = process.cwd();
+const today = new Date().toISOString().slice(0, 10);
+
+if (process.platform === "win32") {
+  try {
+    const refreshedPath = execFileSync("powershell.exe", [
+      "-NoProfile",
+      "-Command",
+      "[Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')",
+    ], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+    if (refreshedPath) {
+      process.env.Path = refreshedPath;
+      process.env.PATH = refreshedPath;
+    }
+  } catch {}
+}
 
 function compact(output, maxLength = 8000) {
   if (!output || output.length <= maxLength) return output || "";
@@ -37,6 +54,7 @@ const checks = [
   { name: "path-not-onedrive", ok: !/OneDrive|Documents|Desktop/i.test(root), output: root },
   run("git-status", "git", ["status", "--short", "--branch"]),
   branch,
+  { name: "branch-not-main", ok: !/^(main|master)$/.test(branch.output || ""), output: branch.output || "Unable to determine branch" },
   run("duplicate-routes", process.execPath, ["ops/scripts/duplicate-check.js"]),
   run("link-static-scan", process.execPath, ["ops/scripts/link-check.js"]),
   run("web-lint", "corepack", ["pnpm", "--filter", "web", "lint"]),
@@ -71,6 +89,19 @@ const report = {
   ],
 };
 
+function isAllowedSoftFailure(check) {
+  if (["secret-scan", "approval-claim-scan"].includes(check.name)) return true;
+  if (check.name === "rules-test") {
+    return /java|JDK|ECONNREFUSED|Firestore emulator/i.test(check.output || "");
+  }
+  return false;
+}
+
+const reportPath = path.join(root, "ops", "reports", "audits", `postflight-${today}.json`);
+fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+fs.writeFileSync(reportPath, `${JSON.stringify({ ...report, auditReport: reportPath }, null, 2)}\n`);
+report.auditReport = reportPath;
+
 console.log(JSON.stringify(report, null, 2));
 if (/^(main|master)$/.test(branch.output || "")) process.exitCode = 1;
-if (checks.some((check) => !check.ok && !["rules-test", "secret-scan", "approval-claim-scan"].includes(check.name))) process.exitCode = 1;
+if (checks.some((check) => !check.ok && !isAllowedSoftFailure(check))) process.exitCode = 1;
