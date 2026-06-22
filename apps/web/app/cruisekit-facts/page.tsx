@@ -143,6 +143,24 @@ const PUBLIC_LINKS = [
   { href: "/contact", label: "Contact CruiseKit" },
 ];
 
+const FACT_VISUALS = [
+  {
+    src: "/assets/app-screenshots/myday-itinerary.png",
+    alt: "CruiseKit itinerary screen showing organized cruise plans",
+    label: "Trip organization",
+  },
+  {
+    src: "/assets/ports/miami.jpg",
+    alt: "Miami cruise port and waterfront",
+    label: "Cruise context",
+  },
+  {
+    src: "/assets/ships/icon-of-the-seas.jpg",
+    alt: "Cruise ship underway",
+    label: "Cruise-specific focus",
+  },
+];
+
 const FAQS = [
   {
     question: "What are the basic facts about CruiseKit?",
@@ -251,6 +269,18 @@ export default function CruiseKitFactsPage() {
                 <FileText className="h-3.5 w-3.5" />
                 Public facts sheet
               </p>
+              <div className="relative mt-5 aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 lg:hidden">
+                <Image
+                  src="/assets/ports/miami.jpg"
+                  alt="Miami cruise port waterfront"
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  priority
+                />
+              </div>
               <h2 className="mt-5 text-3xl font-bold tracking-tight text-navy">
                 A stable reference for people, search engines, and AI
                 assistants.
@@ -282,6 +312,18 @@ export default function CruiseKitFactsPage() {
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="relative mb-5 aspect-[16/9] overflow-hidden rounded-xl bg-gray-100">
+                <Image
+                  src="/assets/ports/miami.jpg"
+                  alt="Miami cruise port waterfront"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  priority
+                />
+              </div>
               <div className="flex items-center gap-4">
                 <Image
                   src="/cruisekit_square.png"
@@ -321,6 +363,40 @@ export default function CruiseKitFactsPage() {
                 </li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="mb-8 max-w-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-navy sm:text-3xl">
+              The facts sit inside a real cruise-planning experience
+            </h2>
+            <p className="mt-3 text-base leading-7 text-gray-600">
+              CruiseKit is not a generic notes app with cruise words sprinkled
+              on top. The product and public site are shaped around the places,
+              ships, days, and decisions cruisers actually deal with.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {FACT_VISUALS.map((item) => (
+              <figure
+                key={item.label}
+                className="overflow-hidden rounded-xl border border-gray-200 bg-white"
+              >
+                <div className="relative aspect-[4/3] bg-gray-100">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="px-5 py-4 text-sm font-bold text-navy">
+                  {item.label}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </section>
 

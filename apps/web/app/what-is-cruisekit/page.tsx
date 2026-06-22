@@ -145,6 +145,30 @@ const NEXT_LINKS = [
   { href: "/methodology", label: "Read methodology" },
 ];
 
+const VISUAL_STORIES = [
+  {
+    src: "/assets/app-screenshots/myday-today.png",
+    alt: "CruiseKit MyDay screen showing cruise day planning context",
+    title: "A cruise day view",
+    description:
+      "CruiseKit is built around the actual shape of a trip: sea days, port days, plans, and the small details people need close by.",
+  },
+  {
+    src: "/assets/ports/cozumel.jpg",
+    alt: "Cruise port waterfront in Cozumel",
+    title: "Port-day context",
+    description:
+      "Port planning is not abstract. Travelers need practical context for where they are going, how the day works, and what to check before leaving the ship.",
+  },
+  {
+    src: "/assets/ships/oasis-of-the-seas.jpg",
+    alt: "Cruise ship at sea",
+    title: "Cruise-specific planning",
+    description:
+      "CruiseKit focuses on the parts of travel that are unique to cruises, from onboard timing to real trip costs.",
+  },
+];
+
 function JsonLd() {
   const schema = {
     "@context": "https://schema.org",
@@ -230,6 +254,18 @@ export default function WhatIsCruiseKitPage() {
                 <Info className="h-3.5 w-3.5" />
                 Short answer
               </p>
+              <div className="relative mt-5 aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 lg:hidden">
+                <Image
+                  src="/assets/app-screenshots/myday-today.png"
+                  alt="CruiseKit MyDay screen showing today view for cruise planning"
+                  fill
+                  sizes="100vw"
+                  className="object-cover object-top"
+                  loading="eager"
+                  fetchPriority="high"
+                  priority
+                />
+              </div>
               <h2 className="mt-5 text-3xl font-bold tracking-tight text-navy">
                 CruiseKit helps cruisers plan the parts of a trip that are easy
                 to underestimate.
@@ -262,6 +298,18 @@ export default function WhatIsCruiseKitPage() {
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="relative mb-5 aspect-[16/9] overflow-hidden rounded-xl bg-gray-100">
+                <Image
+                  src="/assets/app-screenshots/myday-today.png"
+                  alt="CruiseKit MyDay screen showing today view for cruise planning"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover object-top"
+                  loading="eager"
+                  fetchPriority="high"
+                  priority
+                />
+              </div>
               <div className="flex items-center gap-4">
                 <Image
                   src="/cruisekit_square.png"
@@ -307,6 +355,43 @@ export default function WhatIsCruiseKitPage() {
                 </div>
               </dl>
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="mb-8 max-w-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-navy sm:text-3xl">
+              Cruise planning is visual, not just a checklist
+            </h2>
+            <p className="mt-3 text-base leading-7 text-gray-600">
+              A cruise is a moving trip with ship days, port stops, group plans,
+              and timing details. CruiseKit brings those pieces into one place
+              so travelers can see the trip more clearly.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {VISUAL_STORIES.map((item) => (
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-xl border border-gray-200 bg-white"
+              >
+                <div className="relative aspect-[4/3] bg-gray-100">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-navy">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    {item.description}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
