@@ -79,6 +79,12 @@ export default function AppLandingClient() {
             >
               Use the web calculator instead -&gt;
             </Link>
+            <Link
+              href="/cruisekit-public-information"
+              className="ml-0 mt-3 block text-sm font-bold text-navy transition-colors hover:text-teal sm:ml-5 sm:mt-5 sm:inline-flex"
+            >
+              Read CruiseKit public information -&gt;
+            </Link>
           </div>
 
           <div className="relative mx-auto w-full max-w-md">

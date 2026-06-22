@@ -147,8 +147,8 @@ const NEXT_LINKS = [
 
 const VISUAL_STORIES = [
   {
-    src: "/assets/app-screenshots/myday-today.png",
-    alt: "CruiseKit MyDay screen showing cruise day planning context",
+    src: "/assets/app-screenshots/myday-itinerary.png",
+    alt: "CruiseKit itinerary screen showing cruise day planning context",
     title: "A cruise day view",
     description:
       "CruiseKit is built around the actual shape of a trip: sea days, port days, plans, and the small details people need close by.",

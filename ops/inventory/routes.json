@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T15:32:12.135Z",
+  "generatedAt": "2026-06-22T17:03:21.385Z",
   "sourceRoot": "apps/web/app",
   "routes": [
     {
@@ -89,6 +89,13 @@
     {
       "route": "/cruisekit-facts",
       "file": "apps/web/app/cruisekit-facts/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
+      "route": "/cruisekit-public-information",
+      "file": "apps/web/app/cruisekit-public-information/page.tsx",
       "hasMetadata": true,
       "hasSchema": true,
       "internal": false

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Info } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
@@ -190,7 +191,22 @@ export default function HelpPage() {
 
         <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           {/* Quick Links */}
-          <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/cruisekit-public-information"
+              className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal/10 text-teal">
+                <Info className="h-5 w-5" strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="font-bold text-navy">Public Information</h3>
+                <p className="text-sm text-gray-500">
+                  Facts and official links
+                </p>
+              </div>
+            </Link>
+
             <Link
               href="/faq"
               className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"

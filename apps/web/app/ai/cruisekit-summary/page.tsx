@@ -27,6 +27,7 @@ const CAPABILITIES = [
 ];
 
 const LINKS = [
+  { href: "/cruisekit-public-information", label: "Public Information Hub" },
   { href: "/what-is-cruisekit", label: "What Is CruiseKit?" },
   { href: "/cruisekit-facts", label: "CruiseKit Facts" },
   { href: "/app", label: "Download CruiseKit" },
