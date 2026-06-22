@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T15:24:02.672Z",
+  "generatedAt": "2026-06-22T15:32:12.136Z",
   "schema": [
     {
       "route": "/blog/:slug",
@@ -34,6 +34,11 @@
     {
       "route": "/ports/:port-slug",
       "file": "apps/web/app/ports/[port-slug]/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/ship-time-vs-port-time",
+      "file": "apps/web/app/ship-time-vs-port-time/page.tsx",
       "schemaDetected": true
     },
     {

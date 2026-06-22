@@ -37,3 +37,12 @@ tasks:
       - ops/reports/audits/preflight-day5-cruisekit-facts-2026-06-22.json
       - https://github.com/kaliartistry/cruisekit/pull/10
     summary: Drafted the public `/cruisekit-facts` authority page with sitemap, footer, AI-summary, llms.txt, and `/what-is-cruisekit` discovery links.
+  - id: phase3-010
+    completed_at: "2026-06-22"
+    evidence:
+      - apps/web/app/ship-time-vs-port-time/page.tsx
+      - apps/web/app/sitemap.ts
+      - apps/web/public/llms.txt
+      - ops/reports/audits/preflight-day6-ship-time-port-time-2026-06-22.json
+      - https://github.com/kaliartistry/cruisekit/pull/11
+    summary: Drafted the public `/ship-time-vs-port-time` authority page with operational caveats, FAQ schema, sitemap, footer, and llms.txt discovery links.

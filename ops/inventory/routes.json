@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T15:24:02.671Z",
+  "generatedAt": "2026-06-22T15:32:12.135Z",
   "sourceRoot": "apps/web/app",
   "routes": [
     {
@@ -231,6 +231,13 @@
       "file": "apps/web/app/privacy/page.tsx",
       "hasMetadata": true,
       "hasSchema": false,
+      "internal": false
+    },
+    {
+      "route": "/ship-time-vs-port-time",
+      "file": "apps/web/app/ship-time-vs-port-time/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
       "internal": false
     },
     {
