@@ -41,12 +41,27 @@ The worker may run repo audits, SEO audits, safe technical SEO fixes, metadata f
 2. Run `node ops/scripts/preflight-audit.js --write-inventory`.
 3. Generate the daily report with `node ops/scripts/daily-report.js`.
 4. If the initial inventory report is missing, create it before content work.
-5. Pick only one safe foundation task from `ops/tasks/backlog.yml`.
+5. Review `ops/tasks/backlog.yml`, recent merged PRs, and `ops/reports/audits` before selecting work. Do not repeat shipped tasks.
 6. Create a branch for that task.
-7. Make the smallest useful change.
-8. Run available checks.
-9. Run `node ops/scripts/postflight-audit.js`.
-10. Commit, push, open a PR, and create a `needs-kali` issue if approval is required.
-11. Stop after one major task.
+7. Pick only one safe, non-completed, automation-allowed task unless Kali has explicitly approved a gated task in the current thread or an issue.
+8. Make the smallest useful change.
+9. Run available checks.
+10. Run `node ops/scripts/postflight-audit.js`.
+11. Commit, push, open a PR, and create a `needs-kali` issue if approval is required.
+12. Stop after one major task.
 
-Do not publish major pages without Kali approval.
+## Current GrowthOps Baseline
+
+As of June 22, 2026, the following public GrowthOps work is already shipped and must not be repeated unless a concrete audit failure requires a focused fix:
+
+- Technical SEO baseline and duplicate-route decisions.
+- `/what-is-cruisekit`
+- `/cruisekit-facts`
+- `/ship-time-vs-port-time`
+- `/cruisekit-public-information`
+- Visual/search-quality passes for `/guides`, `/faq`, `/ports`, guide detail pages, `llms.txt`, and `/ai/cruisekit-summary`.
+- Google Search Console indexing requests for `/guides`, `/faq`, `/ports`, `/ai/cruisekit-summary`, and `/cruisekit-public-information`.
+
+Next safe automation work should advance the backlog beyond this baseline. Good candidates include boundary/trust improvements that clarify what CruiseKit is not, non-comparative CruiseKit feature authority pages, public-safe blog clusters, internal linking, schema enrichment, and QA reports.
+
+Do not publish approval-gated comparison, "best", official, partner, certification, pricing, legal, privacy, or external outreach work without Kali approval.
