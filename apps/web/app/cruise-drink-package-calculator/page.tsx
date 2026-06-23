@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import CalculatorSwitcher from "@/components/calculator/calculator-switcher";
 import DrinkPackageCalculator from "@/components/calculator/drink-package-calculator";
 
 const PAGE_URL = "https://cruisekit.app/cruise-drink-package-calculator/";
@@ -229,6 +230,10 @@ export default function CruiseDrinkPackageCalculatorPage() {
                 purchases, cabin rules, service charges, and line-specific
                 package limits.
               </p>
+              <CalculatorSwitcher
+                active="drink-package"
+                className="mt-7 max-w-3xl"
+              />
               <div className="mt-6 grid gap-3 text-sm text-gray-700 sm:grid-cols-3">
                 <div className="rounded-lg border border-gray-200 bg-white p-4">
                   Cruise-line-specific rules
