@@ -330,15 +330,15 @@ function CtaBanners({ slug }: { slug: string }) {
     }
   > = {
     "drink-package-guide": {
-      title: "Calculate your full cruise cost with drinks included",
+      title: "Try the Cruise Drink Package Calculator",
       description:
-        "Estimate your full cruise cost, including drinks, gratuities, WiFi, excursions, and port spending.",
-      href: "/calculator",
+        "Compare package cost, service charges, cabin rules, and your planned onboard purchases.",
+      href: "/cruise-drink-package-calculator",
       links: [
-        { href: "/calculator/royal-caribbean", label: "Royal Caribbean" },
-        { href: "/calculator/carnival", label: "Carnival" },
-        { href: "/calculator/norwegian", label: "Norwegian" },
-        { href: "/calculator/msc", label: "MSC" },
+        { href: "/calculator", label: "Full cruise cost calculator" },
+        { href: "/calculator/carnival", label: "Carnival full cost" },
+        { href: "/calculator/royal-caribbean", label: "Royal Caribbean full cost" },
+        { href: "/calculator/norwegian", label: "NCL full cost" },
       ],
     },
     "cruise-tipping-guide": {

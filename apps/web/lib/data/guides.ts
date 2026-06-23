@@ -325,9 +325,9 @@ const packingGuide: Guide = {
 
 const drinkPackageGuide: Guide = {
   slug: "drink-package-guide",
-  title: "Cruise Drink Package Calculator: Is It Worth It?",
+  title: "Cruise Drink Package Guide: Is It Worth It?",
   description:
-    "Use drink package break-even math to decide whether a cruise beverage package is worth it, then add the real drink cost to your full cruise budget.",
+    "Use drink package break-even math to decide whether a cruise beverage package is worth it, then compare the package in CruiseKit's dedicated calculator.",
   category: "budget",
   icon: "\uD83C\uDF79",
   readTime: "12 min read",
@@ -343,9 +343,9 @@ const drinkPackageGuide: Guide = {
             "Divide the daily package price, including service charge or gratuity, by the average price of the drinks you would actually order. If the package costs $92 per day after gratuity and your average cocktail is $14, you need about 6.5 drinks per day to break even. That has to happen every day of the cruise, including embarkation day and port days when you may be off the ship for hours.",
           appliesTo: "All cruise lines",
           productRecommendation: {
-            name: "CruiseKit True Cost Calculator",
+            name: "CruiseKit Cruise Drink Package Calculator",
             description:
-              "Use our calculator to see your true drink package cost and whether you'll break even based on your actual drinking habits.",
+              "Compare package cost, service charges, cabin rules, and planned onboard purchases at /cruise-drink-package-calculator/.",
           },
         },
         {

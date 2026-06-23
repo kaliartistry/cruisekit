@@ -28,6 +28,10 @@ const FOOTER_COLUMNS = [
       },
       { label: "Cruise Costs", href: "/cruise-costs" },
       { label: "Ship Time vs Port Time", href: "/ship-time-vs-port-time" },
+      {
+        label: "Drink Package Calculator",
+        href: "/cruise-drink-package-calculator",
+      },
       { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/faq" },
       { label: "Help Center", href: "/help" },

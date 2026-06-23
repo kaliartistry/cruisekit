@@ -159,6 +159,29 @@ function isCostRelatedPost(post: BlogPost) {
   return COST_RELATED_KEYWORDS.some((keyword) => text.includes(keyword));
 }
 
+function isDrinkPackageRelatedPost(post: BlogPost) {
+  const text = getPostSearchText(post);
+  return [
+    "drink package",
+    "drink packages",
+    "beverage package",
+    "cheers",
+    "deluxe beverage package",
+    "free at sea",
+    "more at sea",
+    "princess plus",
+    "princess premier",
+    "premium extra",
+    "classic drink package",
+    "premium drink package",
+    "have it all",
+    "bar tab",
+    "onboard spending",
+    "cruise budget",
+    "cruise cost",
+  ].some((keyword) => text.includes(keyword));
+}
+
 function buildCalculatorCta(post: BlogPost) {
   if (!isCostRelatedPost(post)) return null;
 
@@ -441,11 +464,52 @@ function RelatedPosts({ currentSlug }: { currentSlug: string }) {
 
 function CtaBanners({ post }: { post: BlogPost }) {
   const calculatorCta = buildCalculatorCta(post);
+  const showDrinkPackageCta = isDrinkPackageRelatedPost(post);
   const showDeals = post.category === "deals";
   const showPorts = post.category === "port-guides";
 
   return (
     <div className="mt-12 space-y-4">
+      {showDrinkPackageCta && (
+        <div className="rounded-xl border-2 border-teal/30 bg-teal/5 p-6">
+          <BlogCtaLink
+            href="/cruise-drink-package-calculator"
+            source={`blog-${post.slug}-drink-package-calculator-cta`}
+            className={cn(
+              "flex items-center justify-between gap-4",
+              "transition-colors hover:text-teal"
+            )}
+          >
+            <div>
+              <p className="text-lg font-bold text-navy">
+                Trying to decide whether the drink package is worth it?
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                Use our Cruise Drink Package Calculator to compare package
+                cost, service charges, cabin rules, and your planned onboard
+                purchases.
+              </p>
+              <span className="mt-3 inline-flex rounded-lg bg-teal px-4 py-2 text-sm font-bold text-white">
+                Try the Cruise Drink Package Calculator
+              </span>
+            </div>
+            <svg
+              className="h-6 w-6 shrink-0 text-teal"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </BlogCtaLink>
+        </div>
+      )}
+
       {calculatorCta && (
         <div className="rounded-xl border-2 border-teal/30 bg-teal/5 p-6">
           <BlogCtaLink
