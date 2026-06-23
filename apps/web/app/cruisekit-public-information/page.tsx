@@ -118,6 +118,13 @@ const PRODUCT_LINKS: ReferenceLink[] = [
     icon: Calculator,
   },
   {
+    title: "Cruise spend tracker",
+    description:
+      "Plan and track onboard extras, port-day spending, gratuities, and true trip costs.",
+    href: "/cruise-spend-tracker",
+    icon: Calculator,
+  },
+  {
     title: "Cruise port guides",
     description:
       "Browse practical port-day context for cruise stops.",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T17:03:21.385Z",
+  "generatedAt": "2026-06-23T14:06:16.421Z",
   "sourceRoot": "apps/web/app",
   "routes": [
     {
@@ -87,6 +87,20 @@
       "internal": false
     },
     {
+      "route": "/cruise-drink-package-calculator",
+      "file": "apps/web/app/cruise-drink-package-calculator/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
+      "route": "/cruise-spend-tracker",
+      "file": "apps/web/app/cruise-spend-tracker/page.tsx",
+      "hasMetadata": true,
+      "hasSchema": true,
+      "internal": false
+    },
+    {
       "route": "/cruisekit-facts",
       "file": "apps/web/app/cruisekit-facts/page.tsx",
       "hasMetadata": true,
@@ -111,7 +125,7 @@
       "route": "/faq",
       "file": "apps/web/app/faq/page.tsx",
       "hasMetadata": true,
-      "hasSchema": false,
+      "hasSchema": true,
       "internal": false
     },
     {
@@ -152,8 +166,8 @@
     {
       "route": "/guides",
       "file": "apps/web/app/guides/page.tsx",
-      "hasMetadata": false,
-      "hasSchema": false,
+      "hasMetadata": true,
+      "hasSchema": true,
       "internal": false
     },
     {

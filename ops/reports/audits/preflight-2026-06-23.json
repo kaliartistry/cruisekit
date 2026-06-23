@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-06-23T14:06:16.420Z",
+  "checks": {
+    "path": {
+      "ok": true,
+      "output": "C:\\Users\\ilak_\\Projects\\cruisekit"
+    },
+    "status": {
+      "ok": true,
+      "output": "## codex/cruise-spend-tracker-authority-page\n M apps/web/app/cruisekit-public-information/page.tsx\n M apps/web/app/sitemap.ts\n M ops/inventory/content_pages.json\n M ops/inventory/routes.json\n M ops/inventory/schema.json\n?? apps/web/app/cruise-spend-tracker/\n?? ops/reports/audits/initial-inventory-2026-06-23.md\n?? ops/reports/audits/postflight-2026-06-23.json\n?? ops/reports/audits/preflight-2026-06-23.json\n?? ops/reports/daily/2026-06-23.md"
+    },
+    "remote": {
+      "ok": true,
+      "output": "origin\thttps://github.com/kaliartistry/cruisekit.git (fetch)\norigin\thttps://github.com/kaliartistry/cruisekit.git (push)"
+    },
+    "fetch": {
+      "ok": true,
+      "output": ""
+    },
+    "branch": {
+      "ok": true,
+      "output": "codex/cruise-spend-tracker-authority-page"
+    },
+    "ghPrs": {
+      "ok": true,
+      "output": "[]"
+    },
+    "ghIssues": {
+      "ok": true,
+      "output": "[{\"number\":4,\"state\":\"OPEN\",\"title\":\"CruiseKit GrowthOps approvals needed\",\"url\":\"https://github.com/kaliartistry/cruisekit/issues/4\"}]"
+    },
+    "branchGuard": {
+      "ok": true,
+      "output": "Current branch: codex/cruise-spend-tracker-authority-page"
+    }
+  },
+  "duplicateRoutes": [],
+  "routeCount": 40,
+  "contentPageCount": 32,
+  "schemaCount": 14,
+  "approvalRequiredPatterns": [
+    "pricing",
+    "subscriptions",
+    "paid tools",
+    "API credits",
+    "paid ads",
+    "creator payments",
+    "legal",
+    "privacy",
+    "affiliate agreements",
+    "partnership contracts",
+    "external outreach",
+    "#1",
+    "official",
+    "partnered",
+    "certified"
+  ],
+  "inventoryReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\initial-inventory-2026-06-23.md",
+  "initialInventoryRefreshed": false,
+  "auditReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\preflight-2026-06-23.json"
+}
