@@ -56,7 +56,7 @@ tasks:
     title: Fix safe metadata and internal-link gaps on existing approved pages
     phase: "Phase 2: Technical SEO and AI-readability"
     priority: medium
-    status: queued
+    status: completed
     allowed_auto: true
     approval_required: false
     risk_level: low
