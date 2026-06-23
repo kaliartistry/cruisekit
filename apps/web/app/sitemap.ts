@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/cruisekit-facts',
     '/ship-time-vs-port-time',
     '/calculator',
+    '/cruise-drink-package-calculator',
     '/cruise-costs',
     '/cruises',
     '/compare',

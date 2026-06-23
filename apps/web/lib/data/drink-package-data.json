@@ -1,0 +1,679 @@
+{
+  "metadata": {
+    "name": "Cruise Drink Package Calculator Data",
+    "version": "v1",
+    "generated_from": "deep-research-report (2).md",
+    "last_verified": "2026-06-22",
+    "note": "Use safe defaults only where pricing_confidence_flag allows it. Require user-entered pricing where user_price_override is Yes. Do not frame outputs as encouragement to consume alcohol."
+  },
+  "packages": [
+    {
+      "cruise_line": "Carnival Cruise Line",
+      "package_name": "CHEERS!",
+      "package_type": "standard_drink_package",
+      "default_price": 69.95,
+      "price_type": "fixed_public_price",
+      "pricing_confidence_flag": "Safe Default",
+      "package_service_charge_rate": 0.2,
+      "a_la_carte_service_charge_rate": null,
+      "required_adult_buyers_rule": "All adults in the same stateroom must purchase.",
+      "alcoholic_daily_limit": 15,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 20.0,
+      "included_categories": [
+        "cocktails",
+        "spirits",
+        "beer",
+        "wine_by_glass",
+        "soda",
+        "zero_proof_frozen_drinks",
+        "juices",
+        "specialty_coffee",
+        "milkshakes",
+        "energy_drinks",
+        "500ml_bottled_water"
+      ],
+      "major_exclusions": [
+        "souvenir_glassware",
+        "bottles_of_liquor",
+        "room_service",
+        "off_ship_purchases",
+        "enomatic_wine_machines",
+        "food_items"
+      ],
+      "private_destination_rules": "Not valid at Celebration Key, Half Moon Cay, or Princess Cays; designed for onboard use.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "Recommended",
+      "calculator_warning": "Carnival is easy to model, but CHEERS! has a 15-drink alcohol cap and does not work on private destinations.",
+      "source_urls": [
+        "https://www.carnival.com/drink-packages",
+        "https://www.carnival.com/drink-packages/cheers-package/cheers-SUM"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Royal Caribbean",
+      "package_name": "Deluxe Beverage Package",
+      "package_type": "dynamic_price_drink_package",
+      "default_price": null,
+      "price_type": "dynamic_by_sailing",
+      "pricing_confidence_flag": "User Must Enter Actual Price",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": null,
+      "required_adult_buyers_rule": "All legal-drinking-age guests in the same stateroom and booking number must purchase the same alcoholic package.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 14.0,
+      "included_categories": [
+        "cocktails",
+        "spirits",
+        "liqueurs",
+        "beer",
+        "wine_by_glass",
+        "soda",
+        "mocktails",
+        "premium_coffee",
+        "premium_tea",
+        "bottled_water",
+        "fresh_juice",
+        "smoothies",
+        "milkshakes_where_available"
+      ],
+      "major_exclusions": [
+        "licensed_starbucks",
+        "desserted_milkshake_bar",
+        "room_service",
+        "mini_bar",
+        "souvenir_glassware",
+        "specialty_beers",
+        "drinks_above_cap"
+      ],
+      "private_destination_rules": "No clear private-island rule stated on cited package page; check the Cruise Planner for itinerary-specific details.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "Yes",
+      "calculator_warning": "Royal Caribbean drink package prices vary by sailing. Use the exact Cruise Planner price.",
+      "source_urls": [
+        "https://www.royalcaribbean.com/faq/questions/what-is-the-deluxe-beverage-package",
+        "https://www.royalcaribbean.com/content/dam/royal/resources/pdf/beverage-packages/deluxe-beverage-packages-cruises.pdf"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Norwegian Cruise Line",
+      "package_name": "Free at Sea Unlimited Open Bar",
+      "package_type": "bundle_package",
+      "default_price": null,
+      "price_type": "bundle_fare",
+      "pricing_confidence_flag": "User Must Enter Actual Price",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": null,
+      "required_adult_buyers_rule": "Applies to all guests in the stateroom age 21+; younger substitutions vary by guest position in booking.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": null,
+      "included_categories": [
+        "premium_spirits",
+        "cocktails",
+        "wine",
+        "draft_beer",
+        "juice",
+        "soda"
+      ],
+      "major_exclusions": [
+        "bundle_value_mixed_with_wifi_dining_excursions",
+        "exact_gratuity_rate_not_published_on_cited_page"
+      ],
+      "private_destination_rules": "Includes Great Stirrup Cay where applicable.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "Yes",
+      "calculator_warning": "NCL Free at Sea is a bundle. Let users choose whether to count non-drink perks before showing break-even.",
+      "source_urls": [
+        "https://www.ncl.com/cruise-deals/free-at-sea"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Norwegian Cruise Line",
+      "package_name": "Free at Sea Plus",
+      "package_type": "bundle_package",
+      "default_price": 49.99,
+      "price_type": "fixed_public_price",
+      "pricing_confidence_flag": "Safe Default",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": null,
+      "required_adult_buyers_rule": "Applies to eligible guests 1 and 2 age 21+ on qualifying bookings.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": null,
+      "included_categories": [
+        "premium_open_bar_additions",
+        "unlimited_starbucks_one_per_visit",
+        "energy_drinks",
+        "fresh_juices",
+        "premium_wines",
+        "premium_champagne",
+        "premium_liquors",
+        "bottled_water"
+      ],
+      "major_exclusions": [
+        "not_a_pure_drinks_product",
+        "non_drink_perks_included",
+        "page_notes_prepaid_service_charges_do_not_cover_bar_beverage_gratuities"
+      ],
+      "private_destination_rules": "Unlimited Open Bar at Great Stirrup Cay where applicable.",
+      "ux_priority": "Show Conditionally",
+      "user_price_override": "Recommended",
+      "calculator_warning": "Free at Sea Plus adds drink value, but it also bundles non-drink perks. Ask whether to count them.",
+      "source_urls": [
+        "https://www.ncl.com/cruise-deals/free-at-sea"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Princess Cruises",
+      "package_name": "Plus Beverage Package",
+      "package_type": "standard_drink_package",
+      "default_price": 64.99,
+      "price_type": "fixed_public_price",
+      "pricing_confidence_flag": "Safe Default",
+      "package_service_charge_rate": 0.2,
+      "a_la_carte_service_charge_rate": 0.2,
+      "required_adult_buyers_rule": "No same-cabin rule stated on the cited beverage page.",
+      "alcoholic_daily_limit": 15,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 15.0,
+      "included_categories": [
+        "cocktails",
+        "wine_by_glass",
+        "beer",
+        "specialty_coffee",
+        "fountain_soda",
+        "bottled_water",
+        "fresh_juice",
+        "smoothies",
+        "mocktails"
+      ],
+      "major_exclusions": [
+        "wine_bottles_not_fully_included",
+        "one_liter_water_not_fully_included",
+        "canned_soda_not_fully_included"
+      ],
+      "private_destination_rules": "Usable on Princess private islands.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "No",
+      "calculator_warning": "Princess Plus Beverage has a 15-drink daily cap, but coffees/teas are exempt from that count.",
+      "source_urls": [
+        "https://www.princess.com/cruise-dining/beverages",
+        "https://www.princess.com/cruise-deals-promotions/plus-premier-cruise-packages"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Princess Cruises",
+      "package_name": "Premier Beverage Package",
+      "package_type": "standard_drink_package",
+      "default_price": 84.99,
+      "price_type": "fixed_public_price",
+      "pricing_confidence_flag": "Safe Default",
+      "package_service_charge_rate": 0.2,
+      "a_la_carte_service_charge_rate": 0.2,
+      "required_adult_buyers_rule": "No same-cabin rule stated on the cited beverage page.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 20.0,
+      "included_categories": [
+        "beer",
+        "spirits",
+        "wine_by_glass",
+        "alcohol_cocktails",
+        "zero_alcohol_cocktails",
+        "fountain_soda",
+        "specialty_coffee",
+        "specialty_tea",
+        "frappes",
+        "red_bull",
+        "bottled_water"
+      ],
+      "major_exclusions": [
+        "wine_bottles_not_fully_included",
+        "one_liter_water_not_fully_included",
+        "canned_soda_not_fully_included"
+      ],
+      "private_destination_rules": "Usable on Princess private islands.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "No",
+      "calculator_warning": "Princess Premier Beverage is straightforward, but the quoted price excludes the service charge on most itineraries.",
+      "source_urls": [
+        "https://www.princess.com/cruise-dining/beverages",
+        "https://www.princess.com/cruise-deals-promotions/plus-premier-cruise-packages"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Princess Cruises",
+      "package_name": "Princess Plus",
+      "package_type": "bundle_package",
+      "default_price": 65.0,
+      "price_type": "starting_price",
+      "pricing_confidence_flag": "Use as Starting Estimate",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.2,
+      "required_adult_buyers_rule": "Applies to guests 1 and 2; 3rd and 4th guests may opt in separately.",
+      "alcoholic_daily_limit": 15,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 15.0,
+      "included_categories": [
+        "plus_beverage_component",
+        "wifi",
+        "casual_dining",
+        "room_service_delivery",
+        "oceannow_fee_waiver",
+        "crew_appreciation"
+      ],
+      "major_exclusions": [
+        "bundle_contains_non_drink_value",
+        "sun_princess_and_star_princess_pricing_differs"
+      ],
+      "private_destination_rules": "Private-island use available through the beverage component.",
+      "ux_priority": "Show Conditionally",
+      "user_price_override": "Recommended",
+      "calculator_warning": "Princess Plus is a bundle. Let users subtract the value of Wi-Fi, dining, and crew appreciation if they want a drinks-only answer.",
+      "source_urls": [
+        "https://www.princess.com/cruise-deals-promotions/plus-premier-cruise-packages"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Princess Cruises",
+      "package_name": "Princess Premier",
+      "package_type": "bundle_package",
+      "default_price": 100.0,
+      "price_type": "starting_price",
+      "pricing_confidence_flag": "Use as Starting Estimate",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.2,
+      "required_adult_buyers_rule": "Applies to guests 1 and 2; 3rd and 4th guests may opt in separately.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 20.0,
+      "included_categories": [
+        "premier_beverage_component",
+        "wifi",
+        "specialty_dining",
+        "casual_dining",
+        "room_service_delivery",
+        "excursion_credit",
+        "crew_appreciation",
+        "photo_package",
+        "reserved_theater_seating"
+      ],
+      "major_exclusions": [
+        "bundle_contains_non_drink_value",
+        "sun_princess_and_star_princess_pricing_differs"
+      ],
+      "private_destination_rules": "Private-island use available through the beverage component.",
+      "ux_priority": "Show Conditionally",
+      "user_price_override": "Recommended",
+      "calculator_warning": "Princess Premier is a full bundle, not just drinks. Don’t treat the whole price as beverage cost unless the user wants that view.",
+      "source_urls": [
+        "https://www.princess.com/cruise-deals-promotions/plus-premier-cruise-packages"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "MSC Cruises",
+      "package_name": "Premium Extra Package",
+      "package_type": "dynamic_price_drink_package",
+      "default_price": null,
+      "price_type": "dynamic_by_sailing",
+      "pricing_confidence_flag": "User Must Enter Actual Price",
+      "package_service_charge_rate": 0.0,
+      "a_la_carte_service_charge_rate": null,
+      "required_adult_buyers_rule": "All guests in the same cabin must book; minors need the Minors Package; infants exempt.",
+      "alcoholic_daily_limit": 15,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": null,
+      "included_categories": [
+        "premium_beer",
+        "premium_wine_by_glass",
+        "premium_spirits",
+        "premium_cocktails",
+        "water",
+        "soft_drinks",
+        "energy_drinks",
+        "coffee",
+        "tea",
+        "juices",
+        "smoothies",
+        "non_alcoholic_beer_wine_cocktails"
+      ],
+      "major_exclusions": [
+        "minibar",
+        "room_service",
+        "retail_items",
+        "souvenir_glasses",
+        "some_thematic_bars",
+        "selection_varies_by_ship_destination_season"
+      ],
+      "private_destination_rules": "Premium Extra works on Ocean Cay and Sir Bani Yas, but island selection may differ from onboard selection.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "Yes",
+      "calculator_warning": "MSC pricing is usually only visible in MyMSC. Require the exact package price before calculating break-even.",
+      "source_urls": [
+        "https://www.msccruisesusa.com/on-board/dining-drinks/drinks-packages"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Celebrity Cruises",
+      "package_name": "Classic Drink Package",
+      "package_type": "dynamic_price_drink_package",
+      "default_price": null,
+      "price_type": "dynamic_by_sailing",
+      "pricing_confidence_flag": "User Must Enter Actual Price",
+      "package_service_charge_rate": 0.2,
+      "a_la_carte_service_charge_rate": null,
+      "required_adult_buyers_rule": "All legal-drinking-age guests in the same stateroom and booking number must purchase the same alcoholic package.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 12.0,
+      "included_categories": [
+        "beer",
+        "spirits",
+        "cocktails",
+        "liqueurs",
+        "wines_by_glass",
+        "bottled_water",
+        "sodas",
+        "premium_coffees",
+        "premium_teas",
+        "non_alcoholic_cocktails"
+      ],
+      "major_exclusions": [
+        "spa_cafe_fresh_juices",
+        "smoothies",
+        "gift_shop_beverages",
+        "mini_bar",
+        "room_service"
+      ],
+      "private_destination_rules": "No private-island rule stated on the cited package page.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "Yes",
+      "calculator_warning": "Celebrity Classic pricing varies by sailing, and the package adds a 20% gratuity at checkout where applicable.",
+      "source_urls": [
+        "https://www.celebritycruises.com/things-to-do-onboard/onboard-packages/beverage-packages",
+        "https://www.celebritycruises.com/content/dam/celebrity/pdf/web-beverage-package-2025.pdf"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Celebrity Cruises",
+      "package_name": "Premium Drink Package",
+      "package_type": "dynamic_price_drink_package",
+      "default_price": null,
+      "price_type": "dynamic_by_sailing",
+      "pricing_confidence_flag": "User Must Enter Actual Price",
+      "package_service_charge_rate": 0.2,
+      "a_la_carte_service_charge_rate": null,
+      "required_adult_buyers_rule": "All legal-drinking-age guests in the same stateroom and booking number must purchase the same alcoholic package.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 19.0,
+      "included_categories": [
+        "beer",
+        "spirits",
+        "cocktails",
+        "liqueurs",
+        "wines_by_glass",
+        "premium_sodas",
+        "premium_bottled_water",
+        "premium_coffees",
+        "premium_teas",
+        "spa_cafe_fresh_juices",
+        "non_alcoholic_cocktails"
+      ],
+      "major_exclusions": [
+        "gift_shop_beverages",
+        "mini_bar",
+        "room_service"
+      ],
+      "private_destination_rules": "No private-island rule stated on the cited package page.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "Yes",
+      "calculator_warning": "Celebrity Premium has a higher drink ceiling than Classic, but you still need the actual sailing price.",
+      "source_urls": [
+        "https://www.celebritycruises.com/things-to-do-onboard/onboard-packages/beverage-packages",
+        "https://www.celebritycruises.com/content/dam/celebrity/pdf/web-beverage-package-2025.pdf"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Celebrity Cruises",
+      "package_name": "All Included",
+      "package_type": "bundle_package",
+      "default_price": null,
+      "price_type": "bundle_fare",
+      "pricing_confidence_flag": "User Must Enter Actual Price",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": null,
+      "required_adult_buyers_rule": "All guests in the same stateroom must choose the same rate.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 12.0,
+      "included_categories": [
+        "classic_drinks_package",
+        "basic_wifi"
+      ],
+      "major_exclusions": [
+        "bundle_contains_non_drink_value",
+        "galapagos_excluded"
+      ],
+      "private_destination_rules": "No private-island rule stated on the cited bundle page.",
+      "ux_priority": "Show Conditionally",
+      "user_price_override": "Yes",
+      "calculator_warning": "Celebrity All Included is a fare package. Ask whether drill-down should count the Wi-Fi value.",
+      "source_urls": [
+        "https://www.celebritycruises.com/things-to-do-onboard/onboard-packages/all-included"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Holland America Line",
+      "package_name": "Signature Beverage Package",
+      "package_type": "standard_drink_package",
+      "default_price": 50.95,
+      "price_type": "fixed_public_price",
+      "pricing_confidence_flag": "Safe Default",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.18,
+      "required_adult_buyers_rule": "All adults of legal drinking age in the same stateroom must also purchase.",
+      "alcoholic_daily_limit": 15,
+      "non_alcoholic_daily_limit": 15,
+      "per_drink_price_cap": 12.0,
+      "included_categories": [
+        "beer",
+        "spirits",
+        "cocktails",
+        "wine_by_glass",
+        "fountain_drinks",
+        "juice",
+        "water_400ml_or_less",
+        "cafe_drinks"
+      ],
+      "major_exclusions": [
+        "venue_specific_limitations_not_fully_listed_on_summary_page"
+      ],
+      "private_destination_rules": "No private-island rule stated on the cited page.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "No",
+      "calculator_warning": "HAL Signature counts both alcoholic and non-alcoholic drinks toward the 15-drink limit.",
+      "source_urls": [
+        "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Holland America Line",
+      "package_name": "Elite Beverage Package",
+      "package_type": "standard_drink_package",
+      "default_price": 55.95,
+      "price_type": "fixed_public_price",
+      "pricing_confidence_flag": "Safe Default",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.18,
+      "required_adult_buyers_rule": "All adults of legal drinking age in the same stateroom must also purchase.",
+      "alcoholic_daily_limit": 15,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": 16.0,
+      "included_categories": [
+        "premium_spirits",
+        "premium_cocktails",
+        "premium_wines",
+        "beer",
+        "fountain_drinks",
+        "juice",
+        "water_400ml_or_less",
+        "cafe_drinks"
+      ],
+      "major_exclusions": [
+        "venue_specific_limitations_not_fully_listed_on_summary_page"
+      ],
+      "private_destination_rules": "No private-island rule stated on the cited page.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "No",
+      "calculator_warning": "HAL Elite has a public price and cap, so it is one of the easier premium packages to model.",
+      "source_urls": [
+        "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Holland America Line",
+      "package_name": "Have It All",
+      "package_type": "bundle_package",
+      "default_price": 60.0,
+      "price_type": "fixed_public_price",
+      "pricing_confidence_flag": "Safe Default",
+      "package_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.18,
+      "required_adult_buyers_rule": "Bundle summary page does not state a same-cabin all-adults rule, but the beverage component follows package rules.",
+      "alcoholic_daily_limit": 15,
+      "non_alcoholic_daily_limit": 15,
+      "per_drink_price_cap": 12.0,
+      "included_categories": [
+        "signature_beverage_component",
+        "shore_excursions",
+        "specialty_dining",
+        "wifi"
+      ],
+      "major_exclusions": [
+        "bundle_contains_non_drink_value"
+      ],
+      "private_destination_rules": "No private-island rule stated on the cited page.",
+      "ux_priority": "Show Conditionally",
+      "user_price_override": "Recommended",
+      "calculator_warning": "Have It All includes more than drinks. Let the user subtract non-drink perk value if they want a drinks-only comparison.",
+      "source_urls": [
+        "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    },
+    {
+      "cruise_line": "Virgin Voyages",
+      "package_name": "Bar Tab",
+      "package_type": "prepaid_credit",
+      "default_price": 200.0,
+      "price_type": "prepaid_credit",
+      "pricing_confidence_flag": "Safe Default",
+      "package_service_charge_rate": 0.0,
+      "a_la_carte_service_charge_rate": 0.0,
+      "required_adult_buyers_rule": "Optional for each sailor; no cabin-wide purchase requirement.",
+      "alcoholic_daily_limit": null,
+      "non_alcoholic_daily_limit": null,
+      "per_drink_price_cap": null,
+      "included_categories": [
+        "beer",
+        "wine",
+        "cocktails",
+        "mocktails",
+        "fresh_juice",
+        "smoothies",
+        "floats",
+        "specialty_coffee",
+        "energy_drinks"
+      ],
+      "major_exclusions": [
+        "unused_credit_forfeited",
+        "bar_tab_only_spendable_on_drinks"
+      ],
+      "private_destination_rules": "Usable onboard and at The Beach Club at Bimini.",
+      "ux_priority": "Show Immediately",
+      "user_price_override": "No",
+      "calculator_warning": "Virgin Bar Tab is prepaid drink credit, not an unlimited package. Compare credit value against expected drink spend.",
+      "source_urls": [
+        "https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks"
+      ],
+      "last_verified": "2026-06-22",
+      "confidence": "High"
+    }
+  ],
+  "default_drink_prices": {
+    "cocktail": {
+      "suggested_default": 12.0,
+      "range": "10.00-14.00",
+      "notes": "Conservative midpoint based on Carnival mixed-drink range and Virgin cocktail-credit examples.",
+      "confidence": "Medium"
+    },
+    "beer": {
+      "suggested_default": 7.0,
+      "range": "6.50-8.00",
+      "notes": "Anchored to Carnival published floor and Virgin beer-credit examples.",
+      "confidence": "High"
+    },
+    "wine_by_glass": {
+      "suggested_default": 10.0,
+      "range": "9.00-12.00",
+      "notes": "Aligned with Carnival published floor and Virgin wine-credit examples.",
+      "confidence": "High"
+    },
+    "specialty_coffee": {
+      "suggested_default": 5.0,
+      "range": "4.00-6.00",
+      "notes": "Slightly conservative above Carnival coffee range; matches Virgin latte examples.",
+      "confidence": "Medium"
+    },
+    "soda": {
+      "suggested_default": 3.0,
+      "range": "2.75-3.50",
+      "notes": "Straightforward consumer-safe default.",
+      "confidence": "High"
+    },
+    "bottled_water": {
+      "suggested_default": 3.0,
+      "range": "2.00-5.00",
+      "notes": "Midpoint-style water default based on Carnival published range.",
+      "confidence": "High"
+    },
+    "mocktail_smoothie_juice": {
+      "suggested_default": 7.0,
+      "range": "6.00-8.50",
+      "notes": "Designed to be editable; based on Virgin mocktail and cold-pressed juice examples.",
+      "confidence": "Medium"
+    }
+  }
+}
