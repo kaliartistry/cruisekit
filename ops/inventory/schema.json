@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T14:06:16.422Z",
+  "generatedAt": "2026-06-24T14:55:01.594Z",
   "schema": [
     {
       "route": "/blog/:slug",
