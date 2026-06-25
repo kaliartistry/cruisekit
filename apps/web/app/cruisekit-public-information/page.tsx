@@ -118,6 +118,13 @@ const PRODUCT_LINKS: ReferenceLink[] = [
     icon: Calculator,
   },
   {
+    title: "Cruise spend tracker",
+    description:
+      "Plan and track onboard extras, port-day spending, gratuities, and true trip costs.",
+    href: "/cruise-spend-tracker",
+    icon: Calculator,
+  },
+  {
     title: "Cruise port guides",
     description:
       "Browse practical port-day context for cruise stops.",
@@ -266,7 +273,7 @@ export default function CruiseKitPublicInformationPage() {
                 />
               </div>
               <h2 className="mt-5 text-3xl font-bold tracking-tight text-navy">
-                Start here when you need the official public trail for
+                Start here when you need the public reference path for
                 CruiseKit.
               </h2>
               <p className="mt-5 text-base leading-7 text-gray-700">
