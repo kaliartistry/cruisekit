@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T17:03:21.386Z",
+  "generatedAt": "2026-06-26T14:07:40.937Z",
   "schema": [
     {
       "route": "/blog/:slug",
@@ -17,6 +17,16 @@
       "schemaDetected": true
     },
     {
+      "route": "/cruise-drink-package-calculator",
+      "file": "apps/web/app/cruise-drink-package-calculator/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/cruise-group-check-in-app",
+      "file": "apps/web/app/cruise-group-check-in-app/page.tsx",
+      "schemaDetected": true
+    },
+    {
       "route": "/cruisekit-facts",
       "file": "apps/web/app/cruisekit-facts/page.tsx",
       "schemaDetected": true
@@ -24,6 +34,16 @@
     {
       "route": "/cruisekit-public-information",
       "file": "apps/web/app/cruisekit-public-information/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/faq",
+      "file": "apps/web/app/faq/page.tsx",
+      "schemaDetected": true
+    },
+    {
+      "route": "/guides",
+      "file": "apps/web/app/guides/page.tsx",
       "schemaDetected": true
     },
     {
