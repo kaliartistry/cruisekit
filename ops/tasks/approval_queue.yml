@@ -10,8 +10,8 @@ approval_items:
     status: unresolved
     created_at: 2026-06-22
   - id: approval-003
-    title: Public-safe ops policy.
-    reason: Because the repo is public, private strategy reports should not be committed unless Kali approves a private repo or separate private ops repo.
+    title: Choose where sensitive GrowthOps reports belong.
+    reason: Because this repo is public, private strategy, sensitive metrics, user data, and non-public business context should not be committed unless Kali approves a private repository, a separate private ops repository, or a local-only handoff workflow.
     status: unresolved
     created_at: 2026-06-22
   - id: approval-004
