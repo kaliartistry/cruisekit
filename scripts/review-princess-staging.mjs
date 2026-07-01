@@ -41,6 +41,9 @@ function shortRecord(record) {
 
 function candidateScore(record) {
   let score = 0;
+  if (record.destinationRegion === "mediterranean" || record.destinationRegion === "asia") score += 4;
+  if (record.destinationRegion === "south-america" || record.destinationRegion === "panama-canal") score += 4;
+  if (record.destinationRegion === "australia-new-zealand" || record.destinationRegion === "antarctica") score += 3;
   if (record.destinationRegion === "caribbean" || record.destinationRegion === "bahamas") score += 3;
   if (record.destinationRegion === "mexico" || record.destinationRegion === "alaska") score += 2;
   if (record.nights >= 5 && record.nights <= 8) score += 2;

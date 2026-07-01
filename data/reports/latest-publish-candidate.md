@@ -1,6 +1,6 @@
 # CruiseKit Publish Candidate
 
-Generated: 2026-07-01T14:42:48.347Z
+Generated: 2026-07-01T19:30:48.080Z
 
 Status: READY FOR MANUAL REVIEW
 
@@ -10,9 +10,9 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 
 | Metric | Value |
 | --- | ---: |
-| Public sailings | 238 |
-| Mobile sailings | 238 |
-| Mobile deals | 238 |
+| Public sailings | 279 |
+| Mobile sailings | 279 |
+| Mobile deals | 279 |
 | Blockers | 0 |
 | Warnings | 0 |
 | Public bundles prepared | yes |
@@ -53,35 +53,35 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 
 ## Pending Git Changes
 
+- ` M data/reports/latest-norwegian-staging-import.md`
+- ` M data/reports/latest-norwegian-staging-review.json`
 - ` M data/reports/latest-norwegian-staging-review.md`
-- ` M data/reports/latest-princess-staging-import.json`
-- ` M data/reports/latest-princess-staging-import.md`
-- ` M data/reports/latest-princess-staging-review.json`
-- ` M data/reports/latest-princess-staging-review.md`
 - ` M data/reports/latest-publish-candidate.json`
 - ` M data/reports/latest-publish-candidate.md`
-- ` M data/reports/latest-royal-caribbean-staging-import.json`
-- ` M data/reports/latest-royal-caribbean-staging-import.md`
-- ` M data/reports/latest-viking-staging-import.json`
-- ` M data/reports/latest-viking-staging-import.md`
-- ` M data/reports/latest-virgin-voyages-promotion.json`
-- ` M data/reports/latest-virgin-voyages-promotion.md`
-- ` M data/reports/latest-virgin-voyages-staging-import.json`
-- ` M data/reports/latest-virgin-voyages-staging-import.md`
-- ` M data/reports/latest-virgin-voyages-staging-review.json`
-- ` M data/reports/latest-virgin-voyages-staging-review.md`
+- ` M data/schema/sailing.schema.json`
 - ` M data/seed/sailings.json`
 - ` M package.json`
+- ` M packages/shared/types/cruise.ts`
 - ` M scripts/audit-bundle-images.mjs`
 - ` M scripts/build-data-bundles.mjs`
-- ` M scripts/data-freshness-report.mjs`
-- `?? data/reports/latest-data-freshness.json`
-- `?? data/reports/latest-data-freshness.md`
-- `?? data/reports/latest-reviewed-data-refresh.json`
-- `?? data/reports/latest-reviewed-data-refresh.md`
-- `?? data/reports/latest-weekly-ingest.json`
-- `?? data/reports/latest-weekly-ingest.md`
-- `?? scripts/finalize-reviewed-data-refresh.mjs`
+- ` M scripts/ingest/azamara.mjs`
+- ` M scripts/ingest/carnival.mjs`
+- ` M scripts/ingest/holland-america.mjs`
+- ` M scripts/ingest/msc.mjs`
+- ` M scripts/ingest/norwegian.mjs`
+- ` M scripts/ingest/princess.mjs`
+- ` M scripts/ingest/royal-caribbean.mjs`
+- ` M scripts/ingest/virgin-voyages.mjs`
+- ` M scripts/review-norwegian-staging.mjs`
+- ` M scripts/review-official-source-staging.mjs`
+- ` M scripts/review-princess-staging.mjs`
+- ` M shared/models/dart/lib/deal.dart`
+- ` M shared/models/dart/lib/sailing.dart`
+- ` M shared/models/ts/sailing.ts`
+- `?? data/reports/latest-regional-normalization.json`
+- `?? data/reports/latest-regional-normalization.md`
+- `?? docs/regional-sailing-expansion-2026-07-01.md`
+- `?? scripts/normalize-regional-seed-records.mjs`
 
 ## Manual Next Step
 

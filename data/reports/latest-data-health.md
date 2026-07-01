@@ -1,17 +1,17 @@
 # CruiseKit Data Health Report
 
-Generated: 2026-07-01T14:42:47.716Z
+Generated: 2026-07-01T19:30:47.357Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
-| Seed sailings | 283 |
-| Public sailings | 238 |
+| Seed sailings | 324 |
+| Public sailings | 279 |
 | Seed deals | 0 |
 | Public deals | 0 |
-| Mobile sailings | 238 |
-| Mobile deals | 238 |
+| Mobile sailings | 279 |
+| Mobile deals | 279 |
 | Filtered expired seed sailings | 7 |
 
 ## Seed Sailings By Cruise Line
@@ -19,14 +19,14 @@ Generated: 2026-07-01T14:42:47.716Z
 - azamara: 8
 - carnival: 113
 - holland-america: 28
-- norwegian: 90
+- norwegian: 131
 - royal-caribbean: 4
 - virgin-voyages: 40
 
 ## Seed Sailings By Confidence
 
 - internal_do_not_publish: 38
-- itinerary_verified_price_check_required: 245
+- itinerary_verified_price_check_required: 286
 
 ## Blockers
 

@@ -85,6 +85,7 @@ final confidenceValues = EnumValues({
 });
 
 enum CruiseLine {
+    AZAMARA,
     CARNIVAL,
     CELEBRITY,
     DISNEY,
@@ -93,10 +94,12 @@ enum CruiseLine {
     NORWEGIAN,
     PRINCESS,
     ROYAL_CARIBBEAN,
+    VIKING,
     VIRGIN_VOYAGES
 }
 
 final cruiseLineValues = EnumValues({
+    "azamara": CruiseLine.AZAMARA,
     "carnival": CruiseLine.CARNIVAL,
     "celebrity": CruiseLine.CELEBRITY,
     "disney": CruiseLine.DISNEY,
@@ -105,6 +108,7 @@ final cruiseLineValues = EnumValues({
     "norwegian": CruiseLine.NORWEGIAN,
     "princess": CruiseLine.PRINCESS,
     "royal-caribbean": CruiseLine.ROYAL_CARIBBEAN,
+    "viking": CruiseLine.VIKING,
     "virgin-voyages": CruiseLine.VIRGIN_VOYAGES
 });
 

@@ -1,37 +1,58 @@
 {
-  "generatedAt": "2026-07-01T14:31:54.560Z",
+  "generatedAt": "2026-07-01T19:26:33.699Z",
   "provider": "norwegian",
-  "runId": "2026-07-01T14-31-54-560Z",
+  "runId": "2026-07-01T19-26-33-698Z",
   "mode": "staging-only",
   "source": "https://www.ncl.com/api/v2/vacations/search",
-  "destination": "CARIBBEAN",
-  "maxItineraries": 30,
-  "maxSailingsPerItinerary": 8,
+  "destinations": [
+    "MEDITERRANEAN",
+    "ASIA",
+    "SOUTH_AMERICA",
+    "PANAMA_CANAL"
+  ],
+  "maxItineraries": 8,
+  "maxSailingsPerItinerary": 3,
   "searchPages": [
     {
+      "destination": "MEDITERRANEAN",
       "offset": 0,
-      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=CARIBBEAN&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
+      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=MEDITERRANEAN&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
       "count": 50
+    },
+    {
+      "destination": "ASIA",
+      "offset": 0,
+      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=ASIA&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
+      "count": 47
+    },
+    {
+      "destination": "SOUTH_AMERICA",
+      "offset": 0,
+      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=SOUTH_AMERICA&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
+      "count": 5
+    },
+    {
+      "destination": "PANAMA_CANAL",
+      "offset": 0,
+      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=PANAMA_CANAL&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
+      "count": 27
     }
   ],
   "staging": {
-    "sailings": 149,
+    "sailings": 41,
     "deals": 0,
     "schemaErrors": 0,
     "byShip": {
-      "Norwegian Aqua": 32,
-      "Norwegian Breakaway": 8,
-      "Norwegian Epic": 18,
-      "Norwegian Escape": 22,
-      "Norwegian Getaway": 18,
-      "Norwegian Joy": 3,
-      "Norwegian Luna": 18,
-      "Norwegian Pearl": 6,
-      "Norwegian Prima": 16,
-      "Norwegian Viva": 8
+      "Norwegian Bliss": 2,
+      "Norwegian Dawn": 7,
+      "Norwegian Epic": 6,
+      "Norwegian Gem": 7,
+      "Norwegian Jade": 8,
+      "Norwegian Jewel": 1,
+      "Norwegian Star": 10
     },
-    "minPrice": 429,
-    "maxPrice": 2499
+    "minPrice": 859,
+    "maxPrice": 3989
   },
   "blockers": [],
   "warnings": [
@@ -40,8 +61,8 @@
     "Review exact booking URL, price basis, taxes/fees, and terms before promotion."
   ],
   "paths": {
-    "raw": "data/ingest/raw/norwegian/2026-07-01T14-31-54-560Z",
-    "staging": "data/ingest/staging/norwegian/2026-07-01T14-31-54-560Z",
-    "report": "data/ingest/reports/norwegian/2026-07-01T14-31-54-560Z.json"
+    "raw": "data/ingest/raw/norwegian/2026-07-01T19-26-33-698Z",
+    "staging": "data/ingest/staging/norwegian/2026-07-01T19-26-33-698Z",
+    "report": "data/ingest/reports/norwegian/2026-07-01T19-26-33-698Z.json"
   }
 }

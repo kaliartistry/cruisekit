@@ -64,13 +64,19 @@ function parseNights(duration) {
 
 function normalizeRegion(value) {
   const text = String(value ?? "").toLowerCase();
+  if (text.includes("antarctica")) return "antarctica";
+  if (text.includes("south america") || text.includes("buenos aires") || text.includes("brazil") || text.includes("uruguay")) return "south-america";
+  if (text.includes("panama")) return "panama-canal";
+  if (text.includes("canada") && text.includes("england")) return "canada-new-england";
+  if (text.includes("australia") || text.includes("new zealand")) return "australia-new-zealand";
+  if (text.includes("south pacific") || text.includes("tahiti")) return "south-pacific";
+  if (text.includes("asia") || text.includes("japan")) return "asia";
   if (text.includes("alaska")) return "alaska";
   if (text.includes("bahamas")) return "bahamas";
   if (text.includes("caribbean")) return "caribbean";
   if (text.includes("mexico")) return "mexico";
   if (text.includes("mediterranean")) return "mediterranean";
   if (text.includes("europe")) return "northern-europe";
-  if (text.includes("panama")) return "other";
   return "other";
 }
 

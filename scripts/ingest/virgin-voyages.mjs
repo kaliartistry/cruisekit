@@ -48,6 +48,12 @@ function isoDate(value, fallbackYear) {
 
 function normalizeRegion(title, ports) {
   const haystack = `${title} ${(ports ?? []).join(" ")}`.toLowerCase();
+  if (haystack.includes("antarctica")) return "antarctica";
+  if (haystack.includes("south america") || haystack.includes("buenos aires") || haystack.includes("brazil") || haystack.includes("uruguay")) return "south-america";
+  if (haystack.includes("panama")) return "panama-canal";
+  if (haystack.includes("canada") && haystack.includes("new england")) return "canada-new-england";
+  if (haystack.includes("australia") || haystack.includes("new zealand")) return "australia-new-zealand";
+  if (haystack.includes("asia") || haystack.includes("japan")) return "asia";
   if (haystack.includes("alaska")) return "alaska";
   if (haystack.includes("bimini") || haystack.includes("bahamas")) return "bahamas";
   if (haystack.includes("caribbean") || haystack.includes("dominican") || haystack.includes("puerto plata")) return "caribbean";

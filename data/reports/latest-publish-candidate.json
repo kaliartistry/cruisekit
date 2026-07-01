@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T14:42:48.347Z",
+  "generatedAt": "2026-07-01T19:30:48.080Z",
   "mode": "guarded-publish-candidate",
   "ready": true,
   "reportOnly": false,
@@ -8,9 +8,9 @@
   "warningCount": 0,
   "failedSteps": [],
   "counts": {
-    "publicSailings": 238,
-    "mobileSailings": 238,
-    "mobileDeals": 238
+    "publicSailings": 279,
+    "mobileSailings": 279,
+    "mobileDeals": 279
   },
   "manifestPath": "apps/web/public/data/bundles/manifest.json",
   "steps": [
@@ -20,7 +20,7 @@
       "exitCode": 0,
       "ok": true,
       "status": "ok",
-      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:build /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/build-data-bundles.mjs\n\nBuilt data bundles at /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/bundles\nPublic sailings: 238/283\nPublic deals: 0/0\n",
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:build /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/build-data-bundles.mjs\n\nBuilt data bundles at /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/bundles\nPublic sailings: 279/324\nPublic deals: 0/0\n",
       "stderrTail": ""
     },
     {
@@ -56,7 +56,7 @@
       "exitCode": 0,
       "ok": true,
       "status": "ok",
-      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:audit:images /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/audit-bundle-images.mjs\n\nImage audit: 0 blocker(s), 0 warning(s), 69 info.\nReport written to data/reports/latest-image-audit.md\n",
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:audit:images /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/audit-bundle-images.mjs\n\nImage audit: 0 blocker(s), 0 warning(s), 80 info.\nReport written to data/reports/latest-image-audit.md\n",
       "stderrTail": ""
     },
     {
@@ -88,35 +88,35 @@
     }
   },
   "gitStatus": [
+    " M data/reports/latest-norwegian-staging-import.md",
+    " M data/reports/latest-norwegian-staging-review.json",
     " M data/reports/latest-norwegian-staging-review.md",
-    " M data/reports/latest-princess-staging-import.json",
-    " M data/reports/latest-princess-staging-import.md",
-    " M data/reports/latest-princess-staging-review.json",
-    " M data/reports/latest-princess-staging-review.md",
     " M data/reports/latest-publish-candidate.json",
     " M data/reports/latest-publish-candidate.md",
-    " M data/reports/latest-royal-caribbean-staging-import.json",
-    " M data/reports/latest-royal-caribbean-staging-import.md",
-    " M data/reports/latest-viking-staging-import.json",
-    " M data/reports/latest-viking-staging-import.md",
-    " M data/reports/latest-virgin-voyages-promotion.json",
-    " M data/reports/latest-virgin-voyages-promotion.md",
-    " M data/reports/latest-virgin-voyages-staging-import.json",
-    " M data/reports/latest-virgin-voyages-staging-import.md",
-    " M data/reports/latest-virgin-voyages-staging-review.json",
-    " M data/reports/latest-virgin-voyages-staging-review.md",
+    " M data/schema/sailing.schema.json",
     " M data/seed/sailings.json",
     " M package.json",
+    " M packages/shared/types/cruise.ts",
     " M scripts/audit-bundle-images.mjs",
     " M scripts/build-data-bundles.mjs",
-    " M scripts/data-freshness-report.mjs",
-    "?? data/reports/latest-data-freshness.json",
-    "?? data/reports/latest-data-freshness.md",
-    "?? data/reports/latest-reviewed-data-refresh.json",
-    "?? data/reports/latest-reviewed-data-refresh.md",
-    "?? data/reports/latest-weekly-ingest.json",
-    "?? data/reports/latest-weekly-ingest.md",
-    "?? scripts/finalize-reviewed-data-refresh.mjs"
+    " M scripts/ingest/azamara.mjs",
+    " M scripts/ingest/carnival.mjs",
+    " M scripts/ingest/holland-america.mjs",
+    " M scripts/ingest/msc.mjs",
+    " M scripts/ingest/norwegian.mjs",
+    " M scripts/ingest/princess.mjs",
+    " M scripts/ingest/royal-caribbean.mjs",
+    " M scripts/ingest/virgin-voyages.mjs",
+    " M scripts/review-norwegian-staging.mjs",
+    " M scripts/review-official-source-staging.mjs",
+    " M scripts/review-princess-staging.mjs",
+    " M shared/models/dart/lib/deal.dart",
+    " M shared/models/dart/lib/sailing.dart",
+    " M shared/models/ts/sailing.ts",
+    "?? data/reports/latest-regional-normalization.json",
+    "?? data/reports/latest-regional-normalization.md",
+    "?? docs/regional-sailing-expansion-2026-07-01.md",
+    "?? scripts/normalize-regional-seed-records.mjs"
   ],
   "guardrails": [
     "No commit was created.",

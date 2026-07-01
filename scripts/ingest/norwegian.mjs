@@ -26,6 +26,10 @@ const maxItineraries = Number.parseInt(process.env.NCL_MAX_ITINERARIES ?? "30", 
 const pageSize = Number.parseInt(process.env.NCL_PAGE_SIZE ?? "50", 10);
 const maxSailingsPerItinerary = Number.parseInt(process.env.NCL_MAX_SAILINGS_PER_ITINERARY ?? "8", 10);
 const destination = process.env.NCL_DESTINATION ?? "CARIBBEAN";
+const destinations = (process.env.NCL_DESTINATIONS ?? destination)
+  .split(",")
+  .map((value) => value.trim())
+  .filter(Boolean);
 
 async function loadJson(relPath) {
   return JSON.parse(await readFile(resolve(repoRoot, relPath), "utf8"));
@@ -47,15 +51,33 @@ function slugify(value) {
     .replace(/^-+|-+$/g, "");
 }
 
-function normalizeRegion(value) {
+function normalizeRegion(value, sourceDestination = "") {
+  const destinationCode = String(sourceDestination ?? "").toUpperCase();
+  if (destinationCode === "MEDITERRANEAN" || destinationCode === "GREEK_ISLES") return "mediterranean";
+  if (destinationCode === "NORTHERN_EUROPE") return "northern-europe";
+  if (destinationCode === "ASIA") return "asia";
+  if (destinationCode === "SOUTH_AMERICA") return "south-america";
+  if (destinationCode === "PANAMA_CANAL") return "panama-canal";
+  if (destinationCode === "CANADA_NEW_ENGL") return "canada-new-england";
+  if (destinationCode === "AUSTRALIA") return "australia-new-zealand";
+  if (destinationCode === "SOUTH_PACIFIC") return "south-pacific";
+  if (destinationCode === "TRANSATLANTIC") return "transatlantic";
+
   const region = String(value ?? "").toLowerCase();
+  if (region.includes("antarctica")) return "antarctica";
+  if (region.includes("south america") || region.includes("buenos aires") || region.includes("brazil") || region.includes("uruguay")) return "south-america";
+  if (region.includes("panama canal")) return "panama-canal";
+  if (region.includes("canada") && region.includes("england")) return "canada-new-england";
+  if (region.includes("australia") || region.includes("new zealand")) return "australia-new-zealand";
+  if (region.includes("south pacific") || region.includes("tahiti")) return "south-pacific";
+  if (region.includes("asia") || region.includes("japan") || region.includes("tokyo") || region.includes("yokohama")) return "asia";
+  if (region.includes("mediterranean") || region.includes("greek isles") || region.includes("adriatic")) return "mediterranean";
   if (region.includes("bahamas")) return "bahamas";
   if (region.includes("caribbean")) return "caribbean";
   if (region.includes("mexico")) return "mexico";
   if (region.includes("alaska")) return "alaska";
   if (region.includes("hawaii")) return "hawaii";
   if (region.includes("europe")) return "northern-europe";
-  if (region.includes("mediterranean")) return "mediterranean";
   return "other";
 }
 
@@ -106,9 +128,9 @@ async function fetchJson(url) {
   return JSON.parse(text);
 }
 
-async function fetchSearchPage(offset) {
+async function fetchSearchPage(destinationCode, offset) {
   const params = new URLSearchParams({
-    destinations: destination,
+    destinations: destinationCode,
     numberOfGuests: "2",
     filterConfig: "search-filters-configuration",
     limit: String(pageSize),
@@ -123,7 +145,7 @@ async function fetchSailings(itineraryCode) {
   return { url, json: await fetchJson(url) };
 }
 
-function toCanonicalSailing(itinerary, result, importedAt) {
+function toCanonicalSailing(itinerary, result, importedAt, sourceDestination) {
   const sailing = result.sailing ?? {};
   const departureDate = isoDate(sailing.sailStartDate ?? sailing.vacationStartDate);
   const returnDate = isoDate(sailing.sailEndDate ?? sailing.vacationEndDate);
@@ -143,7 +165,10 @@ function toCanonicalSailing(itinerary, result, importedAt) {
     nights,
     departurePort: itinerary.embarkationPort?.title ?? itinerary.startingLocation ?? "Unknown",
     returnPort: itinerary.disembarkationPort?.title ?? itinerary.embarkationPort?.title ?? itinerary.startingLocation ?? "Unknown",
-    destinationRegion: normalizeRegion(itinerary.destinations?.[0]?.title ?? itinerary.title),
+    destinationRegion: normalizeRegion(
+      [itinerary.title, ...(itinerary.destinations ?? []).map((item) => item.title)].filter(Boolean).join(" "),
+      sourceDestination,
+    ),
     itineraryPorts: (itinerary.portsOfCall ?? []).map((port) => port.title).filter(Boolean),
     portCoordinates: [],
     startingPrice: Number.isFinite(price) ? Math.round(price) : null,
@@ -162,7 +187,7 @@ function toCanonicalSailing(itinerary, result, importedAt) {
       lastVerified: importedAt.slice(0, 10),
       confidence: "itinerary_verified_price_check_required",
       termsNotes:
-        "Staged from NCL public vacation search and date-specific sailings JSON. Review price basis, taxes/fees, package inclusions, and booking link before promotion.",
+        `Staged from NCL public vacation search and date-specific sailings JSON for ${sourceDestination}. Review price basis, taxes/fees, package inclusions, and booking link before promotion.`,
     },
     sourceUrl: directLink,
     lastVerified: importedAt.slice(0, 10),
@@ -198,24 +223,28 @@ async function main() {
 
   const searchPages = [];
   const itineraries = [];
-  for (let offset = 0; itineraries.length < maxItineraries; offset += pageSize) {
-    const page = await fetchSearchPage(offset);
-    searchPages.push({ offset, url: page.url, count: page.json.itineraries?.length ?? 0 });
-    await writeFile(resolve(rawDir, `search-${offset}.json`), `${JSON.stringify(page.json, null, 2)}\n`);
-    const pageItineraries = page.json.itineraries ?? [];
-    itineraries.push(...pageItineraries);
-    if (pageItineraries.length < pageSize) break;
-    await new Promise((resolveDelay) => setTimeout(resolveDelay, 750));
+  for (const destinationCode of destinations) {
+    const destinationItineraries = [];
+    for (let offset = 0; destinationItineraries.length < maxItineraries; offset += pageSize) {
+      const page = await fetchSearchPage(destinationCode, offset);
+      searchPages.push({ destination: destinationCode, offset, url: page.url, count: page.json.itineraries?.length ?? 0 });
+      await writeFile(resolve(rawDir, `search-${slugify(destinationCode)}-${offset}.json`), `${JSON.stringify(page.json, null, 2)}\n`);
+      const pageItineraries = page.json.itineraries ?? [];
+      destinationItineraries.push(...pageItineraries.map((itinerary) => ({ destinationCode, itinerary })));
+      if (pageItineraries.length < pageSize) break;
+      await new Promise((resolveDelay) => setTimeout(resolveDelay, 750));
+    }
+    itineraries.push(...destinationItineraries.slice(0, maxItineraries));
   }
 
   const stagingRecords = [];
   const observed = [];
-  const selectedItineraries = itineraries.slice(0, maxItineraries);
-  for (const itinerary of selectedItineraries) {
+  const selectedItineraries = itineraries;
+  for (const { destinationCode, itinerary } of selectedItineraries) {
     const sailings = await fetchSailings(itinerary.code);
-    await writeFile(resolve(rawDir, `sailings-${slugify(itinerary.code)}.json`), `${JSON.stringify(sailings.json, null, 2)}\n`);
+    await writeFile(resolve(rawDir, `sailings-${slugify(destinationCode)}-${slugify(itinerary.code)}.json`), `${JSON.stringify(sailings.json, null, 2)}\n`);
     for (const result of (sailings.json.results ?? []).slice(0, maxSailingsPerItinerary)) {
-      const record = toCanonicalSailing(itinerary, result, importedAt);
+      const record = toCanonicalSailing(itinerary, result, importedAt, destinationCode);
       if (!record) continue;
       observed.push({
         id: record.id,
@@ -250,7 +279,7 @@ async function main() {
     runId,
     mode: "staging-only",
     source: searchEndpoint,
-    destination,
+    destinations,
     maxItineraries,
     maxSailingsPerItinerary,
     searchPages,

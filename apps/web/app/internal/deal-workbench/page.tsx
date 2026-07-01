@@ -101,6 +101,8 @@ function statusFor(candidate: Candidate) {
 
 function scoreCandidate(candidate: Candidate) {
   let score = 0;
+  if (["mediterranean", "asia", "south-america", "panama-canal"].includes(candidate.destinationRegion)) score += 5;
+  if (["canada-new-england", "australia-new-zealand", "antarctica"].includes(candidate.destinationRegion)) score += 3;
   if (candidate.destinationRegion === "caribbean" || candidate.destinationRegion === "bahamas") score += 3;
   if (candidate.nights >= 5 && candidate.nights <= 8) score += 2;
   if (candidate.startingPrice != null && candidate.startingPrice <= 900) score += 3;

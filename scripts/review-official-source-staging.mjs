@@ -17,14 +17,14 @@ const providerConfig = {
     envLimit: "AZAMARA_REVIEW_LIMIT",
     defaultLimit: 20,
     maxPrice: 3000,
-    preferredRegions: new Set(["caribbean", "alaska"]),
+    preferredRegions: new Set(["mediterranean", "asia", "south-america", "panama-canal", "caribbean", "alaska"]),
   },
   "holland-america": {
     label: "Holland America",
     envLimit: "HOLLAND_AMERICA_REVIEW_LIMIT",
     defaultLimit: 20,
     maxPrice: 1800,
-    preferredRegions: new Set(["caribbean", "alaska", "mexico"]),
+    preferredRegions: new Set(["mediterranean", "canada-new-england", "panama-canal", "australia-new-zealand", "caribbean", "alaska", "mexico"]),
   },
 };
 
@@ -104,6 +104,8 @@ function candidateScore(record, config) {
   let score = 0;
   if (config.preferredRegions.has(record.destinationRegion)) score += 4;
   if (record.destinationRegion === "caribbean" || record.destinationRegion === "bahamas") score += 2;
+  if (record.destinationRegion === "mediterranean" || record.destinationRegion === "asia") score += 2;
+  if (record.destinationRegion === "south-america" || record.destinationRegion === "panama-canal") score += 2;
   if (record.nights >= 5 && record.nights <= 8) score += 2;
   if (record.nights >= 9 && record.nights <= 12) score += 1;
   if (Number.isFinite(record.startingPrice) && record.startingPrice <= config.maxPrice) score += 3;

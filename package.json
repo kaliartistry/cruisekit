@@ -35,6 +35,7 @@
     "data:promote:norwegian": "node scripts/promote-norwegian-staging.mjs",
     "data:promote:starter-batch": "node scripts/promote-starter-batch.mjs",
     "data:promote:virgin-voyages": "node scripts/promote-virgin-voyages-staging.mjs",
+    "data:normalize:regions": "node scripts/normalize-regional-seed-records.mjs",
     "data:finalize:reviewed-refresh": "node scripts/finalize-reviewed-data-refresh.mjs",
     "data:audit:links": "node scripts/audit-public-links.mjs",
     "data:audit:images": "node scripts/audit-bundle-images.mjs",

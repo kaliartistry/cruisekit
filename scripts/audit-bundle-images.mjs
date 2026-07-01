@@ -133,6 +133,11 @@ const textImageRules = [
   [/st\.?\s*kitts|saint kitts/i, ["st-kitts"]],
   [/bermuda/i, ["bermuda"]],
   [/barcelona|mediterranean/i, ["barcelona"]],
+  [/asia|japan|tokyo|yokohama|shanghai|busan|jeju/i, ["shanghai", "busan", "jeju"]],
+  [/panama canal|cartagena/i, ["cartagena"]],
+  [/south america|buenos aires|brazil|uruguay|argentina/i, ["cartagena"]],
+  [/canada|new england|halifax/i, ["halifax"]],
+  [/australia|new zealand|sydney|auckland/i, ["sydney", "auckland"]],
   [/sicily|messina/i, ["sicily-messina"]],
   [
     /juneau|alaska/i,
