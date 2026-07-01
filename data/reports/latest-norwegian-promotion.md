@@ -1,6 +1,6 @@
 # Norwegian Promotion Report
 
-Generated: 2026-07-01T19:27:19.824Z
+Generated: 2026-07-01T22:31:28.305Z
 
 Mode: apply
 
@@ -8,56 +8,78 @@ Mode: apply
 
 | Metric | Count |
 | --- | ---: |
-| Seed records before | 283 |
-| Seed records after | 324 |
-| Promoted new records | 41 |
+| Seed records before | 324 |
+| Seed records after | 387 |
+| Promoted new records | 63 |
 | Selected records already live | 0 |
 
 ## Promoted New Records
 
 | Ship | Date | Nights | Price | ID |
 | --- | --- | ---: | ---: | --- |
-| Norwegian Epic | 2026-07-05 | 7 | $859 | `norwegian-norwegian-epic-20260705-58611` |
-| Norwegian Dawn | 2026-10-25 | 7 | $929 | `norwegian-norwegian-dawn-20261025-58550` |
-| Norwegian Dawn | 2026-10-18 | 7 | $949 | `norwegian-norwegian-dawn-20261018-58549` |
-| Norwegian Epic | 2026-07-19 | 7 | $989 | `norwegian-norwegian-epic-20260719-58613` |
-| Norwegian Epic | 2026-08-02 | 7 | $1,009 | `norwegian-norwegian-epic-20260802-58615` |
-| Norwegian Epic | 2026-08-09 | 7 | $1,019 | `norwegian-norwegian-epic-20260809-58616` |
-| Norwegian Epic | 2026-10-18 | 7 | $1,019 | `norwegian-norwegian-epic-20261018-58626` |
-| Norwegian Gem | 2026-08-30 | 7 | $1,029 | `norwegian-norwegian-gem-20260830-58697` |
-| Norwegian Dawn | 2026-08-30 | 7 | $1,039 | `norwegian-norwegian-dawn-20260830-58542` |
-| Norwegian Dawn | 2026-07-26 | 7 | $1,069 | `norwegian-norwegian-dawn-20260726-58537` |
-| Norwegian Gem | 2026-07-19 | 7 | $1,129 | `norwegian-norwegian-gem-20260719-58691` |
-| Norwegian Dawn | 2026-07-19 | 7 | $1,139 | `norwegian-norwegian-dawn-20260719-58536` |
-| Norwegian Dawn | 2026-08-16 | 7 | $1,159 | `norwegian-norwegian-dawn-20260816-58540` |
-| Norwegian Dawn | 2026-09-13 | 7 | $1,169 | `norwegian-norwegian-dawn-20260913-58544` |
-| Norwegian Gem | 2026-09-13 | 7 | $1,179 | `norwegian-norwegian-gem-20260913-58699` |
-| Norwegian Epic | 2026-10-04 | 7 | $1,269 | `norwegian-norwegian-epic-20261004-58624` |
-| Norwegian Gem | 2027-12-11 | 10 | $1,439 | `norwegian-norwegian-gem-20271211-62541` |
-| Norwegian Gem | 2027-11-09 | 10 | $1,439 | `norwegian-norwegian-gem-20271109-62540` |
-| Norwegian Jewel | 2027-12-09 | 11 | $1,509 | `norwegian-norwegian-jewel-20271209-61892` |
-| Norwegian Gem | 2027-11-30 | 11 | $1,519 | `norwegian-norwegian-gem-20271130-62544` |
-| Norwegian Star | 2028-03-17 | 15 | $1,599 | `norwegian-norwegian-star-20280317-62370` |
-| Norwegian Jade | 2027-09-28 | 15 | $1,620 | `norwegian-norwegian-jade-20270928-62638` |
-| Norwegian Star | 2026-12-04 | 16 | $1,639 | `norwegian-norwegian-star-20261204-61121` |
-| Norwegian Star | 2027-12-02 | 15 | $1,679 | `norwegian-norwegian-star-20271202-62369` |
-| Norwegian Jade | 2026-09-21 | 16 | $1,688 | `norwegian-norwegian-jade-20260921-61098` |
-| Norwegian Jade | 2028-04-23 | 15 | $1,708 | `norwegian-norwegian-jade-20280423-61756` |
-| Norwegian Jade | 2027-12-09 | 12 | $1,909 | `norwegian-norwegian-jade-20271209-61744` |
-| Norwegian Jade | 2027-11-29 | 10 | $1,929 | `norwegian-norwegian-jade-20271129-61743` |
-| Norwegian Gem | 2027-11-19 | 11 | $1,969 | `norwegian-norwegian-gem-20271119-62543` |
-| Norwegian Star | 2027-02-13 | 16 | $2,029 | `norwegian-norwegian-star-20270213-62379` |
-| Norwegian Jade | 2026-10-18 | 11 | $2,049 | `norwegian-norwegian-jade-20261018-59514` |
-| Norwegian Jade | 2026-11-30 | 9 | $2,069 | `norwegian-norwegian-jade-20261130-59518` |
-| Norwegian Jade | 2028-02-22 | 11 | $2,089 | `norwegian-norwegian-jade-20280222-61750` |
-| Norwegian Star | 2028-02-16 | 15 | $3,009 | `norwegian-norwegian-star-20280216-62366` |
-| Norwegian Star | 2028-01-02 | 15 | $3,069 | `norwegian-norwegian-star-20280102-62363` |
-| Norwegian Star | 2028-02-01 | 15 | $3,189 | `norwegian-norwegian-star-20280201-62365` |
-| Norwegian Star | 2028-01-17 | 15 | $3,209 | `norwegian-norwegian-star-20280117-62364` |
-| Norwegian Star | 2028-03-02 | 15 | $3,389 | `norwegian-norwegian-star-20280302-62367` |
-| Norwegian Star | 2027-12-17 | 16 | $3,989 | `norwegian-norwegian-star-20271217-62368` |
-| Norwegian Bliss | 2027-04-09 | 19 | $2,339 | `norwegian-norwegian-bliss-20270409-60261` |
-| Norwegian Bliss | 2028-04-14 | 19 | $2,429 | `norwegian-norwegian-bliss-20280414-61727` |
+| Norwegian Gem | 2026-10-18 | 7 | $939 | `norwegian-norwegian-gem-20261018-58704` |
+| Norwegian Epic | 2026-08-16 | 7 | $989 | `norwegian-norwegian-epic-20260816-58617` |
+| Norwegian Dawn | 2026-10-11 | 7 | $999 | `norwegian-norwegian-dawn-20261011-58548` |
+| Norwegian Pearl | 2026-07-19 | 7 | $1,029 | `norwegian-norwegian-pearl-20260719-58747` |
+| Norwegian Pearl | 2026-07-05 | 7 | $1,029 | `norwegian-norwegian-pearl-20260705-58745` |
+| Norwegian Pearl | 2026-10-25 | 7 | $1,029 | `norwegian-norwegian-pearl-20261025-58761` |
+| Norwegian Gem | 2026-10-04 | 7 | $1,039 | `norwegian-norwegian-gem-20261004-58702` |
+| Norwegian Gem | 2026-08-23 | 7 | $1,059 | `norwegian-norwegian-gem-20260823-58696` |
+| Norwegian Pearl | 2026-10-11 | 7 | $1,059 | `norwegian-norwegian-pearl-20261011-58759` |
+| Norwegian Pearl | 2026-08-23 | 7 | $1,069 | `norwegian-norwegian-pearl-20260823-58752` |
+| Norwegian Pearl | 2026-08-30 | 7 | $1,069 | `norwegian-norwegian-pearl-20260830-58753` |
+| Norwegian Pearl | 2026-09-13 | 7 | $1,099 | `norwegian-norwegian-pearl-20260913-58755` |
+| Norwegian Gem | 2026-10-11 | 7 | $1,109 | `norwegian-norwegian-gem-20261011-58703` |
+| Norwegian Gem | 2026-08-16 | 7 | $1,109 | `norwegian-norwegian-gem-20260816-58695` |
+| Norwegian Gem | 2026-07-26 | 7 | $1,119 | `norwegian-norwegian-gem-20260726-58692` |
+| Norwegian Gem | 2026-08-09 | 7 | $1,119 | `norwegian-norwegian-gem-20260809-58694` |
+| Norwegian Gem | 2026-08-02 | 7 | $1,129 | `norwegian-norwegian-gem-20260802-58693` |
+| Norwegian Pearl | 2026-08-16 | 7 | $1,129 | `norwegian-norwegian-pearl-20260816-58751` |
+| Norwegian Dawn | 2026-07-12 | 7 | $1,149 | `norwegian-norwegian-dawn-20260712-58535` |
+| Norwegian Dawn | 2026-08-09 | 7 | $1,149 | `norwegian-norwegian-dawn-20260809-58539` |
+| Norwegian Gem | 2026-09-20 | 7 | $1,159 | `norwegian-norwegian-gem-20260920-58700` |
+| Norwegian Pearl | 2026-08-02 | 7 | $1,159 | `norwegian-norwegian-pearl-20260802-58749` |
+| Norwegian Dawn | 2026-08-23 | 7 | $1,169 | `norwegian-norwegian-dawn-20260823-58541` |
+| Norwegian Dawn | 2026-09-06 | 7 | $1,169 | `norwegian-norwegian-dawn-20260906-58543` |
+| Norwegian Gem | 2026-09-27 | 7 | $1,169 | `norwegian-norwegian-gem-20260927-58701` |
+| Norwegian Pearl | 2026-08-09 | 7 | $1,199 | `norwegian-norwegian-pearl-20260809-58750` |
+| Norwegian Pearl | 2026-07-26 | 7 | $1,219 | `norwegian-norwegian-pearl-20260726-58748` |
+| Norwegian Epic | 2027-05-16 | 7 | $1,239 | `norwegian-norwegian-epic-20270516-60755` |
+| Norwegian Epic | 2027-05-30 | 7 | $1,249 | `norwegian-norwegian-epic-20270530-60757` |
+| Norwegian Epic | 2027-09-19 | 7 | $1,249 | `norwegian-norwegian-epic-20270919-60773` |
+| Norwegian Pearl | 2026-09-27 | 7 | $1,249 | `norwegian-norwegian-pearl-20260927-58757` |
+| Norwegian Gem | 2026-07-12 | 7 | $1,319 | `norwegian-norwegian-gem-20260712-58690` |
+| Norwegian Sky | 2026-08-31 | 9 | $1,349 | `norwegian-norwegian-sky-20260831-61019` |
+| Norwegian Pearl | 2026-07-12 | 7 | $1,369 | `norwegian-norwegian-pearl-20260712-58746` |
+| Norwegian Gem | 2027-10-03 | 7 | $1,409 | `norwegian-norwegian-gem-20271003-60804` |
+| Norwegian Gem | 2027-05-02 | 7 | $1,449 | `norwegian-norwegian-gem-20270502-60782` |
+| Norwegian Gem | 2027-05-30 | 7 | $1,499 | `norwegian-norwegian-gem-20270530-60786` |
+| Norwegian Gem | 2027-06-27 | 7 | $1,499 | `norwegian-norwegian-gem-20270627-60790` |
+| Norwegian Gem | 2026-07-05 | 7 | $1,529 | `norwegian-norwegian-gem-20260705-58689` |
+| Norwegian Gem | 2027-05-16 | 7 | $1,559 | `norwegian-norwegian-gem-20270516-60784` |
+| Norwegian Gem | 2027-06-13 | 7 | $1,569 | `norwegian-norwegian-gem-20270613-60788` |
+| Norwegian Viva | 2026-07-03 | 10 | $1,719 | `norwegian-norwegian-viva-20260703-58644` |
+| Norwegian Viva | 2026-07-13 | 9 | $1,729 | `norwegian-norwegian-viva-20260713-58635` |
+| Norwegian Viva | 2026-07-22 | 9 | $1,739 | `norwegian-norwegian-viva-20260722-58636` |
+| Norwegian Viva | 2026-08-28 | 10 | $1,799 | `norwegian-norwegian-viva-20260828-58646` |
+| Norwegian Viva | 2026-08-10 | 9 | $2,099 | `norwegian-norwegian-viva-20260810-58637` |
+| Norwegian Viva | 2026-07-31 | 10 | $2,099 | `norwegian-norwegian-viva-20260731-58645` |
+| Norwegian Viva | 2026-09-26 | 9 | $2,419 | `norwegian-norwegian-viva-20260926-60204` |
+| Norwegian Viva | 2027-09-15 | 9 | $2,429 | `norwegian-norwegian-viva-20270915-60921` |
+| Norwegian Viva | 2026-09-16 | 10 | $2,449 | `norwegian-norwegian-viva-20260916-60203` |
+| Norwegian Viva | 2026-09-07 | 9 | $2,519 | `norwegian-norwegian-viva-20260907-58639` |
+| Norwegian Viva | 2027-10-13 | 10 | $2,559 | `norwegian-norwegian-viva-20271013-61140` |
+| Norwegian Viva | 2027-07-02 | 9 | $2,589 | `norwegian-norwegian-viva-20270702-60913` |
+| Norwegian Viva | 2027-10-03 | 10 | $2,639 | `norwegian-norwegian-viva-20271003-60923` |
+| Norwegian Viva | 2027-07-21 | 9 | $2,669 | `norwegian-norwegian-viva-20270721-60915` |
+| Norwegian Viva | 2026-10-05 | 9 | $2,709 | `norwegian-norwegian-viva-20261005-58641` |
+| Norwegian Viva | 2027-08-08 | 10 | $2,749 | `norwegian-norwegian-viva-20270808-60917` |
+| Norwegian Viva | 2027-06-23 | 9 | $2,969 | `norwegian-norwegian-viva-20270623-60912` |
+| Norwegian Viva | 2027-07-11 | 10 | $3,019 | `norwegian-norwegian-viva-20270711-60914` |
+| Norwegian Viva | 2027-06-13 | 10 | $3,019 | `norwegian-norwegian-viva-20270613-60911` |
+| Norwegian Viva | 2027-09-05 | 10 | $3,339 | `norwegian-norwegian-viva-20270905-60920` |
+| Norwegian Sky | 2026-09-09 | 18 | $2,699 | `norwegian-norwegian-sky-20260909-63120` |
+| Norwegian Sun | 2027-09-05 | 21 | $5,699 | `norwegian-norwegian-sun-20270905-62253` |
 
 ## Selected Records Already Live
 

@@ -4016,6 +4016,244 @@
     ]
   },
   {
+    "id": "carnival-carnival-sunshine-20270609-25076",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunshine",
+    "shipId": "carnival-sunshine",
+    "departureDate": "2027-06-09",
+    "returnDate": "2027-06-19",
+    "duration": 10,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "La Goulette (Tunis)",
+        "portSlug": "la-goulette-tunis",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Malta",
+        "portSlug": "malta",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Naples (Amalfi/Pompeii)",
+        "portSlug": "naples-amalfi-pompeii",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Civitavecchia (Rome)",
+        "portSlug": "civitavecchia-rome",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Livorno (Florence & Pisa)",
+        "portSlug": "livorno-florence-and-pisa",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Marseille (Provence)",
+        "portSlug": "marseille-provence",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-sunshine-20270717-25080",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunshine",
+    "shipId": "carnival-sunshine",
+    "departureDate": "2027-07-17",
+    "returnDate": "2027-07-25",
+    "duration": 8,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "La Goulette (Tunis)",
+        "portSlug": "la-goulette-tunis",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Palermo, Sicily",
+        "portSlug": "palermo-sicily",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Naples (Amalfi/Pompeii)",
+        "portSlug": "naples-amalfi-pompeii",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ajaccio, Corsica",
+        "portSlug": "ajaccio-corsica",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Marseille (Provence)",
+        "portSlug": "marseille-provence",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-sunshine-20270725-25081",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunshine",
+    "shipId": "carnival-sunshine",
+    "departureDate": "2027-07-25",
+    "returnDate": "2027-08-04",
+    "duration": 10,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Marseille (Provence)",
+        "portSlug": "marseille-provence",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Savona",
+        "portSlug": "savona",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Salerno (Amalfi/Pompeii)",
+        "portSlug": "salerno-amalfi-pompeii",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Catania, Sicily",
+        "portSlug": "catania-sicily",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Malta",
+        "portSlug": "malta",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "La Goulette (Tunis)",
+        "portSlug": "la-goulette-tunis",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Solar Eclipse Scenic Cruising",
+        "portSlug": "solar-eclipse-scenic-cruising",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Civitavecchia (Rome)"
+      }
+    ]
+  },
+  {
     "id": "carnival-carnival-paradise-20270808-24323",
     "cruiseLineId": "carnival",
     "shipName": "Carnival Paradise",
@@ -4100,6 +4338,86 @@
         "day": 5,
         "type": "arrival",
         "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-sunshine-20270822-25084",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunshine",
+    "shipId": "carnival-sunshine",
+    "departureDate": "2027-08-22",
+    "returnDate": "2027-09-01",
+    "duration": 10,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Marseille (Provence)",
+        "portSlug": "marseille-provence",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Genoa",
+        "portSlug": "genoa",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Livorno (Florence & Pisa)",
+        "portSlug": "livorno-florence-and-pisa",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Naples (Amalfi/Pompeii)",
+        "portSlug": "naples-amalfi-pompeii",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Malta",
+        "portSlug": "malta",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "La Goulette (Tunis)",
+        "portSlug": "la-goulette-tunis",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Civitavecchia (Rome)"
       }
     ]
   },
@@ -4232,6 +4550,78 @@
         "day": 5,
         "type": "arrival",
         "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-sunshine-20270911-25086",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunshine",
+    "shipId": "carnival-sunshine",
+    "departureDate": "2027-09-11",
+    "returnDate": "2027-09-19",
+    "duration": 8,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "La Goulette (Tunis)",
+        "portSlug": "la-goulette-tunis",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Palermo, Sicily",
+        "portSlug": "palermo-sicily",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Naples (Amalfi/Pompeii)",
+        "portSlug": "naples-amalfi-pompeii",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ajaccio, Corsica",
+        "portSlug": "ajaccio-corsica",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Marseille (Provence)",
+        "portSlug": "marseille-provence",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
       }
     ]
   },
@@ -4378,6 +4768,86 @@
         "day": 5,
         "type": "arrival",
         "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-sunshine-20270919-25087",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunshine",
+    "shipId": "carnival-sunshine",
+    "departureDate": "2027-09-19",
+    "returnDate": "2027-09-29",
+    "duration": 10,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Marseille (Provence)",
+        "portSlug": "marseille-provence",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Genoa",
+        "portSlug": "genoa",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Corfu",
+        "portSlug": "corfu",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Bar",
+        "portSlug": "bar",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Bari",
+        "portSlug": "bari",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Naples (Amalfi/Pompeii)",
+        "portSlug": "naples-amalfi-pompeii",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Civitavecchia (Rome)"
       }
     ]
   },
@@ -4561,6 +5031,71 @@
         "day": 5,
         "type": "arrival",
         "portName": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "id": "carnival-carnival-sunshine-20271009-25089",
+    "cruiseLineId": "carnival",
+    "shipName": "Carnival Sunshine",
+    "shipId": "carnival-sunshine",
+    "departureDate": "2027-10-09",
+    "returnDate": "2027-10-16",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Marseille (Provence)",
+        "portSlug": "marseille-provence",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Naples (Amalfi/Pompeii)",
+        "portSlug": "naples-amalfi-pompeii",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Palermo, Sicily",
+        "portSlug": "palermo-sicily",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "La Goulette (Tunis)",
+        "portSlug": "la-goulette-tunis",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
       }
     ]
   },
@@ -6555,6 +7090,83 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-viva-20260703-58644",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-07-03",
+    "returnDate": "2026-07-13",
+    "duration": 10,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bar, Montenegro",
+        "portSlug": "bar-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Rhodes, Greece",
+        "portSlug": "rhodes-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Istanbul, Turkey"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-epic-20260705-58611",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Epic",
@@ -6608,6 +7220,201 @@
       {
         "day": 7,
         "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260705-58689",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-07-05",
+    "returnDate": "2026-07-12",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Messina (Sicily), Italy",
+        "portSlug": "messina-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20260705-58745",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-07-05",
+    "returnDate": "2026-07-12",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-dawn-20260712-58535",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "shipId": "norwegian-dawn",
+    "departureDate": "2026-07-12",
+    "returnDate": "2026-07-19",
+    "duration": 7,
+    "departurePort": "Lisbon, Portugal",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Lisbon, Portugal"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Gibraltar, United Kingdom",
+        "portSlug": "gibraltar-united-kingdom",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Motril, Spain",
+        "portSlug": "motril-spain",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Portimão, Portugal",
+        "portSlug": "portim-o-portugal",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Seville (Cadiz), Spain",
+        "portSlug": "seville-cadiz-spain",
+        "isTender": false
       },
       {
         "day": 8,
@@ -6672,6 +7479,215 @@
         "day": 8,
         "type": "arrival",
         "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260712-58690",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-07-12",
+    "returnDate": "2026-07-19",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Venice (Trieste), Italy",
+        "portSlug": "venice-trieste-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20260712-58746",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-07-12",
+    "returnDate": "2026-07-19",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20260713-58635",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-07-13",
+    "returnDate": "2026-07-22",
+    "duration": 9,
+    "departurePort": "Istanbul, Turkey",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Istanbul, Turkey"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Valletta, Malta",
+        "portSlug": "valletta-malta",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
       }
     ]
   },
@@ -6927,6 +7943,144 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-pearl-20260719-58747",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-07-19",
+    "returnDate": "2026-07-26",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20260722-58636",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-07-22",
+    "returnDate": "2026-07-31",
+    "duration": 9,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Valletta, Malta",
+        "portSlug": "valletta-malta",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Istanbul, Turkey"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-dawn-20260726-58537",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Dawn",
@@ -7047,6 +8201,222 @@
         "day": 8,
         "type": "arrival",
         "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260726-58692",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-07-26",
+    "returnDate": "2026-08-02",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Venice (Trieste), Italy",
+        "portSlug": "venice-trieste-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20260726-58748",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-07-26",
+    "returnDate": "2026-08-02",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20260731-58645",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-07-31",
+    "returnDate": "2026-08-10",
+    "duration": 10,
+    "departurePort": "Istanbul, Turkey",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Istanbul, Turkey"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bar, Montenegro",
+        "portSlug": "bar-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
       }
     ]
   },
@@ -7172,6 +8542,136 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-gem-20260802-58693",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-08-02",
+    "returnDate": "2026-08-09",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Messina (Sicily), Italy",
+        "portSlug": "messina-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20260802-58749",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-08-02",
+    "returnDate": "2026-08-09",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-luna-20260808-58874",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Luna",
@@ -7227,6 +8727,71 @@
         "day": 8,
         "type": "arrival",
         "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-dawn-20260809-58539",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "shipId": "norwegian-dawn",
+    "departureDate": "2026-08-09",
+    "returnDate": "2026-08-16",
+    "duration": 7,
+    "departurePort": "Lisbon, Portugal",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Lisbon, Portugal"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Gibraltar, United Kingdom",
+        "portSlug": "gibraltar-united-kingdom",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Motril, Spain",
+        "portSlug": "motril-spain",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Portimão, Portugal",
+        "portSlug": "portim-o-portugal",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Seville (Cadiz), Spain",
+        "portSlug": "seville-cadiz-spain",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
       }
     ]
   },
@@ -7352,6 +8917,136 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-gem-20260809-58694",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-08-09",
+    "returnDate": "2026-08-16",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Venice (Trieste), Italy",
+        "portSlug": "venice-trieste-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20260809-58750",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-08-09",
+    "returnDate": "2026-08-16",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260809-58195",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -7407,6 +9102,82 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20260810-58637",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-08-10",
+    "returnDate": "2026-08-19",
+    "duration": 9,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bar, Montenegro",
+        "portSlug": "bar-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
       }
     ]
   },
@@ -7535,6 +9306,198 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-epic-20260816-58617",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "shipId": "norwegian-epic",
+    "departureDate": "2026-08-16",
+    "returnDate": "2026-08-23",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Provence (Marseille), France",
+        "portSlug": "provence-marseille-france",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260816-58695",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-08-16",
+    "returnDate": "2026-08-23",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Messina (Sicily), Italy",
+        "portSlug": "messina-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20260816-58751",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-08-16",
+    "returnDate": "2026-08-23",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260816-58196",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -7653,6 +9616,201 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-dawn-20260823-58541",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "shipId": "norwegian-dawn",
+    "departureDate": "2026-08-23",
+    "returnDate": "2026-08-30",
+    "duration": 7,
+    "departurePort": "Lisbon, Portugal",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Lisbon, Portugal"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Gibraltar, United Kingdom",
+        "portSlug": "gibraltar-united-kingdom",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Motril, Spain",
+        "portSlug": "motril-spain",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Portimão, Portugal",
+        "portSlug": "portim-o-portugal",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Seville (Cadiz), Spain",
+        "portSlug": "seville-cadiz-spain",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260823-58696",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-08-23",
+    "returnDate": "2026-08-30",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Venice (Trieste), Italy",
+        "portSlug": "venice-trieste-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20260823-58752",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-08-23",
+    "returnDate": "2026-08-30",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260823-58197",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -7708,6 +9866,86 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20260828-58646",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-08-28",
+    "returnDate": "2026-09-07",
+    "duration": 10,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bar, Montenegro",
+        "portSlug": "bar-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Rhodes, Greece",
+        "portSlug": "rhodes-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Thessaloniki, Greece",
+        "portSlug": "thessaloniki-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Istanbul, Turkey"
       }
     ]
   },
@@ -7901,6 +10139,71 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-pearl-20260830-58753",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-08-30",
+    "returnDate": "2026-09-06",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260830-58198",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -7960,6 +10263,147 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-sky-20260831-61019",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Sky",
+    "shipId": "norwegian-sky",
+    "departureDate": "2026-08-31",
+    "returnDate": "2026-09-09",
+    "duration": 9,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Heraklion (Crete), Greece",
+        "portSlug": "heraklion-crete-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-dawn-20260906-58543",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "shipId": "norwegian-dawn",
+    "departureDate": "2026-09-06",
+    "returnDate": "2026-09-13",
+    "duration": 7,
+    "departurePort": "Lisbon, Portugal",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Lisbon, Portugal"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Gibraltar, United Kingdom",
+        "portSlug": "gibraltar-united-kingdom",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Motril, Spain",
+        "portSlug": "motril-spain",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Portimão, Portugal",
+        "portSlug": "portim-o-portugal",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Seville (Cadiz), Spain",
+        "portSlug": "seville-cadiz-spain",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260906-58199",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -8015,6 +10459,197 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20260907-58639",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-09-07",
+    "returnDate": "2026-09-16",
+    "duration": 9,
+    "departurePort": "Istanbul, Turkey",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Istanbul, Turkey"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Valletta, Malta",
+        "portSlug": "valletta-malta",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-sky-20260909-63120",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Sky",
+    "shipId": "norwegian-sky",
+    "departureDate": "2026-09-09",
+    "returnDate": "2026-09-27",
+    "duration": 18,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Alexandria, Egypt",
+        "portSlug": "alexandria-egypt",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Safaga, Egypt",
+        "portSlug": "safaga-egypt",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Rhodes, Greece",
+        "portSlug": "rhodes-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Aqaba, Jordan",
+        "portSlug": "aqaba-jordan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Jeddah, Saudi Arabia",
+        "portSlug": "jeddah-saudi-arabia",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Sokhna, Egypt",
+        "portSlug": "sokhna-egypt",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Sharm el Sheikh, Egypt",
+        "portSlug": "sharm-el-sheikh-egypt",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "sea"
+      },
+      {
+        "day": 15,
+        "type": "sea"
+      },
+      {
+        "day": 16,
+        "type": "sea"
+      },
+      {
+        "day": 17,
+        "type": "sea"
+      },
+      {
+        "day": 18,
+        "type": "sea"
+      },
+      {
+        "day": 19,
+        "type": "arrival",
+        "portName": "Muscat, Oman"
       }
     ]
   },
@@ -8149,6 +10784,71 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-pearl-20260913-58755",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-09-13",
+    "returnDate": "2026-09-20",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260913-58200",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -8204,6 +10904,151 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20260916-60203",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-09-16",
+    "returnDate": "2026-09-26",
+    "duration": 10,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Heraklion (Crete), Greece",
+        "portSlug": "heraklion-crete-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Istanbul, Turkey"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260920-58700",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-09-20",
+    "returnDate": "2026-09-27",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Venice (Trieste), Italy",
+        "portSlug": "venice-trieste-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
       }
     ]
   },
@@ -8368,6 +11213,215 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-viva-20260926-60204",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-09-26",
+    "returnDate": "2026-10-05",
+    "duration": 9,
+    "departurePort": "Istanbul, Turkey",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Istanbul, Turkey"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bar, Montenegro",
+        "portSlug": "bar-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260927-58701",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-09-27",
+    "returnDate": "2026-10-04",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Messina (Sicily), Italy",
+        "portSlug": "messina-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20260927-58757",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-09-27",
+    "returnDate": "2026-10-04",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260927-58202",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -8489,6 +11543,71 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-gem-20261004-58702",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-10-04",
+    "returnDate": "2026-10-11",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Venice (Trieste), Italy",
+        "portSlug": "venice-trieste-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20261004-58203",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Prima",
@@ -8544,6 +11663,277 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20261005-58641",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2026-10-05",
+    "returnDate": "2026-10-14",
+    "duration": 9,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "La Spezia, Italy",
+        "portSlug": "la-spezia-italy",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Bar, Montenegro",
+        "portSlug": "bar-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-dawn-20261011-58548",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "shipId": "norwegian-dawn",
+    "departureDate": "2026-10-11",
+    "returnDate": "2026-10-18",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Valencia, Spain",
+        "portSlug": "valencia-spain",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Gibraltar, United Kingdom",
+        "portSlug": "gibraltar-united-kingdom",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Motril, Spain",
+        "portSlug": "motril-spain",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Portimão, Portugal",
+        "portSlug": "portim-o-portugal",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Seville (Cadiz), Spain",
+        "portSlug": "seville-cadiz-spain",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Lisbon, Portugal"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20261011-58703",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-10-11",
+    "returnDate": "2026-10-18",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Messina (Sicily), Italy",
+        "portSlug": "messina-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20261011-58759",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-10-11",
+    "returnDate": "2026-10-18",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
       }
     ]
   },
@@ -8727,6 +12117,71 @@
         "day": 8,
         "type": "arrival",
         "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20261018-58704",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2026-10-18",
+    "returnDate": "2026-10-25",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Zadar, Croatia",
+        "portSlug": "zadar-croatia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Venice (Trieste), Italy",
+        "portSlug": "venice-trieste-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
       }
     ]
   },
@@ -8935,6 +12390,71 @@
         "day": 8,
         "type": "arrival",
         "portName": "Lisbon, Portugal"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-pearl-20261025-58761",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Pearl",
+    "shipId": "norwegian-pearl",
+    "departureDate": "2026-10-25",
+    "returnDate": "2026-11-01",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Koper, Slovenia",
+        "portSlug": "koper-slovenia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
       }
     ]
   },
@@ -12110,6 +15630,68 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-gem-20270502-60782",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2027-05-02",
+    "returnDate": "2027-05-09",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Istanbul, Turkey",
+        "portSlug": "istanbul-turkey",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Heraklion (Crete), Greece",
+        "portSlug": "heraklion-crete-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20270512-60477",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Escape",
@@ -12151,6 +15733,133 @@
         "day": 6,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20270516-60755",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "shipId": "norwegian-epic",
+    "departureDate": "2027-05-16",
+    "returnDate": "2027-05-23",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Provence (Marseille), France",
+        "portSlug": "provence-marseille-france",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20270516-60784",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2027-05-16",
+    "returnDate": "2027-05-23",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
       }
     ]
   },
@@ -12200,6 +15909,133 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-epic-20270530-60757",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "shipId": "norwegian-epic",
+    "departureDate": "2027-05-30",
+    "returnDate": "2027-06-06",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Messina (Sicily), Italy",
+        "portSlug": "messina-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Provence (Marseille), France",
+        "portSlug": "provence-marseille-france",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20270530-60786",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2027-05-30",
+    "returnDate": "2027-06-06",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20270609-60483",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Escape",
@@ -12241,6 +16077,454 @@
         "day": 6,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20270613-60788",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2027-06-13",
+    "returnDate": "2027-06-20",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20270613-60911",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-06-13",
+    "returnDate": "2027-06-23",
+    "duration": 10,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Rhodes, Greece",
+        "portSlug": "rhodes-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Thessaloniki, Greece",
+        "portSlug": "thessaloniki-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Istanbul, Turkey"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20270623-60912",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-06-23",
+    "returnDate": "2027-07-02",
+    "duration": 9,
+    "departurePort": "Istanbul, Turkey",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Istanbul, Turkey"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Valletta, Malta",
+        "portSlug": "valletta-malta",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20270627-60790",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2027-06-27",
+    "returnDate": "2027-07-04",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20270702-60913",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-07-02",
+    "returnDate": "2027-07-11",
+    "duration": 9,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Valletta, Malta",
+        "portSlug": "valletta-malta",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Istanbul, Turkey"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20270711-60914",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-07-11",
+    "returnDate": "2027-07-21",
+    "duration": 10,
+    "departurePort": "Istanbul, Turkey",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Istanbul, Turkey"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
       }
     ]
   },
@@ -12290,6 +16574,82 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-viva-20270721-60915",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-07-21",
+    "returnDate": "2027-07-30",
+    "duration": 9,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20270804-60495",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Escape",
@@ -12331,6 +16691,449 @@
         "day": 6,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20270808-60917",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-08-08",
+    "returnDate": "2027-08-18",
+    "duration": 10,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Rhodes, Greece",
+        "portSlug": "rhodes-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Thessaloniki, Greece",
+        "portSlug": "thessaloniki-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Istanbul, Turkey"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-sun-20270905-62253",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Sun",
+    "shipId": "norwegian-sun",
+    "departureDate": "2027-09-05",
+    "returnDate": "2027-09-26",
+    "duration": 21,
+    "departurePort": "Athens (Piraeus), Greece",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus), Greece"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Port Said, Egypt (technical call)",
+        "portSlug": "port-said-egypt-technical-call",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Alexandria, Egypt",
+        "portSlug": "alexandria-egypt",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Safaga, Egypt",
+        "portSlug": "safaga-egypt",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Limassol, Cyprus",
+        "portSlug": "limassol-cyprus",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Rhodes, Greece",
+        "portSlug": "rhodes-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Aqaba, Jordan",
+        "portSlug": "aqaba-jordan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Muscat, Oman",
+        "portSlug": "muscat-oman",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Jeddah, Saudi Arabia",
+        "portSlug": "jeddah-saudi-arabia",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Sokhna, Egypt",
+        "portSlug": "sokhna-egypt",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "port",
+        "portName": "Sharm el Sheikh, Egypt",
+        "portSlug": "sharm-el-sheikh-egypt",
+        "isTender": false
+      },
+      {
+        "day": 12,
+        "type": "port",
+        "portName": "Abu Dhabi, United Arab Emirates",
+        "portSlug": "abu-dhabi-united-arab-emirates",
+        "isTender": false
+      },
+      {
+        "day": 13,
+        "type": "port",
+        "portName": "Doha, Qatar",
+        "portSlug": "doha-qatar",
+        "isTender": false
+      },
+      {
+        "day": 14,
+        "type": "sea"
+      },
+      {
+        "day": 15,
+        "type": "sea"
+      },
+      {
+        "day": 16,
+        "type": "sea"
+      },
+      {
+        "day": 17,
+        "type": "sea"
+      },
+      {
+        "day": 18,
+        "type": "sea"
+      },
+      {
+        "day": 19,
+        "type": "sea"
+      },
+      {
+        "day": 20,
+        "type": "sea"
+      },
+      {
+        "day": 21,
+        "type": "sea"
+      },
+      {
+        "day": 22,
+        "type": "arrival",
+        "portName": "Dubai, United Arab Emirates"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20270905-60920",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-09-05",
+    "returnDate": "2027-09-15",
+    "duration": 10,
+    "departurePort": "Istanbul, Turkey",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Istanbul, Turkey"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Split, Croatia",
+        "portSlug": "split-croatia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Olympia (Katakolon), Greece",
+        "portSlug": "olympia-katakolon-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Venice (Ravenna), Italy"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20270915-60921",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-09-15",
+    "returnDate": "2027-09-24",
+    "duration": 9,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Palma (Majorca), Spain",
+        "portSlug": "palma-majorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Barcelona, Spain"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20270919-60773",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "shipId": "norwegian-epic",
+    "departureDate": "2027-09-19",
+    "returnDate": "2027-09-26",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona, Spain"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Nice/Monaco (Villefranche), France",
+        "portSlug": "nice-monaco-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Provence (Marseille), France",
+        "portSlug": "provence-marseille-france",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
       }
     ]
   },
@@ -12425,6 +17228,231 @@
         "day": 16,
         "type": "arrival",
         "portName": "Tokyo (Yokohama), Japan"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20271003-60804",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "shipId": "norwegian-gem",
+    "departureDate": "2027-10-03",
+    "returnDate": "2027-10-10",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Istanbul, Turkey",
+        "portSlug": "istanbul-turkey",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Heraklion (Crete), Greece",
+        "portSlug": "heraklion-crete-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Athens (Piraeus), Greece"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20271003-60923",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-10-03",
+    "returnDate": "2027-10-13",
+    "duration": 10,
+    "departurePort": "Venice (Ravenna), Italy",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Venice (Ravenna), Italy"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Rhodes, Greece",
+        "portSlug": "rhodes-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Thessaloniki, Greece",
+        "portSlug": "thessaloniki-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Istanbul, Turkey"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-viva-20271013-61140",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Viva",
+    "shipId": "norwegian-viva",
+    "departureDate": "2027-10-13",
+    "returnDate": "2027-10-23",
+    "duration": 10,
+    "departurePort": "Istanbul, Turkey",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Istanbul, Turkey"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "La Spezia, Italy",
+        "portSlug": "la-spezia-italy",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kusadasi, Turkey",
+        "portSlug": "kusadasi-turkey",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Athens (Piraeus), Greece",
+        "portSlug": "athens-piraeus-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Salerno, Italy",
+        "portSlug": "salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Catania, Italy",
+        "portSlug": "catania-italy",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia), Italy"
       }
     ]
   },
@@ -14430,6 +19458,78 @@
     ]
   },
   {
+    "id": "virgin-voyages-valiant-lady-20260711-8nbva",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Valiant Lady",
+    "shipId": "valiant-lady",
+    "departureDate": "2026-07-11",
+    "returnDate": "2026-07-19",
+    "duration": 8,
+    "departurePort": "Barcelona",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Provence (Marseille), France",
+        "portSlug": "provence-marseille-france",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Nice (Villefranche), France",
+        "portSlug": "nice-villefranche-france",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Amalfi Coast (Salerno), Italy",
+        "portSlug": "amalfi-coast-salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Catania, Sicily, Italy",
+        "portSlug": "catania-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Palermo, Sicily, Italy",
+        "portSlug": "palermo-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "arrival",
+        "portName": "Barcelona"
+      }
+    ]
+  },
+  {
     "id": "virgin-voyages-resilient-lady-20260716-4nkw",
     "cruiseLineId": "virgin-voyages",
     "shipName": "Resilient Lady",
@@ -14651,6 +19751,85 @@
         "day": 8,
         "type": "arrival",
         "portName": "Seattle, Washington"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20260724-9nbfa",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2026-07-24",
+    "returnDate": "2026-08-02",
+    "duration": 9,
+    "departurePort": "Barcelona",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Palma de Mallorca, Spain",
+        "portSlug": "palma-de-mallorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Cannes, France",
+        "portSlug": "cannes-france",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ajaccio, Corsica, France",
+        "portSlug": "ajaccio-corsica-france",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Barcelona"
       }
     ]
   },
@@ -15018,6 +20197,100 @@
     ]
   },
   {
+    "id": "virgin-voyages-scarlet-lady-20260810-12nwdf",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2026-08-10",
+    "returnDate": "2026-08-22",
+    "duration": 12,
+    "departurePort": "Barcelona",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Palma de Mallorca, Spain",
+        "portSlug": "palma-de-mallorca-spain",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Ibiza, Spain",
+        "portSlug": "ibiza-spain",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Cannes, France",
+        "portSlug": "cannes-france",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ajaccio, Corsica, France",
+        "portSlug": "ajaccio-corsica-france",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Tuscany/Cinque Terre (La Spezia), Italy",
+        "portSlug": "tuscany-cinque-terre-la-spezia-italy",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Amalfi Coast (Salerno), Italy",
+        "portSlug": "amalfi-coast-salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Catania, Sicily, Italy",
+        "portSlug": "catania-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Rome (Civitavecchia)",
+        "portSlug": "rome-civitavecchia",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "arrival",
+        "portName": "Rome (Civitavecchia)"
+      }
+    ]
+  },
+  {
     "id": "virgin-voyages-scarlet-lady-20260822-9ncc",
     "cruiseLineId": "virgin-voyages",
     "shipName": "Scarlet Lady",
@@ -15094,6 +20367,89 @@
     ]
   },
   {
+    "id": "virgin-voyages-scarlet-lady-20260831-10nca",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2026-08-31",
+    "returnDate": "2026-09-10",
+    "duration": 10,
+    "departurePort": "Rome (Civitavecchia)",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Rome (Civitavecchia)"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Rome (Civitavecchia)",
+        "portSlug": "rome-civitavecchia",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Florence/Pisa (Livorno), Italy",
+        "portSlug": "florence-pisa-livorno-italy",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Amalfi Coast (Salerno), Italy",
+        "portSlug": "amalfi-coast-salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Catania, Sicily, Italy",
+        "portSlug": "catania-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Chania (Souda Bay), Crete, Greece",
+        "portSlug": "chania-souda-bay-crete-greece",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Athens (Piraeus)",
+        "portSlug": "athens-piraeus",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Athens (Piraeus)"
+      }
+    ]
+  },
+  {
     "id": "virgin-voyages-brilliant-lady-20260903-8nsabc",
     "cruiseLineId": "virgin-voyages",
     "shipName": "Brilliant Lady",
@@ -15162,6 +20518,89 @@
         "day": 9,
         "type": "arrival",
         "portName": "Vancouver, British Columbia"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20260910-10nath",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2026-09-10",
+    "returnDate": "2026-09-20",
+    "duration": 10,
+    "departurePort": "Athens (Piraeus)",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus)"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Athens (Piraeus)",
+        "portSlug": "athens-piraeus",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Bodrum, Turkey",
+        "portSlug": "bodrum-turkey",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Athens (Piraeus)",
+        "portSlug": "athens-piraeus",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Athens (Piraeus)"
       }
     ]
   },
@@ -15599,6 +21038,161 @@
     ]
   },
   {
+    "id": "virgin-voyages-scarlet-lady-20261004-7ngm6",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2026-10-04",
+    "returnDate": "2026-10-11",
+    "duration": 7,
+    "departurePort": "Athens (Piraeus)",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus)"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Athens (Piraeus)",
+        "portSlug": "athens-piraeus",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Catania, Sicily, Italy",
+        "portSlug": "catania-sicily-italy",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Amalfi Coast (Salerno), Italy",
+        "portSlug": "amalfi-coast-salerno-italy",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Rome (Civitavecchia), Italy",
+        "portSlug": "rome-civitavecchia-italy",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "arrival",
+        "portName": "Barcelona"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20261011-14nbm3",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2026-10-11",
+    "returnDate": "2026-10-25",
+    "duration": 14,
+    "departurePort": "Barcelona",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Barcelona"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Barcelona",
+        "portSlug": "barcelona",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Casablanca, Morocco",
+        "portSlug": "casablanca-morocco",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Las Palmas de Gran Canaria, Spain",
+        "portSlug": "las-palmas-de-gran-canaria-spain",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Santa Cruz de Tenerife, Spain",
+        "portSlug": "santa-cruz-de-tenerife-spain",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Miami, Florida",
+        "portSlug": "miami-florida",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "sea"
+      },
+      {
+        "day": 15,
+        "type": "arrival",
+        "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
     "id": "virgin-voyages-scarlet-lady-20261207-5ntc",
     "cruiseLineId": "virgin-voyages",
     "shipName": "Scarlet Lady",
@@ -15806,6 +21400,89 @@
         "day": 6,
         "type": "arrival",
         "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "virgin-voyages-scarlet-lady-20270711-10nath",
+    "cruiseLineId": "virgin-voyages",
+    "shipName": "Scarlet Lady",
+    "shipId": "scarlet-lady",
+    "departureDate": "2027-07-11",
+    "returnDate": "2027-07-21",
+    "duration": 10,
+    "departurePort": "Athens (Piraeus)",
+    "region": "mediterranean",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Athens (Piraeus)"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Athens (Piraeus)",
+        "portSlug": "athens-piraeus",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Santorini, Greece",
+        "portSlug": "santorini-greece",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Bodrum, Turkey",
+        "portSlug": "bodrum-turkey",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mykonos, Greece",
+        "portSlug": "mykonos-greece",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Dubrovnik, Croatia",
+        "portSlug": "dubrovnik-croatia",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kotor, Montenegro",
+        "portSlug": "kotor-montenegro",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Corfu, Greece",
+        "portSlug": "corfu-greece",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Athens (Piraeus)",
+        "portSlug": "athens-piraeus",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "arrival",
+        "portName": "Athens (Piraeus)"
       }
     ]
   },
