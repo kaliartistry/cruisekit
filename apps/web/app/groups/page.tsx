@@ -5,10 +5,13 @@ import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 import GroupsContent from "./groups-content";
 
+const PAGE_URL = "https://cruisekit.app/groups";
+
 export const metadata: Metadata = {
   title: "Group Hub — Plan & Split Costs for Group Cruises",
   description:
     "Estimate per-person costs for your group cruise, follow a step-by-step planning timeline, and coordinate your group booking across all major cruise lines.",
+  alternates: { canonical: "/groups" },
   keywords: [
     "group cruise planning",
     "group cruise cost calculator",
@@ -17,11 +20,107 @@ export const metadata: Metadata = {
     "cruise group rates",
     "group cruise checklist",
   ],
+  openGraph: {
+    title: "Group Hub - Plan & Split Costs for Group Cruises",
+    description:
+      "Estimate group cruise costs, follow a planning timeline, and connect Group Hub with MyCrew check-ins for cruise-day coordination.",
+    url: "/groups",
+    type: "website",
+  },
 };
+
+const GROUP_FAQS = [
+  {
+    question: "How many people do you need for a group cruise rate?",
+    answer:
+      "Most cruise lines require 8 or more staterooms to qualify for group rates. Some lines offer group benefits starting at 5 cabins. Group rates can include perks such as onboard credit, organizer cabins, or reduced deposits, depending on the cruise line and sailing.",
+  },
+  {
+    question: "Who should be the group coordinator?",
+    answer:
+      "Pick someone organized who is comfortable managing deadlines and communication. The coordinator keeps the group booking, payment reminders, room assignments, transportation, and planning decisions easier to follow.",
+  },
+  {
+    question: "How does CruiseKit help with group cruise planning?",
+    answer:
+      "CruiseKit Group Hub helps groups estimate per-person costs, follow a planning timeline, and connect pre-cruise planning with MyCrew-oriented cruise-day coordination.",
+  },
+  {
+    question: "Is CruiseKit an official cruise line group booking tool?",
+    answer:
+      "No. CruiseKit is an independent cruise planning toolkit. Travelers should confirm group booking rules, deposits, final prices, onboard services, and sailing-specific details with the cruise line or their travel advisor.",
+  },
+];
+
+function JsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${PAGE_URL}#webpage`,
+        url: PAGE_URL,
+        name: "CruiseKit Group Hub",
+        description:
+          "A CruiseKit planning page for estimating group cruise costs, following a planning timeline, and coordinating group cruise context.",
+        about: {
+          "@type": "SoftwareApplication",
+          name: "CruiseKit",
+          applicationCategory: "TravelApplication",
+          operatingSystem: "iOS, Android",
+          url: "https://cruisekit.app",
+        },
+        isPartOf: {
+          "@type": "WebSite",
+          name: "CruiseKit",
+          url: "https://cruisekit.app",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${PAGE_URL}#faq`,
+        mainEntity: GROUP_FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://cruisekit.app",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Group Hub",
+            item: PAGE_URL,
+          },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
 
 export default function GroupsPage() {
   return (
     <>
+      <JsonLd />
       <Navbar />
       <main className="flex-1">
         <PageHeader
