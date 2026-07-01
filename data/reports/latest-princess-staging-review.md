@@ -1,22 +1,22 @@
 # Princess Staging Review
 
-Generated: 2026-05-16T20:19:18.324Z
+Generated: 2026-07-01T14:33:16.601Z
 
 Mode: review-only
 
-Source run: 2026-05-16T20-19-17-900Z
+Source run: 2026-07-01T14-32-31-635Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
 | Seed Princess records | 0 |
-| Staged Princess records | 1931 |
+| Staged Princess records | 1990 |
 | Exact matches | 0 |
 | Hidden seed matches | 0 |
-| New candidates | 1931 |
+| New candidates | 1990 |
 | Missing from staging | 0 |
-| Price check required | 1931 |
+| Price check required | 1990 |
 
 ## Recommended Inventory Candidates
 

@@ -203,7 +203,7 @@ async function main() {
     });
 
     if (!hasImporter) {
-      addFinding(warnings, "warning", `${provider}-importer`, "Weekly source is on the watchlist but has no automated importer yet.");
+      addFinding(info, "info", `${provider}-importer`, "Weekly source is on the watchlist but has no automated importer yet.");
     } else if (ingestAge == null) {
       addFinding(warnings, "warning", `${provider}-import-report`, "No readable latest staging import report was found.");
     } else if (ingestAge > maxIngestAgeDays) {
@@ -217,7 +217,7 @@ async function main() {
     }
 
     if (publicCount === 0) {
-      addFinding(warnings, "warning", `${provider}-coverage`, "Weekly source has no public sailings in the production bundle.");
+      addFinding(info, "info", `${provider}-coverage`, "Weekly source has no public sailings in the production bundle.");
     }
   }
 
@@ -236,6 +236,7 @@ async function main() {
       weeklyWatchlistSources: watchlistRows.length,
       blockers: blockers.length,
       warnings: warnings.length,
+      info: info.length,
     },
     byCruiseLine,
     watchlist: watchlistRows,
@@ -261,6 +262,7 @@ Production freshness threshold: ${maxPublicAgeDays} days.
 | Weekly watchlist sources | ${report.counts.weeklyWatchlistSources} |
 | Blockers | ${report.counts.blockers} |
 | Warnings | ${report.counts.warnings} |
+| Info | ${report.counts.info} |
 
 ## Public Bundle By Cruise Line
 
@@ -274,6 +276,9 @@ ${formatFindings(blockers)}
 ## Warnings
 
 ${formatFindings(warnings)}
+## Info
+
+${formatFindings(info)}
 ## Required Action
 
 If blockers are present, do not broaden in-app review prompts yet. Review the

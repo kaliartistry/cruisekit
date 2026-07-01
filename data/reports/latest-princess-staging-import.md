@@ -1,6 +1,6 @@
 # Princess Staging Import Report
 
-Generated: 2026-05-16T20:19:17.900Z
+Generated: 2026-07-01T14:32:31.636Z
 
 Mode: staging-only
 
@@ -12,10 +12,10 @@ Source: https://www.princess.com/cruise-search/?trade=all&resType=C
 | --- | ---: |
 | Source ships | 17 |
 | Source trades | 15 |
-| Source ports | 380 |
-| Source products | 872 |
-| Products sampled | 872 |
-| Staged sailings | 1931 |
+| Source ports | 379 |
+| Source products | 999 |
+| Products sampled | 999 |
+| Staged sailings | 1990 |
 | Schema errors | 0 |
 
 ## Price Observation
@@ -29,36 +29,36 @@ Princess' light public search feed does not expose trustworthy fare details, so 
 
 ## By Region
 
-- alaska: 352
-- asia: 264
-- california-coast: 44
-- caribbean: 484
-- hawaii: 40
-- mediterranean: 367
-- mexico: 70
-- other: 123
-- south-pacific: 151
-- transatlantic: 36
+- alaska: 260
+- asia: 249
+- california-coast: 39
+- caribbean: 421
+- hawaii: 34
+- mediterranean: 588
+- mexico: 66
+- other: 126
+- south-pacific: 150
+- transatlantic: 57
 
 ## By Ship
 
-- Caribbean Princess: 87
-- Coral Princess: 97
-- Crown Princess: 110
-- Diamond Princess: 153
-- Discovery Princess: 118
-- Emerald Princess: 119
-- Enchanted Princess: 121
-- Grand Princess: 110
-- Island Princess: 85
-- Majestic Princess: 54
-- Regal Princess: 184
-- Royal Princess: 98
-- Ruby Princess: 60
-- Sapphire Princess: 124
-- Sky Princess: 88
-- Star Princess: 119
-- Sun Princess: 204
+- Caribbean Princess: 140
+- Coral Princess: 90
+- Crown Princess: 21
+- Diamond Princess: 140
+- Discovery Princess: 109
+- Emerald Princess: 112
+- Enchanted Princess: 164
+- Grand Princess: 101
+- Island Princess: 75
+- Majestic Princess: 77
+- Regal Princess: 187
+- Royal Princess: 92
+- Ruby Princess: 57
+- Sapphire Princess: 121
+- Sky Princess: 107
+- Star Princess: 112
+- Sun Princess: 285
 
 ## Promotion Rules
 

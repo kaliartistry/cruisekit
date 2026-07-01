@@ -1,6 +1,6 @@
 # Royal Caribbean Staging Import Report
 
-Generated: 2026-05-16T20:07:05.695Z
+Generated: 2026-07-01T14:32:32.121Z
 
 Mode: staging-only
 
@@ -29,4 +29,4 @@ Source: https://www.royalcaribbean.com/cruises?destinationIds=CARIB
 
 - This importer never edits `data/seed/*.json`.
 - Promote only reviewed records after source links and current prices are verified.
-- If Royal Caribbean blocks automated access, use this report as the source-status record and retry from an allowed environment.
+- If Royal Caribbean blocks automated access, use this report as the source-status record and pursue affiliate, aggregator, or authorized B2B access instead of adding bypass logic.

@@ -165,9 +165,10 @@ ${failedReviews.length === 0 ? "- None\n" : failedReviews.map((result) => `- ${r
 `;
 
   await mkdir(reportDir, { recursive: true });
+  const normalizedMarkdown = markdown.replace(/\n+$/, "\n");
   await Promise.all([
     writeFile(resolve(reportDir, "latest-weekly-ingest.json"), `${JSON.stringify(report, null, 2)}\n`),
-    writeFile(resolve(reportDir, "latest-weekly-ingest.md"), markdown),
+    writeFile(resolve(reportDir, "latest-weekly-ingest.md"), normalizedMarkdown),
   ]);
 
   console.log(`Weekly ingest report: ${failed.length} provider warning(s), ${failedReviews.length} review warning(s).`);

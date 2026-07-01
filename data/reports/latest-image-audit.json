@@ -1,31 +1,390 @@
 {
-  "generatedAt": "2026-06-22T18:07:33.993Z",
+  "generatedAt": "2026-07-01T14:42:48.269Z",
   "counts": {
     "canonicalDeals": 0,
-    "mobileDeals": 143,
-    "checkedImages": 143
+    "mobileDeals": 238,
+    "checkedImages": 238
   },
   "imageUsage": {
-    "cozumel": 68,
-    "puerto-plata": 23,
-    "miami": 10,
-    "celebration-key": 8,
-    "great-stirrup-cay": 8,
-    "barcelona": 4,
-    "antigua": 3,
-    "st-lucia": 3,
-    "vancouver": 3,
-    "bermuda": 2,
-    "grand-cayman": 2,
-    "roatan": 2,
-    "grand-turk": 1,
-    "half-moon-cay": 1,
-    "juneau": 1,
-    "nassau": 1,
-    "seattle": 1,
-    "sicily-messina": 1,
-    "st-thomas": 1
+    "tampa": 44,
+    "new-orleans": 38,
+    "puerto-plata": 38,
+    "cozumel": 29,
+    "great-stirrup-cay": 16,
+    "galveston": 11,
+    "miami": 11,
+    "port-canaveral": 6,
+    "roatan": 4,
+    "santorini": 4,
+    "vancouver": 4,
+    "cabo-san-lucas": 3,
+    "grand-turk": 3,
+    "key-west": 3,
+    "barcelona": 2,
+    "dover": 2,
+    "dubrovnik": 2,
+    "ketchikan": 2,
+    "san-diego": 2,
+    "seattle": 2,
+    "sicily-messina": 2,
+    "amsterdam": 1,
+    "belize-city": 1,
+    "bermuda": 1,
+    "catalina-island": 1,
+    "falmouth": 1,
+    "halifax": 1,
+    "lisbon": 1,
+    "oslo": 1,
+    "rome-civitavecchia": 1,
+    "sitka": 1
   },
   "blockers": [],
-  "warnings": []
+  "warnings": [],
+  "info": [
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260822-22085",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260827-22086",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260831-22087",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260905-22088",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260910-22089",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260914-22090",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260919-22091",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260924-22092",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20260928-22093",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261017-22097",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261022-22098",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-vista-20261025-22164",
+      "message": "Image port-canaveral does not match expected destination image(s): amber-cove, celebration-key, cococay, half-moon-cay, la-romana, nassau, puerto-plata, samana, st-thomas"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261026-22099",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261031-22100",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261105-22101",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261109-22102",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261114-22103",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261119-22104",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261128-22106",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20261130-20907",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261203-22107",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20261205-20908",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-vista-20261206-22170",
+      "message": "Image port-canaveral does not match expected destination image(s): amber-cove, celebration-key, cococay, half-moon-cay, la-romana, nassau, puerto-plata, samana, st-thomas"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261207-22108",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20261212-22109",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-vista-20261212-22171",
+      "message": "Image port-canaveral does not match expected destination image(s): amber-cove, celebration-key, cococay, half-moon-cay, la-romana, nassau, puerto-plata, samana, st-thomas"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270104-22114",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270107-20915",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270109-22115",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270111-20916",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270114-22116",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270116-20917",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-vista-20270117-22176",
+      "message": "Image port-canaveral does not match expected destination image(s): amber-cove, celebration-key, cococay, half-moon-cay, la-romana, nassau, puerto-plata, samana, st-thomas"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270118-22117",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270121-20918",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270123-22118",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270125-20919",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270128-22119",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270130-20920",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-vista-20270131-22178",
+      "message": "Image port-canaveral does not match expected destination image(s): amber-cove, celebration-key, cococay, half-moon-cay, la-romana, nassau, puerto-plata, samana, st-thomas"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270201-22120",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270204-20921",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270215-22123",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270218-20924",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-valor-20270220-22124",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-breeze-20270222-24540",
+      "message": "Image galveston does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-dream-20270913-23057",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-dream-20270918-23058",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-dream-20270927-23060",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-firenze-20271114-25181",
+      "message": "Image port-canaveral does not match expected destination image(s): amber-cove, cococay, grand-turk, la-romana, nassau, puerto-plata, samana, st-thomas"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-dream-20280108-23082",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-dream-20280117-23084",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-dream-20280122-23085",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-dream-20280131-23087",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:carnival-carnival-dream-20280205-23088",
+      "message": "Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:holland-america-oosterdam-20260829-7-day-western-mediterranean",
+      "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:holland-america-oosterdam-20261024-11-day-mediterranean-splendor-greece-italy-and-provence",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:holland-america-rotterdam-20261031-10-day-western-caribbean-greater-antilles-belize-and-mexico",
+      "message": "Image belize-city does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-resilient-lady-20260716-4nkw",
+      "message": "Image key-west does not match expected destination image(s): bimini, freeport, miami, nassau"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-valiant-lady-20260726-10nwdf",
+      "message": "Image lisbon does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-resilient-lady-20260730-4nkw",
+      "message": "Image key-west does not match expected destination image(s): bimini, freeport, miami, nassau"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-brilliant-lady-20260911-8nvac",
+      "message": "Image catalina-island does not match expected destination image(s): vancouver"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-brilliant-lady-20260919-7nlax",
+      "message": "Image cabo-san-lucas does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-scarlet-lady-20260920-7nbra",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-brilliant-lady-20260926-7nlax",
+      "message": "Image cabo-san-lucas does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-scarlet-lady-20260927-7nbra",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-brilliant-lady-20261003-7nlax",
+      "message": "Image cabo-san-lucas does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-brilliant-lady-20261210-4nkw",
+      "message": "Image key-west does not match expected destination image(s): bimini, freeport, miami, nassau"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-scarlet-lady-20270523-7nbra",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    }
+  ]
 }

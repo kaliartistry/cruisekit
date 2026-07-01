@@ -1,6 +1,6 @@
 # Virgin Voyages Staging Import Report
 
-Generated: 2026-05-16T20:06:34.289Z
+Generated: 2026-07-01T14:33:12.075Z
 
 Mode: staging-only
 
@@ -16,8 +16,8 @@ Mode: staging-only
 
 | Metric | Value |
 | --- | ---: |
-| Min observed cabin price | 952 |
-| Max observed cabin price | 4884 |
+| Min observed cabin price | 1010 |
+| Max observed cabin price | 8290 |
 
 ## Warnings
 

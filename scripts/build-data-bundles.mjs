@@ -121,23 +121,36 @@ const PORT_IMAGE_SLUGS = new Set([
 ]);
 
 const PORT_IMAGE_ALIASES = {
+  "adriatic": "dubrovnik",
+  "arctic crossing": "oslo",
+  "athens": "santorini",
   "belize": "belize-city",
   "belize city": "belize-city",
+  "boston": "halifax",
   "cape liberty": "manhattan",
   "charlotte amalie": "st-thomas",
   "civitavecchia": "rome-civitavecchia",
+  "canada and new england": "halifax",
+  "croatia": "dubrovnik",
+  "dominican": "puerto-plata",
+  "eastern caribbean": "st-thomas",
   "ephesus": "kusadasi",
   "george town": "grand-cayman",
   "grand cayman": "grand-cayman",
   "great stirrup cay": "great-stirrup-cay",
+  "greek isles": "santorini",
   "half moon": "half-moon-cay",
   "half moon cay": "half-moon-cay",
   "icy strait": "icy-strait-point",
+  "istanbul": "dubrovnik",
   "katakolon": "olympia-katakolon",
   "kralendijk": "bonaire",
   "malta": "valletta",
   "messina": "sicily-messina",
+  "new brunswick": "halifax",
+  "new england": "halifax",
   "new york": "manhattan",
+  "north cape": "oslo",
   "oranjestad": "aruba",
   "orlando": "port-canaveral",
   "paris": "le-havre",
@@ -147,6 +160,7 @@ const PORT_IMAGE_ALIASES = {
   "relaxaway half moon cay": "half-moon-cay",
   "road town": "tortola",
   "rome": "rome-civitavecchia",
+  "rotterdam": "amsterdam",
   "saint kitts": "st-kitts",
   "saint lucia": "st-lucia",
   "san miguel de cozumel": "cozumel",
@@ -160,6 +174,8 @@ const PORT_IMAGE_ALIASES = {
   "st. lucia": "st-lucia",
   "st. maarten": "st-maarten",
   "st. thomas": "st-thomas",
+  "trieste": "dubrovnik",
+  "western caribbean": "cozumel",
   "willemstad": "curacao",
 };
 
@@ -300,11 +316,17 @@ function mobileImagePathForSailing(sailing) {
 }
 
 function imageSlugForSailing(sailing) {
+  const departure = normalizeImageText(sailing.departurePort);
+  const returning = normalizeImageText(sailing.returnPort);
+  const destinationPorts = sailing.itineraryPorts.filter((port) => {
+    const normalized = normalizeImageText(port);
+    return normalized && normalized !== departure && normalized !== returning;
+  });
   const candidates = [
-    ...sailing.itineraryPorts,
+    ...destinationPorts,
     sailing.sailingName,
-    sailing.departurePort,
     sailing.destinationRegion,
+    sailing.departurePort,
   ];
 
   for (const candidate of candidates) {
