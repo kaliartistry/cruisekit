@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-01T22:34:14.857Z",
+  "generatedAt": "2026-07-01T23:27:57.656Z",
   "currentDate": "2026-07-01",
   "mode": "production-data-freshness",
   "thresholds": {
     "maxPublicAgeDays": 7,
     "maxIngestAgeDays": 7
   },
-  "manifestGeneratedAt": "2026-07-01T22:34:14.736Z",
+  "manifestGeneratedAt": "2026-07-01T23:27:57.523Z",
   "counts": {
-    "publicSailings": 357,
+    "publicSailings": 388,
     "stalePublicSailings": 0,
     "weeklyWatchlistSources": 9,
     "blockers": 0,
@@ -32,7 +32,7 @@
     },
     {
       "cruiseLine": "norwegian",
-      "publicSailings": 186,
+      "publicSailings": 217,
       "stalePublicSailings": 0,
       "oldestLastVerified": "2026-07-01",
       "latestLastVerified": "2026-07-01"
@@ -69,9 +69,9 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T22:30:33.279Z",
-      "latestReviewGeneratedAt": "2026-07-01T22:31:17.642Z",
-      "publicSailings": 186
+      "latestImportGeneratedAt": "2026-07-01T23:20:36.930Z",
+      "latestReviewGeneratedAt": "2026-07-01T23:21:16.003Z",
+      "publicSailings": 217
     },
     {
       "cruiseLine": "celebrity",
@@ -87,8 +87,8 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T14:32:31.636Z",
-      "latestReviewGeneratedAt": "2026-07-01T14:33:16.601Z",
+      "latestImportGeneratedAt": "2026-07-01T23:21:16.023Z",
+      "latestReviewGeneratedAt": "2026-07-01T23:21:57.177Z",
       "publicSailings": 0
     },
     {
@@ -96,8 +96,8 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T22:32:46.362Z",
-      "latestReviewGeneratedAt": "2026-07-01T22:33:14.419Z",
+      "latestImportGeneratedAt": "2026-07-01T23:21:57.358Z",
+      "latestReviewGeneratedAt": "2026-07-01T23:22:32.059Z",
       "publicSailings": 20
     },
     {
@@ -105,7 +105,7 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": false,
-      "latestImportGeneratedAt": "2026-07-01T14:31:30.828Z",
+      "latestImportGeneratedAt": "2026-07-01T23:21:57.368Z",
       "latestReviewGeneratedAt": null,
       "publicSailings": 0
     },

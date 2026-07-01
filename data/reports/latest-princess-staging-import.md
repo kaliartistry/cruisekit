@@ -1,6 +1,6 @@
 # Princess Staging Import Report
 
-Generated: 2026-07-01T14:32:31.636Z
+Generated: 2026-07-01T23:21:16.023Z
 
 Mode: staging-only
 
@@ -13,9 +13,9 @@ Source: https://www.princess.com/cruise-search/?trade=all&resType=C
 | Source ships | 17 |
 | Source trades | 15 |
 | Source ports | 379 |
-| Source products | 999 |
-| Products sampled | 999 |
-| Staged sailings | 1990 |
+| Source products | 1021 |
+| Products sampled | 1021 |
+| Staged sailings | 2078 |
 | Schema errors | 0 |
 
 ## Price Observation
@@ -29,22 +29,26 @@ Princess' light public search feed does not expose trustworthy fare details, so 
 
 ## By Region
 
-- alaska: 260
+- alaska: 290
+- antarctica: 11
 - asia: 249
-- california-coast: 39
-- caribbean: 421
-- hawaii: 34
+- australia-new-zealand: 109
+- california-coast: 44
+- canada-new-england: 28
+- caribbean: 460
+- hawaii: 40
 - mediterranean: 588
-- mexico: 66
-- other: 126
-- south-pacific: 150
+- mexico: 70
+- other: 39
+- panama-canal: 51
+- south-pacific: 42
 - transatlantic: 57
 
 ## By Ship
 
 - Caribbean Princess: 140
 - Coral Princess: 90
-- Crown Princess: 21
+- Crown Princess: 109
 - Diamond Princess: 140
 - Discovery Princess: 109
 - Emerald Princess: 112

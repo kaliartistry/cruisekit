@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-07-01T22:33:14.419Z",
+  "generatedAt": "2026-07-01T23:22:32.059Z",
   "provider": "holland-america",
-  "sourceRunId": "2026-07-01T22-32-46-362Z",
+  "sourceRunId": "2026-07-01T23-21-57-358Z",
   "mode": "review-only",
   "matchKey": "cruiseLine + normalized shipName + departureDate",
   "thresholds": {
     "priceDeltaThreshold": 0.15,
-    "maxRecommendations": 40
+    "maxRecommendations": 20
   },
   "counts": {
     "seedRecords": 28,
-    "stagedRecords": 13,
+    "stagedRecords": 14,
     "exactMatches": 2,
     "priceChanges": 0,
-    "newCandidates": 11,
+    "newCandidates": 12,
     "missingRequiredFields": 0,
     "missingFromStaging": 26,
-    "recommendedNew": 11
+    "recommendedNew": 12
   },
   "recommendedNew": [
     {
@@ -92,21 +92,57 @@
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "holland-america-volendam-20261008-48-day-legendary-ultimate-mediterranean-and-atlantic-passage",
-      "shipName": "Volendam",
-      "sailingName": "48-Day Legendary Ultimate Mediterranean & Atlantic Passage",
-      "departureDate": "2026-10-08",
-      "returnDate": "2026-11-25",
-      "nights": 48,
-      "departurePort": "New York, New York, US",
-      "returnPort": "Fort Lauderdale, Florida, US",
-      "destinationRegion": "mediterranean",
+      "id": "holland-america-rotterdam-20260927-7-day-norwegian-fjords-with-nordfjord",
+      "shipName": "Rotterdam",
+      "sailingName": "7-Day Norwegian Fjords With Nordfjord",
+      "departureDate": "2026-09-27",
+      "returnDate": "2026-10-04",
+      "nights": 7,
+      "departurePort": "Rotterdam, The Netherlands",
+      "returnPort": "Rotterdam, The Netherlands",
+      "destinationRegion": "other",
       "itineraryPorts": [],
-      "startingPrice": 6724,
+      "startingPrice": 1109,
       "currency": "USD",
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
-      "directLink": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-08T00%3A00%3A00Z%20TO%202026-10-08T00%3A00%3A00Z%5D&ships:(Volendam)",
+      "directLink": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-09-27T00%3A00%3A00Z%20TO%202026-09-27T00%3A00%3A00Z%5D&ships:(Rotterdam)",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "holland-america-nieuw-statendam-20261031-7-day-norwegian-fjords-with-nordfjord",
+      "shipName": "Nieuw Statendam",
+      "sailingName": "7-Day Norwegian Fjords With Nordfjord",
+      "departureDate": "2026-10-31",
+      "returnDate": "2026-11-07",
+      "nights": 7,
+      "departurePort": "Rotterdam, The Netherlands",
+      "returnPort": "Rotterdam, The Netherlands",
+      "destinationRegion": "other",
+      "itineraryPorts": [],
+      "startingPrice": 1119,
+      "currency": "USD",
+      "priceBasis": "per-person-double-occupancy",
+      "taxesAndFeesIncluded": true,
+      "directLink": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-31T00%3A00%3A00Z%20TO%202026-10-31T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "holland-america-zaandam-20261008-7-day-mexican-riviera",
+      "shipName": "Zaandam",
+      "sailingName": "7-Day Mexican Riviera",
+      "departureDate": "2026-10-08",
+      "returnDate": "2026-10-15",
+      "nights": 7,
+      "departurePort": "San Diego, California, US",
+      "returnPort": "San Diego, California, US",
+      "destinationRegion": "other",
+      "itineraryPorts": [],
+      "startingPrice": 1144,
+      "currency": "USD",
+      "priceBasis": "per-person-double-occupancy",
+      "taxesAndFeesIncluded": true,
+      "directLink": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-08T00%3A00%3A00Z%20TO%202026-10-08T00%3A00%3A00Z%5D&ships:(Zaandam)",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
@@ -128,24 +164,6 @@
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "holland-america-eurodam-20261003-1-day-pacific-northwest-cruise",
-      "shipName": "Eurodam",
-      "sailingName": "1-Day Pacific Northwest Cruise",
-      "departureDate": "2026-10-03",
-      "returnDate": "2026-10-04",
-      "nights": 1,
-      "departurePort": "Seattle, Washington, US",
-      "returnPort": "Vancouver, B.C., CA",
-      "destinationRegion": "south-pacific",
-      "itineraryPorts": [],
-      "startingPrice": 139,
-      "currency": "USD",
-      "priceBasis": "per-person-double-occupancy",
-      "taxesAndFeesIncluded": true,
-      "directLink": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-03T00%3A00%3A00Z%20TO%202026-10-03T00%3A00%3A00Z%5D&ships:(Eurodam)",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
       "id": "holland-america-noordam-20261011-69-day-south-pacific-crossing-and-australia-circumnavigation",
       "shipName": "Noordam",
       "sailingName": "69-Day South Pacific Crossing & Australia Circumnavigation",
@@ -164,24 +182,6 @@
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "holland-america-westerdam-20261011-13-day-circle-japan",
-      "shipName": "Westerdam",
-      "sailingName": "13-Day Circle Japan",
-      "departureDate": "2026-10-11",
-      "returnDate": "2026-10-24",
-      "nights": 13,
-      "departurePort": "Tokyo, Japan",
-      "returnPort": "Tokyo, Japan",
-      "destinationRegion": "asia",
-      "itineraryPorts": [],
-      "startingPrice": 2604,
-      "currency": "USD",
-      "priceBasis": "per-person-double-occupancy",
-      "taxesAndFeesIncluded": true,
-      "directLink": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-11T00%3A00%3A00Z%20TO%202026-10-11T00%3A00%3A00Z%5D&ships:(Westerdam)",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
       "id": "holland-america-nieuw-statendam-20261002-14-day-canary-island-enchantment-with-portugal",
       "shipName": "Nieuw Statendam",
       "sailingName": "14-Day Canary Island Enchantment With Portugal",
@@ -197,6 +197,24 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-02T00%3A00%3A00Z%20TO%202026-10-02T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "holland-america-nieuw-statendam-20261031-21-day-norwegian-fjords-and-northern-lights-with-nordfjord",
+      "shipName": "Nieuw Statendam",
+      "sailingName": "21-Day Norwegian Fjords & Northern Lights With Nordfjord",
+      "departureDate": "2026-10-31",
+      "returnDate": "2026-11-21",
+      "nights": 21,
+      "departurePort": "Rotterdam, The Netherlands",
+      "returnPort": "Rotterdam, The Netherlands",
+      "destinationRegion": "other",
+      "itineraryPorts": [],
+      "startingPrice": 3164,
+      "currency": "USD",
+      "priceBasis": "per-person-double-occupancy",
+      "taxesAndFeesIncluded": true,
+      "directLink": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-31T00%3A00%3A00Z%20TO%202026-10-31T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)",
       "confidence": "itinerary_verified_price_check_required"
     },
     {

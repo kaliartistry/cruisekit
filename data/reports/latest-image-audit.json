@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-01T22:34:15.346Z",
+  "generatedAt": "2026-07-01T23:27:58.204Z",
   "counts": {
     "canonicalDeals": 0,
-    "mobileDeals": 357,
-    "checkedImages": 357
+    "mobileDeals": 388,
+    "checkedImages": 388
   },
   "imageUsage": {
     "tampa": 44,
@@ -12,16 +12,18 @@
     "santorini": 38,
     "cozumel": 29,
     "barcelona": 23,
+    "shanghai": 20,
     "dubrovnik": 19,
     "great-stirrup-cay": 16,
     "cartagena": 15,
     "galveston": 11,
+    "jeju": 11,
     "miami": 11,
     "sicily-messina": 10,
     "mykonos": 7,
     "rome-civitavecchia": 7,
     "port-canaveral": 6,
-    "shanghai": 5,
+    "busan": 4,
     "roatan": 4,
     "cabo-san-lucas": 3,
     "grand-turk": 3,
@@ -43,6 +45,7 @@
     "harvest-caye": 1,
     "juneau": 1,
     "oslo": 1,
+    "sydney": 1,
     "tenerife": 1
   },
   "blockers": [],

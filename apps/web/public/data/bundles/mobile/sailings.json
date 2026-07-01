@@ -11743,6 +11743,93 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261007-59513",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2026-10-07",
+    "returnDate": "2026-10-18",
+    "duration": 11,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo (Yokohama), Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Sendai (Ishinomaki), Japan",
+        "portSlug": "sendai-ishinomaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kanazawa, Japan",
+        "portSlug": "kanazawa-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Akita, Japan",
+        "portSlug": "akita-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Hakodate, Japan",
+        "portSlug": "hakodate-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Aomori, Japan",
+        "portSlug": "aomori-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Sakaiminato, Japan",
+        "portSlug": "sakaiminato-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "arrival",
+        "portName": "Seoul (Incheon), South Korea"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-dawn-20261011-58548",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Dawn",
@@ -12563,6 +12650,120 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261029-59515",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2026-10-29",
+    "returnDate": "2026-11-12",
+    "duration": 14,
+    "departurePort": "Tokyo, Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo, Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Sendai (Ishinomaki), Japan",
+        "portSlug": "sendai-ishinomaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kanazawa, Japan",
+        "portSlug": "kanazawa-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Sakata, Japan",
+        "portSlug": "sakata-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Akita, Japan",
+        "portSlug": "akita-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Aomori, Japan",
+        "portSlug": "aomori-japan",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "port",
+        "portName": "Busan, South Korea",
+        "portSlug": "busan-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 12,
+        "type": "port",
+        "portName": "Shimonoseki, Japan",
+        "portSlug": "shimonoseki-japan",
+        "isTender": false
+      },
+      {
+        "day": 13,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 14,
+        "type": "port",
+        "portName": "Hakodate, Japan",
+        "portSlug": "hakodate-japan",
+        "isTender": false
+      },
+      {
+        "day": 15,
+        "type": "arrival",
+        "portName": "Tokyo (Yokohama), Japan"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-viva-20261031-59198",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Viva",
@@ -12826,6 +13027,85 @@
         "day": 6,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20261112-59516",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2026-11-12",
+    "returnDate": "2026-11-21",
+    "duration": 9,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo (Yokohama), Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Kyoto (Kobe), Japan",
+        "portSlug": "kyoto-kobe-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Seoul (Incheon), South Korea"
       }
     ]
   },
@@ -13121,6 +13401,85 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20261121-59517",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2026-11-21",
+    "returnDate": "2026-11-30",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seoul (Incheon), South Korea"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Tokyo (Yokohama), Japan"
       }
     ]
   },
@@ -13923,6 +14282,102 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261209-62040",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2026-12-09",
+    "returnDate": "2026-12-23",
+    "duration": 14,
+    "departurePort": "Hong Kong, China",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Hong Kong, China"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Boracay, Philippines",
+        "portSlug": "boracay-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "sea"
+      },
+      {
+        "day": 15,
+        "type": "arrival",
+        "portName": "Singapore, Singapore"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20261211-59225",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Escape",
@@ -14218,6 +14673,84 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261223-62038",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2026-12-23",
+    "returnDate": "2027-01-03",
+    "duration": 11,
+    "departurePort": "Singapore, Singapore",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Singapore, Singapore"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hanoi (Ha Long Bay), Vietnam",
+        "portSlug": "hanoi-ha-long-bay-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Chan May, Vietnam",
+        "portSlug": "chan-may-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "arrival",
+        "portName": "Hong Kong, China"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-breakaway-20270103-59085",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Breakaway",
@@ -14273,6 +14806,105 @@
         "day": 8,
         "type": "arrival",
         "portName": "New Orleans, Louisiana"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20270103-62041",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-01-03",
+    "returnDate": "2027-01-17",
+    "duration": 14,
+    "departurePort": "Hong Kong, China",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Hong Kong, China"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kota Kinabalu, Malaysia",
+        "portSlug": "kota-kinabalu-malaysia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Boracay, Philippines",
+        "portSlug": "boracay-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "sea"
+      },
+      {
+        "day": 15,
+        "type": "arrival",
+        "portName": "Singapore, Singapore"
       }
     ]
   },
@@ -14558,6 +15190,84 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270117-62039",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-01-17",
+    "returnDate": "2027-01-28",
+    "duration": 11,
+    "departurePort": "Singapore, Singapore",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Singapore, Singapore"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hanoi (Ha Long Bay), Vietnam",
+        "portSlug": "hanoi-ha-long-bay-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Chan May, Vietnam",
+        "portSlug": "chan-may-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "sea"
+      },
+      {
+        "day": 8,
+        "type": "sea"
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "arrival",
+        "portName": "Hong Kong, China"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270120-59666",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Getaway",
@@ -14717,6 +15427,94 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20270128-59523",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-01-28",
+    "returnDate": "2027-02-09",
+    "duration": 12,
+    "departurePort": "Hong Kong, China",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Hong Kong, China"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kota Kinabalu, Malaysia",
+        "portSlug": "kota-kinabalu-malaysia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "arrival",
+        "portName": "Singapore, Singapore"
       }
     ]
   },
@@ -14929,6 +15727,98 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270209-59524",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-02-09",
+    "returnDate": "2027-02-22",
+    "duration": 13,
+    "departurePort": "Singapore, Singapore",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Singapore, Singapore"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kota Kinabalu, Malaysia",
+        "portSlug": "kota-kinabalu-malaysia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "arrival",
+        "portName": "Hong Kong, China"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270212-59669",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Getaway",
@@ -15123,6 +16013,96 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270222-59525",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-02-22",
+    "returnDate": "2027-03-05",
+    "duration": 11,
+    "departurePort": "Hong Kong, China",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Hong Kong, China"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Taipei (Keelung), Taiwan",
+        "portSlug": "taipei-keelung-taiwan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Kaohsiung, Taiwan",
+        "portSlug": "kaohsiung-taiwan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Ishigaki, Japan",
+        "portSlug": "ishigaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kyoto (Kobe), Japan",
+        "portSlug": "kyoto-kobe-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "arrival",
+        "portName": "Tokyo, Japan"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270226-59671",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Getaway",
@@ -15227,6 +16207,85 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270305-59526",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-03-05",
+    "returnDate": "2027-03-14",
+    "duration": 9,
+    "departurePort": "Tokyo, Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo, Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Seoul (Incheon), South Korea"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270312-59673",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Getaway",
@@ -15272,6 +16331,85 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270314-59527",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-03-14",
+    "returnDate": "2027-03-23",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seoul (Incheon), South Korea"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Beppu, Japan",
+        "portSlug": "beppu-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Shimonoseki, Japan",
+        "portSlug": "shimonoseki-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Tokyo (Yokohama), Japan"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270317-59674",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Getaway",
@@ -15313,6 +16451,85 @@
         "day": 6,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20270323-59528",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-03-23",
+    "returnDate": "2027-04-01",
+    "duration": 9,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo (Yokohama), Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Tokushima, Japan",
+        "portSlug": "tokushima-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Seoul (Incheon), South Korea"
       }
     ]
   },
@@ -15466,6 +16683,85 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270401-59529",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-04-01",
+    "returnDate": "2027-04-10",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seoul (Incheon), South Korea"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Beppu, Japan",
+        "portSlug": "beppu-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Kyoto (Kobe), Japan",
+        "portSlug": "kyoto-kobe-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Tokyo (Yokohama), Japan"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-bliss-20270409-60261",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Bliss",
@@ -15581,6 +16877,117 @@
         "day": 20,
         "type": "arrival",
         "portName": "San Francisco, California"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20270410-59530",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-04-10",
+    "returnDate": "2027-04-24",
+    "duration": 14,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo (Yokohama), Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Sendai (Ishinomaki), Japan",
+        "portSlug": "sendai-ishinomaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kanazawa, Japan",
+        "portSlug": "kanazawa-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Akita, Japan",
+        "portSlug": "akita-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Busan, South Korea",
+        "portSlug": "busan-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Hakodate, Japan",
+        "portSlug": "hakodate-japan",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "port",
+        "portName": "Beppu, Japan",
+        "portSlug": "beppu-japan",
+        "isTender": false
+      },
+      {
+        "day": 12,
+        "type": "port",
+        "portName": "Kyoto (Kobe), Japan",
+        "portSlug": "kyoto-kobe-japan",
+        "isTender": false
+      },
+      {
+        "day": 13,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 14,
+        "type": "sea"
+      },
+      {
+        "day": 15,
+        "type": "arrival",
+        "portName": "Tokyo (Yokohama), Japan"
       }
     ]
   },
@@ -17374,6 +18781,93 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20271013-61739",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-10-13",
+    "returnDate": "2027-10-24",
+    "duration": 11,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo (Yokohama), Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Sendai (Ishinomaki), Japan",
+        "portSlug": "sendai-ishinomaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kanazawa, Japan",
+        "portSlug": "kanazawa-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Akita, Japan",
+        "portSlug": "akita-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Maizuru, Japan",
+        "portSlug": "maizuru-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Hakodate, Japan",
+        "portSlug": "hakodate-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kyoto (Kobe), Japan",
+        "portSlug": "kyoto-kobe-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "arrival",
+        "portName": "Seoul (Incheon), South Korea"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-viva-20271013-61140",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Viva",
@@ -17498,6 +18992,207 @@
         "day": 6,
         "type": "arrival",
         "portName": "Miami, Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20271024-61740",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-10-24",
+    "returnDate": "2027-11-04",
+    "duration": 11,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seoul (Incheon), South Korea"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Akita, Japan",
+        "portSlug": "akita-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Niigata, Japan",
+        "portSlug": "niigata-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Hakodate, Japan",
+        "portSlug": "hakodate-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Aomori, Japan",
+        "portSlug": "aomori-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Sakaiminato, Japan",
+        "portSlug": "sakaiminato-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "arrival",
+        "portName": "Tokyo, Japan"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20271104-61741",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-11-04",
+    "returnDate": "2027-11-18",
+    "duration": 14,
+    "departurePort": "Tokyo, Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo, Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Sendai (Ishinomaki), Japan",
+        "portSlug": "sendai-ishinomaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kanazawa, Japan",
+        "portSlug": "kanazawa-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Akita, Japan",
+        "portSlug": "akita-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Niigata, Japan",
+        "portSlug": "niigata-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Aomori, Japan",
+        "portSlug": "aomori-japan",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "port",
+        "portName": "Busan, South Korea",
+        "portSlug": "busan-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 12,
+        "type": "port",
+        "portName": "Shimonoseki, Japan",
+        "portSlug": "shimonoseki-japan",
+        "isTender": false
+      },
+      {
+        "day": 13,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 14,
+        "type": "port",
+        "portName": "Hakodate, Japan",
+        "portSlug": "hakodate-japan",
+        "isTender": false
+      },
+      {
+        "day": 15,
+        "type": "arrival",
+        "portName": "Tokyo, Japan"
       }
     ]
   },
@@ -17634,6 +19329,96 @@
         "day": 8,
         "type": "arrival",
         "portName": "Orlando (Port Canaveral), Florida"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20271118-61742",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-11-18",
+    "returnDate": "2027-11-29",
+    "duration": 11,
+    "departurePort": "Tokyo, Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo, Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Sasebo, Japan",
+        "portSlug": "sasebo-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Shimonoseki, Japan",
+        "portSlug": "shimonoseki-japan",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "arrival",
+        "portName": "Tokyo, Japan"
       }
     ]
   },
@@ -18425,6 +20210,98 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20271221-61745",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2027-12-21",
+    "returnDate": "2028-01-03",
+    "duration": 13,
+    "departurePort": "Singapore, Singapore",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Singapore, Singapore"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kota Kinabalu, Malaysia",
+        "portSlug": "kota-kinabalu-malaysia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "arrival",
+        "portName": "Hong Kong, China"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-star-20280102-62363",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Star",
@@ -18515,6 +20392,94 @@
         "day": 16,
         "type": "arrival",
         "portName": "Buenos Aires, Argentina"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280103-61746",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-01-03",
+    "returnDate": "2028-01-15",
+    "duration": 12,
+    "departurePort": "Hong Kong, China",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Hong Kong, China"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kota Kinabalu, Malaysia",
+        "portSlug": "kota-kinabalu-malaysia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "arrival",
+        "portName": "Singapore, Singapore"
       }
     ]
   },
@@ -18637,6 +20602,98 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20280115-61747",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-01-15",
+    "returnDate": "2028-01-28",
+    "duration": 13,
+    "departurePort": "Singapore, Singapore",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Singapore, Singapore"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kota Kinabalu, Malaysia",
+        "portSlug": "kota-kinabalu-malaysia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "arrival",
+        "portName": "Hong Kong, China"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-star-20280117-62364",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Star",
@@ -18731,6 +20788,94 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20280128-61748",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-01-28",
+    "returnDate": "2028-02-09",
+    "duration": 12,
+    "departurePort": "Hong Kong, China",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Hong Kong, China"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kota Kinabalu, Malaysia",
+        "portSlug": "kota-kinabalu-malaysia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "arrival",
+        "portName": "Singapore, Singapore"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-star-20280201-62365",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Star",
@@ -18821,6 +20966,220 @@
         "day": 16,
         "type": "arrival",
         "portName": "Buenos Aires, Argentina"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280209-61749",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-02-09",
+    "returnDate": "2028-02-22",
+    "duration": 13,
+    "departurePort": "Singapore, Singapore",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Singapore, Singapore"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Bangkok (Laem Chabang), Thailand",
+        "portSlug": "bangkok-laem-chabang-thailand",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kota Kinabalu, Malaysia",
+        "portSlug": "kota-kinabalu-malaysia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Coron, Philippines",
+        "portSlug": "coron-philippines",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Puerto Princesa, Philippines",
+        "portSlug": "puerto-princesa-philippines",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Muara, Brunei Darussalam",
+        "portSlug": "muara-brunei-darussalam",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Ko Samui, Thailand",
+        "portSlug": "ko-samui-thailand",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Ho Chi Minh City (Phu My), Vietnam",
+        "portSlug": "ho-chi-minh-city-phu-my-vietnam",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "sea"
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "arrival",
+        "portName": "Hong Kong, China"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-spirit-20280209-61707",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Spirit",
+    "shipId": "norwegian-spirit",
+    "departureDate": "2028-02-09",
+    "returnDate": "2028-02-28",
+    "duration": 19,
+    "departurePort": "Singapore, Singapore",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Singapore, Singapore"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Burnie (Tasmania), Australia",
+        "portSlug": "burnie-tasmania-australia",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kangaroo Island, Australia",
+        "portSlug": "kangaroo-island-australia",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Melbourne, Australia",
+        "portSlug": "melbourne-australia",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Adelaide, Australia",
+        "portSlug": "adelaide-australia",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Surabaya, Indonesia",
+        "portSlug": "surabaya-indonesia",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Eden, Australia",
+        "portSlug": "eden-australia",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Bali (Benoa), Indonesia",
+        "portSlug": "bali-benoa-indonesia",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Busselton, Australia",
+        "portSlug": "busselton-australia",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Fremantle, Australia",
+        "portSlug": "fremantle-australia",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "sea"
+      },
+      {
+        "day": 12,
+        "type": "sea"
+      },
+      {
+        "day": 13,
+        "type": "sea"
+      },
+      {
+        "day": 14,
+        "type": "sea"
+      },
+      {
+        "day": 15,
+        "type": "sea"
+      },
+      {
+        "day": 16,
+        "type": "sea"
+      },
+      {
+        "day": 17,
+        "type": "sea"
+      },
+      {
+        "day": 18,
+        "type": "sea"
+      },
+      {
+        "day": 19,
+        "type": "sea"
+      },
+      {
+        "day": 20,
+        "type": "arrival",
+        "portName": "Sydney, Australia"
       }
     ]
   },
@@ -19103,6 +21462,164 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20280304-61751",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-03-04",
+    "returnDate": "2028-03-13",
+    "duration": 9,
+    "departurePort": "Tokyo, Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo, Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Seoul (Incheon), South Korea"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280313-61752",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-03-13",
+    "returnDate": "2028-03-22",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seoul (Incheon), South Korea"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Osaka (Wakayama), Japan",
+        "portSlug": "osaka-wakayama-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Hakata (Fukuoka), Japan",
+        "portSlug": "hakata-fukuoka-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Matsuyama, Japan",
+        "portSlug": "matsuyama-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Tokyo (Yokohama), Japan"
+      }
+    ]
+  },
+  {
     "id": "norwegian-norwegian-star-20280317-62370",
     "cruiseLineId": "norwegian",
     "shipName": "Norwegian Star",
@@ -19190,6 +21707,275 @@
         "day": 16,
         "type": "arrival",
         "portName": "Lisbon, Portugal"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280322-61753",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-03-22",
+    "returnDate": "2028-03-31",
+    "duration": 9,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo (Yokohama), Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Osaka (Wakayama), Japan",
+        "portSlug": "osaka-wakayama-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Kyoto (Kobe), Japan",
+        "portSlug": "kyoto-kobe-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "sea"
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Seoul (Incheon), South Korea"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280331-61754",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-03-31",
+    "returnDate": "2028-04-09",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Seoul (Incheon), South Korea"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Jeju, South Korea",
+        "portSlug": "jeju-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Tokushima, Japan",
+        "portSlug": "tokushima-japan",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Beppu, Japan",
+        "portSlug": "beppu-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "arrival",
+        "portName": "Tokyo (Yokohama), Japan"
+      }
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280409-61755",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "shipId": "norwegian-jade",
+    "departureDate": "2028-04-09",
+    "returnDate": "2028-04-23",
+    "duration": 14,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "region": "asia",
+    "itinerary": [
+      {
+        "day": 1,
+        "type": "departure",
+        "portName": "Tokyo (Yokohama), Japan"
+      },
+      {
+        "day": 2,
+        "type": "port",
+        "portName": "Sendai (Ishinomaki), Japan",
+        "portSlug": "sendai-ishinomaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 3,
+        "type": "port",
+        "portName": "Kanazawa, Japan",
+        "portSlug": "kanazawa-japan",
+        "isTender": false
+      },
+      {
+        "day": 4,
+        "type": "port",
+        "portName": "Hiroshima, Japan",
+        "portSlug": "hiroshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 5,
+        "type": "port",
+        "portName": "Akita, Japan",
+        "portSlug": "akita-japan",
+        "isTender": false
+      },
+      {
+        "day": 6,
+        "type": "port",
+        "portName": "Nagasaki, Japan",
+        "portSlug": "nagasaki-japan",
+        "isTender": false
+      },
+      {
+        "day": 7,
+        "type": "port",
+        "portName": "Busan, South Korea",
+        "portSlug": "busan-south-korea",
+        "isTender": false
+      },
+      {
+        "day": 8,
+        "type": "port",
+        "portName": "Mount Fuji (Shimizu), Japan",
+        "portSlug": "mount-fuji-shimizu-japan",
+        "isTender": false
+      },
+      {
+        "day": 9,
+        "type": "port",
+        "portName": "Nagoya, Japan",
+        "portSlug": "nagoya-japan",
+        "isTender": false
+      },
+      {
+        "day": 10,
+        "type": "port",
+        "portName": "Kyoto (Osaka), Japan",
+        "portSlug": "kyoto-osaka-japan",
+        "isTender": false
+      },
+      {
+        "day": 11,
+        "type": "port",
+        "portName": "Kagoshima, Japan",
+        "portSlug": "kagoshima-japan",
+        "isTender": false
+      },
+      {
+        "day": 12,
+        "type": "port",
+        "portName": "Sakaiminato, Japan",
+        "portSlug": "sakaiminato-japan",
+        "isTender": false
+      },
+      {
+        "day": 13,
+        "type": "port",
+        "portName": "Kochi, Japan",
+        "portSlug": "kochi-japan",
+        "isTender": false
+      },
+      {
+        "day": 14,
+        "type": "port",
+        "portName": "Hakodate, Japan",
+        "portSlug": "hakodate-japan",
+        "isTender": false
+      },
+      {
+        "day": 15,
+        "type": "arrival",
+        "portName": "Tokyo (Yokohama), Japan"
       }
     ]
   },
