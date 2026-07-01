@@ -13,6 +13,12 @@ Each importer should:
 
 Promotion to public data happens in a separate review step.
 
+The scheduled weekly job runs all provider importers in report-only mode, runs
+the available staging-review scripts, rebuilds bundles from approved seeds, and
+then runs `pnpm run data:freshness`. Public sailing fare checks older than 7
+days block the weekly freshness gate and require Kali approval before refreshed
+price/link/date changes are promoted into `data/seed/*.json`.
+
 ## Current providers
 
 - `viator`: handled by `scripts/update-viator-products.mjs` because Viator
