@@ -1,0 +1,2165 @@
+{
+  "generatedAt": "2026-07-01T14:41:59.438Z",
+  "mode": "apply",
+  "currentDate": "2026-07-01",
+  "thresholds": {
+    "maxPublicAgeDays": 7,
+    "maxPriceDelta": 0.5
+  },
+  "counts": {
+    "seedBefore": 283,
+    "seedAfter": 283,
+    "refreshed": 238,
+    "priceChanges": 0,
+    "hidden": 0,
+    "ambiguousMatches": 0,
+    "missingReviewReports": 0
+  },
+  "refreshed": [
+    {
+      "provider": "carnival",
+      "id": "carnival-celebration-20260802",
+      "shipName": "Carnival Celebration",
+      "departureDate": "2026-08-02",
+      "previousPrice": 996,
+      "currentPrice": 996,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20260809-21623",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-08-09",
+      "previousPrice": 364,
+      "currentPrice": 364,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260822-22085",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-08-22",
+      "previousPrice": 395,
+      "currentPrice": 395,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20260823-21626",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-08-23",
+      "previousPrice": 314,
+      "currentPrice": 314,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20260827-21627",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-08-27",
+      "previousPrice": 362,
+      "currentPrice": 362,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260827-22086",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-08-27",
+      "previousPrice": 367,
+      "currentPrice": 367,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-magic-20260830-21895",
+      "shipName": "Carnival Magic",
+      "departureDate": "2026-08-30",
+      "previousPrice": 409,
+      "currentPrice": 409,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-sunrise-20260831-22008",
+      "shipName": "Carnival Sunrise",
+      "departureDate": "2026-08-31",
+      "previousPrice": 348,
+      "currentPrice": 348,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260831-22087",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-08-31",
+      "previousPrice": 352,
+      "currentPrice": 352,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260905-22088",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-09-05",
+      "previousPrice": 387,
+      "currentPrice": 387,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20260906-21629",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-09-06",
+      "previousPrice": 294,
+      "currentPrice": 294,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260910-22089",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-09-10",
+      "previousPrice": 339,
+      "currentPrice": 339,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-magic-20260913-21897",
+      "shipName": "Carnival Magic",
+      "departureDate": "2026-09-13",
+      "previousPrice": 404,
+      "currentPrice": 404,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260914-22090",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-09-14",
+      "previousPrice": 362,
+      "currentPrice": 362,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260919-22091",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-09-19",
+      "previousPrice": 362,
+      "currentPrice": 362,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-paradise-20260920",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-09-20",
+      "previousPrice": 314,
+      "currentPrice": 314,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20260924-21633",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-09-24",
+      "previousPrice": 312,
+      "currentPrice": 312,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260924-22092",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-09-24",
+      "previousPrice": 374,
+      "currentPrice": 374,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-magic-20260927-21899",
+      "shipName": "Carnival Magic",
+      "departureDate": "2026-09-27",
+      "previousPrice": 395,
+      "currentPrice": 395,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20260928-22093",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-09-28",
+      "previousPrice": 353,
+      "currentPrice": 353,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261004-21635",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-10-04",
+      "previousPrice": 307,
+      "currentPrice": 307,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261008-21636",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-10-08",
+      "previousPrice": 344,
+      "currentPrice": 344,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261017-22097",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-10-17",
+      "previousPrice": 344,
+      "currentPrice": 344,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261022-21639",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-10-22",
+      "previousPrice": 304,
+      "currentPrice": 304,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261022-22098",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-10-22",
+      "previousPrice": 371,
+      "currentPrice": 371,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-magic-20261025-21903",
+      "shipName": "Carnival Magic",
+      "departureDate": "2026-10-25",
+      "previousPrice": 427,
+      "currentPrice": 427,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-vista-20261025-22164",
+      "shipName": "Carnival Vista",
+      "departureDate": "2026-10-25",
+      "previousPrice": 396,
+      "currentPrice": 396,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261026-22099",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-10-26",
+      "previousPrice": 354,
+      "currentPrice": 354,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261031-22100",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-10-31",
+      "previousPrice": 354,
+      "currentPrice": 354,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-paradise-20261101",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-11-01",
+      "previousPrice": 287,
+      "currentPrice": 287,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261105-21642",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-11-05",
+      "previousPrice": 324,
+      "currentPrice": 324,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261105-22101",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-11-05",
+      "previousPrice": 376,
+      "currentPrice": 376,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261109-22102",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-11-09",
+      "previousPrice": 359,
+      "currentPrice": 359,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261114-22103",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-11-14",
+      "previousPrice": 354,
+      "currentPrice": 354,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261115-21644",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-11-15",
+      "previousPrice": 286,
+      "currentPrice": 286,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261119-21645",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-11-19",
+      "previousPrice": 305,
+      "currentPrice": 305,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261119-22104",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-11-19",
+      "previousPrice": 386,
+      "currentPrice": 386,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261128-21647",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-11-28",
+      "previousPrice": 414,
+      "currentPrice": 414,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261128-22106",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-11-28",
+      "previousPrice": 394,
+      "currentPrice": 394,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20261130-20907",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2026-11-30",
+      "previousPrice": 402,
+      "currentPrice": 402,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261203-21648",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-12-03",
+      "previousPrice": 304,
+      "currentPrice": 304,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261203-22107",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-12-03",
+      "previousPrice": 341,
+      "currentPrice": 341,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20261205-20908",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2026-12-05",
+      "previousPrice": 442,
+      "currentPrice": 442,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-celebration-20261206",
+      "shipName": "Carnival Celebration",
+      "departureDate": "2026-12-06",
+      "previousPrice": 456,
+      "currentPrice": 456,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-vista-20261206-22170",
+      "shipName": "Carnival Vista",
+      "departureDate": "2026-12-06",
+      "previousPrice": 377,
+      "currentPrice": 377,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261207-22108",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-12-07",
+      "previousPrice": 364,
+      "currentPrice": 364,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-magic-20261212-21910",
+      "shipName": "Carnival Magic",
+      "departureDate": "2026-12-12",
+      "previousPrice": 413,
+      "currentPrice": 413,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261212-21650",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-12-12",
+      "previousPrice": 384,
+      "currentPrice": 384,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20261212-22109",
+      "shipName": "Carnival Valor",
+      "departureDate": "2026-12-12",
+      "previousPrice": 374,
+      "currentPrice": 374,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-vista-20261212-22171",
+      "shipName": "Carnival Vista",
+      "departureDate": "2026-12-12",
+      "previousPrice": 385,
+      "currentPrice": 385,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20261217-21651",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2026-12-17",
+      "previousPrice": 364,
+      "currentPrice": 364,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-magic-20270103-21913",
+      "shipName": "Carnival Magic",
+      "departureDate": "2027-01-03",
+      "previousPrice": 377,
+      "currentPrice": 377,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270104-21655",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-01-04",
+      "previousPrice": 350,
+      "currentPrice": 350,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270104-22114",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-01-04",
+      "previousPrice": 349,
+      "currentPrice": 349,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270107-20915",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-01-07",
+      "previousPrice": 356,
+      "currentPrice": 356,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270109-21656",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-01-09",
+      "previousPrice": 345,
+      "currentPrice": 345,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270109-22115",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-01-09",
+      "previousPrice": 309,
+      "currentPrice": 309,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270111-20916",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-01-11",
+      "previousPrice": 363,
+      "currentPrice": 363,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270114-21657",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-01-14",
+      "previousPrice": 305,
+      "currentPrice": 305,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270114-22116",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-01-14",
+      "previousPrice": 376,
+      "currentPrice": 376,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270116-20917",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-01-16",
+      "previousPrice": 353,
+      "currentPrice": 353,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-magic-20270117-21915",
+      "shipName": "Carnival Magic",
+      "departureDate": "2027-01-17",
+      "previousPrice": 395,
+      "currentPrice": 395,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-vista-20270117-22176",
+      "shipName": "Carnival Vista",
+      "departureDate": "2027-01-17",
+      "previousPrice": 387,
+      "currentPrice": 387,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270118-22117",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-01-18",
+      "previousPrice": 334,
+      "currentPrice": 334,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270121-20918",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-01-21",
+      "previousPrice": 346,
+      "currentPrice": 346,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270123-22118",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-01-23",
+      "previousPrice": 334,
+      "currentPrice": 334,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270125-20919",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-01-25",
+      "previousPrice": 353,
+      "currentPrice": 353,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270128-21660",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-01-28",
+      "previousPrice": 305,
+      "currentPrice": 305,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270128-22119",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-01-28",
+      "previousPrice": 361,
+      "currentPrice": 361,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270130-20920",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-01-30",
+      "previousPrice": 353,
+      "currentPrice": 353,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-magic-20270131-21917",
+      "shipName": "Carnival Magic",
+      "departureDate": "2027-01-31",
+      "previousPrice": 377,
+      "currentPrice": 377,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-vista-20270131-22178",
+      "shipName": "Carnival Vista",
+      "departureDate": "2027-01-31",
+      "previousPrice": 387,
+      "currentPrice": 387,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270201-21661",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-02-01",
+      "previousPrice": 370,
+      "currentPrice": 370,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270201-22120",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-02-01",
+      "previousPrice": 364,
+      "currentPrice": 364,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270204-20921",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-02-04",
+      "previousPrice": 356,
+      "currentPrice": 356,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270215-22123",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-02-15",
+      "previousPrice": 394,
+      "currentPrice": 394,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270218-20924",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-02-18",
+      "previousPrice": 376,
+      "currentPrice": 376,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-valor-20270220-22124",
+      "shipName": "Carnival Valor",
+      "departureDate": "2027-02-20",
+      "previousPrice": 364,
+      "currentPrice": 364,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-breeze-20270222-24540",
+      "shipName": "Carnival Breeze",
+      "departureDate": "2027-02-22",
+      "previousPrice": 351,
+      "currentPrice": 351,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270408-21675",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-04-08",
+      "previousPrice": 395,
+      "currentPrice": 395,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270422-21678",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-04-22",
+      "previousPrice": 395,
+      "currentPrice": 395,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270808-24323",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-08-08",
+      "previousPrice": 392,
+      "currentPrice": 392,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270822-24326",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-08-22",
+      "previousPrice": 392,
+      "currentPrice": 392,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270826-24327",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-08-26",
+      "previousPrice": 379,
+      "currentPrice": 379,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270905-24329",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-09-05",
+      "previousPrice": 302,
+      "currentPrice": 302,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270909-24330",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-09-09",
+      "previousPrice": 349,
+      "currentPrice": 349,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-dream-20270913-23057",
+      "shipName": "Carnival Dream",
+      "departureDate": "2027-09-13",
+      "previousPrice": 389,
+      "currentPrice": 389,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-dream-20270918-23058",
+      "shipName": "Carnival Dream",
+      "departureDate": "2027-09-18",
+      "previousPrice": 389,
+      "currentPrice": 389,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270919-24332",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-09-19",
+      "previousPrice": 302,
+      "currentPrice": 302,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20270923-24333",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-09-23",
+      "previousPrice": 349,
+      "currentPrice": 349,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-dream-20270927-23060",
+      "shipName": "Carnival Dream",
+      "departureDate": "2027-09-27",
+      "previousPrice": 389,
+      "currentPrice": 389,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271003-24335",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-10-03",
+      "previousPrice": 314,
+      "currentPrice": 314,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271007-24336",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-10-07",
+      "previousPrice": 361,
+      "currentPrice": 361,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271017-24338",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-10-17",
+      "previousPrice": 314,
+      "currentPrice": 314,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271021-24339",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-10-21",
+      "previousPrice": 361,
+      "currentPrice": 361,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271031-24341",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-10-31",
+      "previousPrice": 314,
+      "currentPrice": 314,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271104-24342",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-11-04",
+      "previousPrice": 361,
+      "currentPrice": 361,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-firenze-20271114-25181",
+      "shipName": "Carnival Firenze",
+      "departureDate": "2027-11-14",
+      "previousPrice": 379,
+      "currentPrice": 379,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271114-24344",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-11-14",
+      "previousPrice": 304,
+      "currentPrice": 304,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271118-24345",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-11-18",
+      "previousPrice": 351,
+      "currentPrice": 351,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20271202-24348",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2027-12-02",
+      "previousPrice": 361,
+      "currentPrice": 361,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-dream-20280108-23082",
+      "shipName": "Carnival Dream",
+      "departureDate": "2028-01-08",
+      "previousPrice": 379,
+      "currentPrice": 379,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20280113-24357",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2028-01-13",
+      "previousPrice": 342,
+      "currentPrice": 342,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-dream-20280117-23084",
+      "shipName": "Carnival Dream",
+      "departureDate": "2028-01-17",
+      "previousPrice": 379,
+      "currentPrice": 379,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-dream-20280122-23085",
+      "shipName": "Carnival Dream",
+      "departureDate": "2028-01-22",
+      "previousPrice": 379,
+      "currentPrice": 379,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20280127-24360",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2028-01-27",
+      "previousPrice": 342,
+      "currentPrice": 342,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-dream-20280131-23087",
+      "shipName": "Carnival Dream",
+      "departureDate": "2028-01-31",
+      "previousPrice": 379,
+      "currentPrice": 379,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-dream-20280205-23088",
+      "shipName": "Carnival Dream",
+      "departureDate": "2028-02-05",
+      "previousPrice": 384,
+      "currentPrice": 384,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20280210-24363",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2028-02-10",
+      "previousPrice": 352,
+      "currentPrice": 352,
+      "priceChanged": false
+    },
+    {
+      "provider": "carnival",
+      "id": "carnival-carnival-paradise-20280224-24366",
+      "shipName": "Carnival Paradise",
+      "departureDate": "2028-02-24",
+      "previousPrice": 382,
+      "currentPrice": 382,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-oosterdam-20260705-7-day-mediterranean-splendor-corfu-sicily-and-spain",
+      "shipName": "Oosterdam",
+      "departureDate": "2026-07-05",
+      "previousPrice": 1099,
+      "currentPrice": 1099,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-westerdam-20260705-7-day-glacier-discovery-northbound",
+      "shipName": "Westerdam",
+      "departureDate": "2026-07-05",
+      "previousPrice": 704,
+      "currentPrice": 704,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-nieuw-statendam-20260710-14-day-wild-british-isles-belfast-evening-stay",
+      "shipName": "Nieuw Statendam",
+      "departureDate": "2026-07-10",
+      "previousPrice": 2579,
+      "currentPrice": 2579,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-eurodam-20260718-7-day-alaska-explorer",
+      "shipName": "Eurodam",
+      "departureDate": "2026-07-18",
+      "previousPrice": 1259,
+      "currentPrice": 1259,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-oosterdam-20260829-7-day-western-mediterranean",
+      "shipName": "Oosterdam",
+      "departureDate": "2026-08-29",
+      "previousPrice": 1114,
+      "currentPrice": 1114,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-rotterdam-20260830-14-day-arctic-crossing-and-north-cape",
+      "shipName": "Rotterdam",
+      "departureDate": "2026-08-30",
+      "previousPrice": 1999,
+      "currentPrice": 1999,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-nieuw-statendam-20260904-8-day-norwegian-fjords-and-hidden-gems",
+      "shipName": "Nieuw Statendam",
+      "departureDate": "2026-09-04",
+      "previousPrice": 1839,
+      "currentPrice": 1839,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-nieuw-statendam-20260919-13-day-fjords-of-norway-spectacular-scenic-cruising",
+      "shipName": "Nieuw Statendam",
+      "departureDate": "2026-09-19",
+      "previousPrice": 1749,
+      "currentPrice": 1749,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-nieuw-amsterdam-20260920-7-day-alaska-inside-passage",
+      "shipName": "Nieuw Amsterdam",
+      "departureDate": "2026-09-20",
+      "previousPrice": 999,
+      "currentPrice": 999,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-oosterdam-20260923-10-day-adriatic-allure-croatia-greek-isles-and-istanbul",
+      "shipName": "Oosterdam",
+      "departureDate": "2026-09-23",
+      "previousPrice": 1499,
+      "currentPrice": 1499,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-oosterdam-20260923-21-day-croatia-greece-and-istanbul-collectors-voyage",
+      "shipName": "Oosterdam",
+      "departureDate": "2026-09-23",
+      "previousPrice": 3224,
+      "currentPrice": 3224,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-zuiderdam-20261003-7-day-canada-and-new-england-circle-new-brunswick",
+      "shipName": "Zuiderdam",
+      "departureDate": "2026-10-03",
+      "previousPrice": 1629,
+      "currentPrice": 1629,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-eurodam-20261004-4-day-pacific-coastal-cruise",
+      "shipName": "Eurodam",
+      "departureDate": "2026-10-04",
+      "previousPrice": 489,
+      "currentPrice": 489,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-eurodam-20261004-20-day-panama-canal",
+      "shipName": "Eurodam",
+      "departureDate": "2026-10-04",
+      "previousPrice": 2479,
+      "currentPrice": 2479,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-noordam-20261004-7-day-great-bear-rainforest",
+      "shipName": "Noordam",
+      "departureDate": "2026-10-04",
+      "previousPrice": 1044,
+      "currentPrice": 1044,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-rotterdam-20261018-13-day-cultural-crossing-with-brugge-and-falmouth",
+      "shipName": "Rotterdam",
+      "departureDate": "2026-10-18",
+      "previousPrice": 1019,
+      "currentPrice": 1019,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-koningsdam-20261020-11-day-mexican-riviera-and-sea-of-cortez",
+      "shipName": "Koningsdam",
+      "departureDate": "2026-10-20",
+      "previousPrice": 1184,
+      "currentPrice": 1184,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-oosterdam-20261024-11-day-mediterranean-splendor-greece-italy-and-provence",
+      "shipName": "Oosterdam",
+      "departureDate": "2026-10-24",
+      "previousPrice": 2824,
+      "currentPrice": 2824,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-rotterdam-20261031-10-day-western-caribbean-greater-antilles-belize-and-mexico",
+      "shipName": "Rotterdam",
+      "departureDate": "2026-10-31",
+      "previousPrice": 1049,
+      "currentPrice": 1049,
+      "priceChanged": false
+    },
+    {
+      "provider": "holland-america",
+      "id": "holland-america-koningsdam-20261114-7-day-classic-california-coast",
+      "shipName": "Koningsdam",
+      "departureDate": "2026-11-14",
+      "previousPrice": 994,
+      "currentPrice": 994,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20260712-58719",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-07-12",
+      "previousPrice": 789,
+      "currentPrice": 789,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20260719-58720",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-07-19",
+      "previousPrice": 799,
+      "currentPrice": 799,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20260726-58721",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-07-26",
+      "previousPrice": 799,
+      "currentPrice": 799,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20260802-58722",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-08-02",
+      "previousPrice": 879,
+      "currentPrice": 879,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-luna-20260808-58874",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-08-08",
+      "previousPrice": 909,
+      "currentPrice": 909,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20260809-58723",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-08-09",
+      "previousPrice": 729,
+      "currentPrice": 729,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20260809-58195",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-08-09",
+      "previousPrice": 899,
+      "currentPrice": 899,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-luna-20260815-58875",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-08-15",
+      "previousPrice": 909,
+      "currentPrice": 909,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20260816-58196",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-08-16",
+      "previousPrice": 829,
+      "currentPrice": 829,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-luna-20260822-58876",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-08-22",
+      "previousPrice": 859,
+      "currentPrice": 859,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20260823-58197",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-08-23",
+      "previousPrice": 809,
+      "currentPrice": 809,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-luna-20260829-58877",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-08-29",
+      "previousPrice": 809,
+      "currentPrice": 809,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20260830-58198",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-08-30",
+      "previousPrice": 869,
+      "currentPrice": 869,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20260906-58199",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-09-06",
+      "previousPrice": 829,
+      "currentPrice": 829,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20260913-58200",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-09-13",
+      "previousPrice": 779,
+      "currentPrice": 779,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20260920-58201",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-09-20",
+      "previousPrice": 779,
+      "currentPrice": 779,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20260927-58202",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-09-27",
+      "previousPrice": 829,
+      "currentPrice": 829,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20261004-58203",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-10-04",
+      "previousPrice": 779,
+      "currentPrice": 779,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20261011-58204",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-10-11",
+      "previousPrice": 859,
+      "currentPrice": 859,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20261018-58205",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-10-18",
+      "previousPrice": 929,
+      "currentPrice": 929,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-prima-20261025-58206",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-10-25",
+      "previousPrice": 829,
+      "currentPrice": 829,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20261028-59658",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-10-28",
+      "previousPrice": 519,
+      "currentPrice": 519,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-viva-20261031-59198",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-10-31",
+      "previousPrice": 819,
+      "currentPrice": 819,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20261106-59659",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-11-06",
+      "previousPrice": 509,
+      "currentPrice": 509,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-luna-20261107-59158",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-11-07",
+      "previousPrice": 849,
+      "currentPrice": 849,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-viva-20261107-59199",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-11-07",
+      "previousPrice": 859,
+      "currentPrice": 859,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20261111-59660",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-11-11",
+      "previousPrice": 499,
+      "currentPrice": 499,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20261113-59221",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-11-13",
+      "previousPrice": 599,
+      "currentPrice": 599,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-luna-20261114-59159",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-11-14",
+      "previousPrice": 899,
+      "currentPrice": 899,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-viva-20261114-59200",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-11-14",
+      "previousPrice": 759,
+      "currentPrice": 759,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-getaway-20261116",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-11-16",
+      "previousPrice": 829,
+      "currentPrice": 829,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20261120-59222",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-11-20",
+      "previousPrice": 779,
+      "currentPrice": 779,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-breakaway-20261122-59079",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2026-11-22",
+      "previousPrice": 929,
+      "currentPrice": 929,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20261122-59101",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2026-11-22",
+      "previousPrice": 799,
+      "currentPrice": 799,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20261127-59223",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-11-27",
+      "previousPrice": 549,
+      "currentPrice": 549,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-luna-20261128-59161",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-11-28",
+      "previousPrice": 749,
+      "currentPrice": 749,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-viva-20261128-59202",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-11-28",
+      "previousPrice": 599,
+      "currentPrice": 599,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-breakaway-20261129-59080",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2026-11-29",
+      "previousPrice": 929,
+      "currentPrice": 929,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20261129-59102",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2026-11-29",
+      "previousPrice": 499,
+      "currentPrice": 499,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20261204-59224",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-12-04",
+      "previousPrice": 549,
+      "currentPrice": 549,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20261204-59663",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-12-04",
+      "previousPrice": 429,
+      "currentPrice": 429,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-viva-20261205-59203",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-12-05",
+      "previousPrice": 599,
+      "currentPrice": 599,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20261209-59664",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-12-09",
+      "previousPrice": 509,
+      "currentPrice": 509,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20261211-59225",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-12-11",
+      "previousPrice": 549,
+      "currentPrice": 549,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-luna-20261212-59163",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-12-12",
+      "previousPrice": 749,
+      "currentPrice": 749,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-viva-20261212-59204",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-12-12",
+      "previousPrice": 599,
+      "currentPrice": 599,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-aqua-20261213-59055",
+      "shipName": "Norwegian Aqua",
+      "departureDate": "2026-12-13",
+      "previousPrice": 699,
+      "currentPrice": 699,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-breakaway-20261213-59082",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2026-12-13",
+      "previousPrice": 579,
+      "currentPrice": 579,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-breakaway-20270103-59085",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2027-01-03",
+      "previousPrice": 579,
+      "currentPrice": 579,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-breakaway-20270110-59086",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2027-01-10",
+      "previousPrice": 779,
+      "currentPrice": 779,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270115-59230",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-01-15",
+      "previousPrice": 839,
+      "currentPrice": 839,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270115-59665",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-01-15",
+      "previousPrice": 699,
+      "currentPrice": 699,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-breakaway-20270117-59087",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2027-01-17",
+      "previousPrice": 579,
+      "currentPrice": 579,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20270117-59109",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-01-17",
+      "previousPrice": 579,
+      "currentPrice": 579,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270120-59666",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-01-20",
+      "previousPrice": 649,
+      "currentPrice": 649,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270122-59231",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-01-22",
+      "previousPrice": 819,
+      "currentPrice": 819,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20270124-59110",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-01-24",
+      "previousPrice": 579,
+      "currentPrice": 579,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270129-59232",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-01-29",
+      "previousPrice": 819,
+      "currentPrice": 819,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270129-59667",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-01-29",
+      "previousPrice": 699,
+      "currentPrice": 699,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270203-59668",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-02-03",
+      "previousPrice": 749,
+      "currentPrice": 749,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20270207-59112",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-02-07",
+      "previousPrice": 889,
+      "currentPrice": 889,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270212-59669",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-02-12",
+      "previousPrice": 799,
+      "currentPrice": 799,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270217-59670",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-02-17",
+      "previousPrice": 799,
+      "currentPrice": 799,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270226-59671",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-02-26",
+      "previousPrice": 799,
+      "currentPrice": 799,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20270228-59115",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-02-28",
+      "previousPrice": 859,
+      "currentPrice": 859,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270312-59673",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-03-12",
+      "previousPrice": 819,
+      "currentPrice": 819,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270317-59674",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-03-17",
+      "previousPrice": 799,
+      "currentPrice": 799,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270326-59675",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-03-26",
+      "previousPrice": 849,
+      "currentPrice": 849,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20270328-59119",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-03-28",
+      "previousPrice": 909,
+      "currentPrice": 909,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-getaway-20270331-59676",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-03-31",
+      "previousPrice": 829,
+      "currentPrice": 829,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270428-60474",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-04-28",
+      "previousPrice": 669,
+      "currentPrice": 669,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270512-60477",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-05-12",
+      "previousPrice": 689,
+      "currentPrice": 689,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270526-60480",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-05-26",
+      "previousPrice": 779,
+      "currentPrice": 779,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270609-60483",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-06-09",
+      "previousPrice": 839,
+      "currentPrice": 839,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270721-60492",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-07-21",
+      "previousPrice": 859,
+      "currentPrice": 859,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-escape-20270804-60495",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2027-08-04",
+      "previousPrice": 889,
+      "currentPrice": 889,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-joy-20271017-61939",
+      "shipName": "Norwegian Joy",
+      "departureDate": "2027-10-17",
+      "previousPrice": 699,
+      "currentPrice": 699,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20271112-61504",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-11-12",
+      "previousPrice": 919,
+      "currentPrice": 919,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20271203-61507",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-12-03",
+      "previousPrice": 909,
+      "currentPrice": 909,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-joy-20271216-63711",
+      "shipName": "Norwegian Joy",
+      "departureDate": "2027-12-16",
+      "previousPrice": 769,
+      "currentPrice": 769,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20280107-61512",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2028-01-07",
+      "previousPrice": 869,
+      "currentPrice": 869,
+      "priceChanged": false
+    },
+    {
+      "provider": "norwegian",
+      "id": "norwegian-norwegian-epic-20280114-61513",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2028-01-14",
+      "previousPrice": 879,
+      "currentPrice": 879,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-resilient-lady-20260711-5ntc",
+      "shipName": "Resilient Lady",
+      "departureDate": "2026-07-11",
+      "previousPrice": 3726,
+      "currentPrice": 3726,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-resilient-lady-20260716-4nkw",
+      "shipName": "Resilient Lady",
+      "departureDate": "2026-07-16",
+      "previousPrice": 2072,
+      "currentPrice": 2072,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-valiant-lady-20260719-7nbta",
+      "shipName": "Valiant Lady",
+      "departureDate": "2026-07-19",
+      "previousPrice": 3206,
+      "currentPrice": 3206,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-resilient-lady-20260720-5ncz",
+      "shipName": "Resilient Lady",
+      "departureDate": "2026-07-20",
+      "previousPrice": 2090,
+      "currentPrice": 2090,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-brilliant-lady-20260723-7nsbe",
+      "shipName": "Brilliant Lady",
+      "departureDate": "2026-07-23",
+      "previousPrice": 2558,
+      "currentPrice": 2558,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-resilient-lady-20260725-5ntc",
+      "shipName": "Resilient Lady",
+      "departureDate": "2026-07-25",
+      "previousPrice": 2190,
+      "currentPrice": 2190,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-valiant-lady-20260726-10nwdf",
+      "shipName": "Valiant Lady",
+      "departureDate": "2026-07-26",
+      "previousPrice": 2580,
+      "currentPrice": 2580,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-brilliant-lady-20260730-7nsbe",
+      "shipName": "Brilliant Lady",
+      "departureDate": "2026-07-30",
+      "previousPrice": 2366,
+      "currentPrice": 2366,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-resilient-lady-20260730-4nkw",
+      "shipName": "Resilient Lady",
+      "departureDate": "2026-07-30",
+      "previousPrice": 1832,
+      "currentPrice": 1832,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-scarlet-lady-20260802-8nbb",
+      "shipName": "Scarlet Lady",
+      "departureDate": "2026-08-02",
+      "previousPrice": 2864,
+      "currentPrice": 2864,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-resilient-lady-20260803-5npp",
+      "shipName": "Resilient Lady",
+      "departureDate": "2026-08-03",
+      "previousPrice": 1690,
+      "currentPrice": 1690,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-scarlet-lady-20260822-9ncc",
+      "shipName": "Scarlet Lady",
+      "departureDate": "2026-08-22",
+      "previousPrice": 2322,
+      "currentPrice": 2322,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-brilliant-lady-20260903-8nsabc",
+      "shipName": "Brilliant Lady",
+      "departureDate": "2026-09-03",
+      "previousPrice": 2224,
+      "currentPrice": 2224,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-brilliant-lady-20260911-8nvac",
+      "shipName": "Brilliant Lady",
+      "departureDate": "2026-09-11",
+      "previousPrice": 1858,
+      "currentPrice": 1858,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-brilliant-lady-20260919-7nlax",
+      "shipName": "Brilliant Lady",
+      "departureDate": "2026-09-19",
+      "previousPrice": 1668,
+      "currentPrice": 1668,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-scarlet-lady-20260920-7nbra",
+      "shipName": "Scarlet Lady",
+      "departureDate": "2026-09-20",
+      "previousPrice": 3206,
+      "currentPrice": 3206,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-brilliant-lady-20260926-7nlax",
+      "shipName": "Brilliant Lady",
+      "departureDate": "2026-09-26",
+      "previousPrice": 1526,
+      "currentPrice": 1526,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-scarlet-lady-20260927-7nbra",
+      "shipName": "Scarlet Lady",
+      "departureDate": "2026-09-27",
+      "previousPrice": 2926,
+      "currentPrice": 2926,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-valiant-lady-20260927-5nnyb",
+      "shipName": "Valiant Lady",
+      "departureDate": "2026-09-27",
+      "previousPrice": 1552,
+      "currentPrice": 1552,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-brilliant-lady-20261003-7nlax",
+      "shipName": "Brilliant Lady",
+      "departureDate": "2026-10-03",
+      "previousPrice": 1528,
+      "currentPrice": 1528,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-scarlet-lady-20261207-5ntc",
+      "shipName": "Scarlet Lady",
+      "departureDate": "2026-12-07",
+      "previousPrice": 1290,
+      "currentPrice": 1290,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-brilliant-lady-20261210-4nkw",
+      "shipName": "Brilliant Lady",
+      "departureDate": "2026-12-10",
+      "previousPrice": 1010,
+      "currentPrice": 1010,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-scarlet-lady-20270523-7nbra",
+      "shipName": "Scarlet Lady",
+      "departureDate": "2027-05-23",
+      "previousPrice": 2506,
+      "currentPrice": 2506,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-valiant-lady-20270621-5ncz",
+      "shipName": "Valiant Lady",
+      "departureDate": "2027-06-21",
+      "previousPrice": 1490,
+      "currentPrice": 1490,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-valiant-lady-20271211-5npp",
+      "shipName": "Valiant Lady",
+      "departureDate": "2027-12-11",
+      "previousPrice": 1190,
+      "currentPrice": 1190,
+      "priceChanged": false
+    },
+    {
+      "provider": "virgin-voyages",
+      "id": "virgin-voyages-valiant-lady-20280401-5ncz",
+      "shipName": "Valiant Lady",
+      "departureDate": "2028-04-01",
+      "previousPrice": 1290,
+      "currentPrice": 1290,
+      "priceChanged": false
+    }
+  ],
+  "hidden": [],
+  "ambiguousMatches": [],
+  "missingReviewReports": []
+}
