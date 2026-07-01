@@ -20,6 +20,13 @@ const steps = [
     reportPath: "data/reports/latest-data-health.json",
   },
   {
+    name: "data freshness",
+    command: "node",
+    args: ["scripts/data-freshness-report.mjs"],
+    softFailure: true,
+    reportPath: "data/reports/latest-data-freshness.json",
+  },
+  {
     name: "link audit",
     command: "pnpm",
     args: ["run", "data:audit:links"],
