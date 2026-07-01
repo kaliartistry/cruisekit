@@ -1,10 +1,10 @@
 # Azamara Staging Import
 
-Generated: 2026-07-01T19:29:41.608Z
+Generated: 2026-07-01T23:21:16.189Z
 
 Mode: staging-only
 
-Source: https://www.azamara.com/cruises?destinations=MEDITERRANEAN,ASIA,SOUTH_AMERICA,PANAMA_CANAL
+Source: https://www.azamara.com/cruises?destinations=ASIA
 
 ## Counts
 

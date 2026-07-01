@@ -1,14 +1,14 @@
 # CruiseKit Bundle Image Audit
 
-Generated: 2026-07-01T22:34:15.346Z
+Generated: 2026-07-01T23:27:58.204Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
 | Canonical deals | 0 |
-| Mobile deals | 357 |
-| Checked image references | 357 |
+| Mobile deals | 388 |
+| Checked image references | 388 |
 
 ## Blockers
 
@@ -169,17 +169,17 @@ Generated: 2026-07-01T22:34:15.346Z
 - santorini: 38
 - cozumel: 29
 - barcelona: 23
+- shanghai: 20
 - dubrovnik: 19
 - great-stirrup-cay: 16
 - cartagena: 15
 - galveston: 11
+- jeju: 11
 - miami: 11
 - sicily-messina: 10
 - mykonos: 7
 - rome-civitavecchia: 7
 - port-canaveral: 6
-- shanghai: 5
+- busan: 4
 - roatan: 4
 - cabo-san-lucas: 3
-- grand-turk: 3
-- key-west: 3

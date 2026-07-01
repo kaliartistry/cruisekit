@@ -1,23 +1,23 @@
 # Holland America Staging Review
 
-Generated: 2026-07-01T22:33:14.419Z
+Generated: 2026-07-01T23:22:32.059Z
 
 Mode: review-only
 
-Source run: 2026-07-01T22-32-46-362Z
+Source run: 2026-07-01T23-21-57-358Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
 | Seed records | 28 |
-| Staged records | 13 |
+| Staged records | 14 |
 | Exact matches | 2 |
 | Price changes above threshold | 0 |
-| New candidates | 11 |
+| New candidates | 12 |
 | Missing required promotion fields | 0 |
 | Missing from staging | 26 |
-| Recommended new | 11 |
+| Recommended new | 12 |
 
 ## Recommended New Candidates
 
@@ -27,12 +27,13 @@ Source run: 2026-07-01T22-32-46-362Z
 | Zuiderdam | 2026-09-12 | 7 | canada-new-england | $1,269 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-09-12T00%3A00%3A00Z%20TO%202026-09-12T00%3A00%3A00Z%5D&ships:(Zuiderdam)) |
 | Koningsdam | 2026-08-08 | 7 | alaska | $1,379 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-08-08T00%3A00%3A00Z%20TO%202026-08-08T00%3A00%3A00Z%5D&ships:(Koningsdam)) |
 | Westerdam | 2026-07-12 | 7 | other | $774 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-07-12T00%3A00%3A00Z%20TO%202026-07-12T00%3A00%3A00Z%5D&ships:(Westerdam)) |
-| Volendam | 2026-10-08 | 48 | mediterranean | $6,724 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-08T00%3A00%3A00Z%20TO%202026-10-08T00%3A00%3A00Z%5D&ships:(Volendam)) |
+| Rotterdam | 2026-09-27 | 7 | other | $1,109 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-09-27T00%3A00%3A00Z%20TO%202026-09-27T00%3A00%3A00Z%5D&ships:(Rotterdam)) |
+| Nieuw Statendam | 2026-10-31 | 7 | other | $1,119 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-31T00%3A00%3A00Z%20TO%202026-10-31T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)) |
+| Zaandam | 2026-10-08 | 7 | other | $1,144 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-08T00%3A00%3A00Z%20TO%202026-10-08T00%3A00%3A00Z%5D&ships:(Zaandam)) |
 | Rotterdam | 2026-07-12 | 7 | northern-europe | $1,409 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-07-12T00%3A00%3A00Z%20TO%202026-07-12T00%3A00%3A00Z%5D&ships:(Rotterdam)) |
-| Eurodam | 2026-10-03 | 1 | south-pacific | $139 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-03T00%3A00%3A00Z%20TO%202026-10-03T00%3A00%3A00Z%5D&ships:(Eurodam)) |
 | Noordam | 2026-10-11 | 69 | australia-new-zealand | $17,084 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-11T00%3A00%3A00Z%20TO%202026-10-11T00%3A00%3A00Z%5D&ships:(Noordam)) |
-| Westerdam | 2026-10-11 | 13 | asia | $2,604 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-11T00%3A00%3A00Z%20TO%202026-10-11T00%3A00%3A00Z%5D&ships:(Westerdam)) |
 | Nieuw Statendam | 2026-10-02 | 14 | other | $2,609 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-02T00%3A00%3A00Z%20TO%202026-10-02T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)) |
+| Nieuw Statendam | 2026-10-31 | 21 | other | $3,164 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-31T00%3A00%3A00Z%20TO%202026-10-31T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)) |
 | Nieuw Statendam | 2026-10-02 | 29 | other | $4,424 | new candidate | [source](https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-02T00%3A00%3A00Z%20TO%202026-10-02T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)) |
 
 ## Records Excluded From Promotion

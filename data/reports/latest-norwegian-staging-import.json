@@ -1,44 +1,33 @@
 {
-  "generatedAt": "2026-07-01T22:30:33.279Z",
+  "generatedAt": "2026-07-01T23:20:36.930Z",
   "provider": "norwegian",
-  "runId": "2026-07-01T22-30-33-278Z",
+  "runId": "2026-07-01T23-20-36-930Z",
   "mode": "staging-only",
   "source": "https://www.ncl.com/api/v2/vacations/search",
   "destinations": [
-    "MEDITERRANEAN",
-    "GREEK_ISLES"
+    "ASIA"
   ],
-  "maxItineraries": 25,
-  "maxSailingsPerItinerary": 4,
+  "maxItineraries": 40,
+  "maxSailingsPerItinerary": 6,
   "searchPages": [
     {
-      "destination": "MEDITERRANEAN",
+      "destination": "ASIA",
       "offset": 0,
-      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=MEDITERRANEAN&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
-      "count": 50
-    },
-    {
-      "destination": "GREEK_ISLES",
-      "offset": 0,
-      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=GREEK_ISLES&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
-      "count": 36
+      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=ASIA&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
+      "count": 47
     }
   ],
   "staging": {
-    "sailings": 79,
+    "sailings": 40,
     "deals": 0,
     "schemaErrors": 0,
     "byShip": {
-      "Norwegian Dawn": 12,
-      "Norwegian Epic": 10,
-      "Norwegian Gem": 21,
-      "Norwegian Pearl": 13,
-      "Norwegian Sky": 2,
-      "Norwegian Sun": 1,
-      "Norwegian Viva": 20
+      "Norwegian Jade": 38,
+      "Norwegian Sky": 1,
+      "Norwegian Spirit": 1
     },
-    "minPrice": 859,
-    "maxPrice": 5699
+    "minPrice": 1620,
+    "maxPrice": 4489
   },
   "blockers": [],
   "warnings": [
@@ -47,8 +36,8 @@
     "Review exact booking URL, price basis, taxes/fees, and terms before promotion."
   ],
   "paths": {
-    "raw": "data/ingest/raw/norwegian/2026-07-01T22-30-33-278Z",
-    "staging": "data/ingest/staging/norwegian/2026-07-01T22-30-33-278Z",
-    "report": "data/ingest/reports/norwegian/2026-07-01T22-30-33-278Z.json"
+    "raw": "data/ingest/raw/norwegian/2026-07-01T23-20-36-930Z",
+    "staging": "data/ingest/staging/norwegian/2026-07-01T23-20-36-930Z",
+    "report": "data/ingest/reports/norwegian/2026-07-01T23-20-36-930Z.json"
   }
 }

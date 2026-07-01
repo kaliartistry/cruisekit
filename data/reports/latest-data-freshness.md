@@ -1,6 +1,6 @@
 # CruiseKit Data Freshness Report
 
-Generated: 2026-07-01T22:34:14.857Z
+Generated: 2026-07-01T23:27:57.656Z
 
 Current date: 2026-07-01
 
@@ -10,7 +10,7 @@ Production freshness threshold: 7 days.
 
 | Metric | Count |
 | --- | ---: |
-| Public sailings | 357 |
+| Public sailings | 388 |
 | Stale public sailings | 0 |
 | Weekly watchlist sources | 9 |
 | Blockers | 0 |
@@ -23,7 +23,7 @@ Production freshness threshold: 7 days.
 | --- | ---: | ---: | --- | --- |
 | carnival | 117 | 0 | 2026-07-01 | 2026-07-01 |
 | holland-america | 20 | 0 | 2026-07-01 | 2026-07-01 |
-| norwegian | 186 | 0 | 2026-07-01 | 2026-07-01 |
+| norwegian | 217 | 0 | 2026-07-01 | 2026-07-01 |
 | virgin-voyages | 34 | 0 | 2026-07-01 | 2026-07-01 |
 
 ## Weekly Source Watchlist
@@ -32,11 +32,11 @@ Production freshness threshold: 7 days.
 | --- | --- | --- | --- | --- | ---: |
 | royal-caribbean | weekly | yes | 2026-07-01T14:32:32.121Z | missing | 0 |
 | carnival | weekly | yes | 2026-07-01T22:32:22.485Z | 2026-07-01T22:32:27.063Z | 117 |
-| norwegian | weekly | yes | 2026-07-01T22:30:33.279Z | 2026-07-01T22:31:17.642Z | 186 |
+| norwegian | weekly | yes | 2026-07-01T23:20:36.930Z | 2026-07-01T23:21:16.003Z | 217 |
 | celebrity | weekly | no | missing | missing | 0 |
-| princess | weekly | yes | 2026-07-01T14:32:31.636Z | 2026-07-01T14:33:16.601Z | 0 |
-| holland-america | weekly | yes | 2026-07-01T22:32:46.362Z | 2026-07-01T22:33:14.419Z | 20 |
-| msc | weekly | yes | 2026-07-01T14:31:30.828Z | missing | 0 |
+| princess | weekly | yes | 2026-07-01T23:21:16.023Z | 2026-07-01T23:21:57.177Z | 0 |
+| holland-america | weekly | yes | 2026-07-01T23:21:57.358Z | 2026-07-01T23:22:32.059Z | 20 |
+| msc | weekly | yes | 2026-07-01T23:21:57.368Z | missing | 0 |
 | disney | weekly | no | missing | missing | 0 |
 | virgin-voyages | weekly | yes | 2026-07-01T22:31:35.142Z | 2026-07-01T22:31:42.751Z | 34 |
 

@@ -6822,6 +6822,42 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261007-59513",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "11-Day Asia From Tokyo to Seoul: Osaka, Sakaiminato & Hakodate",
+    "fromPrice": 2829,
+    "currency": "USD",
+    "departureDate": "2026-10-07",
+    "ports": [
+      "Sendai (Ishinomaki), Japan",
+      "Kanazawa, Japan",
+      "Akita, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Kyoto (Osaka), Japan",
+      "Hakodate, Japan",
+      "Aomori, Japan",
+      "Sakaiminato, Japan"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11YOKSMZOSASDAHKDAOMAKIKZWSAKINC&guests=2&gateway=NONE&packageId=24544151",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-10",
+    "monthLabel": "October 2026",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-dawn-20261011-58548",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -7265,6 +7301,47 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261029-59515",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 14,
+    "departurePort": "Tokyo, Japan",
+    "itineraryTitle": "14-Day Asia From Tokyo to Seoul: Osaka, Sakaiminato & Hakodate",
+    "fromPrice": 3629,
+    "currency": "USD",
+    "departureDate": "2026-10-29",
+    "ports": [
+      "Sendai (Ishinomaki), Japan",
+      "Kanazawa, Japan",
+      "Hiroshima, Japan",
+      "Sakata, Japan",
+      "Akita, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Osaka), Japan",
+      "Aomori, Japan",
+      "Busan, South Korea",
+      "Shimonoseki, Japan",
+      "Kochi, Japan",
+      "Hakodate, Japan"
+    ],
+    "imageUrl": "assets/images/ports/busan.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14TOKSDAHKDAOMAKISKTKZWPUSSHIHSMKCZOSANGOSMZYOK&guests=2&gateway=NONE&packageId=24544541",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-10",
+    "monthLabel": "October 2026",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-viva-20261031-59198",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -7422,6 +7499,42 @@
     "dealScore": 69,
     "badges": [
       "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20261112-59516",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "9-Day Asia From Tokyo To Seoul: Osaka, Kochi, Jeju & Nagoya",
+    "fromPrice": 2119,
+    "currency": "USD",
+    "departureDate": "2026-11-12",
+    "ports": [
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Jeju, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kochi, Japan",
+      "Kyoto (Kobe), Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9YOKSMZNGOKOBKCZHSMKOJNGSJJUINC&guests=2&gateway=NONE&packageId=24544549",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-11",
+    "monthLabel": "November 2026",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -7587,6 +7700,42 @@
     "dealScore": 42,
     "badges": [
       "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20261121-59517",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "itineraryTitle": "9-Day Asia From Seoul To Tokyo: Osaka, Kochi, Jeju & Nagoya",
+    "fromPrice": 2179,
+    "currency": "USD",
+    "departureDate": "2026-11-21",
+    "ports": [
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Jeju, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Osaka), Japan",
+      "Kochi, Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSKOJHSMKCZOSANGOSMZYOK&guests=2&gateway=NONE&packageId=24564052",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-11",
+    "monthLabel": "November 2026",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -8019,6 +8168,41 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261209-62040",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 14,
+    "departurePort": "Hong Kong, China",
+    "itineraryTitle": "14-Day Thailand, Vietnam & Philippines from Hong Kong",
+    "fromPrice": 3259,
+    "currency": "USD",
+    "departureDate": "2026-12-09",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Coron, Philippines",
+      "Boracay, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14HKGCORBORPPSMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25425196",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-12",
+    "monthLabel": "December 2026",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20261211-59225",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -8184,6 +8368,39 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261223-62038",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Singapore, Singapore",
+    "itineraryTitle": "11-day Asia From Singapore to Hong Kong: Ko Samui, Bangkok & Ho Chi Minh City",
+    "fromPrice": 2759,
+    "currency": "USD",
+    "departureDate": "2026-12-23",
+    "ports": [
+      "Hanoi (Ha Long Bay), Vietnam",
+      "Bangkok (Laem Chabang), Thailand",
+      "Chan May, Vietnam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11SINKOHLCHSGNCMYHANHKG&guests=2&gateway=NONE&packageId=25425470",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-12",
+    "monthLabel": "December 2026",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-breakaway-20270103-59085",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -8213,6 +8430,42 @@
     "dealScore": 52,
     "badges": [
       "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20270103-62041",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 14,
+    "departurePort": "Hong Kong, China",
+    "itineraryTitle": "14-day Asia from Hong Kong to Singapore: Thailand & Vietnam",
+    "fromPrice": 3069,
+    "currency": "USD",
+    "departureDate": "2027-01-03",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Kota Kinabalu, Malaysia",
+      "Coron, Philippines",
+      "Boracay, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14HKGCORBORPPSKKBMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25425653",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-01",
+    "monthLabel": "January 2027",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -8380,6 +8633,39 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270117-62039",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Singapore, Singapore",
+    "itineraryTitle": "11-day Asia From Singapore to Hong Kong: Ko Samui, Bangkok & Ho Chi Minh City",
+    "fromPrice": 2339,
+    "currency": "USD",
+    "departureDate": "2027-01-17",
+    "ports": [
+      "Hanoi (Ha Long Bay), Vietnam",
+      "Bangkok (Laem Chabang), Thailand",
+      "Chan May, Vietnam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11SINLCHKOHSGNCMYHANHKG&guests=2&gateway=NONE&packageId=25425836",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-01",
+    "monthLabel": "January 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270120-59666",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -8473,6 +8759,41 @@
     "dealScore": 52,
     "badges": [
       "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20270128-59523",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 12,
+    "departurePort": "Hong Kong, China",
+    "itineraryTitle": "12-Day Asia From Hong Kong To Singapore: Thailand & Philippines",
+    "fromPrice": 2909,
+    "currency": "USD",
+    "departureDate": "2027-01-28",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Kota Kinabalu, Malaysia",
+      "Coron, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE12HKGCORPPSKKBMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=23410568",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-01",
+    "monthLabel": "January 2027",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -8605,6 +8926,41 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270209-59524",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 13,
+    "departurePort": "Singapore, Singapore",
+    "itineraryTitle": "13-Day Asia From Singapore To Hong Kong: Thailand & Philippines",
+    "fromPrice": 3739,
+    "currency": "USD",
+    "departureDate": "2027-02-09",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Kota Kinabalu, Malaysia",
+      "Coron, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE13SINKOHLCHSGNMUAKKBPPSCORHKG&guests=2&gateway=NONE&packageId=23410577",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-02",
+    "monthLabel": "February 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270212-59669",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -8702,6 +9058,43 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270222-59525",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Hong Kong, China",
+    "itineraryTitle": "11-Day Asia From Hong Kong To Tokyo: Taipei, Kobe & Kochi",
+    "fromPrice": 3329,
+    "currency": "USD",
+    "departureDate": "2027-02-22",
+    "ports": [
+      "Hiroshima, Japan",
+      "Taipei (Keelung), Taiwan",
+      "Kaohsiung, Taiwan",
+      "Ishigaki, Japan",
+      "Nagasaki, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Kochi, Japan",
+      "Kyoto (Kobe), Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11HKGKAOKEEISHNGSKOJHSMKCZKOBSMZTOK&guests=2&gateway=NONE&packageId=23410569",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-02",
+    "monthLabel": "February 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270226-59671",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -8766,6 +9159,42 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270305-59526",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Tokyo, Japan",
+    "itineraryTitle": "9-Day Asia From Tokyo To Seoul: Osaka, Kochi, Jeju & Nagoya",
+    "fromPrice": 2139,
+    "currency": "USD",
+    "departureDate": "2027-03-05",
+    "ports": [
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Jeju, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Osaka), Japan",
+      "Kochi, Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9TOKSMZNGOOSAKCZHSMKOJNGSJJUINC&guests=2&gateway=NONE&packageId=23410581",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-03",
+    "monthLabel": "March 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270312-59673",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -8797,6 +9226,42 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270314-59527",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "itineraryTitle": "9-Day Asia from Seoul to Tokyo (Yokohama): Jeju, Nagoya & Mt. Fuji",
+    "fromPrice": 2069,
+    "currency": "USD",
+    "departureDate": "2027-03-14",
+    "ports": [
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kochi, Japan",
+      "Beppu, Japan",
+      "Jeju, South Korea",
+      "Shimonoseki, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSSHIHSMBE9KCZNGOSMZYOK&guests=2&gateway=NONE&packageId=24564956",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-03",
+    "monthLabel": "March 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270317-59674",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -8824,6 +9289,42 @@
     "dealScore": 46,
     "badges": [
       "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20270323-59528",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "9-Day Asia From Tokyo (Yokohama) to Seoul: Kochi, Jeju & Nagoya",
+    "fromPrice": 2599,
+    "currency": "USD",
+    "departureDate": "2027-03-23",
+    "ports": [
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Jeju, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kochi, Japan",
+      "Tokushima, Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9YOKSMZNGOTKSKCZHSMKOJNGSJJUINC&guests=2&gateway=NONE&packageId=24564958",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-03",
+    "monthLabel": "March 2027",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -8923,6 +9424,42 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270401-59529",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "itineraryTitle": "9-day Asia From Seoul To Tokyo: Kochi, Jeju & Nagoya",
+    "fromPrice": 2979,
+    "currency": "USD",
+    "departureDate": "2027-04-01",
+    "ports": [
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Jeju, South Korea",
+      "Nagoya, Japan",
+      "Kochi, Japan",
+      "Beppu, Japan",
+      "Kyoto (Kobe), Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSKOJHSMBE9KCZKOBNGOYOK&guests=2&gateway=NONE&packageId=24565539",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-04",
+    "monthLabel": "April 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-bliss-20270409-60261",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -8946,6 +9483,46 @@
     "imageUrl": "assets/images/ports/cartagena.jpg",
     "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BLISS19NYCPOPCTGCLNPCLPRQACAPVRCSLSFO&guests=2&gateway=NONE&packageId=24218424",
     "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-04",
+    "monthLabel": "April 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20270410-59530",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 14,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "14-Day Asia Round-Trip Tokyo: Kobe, Nagoya & Mount Fuji",
+    "fromPrice": 4489,
+    "currency": "USD",
+    "departureDate": "2027-04-10",
+    "ports": [
+      "Sendai (Ishinomaki), Japan",
+      "Kanazawa, Japan",
+      "Hiroshima, Japan",
+      "Akita, Japan",
+      "Nagasaki, Japan",
+      "Busan, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Hakodate, Japan",
+      "Beppu, Japan",
+      "Kyoto (Kobe), Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/busan.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14YOKSMZNGOKONBE9HSMKOJNGSPUSKZWAKIHKDSDAYOK&guests=2&gateway=NONE&packageId=24568755",
+    "region": "asia",
     "source": "ncl.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -9847,6 +10424,42 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20271013-61739",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "11-day Asia From Tokyo (Yokohama) to Seoul: Nagoya, Hakodate & Mount Fuji",
+    "fromPrice": 2419,
+    "currency": "USD",
+    "departureDate": "2027-10-13",
+    "ports": [
+      "Sendai (Ishinomaki), Japan",
+      "Kanazawa, Japan",
+      "Akita, Japan",
+      "Maizuru, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Hakodate, Japan",
+      "Kyoto (Kobe), Japan"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11YOKSMZNGOKOBSDAHKDAKIKZWMAIINC&guests=2&gateway=NONE&packageId=25480096",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-10",
+    "monthLabel": "October 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-viva-20271013-61140",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -9914,6 +10527,83 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20271024-61740",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "itineraryTitle": "11-Day Asia from Seoul to Tokyo: Osaka, Nagoya, Sakaiminato & Hakodate",
+    "fromPrice": 2249,
+    "currency": "USD",
+    "departureDate": "2027-10-24",
+    "ports": [
+      "Akita, Japan",
+      "Niigata, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Osaka), Japan",
+      "Hakodate, Japan",
+      "Aomori, Japan",
+      "Sakaiminato, Japan"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11INCSAKNIIAKIAOMHKDNGOOSASMZTOK&guests=2&gateway=NONE&packageId=25367237",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-10",
+    "monthLabel": "October 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20271104-61741",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 14,
+    "departurePort": "Tokyo, Japan",
+    "itineraryTitle": "14-day Asia Round-Trip Tokyo: Osaka, Kochi & Hakodate",
+    "fromPrice": 3399,
+    "currency": "USD",
+    "departureDate": "2027-11-04",
+    "ports": [
+      "Sendai (Ishinomaki), Japan",
+      "Kanazawa, Japan",
+      "Hiroshima, Japan",
+      "Akita, Japan",
+      "Niigata, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Osaka), Japan",
+      "Aomori, Japan",
+      "Busan, South Korea",
+      "Shimonoseki, Japan",
+      "Kochi, Japan",
+      "Hakodate, Japan"
+    ],
+    "imageUrl": "assets/images/ports/busan.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14TOKSDAHKDAOMAKINIIKZWPUSSHIHSMKCZOSANGOSMZTOK&guests=2&gateway=NONE&packageId=25367238",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-11",
+    "monthLabel": "November 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-gem-20271109-62540",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -9977,6 +10667,43 @@
     "dealScore": 42,
     "badges": [
       "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20271118-61742",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Tokyo, Japan",
+    "itineraryTitle": "11-Day Japan Round-Trip Tokyo: Kochi, Osaka, Jeju & Nagoya",
+    "fromPrice": 2309,
+    "currency": "USD",
+    "departureDate": "2027-11-18",
+    "ports": [
+      "Sasebo, Japan",
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Osaka), Japan",
+      "Kochi, Japan",
+      "Jeju, South Korea",
+      "Shimonoseki, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11TOKSMZNGOOSAKCZHSMHK1SHINGSJJUSASTOK&guests=2&gateway=NONE&packageId=25367407",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-11",
+    "monthLabel": "November 2027",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -10318,6 +11045,41 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20271221-61745",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 13,
+    "departurePort": "Singapore, Singapore",
+    "itineraryTitle": "13-Day Asia From Singapore To Hong Kong: Thailand & Philippines",
+    "fromPrice": 2399,
+    "currency": "USD",
+    "departureDate": "2027-12-21",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Kota Kinabalu, Malaysia",
+      "Coron, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE13SINKOHLCHSGNMUAKKBPPSCORHKG&guests=2&gateway=NONE&packageId=25373177",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-12",
+    "monthLabel": "December 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-star-20280102-62363",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -10338,6 +11100,41 @@
     "imageUrl": "assets/images/ports/cartagena.jpg",
     "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15SAIPMCUSHPSYPMYMVDBUE&guests=2&gateway=NONE&packageId=25732830",
     "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-01",
+    "monthLabel": "January 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280103-61746",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 12,
+    "departurePort": "Hong Kong, China",
+    "itineraryTitle": "12-Day Asia From Hong Kong To Singapore: Thailand & Philippines",
+    "fromPrice": 2009,
+    "currency": "USD",
+    "departureDate": "2028-01-03",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Kota Kinabalu, Malaysia",
+      "Coron, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE12HKGCORPPSKKBMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25382099",
+    "region": "asia",
     "source": "ncl.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -10417,6 +11214,41 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20280115-61747",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 13,
+    "departurePort": "Singapore, Singapore",
+    "itineraryTitle": "13-Day Asia From Singapore To Hong Kong: Thailand & Philippines",
+    "fromPrice": 2239,
+    "currency": "USD",
+    "departureDate": "2028-01-15",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Kota Kinabalu, Malaysia",
+      "Coron, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE13SINKOHLCHSGNMUAKKBPPSCORHKG&guests=2&gateway=NONE&packageId=25373178",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-01",
+    "monthLabel": "January 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-star-20280117-62364",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -10450,6 +11282,41 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20280128-61748",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 12,
+    "departurePort": "Hong Kong, China",
+    "itineraryTitle": "12-Day Asia From Hong Kong To Singapore: Thailand & Philippines",
+    "fromPrice": 2139,
+    "currency": "USD",
+    "departureDate": "2028-01-28",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Kota Kinabalu, Malaysia",
+      "Coron, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE12HKGCORPPSKKBMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25382100",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-01",
+    "monthLabel": "January 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-star-20280201-62365",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -10470,6 +11337,78 @@
     "imageUrl": "assets/images/ports/cartagena.jpg",
     "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15SAIPMCUSHPSYPMYMVDBUE&guests=2&gateway=NONE&packageId=25732831",
     "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-02",
+    "monthLabel": "February 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280209-61749",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 13,
+    "departurePort": "Singapore, Singapore",
+    "itineraryTitle": "13-Day Asia From Singapore To Hong Kong: Thailand & Philippines",
+    "fromPrice": 2359,
+    "currency": "USD",
+    "departureDate": "2028-02-09",
+    "ports": [
+      "Bangkok (Laem Chabang), Thailand",
+      "Kota Kinabalu, Malaysia",
+      "Coron, Philippines",
+      "Puerto Princesa, Philippines",
+      "Muara, Brunei Darussalam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE13SINKOHLCHSGNMUAKKBPPSCORHKG&guests=2&gateway=NONE&packageId=25373179",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-02",
+    "monthLabel": "February 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-spirit-20280209-61707",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Spirit",
+    "duration": 19,
+    "departurePort": "Singapore, Singapore",
+    "itineraryTitle": "19-Day from Singapore to Sydney: Melbourne, Eden, Bali & Perth",
+    "fromPrice": 3159,
+    "currency": "USD",
+    "departureDate": "2028-02-09",
+    "ports": [
+      "Burnie (Tasmania), Australia",
+      "Kangaroo Island, Australia",
+      "Melbourne, Australia",
+      "Adelaide, Australia",
+      "Surabaya, Indonesia",
+      "Eden, Australia",
+      "Bali (Benoa), Indonesia",
+      "Busselton, Australia",
+      "Fremantle, Australia"
+    ],
+    "imageUrl": "assets/images/ports/sydney.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=SPIRIT19SINSUBDPSFREBUSADLKANMELBWTQDNSYD&guests=2&gateway=NONE&packageId=25343358",
+    "region": "asia",
     "source": "ncl.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -10586,6 +11525,78 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20280304-61751",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Tokyo, Japan",
+    "itineraryTitle": "9-Day Asia From Tokyo To Seoul: Osaka, Kochi, Jeju & Nagoya",
+    "fromPrice": 1999,
+    "currency": "USD",
+    "departureDate": "2028-03-04",
+    "ports": [
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Jeju, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Osaka), Japan",
+      "Kochi, Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9TOKSMZNGOOSAKCZHSMKOJNGSJJUINC&guests=2&gateway=NONE&packageId=25376618",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-03",
+    "monthLabel": "March 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280313-61752",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "itineraryTitle": "9-Day Asia from Seoul to Tokyo (Yokohama): Jeju, Nagoya & Mt. Fuji",
+    "fromPrice": 2159,
+    "currency": "USD",
+    "departureDate": "2028-03-13",
+    "ports": [
+      "Osaka (Wakayama), Japan",
+      "Hiroshima, Japan",
+      "Hakata (Fukuoka), Japan",
+      "Nagasaki, Japan",
+      "Matsuyama, Japan",
+      "Jeju, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSHK1HSMMATWAKNGOSMZYOK&guests=2&gateway=NONE&packageId=25480097",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-03",
+    "monthLabel": "March 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-star-20280317-62370",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -10612,6 +11623,118 @@
     "taxesAndFeesIncluded": false,
     "monthKey": "2028-03",
     "monthLabel": "March 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280322-61753",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "9-Day Asia From Tokyo (Yokohama) to Seoul: Kobe, Kochi, Jeju & Nagoya",
+    "fromPrice": 2159,
+    "currency": "USD",
+    "departureDate": "2028-03-22",
+    "ports": [
+      "Osaka (Wakayama), Japan",
+      "Nagasaki, Japan",
+      "Jeju, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Kobe), Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9YOKSMZNGOKOBWAKKOJNGSJJUINC&guests=2&gateway=NONE&packageId=25480099",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-03",
+    "monthLabel": "March 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280331-61754",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "itineraryTitle": "9-Day Asia from Seoul to Tokyo (Yokohama): Osaka, Kochi, Jeju & Nagoya",
+    "fromPrice": 2249,
+    "currency": "USD",
+    "departureDate": "2028-03-31",
+    "ports": [
+      "Hiroshima, Japan",
+      "Nagasaki, Japan",
+      "Jeju, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Tokushima, Japan",
+      "Beppu, Japan",
+      "Kagoshima, Japan"
+    ],
+    "imageUrl": "assets/images/ports/jeju.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSKOJHSMBE9TKSNGOSMZYOK&guests=2&gateway=NONE&packageId=25480098",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-03",
+    "monthLabel": "March 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280409-61755",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 14,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "14-Day Japan Round-Trip Tokyo (Yokohama): Kochi, Nagoya & Sakaiminato",
+    "fromPrice": 3699,
+    "currency": "USD",
+    "departureDate": "2028-04-09",
+    "ports": [
+      "Sendai (Ishinomaki), Japan",
+      "Kanazawa, Japan",
+      "Hiroshima, Japan",
+      "Akita, Japan",
+      "Nagasaki, Japan",
+      "Busan, South Korea",
+      "Mount Fuji (Shimizu), Japan",
+      "Nagoya, Japan",
+      "Kyoto (Osaka), Japan",
+      "Kagoshima, Japan",
+      "Sakaiminato, Japan",
+      "Kochi, Japan",
+      "Hakodate, Japan"
+    ],
+    "imageUrl": "assets/images/ports/busan.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14YOKNGOSMZOSAKCZHSMKOJNGSPUSSAKKZWAKIHKDSDAYOK&guests=2&gateway=NONE&packageId=25480100",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-04",
+    "monthLabel": "April 2028",
     "dealScore": 14,
     "badges": [
       "Price check required"
