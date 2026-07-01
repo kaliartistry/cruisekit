@@ -1,27 +1,28 @@
 {
-  "generatedAt": "2026-07-01T19:30:47.998Z",
+  "generatedAt": "2026-07-01T22:34:15.346Z",
   "counts": {
     "canonicalDeals": 0,
-    "mobileDeals": 279,
-    "checkedImages": 279
+    "mobileDeals": 357,
+    "checkedImages": 357
   },
   "imageUsage": {
     "tampa": 44,
     "new-orleans": 38,
     "puerto-plata": 38,
+    "santorini": 38,
     "cozumel": 29,
+    "barcelona": 23,
+    "dubrovnik": 19,
     "great-stirrup-cay": 16,
     "cartagena": 15,
     "galveston": 11,
     "miami": 11,
-    "barcelona": 9,
+    "sicily-messina": 10,
+    "mykonos": 7,
+    "rome-civitavecchia": 7,
     "port-canaveral": 6,
-    "dubrovnik": 5,
     "shanghai": 5,
-    "sicily-messina": 5,
     "roatan": 4,
-    "rome-civitavecchia": 4,
-    "santorini": 4,
     "cabo-san-lucas": 3,
     "grand-turk": 3,
     "key-west": 3,
@@ -41,7 +42,8 @@
     "halifax": 1,
     "harvest-caye": 1,
     "juneau": 1,
-    "oslo": 1
+    "oslo": 1,
+    "tenerife": 1
   },
   "blockers": [],
   "warnings": [],
@@ -348,8 +350,33 @@
     },
     {
       "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260703-58644",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
       "id": "mobile:norwegian-norwegian-epic-20260705-58611",
       "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260705-58745",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260712-58690",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260712-58746",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260713-58635",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
     },
     {
       "severity": "info",
@@ -363,8 +390,88 @@
     },
     {
       "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260719-58747",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260722-58636",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260726-58692",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260726-58748",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260731-58645",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
       "id": "mobile:norwegian-norwegian-epic-20260802-58615",
       "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260802-58693",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260802-58749",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260809-58694",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260809-58750",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260810-58637",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-epic-20260816-58617",
+      "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260816-58695",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260816-58751",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260823-58696",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260823-58752",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260828-58646",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
     },
     {
       "severity": "info",
@@ -373,8 +480,168 @@
     },
     {
       "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260830-58753",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-sky-20260831-61019",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260907-58639",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-sky-20260909-63120",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
       "id": "mobile:norwegian-norwegian-gem-20260913-58699",
       "message": "Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260913-58755",
+      "message": "Image mykonos does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260916-60203",
+      "message": "Image mykonos does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260920-58700",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20260926-60204",
+      "message": "Image mykonos does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20260927-58757",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20261004-58702",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20261005-58641",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20261011-58703",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20261011-58759",
+      "message": "Image mykonos does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20261018-58704",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-pearl-20261025-58761",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20270502-60782",
+      "message": "Image mykonos does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20270516-60784",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20270530-60786",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20270613-60788",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20270613-60911",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20270623-60912",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20270627-60790",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20270702-60913",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20270711-60914",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20270721-60915",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20270808-60917",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-sun-20270905-62253",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20270905-60920",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20270915-60921",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20271003-60804",
+      "message": "Image mykonos does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20271003-60923",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-viva-20271013-61140",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
     },
     {
       "severity": "info",
@@ -393,8 +660,18 @@
     },
     {
       "severity": "info",
+      "id": "mobile:virgin-voyages-valiant-lady-20260711-8nbva",
+      "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
       "id": "mobile:virgin-voyages-resilient-lady-20260716-4nkw",
       "message": "Image key-west does not match expected destination image(s): bimini, freeport, miami, nassau"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-scarlet-lady-20260724-9nbfa",
+      "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona"
     },
     {
       "severity": "info",
@@ -405,6 +682,11 @@
       "severity": "info",
       "id": "mobile:virgin-voyages-resilient-lady-20260730-4nkw",
       "message": "Image key-west does not match expected destination image(s): bimini, freeport, miami, nassau"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-scarlet-lady-20260910-10nath",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
     },
     {
       "severity": "info",
@@ -438,12 +720,27 @@
     },
     {
       "severity": "info",
+      "id": "mobile:virgin-voyages-scarlet-lady-20261004-7ngm6",
+      "message": "Image mykonos does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-scarlet-lady-20261011-14nbm3",
+      "message": "Image tenerife does not match expected destination image(s): barcelona, miami"
+    },
+    {
+      "severity": "info",
       "id": "mobile:virgin-voyages-brilliant-lady-20261210-4nkw",
       "message": "Image key-west does not match expected destination image(s): bimini, freeport, miami, nassau"
     },
     {
       "severity": "info",
       "id": "mobile:virgin-voyages-scarlet-lady-20270523-7nbra",
+      "message": "Image santorini does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:virgin-voyages-scarlet-lady-20270711-10nath",
       "message": "Image santorini does not match expected destination image(s): barcelona"
     }
   ]

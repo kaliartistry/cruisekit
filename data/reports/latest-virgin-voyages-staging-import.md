@@ -1,6 +1,6 @@
 # Virgin Voyages Staging Import Report
 
-Generated: 2026-07-01T14:33:12.075Z
+Generated: 2026-07-01T22:31:35.142Z
 
 Mode: staging-only
 
@@ -8,16 +8,16 @@ Mode: staging-only
 
 | Metric | Count |
 | --- | ---: |
-| Source package cards sampled | 24 |
-| Staged sailings | 39 |
+| Source package cards sampled | 60 |
+| Staged sailings | 97 |
 | Schema errors | 0 |
 
 ## Price Observation
 
 | Metric | Value |
 | --- | ---: |
-| Min observed cabin price | 1010 |
-| Max observed cabin price | 8290 |
+| Min observed cabin price | 872 |
+| Max observed cabin price | 12880 |
 
 ## Warnings
 

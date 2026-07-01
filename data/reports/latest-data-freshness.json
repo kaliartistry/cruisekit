@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-01T19:30:47.430Z",
+  "generatedAt": "2026-07-01T22:34:14.857Z",
   "currentDate": "2026-07-01",
   "mode": "production-data-freshness",
   "thresholds": {
     "maxPublicAgeDays": 7,
     "maxIngestAgeDays": 7
   },
-  "manifestGeneratedAt": "2026-07-01T19:30:47.298Z",
+  "manifestGeneratedAt": "2026-07-01T22:34:14.736Z",
   "counts": {
-    "publicSailings": 279,
+    "publicSailings": 357,
     "stalePublicSailings": 0,
     "weeklyWatchlistSources": 9,
     "blockers": 0,
@@ -18,7 +18,7 @@
   "byCruiseLine": [
     {
       "cruiseLine": "carnival",
-      "publicSailings": 110,
+      "publicSailings": 117,
       "stalePublicSailings": 0,
       "oldestLastVerified": "2026-07-01",
       "latestLastVerified": "2026-07-01"
@@ -32,14 +32,14 @@
     },
     {
       "cruiseLine": "norwegian",
-      "publicSailings": 123,
+      "publicSailings": 186,
       "stalePublicSailings": 0,
       "oldestLastVerified": "2026-07-01",
       "latestLastVerified": "2026-07-01"
     },
     {
       "cruiseLine": "virgin-voyages",
-      "publicSailings": 26,
+      "publicSailings": 34,
       "stalePublicSailings": 0,
       "oldestLastVerified": "2026-07-01",
       "latestLastVerified": "2026-07-01"
@@ -60,18 +60,18 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T14:30:52.857Z",
-      "latestReviewGeneratedAt": "2026-07-01T14:33:15.978Z",
-      "publicSailings": 110
+      "latestImportGeneratedAt": "2026-07-01T22:32:22.485Z",
+      "latestReviewGeneratedAt": "2026-07-01T22:32:27.063Z",
+      "publicSailings": 117
     },
     {
       "cruiseLine": "norwegian",
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T19:26:33.699Z",
-      "latestReviewGeneratedAt": "2026-07-01T19:27:06.712Z",
-      "publicSailings": 123
+      "latestImportGeneratedAt": "2026-07-01T22:30:33.279Z",
+      "latestReviewGeneratedAt": "2026-07-01T22:31:17.642Z",
+      "publicSailings": 186
     },
     {
       "cruiseLine": "celebrity",
@@ -96,8 +96,8 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T14:30:56.710Z",
-      "latestReviewGeneratedAt": "2026-07-01T14:33:16.178Z",
+      "latestImportGeneratedAt": "2026-07-01T22:32:46.362Z",
+      "latestReviewGeneratedAt": "2026-07-01T22:33:14.419Z",
       "publicSailings": 20
     },
     {
@@ -123,9 +123,9 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T14:33:12.075Z",
-      "latestReviewGeneratedAt": "2026-07-01T14:33:16.803Z",
-      "publicSailings": 26
+      "latestImportGeneratedAt": "2026-07-01T22:31:35.142Z",
+      "latestReviewGeneratedAt": "2026-07-01T22:31:42.751Z",
+      "publicSailings": 34
     }
   ],
   "blockers": [],

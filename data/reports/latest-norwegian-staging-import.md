@@ -1,6 +1,6 @@
 # Norwegian Staging Import Report
 
-Generated: 2026-07-01T19:26:33.699Z
+Generated: 2026-07-01T22:30:33.279Z
 
 Mode: staging-only
 
@@ -8,9 +8,9 @@ Mode: staging-only
 
 | Metric | Count |
 | --- | ---: |
-| Search pages | 4 |
-| Source itineraries sampled | 29 |
-| Staged sailings | 41 |
+| Search pages | 2 |
+| Source itineraries sampled | 50 |
+| Staged sailings | 79 |
 | Schema errors | 0 |
 
 ## Price Observation
@@ -18,17 +18,17 @@ Mode: staging-only
 | Metric | Value |
 | --- | ---: |
 | Min observed starting price | 859 |
-| Max observed starting price | 3989 |
+| Max observed starting price | 5699 |
 
 ## By Ship
 
-- Norwegian Bliss: 2
-- Norwegian Dawn: 7
-- Norwegian Epic: 6
-- Norwegian Gem: 7
-- Norwegian Jade: 8
-- Norwegian Jewel: 1
-- Norwegian Star: 10
+- Norwegian Dawn: 12
+- Norwegian Epic: 10
+- Norwegian Gem: 21
+- Norwegian Pearl: 13
+- Norwegian Sky: 2
+- Norwegian Sun: 1
+- Norwegian Viva: 20
 
 ## Promotion Rules
 

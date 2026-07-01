@@ -1,6 +1,6 @@
 # CruiseKit Data Freshness Report
 
-Generated: 2026-07-01T19:30:47.430Z
+Generated: 2026-07-01T22:34:14.857Z
 
 Current date: 2026-07-01
 
@@ -10,7 +10,7 @@ Production freshness threshold: 7 days.
 
 | Metric | Count |
 | --- | ---: |
-| Public sailings | 279 |
+| Public sailings | 357 |
 | Stale public sailings | 0 |
 | Weekly watchlist sources | 9 |
 | Blockers | 0 |
@@ -21,24 +21,24 @@ Production freshness threshold: 7 days.
 
 | Cruise line | Public sailings | Stale | Oldest check | Latest check |
 | --- | ---: | ---: | --- | --- |
-| carnival | 110 | 0 | 2026-07-01 | 2026-07-01 |
+| carnival | 117 | 0 | 2026-07-01 | 2026-07-01 |
 | holland-america | 20 | 0 | 2026-07-01 | 2026-07-01 |
-| norwegian | 123 | 0 | 2026-07-01 | 2026-07-01 |
-| virgin-voyages | 26 | 0 | 2026-07-01 | 2026-07-01 |
+| norwegian | 186 | 0 | 2026-07-01 | 2026-07-01 |
+| virgin-voyages | 34 | 0 | 2026-07-01 | 2026-07-01 |
 
 ## Weekly Source Watchlist
 
 | Cruise line | Cadence | Importer | Last import | Last review | Public sailings |
 | --- | --- | --- | --- | --- | ---: |
 | royal-caribbean | weekly | yes | 2026-07-01T14:32:32.121Z | missing | 0 |
-| carnival | weekly | yes | 2026-07-01T14:30:52.857Z | 2026-07-01T14:33:15.978Z | 110 |
-| norwegian | weekly | yes | 2026-07-01T19:26:33.699Z | 2026-07-01T19:27:06.712Z | 123 |
+| carnival | weekly | yes | 2026-07-01T22:32:22.485Z | 2026-07-01T22:32:27.063Z | 117 |
+| norwegian | weekly | yes | 2026-07-01T22:30:33.279Z | 2026-07-01T22:31:17.642Z | 186 |
 | celebrity | weekly | no | missing | missing | 0 |
 | princess | weekly | yes | 2026-07-01T14:32:31.636Z | 2026-07-01T14:33:16.601Z | 0 |
-| holland-america | weekly | yes | 2026-07-01T14:30:56.710Z | 2026-07-01T14:33:16.178Z | 20 |
+| holland-america | weekly | yes | 2026-07-01T22:32:46.362Z | 2026-07-01T22:33:14.419Z | 20 |
 | msc | weekly | yes | 2026-07-01T14:31:30.828Z | missing | 0 |
 | disney | weekly | no | missing | missing | 0 |
-| virgin-voyages | weekly | yes | 2026-07-01T14:33:12.075Z | 2026-07-01T14:33:16.803Z | 26 |
+| virgin-voyages | weekly | yes | 2026-07-01T22:31:35.142Z | 2026-07-01T22:31:42.751Z | 34 |
 
 ## Blockers
 

@@ -1,682 +1,184 @@
 {
-  "generatedAt": "2026-07-01T14:37:33.187Z",
+  "generatedAt": "2026-07-01T22:32:40.729Z",
   "provider": "carnival",
   "mode": "apply",
-  "sourceRunId": "2026-07-01T14-30-52-857Z",
-  "sourceReviewGeneratedAt": "2026-07-01T14:33:15.978Z",
+  "sourceRunId": "2026-07-01T22-32-22-485Z",
+  "sourceReviewGeneratedAt": "2026-07-01T22:32:27.063Z",
   "options": {
     "apply": true,
     "limit": 40,
-    "ids": [],
+    "ids": [
+      "carnival-carnival-sunshine-20271009-25089",
+      "carnival-carnival-sunshine-20270911-25086",
+      "carnival-carnival-sunshine-20270717-25080",
+      "carnival-carnival-sunshine-20270919-25087",
+      "carnival-carnival-sunshine-20270822-25084",
+      "carnival-carnival-sunshine-20270609-25076",
+      "carnival-carnival-sunshine-20270725-25081"
+    ],
     "includePriceChanges": false
   },
   "counts": {
-    "seedBefore": 159,
-    "seedAfter": 199,
-    "promotedNew": 40,
+    "seedBefore": 395,
+    "seedAfter": 402,
+    "promotedNew": 7,
     "skippedExisting": 0,
     "priceUpdates": 0
   },
   "promoted": [
     {
-      "id": "carnival-carnival-valor-20260910-22089",
-      "shipName": "Carnival Valor",
-      "sailingName": "4-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2026-09-10",
-      "returnDate": "2026-09-14",
-      "nights": 4,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
+      "id": "carnival-carnival-sunshine-20271009-25089",
+      "shipName": "Carnival Sunshine",
+      "sailingName": "7-Day Mediterranean from Barcelona, Spain",
+      "departureDate": "2027-10-09",
+      "returnDate": "2027-10-16",
+      "nights": 7,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Cozumel"
+        "Barcelona",
+        "Marseille (Provence)",
+        "Naples (Amalfi/Pompeii)",
+        "Palermo, Sicily",
+        "La Goulette (Tunis)",
+        "Barcelona"
       ],
-      "startingPrice": 339,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=WCD&durDays=4&shipCode=VA&subRegionCode=CW&sailingID=22089&sailDate=09102026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "startingPrice": 746,
+      "directLink": "https://www.carnival.com/booking?embkCode=BCN&itinCode=ME5&durDays=7&shipCode=SH&subRegionCode=ME&sailingID=25089&sailDate=10092027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-paradise-20271118-24345",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-11-18",
-      "returnDate": "2027-11-22",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
+      "id": "carnival-carnival-sunshine-20270911-25086",
+      "shipName": "Carnival Sunshine",
+      "sailingName": "8-Day Mediterranean from Barcelona, Spain",
+      "departureDate": "2027-09-11",
+      "returnDate": "2027-09-19",
+      "nights": 8,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Cozumel"
+        "Barcelona",
+        "La Goulette (Tunis)",
+        "Palermo, Sicily",
+        "Naples (Amalfi/Pompeii)",
+        "Ajaccio, Corsica",
+        "Marseille (Provence)",
+        "Barcelona"
       ],
-      "startingPrice": 351,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24345&sailDate=11182027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "startingPrice": 759,
+      "directLink": "https://www.carnival.com/booking?embkCode=BCN&itinCode=MEO&durDays=8&shipCode=SH&subRegionCode=ME&sailingID=25086&sailDate=09112027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-paradise-20280210-24363",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2028-02-10",
-      "returnDate": "2028-02-14",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
+      "id": "carnival-carnival-sunshine-20270717-25080",
+      "shipName": "Carnival Sunshine",
+      "sailingName": "8-Day Mediterranean from Barcelona, Spain",
+      "departureDate": "2027-07-17",
+      "returnDate": "2027-07-25",
+      "nights": 8,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Cozumel"
+        "Barcelona",
+        "La Goulette (Tunis)",
+        "Palermo, Sicily",
+        "Naples (Amalfi/Pompeii)",
+        "Ajaccio, Corsica",
+        "Marseille (Provence)",
+        "Barcelona"
       ],
-      "startingPrice": 352,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24363&sailDate=02102028&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "startingPrice": 859,
+      "directLink": "https://www.carnival.com/booking?embkCode=BCN&itinCode=MEO&durDays=8&shipCode=SH&subRegionCode=ME&sailingID=25080&sailDate=07172027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-breeze-20270107-20915",
-      "shipName": "Carnival Breeze",
-      "sailingName": "4-Day Western Caribbean from Galveston, TX",
-      "departureDate": "2027-01-07",
-      "returnDate": "2027-01-11",
-      "nights": 4,
-      "departurePort": "Galveston, TX",
-      "destinationRegion": "caribbean",
+      "id": "carnival-carnival-sunshine-20270919-25087",
+      "shipName": "Carnival Sunshine",
+      "sailingName": "10-Day Mediterranean from Barcelona, Spain",
+      "departureDate": "2027-09-19",
+      "returnDate": "2027-09-29",
+      "nights": 10,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Cozumel"
+        "Barcelona",
+        "Marseille (Provence)",
+        "Genoa",
+        "Corfu",
+        "Bar",
+        "Bari",
+        "Naples (Amalfi/Pompeii)"
       ],
-      "startingPrice": 356,
-      "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=GLB&durDays=4&shipCode=BR&subRegionCode=CW&sailingID=20915&sailDate=01072027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "startingPrice": 833,
+      "directLink": "https://www.carnival.com/booking?embkCode=BCN&itinCode=MEH&durDays=10&shipCode=SH&subRegionCode=ME&sailingID=25087&sailDate=09192027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-breeze-20270204-20921",
-      "shipName": "Carnival Breeze",
-      "sailingName": "4-Day Western Caribbean from Galveston, TX",
-      "departureDate": "2027-02-04",
-      "returnDate": "2027-02-08",
-      "nights": 4,
-      "departurePort": "Galveston, TX",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 356,
-      "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=GLB&durDays=4&shipCode=BR&subRegionCode=CW&sailingID=20921&sailDate=02042027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20271007-24336",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-10-07",
-      "returnDate": "2027-10-11",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 361,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24336&sailDate=10072027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20271021-24339",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-10-21",
-      "returnDate": "2027-10-25",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 361,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24339&sailDate=10212027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20271104-24342",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-11-04",
-      "returnDate": "2027-11-08",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 361,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24342&sailDate=11042027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20271202-24348",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-12-02",
-      "returnDate": "2027-12-06",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 361,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24348&sailDate=12022027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-valor-20270128-22119",
-      "shipName": "Carnival Valor",
-      "sailingName": "4-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2027-01-28",
-      "returnDate": "2027-02-01",
-      "nights": 4,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 361,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=WCD&durDays=4&shipCode=VA&subRegionCode=CW&sailingID=22119&sailDate=01282027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20260809-21623",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2026-08-09",
-      "returnDate": "2026-08-13",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 364,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=21623&sailDate=08092026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20261217-21651",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2026-12-17",
-      "returnDate": "2026-12-21",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 364,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=21651&sailDate=12172026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-valor-20260827-22086",
-      "shipName": "Carnival Valor",
-      "sailingName": "4-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2026-08-27",
-      "returnDate": "2026-08-31",
-      "nights": 4,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 367,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=WCD&durDays=4&shipCode=VA&subRegionCode=CW&sailingID=22086&sailDate=08272026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-valor-20261022-22098",
-      "shipName": "Carnival Valor",
-      "sailingName": "4-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2026-10-22",
-      "returnDate": "2026-10-26",
-      "nights": 4,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 371,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=WCD&durDays=4&shipCode=VA&subRegionCode=CW&sailingID=22098&sailDate=10222026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-valor-20260924-22092",
-      "shipName": "Carnival Valor",
-      "sailingName": "4-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2026-09-24",
-      "returnDate": "2026-09-28",
-      "nights": 4,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 374,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=WCD&durDays=4&shipCode=VA&subRegionCode=CW&sailingID=22092&sailDate=09242026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-valor-20261105-22101",
-      "shipName": "Carnival Valor",
-      "sailingName": "4-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2026-11-05",
-      "returnDate": "2026-11-09",
-      "nights": 4,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 376,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=WCD&durDays=4&shipCode=VA&subRegionCode=CW&sailingID=22101&sailDate=11052026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-valor-20270114-22116",
-      "shipName": "Carnival Valor",
-      "sailingName": "4-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2027-01-14",
-      "returnDate": "2027-01-18",
-      "nights": 4,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 376,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=WCD&durDays=4&shipCode=VA&subRegionCode=CW&sailingID=22116&sailDate=01142027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-breeze-20270218-20924",
-      "shipName": "Carnival Breeze",
-      "sailingName": "4-Day Western Caribbean from Galveston, TX",
-      "departureDate": "2027-02-18",
-      "returnDate": "2027-02-22",
-      "nights": 4,
-      "departurePort": "Galveston, TX",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 376,
-      "directLink": "https://www.carnival.com/booking?embkCode=GAL&itinCode=GLB&durDays=4&shipCode=BR&subRegionCode=CW&sailingID=20924&sailDate=02182027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-vista-20261206-22170",
-      "shipName": "Carnival Vista",
-      "sailingName": "6-Day Eastern Caribbean from Port Canaveral (Orlando), FL",
-      "departureDate": "2026-12-06",
-      "returnDate": "2026-12-12",
-      "nights": 6,
-      "departurePort": "Port Canaveral (Orlando), FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Amber Cove",
-        "RelaxAway, Half Moon Cay™",
-        "Celebration Key™"
-      ],
-      "startingPrice": 377,
-      "directLink": "https://www.carnival.com/booking?embkCode=PCV&itinCode=CEF&durDays=6&shipCode=VS&subRegionCode=CE&sailingID=22170&sailDate=12062026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20270826-24327",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-08-26",
-      "returnDate": "2027-08-30",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24327&sailDate=08262027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-dream-20280108-23082",
-      "shipName": "Carnival Dream",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2028-01-08",
-      "returnDate": "2028-01-13",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=DR&subRegionCode=CW&sailingID=23082&sailDate=01082028&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-dream-20280117-23084",
-      "shipName": "Carnival Dream",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2028-01-17",
-      "returnDate": "2028-01-22",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=DR&subRegionCode=CW&sailingID=23084&sailDate=01172028&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-dream-20280122-23085",
-      "shipName": "Carnival Dream",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2028-01-22",
-      "returnDate": "2028-01-27",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=DR&subRegionCode=CW&sailingID=23085&sailDate=01222028&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-dream-20280131-23087",
-      "shipName": "Carnival Dream",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2028-01-31",
-      "returnDate": "2028-02-05",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=DR&subRegionCode=CW&sailingID=23087&sailDate=01312028&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-firenze-20271114-25181",
-      "shipName": "Carnival Firenze",
-      "sailingName": "5-Day Eastern Caribbean from Port Canaveral (Orlando), FL",
-      "departureDate": "2027-11-14",
-      "returnDate": "2027-11-19",
-      "nights": 5,
-      "departurePort": "Port Canaveral (Orlando), FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Amber Cove",
-        "Grand Turk"
-      ],
-      "startingPrice": 379,
-      "directLink": "https://www.carnival.com/booking?embkCode=PCV&itinCode=ECD&durDays=5&shipCode=FN&subRegionCode=CE&sailingID=25181&sailDate=11142027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20280224-24366",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2028-02-24",
-      "returnDate": "2028-02-28",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 382,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24366&sailDate=02242028&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20261212-21650",
-      "shipName": "Carnival Paradise",
-      "sailingName": "5-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2026-12-12",
-      "returnDate": "2026-12-17",
-      "nights": 5,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Isla Tropicale, Roatan",
-        "Cozumel"
-      ],
-      "startingPrice": 384,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WCI&durDays=5&shipCode=PA&subRegionCode=CW&sailingID=21650&sailDate=12122026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-dream-20280205-23088",
-      "shipName": "Carnival Dream",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2028-02-05",
-      "returnDate": "2028-02-10",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
-      ],
-      "startingPrice": 384,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=DR&subRegionCode=CW&sailingID=23088&sailDate=02052028&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-vista-20261212-22171",
-      "shipName": "Carnival Vista",
-      "sailingName": "6-Day Eastern Caribbean from Port Canaveral (Orlando), FL",
-      "departureDate": "2026-12-12",
-      "returnDate": "2026-12-18",
-      "nights": 6,
-      "departurePort": "Port Canaveral (Orlando), FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Amber Cove",
-        "RelaxAway, Half Moon Cay™",
-        "Celebration Key™"
-      ],
-      "startingPrice": 385,
-      "directLink": "https://www.carnival.com/booking?embkCode=PCV&itinCode=CEF&durDays=6&shipCode=VS&subRegionCode=CE&sailingID=22171&sailDate=12122026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-vista-20270117-22176",
-      "shipName": "Carnival Vista",
-      "sailingName": "6-Day Eastern Caribbean from Port Canaveral (Orlando), FL",
-      "departureDate": "2027-01-17",
-      "returnDate": "2027-01-23",
-      "nights": 6,
-      "departurePort": "Port Canaveral (Orlando), FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Amber Cove",
-        "RelaxAway, Half Moon Cay™",
-        "Celebration Key™"
-      ],
-      "startingPrice": 387,
-      "directLink": "https://www.carnival.com/booking?embkCode=PCV&itinCode=CEF&durDays=6&shipCode=VS&subRegionCode=CE&sailingID=22176&sailDate=01172027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-vista-20270131-22178",
-      "shipName": "Carnival Vista",
-      "sailingName": "6-Day Eastern Caribbean from Port Canaveral (Orlando), FL",
-      "departureDate": "2027-01-31",
-      "returnDate": "2027-02-06",
-      "nights": 6,
-      "departurePort": "Port Canaveral (Orlando), FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Amber Cove",
-        "RelaxAway, Half Moon Cay™",
-        "Celebration Key™"
-      ],
-      "startingPrice": 387,
-      "directLink": "https://www.carnival.com/booking?embkCode=PCV&itinCode=CEF&durDays=6&shipCode=VS&subRegionCode=CE&sailingID=22178&sailDate=01312027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-dream-20270913-23057",
-      "shipName": "Carnival Dream",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2027-09-13",
-      "returnDate": "2027-09-18",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
-      ],
-      "startingPrice": 389,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=DR&subRegionCode=CW&sailingID=23057&sailDate=09132027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-dream-20270918-23058",
-      "shipName": "Carnival Dream",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2027-09-18",
-      "returnDate": "2027-09-23",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
-      ],
-      "startingPrice": 389,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=DR&subRegionCode=CW&sailingID=23058&sailDate=09182027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-dream-20270927-23060",
-      "shipName": "Carnival Dream",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2027-09-27",
-      "returnDate": "2027-10-02",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
-      ],
-      "startingPrice": 389,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=DR&subRegionCode=CW&sailingID=23060&sailDate=09272027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20270808-24323",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-08-08",
-      "returnDate": "2027-08-12",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 392,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24323&sailDate=08082027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20270822-24326",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
+      "id": "carnival-carnival-sunshine-20270822-25084",
+      "shipName": "Carnival Sunshine",
+      "sailingName": "10-Day Mediterranean from Barcelona, Spain",
       "departureDate": "2027-08-22",
-      "returnDate": "2027-08-26",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
+      "returnDate": "2027-09-01",
+      "nights": 10,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Cozumel"
+        "Barcelona",
+        "Marseille (Provence)",
+        "Genoa",
+        "Livorno (Florence & Pisa)",
+        "Naples (Amalfi/Pompeii)",
+        "Malta",
+        "La Goulette (Tunis)"
       ],
-      "startingPrice": 392,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=24326&sailDate=08222027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "startingPrice": 837,
+      "directLink": "https://www.carnival.com/booking?embkCode=BCN&itinCode=ME9&durDays=10&shipCode=SH&subRegionCode=ME&sailingID=25084&sailDate=08222027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-valor-20270215-22123",
-      "shipName": "Carnival Valor",
-      "sailingName": "5-Day Western Caribbean from New Orleans, LA",
-      "departureDate": "2027-02-15",
-      "returnDate": "2027-02-20",
-      "nights": 5,
-      "departurePort": "New Orleans, LA",
-      "destinationRegion": "caribbean",
+      "id": "carnival-carnival-sunshine-20270609-25076",
+      "shipName": "Carnival Sunshine",
+      "sailingName": "10-Day Mediterranean from Barcelona, Spain",
+      "departureDate": "2027-06-09",
+      "returnDate": "2027-06-19",
+      "nights": 10,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Cozumel",
-        "Progreso, Yucatán"
+        "Barcelona",
+        "La Goulette (Tunis)",
+        "Malta",
+        "Naples (Amalfi/Pompeii)",
+        "Civitavecchia (Rome)",
+        "Livorno (Florence & Pisa)",
+        "Marseille (Provence)",
+        "Barcelona"
       ],
-      "startingPrice": 394,
-      "directLink": "https://www.carnival.com/booking?embkCode=MSY&itinCode=CW6&durDays=5&shipCode=VA&subRegionCode=CW&sailingID=22123&sailDate=02152027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "startingPrice": 1028,
+      "directLink": "https://www.carnival.com/booking?embkCode=BCN&itinCode=ME7&durDays=10&shipCode=SH&subRegionCode=ME&sailingID=25076&sailDate=06092027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "carnival-carnival-paradise-20270408-21675",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-04-08",
-      "returnDate": "2027-04-12",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
+      "id": "carnival-carnival-sunshine-20270725-25081",
+      "shipName": "Carnival Sunshine",
+      "sailingName": "10-Day Mediterranean from Barcelona, Spain",
+      "departureDate": "2027-07-25",
+      "returnDate": "2027-08-04",
+      "nights": 10,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Cozumel"
+        "Barcelona",
+        "Marseille (Provence)",
+        "Savona",
+        "Salerno (Amalfi/Pompeii)",
+        "Catania, Sicily",
+        "Malta",
+        "La Goulette (Tunis)",
+        "Solar Eclipse Scenic Cruising"
       ],
-      "startingPrice": 395,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=21675&sailDate=04082027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-paradise-20270422-21678",
-      "shipName": "Carnival Paradise",
-      "sailingName": "4-Day Western Caribbean from Tampa, FL",
-      "departureDate": "2027-04-22",
-      "returnDate": "2027-04-26",
-      "nights": 4,
-      "departurePort": "Tampa, FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel"
-      ],
-      "startingPrice": 395,
-      "directLink": "https://www.carnival.com/booking?embkCode=TPA&itinCode=WC2&durDays=4&shipCode=PA&subRegionCode=CW&sailingID=21678&sailDate=04222027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "carnival-carnival-vista-20261025-22164",
-      "shipName": "Carnival Vista",
-      "sailingName": "6-Day Eastern Caribbean from Port Canaveral (Orlando), FL",
-      "departureDate": "2026-10-25",
-      "returnDate": "2026-10-31",
-      "nights": 6,
-      "departurePort": "Port Canaveral (Orlando), FL",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Amber Cove",
-        "RelaxAway, Half Moon Cay™",
-        "Celebration Key™"
-      ],
-      "startingPrice": 396,
-      "directLink": "https://www.carnival.com/booking?embkCode=PCV&itinCode=CEF&durDays=6&shipCode=VS&subRegionCode=CE&sailingID=22164&sailDate=10252026&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD",
+      "startingPrice": 1323,
+      "directLink": "https://www.carnival.com/booking?embkCode=BCN&itinCode=JU1&durDays=10&shipCode=SH&subRegionCode=ME&sailingID=25081&sailDate=07252027&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=J&locality=1&currency=USD",
       "confidence": "itinerary_verified_price_check_required"
     }
   ],

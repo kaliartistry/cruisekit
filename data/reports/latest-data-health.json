@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-07-01T19:30:47.357Z",
-  "manifestGeneratedAt": "2026-07-01T19:30:47.298Z",
+  "generatedAt": "2026-07-01T22:34:14.796Z",
+  "manifestGeneratedAt": "2026-07-01T22:34:14.736Z",
   "counts": {
-    "seedSailings": 324,
-    "publicSailings": 279,
+    "seedSailings": 402,
+    "publicSailings": 357,
     "seedDeals": 0,
     "publicDeals": 0,
-    "mobileSailings": 279,
-    "mobileDeals": 279,
+    "mobileSailings": 357,
+    "mobileDeals": 357,
     "filteredExpiredSeedSailings": 7
   },
   "byCruiseLine": {
     "azamara": 8,
-    "carnival": 113,
+    "carnival": 120,
     "holland-america": 28,
-    "norwegian": 131,
+    "norwegian": 194,
     "royal-caribbean": 4,
-    "virgin-voyages": 40
+    "virgin-voyages": 48
   },
   "byConfidence": {
     "internal_do_not_publish": 38,
-    "itinerary_verified_price_check_required": 286
+    "itinerary_verified_price_check_required": 364
   },
   "currentDate": "2026-07-01",
   "blockers": [],
