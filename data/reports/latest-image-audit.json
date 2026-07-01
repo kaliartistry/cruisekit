@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-01T14:42:48.269Z",
+  "generatedAt": "2026-07-01T19:30:47.998Z",
   "counts": {
     "canonicalDeals": 0,
-    "mobileDeals": 238,
-    "checkedImages": 238
+    "mobileDeals": 279,
+    "checkedImages": 279
   },
   "imageUsage": {
     "tampa": 44,
@@ -11,32 +11,37 @@
     "puerto-plata": 38,
     "cozumel": 29,
     "great-stirrup-cay": 16,
+    "cartagena": 15,
     "galveston": 11,
     "miami": 11,
+    "barcelona": 9,
     "port-canaveral": 6,
+    "dubrovnik": 5,
+    "shanghai": 5,
+    "sicily-messina": 5,
     "roatan": 4,
+    "rome-civitavecchia": 4,
     "santorini": 4,
-    "vancouver": 4,
     "cabo-san-lucas": 3,
     "grand-turk": 3,
     "key-west": 3,
-    "barcelona": 2,
+    "sitka": 3,
+    "vancouver": 3,
     "dover": 2,
-    "dubrovnik": 2,
     "ketchikan": 2,
+    "lisbon": 2,
     "san-diego": 2,
     "seattle": 2,
-    "sicily-messina": 2,
     "amsterdam": 1,
     "belize-city": 1,
     "bermuda": 1,
     "catalina-island": 1,
     "falmouth": 1,
+    "funchal": 1,
     "halifax": 1,
-    "lisbon": 1,
-    "oslo": 1,
-    "rome-civitavecchia": 1,
-    "sitka": 1
+    "harvest-caye": 1,
+    "juneau": 1,
+    "oslo": 1
   },
   "blockers": [],
   "warnings": [],
@@ -323,6 +328,16 @@
     },
     {
       "severity": "info",
+      "id": "mobile:holland-america-oosterdam-20260923-10-day-adriatic-allure-croatia-greek-isles-and-istanbul",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:holland-america-oosterdam-20260923-21-day-croatia-greece-and-istanbul-collectors-voyage",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
       "id": "mobile:holland-america-oosterdam-20261024-11-day-mediterranean-splendor-greece-italy-and-provence",
       "message": "Image santorini does not match expected destination image(s): barcelona"
     },
@@ -330,6 +345,51 @@
       "severity": "info",
       "id": "mobile:holland-america-rotterdam-20261031-10-day-western-caribbean-greater-antilles-belize-and-mexico",
       "message": "Image belize-city does not match expected destination image(s): costa-maya, cozumel, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-epic-20260705-58611",
+      "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-epic-20260719-58613",
+      "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260719-58691",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-epic-20260802-58615",
+      "message": "Image rome-civitavecchia does not match expected destination image(s): barcelona"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260830-58697",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-gem-20260913-58699",
+      "message": "Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-star-20271202-62369",
+      "message": "Image lisbon does not match expected destination image(s): cartagena"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-jewel-20271209-61892",
+      "message": "Image harvest-caye does not match expected destination image(s): cartagena, costa-maya, cozumel, grand-cayman, miami, progreso"
+    },
+    {
+      "severity": "info",
+      "id": "mobile:norwegian-norwegian-star-20280317-62370",
+      "message": "Image funchal does not match expected destination image(s): cartagena"
     },
     {
       "severity": "info",

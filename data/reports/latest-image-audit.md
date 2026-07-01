@@ -1,14 +1,14 @@
 # CruiseKit Bundle Image Audit
 
-Generated: 2026-07-01T14:42:48.269Z
+Generated: 2026-07-01T19:30:47.998Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
 | Canonical deals | 0 |
-| Mobile deals | 238 |
-| Checked image references | 238 |
+| Mobile deals | 279 |
+| Checked image references | 279 |
 
 ## Blockers
 
@@ -76,8 +76,19 @@ Generated: 2026-07-01T14:42:48.269Z
 - info: mobile:carnival-carnival-dream-20280131-23087 - Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso
 - info: mobile:carnival-carnival-dream-20280205-23088 - Image new-orleans does not match expected destination image(s): costa-maya, cozumel, progreso
 - info: mobile:holland-america-oosterdam-20260829-7-day-western-mediterranean - Image rome-civitavecchia does not match expected destination image(s): barcelona
+- info: mobile:holland-america-oosterdam-20260923-10-day-adriatic-allure-croatia-greek-isles-and-istanbul - Image dubrovnik does not match expected destination image(s): barcelona
+- info: mobile:holland-america-oosterdam-20260923-21-day-croatia-greece-and-istanbul-collectors-voyage - Image dubrovnik does not match expected destination image(s): barcelona
 - info: mobile:holland-america-oosterdam-20261024-11-day-mediterranean-splendor-greece-italy-and-provence - Image santorini does not match expected destination image(s): barcelona
 - info: mobile:holland-america-rotterdam-20261031-10-day-western-caribbean-greater-antilles-belize-and-mexico - Image belize-city does not match expected destination image(s): costa-maya, cozumel, progreso
+- info: mobile:norwegian-norwegian-epic-20260705-58611 - Image rome-civitavecchia does not match expected destination image(s): barcelona
+- info: mobile:norwegian-norwegian-epic-20260719-58613 - Image rome-civitavecchia does not match expected destination image(s): barcelona
+- info: mobile:norwegian-norwegian-gem-20260719-58691 - Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina
+- info: mobile:norwegian-norwegian-epic-20260802-58615 - Image rome-civitavecchia does not match expected destination image(s): barcelona
+- info: mobile:norwegian-norwegian-gem-20260830-58697 - Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina
+- info: mobile:norwegian-norwegian-gem-20260913-58699 - Image dubrovnik does not match expected destination image(s): barcelona, sicily-messina
+- info: mobile:norwegian-norwegian-star-20271202-62369 - Image lisbon does not match expected destination image(s): cartagena
+- info: mobile:norwegian-norwegian-jewel-20271209-61892 - Image harvest-caye does not match expected destination image(s): cartagena, costa-maya, cozumel, grand-cayman, miami, progreso
+- info: mobile:norwegian-norwegian-star-20280317-62370 - Image funchal does not match expected destination image(s): cartagena
 - info: mobile:virgin-voyages-resilient-lady-20260716-4nkw - Image key-west does not match expected destination image(s): bimini, freeport, miami, nassau
 - info: mobile:virgin-voyages-valiant-lady-20260726-10nwdf - Image lisbon does not match expected destination image(s): barcelona
 - info: mobile:virgin-voyages-resilient-lady-20260730-4nkw - Image key-west does not match expected destination image(s): bimini, freeport, miami, nassau
@@ -98,18 +109,18 @@ Generated: 2026-07-01T14:42:48.269Z
 - puerto-plata: 38
 - cozumel: 29
 - great-stirrup-cay: 16
+- cartagena: 15
 - galveston: 11
 - miami: 11
+- barcelona: 9
 - port-canaveral: 6
+- dubrovnik: 5
+- shanghai: 5
+- sicily-messina: 5
 - roatan: 4
+- rome-civitavecchia: 4
 - santorini: 4
-- vancouver: 4
 - cabo-san-lucas: 3
 - grand-turk: 3
 - key-west: 3
-- barcelona: 2
-- dover: 2
-- dubrovnik: 2
-- ketchikan: 2
-- san-diego: 2
-- seattle: 2
+- sitka: 3

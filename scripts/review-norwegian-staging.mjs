@@ -11,6 +11,13 @@ const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const reportDir = resolve(repoRoot, "data/reports");
 const priceDeltaThreshold = Number.parseFloat(process.env.PRICE_DELTA_THRESHOLD ?? "0.15");
 const maxRecommendations = Number.parseInt(process.env.NORWEGIAN_REVIEW_LIMIT ?? "40", 10);
+const targetRegions = new Set(
+  (process.env.NORWEGIAN_REVIEW_TARGET_REGIONS ??
+    "mediterranean,asia,south-america,panama-canal,canada-new-england,australia-new-zealand")
+    .split(",")
+    .map((region) => region.trim())
+    .filter(Boolean),
+);
 
 async function loadJson(relPath) {
   return JSON.parse(await readFile(resolve(repoRoot, relPath), "utf8"));
@@ -58,11 +65,16 @@ function percent(value) {
 
 function candidateScore(record) {
   let score = 0;
+  if (targetRegions.has(record.destinationRegion)) score += 8;
   if (record.destinationRegion === "caribbean" || record.destinationRegion === "bahamas") score += 3;
+  if (record.destinationRegion === "mediterranean" || record.destinationRegion === "asia") score += 3;
+  if (record.destinationRegion === "south-america" || record.destinationRegion === "panama-canal") score += 3;
   if (record.nights >= 5 && record.nights <= 8) score += 2;
+  if (record.nights >= 9 && record.nights <= 16) score += 2;
   if (record.startingPrice != null && record.startingPrice <= 900) score += 3;
   if (record.startingPrice != null && record.startingPrice <= 700) score += 2;
   if (record.departureDate >= "2026-07-01") score += 1;
+  if ((record.itineraryPorts ?? []).length >= 2) score += 3;
   return score;
 }
 
@@ -120,7 +132,7 @@ async function main() {
     sourceRunId: importReport.runId,
     mode: "review-only",
     matchKey: "cruiseLine + normalized shipName + departureDate",
-    thresholds: { priceDeltaThreshold, maxRecommendations },
+    thresholds: { priceDeltaThreshold, maxRecommendations, targetRegions: [...targetRegions] },
     counts: {
       seedNorwegian: seedNorwegian.length,
       stagedNorwegian: staged.length,

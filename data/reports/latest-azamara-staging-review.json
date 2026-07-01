@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-01T14:33:15.755Z",
+  "generatedAt": "2026-07-01T19:30:28.072Z",
   "provider": "azamara",
-  "sourceRunId": "2026-07-01T14-29-51-994Z",
+  "sourceRunId": "2026-07-01T19-29-41-607Z",
   "mode": "review-only",
   "matchKey": "cruiseLine + normalized shipName + departureDate",
   "thresholds": {
@@ -42,7 +42,7 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.azamara.com/cruises/jr261029-009-bermuda-sint-maarten-british-virgin-islands-cruise-hamilton-philipsburg-road-town",
-      "confidence": "itinerary_verified_price_check_required"
+      "confidence": "internal_do_not_publish"
     },
     {
       "id": "azamara-azamara-journey-20261107-jr261107-007",
@@ -67,7 +67,7 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.azamara.com/cruises/jr261107-007-southern-caribbean-cruise-british-virgin-islands-martinique-grenada",
-      "confidence": "itinerary_verified_price_check_required"
+      "confidence": "internal_do_not_publish"
     },
     {
       "id": "azamara-azamara-journey-20261114-jr261114-007",
@@ -92,7 +92,7 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.azamara.com/cruises/jr261114-007-eastern-caribbean-cruise-barbados-saint-lucia-british-virgin-islands",
-      "confidence": "itinerary_verified_price_check_required"
+      "confidence": "internal_do_not_publish"
     },
     {
       "id": "azamara-azamara-journey-20261121-jr261121-007",
@@ -117,7 +117,7 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.azamara.com/cruises/jr261121-007-southern-caribbean-cruise-bequia-grenada-tobago",
-      "confidence": "itinerary_verified_price_check_required"
+      "confidence": "internal_do_not_publish"
     },
     {
       "id": "azamara-azamara-journey-20261128-jr261128-007",
@@ -142,7 +142,7 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.azamara.com/cruises/jr261128-007-eastern-caribbean-cruise-saint-kitts-nevis-saint-barthelemy",
-      "confidence": "itinerary_verified_price_check_required"
+      "confidence": "internal_do_not_publish"
     },
     {
       "id": "azamara-azamara-journey-20261205-jr261205-007",
@@ -167,7 +167,7 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.azamara.com/cruises/jr261205-007-southern-caribbean-cruise-antigua-martinique-grenada",
-      "confidence": "itinerary_verified_price_check_required"
+      "confidence": "internal_do_not_publish"
     },
     {
       "id": "azamara-azamara-journey-20261212-jr261212-006",
@@ -191,7 +191,7 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.azamara.com/cruises/jr261212-006-eastern-caribbean-cruise-saint-lucia-dominica-sint-maarten",
-      "confidence": "itinerary_verified_price_check_required"
+      "confidence": "internal_do_not_publish"
     },
     {
       "id": "azamara-azamara-journey-20261218-jr261218-010",
@@ -218,7 +218,7 @@
       "priceBasis": "per-person-double-occupancy",
       "taxesAndFeesIncluded": true,
       "directLink": "https://www.azamara.com/cruises/jr261218-010-caribbean-holiday-cruise-antigua-martinique-saint-barthelemy",
-      "confidence": "itinerary_verified_price_check_required"
+      "confidence": "internal_do_not_publish"
     }
   ]
 }

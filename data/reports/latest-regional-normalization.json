@@ -1,0 +1,118 @@
+{
+  "generatedAt": "2026-07-01T19:26:28.628Z",
+  "mode": "apply",
+  "counts": {
+    "seedRecords": 283,
+    "changed": 14,
+    "remainingOther": 1
+  },
+  "changes": [
+    {
+      "id": "holland-america-westerdam-20260621-7-day-glacier-discovery-northbound",
+      "sailingName": "7-Day Glacier Discovery Northbound",
+      "from": "other",
+      "to": "alaska",
+      "reason": "Alaska endpoint or Glacier Discovery itinerary is present."
+    },
+    {
+      "id": "holland-america-westerdam-20260705-7-day-glacier-discovery-northbound",
+      "sailingName": "7-Day Glacier Discovery Northbound",
+      "from": "other",
+      "to": "alaska",
+      "reason": "Alaska endpoint or Glacier Discovery itinerary is present."
+    },
+    {
+      "id": "holland-america-nieuw-statendam-20260710-14-day-wild-british-isles-belfast-evening-stay",
+      "sailingName": "14-Day Wild British Isles: Belfast Evening Stay",
+      "from": "other",
+      "to": "northern-europe",
+      "reason": "Northern Europe or transatlantic crossing terms are present."
+    },
+    {
+      "id": "holland-america-rotterdam-20260830-14-day-arctic-crossing-and-north-cape",
+      "sailingName": "14-Day Arctic Crossing & North Cape",
+      "from": "other",
+      "to": "northern-europe",
+      "reason": "Northern Europe or transatlantic crossing terms are present."
+    },
+    {
+      "id": "holland-america-nieuw-statendam-20260904-8-day-norwegian-fjords-and-hidden-gems",
+      "sailingName": "8-Day Norwegian Fjords & Hidden Gems",
+      "from": "other",
+      "to": "northern-europe",
+      "reason": "Northern Europe or transatlantic crossing terms are present."
+    },
+    {
+      "id": "holland-america-oosterdam-20260923-10-day-adriatic-allure-croatia-greek-isles-and-istanbul",
+      "sailingName": "10-Day Adriatic Allure: Croatia, Greek Isles & Istanbul",
+      "from": "other",
+      "to": "mediterranean",
+      "reason": "Mediterranean/Adriatic itinerary terms are present."
+    },
+    {
+      "id": "holland-america-oosterdam-20260923-21-day-croatia-greece-and-istanbul-collectors-voyage",
+      "sailingName": "21-Day Croatia, Greece & Istanbul Collectors' Voyage",
+      "from": "other",
+      "to": "mediterranean",
+      "reason": "Mediterranean/Adriatic itinerary terms are present."
+    },
+    {
+      "id": "holland-america-zuiderdam-20261003-7-day-canada-and-new-england-circle-new-brunswick",
+      "sailingName": "7-Day Canada & New England Circle: New Brunswick",
+      "from": "other",
+      "to": "canada-new-england",
+      "reason": "Canada/New England appears in itinerary title or port list."
+    },
+    {
+      "id": "holland-america-eurodam-20261004-20-day-panama-canal",
+      "sailingName": "20-Day Panama Canal",
+      "from": "other",
+      "to": "panama-canal",
+      "reason": "Panama Canal appears in itinerary title or port list."
+    },
+    {
+      "id": "holland-america-rotterdam-20261018-13-day-cultural-crossing-with-brugge-and-falmouth",
+      "sailingName": "13-Day Cultural Crossing With Brugge & Falmouth",
+      "from": "other",
+      "to": "transatlantic",
+      "reason": "Northern Europe or transatlantic crossing terms are present."
+    },
+    {
+      "id": "holland-america-koningsdam-20261020-11-day-mexican-riviera-and-sea-of-cortez",
+      "sailingName": "11-Day Mexican Riviera & Sea Of Cortez",
+      "from": "other",
+      "to": "mexican-riviera",
+      "reason": "Mexican Riviera or Sea of Cortez appears in itinerary title."
+    },
+    {
+      "id": "holland-america-koningsdam-20261114-7-day-classic-california-coast",
+      "sailingName": "7-Day Classic California Coast",
+      "from": "other",
+      "to": "california-coast",
+      "reason": "California coastal ports or itinerary title are present."
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20260911-8nvac",
+      "sailingName": "Pacific Coastal: Vancouver to LA",
+      "from": "other",
+      "to": "california-coast",
+      "reason": "California coastal ports or itinerary title are present."
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20260927-5nnyb",
+      "sailingName": "Bermuda Overnight Cruise",
+      "from": "other",
+      "to": "bermuda",
+      "reason": "Bermuda appears in itinerary title or port list."
+    }
+  ],
+  "skippedOther": [
+    {
+      "id": "holland-america-noordam-20261004-7-day-great-bear-rainforest",
+      "sailingName": "7-Day Great Bear Rainforest",
+      "cruiseLine": "holland-america",
+      "shipName": "Noordam",
+      "departureDate": "2026-10-04"
+    }
+  ]
+}

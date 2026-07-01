@@ -21,6 +21,11 @@ export type DealRegion =
   | "alaska"
   | "pacific"
   | "asia"
+  | "south-america"
+  | "antarctica"
+  | "panama-canal"
+  | "canada-new-england"
+  | "australia-new-zealand"
   | "other";
 
 /**
@@ -99,11 +104,22 @@ function toLegacyRegion(region: Sailing["destinationRegion"]): DealRegion {
       return "europe";
     case "alaska":
       return "alaska";
+    case "canada-new-england":
+      return "canada-new-england";
+    case "south-america":
+      return "south-america";
+    case "antarctica":
+      return "antarctica";
+    case "panama-canal":
+      return "panama-canal";
     case "south-pacific":
     case "hawaii":
     case "california-coast":
       return "pacific";
+    case "australia-new-zealand":
+      return "australia-new-zealand";
     case "asia":
+    case "middle-east":
       return "asia";
     default:
       return "other";
@@ -169,6 +185,8 @@ function dealScore(s: Sailing): number {
   if (s.nights >= 4 && s.nights <= 6) score += 18;
   if (s.nights === 7) score += 14;
   if (s.destinationRegion === "caribbean" || s.destinationRegion === "bahamas") score += 12;
+  if (["mediterranean", "asia", "south-america", "panama-canal"].includes(s.destinationRegion)) score += 10;
+  if (["canada-new-england", "australia-new-zealand", "antarctica"].includes(s.destinationRegion)) score += 6;
   if (s.confidence === "verified_from_cruise_line") score += 8;
   if (s.confidence === "itinerary_verified_price_check_required") score += 4;
   return score;

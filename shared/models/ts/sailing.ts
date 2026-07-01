@@ -137,10 +137,13 @@ export enum CruiseLine {
  */
 export enum DestinationRegion {
     Alaska = "alaska",
+    Antarctica = "antarctica",
     Asia = "asia",
+    AustraliaNewZealand = "australia-new-zealand",
     Bahamas = "bahamas",
     Bermuda = "bermuda",
     CaliforniaCoast = "california-coast",
+    CanadaNewEngland = "canada-new-england",
     Caribbean = "caribbean",
     Hawaii = "hawaii",
     Mediterranean = "mediterranean",
@@ -149,6 +152,8 @@ export enum DestinationRegion {
     MiddleEast = "middle-east",
     NorthernEurope = "northern-europe",
     Other = "other",
+    PanamaCanal = "panama-canal",
+    SouthAmerica = "south-america",
     SouthPacific = "south-pacific",
     Transatlantic = "transatlantic",
 }

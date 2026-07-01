@@ -1,773 +1,875 @@
 {
-  "generatedAt": "2026-07-01T14:37:38.175Z",
+  "generatedAt": "2026-07-01T19:27:19.824Z",
   "provider": "norwegian",
   "mode": "apply",
-  "sourceRunId": "2026-07-01T14-31-54-560Z",
-  "sourceReviewGeneratedAt": "2026-07-01T14:33:16.384Z",
+  "sourceRunId": "2026-07-01T19-26-33-698Z",
+  "sourceReviewGeneratedAt": "2026-07-01T19:27:06.712Z",
   "options": {
     "apply": true,
-    "limit": 40,
+    "limit": 80,
     "ids": []
   },
   "counts": {
-    "seedBefore": 199,
-    "seedAfter": 239,
-    "promotedNew": 40,
+    "seedBefore": 283,
+    "seedAfter": 324,
+    "promotedNew": 41,
     "skippedExisting": 0
   },
   "promoted": [
     {
-      "id": "norwegian-norwegian-breakaway-20261213-59082",
-      "shipName": "Norwegian Breakaway",
-      "sailingName": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-12-13",
-      "returnDate": "2026-12-20",
+      "id": "norwegian-norwegian-epic-20260705-58611",
+      "shipName": "Norwegian Epic",
+      "sailingName": "7-Day Mediterranean: Florence and Marseille",
+      "departureDate": "2026-07-05",
+      "returnDate": "2026-07-12",
       "nights": 7,
-      "departurePort": "New Orleans, Louisiana",
-      "destinationRegion": "caribbean",
+      "departurePort": "Rome (Civitavecchia), Italy",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
+        "Nice/Monaco (Villefranche), France",
+        "Florence/Pisa (Livorno), Italy",
+        "Provence (Marseille), France",
+        "Salerno, Italy",
+        "Catania, Italy"
       ],
-      "startingPrice": 579,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BREAKAWAY7MSYCZMRTBBPICMAMSY&guests=2&gateway=NONE&packageId=24870142",
+      "startingPrice": 859,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7CIVSALCTALIVVLFMRSBCN&guests=2&gateway=NONE&packageId=22977650",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "norwegian-norwegian-breakaway-20270103-59085",
-      "shipName": "Norwegian Breakaway",
-      "sailingName": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2027-01-03",
-      "returnDate": "2027-01-10",
-      "nights": 7,
-      "departurePort": "New Orleans, Louisiana",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 579,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BREAKAWAY7MSYCZMRTBBPICMAMSY&guests=2&gateway=NONE&packageId=24870145",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-breakaway-20270117-59087",
-      "shipName": "Norwegian Breakaway",
-      "sailingName": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2027-01-17",
-      "returnDate": "2027-01-24",
-      "nights": 7,
-      "departurePort": "New Orleans, Louisiana",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 579,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BREAKAWAY7MSYCZMRTBBPICMAMSY&guests=2&gateway=NONE&packageId=24870147",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-viva-20261205-59203",
-      "shipName": "Norwegian Viva",
-      "sailingName": "7-Day Caribbean Round-trip Galveston: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-12-05",
-      "returnDate": "2026-12-12",
-      "nights": 7,
-      "departurePort": "Galveston, Texas",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 599,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369081",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-aqua-20261213-59055",
-      "shipName": "Norwegian Aqua",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-12-13",
-      "returnDate": "2026-12-20",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 699,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=AQUA7MIAPOPSTTTOVNPIMIA&guests=2&gateway=NONE&packageId=23353045",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20260809-58723",
-      "shipName": "Norwegian Escape",
-      "sailingName": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-08-09",
-      "returnDate": "2026-08-16",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 729,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997531",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-luna-20261128-59161",
-      "shipName": "Norwegian Luna",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-11-28",
-      "returnDate": "2026-12-05",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 749,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367512",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-luna-20261212-59163",
-      "shipName": "Norwegian Luna",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-12-12",
-      "returnDate": "2026-12-19",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 749,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367514",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-joy-20271216-63711",
-      "shipName": "Norwegian Joy",
-      "sailingName": "5-Day Eastern Caribbean from Miami: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2027-12-16",
-      "returnDate": "2027-12-21",
-      "nights": 5,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Puerto Plata, Dominican Republic"
-      ],
-      "startingPrice": 769,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JOY5MIANPIPOPMIA&guests=2&gateway=NONE&packageId=27216631",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-breakaway-20270110-59086",
-      "shipName": "Norwegian Breakaway",
-      "sailingName": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2027-01-10",
-      "returnDate": "2027-01-17",
-      "nights": 7,
-      "departurePort": "New Orleans, Louisiana",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 779,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BREAKAWAY7MSYCZMRTBBPICMAMSY&guests=2&gateway=NONE&packageId=24870146",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20260913-58200",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
-      "departureDate": "2026-09-13",
-      "returnDate": "2026-09-20",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Falmouth, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 779,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925676",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20261004-58203",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-10-04",
-      "returnDate": "2026-10-11",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 779,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925662",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20260719-58720",
-      "shipName": "Norwegian Escape",
-      "sailingName": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-07-19",
-      "returnDate": "2026-07-26",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 799,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997528",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20260726-58721",
-      "shipName": "Norwegian Escape",
-      "sailingName": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-07-26",
-      "returnDate": "2026-08-02",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 799,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997529",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-luna-20260829-58877",
-      "shipName": "Norwegian Luna",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-08-29",
-      "returnDate": "2026-09-05",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 809,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIAPOPSTTTOVNPIMIA&guests=2&gateway=NONE&packageId=23075904",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20260823-58197",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-08-23",
-      "returnDate": "2026-08-30",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 809,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925659",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-viva-20261031-59198",
-      "shipName": "Norwegian Viva",
-      "sailingName": "7-Day Caribbean Round-trip Galveston: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-10-31",
-      "returnDate": "2026-11-07",
-      "nights": 7,
-      "departurePort": "Galveston, Texas",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 819,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369076",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20260927-58202",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
-      "departureDate": "2026-09-27",
-      "returnDate": "2026-10-04",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Falmouth, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 829,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925677",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20261025-58206",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
+      "id": "norwegian-norwegian-dawn-20261025-58550",
+      "shipName": "Norwegian Dawn",
+      "sailingName": "7-Day Mediterranean from Barcelona to Lisbon: Spain & Portugal",
       "departureDate": "2026-10-25",
       "returnDate": "2026-11-01",
       "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Falmouth, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 829,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925679",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20270609-60483",
-      "shipName": "Norwegian Escape",
-      "sailingName": "5-Day Caribbean from Orlando (Port Canaveral): Puerto Plata & Great Stirrup Cay",
-      "departureDate": "2027-06-09",
-      "returnDate": "2027-06-14",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 839,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223942",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-luna-20261107-59158",
-      "shipName": "Norwegian Luna",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-11-07",
-      "returnDate": "2026-11-14",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 849,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367509",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-getaway-20270326-59675",
-      "shipName": "Norwegian Getaway",
-      "sailingName": "5-Day Western Caribbean from Orlando (Port Canaveral)",
-      "departureDate": "2027-03-26",
-      "returnDate": "2027-03-31",
-      "nights": 5,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 849,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468022",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-luna-20260822-58876",
-      "shipName": "Norwegian Luna",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-08-22",
-      "returnDate": "2026-08-29",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 859,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIAPOPSTTTOVNPIMIA&guests=2&gateway=NONE&packageId=23075903",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20261011-58204",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando (Port Canaveral): Great Stirrup Cay & Cozumel",
-      "departureDate": "2026-10-11",
-      "returnDate": "2026-10-18",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Falmouth, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 859,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925678",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-viva-20261107-59199",
-      "shipName": "Norwegian Viva",
-      "sailingName": "7-Day Caribbean Round-trip Galveston: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-11-07",
-      "returnDate": "2026-11-14",
-      "nights": 7,
-      "departurePort": "Galveston, Texas",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 859,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369077",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-epic-20270228-59115",
-      "shipName": "Norwegian Epic",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Cozumel",
-      "departureDate": "2027-02-28",
-      "returnDate": "2027-03-07",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Ocho Rios, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 859,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361672",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-epic-20280107-61512",
-      "shipName": "Norwegian Epic",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2028-01-07",
-      "returnDate": "2028-01-14",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 869,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334775",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-escape-20260802-58722",
-      "shipName": "Norwegian Escape",
-      "sailingName": "7-Day Caribbean Round-Trip Miami: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-08-02",
-      "returnDate": "2026-08-09",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 879,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997530",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-epic-20280114-61513",
-      "shipName": "Norwegian Epic",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2028-01-14",
-      "returnDate": "2028-01-21",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 879,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334776",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-epic-20270207-59112",
-      "shipName": "Norwegian Epic",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Cozumel",
-      "departureDate": "2027-02-07",
-      "returnDate": "2027-02-14",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Ocho Rios, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 889,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361669",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20260809-58195",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-08-09",
-      "returnDate": "2026-08-16",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 899,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925658",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-luna-20261114-59159",
-      "shipName": "Norwegian Luna",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-11-14",
-      "returnDate": "2026-11-21",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Cozumel, Mexico",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 899,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICZMNPIMIA&guests=2&gateway=NONE&packageId=23367510",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-luna-20260808-58874",
-      "shipName": "Norwegian Luna",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-08-08",
-      "returnDate": "2026-08-15",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 909,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIAPOPSTTTOVNPIMIA&guests=2&gateway=NONE&packageId=23075901",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-luna-20260815-58875",
-      "shipName": "Norwegian Luna",
-      "sailingName": "7-Day Caribbean Round-trip Miami: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2026-08-15",
-      "returnDate": "2026-08-22",
-      "nights": 7,
-      "departurePort": "Miami, Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 909,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIAPOPSTTTOVNPIMIA&guests=2&gateway=NONE&packageId=23075902",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-epic-20271203-61507",
-      "shipName": "Norwegian Epic",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2027-12-03",
-      "returnDate": "2027-12-10",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 909,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334770",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-epic-20270328-59119",
-      "shipName": "Norwegian Epic",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Cozumel",
-      "departureDate": "2027-03-28",
-      "returnDate": "2027-04-04",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Great Stirrup Cay, Bahamas",
-        "Ocho Rios, Jamaica",
-        "George Town, Grand Cayman",
-        "Cozumel, Mexico"
-      ],
-      "startingPrice": 909,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361676",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-epic-20271112-61504",
-      "shipName": "Norwegian Epic",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
-      "departureDate": "2027-11-12",
-      "returnDate": "2027-11-19",
-      "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
-      ],
-      "startingPrice": 919,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334767",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-breakaway-20261122-59079",
-      "shipName": "Norwegian Breakaway",
-      "sailingName": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-11-22",
-      "returnDate": "2026-11-29",
-      "nights": 7,
-      "departurePort": "New Orleans, Louisiana",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
+        "Gibraltar, United Kingdom",
+        "Alicante, Spain",
+        "Motril, Spain",
+        "Palma (Majorca), Spain",
+        "Portimão, Portugal",
+        "Seville (Cadiz), Spain"
       ],
       "startingPrice": 929,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BREAKAWAY7MSYCZMRTBBPICMAMSY&guests=2&gateway=NONE&packageId=24870139",
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIALCMOTGIBCADPRMLIS&guests=2&gateway=NONE&packageId=22976166",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "norwegian-norwegian-breakaway-20261129-59080",
-      "shipName": "Norwegian Breakaway",
-      "sailingName": "7-Day Caribbean Round-trip New Orleans: Harvest Caye, Cozumel & Roatan",
-      "departureDate": "2026-11-29",
-      "returnDate": "2026-12-06",
-      "nights": 7,
-      "departurePort": "New Orleans, Louisiana",
-      "destinationRegion": "caribbean",
-      "itineraryPorts": [
-        "Cozumel, Mexico",
-        "Roatán (Bay Islands), Honduras",
-        "Harvest Caye, Belize",
-        "Costa Maya, Mexico"
-      ],
-      "startingPrice": 929,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BREAKAWAY7MSYCZMRTBBPICMAMSY&guests=2&gateway=NONE&packageId=24870140",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "norwegian-norwegian-prima-20261018-58205",
-      "shipName": "Norwegian Prima",
-      "sailingName": "7-Day Caribbean Round-trip Orlando: Great Stirrup Cay & Dominican Republic",
+      "id": "norwegian-norwegian-dawn-20261018-58549",
+      "shipName": "Norwegian Dawn",
+      "sailingName": "7-Day Mediterranean from Lisbon to Barcelona: Spain",
       "departureDate": "2026-10-18",
       "returnDate": "2026-10-25",
       "nights": 7,
-      "departurePort": "Orlando (Port Canaveral), Florida",
-      "destinationRegion": "caribbean",
+      "departurePort": "Lisbon, Portugal",
+      "destinationRegion": "mediterranean",
       "itineraryPorts": [
-        "Puerto Plata, Dominican Republic",
-        "St. Thomas, US Virgin Islands",
-        "Tortola, British Virgin Islands",
-        "Great Stirrup Cay, Bahamas"
+        "Gibraltar, United Kingdom",
+        "Motril, Spain",
+        "Palma (Majorca), Spain",
+        "Ibiza, Spain",
+        "Seville (Cadiz), Spain"
       ],
-      "startingPrice": 929,
-      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925663",
+      "startingPrice": 949,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7LISCADMOTGIBIBZPMIBCN&guests=2&gateway=NONE&packageId=22976180",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-epic-20260719-58613",
+      "shipName": "Norwegian Epic",
+      "sailingName": "7-Day Mediterranean: Florence and Marseille",
+      "departureDate": "2026-07-19",
+      "returnDate": "2026-07-26",
+      "nights": 7,
+      "departurePort": "Rome (Civitavecchia), Italy",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Nice/Monaco (Villefranche), France",
+        "Florence/Pisa (Livorno), Italy",
+        "Provence (Marseille), France",
+        "Salerno, Italy",
+        "Catania, Italy"
+      ],
+      "startingPrice": 989,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7CIVSALCTALIVVLFMRSBCN&guests=2&gateway=NONE&packageId=22977651",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-epic-20260802-58615",
+      "shipName": "Norwegian Epic",
+      "sailingName": "7-Day Mediterranean: Florence and Marseille",
+      "departureDate": "2026-08-02",
+      "returnDate": "2026-08-09",
+      "nights": 7,
+      "departurePort": "Rome (Civitavecchia), Italy",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Nice/Monaco (Villefranche), France",
+        "Florence/Pisa (Livorno), Italy",
+        "Provence (Marseille), France",
+        "Salerno, Italy",
+        "Catania, Italy"
+      ],
+      "startingPrice": 1009,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7CIVSALCTALIVVLFMRSBCN&guests=2&gateway=NONE&packageId=22977652",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-epic-20260809-58616",
+      "shipName": "Norwegian Epic",
+      "sailingName": "7-Day Mediterranean from Barcelona to Rome: Nice, Florence & Amalfi Coast (Salerno)",
+      "departureDate": "2026-08-09",
+      "returnDate": "2026-08-16",
+      "nights": 7,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Nice/Monaco (Villefranche), France",
+        "Florence/Pisa (Livorno), Italy",
+        "Messina (Sicily), Italy",
+        "Provence (Marseille), France",
+        "Salerno, Italy"
+      ],
+      "startingPrice": 1019,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7BCNMRSVLFLIVMSNSALCIV&guests=2&gateway=NONE&packageId=22977640",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-epic-20261018-58626",
+      "shipName": "Norwegian Epic",
+      "sailingName": "7-Day Mediterranean from Barcelona to Rome: Nice, Florence & Amalfi Coast (Salerno)",
+      "departureDate": "2026-10-18",
+      "returnDate": "2026-10-25",
+      "nights": 7,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Nice/Monaco (Villefranche), France",
+        "Florence/Pisa (Livorno), Italy",
+        "Messina (Sicily), Italy",
+        "Provence (Marseille), France",
+        "Salerno, Italy"
+      ],
+      "startingPrice": 1019,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7BCNMRSVLFLIVMSNSALCIV&guests=2&gateway=NONE&packageId=22977645",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-gem-20260830-58697",
+      "shipName": "Norwegian Gem",
+      "sailingName": "7-Day Greek Isles from Venice (Ravenna) to Rome: Italy, Greece & Croatia",
+      "departureDate": "2026-08-30",
+      "returnDate": "2026-09-06",
+      "nights": 7,
+      "departurePort": "Venice (Ravenna), Italy",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Kotor, Montenegro",
+        "Split, Croatia",
+        "Messina (Sicily), Italy",
+        "Dubrovnik, Croatia",
+        "Corfu, Greece",
+        "Salerno, Italy"
+      ],
+      "startingPrice": 1029,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM7RAVSPUDBVKOTCFUMSNSALCIV&guests=2&gateway=NONE&packageId=22988319",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-dawn-20260830-58542",
+      "shipName": "Norwegian Dawn",
+      "sailingName": "7-Day Mediterranean from Barcelona to Lisbon: Spain & Portugal",
+      "departureDate": "2026-08-30",
+      "returnDate": "2026-09-06",
+      "nights": 7,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Valencia, Spain",
+        "Gibraltar, United Kingdom",
+        "Motril, Spain",
+        "Palma (Majorca), Spain",
+        "Portimão, Portugal",
+        "Seville (Cadiz), Spain"
+      ],
+      "startingPrice": 1039,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIVLCMOTGIBCADPRMLIS&guests=2&gateway=NONE&packageId=22976162",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-dawn-20260726-58537",
+      "shipName": "Norwegian Dawn",
+      "sailingName": "7-Day Mediterranean from Lisbon to Barcelona (Tarragona): Spain & Portugal",
+      "departureDate": "2026-07-26",
+      "returnDate": "2026-08-02",
+      "nights": 7,
+      "departurePort": "Lisbon, Portugal",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Gibraltar, United Kingdom",
+        "Motril, Spain",
+        "Palma (Majorca), Spain",
+        "Portimão, Portugal",
+        "Ibiza, Spain",
+        "Seville (Cadiz), Spain"
+      ],
+      "startingPrice": 1069,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7LISPRMCADMOTGIBIBZPMITAR&guests=2&gateway=NONE&packageId=26170164",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-gem-20260719-58691",
+      "shipName": "Norwegian Gem",
+      "sailingName": "7-Day Greek Isles from Venice (Ravenna) to Rome: Italy, Greece & Croatia",
+      "departureDate": "2026-07-19",
+      "returnDate": "2026-07-26",
+      "nights": 7,
+      "departurePort": "Venice (Ravenna), Italy",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Kotor, Montenegro",
+        "Split, Croatia",
+        "Messina (Sicily), Italy",
+        "Dubrovnik, Croatia",
+        "Corfu, Greece",
+        "Salerno, Italy"
+      ],
+      "startingPrice": 1129,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM7RAVSPUDBVKOTCFUMSNSALCIV&guests=2&gateway=NONE&packageId=22988316",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-dawn-20260719-58536",
+      "shipName": "Norwegian Dawn",
+      "sailingName": "7-Day Mediterranean from Barcelona to Lisbon: Spain & Portugal",
+      "departureDate": "2026-07-19",
+      "returnDate": "2026-07-26",
+      "nights": 7,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Valencia, Spain",
+        "Gibraltar, United Kingdom",
+        "Motril, Spain",
+        "Palma (Majorca), Spain",
+        "Portimão, Portugal",
+        "Seville (Cadiz), Spain"
+      ],
+      "startingPrice": 1139,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIVLCMOTGIBCADPRMLIS&guests=2&gateway=NONE&packageId=22976159",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-dawn-20260816-58540",
+      "shipName": "Norwegian Dawn",
+      "sailingName": "7-Day Mediterranean from Barcelona to Lisbon: Spain",
+      "departureDate": "2026-08-16",
+      "returnDate": "2026-08-23",
+      "nights": 7,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Valencia, Spain",
+        "Gibraltar, United Kingdom",
+        "Motril, Spain",
+        "Tangier, Morocco",
+        "Palma (Majorca), Spain",
+        "Seville (Cadiz), Spain"
+      ],
+      "startingPrice": 1159,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIVLCMOTGIBTNGCADLIS&guests=2&gateway=NONE&packageId=22976161",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-dawn-20260913-58544",
+      "shipName": "Norwegian Dawn",
+      "sailingName": "7-Day Mediterranean from Barcelona to Lisbon: Spain & Portugal",
+      "departureDate": "2026-09-13",
+      "returnDate": "2026-09-20",
+      "nights": 7,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Valencia, Spain",
+        "Gibraltar, United Kingdom",
+        "Motril, Spain",
+        "Palma (Majorca), Spain",
+        "Portimão, Portugal",
+        "Seville (Cadiz), Spain"
+      ],
+      "startingPrice": 1169,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIVLCMOTGIBCADPRMLIS&guests=2&gateway=NONE&packageId=22976163",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-gem-20260913-58699",
+      "shipName": "Norwegian Gem",
+      "sailingName": "7-Day Greek Isles from Venice (Ravenna) to Rome: Italy, Greece & Croatia",
+      "departureDate": "2026-09-13",
+      "returnDate": "2026-09-20",
+      "nights": 7,
+      "departurePort": "Venice (Ravenna), Italy",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Kotor, Montenegro",
+        "Split, Croatia",
+        "Messina (Sicily), Italy",
+        "Dubrovnik, Croatia",
+        "Corfu, Greece",
+        "Salerno, Italy"
+      ],
+      "startingPrice": 1179,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM7RAVSPUDBVKOTCFUMSNSALCIV&guests=2&gateway=NONE&packageId=22988320",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-epic-20261004-58624",
+      "shipName": "Norwegian Epic",
+      "sailingName": "7-Day Mediterranean from Barcelona to Rome: Nice, Florence & Amalfi Coast (Salerno)",
+      "departureDate": "2026-10-04",
+      "returnDate": "2026-10-11",
+      "nights": 7,
+      "departurePort": "Barcelona, Spain",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Nice/Monaco (Villefranche), France",
+        "Florence/Pisa (Livorno), Italy",
+        "Messina (Sicily), Italy",
+        "Provence (Marseille), France",
+        "Salerno, Italy"
+      ],
+      "startingPrice": 1269,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7BCNMRSVLFLIVMSNSALCIV&guests=2&gateway=NONE&packageId=22977644",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-gem-20271211-62541",
+      "shipName": "Norwegian Gem",
+      "sailingName": "10-Day Panama Canal Round-Trip Miami: Bahamas, Jamaica & Costa Rica",
+      "departureDate": "2027-12-11",
+      "returnDate": "2027-12-21",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Cartagena, Colombia",
+        "Panama Canal (Gatun Lake), Panama",
+        "Puerto Limon, Costa Rica",
+        "Falmouth, Jamaica",
+        "Great Stirrup Cay, Bahamas",
+        "Colón, Panama"
+      ],
+      "startingPrice": 1439,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM10MIACTGPCGCLNLIOFMHNPIMIA&guests=2&gateway=NONE&packageId=26161718",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-gem-20271109-62540",
+      "shipName": "Norwegian Gem",
+      "sailingName": "10-Day Panama Canal Round-trip Miami: Bahamas, Jamaica & Costa Rica",
+      "departureDate": "2027-11-09",
+      "returnDate": "2027-11-19",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Cartagena, Colombia",
+        "Puerto Limon, Costa Rica",
+        "Great Stirrup Cay, Bahamas",
+        "Colón, Panama",
+        "Montego Bay, Jamaica",
+        "Panama Canal (Gatun Lake), Panama"
+      ],
+      "startingPrice": 1439,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM10MIANPICTGPCGCLNLIOMBJMIA&guests=2&gateway=NONE&packageId=26161717",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jewel-20271209-61892",
+      "shipName": "Norwegian Jewel",
+      "sailingName": "11-Day Panama Canal Round-trip Miami: Mexico, Costa Rica & Belize",
+      "departureDate": "2027-12-09",
+      "returnDate": "2027-12-20",
+      "nights": 11,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Harvest Caye, Belize",
+        "Cartagena, Colombia",
+        "Panama Canal (Gatun Lake), Panama",
+        "Puerto Limon, Costa Rica",
+        "George Town, Grand Cayman",
+        "Colón, Panama",
+        "Cozumel, Mexico"
+      ],
+      "startingPrice": 1509,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JEWEL11MIAGECCTGPCGCLNLIOBPICZMMIA&guests=2&gateway=NONE&packageId=25386187",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-gem-20271130-62544",
+      "shipName": "Norwegian Gem",
+      "sailingName": "11-Day Panama Canal Round-trip Miami: Bahamas, Jamaica & Costa Rica",
+      "departureDate": "2027-11-30",
+      "returnDate": "2027-12-11",
+      "nights": 11,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Cartagena, Colombia",
+        "Panama Canal (Gatun Lake), Panama",
+        "Puerto Limon, Costa Rica",
+        "Falmouth, Jamaica",
+        "Great Stirrup Cay, Bahamas",
+        "George Town, Grand Cayman",
+        "Colón, Panama"
+      ],
+      "startingPrice": 1519,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM11MIANPICTGPCGCLNLIOFMHGECMIA&guests=2&gateway=NONE&packageId=26161727",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20280317-62370",
+      "shipName": "Norwegian Star",
+      "sailingName": "15-Day Transatlantic from Buenos Aires to Lisbon: Brazil & Portugal",
+      "departureDate": "2028-03-17",
+      "returnDate": "2028-04-01",
+      "nights": 15,
+      "departurePort": "Buenos Aires, Argentina",
+      "destinationRegion": "south-america",
+      "itineraryPorts": [
+        "Rio de Janeiro, Brazil",
+        "Recife, Brazil",
+        "Porto Grande, Cape Verde",
+        "Funchal, Madeira"
+      ],
+      "startingPrice": 1599,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15BUERIORECPTGFNCLIS&guests=2&gateway=NONE&packageId=25732820",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jade-20270928-62638",
+      "shipName": "Norwegian Jade",
+      "sailingName": "15-Day from Seattle to Tokyo (Yokohama): Hubbard Glacier, Ketchikan & Hakodate",
+      "departureDate": "2027-09-28",
+      "returnDate": "2027-10-13",
+      "nights": 15,
+      "departurePort": "Seattle, Washington",
+      "destinationRegion": "asia",
+      "itineraryPorts": [
+        "Hubbard Glacier, Alaska",
+        "Whittier, Alaska",
+        "Hakodate, Japan",
+        "Sitka, Alaska",
+        "Ketchikan (Ward Cove), Alaska"
+      ],
+      "startingPrice": 1620,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE15SEAKTNSITHGCWQFHKDYOK&guests=2&gateway=NONE&packageId=26190585",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20261204-61121",
+      "shipName": "Norwegian Star",
+      "sailingName": "16-Day Panama Canal from Miami to San Diego: Mexico & Costa Rica",
+      "departureDate": "2026-12-04",
+      "returnDate": "2026-12-20",
+      "nights": 16,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Cartagena, Colombia",
+        "Puerto Vallarta, Mexico",
+        "Acapulco, Mexico",
+        "Puntarenas, Costa Rica",
+        "Cabo San Lucas, Mexico",
+        "Puerto Quetzal, Guatemala",
+        "Colón, Panama"
+      ],
+      "startingPrice": 1639,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR16MIACTGCLNPASPRQACAPVRCSLSAN&guests=2&gateway=NONE&packageId=24777233",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20271202-62369",
+      "shipName": "Norwegian Star",
+      "sailingName": "15-Day Transatlantic from Lisbon to Buenos Aires: Brazil & Uruguay",
+      "departureDate": "2027-12-02",
+      "returnDate": "2027-12-17",
+      "nights": 15,
+      "departurePort": "Lisbon, Portugal",
+      "destinationRegion": "south-america",
+      "itineraryPorts": [
+        "Porto Grande, Cape Verde",
+        "Recife, Brazil",
+        "Rio de Janeiro, Brazil",
+        "Montevideo, Uruguay"
+      ],
+      "startingPrice": 1679,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15LISPTGRECRIOMVDBUE&guests=2&gateway=NONE&packageId=25732821",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jade-20260921-61098",
+      "shipName": "Norwegian Jade",
+      "sailingName": "16-Day from Vancouver to Tokyo (Yokohama): Ketchikan, Whittier & Kodiak",
+      "departureDate": "2026-09-21",
+      "returnDate": "2026-10-07",
+      "nights": 16,
+      "departurePort": "Vancouver, British Columbia",
+      "destinationRegion": "asia",
+      "itineraryPorts": [
+        "Kodiak, Alaska",
+        "Hubbard Glacier, Alaska",
+        "Whittier, Alaska",
+        "Hakodate, Japan",
+        "Sitka, Alaska",
+        "Ketchikan (Ward Cove), Alaska"
+      ],
+      "startingPrice": 1688,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE16VANKTNSITHGCWQFADQHKDYOK&guests=2&gateway=NONE&packageId=24717325",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jade-20280423-61756",
+      "shipName": "Norwegian Jade",
+      "sailingName": "15-Day From Tokyo (Yokohama) To Vancouver: Skagway, Juneau, Ketchikan & Hakodate",
+      "departureDate": "2028-04-23",
+      "returnDate": "2028-05-08",
+      "nights": 15,
+      "departurePort": "Tokyo (Yokohama), Japan",
+      "destinationRegion": "asia",
+      "itineraryPorts": [
+        "Juneau, Alaska",
+        "Sendai (Ishinomaki), Japan",
+        "Icy Strait Point, Alaska",
+        "Hakodate, Japan",
+        "Skagway, Alaska",
+        "Ketchikan (Ward Cove), Alaska"
+      ],
+      "startingPrice": 1708,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE15YOKSDAHKDICYJNUSGYKTNVAN&guests=2&gateway=NONE&packageId=25480101",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jade-20271209-61744",
+      "shipName": "Norwegian Jade",
+      "sailingName": "12-Day Asia from Hong Kong to Singapore: Thailand & Philippines",
+      "departureDate": "2027-12-09",
+      "returnDate": "2027-12-21",
+      "nights": 12,
+      "departurePort": "Hong Kong, China",
+      "destinationRegion": "asia",
+      "itineraryPorts": [
+        "Cam Ranh, Vietnam",
+        "Hanoi (Ha Long Bay), Vietnam",
+        "Bangkok (Laem Chabang), Thailand",
+        "Chan May, Vietnam",
+        "Ko Samui, Thailand",
+        "Ho Chi Minh City (Phu My), Vietnam"
+      ],
+      "startingPrice": 1909,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE12HKGHANCMYCRHSGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25382098",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jade-20271129-61743",
+      "shipName": "Norwegian Jade",
+      "sailingName": "10-day Asia From Tokyo to Hong Kong: Taipei, Osaka, Kochi & Okinawa",
+      "departureDate": "2027-11-29",
+      "returnDate": "2027-12-09",
+      "nights": 10,
+      "departurePort": "Tokyo, Japan",
+      "destinationRegion": "asia",
+      "itineraryPorts": [
+        "Hiroshima, Japan",
+        "Taipei (Keelung), Taiwan",
+        "Naha (Okinawa), Japan",
+        "Mount Fuji (Shimizu), Japan",
+        "Kyoto (Osaka), Japan",
+        "Kochi, Japan"
+      ],
+      "startingPrice": 1929,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE10TOKSMZOSAKCZHSMNAHKEEHKG&guests=2&gateway=NONE&packageId=25367406",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-gem-20271119-62543",
+      "shipName": "Norwegian Gem",
+      "sailingName": "11-Day Panama Canal Round-trip Miami: Bahamas, Jamaica & Costa Rica",
+      "departureDate": "2027-11-19",
+      "returnDate": "2027-11-30",
+      "nights": 11,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Cartagena, Colombia",
+        "Panama Canal (Gatun Lake), Panama",
+        "Puerto Limon, Costa Rica",
+        "Falmouth, Jamaica",
+        "Great Stirrup Cay, Bahamas",
+        "George Town, Grand Cayman",
+        "Colón, Panama"
+      ],
+      "startingPrice": 1969,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM11MIANPICTGPCGCLNLIOFMHGECMIA&guests=2&gateway=NONE&packageId=26161726",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20270213-62379",
+      "shipName": "Norwegian Star",
+      "sailingName": "16-Day Panama Canal from San Diego to Miami: Mexico & Colombia",
+      "departureDate": "2027-02-13",
+      "returnDate": "2027-03-01",
+      "nights": 16,
+      "departurePort": "San Diego, California",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Panama City (Pacific Cruise Terminal), Panama",
+        "Cartagena, Colombia",
+        "Acapulco, Mexico",
+        "Puntarenas, Costa Rica",
+        "George Town, Grand Cayman",
+        "Puerto Quetzal, Guatemala",
+        "Cabo San Lucas, Mexico"
+      ],
+      "startingPrice": 2029,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR16SANCSLACAPRQPASPCTCTGGECMIA&guests=2&gateway=NONE&packageId=25742217",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jade-20261018-59514",
+      "shipName": "Norwegian Jade",
+      "sailingName": "11-Day Asia From Seoul To Tokyo: Osaka, Nagoya, Sakaiminato & Hakodate",
+      "departureDate": "2026-10-18",
+      "returnDate": "2026-10-29",
+      "nights": 11,
+      "departurePort": "Seoul (Incheon), South Korea",
+      "destinationRegion": "asia",
+      "itineraryPorts": [
+        "Kanazawa, Japan",
+        "Akita, Japan",
+        "Mount Fuji (Shimizu), Japan",
+        "Kyoto (Osaka), Japan",
+        "Hakodate, Japan",
+        "Aomori, Japan",
+        "Sakaiminato, Japan"
+      ],
+      "startingPrice": 2049,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11INCSAKKZWAKIAOMHKDSMZOSATOK&guests=2&gateway=NONE&packageId=23410574",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jade-20261130-59518",
+      "shipName": "Norwegian Jade",
+      "sailingName": "9-Day Asia From Tokyo To Hong Kong: Taipei, Osaka, Kochi & Okinawa",
+      "departureDate": "2026-11-30",
+      "returnDate": "2026-12-09",
+      "nights": 9,
+      "departurePort": "Tokyo (Yokohama), Japan",
+      "destinationRegion": "asia",
+      "itineraryPorts": [
+        "Hiroshima, Japan",
+        "Taipei (Keelung), Taiwan",
+        "Miyakojima (Okinawa), Japan",
+        "Mount Fuji (Shimizu), Japan",
+        "Kyoto (Osaka), Japan",
+        "Kochi, Japan"
+      ],
+      "startingPrice": 2069,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9YOKSMZOSAKCZHSMMIYKEEHKG&guests=2&gateway=NONE&packageId=24564219",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-jade-20280222-61750",
+      "shipName": "Norwegian Jade",
+      "sailingName": "11-Day Asia From Hong Kong To Tokyo: Taipei, Osaka, Kochi & Okinawa",
+      "departureDate": "2028-02-22",
+      "returnDate": "2028-03-04",
+      "nights": 11,
+      "departurePort": "Hong Kong, China",
+      "destinationRegion": "asia",
+      "itineraryPorts": [
+        "Sasebo, Japan",
+        "Hiroshima, Japan",
+        "Taipei (Keelung), Taiwan",
+        "Kaohsiung, Taiwan",
+        "Miyakojima (Okinawa), Japan",
+        "Hakata (Fukuoka), Japan",
+        "Mount Fuji (Shimizu), Japan",
+        "Kyoto (Osaka), Japan",
+        "Kochi, Japan"
+      ],
+      "startingPrice": 2089,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11HKGKAOKEEMIYSASHK1HSMKCZOSASMZTOK&guests=2&gateway=NONE&packageId=25374392",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20280216-62366",
+      "shipName": "Norwegian Star",
+      "sailingName": "15-Day South America from Buenos Aires to Santiago: Argentina & Falkland Islands",
+      "departureDate": "2028-02-16",
+      "returnDate": "2028-03-02",
+      "nights": 15,
+      "departurePort": "Buenos Aires, Argentina",
+      "destinationRegion": "south-america",
+      "itineraryPorts": [
+        "Montevideo, Uruguay",
+        "Stanley, Falkland Islands",
+        "Puerto Madryn, Argentina",
+        "Ushuaia, Argentina",
+        "Puerto Montt, Chile"
+      ],
+      "startingPrice": 3009,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15BUEMVDPMYPSYUSHPMCSAI&guests=2&gateway=NONE&packageId=25732834",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20280102-62363",
+      "shipName": "Norwegian Star",
+      "sailingName": "15-Day South America from Santiago to Buenos Aires: Argentina & Chile",
+      "departureDate": "2028-01-02",
+      "returnDate": "2028-01-17",
+      "nights": 15,
+      "departurePort": "Santiago (San Antonio), Chile",
+      "destinationRegion": "south-america",
+      "itineraryPorts": [
+        "Montevideo, Uruguay",
+        "Stanley, Falkland Islands",
+        "Puerto Madryn, Argentina",
+        "Ushuaia, Argentina",
+        "Puerto Montt, Chile"
+      ],
+      "startingPrice": 3069,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15SAIPMCUSHPSYPMYMVDBUE&guests=2&gateway=NONE&packageId=25732830",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20280201-62365",
+      "shipName": "Norwegian Star",
+      "sailingName": "15-Day South America from Santiago to Buenos Aires: Argentina & Chile",
+      "departureDate": "2028-02-01",
+      "returnDate": "2028-02-16",
+      "nights": 15,
+      "departurePort": "Santiago (San Antonio), Chile",
+      "destinationRegion": "south-america",
+      "itineraryPorts": [
+        "Montevideo, Uruguay",
+        "Stanley, Falkland Islands",
+        "Puerto Madryn, Argentina",
+        "Ushuaia, Argentina",
+        "Puerto Montt, Chile"
+      ],
+      "startingPrice": 3189,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15SAIPMCUSHPSYPMYMVDBUE&guests=2&gateway=NONE&packageId=25732831",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20280117-62364",
+      "shipName": "Norwegian Star",
+      "sailingName": "15-Day South America from Buenos Aires to Santiago: Argentina & Falkland Islands",
+      "departureDate": "2028-01-17",
+      "returnDate": "2028-02-01",
+      "nights": 15,
+      "departurePort": "Buenos Aires, Argentina",
+      "destinationRegion": "south-america",
+      "itineraryPorts": [
+        "Montevideo, Uruguay",
+        "Stanley, Falkland Islands",
+        "Puerto Madryn, Argentina",
+        "Ushuaia, Argentina",
+        "Puerto Montt, Chile"
+      ],
+      "startingPrice": 3209,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15BUEMVDPMYPSYUSHPMCSAI&guests=2&gateway=NONE&packageId=25732833",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20280302-62367",
+      "shipName": "Norwegian Star",
+      "sailingName": "15-Day South America from Santiago to Buenos Aires: Argentina & Chile",
+      "departureDate": "2028-03-02",
+      "returnDate": "2028-03-17",
+      "nights": 15,
+      "departurePort": "Santiago (San Antonio), Chile",
+      "destinationRegion": "south-america",
+      "itineraryPorts": [
+        "Montevideo, Uruguay",
+        "Stanley, Falkland Islands",
+        "Puerto Madryn, Argentina",
+        "Ushuaia, Argentina",
+        "Puerto Montt, Chile"
+      ],
+      "startingPrice": 3389,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15SAIPMCUSHPSYPMYMVDBUE&guests=2&gateway=NONE&packageId=25732832",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-star-20271217-62368",
+      "shipName": "Norwegian Star",
+      "sailingName": "16-Day South America from Buenos Aires to Santiago: Argentina & Chile",
+      "departureDate": "2027-12-17",
+      "returnDate": "2028-01-02",
+      "nights": 16,
+      "departurePort": "Buenos Aires, Argentina",
+      "destinationRegion": "south-america",
+      "itineraryPorts": [
+        "Montevideo, Uruguay",
+        "Stanley, Falkland Islands",
+        "Punta Arenas, Chile",
+        "Puerto Madryn, Argentina",
+        "Ushuaia, Argentina",
+        "Puerto Montt, Chile"
+      ],
+      "startingPrice": 3989,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR16BUEMVDPMYPSYUSHPUQPMCSAI&guests=2&gateway=NONE&packageId=25732822",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-bliss-20270409-60261",
+      "shipName": "Norwegian Bliss",
+      "sailingName": "19-Day Panama Canal: Mexico and Costa Rica from New York",
+      "departureDate": "2027-04-09",
+      "returnDate": "2027-04-28",
+      "nights": 19,
+      "departurePort": "New York, New York",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Cartagena, Colombia",
+        "Puerto Vallarta, Mexico",
+        "Puntarenas (Puerto Caldera), Costa Rica",
+        "Acapulco, Mexico",
+        "Cabo San Lucas, Mexico",
+        "Puerto Plata, Dominican Republic",
+        "Puerto Quetzal, Guatemala",
+        "Colón, Panama"
+      ],
+      "startingPrice": 2339,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BLISS19NYCPOPCTGCLNPCLPRQACAPVRCSLSFO&guests=2&gateway=NONE&packageId=24218424",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "norwegian-norwegian-bliss-20280414-61727",
+      "shipName": "Norwegian Bliss",
+      "sailingName": "19-day Panama Canal From New York To San Francisco: Mexico & Costa Rica",
+      "departureDate": "2028-04-14",
+      "returnDate": "2028-05-03",
+      "nights": 19,
+      "departurePort": "New York, New York",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Cartagena, Colombia",
+        "Puntarenas (Puerto Caldera), Costa Rica",
+        "Acapulco, Mexico",
+        "Cabo San Lucas, Mexico",
+        "Puerto Plata, Dominican Republic",
+        "Puerto Quetzal, Guatemala",
+        "Colón, Panama"
+      ],
+      "startingPrice": 2429,
+      "directLink": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BLISS19NYCPOPCTGCLNPCLPRQACACSLSFO&guests=2&gateway=NONE&packageId=25367229",
       "confidence": "itinerary_verified_price_check_required"
     }
   ],

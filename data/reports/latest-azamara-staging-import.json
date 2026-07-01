@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-01T14:29:51.994Z",
+  "generatedAt": "2026-07-01T19:29:41.608Z",
   "provider": "azamara",
-  "runId": "2026-07-01T14-29-51-994Z",
+  "runId": "2026-07-01T19-29-41-607Z",
   "mode": "staging-only",
-  "sourceUrl": "https://www.azamara.com/cruises?destinations=CARIBBEAN,ALASKA",
+  "sourceUrl": "https://www.azamara.com/cruises?destinations=MEDITERRANEAN,ASIA,SOUTH_AMERICA,PANAMA_CANAL",
   "enrichDetails": true,
   "staging": {
     "sailings": 0,
@@ -15,8 +15,8 @@
   },
   "schemaErrors": [],
   "paths": {
-    "raw": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/raw/azamara/2026-07-01T14-29-51-994Z",
-    "staging": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/staging/azamara/2026-07-01T14-29-51-994Z",
+    "raw": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/raw/azamara/2026-07-01T19-29-41-607Z",
+    "staging": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/staging/azamara/2026-07-01T19-29-41-607Z",
     "report": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/reports/azamara"
   }
 }

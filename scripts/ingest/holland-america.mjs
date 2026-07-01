@@ -49,6 +49,12 @@ function addDays(dateValue, days) {
 
 function normalizeRegion(value) {
   const text = String(value ?? "").toLowerCase();
+  if (text.includes("antarctica")) return "antarctica";
+  if (text.includes("south america") || text.includes("buenos aires") || text.includes("brazil") || text.includes("uruguay")) return "south-america";
+  if (text.includes("panama canal")) return "panama-canal";
+  if (text.includes("canada") && text.includes("new england")) return "canada-new-england";
+  if (text.includes("australia") || text.includes("new zealand")) return "australia-new-zealand";
+  if (text.includes("asia") || text.includes("japan")) return "asia";
   if (text.includes("alaska")) return "alaska";
   if (text.includes("bahamas")) return "bahamas";
   if (text.includes("caribbean")) return "caribbean";
@@ -57,7 +63,7 @@ function normalizeRegion(value) {
   if (text.includes("mediterranean") || text.includes("italy") || text.includes("spain")) return "mediterranean";
   if (text.includes("europe") || text.includes("norway") || text.includes("iceland")) return "northern-europe";
   if (text.includes("transatlantic")) return "transatlantic";
-  if (text.includes("pacific") || text.includes("australia")) return "south-pacific";
+  if (text.includes("pacific")) return "south-pacific";
   return "other";
 }
 

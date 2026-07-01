@@ -54,6 +54,11 @@ function addDays(isoDateValue, days) {
 
 function normalizeRegion(tradeName) {
   const region = String(tradeName ?? "").toLowerCase();
+  if (region.includes("antarctica")) return "antarctica";
+  if (region.includes("south america") || region.includes("buenos aires") || region.includes("brazil") || region.includes("uruguay")) return "south-america";
+  if (region.includes("panama")) return "panama-canal";
+  if (region.includes("canada") && region.includes("england")) return "canada-new-england";
+  if (region.includes("australia") || region.includes("new zealand")) return "australia-new-zealand";
   if (region.includes("caribbean")) return "caribbean";
   if (region.includes("bahamas")) return "bahamas";
   if (region.includes("mexico")) return "mexico";
@@ -63,7 +68,7 @@ function normalizeRegion(tradeName) {
   if (region.includes("asia") || region.includes("japan")) return "asia";
   if (region.includes("hawaii")) return "hawaii";
   if (region.includes("california")) return "california-coast";
-  if (region.includes("pacific") || region.includes("australia") || region.includes("new zealand") || region.includes("tahiti")) {
+  if (region.includes("pacific") || region.includes("tahiti")) {
     return "south-pacific";
   }
   return "other";

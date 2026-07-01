@@ -131,6 +131,7 @@ const PORT_IMAGE_ALIASES = {
   "charlotte amalie": "st-thomas",
   "civitavecchia": "rome-civitavecchia",
   "canada and new england": "halifax",
+  "canada & new england": "halifax",
   "croatia": "dubrovnik",
   "dominican": "puerto-plata",
   "eastern caribbean": "st-thomas",
@@ -147,12 +148,14 @@ const PORT_IMAGE_ALIASES = {
   "kralendijk": "bonaire",
   "malta": "valletta",
   "messina": "sicily-messina",
+  "new zealand": "auckland",
   "new brunswick": "halifax",
   "new england": "halifax",
   "new york": "manhattan",
   "north cape": "oslo",
   "oranjestad": "aruba",
   "orlando": "port-canaveral",
+  "panama canal": "cartagena",
   "paris": "le-havre",
   "perfect day": "cococay",
   "philipsburg": "st-maarten",
@@ -166,6 +169,7 @@ const PORT_IMAGE_ALIASES = {
   "san miguel de cozumel": "cozumel",
   "sicily": "sicily-messina",
   "souda": "chania-souda",
+  "south america": "cartagena",
   "st kitts": "st-kitts",
   "st lucia": "st-lucia",
   "st maarten": "st-maarten",
@@ -181,16 +185,22 @@ const PORT_IMAGE_ALIASES = {
 
 const REGION_IMAGE_SLUGS = {
   alaska: "juneau",
+  antarctica: "cartagena",
+  asia: "shanghai",
   bahamas: "nassau",
   caribbean: "nassau",
   "california-coast": "san-diego",
+  "canada-new-england": "halifax",
   europe: "barcelona",
   hawaii: "miami",
   mediterranean: "barcelona",
   mexico: "cozumel",
   "mexican-riviera": "cabo-san-lucas",
   "northern-europe": "hamburg",
+  "panama-canal": "cartagena",
+  "south-america": "cartagena",
   "south-pacific": "sydney",
+  "australia-new-zealand": "sydney",
   transatlantic: "barcelona",
 };
 
@@ -400,6 +410,8 @@ function dealScore(sailing) {
   if (sailing.nights >= 4 && sailing.nights <= 6) score += 18;
   if (sailing.nights === 7) score += 14;
   if (sailing.destinationRegion === "caribbean" || sailing.destinationRegion === "bahamas") score += 12;
+  if (["mediterranean", "asia", "south-america", "panama-canal"].includes(sailing.destinationRegion)) score += 10;
+  if (["canada-new-england", "australia-new-zealand", "antarctica"].includes(sailing.destinationRegion)) score += 6;
   if (sailing.confidence === "verified_from_cruise_line") score += 8;
   if (sailing.confidence === "itinerary_verified_price_check_required") score += 4;
   return score;

@@ -3637,7 +3637,7 @@
     "taxesAndFeesIncluded": true,
     "monthKey": "2026-07",
     "monthLabel": "July 2026",
-    "dealScore": 18,
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -3657,7 +3657,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/vancouver.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-07-05T00%3A00%3A00Z%20TO%202026-07-05T00%3A00%3A00Z%5D&ships:(Westerdam)",
-    "region": "other",
+    "region": "alaska",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -3685,7 +3685,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/dover.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-07-10T00%3A00%3A00Z%20TO%202026-07-10T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)",
-    "region": "other",
+    "region": "northern-europe",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -3748,7 +3748,7 @@
     "taxesAndFeesIncluded": true,
     "monthKey": "2026-08",
     "monthLabel": "August 2026",
-    "dealScore": 18,
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -3768,7 +3768,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/oslo.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-08-30T00%3A00%3A00Z%20TO%202026-08-30T00%3A00%3A00Z%5D&ships:(Rotterdam)",
-    "region": "other",
+    "region": "northern-europe",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -3795,7 +3795,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/dover.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-09-04T00%3A00%3A00Z%20TO%202026-09-04T00%3A00%3A00Z%5D&ships:(Nieuw%20Statendam)",
-    "region": "other",
+    "region": "northern-europe",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -3877,7 +3877,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/dubrovnik.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-09-23T00%3A00%3A00Z%20TO%202026-09-23T00%3A00%3A00Z%5D&ships:(Oosterdam)",
-    "region": "other",
+    "region": "mediterranean",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -3885,7 +3885,7 @@
     "taxesAndFeesIncluded": true,
     "monthKey": "2026-09",
     "monthLabel": "September 2026",
-    "dealScore": 4,
+    "dealScore": 14,
     "badges": [
       "Price check required"
     ]
@@ -3904,7 +3904,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/dubrovnik.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-09-23T00%3A00%3A00Z%20TO%202026-09-23T00%3A00%3A00Z%5D&ships:(Oosterdam)",
-    "region": "other",
+    "region": "mediterranean",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -3912,7 +3912,7 @@
     "taxesAndFeesIncluded": true,
     "monthKey": "2026-09",
     "monthLabel": "September 2026",
-    "dealScore": 4,
+    "dealScore": 14,
     "badges": [
       "Price check required"
     ]
@@ -3931,7 +3931,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/halifax.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-03T00%3A00%3A00Z%20TO%202026-10-03T00%3A00%3A00Z%5D&ships:(Zuiderdam)",
-    "region": "other",
+    "region": "canada-new-england",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -3939,7 +3939,7 @@
     "taxesAndFeesIncluded": true,
     "monthKey": "2026-10",
     "monthLabel": "October 2026",
-    "dealScore": 18,
+    "dealScore": 24,
     "badges": [
       "7-night",
       "Price check required"
@@ -3985,9 +3985,9 @@
     "currency": "USD",
     "departureDate": "2026-10-04",
     "ports": [],
-    "imageUrl": "assets/images/ports/vancouver.jpg",
+    "imageUrl": "assets/images/ports/cartagena.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-04T00%3A00%3A00Z%20TO%202026-10-04T00%3A00%3A00Z%5D&ships:(Eurodam)",
-    "region": "other",
+    "region": "panama-canal",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -3995,7 +3995,7 @@
     "taxesAndFeesIncluded": true,
     "monthKey": "2026-10",
     "monthLabel": "October 2026",
-    "dealScore": 4,
+    "dealScore": 14,
     "badges": [
       "Price check required"
     ]
@@ -4042,7 +4042,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/falmouth.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-18T00%3A00%3A00Z%20TO%202026-10-18T00%3A00%3A00Z%5D&ships:(Rotterdam)",
-    "region": "other",
+    "region": "transatlantic",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -4069,7 +4069,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/san-diego.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-10-20T00%3A00%3A00Z%20TO%202026-10-20T00%3A00%3A00Z%5D&ships:(Koningsdam)",
-    "region": "other",
+    "region": "mexican-riviera",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -4104,7 +4104,7 @@
     "taxesAndFeesIncluded": true,
     "monthKey": "2026-10",
     "monthLabel": "October 2026",
-    "dealScore": 4,
+    "dealScore": 14,
     "badges": [
       "Price check required"
     ]
@@ -4150,7 +4150,7 @@
     "ports": [],
     "imageUrl": "assets/images/ports/san-diego.jpg",
     "bookingUrl": "https://www.hollandamerica.com/en/us/find-a-cruise?departDate:%5B2026-11-14T00%3A00%3A00Z%20TO%202026-11-14T00%3A00%3A00Z%5D&ships:(Koningsdam)",
-    "region": "other",
+    "region": "california-coast",
     "source": "hollandamerica.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -4159,6 +4159,40 @@
     "monthKey": "2026-11",
     "monthLabel": "November 2026",
     "dealScore": 30,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20260705-58611",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "itineraryTitle": "7-Day Mediterranean: Florence and Marseille",
+    "fromPrice": 859,
+    "currency": "USD",
+    "departureDate": "2026-07-05",
+    "ports": [
+      "Nice/Monaco (Villefranche), France",
+      "Florence/Pisa (Livorno), Italy",
+      "Provence (Marseille), France",
+      "Salerno, Italy",
+      "Catania, Italy"
+    ],
+    "imageUrl": "assets/images/ports/rome-civitavecchia.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7CIVSALCTALIVVLFMRSBCN&guests=2&gateway=NONE&packageId=22977650",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-07",
+    "monthLabel": "July 2026",
+    "dealScore": 40,
     "badges": [
       "7-night",
       "Price check required"
@@ -4198,6 +4232,75 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-dawn-20260719-58536",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "itineraryTitle": "7-Day Mediterranean from Barcelona to Lisbon: Spain & Portugal",
+    "fromPrice": 1139,
+    "currency": "USD",
+    "departureDate": "2026-07-19",
+    "ports": [
+      "Valencia, Spain",
+      "Gibraltar, United Kingdom",
+      "Motril, Spain",
+      "Palma (Majorca), Spain",
+      "Portimão, Portugal",
+      "Seville (Cadiz), Spain"
+    ],
+    "imageUrl": "assets/images/ports/barcelona.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIVLCMOTGIBCADPRMLIS&guests=2&gateway=NONE&packageId=22976159",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-07",
+    "monthLabel": "July 2026",
+    "dealScore": 28,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20260719-58613",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "itineraryTitle": "7-Day Mediterranean: Florence and Marseille",
+    "fromPrice": 989,
+    "currency": "USD",
+    "departureDate": "2026-07-19",
+    "ports": [
+      "Nice/Monaco (Villefranche), France",
+      "Florence/Pisa (Livorno), Italy",
+      "Provence (Marseille), France",
+      "Salerno, Italy",
+      "Catania, Italy"
+    ],
+    "imageUrl": "assets/images/ports/rome-civitavecchia.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7CIVSALCTALIVVLFMRSBCN&guests=2&gateway=NONE&packageId=22977651",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-07",
+    "monthLabel": "July 2026",
+    "dealScore": 40,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20260719-58720",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -4231,6 +4334,76 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-gem-20260719-58691",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "itineraryTitle": "7-Day Greek Isles from Venice (Ravenna) to Rome: Italy, Greece & Croatia",
+    "fromPrice": 1129,
+    "currency": "USD",
+    "departureDate": "2026-07-19",
+    "ports": [
+      "Kotor, Montenegro",
+      "Split, Croatia",
+      "Messina (Sicily), Italy",
+      "Dubrovnik, Croatia",
+      "Corfu, Greece",
+      "Salerno, Italy"
+    ],
+    "imageUrl": "assets/images/ports/dubrovnik.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM7RAVSPUDBVKOTCFUMSNSALCIV&guests=2&gateway=NONE&packageId=22988316",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-07",
+    "monthLabel": "July 2026",
+    "dealScore": 28,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-dawn-20260726-58537",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "duration": 7,
+    "departurePort": "Lisbon, Portugal",
+    "itineraryTitle": "7-Day Mediterranean from Lisbon to Barcelona (Tarragona): Spain & Portugal",
+    "fromPrice": 1069,
+    "currency": "USD",
+    "departureDate": "2026-07-26",
+    "ports": [
+      "Gibraltar, United Kingdom",
+      "Motril, Spain",
+      "Palma (Majorca), Spain",
+      "Portimão, Portugal",
+      "Ibiza, Spain",
+      "Seville (Cadiz), Spain"
+    ],
+    "imageUrl": "assets/images/ports/barcelona.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7LISPRMCADMOTGIBIBZPMITAR&guests=2&gateway=NONE&packageId=26170164",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-07",
+    "monthLabel": "July 2026",
+    "dealScore": 28,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20260726-58721",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -4258,6 +4431,40 @@
     "monthKey": "2026-07",
     "monthLabel": "July 2026",
     "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20260802-58615",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "duration": 7,
+    "departurePort": "Rome (Civitavecchia), Italy",
+    "itineraryTitle": "7-Day Mediterranean: Florence and Marseille",
+    "fromPrice": 1009,
+    "currency": "USD",
+    "departureDate": "2026-08-02",
+    "ports": [
+      "Nice/Monaco (Villefranche), France",
+      "Florence/Pisa (Livorno), Italy",
+      "Provence (Marseille), France",
+      "Salerno, Italy",
+      "Catania, Italy"
+    ],
+    "imageUrl": "assets/images/ports/rome-civitavecchia.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7CIVSALCTALIVVLFMRSBCN&guests=2&gateway=NONE&packageId=22977652",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-08",
+    "monthLabel": "August 2026",
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -4324,6 +4531,40 @@
     "monthKey": "2026-08",
     "monthLabel": "August 2026",
     "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20260809-58616",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "itineraryTitle": "7-Day Mediterranean from Barcelona to Rome: Nice, Florence & Amalfi Coast (Salerno)",
+    "fromPrice": 1019,
+    "currency": "USD",
+    "departureDate": "2026-08-09",
+    "ports": [
+      "Nice/Monaco (Villefranche), France",
+      "Florence/Pisa (Livorno), Italy",
+      "Messina (Sicily), Italy",
+      "Provence (Marseille), France",
+      "Salerno, Italy"
+    ],
+    "imageUrl": "assets/images/ports/sicily-messina.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7BCNMRSVLFLIVMSNSALCIV&guests=2&gateway=NONE&packageId=22977640",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-08",
+    "monthLabel": "August 2026",
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -4423,6 +4664,41 @@
     "monthKey": "2026-08",
     "monthLabel": "August 2026",
     "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-dawn-20260816-58540",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "itineraryTitle": "7-Day Mediterranean from Barcelona to Lisbon: Spain",
+    "fromPrice": 1159,
+    "currency": "USD",
+    "departureDate": "2026-08-16",
+    "ports": [
+      "Valencia, Spain",
+      "Gibraltar, United Kingdom",
+      "Motril, Spain",
+      "Tangier, Morocco",
+      "Palma (Majorca), Spain",
+      "Seville (Cadiz), Spain"
+    ],
+    "imageUrl": "assets/images/ports/barcelona.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIVLCMOTGIBTNGCADLIS&guests=2&gateway=NONE&packageId=22976161",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-08",
+    "monthLabel": "August 2026",
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -4561,6 +4837,76 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-dawn-20260830-58542",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "itineraryTitle": "7-Day Mediterranean from Barcelona to Lisbon: Spain & Portugal",
+    "fromPrice": 1039,
+    "currency": "USD",
+    "departureDate": "2026-08-30",
+    "ports": [
+      "Valencia, Spain",
+      "Gibraltar, United Kingdom",
+      "Motril, Spain",
+      "Palma (Majorca), Spain",
+      "Portimão, Portugal",
+      "Seville (Cadiz), Spain"
+    ],
+    "imageUrl": "assets/images/ports/barcelona.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIVLCMOTGIBCADPRMLIS&guests=2&gateway=NONE&packageId=22976162",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-08",
+    "monthLabel": "August 2026",
+    "dealScore": 28,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260830-58697",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "itineraryTitle": "7-Day Greek Isles from Venice (Ravenna) to Rome: Italy, Greece & Croatia",
+    "fromPrice": 1029,
+    "currency": "USD",
+    "departureDate": "2026-08-30",
+    "ports": [
+      "Kotor, Montenegro",
+      "Split, Croatia",
+      "Messina (Sicily), Italy",
+      "Dubrovnik, Croatia",
+      "Corfu, Greece",
+      "Salerno, Italy"
+    ],
+    "imageUrl": "assets/images/ports/dubrovnik.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM7RAVSPUDBVKOTCFUMSNSALCIV&guests=2&gateway=NONE&packageId=22988319",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-08",
+    "monthLabel": "August 2026",
+    "dealScore": 28,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260830-58198",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -4621,6 +4967,76 @@
     "monthKey": "2026-09",
     "monthLabel": "September 2026",
     "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-dawn-20260913-58544",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "itineraryTitle": "7-Day Mediterranean from Barcelona to Lisbon: Spain & Portugal",
+    "fromPrice": 1169,
+    "currency": "USD",
+    "departureDate": "2026-09-13",
+    "ports": [
+      "Valencia, Spain",
+      "Gibraltar, United Kingdom",
+      "Motril, Spain",
+      "Palma (Majorca), Spain",
+      "Portimão, Portugal",
+      "Seville (Cadiz), Spain"
+    ],
+    "imageUrl": "assets/images/ports/barcelona.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIVLCMOTGIBCADPRMLIS&guests=2&gateway=NONE&packageId=22976163",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-09",
+    "monthLabel": "September 2026",
+    "dealScore": 28,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20260913-58699",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "duration": 7,
+    "departurePort": "Venice (Ravenna), Italy",
+    "itineraryTitle": "7-Day Greek Isles from Venice (Ravenna) to Rome: Italy, Greece & Croatia",
+    "fromPrice": 1179,
+    "currency": "USD",
+    "departureDate": "2026-09-13",
+    "ports": [
+      "Kotor, Montenegro",
+      "Split, Croatia",
+      "Messina (Sicily), Italy",
+      "Dubrovnik, Croatia",
+      "Corfu, Greece",
+      "Salerno, Italy"
+    ],
+    "imageUrl": "assets/images/ports/dubrovnik.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM7RAVSPUDBVKOTCFUMSNSALCIV&guests=2&gateway=NONE&packageId=22988320",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-09",
+    "monthLabel": "September 2026",
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -4693,6 +5109,40 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20260921-61098",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 16,
+    "departurePort": "Vancouver, British Columbia",
+    "itineraryTitle": "16-Day from Vancouver to Tokyo (Yokohama): Ketchikan, Whittier & Kodiak",
+    "fromPrice": 1688,
+    "currency": "USD",
+    "departureDate": "2026-09-21",
+    "ports": [
+      "Kodiak, Alaska",
+      "Hubbard Glacier, Alaska",
+      "Whittier, Alaska",
+      "Hakodate, Japan",
+      "Sitka, Alaska",
+      "Ketchikan (Ward Cove), Alaska"
+    ],
+    "imageUrl": "assets/images/ports/sitka.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE16VANKTNSITHGCWQFADQHKDYOK&guests=2&gateway=NONE&packageId=24717325",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-09",
+    "monthLabel": "September 2026",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20260927-58202",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -4720,6 +5170,40 @@
     "monthKey": "2026-09",
     "monthLabel": "September 2026",
     "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20261004-58624",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "itineraryTitle": "7-Day Mediterranean from Barcelona to Rome: Nice, Florence & Amalfi Coast (Salerno)",
+    "fromPrice": 1269,
+    "currency": "USD",
+    "departureDate": "2026-10-04",
+    "ports": [
+      "Nice/Monaco (Villefranche), France",
+      "Florence/Pisa (Livorno), Italy",
+      "Messina (Sicily), Italy",
+      "Provence (Marseille), France",
+      "Salerno, Italy"
+    ],
+    "imageUrl": "assets/images/ports/sicily-messina.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7BCNMRSVLFLIVMSNSALCIV&guests=2&gateway=NONE&packageId=22977644",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-10",
+    "monthLabel": "October 2026",
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -4792,6 +5276,109 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-dawn-20261018-58549",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "duration": 7,
+    "departurePort": "Lisbon, Portugal",
+    "itineraryTitle": "7-Day Mediterranean from Lisbon to Barcelona: Spain",
+    "fromPrice": 949,
+    "currency": "USD",
+    "departureDate": "2026-10-18",
+    "ports": [
+      "Gibraltar, United Kingdom",
+      "Motril, Spain",
+      "Palma (Majorca), Spain",
+      "Ibiza, Spain",
+      "Seville (Cadiz), Spain"
+    ],
+    "imageUrl": "assets/images/ports/barcelona.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7LISCADMOTGIBIBZPMIBCN&guests=2&gateway=NONE&packageId=22976180",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-10",
+    "monthLabel": "October 2026",
+    "dealScore": 40,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-epic-20261018-58626",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Epic",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "itineraryTitle": "7-Day Mediterranean from Barcelona to Rome: Nice, Florence & Amalfi Coast (Salerno)",
+    "fromPrice": 1019,
+    "currency": "USD",
+    "departureDate": "2026-10-18",
+    "ports": [
+      "Nice/Monaco (Villefranche), France",
+      "Florence/Pisa (Livorno), Italy",
+      "Messina (Sicily), Italy",
+      "Provence (Marseille), France",
+      "Salerno, Italy"
+    ],
+    "imageUrl": "assets/images/ports/sicily-messina.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7BCNMRSVLFLIVMSNSALCIV&guests=2&gateway=NONE&packageId=22977645",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-10",
+    "monthLabel": "October 2026",
+    "dealScore": 28,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20261018-59514",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Seoul (Incheon), South Korea",
+    "itineraryTitle": "11-Day Asia From Seoul To Tokyo: Osaka, Nagoya, Sakaiminato & Hakodate",
+    "fromPrice": 2049,
+    "currency": "USD",
+    "departureDate": "2026-10-18",
+    "ports": [
+      "Kanazawa, Japan",
+      "Akita, Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Kyoto (Osaka), Japan",
+      "Hakodate, Japan",
+      "Aomori, Japan",
+      "Sakaiminato, Japan"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11INCSAKKZWAKIAOMHKDSMZOSATOK&guests=2&gateway=NONE&packageId=23410574",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-10",
+    "monthLabel": "October 2026",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-prima-20261018-58205",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -4819,6 +5406,41 @@
     "monthKey": "2026-10",
     "monthLabel": "October 2026",
     "dealScore": 42,
+    "badges": [
+      "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-dawn-20261025-58550",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Dawn",
+    "duration": 7,
+    "departurePort": "Barcelona, Spain",
+    "itineraryTitle": "7-Day Mediterranean from Barcelona to Lisbon: Spain & Portugal",
+    "fromPrice": 929,
+    "currency": "USD",
+    "departureDate": "2026-10-25",
+    "ports": [
+      "Gibraltar, United Kingdom",
+      "Alicante, Spain",
+      "Motril, Spain",
+      "Palma (Majorca), Spain",
+      "Portimão, Portugal",
+      "Seville (Cadiz), Spain"
+    ],
+    "imageUrl": "assets/images/ports/barcelona.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=DAWN7BCNPMIALCMOTGIBCADPRMLIS&guests=2&gateway=NONE&packageId=22976166",
+    "region": "mediterranean",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-10",
+    "monthLabel": "October 2026",
+    "dealScore": 40,
     "badges": [
       "7-night",
       "Price check required"
@@ -5446,6 +6068,40 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20261130-59518",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 9,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "9-Day Asia From Tokyo To Hong Kong: Taipei, Osaka, Kochi & Okinawa",
+    "fromPrice": 2069,
+    "currency": "USD",
+    "departureDate": "2026-11-30",
+    "ports": [
+      "Hiroshima, Japan",
+      "Taipei (Keelung), Taiwan",
+      "Miyakojima (Okinawa), Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Kyoto (Osaka), Japan",
+      "Kochi, Japan"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9YOKSMZOSAKCZHSMMIYKEEHKG&guests=2&gateway=NONE&packageId=24564219",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-11",
+    "monthLabel": "November 2026",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20261204-59224",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -5506,6 +6162,41 @@
     "dealScore": 69,
     "badges": [
       "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20261204-61121",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 16,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "16-Day Panama Canal from Miami to San Diego: Mexico & Costa Rica",
+    "fromPrice": 1639,
+    "currency": "USD",
+    "departureDate": "2026-12-04",
+    "ports": [
+      "Cartagena, Colombia",
+      "Puerto Vallarta, Mexico",
+      "Acapulco, Mexico",
+      "Puntarenas, Costa Rica",
+      "Cabo San Lucas, Mexico",
+      "Puerto Quetzal, Guatemala",
+      "Colón, Panama"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR16MIACTGCLNPASPRQACAPVRCSLSAN&guests=2&gateway=NONE&packageId=24777233",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2026-12",
+    "monthLabel": "December 2026",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -6191,6 +6882,41 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-star-20270213-62379",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 16,
+    "departurePort": "San Diego, California",
+    "itineraryTitle": "16-Day Panama Canal from San Diego to Miami: Mexico & Colombia",
+    "fromPrice": 2029,
+    "currency": "USD",
+    "departureDate": "2027-02-13",
+    "ports": [
+      "Panama City (Pacific Cruise Terminal), Panama",
+      "Cartagena, Colombia",
+      "Acapulco, Mexico",
+      "Puntarenas, Costa Rica",
+      "George Town, Grand Cayman",
+      "Puerto Quetzal, Guatemala",
+      "Cabo San Lucas, Mexico"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR16SANCSLACAPRQPASPCTCTGGECMIA&guests=2&gateway=NONE&packageId=25742217",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-02",
+    "monthLabel": "February 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-getaway-20270217-59670",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -6443,6 +7169,42 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-bliss-20270409-60261",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Bliss",
+    "duration": 19,
+    "departurePort": "New York, New York",
+    "itineraryTitle": "19-Day Panama Canal: Mexico and Costa Rica from New York",
+    "fromPrice": 2339,
+    "currency": "USD",
+    "departureDate": "2027-04-09",
+    "ports": [
+      "Cartagena, Colombia",
+      "Puerto Vallarta, Mexico",
+      "Puntarenas (Puerto Caldera), Costa Rica",
+      "Acapulco, Mexico",
+      "Cabo San Lucas, Mexico",
+      "Puerto Plata, Dominican Republic",
+      "Puerto Quetzal, Guatemala",
+      "Colón, Panama"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BLISS19NYCPOPCTGCLNPCLPRQACAPVRCSLSFO&guests=2&gateway=NONE&packageId=24218424",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-04",
+    "monthLabel": "April 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-escape-20270428-60474",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -6629,6 +7391,39 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20270928-62638",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 15,
+    "departurePort": "Seattle, Washington",
+    "itineraryTitle": "15-Day from Seattle to Tokyo (Yokohama): Hubbard Glacier, Ketchikan & Hakodate",
+    "fromPrice": 1620,
+    "currency": "USD",
+    "departureDate": "2027-09-28",
+    "ports": [
+      "Hubbard Glacier, Alaska",
+      "Whittier, Alaska",
+      "Hakodate, Japan",
+      "Sitka, Alaska",
+      "Ketchikan (Ward Cove), Alaska"
+    ],
+    "imageUrl": "assets/images/ports/sitka.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE15SEAKTNSITHGCWQFHKDYOK&guests=2&gateway=NONE&packageId=26190585",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-09",
+    "monthLabel": "September 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-joy-20271017-61939",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -6656,6 +7451,40 @@
     "dealScore": 56,
     "badges": [
       "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20271109-62540",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "duration": 10,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "10-Day Panama Canal Round-trip Miami: Bahamas, Jamaica & Costa Rica",
+    "fromPrice": 1439,
+    "currency": "USD",
+    "departureDate": "2027-11-09",
+    "ports": [
+      "Cartagena, Colombia",
+      "Puerto Limon, Costa Rica",
+      "Great Stirrup Cay, Bahamas",
+      "Colón, Panama",
+      "Montego Bay, Jamaica",
+      "Panama Canal (Gatun Lake), Panama"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM10MIANPICTGPCGCLNLIOMBJMIA&guests=2&gateway=NONE&packageId=26161717",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-11",
+    "monthLabel": "November 2027",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -6693,6 +7522,142 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-gem-20271119-62543",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "duration": 11,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "11-Day Panama Canal Round-trip Miami: Bahamas, Jamaica & Costa Rica",
+    "fromPrice": 1969,
+    "currency": "USD",
+    "departureDate": "2027-11-19",
+    "ports": [
+      "Cartagena, Colombia",
+      "Panama Canal (Gatun Lake), Panama",
+      "Puerto Limon, Costa Rica",
+      "Falmouth, Jamaica",
+      "Great Stirrup Cay, Bahamas",
+      "George Town, Grand Cayman",
+      "Colón, Panama"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM11MIANPICTGPCGCLNLIOFMHGECMIA&guests=2&gateway=NONE&packageId=26161726",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-11",
+    "monthLabel": "November 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20271129-61743",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 10,
+    "departurePort": "Tokyo, Japan",
+    "itineraryTitle": "10-day Asia From Tokyo to Hong Kong: Taipei, Osaka, Kochi & Okinawa",
+    "fromPrice": 1929,
+    "currency": "USD",
+    "departureDate": "2027-11-29",
+    "ports": [
+      "Hiroshima, Japan",
+      "Taipei (Keelung), Taiwan",
+      "Naha (Okinawa), Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Kyoto (Osaka), Japan",
+      "Kochi, Japan"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE10TOKSMZOSAKCZHSMNAHKEEHKG&guests=2&gateway=NONE&packageId=25367406",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-11",
+    "monthLabel": "November 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20271130-62544",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "duration": 11,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "11-Day Panama Canal Round-trip Miami: Bahamas, Jamaica & Costa Rica",
+    "fromPrice": 1519,
+    "currency": "USD",
+    "departureDate": "2027-11-30",
+    "ports": [
+      "Cartagena, Colombia",
+      "Panama Canal (Gatun Lake), Panama",
+      "Puerto Limon, Costa Rica",
+      "Falmouth, Jamaica",
+      "Great Stirrup Cay, Bahamas",
+      "George Town, Grand Cayman",
+      "Colón, Panama"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM11MIANPICTGPCGCLNLIOFMHGECMIA&guests=2&gateway=NONE&packageId=26161727",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-11",
+    "monthLabel": "November 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20271202-62369",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 15,
+    "departurePort": "Lisbon, Portugal",
+    "itineraryTitle": "15-Day Transatlantic from Lisbon to Buenos Aires: Brazil & Uruguay",
+    "fromPrice": 1679,
+    "currency": "USD",
+    "departureDate": "2027-12-02",
+    "ports": [
+      "Porto Grande, Cape Verde",
+      "Recife, Brazil",
+      "Rio de Janeiro, Brazil",
+      "Montevideo, Uruguay"
+    ],
+    "imageUrl": "assets/images/ports/lisbon.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15LISPTGRECRIOMVDBUE&guests=2&gateway=NONE&packageId=25732821",
+    "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-12",
+    "monthLabel": "December 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-epic-20271203-61507",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -6726,6 +7691,109 @@
     ]
   },
   {
+    "id": "norwegian-norwegian-jade-20271209-61744",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 12,
+    "departurePort": "Hong Kong, China",
+    "itineraryTitle": "12-Day Asia from Hong Kong to Singapore: Thailand & Philippines",
+    "fromPrice": 1909,
+    "currency": "USD",
+    "departureDate": "2027-12-09",
+    "ports": [
+      "Cam Ranh, Vietnam",
+      "Hanoi (Ha Long Bay), Vietnam",
+      "Bangkok (Laem Chabang), Thailand",
+      "Chan May, Vietnam",
+      "Ko Samui, Thailand",
+      "Ho Chi Minh City (Phu My), Vietnam"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE12HKGHANCMYCRHSGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25382098",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-12",
+    "monthLabel": "December 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jewel-20271209-61892",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jewel",
+    "duration": 11,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "11-Day Panama Canal Round-trip Miami: Mexico, Costa Rica & Belize",
+    "fromPrice": 1509,
+    "currency": "USD",
+    "departureDate": "2027-12-09",
+    "ports": [
+      "Harvest Caye, Belize",
+      "Cartagena, Colombia",
+      "Panama Canal (Gatun Lake), Panama",
+      "Puerto Limon, Costa Rica",
+      "George Town, Grand Cayman",
+      "Colón, Panama",
+      "Cozumel, Mexico"
+    ],
+    "imageUrl": "assets/images/ports/harvest-caye.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JEWEL11MIAGECCTGPCGCLNLIOBPICZMMIA&guests=2&gateway=NONE&packageId=25386187",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-12",
+    "monthLabel": "December 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-gem-20271211-62541",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Gem",
+    "duration": 10,
+    "departurePort": "Miami, Florida",
+    "itineraryTitle": "10-Day Panama Canal Round-Trip Miami: Bahamas, Jamaica & Costa Rica",
+    "fromPrice": 1439,
+    "currency": "USD",
+    "departureDate": "2027-12-11",
+    "ports": [
+      "Cartagena, Colombia",
+      "Panama Canal (Gatun Lake), Panama",
+      "Puerto Limon, Costa Rica",
+      "Falmouth, Jamaica",
+      "Great Stirrup Cay, Bahamas",
+      "Colón, Panama"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GEM10MIACTGPCGCLNLIOFMHNPIMIA&guests=2&gateway=NONE&packageId=26161718",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-12",
+    "monthLabel": "December 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
     "id": "norwegian-norwegian-joy-20271216-63711",
     "cruiseLine": "Norwegian Cruise Line",
     "cruiseLineId": "norwegian",
@@ -6753,6 +7821,73 @@
     "dealScore": 46,
     "badges": [
       "Short cruise",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20271217-62368",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 16,
+    "departurePort": "Buenos Aires, Argentina",
+    "itineraryTitle": "16-Day South America from Buenos Aires to Santiago: Argentina & Chile",
+    "fromPrice": 3989,
+    "currency": "USD",
+    "departureDate": "2027-12-17",
+    "ports": [
+      "Montevideo, Uruguay",
+      "Stanley, Falkland Islands",
+      "Punta Arenas, Chile",
+      "Puerto Madryn, Argentina",
+      "Ushuaia, Argentina",
+      "Puerto Montt, Chile"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR16BUEMVDPMYPSYUSHPUQPMCSAI&guests=2&gateway=NONE&packageId=25732822",
+    "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2027-12",
+    "monthLabel": "December 2027",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20280102-62363",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 15,
+    "departurePort": "Santiago (San Antonio), Chile",
+    "itineraryTitle": "15-Day South America from Santiago to Buenos Aires: Argentina & Chile",
+    "fromPrice": 3069,
+    "currency": "USD",
+    "departureDate": "2028-01-02",
+    "ports": [
+      "Montevideo, Uruguay",
+      "Stanley, Falkland Islands",
+      "Puerto Madryn, Argentina",
+      "Ushuaia, Argentina",
+      "Puerto Montt, Chile"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15SAIPMCUSHPSYPMYMVDBUE&guests=2&gateway=NONE&packageId=25732830",
+    "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-01",
+    "monthLabel": "January 2028",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -6819,6 +7954,276 @@
     "dealScore": 42,
     "badges": [
       "7-night",
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20280117-62364",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 15,
+    "departurePort": "Buenos Aires, Argentina",
+    "itineraryTitle": "15-Day South America from Buenos Aires to Santiago: Argentina & Falkland Islands",
+    "fromPrice": 3209,
+    "currency": "USD",
+    "departureDate": "2028-01-17",
+    "ports": [
+      "Montevideo, Uruguay",
+      "Stanley, Falkland Islands",
+      "Puerto Madryn, Argentina",
+      "Ushuaia, Argentina",
+      "Puerto Montt, Chile"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15BUEMVDPMYPSYUSHPMCSAI&guests=2&gateway=NONE&packageId=25732833",
+    "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-01",
+    "monthLabel": "January 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20280201-62365",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 15,
+    "departurePort": "Santiago (San Antonio), Chile",
+    "itineraryTitle": "15-Day South America from Santiago to Buenos Aires: Argentina & Chile",
+    "fromPrice": 3189,
+    "currency": "USD",
+    "departureDate": "2028-02-01",
+    "ports": [
+      "Montevideo, Uruguay",
+      "Stanley, Falkland Islands",
+      "Puerto Madryn, Argentina",
+      "Ushuaia, Argentina",
+      "Puerto Montt, Chile"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15SAIPMCUSHPSYPMYMVDBUE&guests=2&gateway=NONE&packageId=25732831",
+    "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-02",
+    "monthLabel": "February 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20280216-62366",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 15,
+    "departurePort": "Buenos Aires, Argentina",
+    "itineraryTitle": "15-Day South America from Buenos Aires to Santiago: Argentina & Falkland Islands",
+    "fromPrice": 3009,
+    "currency": "USD",
+    "departureDate": "2028-02-16",
+    "ports": [
+      "Montevideo, Uruguay",
+      "Stanley, Falkland Islands",
+      "Puerto Madryn, Argentina",
+      "Ushuaia, Argentina",
+      "Puerto Montt, Chile"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15BUEMVDPMYPSYUSHPMCSAI&guests=2&gateway=NONE&packageId=25732834",
+    "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-02",
+    "monthLabel": "February 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280222-61750",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 11,
+    "departurePort": "Hong Kong, China",
+    "itineraryTitle": "11-Day Asia From Hong Kong To Tokyo: Taipei, Osaka, Kochi & Okinawa",
+    "fromPrice": 2089,
+    "currency": "USD",
+    "departureDate": "2028-02-22",
+    "ports": [
+      "Sasebo, Japan",
+      "Hiroshima, Japan",
+      "Taipei (Keelung), Taiwan",
+      "Kaohsiung, Taiwan",
+      "Miyakojima (Okinawa), Japan",
+      "Hakata (Fukuoka), Japan",
+      "Mount Fuji (Shimizu), Japan",
+      "Kyoto (Osaka), Japan",
+      "Kochi, Japan"
+    ],
+    "imageUrl": "assets/images/ports/shanghai.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11HKGKAOKEEMIYSASHK1HSMKCZOSASMZTOK&guests=2&gateway=NONE&packageId=25374392",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-02",
+    "monthLabel": "February 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20280302-62367",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 15,
+    "departurePort": "Santiago (San Antonio), Chile",
+    "itineraryTitle": "15-Day South America from Santiago to Buenos Aires: Argentina & Chile",
+    "fromPrice": 3389,
+    "currency": "USD",
+    "departureDate": "2028-03-02",
+    "ports": [
+      "Montevideo, Uruguay",
+      "Stanley, Falkland Islands",
+      "Puerto Madryn, Argentina",
+      "Ushuaia, Argentina",
+      "Puerto Montt, Chile"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15SAIPMCUSHPSYPMYMVDBUE&guests=2&gateway=NONE&packageId=25732832",
+    "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-03",
+    "monthLabel": "March 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-star-20280317-62370",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Star",
+    "duration": 15,
+    "departurePort": "Buenos Aires, Argentina",
+    "itineraryTitle": "15-Day Transatlantic from Buenos Aires to Lisbon: Brazil & Portugal",
+    "fromPrice": 1599,
+    "currency": "USD",
+    "departureDate": "2028-03-17",
+    "ports": [
+      "Rio de Janeiro, Brazil",
+      "Recife, Brazil",
+      "Porto Grande, Cape Verde",
+      "Funchal, Madeira"
+    ],
+    "imageUrl": "assets/images/ports/funchal.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=STAR15BUERIORECPTGFNCLIS&guests=2&gateway=NONE&packageId=25732820",
+    "region": "south-america",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-03",
+    "monthLabel": "March 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-bliss-20280414-61727",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Bliss",
+    "duration": 19,
+    "departurePort": "New York, New York",
+    "itineraryTitle": "19-day Panama Canal From New York To San Francisco: Mexico & Costa Rica",
+    "fromPrice": 2429,
+    "currency": "USD",
+    "departureDate": "2028-04-14",
+    "ports": [
+      "Cartagena, Colombia",
+      "Puntarenas (Puerto Caldera), Costa Rica",
+      "Acapulco, Mexico",
+      "Cabo San Lucas, Mexico",
+      "Puerto Plata, Dominican Republic",
+      "Puerto Quetzal, Guatemala",
+      "Colón, Panama"
+    ],
+    "imageUrl": "assets/images/ports/cartagena.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=BLISS19NYCPOPCTGCLNPCLPRQACACSLSFO&guests=2&gateway=NONE&packageId=25367229",
+    "region": "panama-canal",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-04",
+    "monthLabel": "April 2028",
+    "dealScore": 14,
+    "badges": [
+      "Price check required"
+    ]
+  },
+  {
+    "id": "norwegian-norwegian-jade-20280423-61756",
+    "cruiseLine": "Norwegian Cruise Line",
+    "cruiseLineId": "norwegian",
+    "shipName": "Norwegian Jade",
+    "duration": 15,
+    "departurePort": "Tokyo (Yokohama), Japan",
+    "itineraryTitle": "15-Day From Tokyo (Yokohama) To Vancouver: Skagway, Juneau, Ketchikan & Hakodate",
+    "fromPrice": 1708,
+    "currency": "USD",
+    "departureDate": "2028-04-23",
+    "ports": [
+      "Juneau, Alaska",
+      "Sendai (Ishinomaki), Japan",
+      "Icy Strait Point, Alaska",
+      "Hakodate, Japan",
+      "Skagway, Alaska",
+      "Ketchikan (Ward Cove), Alaska"
+    ],
+    "imageUrl": "assets/images/ports/juneau.jpg",
+    "bookingUrl": "https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE15YOKSDAHKDICYJNUSGYKTNVAN&guests=2&gateway=NONE&packageId=25480101",
+    "region": "asia",
+    "source": "ncl.com",
+    "lastVerified": "2026-07-01",
+    "confidence": "itinerary_verified_price_check_required",
+    "priceBasis": "per-person-double-occupancy",
+    "taxesAndFeesIncluded": false,
+    "monthKey": "2028-04",
+    "monthLabel": "April 2028",
+    "dealScore": 14,
+    "badges": [
       "Price check required"
     ]
   },
@@ -6917,7 +8322,7 @@
     "taxesAndFeesIncluded": false,
     "monthKey": "2026-07",
     "monthLabel": "July 2026",
-    "dealScore": 18,
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -7055,7 +8460,7 @@
     "taxesAndFeesIncluded": false,
     "monthKey": "2026-07",
     "monthLabel": "July 2026",
-    "dealScore": 4,
+    "dealScore": 14,
     "badges": [
       "Price check required"
     ]
@@ -7159,7 +8564,7 @@
     "taxesAndFeesIncluded": false,
     "monthKey": "2026-08",
     "monthLabel": "August 2026",
-    "dealScore": 4,
+    "dealScore": 14,
     "badges": [
       "Price check required"
     ]
@@ -7227,7 +8632,7 @@
     "taxesAndFeesIncluded": false,
     "monthKey": "2026-08",
     "monthLabel": "August 2026",
-    "dealScore": 4,
+    "dealScore": 14,
     "badges": [
       "Price check required"
     ]
@@ -7288,7 +8693,7 @@
     ],
     "imageUrl": "assets/images/ports/catalina-island.jpg",
     "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NVAC&priceType=perCabin&voyageId=BR2609118NVAC",
-    "region": "other",
+    "region": "california-coast",
     "source": "virginvoyages.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -7364,7 +8769,7 @@
     "taxesAndFeesIncluded": false,
     "monthKey": "2026-09",
     "monthLabel": "September 2026",
-    "dealScore": 18,
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -7433,7 +8838,7 @@
     "taxesAndFeesIncluded": false,
     "monthKey": "2026-09",
     "monthLabel": "September 2026",
-    "dealScore": 18,
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"
@@ -7457,7 +8862,7 @@
     ],
     "imageUrl": "assets/images/ports/bermuda.jpg",
     "bookingUrl": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NNYB&priceType=perCabin&voyageId=VL2609275NNYB",
-    "region": "other",
+    "region": "bermuda",
     "source": "virginvoyages.com",
     "lastVerified": "2026-07-01",
     "confidence": "itinerary_verified_price_check_required",
@@ -7600,7 +9005,7 @@
     "taxesAndFeesIncluded": false,
     "monthKey": "2027-05",
     "monthLabel": "May 2027",
-    "dealScore": 18,
+    "dealScore": 28,
     "badges": [
       "7-night",
       "Price check required"

@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-01T14:42:47.775Z",
+  "generatedAt": "2026-07-01T19:30:47.430Z",
   "currentDate": "2026-07-01",
   "mode": "production-data-freshness",
   "thresholds": {
     "maxPublicAgeDays": 7,
     "maxIngestAgeDays": 7
   },
-  "manifestGeneratedAt": "2026-07-01T14:42:47.659Z",
+  "manifestGeneratedAt": "2026-07-01T19:30:47.298Z",
   "counts": {
-    "publicSailings": 238,
+    "publicSailings": 279,
     "stalePublicSailings": 0,
     "weeklyWatchlistSources": 9,
     "blockers": 0,
@@ -32,7 +32,7 @@
     },
     {
       "cruiseLine": "norwegian",
-      "publicSailings": 82,
+      "publicSailings": 123,
       "stalePublicSailings": 0,
       "oldestLastVerified": "2026-07-01",
       "latestLastVerified": "2026-07-01"
@@ -69,9 +69,9 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T14:31:54.560Z",
-      "latestReviewGeneratedAt": "2026-07-01T14:33:16.384Z",
-      "publicSailings": 82
+      "latestImportGeneratedAt": "2026-07-01T19:26:33.699Z",
+      "latestReviewGeneratedAt": "2026-07-01T19:27:06.712Z",
+      "publicSailings": 123
     },
     {
       "cruiseLine": "celebrity",
