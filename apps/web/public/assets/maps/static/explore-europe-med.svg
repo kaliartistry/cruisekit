@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-label="Mediterranean static cruise map">
+
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#BFE4EA"/>
+      <stop offset="1" stop-color="#9BD2DD"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#23445A" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+<rect width="1200" height="780" fill="#BFE4EA"/>
+<line x1="58.0" y1="58" x2="58.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="193.5" y1="58" x2="193.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="329.0" y1="58" x2="329.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="464.5" y1="58" x2="464.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="600.0" y1="58" x2="600.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="735.5" y1="58" x2="735.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="871.0" y1="58" x2="871.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1006.5" y1="58" x2="1006.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1142.0" y1="58" x2="1142.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="58.0" x2="1142" y2="58.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="190.8" x2="1142" y2="190.8" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="323.6" x2="1142" y2="323.6" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="456.4" x2="1142" y2="456.4" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="589.2" x2="1142" y2="589.2" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="722.0" x2="1142" y2="722.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<text x="1128" y="748" fill="#ffffff" fill-opacity="0.58" font-size="24" font-family="Helvetica" text-anchor="end">33.6° to 43.9°</text>
+<path d="M 322.4 217.2 L 312.0 240.9 L 283.7 258.3 L 244.9 264.7 L 206.1 258.3 L 177.7 240.9 L 167.3 217.2 L 177.7 193.5 L 206.1 176.1 L 244.9 169.8 L 279.2 180.8 L 304.4 196.2 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 623.1 169.5 L 614.1 189.9 L 589.6 204.9 L 556.2 210.4 L 522.8 204.9 L 498.3 189.9 L 489.3 169.5 L 498.3 149.0 L 522.7 134.0 L 556.2 128.6 L 598.4 124.8 L 629.2 143.7 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 720.4 582.9 L 710.3 606.1 L 682.5 623.1 L 644.6 629.3 L 606.7 623.1 L 578.9 606.1 L 568.8 582.9 L 578.9 559.7 L 606.7 542.7 L 644.6 536.5 L 681.1 544.3 L 707.8 560.6 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 766.5 429.7 L 754.7 456.7 L 722.4 476.5 L 678.3 483.7 L 634.2 476.5 L 601.9 456.7 L 590.1 429.7 L 601.9 402.8 L 634.2 383.0 L 678.3 375.8 L 718.7 386.9 L 748.3 405.0 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 939.0 466.7 L 929.1 489.3 L 902.1 505.9 L 865.1 511.9 L 828.2 505.9 L 801.1 489.3 L 791.2 466.7 L 801.1 444.1 L 828.2 427.5 L 865.1 421.5 L 900.7 429.0 L 926.7 444.9 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 1037.5 610.5 L 1026.4 635.7 L 996.3 654.1 L 955.1 660.9 L 914.0 654.1 L 883.8 635.7 L 872.8 610.5 L 883.8 585.3 L 914.0 566.9 L 955.1 560.1 L 991.2 572.3 L 1017.6 588.5 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 172.9 241.6 C 244.9 189.2 272.9 247.2 350.0 239.2" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 202.9 197.2 L 298.9 249.2" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 504.1 166.8 C 556.2 141.5 584.2 199.5 631.7 163.6" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 581.1 595.8 C 644.6 554.9 672.6 612.9 737.1 593.0" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 632.0 419.2 C 678.3 401.7 706.3 459.7 745.2 415.7" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 636.3 409.7 L 732.3 461.7" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 818.7 456.2 C 865.1 438.7 893.1 496.7 932.1 452.7" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 874.9 646.2 C 955.1 582.5 983.1 640.5 1072.6 644.1" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 86 654 C 250 550 362 618 520 525 S 840 434 1105 548" fill="none" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="5" stroke-dasharray="18 18" stroke-linecap="round"/>
+<text x="56" y="64" fill="#243349" font-size="34" font-family="Helvetica" font-weight="800">Mediterranean</text>
+<text x="56" y="102" fill="#637083" font-size="22" font-family="Helvetica">Static CruiseKit planning basemap</text>
+<text x="1144" y="724" fill="#637083" font-size="20" font-family="Helvetica" text-anchor="end">CruiseKit static map</text>
+</svg>
