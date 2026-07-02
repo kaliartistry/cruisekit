@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-label="Western Caribbean static cruise map">
+
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#BFE4EA"/>
+      <stop offset="1" stop-color="#9BD2DD"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#23445A" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+<rect width="1200" height="780" fill="#BFE4EA"/>
+<line x1="58.0" y1="58" x2="58.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="193.5" y1="58" x2="193.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="329.0" y1="58" x2="329.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="464.5" y1="58" x2="464.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="600.0" y1="58" x2="600.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="735.5" y1="58" x2="735.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="871.0" y1="58" x2="871.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1006.5" y1="58" x2="1006.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1142.0" y1="58" x2="1142.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="58.0" x2="1142" y2="58.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="190.8" x2="1142" y2="190.8" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="323.6" x2="1142" y2="323.6" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="456.4" x2="1142" y2="456.4" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="589.2" x2="1142" y2="589.2" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="722.0" x2="1142" y2="722.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<text x="1128" y="748" fill="#ffffff" fill-opacity="0.58" font-size="24" font-family="Helvetica" text-anchor="end">14.0° to 26.9°</text>
+<path d="M 484.4 390.4 L 472.6 417.1 L 440.6 436.7 L 396.8 443.9 L 353.0 436.8 L 321.0 417.1 L 309.2 390.4 L 321.0 363.6 L 353.0 344.0 L 396.8 336.8 L 441.5 343.0 L 474.3 363.0 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 777.4 450.3 L 768.5 470.7 L 744.0 485.6 L 710.7 491.1 L 677.3 485.6 L 652.9 470.7 L 643.9 450.3 L 652.9 429.9 L 677.3 414.9 L 710.7 409.4 L 750.5 408.0 L 779.7 425.9 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 504.0 610.5 L 492.5 636.7 L 461.3 655.8 L 418.5 662.8 L 375.7 655.8 L 344.4 636.7 L 333.0 610.5 L 344.4 584.4 L 375.7 565.2 L 418.5 558.2 L 460.4 566.1 L 491.0 584.9 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 761.4 169.5 L 750.7 193.9 L 721.5 211.8 L 681.6 218.3 L 641.6 211.8 L 612.4 193.9 L 601.7 169.5 L 612.4 145.1 L 641.6 127.2 L 681.6 120.6 L 722.0 126.6 L 751.6 144.7 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 440.2 481.6 L 428.6 507.9 L 397.1 527.3 L 353.9 534.3 L 310.8 527.3 L 279.3 507.9 L 267.7 481.6 L 279.3 455.2 L 310.8 435.9 L 353.9 428.8 L 392.5 440.7 L 420.8 458.0 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 331.1 344.9 L 319.6 371.3 L 288.0 390.6 L 244.9 397.7 L 201.7 390.6 L 170.2 371.3 L 158.6 344.9 L 170.1 318.5 L 201.7 299.2 L 244.9 292.1 L 284.1 303.3 L 312.8 320.9 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 410.8 573.8 L 398.8 601.3 L 365.9 621.4 L 321.0 628.8 L 276.0 621.4 L 243.1 601.3 L 231.0 573.8 L 243.1 546.3 L 276.0 526.1 L 321.0 518.7 L 367.8 524.1 L 402.1 545.1 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 980.6 495.0 L 970.1 519.0 L 941.4 536.6 L 902.2 543.0 L 862.9 536.6 L 834.2 519.0 L 823.7 495.0 L 834.2 471.0 L 862.9 453.4 L 902.2 447.0 L 954.5 439.6 L 992.7 463.0 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 1056.2 511.4 L 1041.7 544.6 L 1002.0 568.9 L 947.7 577.8 L 893.4 568.9 L 853.7 544.6 L 839.1 511.4 L 853.7 478.2 L 893.4 453.8 L 947.7 444.9 L 1000.2 455.7 L 1038.6 479.2 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 361.7 364.5 C 396.8 362.4 424.8 420.4 447.0 360.5" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 354.8 370.4 L 450.8 422.4" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 644.5 466.7 C 710.7 422.3 738.7 480.3 807.0 464.0" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 378.1 591.8 C 418.5 582.5 446.5 640.5 476.5 588.1" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 639.9 152.6 C 681.6 141.5 709.6 199.5 741.5 148.9" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 639.6 149.5 L 735.6 201.5" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 294.6 488.7 C 353.9 453.6 381.9 511.6 440.2 485.8" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 169.1 374.4 C 244.9 316.9 272.9 374.9 355.6 372.1" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 284.8 530.7 C 326.5 519.5 354.5 577.5 386.6 527.0" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 284.5 527.5 L 380.5 579.5" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 841.5 514.0 C 910.0 466.3 938.0 524.3 1009.9 511.4" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 868.7 522.5 C 940.3 470.8 968.3 528.8 1044.7 520.1" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 816.9 527.6 C 894.3 467.7 922.3 525.7 1007.6 525.4" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 852.3 475.7 L 948.3 527.7" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 264.2 596.1 C 315.4 572.1 343.4 630.1 389.4 592.8" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 873.7 561.2 C 955.1 496.0 983.1 554.0 1074.2 559.1" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 86 654 C 250 550 362 618 520 525 S 840 434 1105 548" fill="none" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="5" stroke-dasharray="18 18" stroke-linecap="round"/>
+<text x="56" y="64" fill="#243349" font-size="34" font-family="Helvetica" font-weight="800">Western Caribbean</text>
+<text x="56" y="102" fill="#637083" font-size="22" font-family="Helvetica">Static CruiseKit planning basemap</text>
+<text x="1144" y="724" fill="#637083" font-size="20" font-family="Helvetica" text-anchor="end">CruiseKit static map</text>
+</svg>
