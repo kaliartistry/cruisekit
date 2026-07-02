@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-label="Private Islands static cruise map">
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1560" viewBox="0 0 2400 1560" role="img" aria-label="Private Islands static cruise map">
 
   <defs>
     <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
@@ -10,34 +10,34 @@
       <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#23445A" flood-opacity="0.10"/>
     </filter>
   </defs>
-<rect width="1200" height="780" fill="#BFE4EA"/>
-<line x1="58.0" y1="58" x2="58.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="193.5" y1="58" x2="193.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="329.0" y1="58" x2="329.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="464.5" y1="58" x2="464.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="600.0" y1="58" x2="600.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="735.5" y1="58" x2="735.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="871.0" y1="58" x2="871.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="1006.5" y1="58" x2="1006.5" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="1142.0" y1="58" x2="1142.0" y2="722" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="58" y1="58.0" x2="1142" y2="58.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="58" y1="190.8" x2="1142" y2="190.8" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="58" y1="323.6" x2="1142" y2="323.6" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="58" y1="456.4" x2="1142" y2="456.4" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="58" y1="589.2" x2="1142" y2="589.2" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<line x1="58" y1="722.0" x2="1142" y2="722.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-<text x="1128" y="748" fill="#ffffff" fill-opacity="0.58" font-size="24" font-family="Helvetica" text-anchor="end">23.6° to 26.2°</text>
-<path d="M 334.2 169.5 L 322.3 196.8 L 289.6 216.8 L 244.9 224.2 L 200.2 216.8 L 167.5 196.8 L 155.5 169.5 L 167.5 142.1 L 200.2 122.1 L 244.9 114.8 L 288.7 123.0 L 320.8 142.7 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
-<path d="M 983.0 593.3 L 971.8 619.0 L 941.1 637.8 L 899.1 644.7 L 857.2 637.8 L 826.5 619.0 L 815.2 593.3 L 826.5 567.7 L 857.2 548.9 L 899.1 542.0 L 952.7 536.5 L 992.0 560.5 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
-<path d="M 321.1 268.4 L 311.6 290.0 L 285.7 305.9 L 250.3 311.7 L 214.9 305.9 L 189.0 290.0 L 179.5 268.4 L 189.0 246.7 L 214.9 230.8 L 250.3 225.0 L 295.2 220.8 L 328.1 240.9 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
-<path d="M 203.8 151.8 C 244.9 141.5 272.9 199.5 304.0 148.1" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
-<path d="M 202.9 149.5 L 298.9 201.5" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
-<path d="M 878.3 607.1 C 955.1 548.2 983.1 606.2 1067.4 604.9" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
-<path d="M 193.0 272.7 C 250.3 240.4 278.3 298.4 333.4 269.6" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
-<path d="M 782.3 619.7 C 843.1 582.5 871.1 640.5 931.6 616.8" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
-<path d="M 801.1 590.5 L 897.1 642.5" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
-<path d="M 86 654 C 250 550 362 618 520 525 S 840 434 1105 548" fill="none" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="5" stroke-dasharray="18 18" stroke-linecap="round"/>
+<rect width="2400" height="1560" fill="#BFE4EA"/>
+<line x1="58.0" y1="58" x2="58.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="343.5" y1="58" x2="343.5" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="629.0" y1="58" x2="629.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="914.5" y1="58" x2="914.5" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1200.0" y1="58" x2="1200.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1485.5" y1="58" x2="1485.5" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1771.0" y1="58" x2="1771.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="2056.5" y1="58" x2="2056.5" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="2342.0" y1="58" x2="2342.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="58.0" x2="2342" y2="58.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="346.8" x2="2342" y2="346.8" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="635.6" x2="2342" y2="635.6" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="924.4" x2="2342" y2="924.4" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="1213.2" x2="2342" y2="1213.2" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="1502.0" x2="2342" y2="1502.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<text x="2328" y="1528" fill="#ffffff" fill-opacity="0.58" font-size="24" font-family="Helvetica" text-anchor="end">23.6° to 26.2°</text>
+<path d="M 549.6 309.5 L 537.6 336.8 L 504.9 356.8 L 460.3 364.2 L 415.6 356.8 L 382.9 336.8 L 370.9 309.5 L 382.9 282.1 L 415.6 262.1 L 460.3 254.8 L 504.1 263.0 L 536.2 282.7 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 1907.0 1213.9 L 1895.7 1239.6 L 1865.0 1258.4 L 1823.1 1265.2 L 1781.1 1258.4 L 1750.4 1239.6 L 1739.2 1213.9 L 1750.4 1188.2 L 1781.1 1169.4 L 1823.1 1162.5 L 1876.7 1157.0 L 1916.0 1181.1 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 542.3 520.5 L 532.8 542.1 L 506.9 558.0 L 471.5 563.8 L 436.1 558.0 L 410.2 542.1 L 400.7 520.5 L 410.2 498.8 L 436.1 482.9 L 471.5 477.1 L 516.4 472.9 L 549.3 493.0 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 419.2 291.8 C 460.3 281.5 488.3 339.5 519.4 288.1" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 418.3 289.5 L 514.3 341.5" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 1863.0 1208.2 C 1939.7 1149.3 1967.7 1207.3 2052.0 1206.0" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 414.3 524.8 C 471.5 492.5 499.5 550.5 554.7 521.7" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 1645.6 1259.7 C 1706.4 1222.5 1734.4 1280.5 1794.9 1256.8" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 1664.4 1230.5 L 1760.4 1282.5" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 86 1434 C 250 1330 362 1398 520 1305 S 840 1214 1105 1328" fill="none" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="5" stroke-dasharray="18 18" stroke-linecap="round"/>
 <text x="56" y="64" fill="#243349" font-size="34" font-family="Helvetica" font-weight="800">Private Islands</text>
 <text x="56" y="102" fill="#637083" font-size="22" font-family="Helvetica">Static CruiseKit planning basemap</text>
-<text x="1144" y="724" fill="#637083" font-size="20" font-family="Helvetica" text-anchor="end">CruiseKit static map</text>
+<text x="2344" y="1504" fill="#637083" font-size="20" font-family="Helvetica" text-anchor="end">CruiseKit static map</text>
 </svg>

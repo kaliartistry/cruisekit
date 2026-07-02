@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-label="Roatan port snapshot">
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1560" viewBox="0 0 2400 1560" role="img" aria-label="Roatan port snapshot">
 
   <defs>
     <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
@@ -10,7 +10,7 @@
       <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#23445A" flood-opacity="0.10"/>
     </filter>
   </defs>
-<rect width="1200" height="780" fill="#BFE4EA"/>
+<rect width="2400" height="1560" fill="#BFE4EA"/>
 <path d="M -30 500 C 135 390 228 470 348 320 C 470 168 620 156 775 235 C 918 307 980 240 1230 285 L 1230 830 L -30 830 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="3" filter="url(#softShadow)"/>
 <path d="M 72 600 C 230 535 338 590 514 500 C 676 418 765 436 922 384 C 1030 348 1112 352 1200 306" fill="none" stroke="#D8C9AA" stroke-width="9" stroke-linecap="round" stroke-opacity="0.82"/>
 <path d="M 170 666 C 314 595 452 616 594 550 S 880 500 1060 444" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
@@ -22,5 +22,5 @@
 <text x="56" y="102" fill="#637083" font-size="22" font-family="Helvetica">Honduras · western</text>
 <text x="90" y="372" fill="#637083" font-size="20" font-family="Helvetica">Cruise pier area</text>
 <text x="806" y="284" fill="#637083" font-size="20" font-family="Helvetica">Town / beach area</text>
-<text x="1144" y="724" fill="#637083" font-size="20" font-family="Helvetica" text-anchor="end">CruiseKit static map</text>
+<text x="2344" y="1504" fill="#637083" font-size="20" font-family="Helvetica" text-anchor="end">CruiseKit static map</text>
 </svg>

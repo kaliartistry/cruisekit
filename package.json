@@ -49,6 +49,7 @@
     "data:publish": "pnpm run data:report && node scripts/publish-data-bundles.mjs",
     "data:publish:candidate": "node scripts/run-publish-candidate.mjs",
     "maps:static": "node scripts/generate-static-map-assets.mjs",
+    "maps:verify": "node scripts/verify-static-map-assets.mjs",
     "site:readiness": "node scripts/run-launch-readiness-report.mjs"
   },
   "devDependencies": {
