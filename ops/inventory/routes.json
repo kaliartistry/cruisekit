@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T14:07:40.936Z",
+  "generatedAt": "2026-07-02T14:07:04.015Z",
   "sourceRoot": "apps/web/app",
   "routes": [
     {
@@ -40,8 +40,8 @@
     {
       "route": "/blog",
       "file": "apps/web/app/blog/page.tsx",
-      "hasMetadata": false,
-      "hasSchema": false,
+      "hasMetadata": true,
+      "hasSchema": true,
       "internal": false
     },
     {
