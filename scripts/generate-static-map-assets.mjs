@@ -9,8 +9,8 @@ const execFileAsync = promisify(execFile);
 const rootDir = process.cwd();
 const portsSourcePath = path.join(rootDir, 'apps/web/lib/data/ports.ts');
 const outputDir = path.join(rootDir, 'apps/web/public/assets/maps/static');
-const width = 1200;
-const height = 780;
+const width = 2400;
+const height = 1560;
 const openFreeMapStyleUrl = 'https://tiles.openfreemap.org/styles/positron';
 const mapLibreScriptUrl = 'https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js';
 const mapLibreCssUrl = 'https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css';
@@ -26,19 +26,9 @@ const regionAssets = [
   { id: 'alaska', label: 'Alaska', filter: (port) => port.region === 'alaska' },
   { id: 'europe-med', label: 'Mediterranean', filter: (port) => port.region === 'europe-med' },
   { id: 'europe-north', label: 'Northern Europe', filter: (port) => port.region === 'europe-north' },
-];
-
-const portAssets = [
-  'key-west',
-  'cozumel',
-  'nassau',
-  'grand-cayman',
-  'roatan',
-  'st-thomas',
-  'st-maarten',
-  'san-juan',
-  'costa-maya',
-  'celebration-key',
+  { id: 'mexico-pacific', label: 'Pacific Mexico & West Coast', filter: (port) => port.region === 'mexico-pacific' },
+  { id: 'canada-new-england', label: 'Canada & New England', filter: (port) => port.region === 'canada-new-england' },
+  { id: 'asia', label: 'Asia-Pacific', filter: (port) => port.region === 'asia' },
 ];
 
 const palette = {
@@ -270,7 +260,6 @@ async function writeAssetSet(fileBase, svg) {
   const pngPath = path.join(outputDir, `${fileBase}.png`);
   const webpPath = path.join(outputDir, `${fileBase}.webp`);
   await writeFile(svgPath, svg);
-  await convertAsset(svgPath, pngPath, webpPath);
   return { svgPath, pngPath, webpPath };
 }
 
@@ -410,14 +399,7 @@ if (ports.length < 20) {
   throw new Error(`Parsed only ${ports.length} ports from ${portsSourcePath}`);
 }
 
-let openFreeMapRenderer = null;
-try {
-  openFreeMapRenderer = await createOpenFreeMapRenderer();
-} catch (error) {
-  console.warn(
-    `OpenFreeMap renderer unavailable; using CruiseKit SVG fallback maps. ${error.message}`,
-  );
-}
+const openFreeMapRenderer = await createOpenFreeMapRenderer();
 
 const written = [];
 for (const asset of regionAssets) {
@@ -440,20 +422,16 @@ for (const asset of regionAssets) {
   written.push(assetSet);
 }
 
-for (const slug of portAssets) {
-  const port = ports.find((candidate) => candidate.slug === slug);
-  if (!port) continue;
+for (const port of ports) {
   const assetSet = await writeAssetSet(`port-${port.slug}`, renderPortSvg(port));
-  if (openFreeMapRenderer) {
-    await openFreeMapRenderer.render({
-      pngPath: assetSet.pngPath,
-      webpPath: assetSet.webpPath,
-      center: [port.lng, port.lat],
-      zoom: 12.15,
-    });
-  }
+  await openFreeMapRenderer.render({
+    pngPath: assetSet.pngPath,
+    webpPath: assetSet.webpPath,
+    center: [port.lng, port.lat],
+    zoom: 12.15,
+  });
   written.push(assetSet);
 }
 
-await openFreeMapRenderer?.close();
+await openFreeMapRenderer.close();
 console.log(`Generated ${written.length} static map asset set(s) in ${outputDir}`);
