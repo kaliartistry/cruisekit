@@ -14,6 +14,13 @@ const height = 1560;
 const openFreeMapStyleUrl = 'https://tiles.openfreemap.org/styles/positron';
 const mapLibreScriptUrl = 'https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js';
 const mapLibreCssUrl = 'https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css';
+const args = process.argv.slice(2);
+const shouldRenderPorts = !args.includes('--regions-only');
+const shouldRenderRegions = !args.includes('--ports-only') && !args.some((arg) => arg.startsWith('--only-port='));
+const onlyPortSlug = args
+  .find((arg) => arg.startsWith('--only-port='))
+  ?.split('=')
+  .at(1);
 
 const regionAssets = [
   { id: 'all', label: 'CruiseKit Port Atlas', filter: () => true },
@@ -243,6 +250,53 @@ ${baseDefs()}
 </svg>`;
 }
 
+function portDetailZoom(port) {
+  const privateIslandLikePorts = new Set([
+    'cococay',
+    'celebration-key',
+    'great-stirrup-cay',
+    'half-moon-cay',
+    'harvest-caye',
+    'labadee',
+    'ocean-cay',
+    'princess-cays',
+  ]);
+  const majorHomeports = new Set([
+    'barcelona',
+    'fort-lauderdale',
+    'galveston',
+    'hamburg',
+    'lisbon',
+    'los-angeles',
+    'manhattan',
+    'miami',
+    'mobile',
+    'new-orleans',
+    'norfolk',
+    'port-canaveral',
+    'san-diego',
+    'san-francisco',
+    'seattle',
+    'shanghai',
+    'southampton',
+    'sydney',
+    'tampa',
+    'vancouver',
+    'yokohama',
+  ]);
+
+  if (privateIslandLikePorts.has(port.slug) || port.region === 'private-island') {
+    return 14.85;
+  }
+  if (majorHomeports.has(port.slug) || port.region === 'homeport') {
+    return 14.25;
+  }
+  if (port.isTenderPort) {
+    return 14.3;
+  }
+  return 14.6;
+}
+
 async function convertAsset(svgPath, pngPath, webpPath) {
   await execFileAsync('magick', [
     '-font',
@@ -402,35 +456,46 @@ if (ports.length < 20) {
 const openFreeMapRenderer = await createOpenFreeMapRenderer();
 
 const written = [];
-for (const asset of regionAssets) {
-  const selected = ports.filter(asset.filter);
-  if (selected.length === 0) continue;
-  const fileBase = `explore-${asset.id}`;
-  const assetSet = await writeAssetSet(fileBase, renderOverviewSvg({
-    id: asset.id,
-    label: asset.label,
-    ports: selected,
-  }));
-  if (openFreeMapRenderer) {
+if (shouldRenderRegions) {
+  for (const asset of regionAssets) {
+    const selected = ports.filter(asset.filter);
+    if (selected.length === 0) continue;
+    const fileBase = `explore-${asset.id}`;
+    const assetSet = await writeAssetSet(fileBase, renderOverviewSvg({
+      id: asset.id,
+      label: asset.label,
+      ports: selected,
+    }));
+    if (openFreeMapRenderer) {
+      await openFreeMapRenderer.render({
+        pngPath: assetSet.pngPath,
+        webpPath: assetSet.webpPath,
+        bounds: boundsFor(selected, asset.id === 'all' ? 0.18 : 0.28),
+        padding: asset.id === 'all' ? 54 : 78,
+      });
+    }
+    written.push(assetSet);
+  }
+}
+
+if (shouldRenderPorts) {
+  const selectedPorts = onlyPortSlug
+    ? ports.filter((port) => port.slug === onlyPortSlug)
+    : ports;
+  if (onlyPortSlug && selectedPorts.length === 0) {
+    throw new Error(`No port found for --only-port=${onlyPortSlug}`);
+  }
+
+  for (const port of selectedPorts) {
+    const assetSet = await writeAssetSet(`port-${port.slug}`, renderPortSvg(port));
     await openFreeMapRenderer.render({
       pngPath: assetSet.pngPath,
       webpPath: assetSet.webpPath,
-      bounds: boundsFor(selected, asset.id === 'all' ? 0.18 : 0.28),
-      padding: asset.id === 'all' ? 54 : 78,
+      center: [port.lng, port.lat],
+      zoom: portDetailZoom(port),
     });
+    written.push(assetSet);
   }
-  written.push(assetSet);
-}
-
-for (const port of ports) {
-  const assetSet = await writeAssetSet(`port-${port.slug}`, renderPortSvg(port));
-  await openFreeMapRenderer.render({
-    pngPath: assetSet.pngPath,
-    webpPath: assetSet.webpPath,
-    center: [port.lng, port.lat],
-    zoom: 12.15,
-  });
-  written.push(assetSet);
 }
 
 await openFreeMapRenderer.close();
