@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T14:07:40.936Z",
+  "generatedAt": "2026-07-03T14:04:58.190Z",
   "sourceRoot": "apps/web/app",
   "routes": [
     {
@@ -230,7 +230,7 @@
       "route": "/myday",
       "file": "apps/web/app/myday/page.tsx",
       "hasMetadata": true,
-      "hasSchema": false,
+      "hasSchema": true,
       "internal": false
     },
     {
