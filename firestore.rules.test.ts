@@ -56,6 +56,62 @@ function validSavedDeal() {
   };
 }
 
+function validActiveCruise(
+  status: "active" | "deleted" = "active",
+  overrides: Record<string, unknown> = {},
+) {
+  const base = {
+    schemaVersion: 1,
+    status,
+    sourcePlatform: "web",
+    createdAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
+  };
+
+  if (status === "deleted") {
+    return { ...base, ...overrides };
+  }
+
+  return {
+    ...base,
+    sailing: {
+      id: "carnival-vista-20260912",
+      cruiseLineId: "carnival",
+      shipName: "Carnival Vista",
+      shipId: "carnival-vista",
+      departureDate: "2026-09-12",
+      returnDate: "2026-09-19",
+      duration: 7,
+      departurePort: "Miami, FL",
+      region: "caribbean",
+      itinerary: [
+        { day: 1, type: "departure", portName: "Miami, FL" },
+        {
+          day: 2,
+          type: "port",
+          portName: "Cozumel",
+          portSlug: "cozumel",
+          isTender: false,
+        },
+      ],
+    },
+    confirmedItinerary: [
+      { day: 1, type: "departure", portName: "Miami, FL" },
+      {
+        day: 2,
+        type: "port",
+        portName: "Cozumel",
+        portSlug: "cozumel",
+        isTender: false,
+      },
+    ],
+    itineraryTitle: "Western Caribbean",
+    imageUrl: "https://example.com/ship.jpg",
+    sourceUrl: "https://example.com/book",
+    ...overrides,
+  };
+}
+
 function validLeadRequest(uid = ALICE) {
   return {
     createdAt: serverTimestamp(),
@@ -238,6 +294,127 @@ describe("users/{uid}/savedDeals/{dealId}", () => {
     const db = env.authenticatedContext(ALICE).firestore();
     await assertFails(
       setDoc(doc(db, "users", BOB, "savedDeals", "d1"), validSavedDeal()),
+    );
+  });
+});
+
+describe("users/{uid}/activeCruise/current", () => {
+  it("denies unauthed read", async () => {
+    const db = env.unauthenticatedContext().firestore();
+    await assertFails(
+      getDoc(doc(db, "users", ALICE, "activeCruise", "current")),
+    );
+  });
+
+  it("denies unauthed create", async () => {
+    const db = env.unauthenticatedContext().firestore();
+    await assertFails(
+      setDoc(
+        doc(db, "users", ALICE, "activeCruise", "current"),
+        validActiveCruise(),
+      ),
+    );
+  });
+
+  it("allows owner to create a valid active cruise", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertSucceeds(
+      setDoc(
+        doc(db, "users", ALICE, "activeCruise", "current"),
+        validActiveCruise(),
+      ),
+    );
+  });
+
+  it("allows owner to read own active cruise", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await setDoc(
+        doc(ctx.firestore(), "users", ALICE, "activeCruise", "current"),
+        validActiveCruise(),
+      );
+    });
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertSucceeds(
+      getDoc(doc(db, "users", ALICE, "activeCruise", "current")),
+    );
+  });
+
+  it("allows owner to update active cruise with approved fields", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    const ref = doc(db, "users", ALICE, "activeCruise", "current");
+    await assertSucceeds(setDoc(ref, validActiveCruise()));
+    const snapshot = await getDoc(ref);
+    await assertSucceeds(
+      setDoc(
+        ref,
+        validActiveCruise("active", {
+          createdAt: snapshot.data()?.createdAt,
+          itineraryTitle: "Updated Western Caribbean",
+        }),
+      ),
+    );
+  });
+
+  it("allows owner to tombstone active cruise", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    const ref = doc(db, "users", ALICE, "activeCruise", "current");
+    await assertSucceeds(setDoc(ref, validActiveCruise()));
+    const snapshot = await getDoc(ref);
+    await assertSucceeds(
+      setDoc(
+        ref,
+        validActiveCruise("deleted", {
+          createdAt: snapshot.data()?.createdAt,
+        }),
+      ),
+    );
+  });
+
+  it("denies cross-user read", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await setDoc(
+        doc(ctx.firestore(), "users", BOB, "activeCruise", "current"),
+        validActiveCruise(),
+      );
+    });
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(getDoc(doc(db, "users", BOB, "activeCruise", "current")));
+  });
+
+  it("denies cross-user write", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      setDoc(
+        doc(db, "users", BOB, "activeCruise", "current"),
+        validActiveCruise(),
+      ),
+    );
+  });
+
+  it("denies sensitive active cruise fields", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      setDoc(
+        doc(db, "users", ALICE, "activeCruise", "current"),
+        validActiveCruise("active", {
+          cabinNumber: "8242",
+          bookingRef: "ABC123",
+          spend: 1200,
+        }),
+      ),
+    );
+  });
+
+  it("denies deleting the sync document", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await setDoc(
+        doc(ctx.firestore(), "users", ALICE, "activeCruise", "current"),
+        validActiveCruise(),
+      );
+    });
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      deleteDoc(doc(db, "users", ALICE, "activeCruise", "current")),
     );
   });
 });

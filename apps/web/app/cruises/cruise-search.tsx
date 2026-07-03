@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils/cn";
 import HeartButton from "@/components/shared/heart-button";
+import ActiveCruiseButton from "@/components/shared/active-cruise-button";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import {
   confidenceLabel,
@@ -514,6 +515,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link href={calcHref}>Estimate total cost</Link>
           </Button>
+          <ActiveCruiseButton deal={deal} />
           <AffiliateDisclosure className="mt-1 text-right md:text-right" />
         </div>
       </div>
