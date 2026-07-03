@@ -198,8 +198,12 @@ function SavedDealCard({
 
           {deal.ports.length > 0 && (
             <div className="mt-3 flex flex-wrap gap-1">
-              {deal.ports.slice(0, 5).map((port) => (
-                <Badge key={port} variant="outline" className="text-[10px]">
+              {deal.ports.slice(0, 5).map((port, index) => (
+                <Badge
+                  key={`${port}-${index}`}
+                  variant="outline"
+                  className="text-[10px]"
+                >
                   {port}
                 </Badge>
               ))}
