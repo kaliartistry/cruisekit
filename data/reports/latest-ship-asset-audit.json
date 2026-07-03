@@ -1,229 +1,38 @@
 {
-  "generatedAt": "2026-07-03T13:20:17.274Z",
+  "generatedAt": "2026-07-03T14:09:42.469Z",
   "inputs": {
     "webShipDataPath": "apps/web/lib/data/ships.ts",
     "mobileShipDataPath": "../CruiseKit-Mobile-analytics-tracking/assets/data/ships.json",
     "shipAssetDir": "apps/web/public/assets/ships",
     "reviewManifestPath": "data/ship-image-review.json",
-    "cdnBaseUrl": "https://cruisekit.app/assets/ships"
+    "cdnBaseUrl": null
   },
   "counts": {
     "webCatalogShips": 126,
     "mobileCatalogShips": 126,
     "expectedShipIds": 126,
-    "siteShipAssets": 114,
-    "missingAssets": 12,
+    "siteShipAssets": 126,
+    "missingAssets": 0,
     "orphanedAssets": 0,
-    "blockedAssets": 1,
-    "unverifiedAssets": 114,
-    "cdnChecked": 126,
-    "cdnFailures": 12,
+    "blockedAssets": 0,
+    "unverifiedAssets": 16,
+    "cdnChecked": 0,
+    "cdnFailures": 0,
     "hardcodedSiteReferences": 6,
     "hardcodedSiteReferenceIssues": 0
   },
-  "missing": [
-    {
-      "id": "koningsdam",
-      "name": "Koningsdam",
-      "cruiseLineId": "holland-america"
-    },
-    {
-      "id": "msc-grandiosa",
-      "name": "MSC Grandiosa",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "msc-opera",
-      "name": "MSC Opera",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "msc-virtuosa",
-      "name": "MSC Virtuosa",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "nieuw-statendam",
-      "name": "Nieuw Statendam",
-      "cruiseLineId": "holland-america"
-    },
-    {
-      "id": "noordam",
-      "name": "Noordam",
-      "cruiseLineId": "holland-america"
-    },
-    {
-      "id": "oosterdam",
-      "name": "Oosterdam",
-      "cruiseLineId": "holland-america"
-    },
-    {
-      "id": "resilient-lady",
-      "name": "Resilient Lady",
-      "cruiseLineId": "virgin-voyages"
-    },
-    {
-      "id": "spectrum-of-the-seas",
-      "name": "Spectrum of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "utopia-of-the-seas",
-      "name": "Utopia of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "valiant-lady",
-      "name": "Valiant Lady",
-      "cruiseLineId": "virgin-voyages"
-    },
-    {
-      "id": "zuiderdam",
-      "name": "Zuiderdam",
-      "cruiseLineId": "holland-america"
-    }
-  ],
+  "missing": [],
   "orphaned": [],
-  "blocked": [
-    {
-      "id": "carnival-breeze",
-      "name": "Carnival Breeze",
-      "cruiseLineId": "carnival",
-      "reason": "Current asset renders as an airplane, not the Carnival Breeze cruise ship.",
-      "detectedAt": "2026-07-03",
-      "evidence": "Confirmed by simulator startup screenshot and direct CDN visual check at https://cruisekit.app/assets/ships/carnival-breeze.jpg.",
-      "requiredAction": "Replace with a verified Carnival Breeze cruise ship image, then move this entry to verified with source metadata."
-    }
-  ],
+  "blocked": [],
   "unverified": [
-    {
-      "id": "adventure-of-the-seas",
-      "name": "Adventure of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
     {
       "id": "allure-of-the-seas",
       "name": "Allure of the Seas",
       "cruiseLineId": "royal-caribbean"
     },
     {
-      "id": "anthem-of-the-seas",
-      "name": "Anthem of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "brilliance-of-the-seas",
-      "name": "Brilliance of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "brilliant-lady",
-      "name": "Brilliant Lady",
-      "cruiseLineId": "virgin-voyages"
-    },
-    {
-      "id": "caribbean-princess",
-      "name": "Caribbean Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "carnival-breeze",
-      "name": "Carnival Breeze",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-celebration",
-      "name": "Carnival Celebration",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-conquest",
-      "name": "Carnival Conquest",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-dream",
-      "name": "Carnival Dream",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-festivale",
-      "name": "Carnival Festivale",
-      "cruiseLineId": "carnival"
-    },
-    {
       "id": "carnival-firenze",
       "name": "Carnival Firenze",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-freedom",
-      "name": "Carnival Freedom",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-horizon",
-      "name": "Carnival Horizon",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-jubilee",
-      "name": "Carnival Jubilee",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-legend",
-      "name": "Carnival Legend",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-liberty",
-      "name": "Carnival Liberty",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-magic",
-      "name": "Carnival Magic",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-miracle",
-      "name": "Carnival Miracle",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-paradise",
-      "name": "Carnival Paradise",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-pride",
-      "name": "Carnival Pride",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-spirit",
-      "name": "Carnival Spirit",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-sunrise",
-      "name": "Carnival Sunrise",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-sunshine",
-      "name": "Carnival Sunshine",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-valor",
-      "name": "Carnival Valor",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-venezia",
-      "name": "Carnival Venezia",
       "cruiseLineId": "carnival"
     },
     {
@@ -232,33 +41,8 @@
       "cruiseLineId": "carnival"
     },
     {
-      "id": "celebrity-apex",
-      "name": "Celebrity Apex",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-ascent",
-      "name": "Celebrity Ascent",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-beyond",
-      "name": "Celebrity Beyond",
-      "cruiseLineId": "celebrity"
-    },
-    {
       "id": "celebrity-constellation",
       "name": "Celebrity Constellation",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-eclipse",
-      "name": "Celebrity Eclipse",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-edge",
-      "name": "Celebrity Edge",
       "cruiseLineId": "celebrity"
     },
     {
@@ -267,104 +51,9 @@
       "cruiseLineId": "celebrity"
     },
     {
-      "id": "celebrity-infinity",
-      "name": "Celebrity Infinity",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-millennium",
-      "name": "Celebrity Millennium",
-      "cruiseLineId": "celebrity"
-    },
-    {
       "id": "celebrity-reflection",
       "name": "Celebrity Reflection",
       "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-silhouette",
-      "name": "Celebrity Silhouette",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-solstice",
-      "name": "Celebrity Solstice",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-summit",
-      "name": "Celebrity Summit",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-xcel",
-      "name": "Celebrity Xcel",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "crown-princess",
-      "name": "Crown Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "discovery-princess",
-      "name": "Discovery Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "disney-adventure",
-      "name": "Disney Adventure",
-      "cruiseLineId": "disney"
-    },
-    {
-      "id": "disney-destiny",
-      "name": "Disney Destiny",
-      "cruiseLineId": "disney"
-    },
-    {
-      "id": "disney-dream",
-      "name": "Disney Dream",
-      "cruiseLineId": "disney"
-    },
-    {
-      "id": "disney-fantasy",
-      "name": "Disney Fantasy",
-      "cruiseLineId": "disney"
-    },
-    {
-      "id": "disney-magic",
-      "name": "Disney Magic",
-      "cruiseLineId": "disney"
-    },
-    {
-      "id": "disney-treasure",
-      "name": "Disney Treasure",
-      "cruiseLineId": "disney"
-    },
-    {
-      "id": "disney-wish",
-      "name": "Disney Wish",
-      "cruiseLineId": "disney"
-    },
-    {
-      "id": "disney-wonder",
-      "name": "Disney Wonder",
-      "cruiseLineId": "disney"
-    },
-    {
-      "id": "emerald-princess",
-      "name": "Emerald Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "enchanted-princess",
-      "name": "Enchanted Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "enchantment-of-the-seas",
-      "name": "Enchantment of the Seas",
-      "cruiseLineId": "royal-caribbean"
     },
     {
       "id": "eurodam",
@@ -372,54 +61,9 @@
       "cruiseLineId": "holland-america"
     },
     {
-      "id": "explorer-of-the-seas",
-      "name": "Explorer of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "freedom-of-the-seas",
-      "name": "Freedom of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "grandeur-of-the-seas",
-      "name": "Grandeur of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "harmony-of-the-seas",
-      "name": "Harmony of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
       "id": "icon-of-the-seas",
       "name": "Icon of the Seas",
       "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "independence-of-the-seas",
-      "name": "Independence of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "island-princess",
-      "name": "Island Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "jewel-of-the-seas",
-      "name": "Jewel of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "liberty-of-the-seas",
-      "name": "Liberty of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "majestic-princess",
-      "name": "Majestic Princess",
-      "cruiseLineId": "princess"
     },
     {
       "id": "mardi-gras",
@@ -427,28 +71,8 @@
       "cruiseLineId": "carnival"
     },
     {
-      "id": "mariner-of-the-seas",
-      "name": "Mariner of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "msc-bellissima",
-      "name": "MSC Bellissima",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "msc-divina",
-      "name": "MSC Divina",
-      "cruiseLineId": "msc"
-    },
-    {
       "id": "msc-meraviglia",
       "name": "MSC Meraviglia",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "msc-seascape",
-      "name": "MSC Seascape",
       "cruiseLineId": "msc"
     },
     {
@@ -457,119 +81,9 @@
       "cruiseLineId": "msc"
     },
     {
-      "id": "msc-seaside",
-      "name": "MSC Seaside",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "msc-world-america",
-      "name": "MSC World America",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "navigator-of-the-seas",
-      "name": "Navigator of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "nieuw-amsterdam",
-      "name": "Nieuw Amsterdam",
-      "cruiseLineId": "holland-america"
-    },
-    {
-      "id": "norwegian-aqua",
-      "name": "Norwegian Aqua",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-bliss",
-      "name": "Norwegian Bliss",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-breakaway",
-      "name": "Norwegian Breakaway",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-encore",
-      "name": "Norwegian Encore",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-escape",
-      "name": "Norwegian Escape",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-gem",
-      "name": "Norwegian Gem",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-getaway",
-      "name": "Norwegian Getaway",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-jade",
-      "name": "Norwegian Jade",
-      "cruiseLineId": "norwegian"
-    },
-    {
       "id": "norwegian-joy",
       "name": "Norwegian Joy",
       "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-luna",
-      "name": "Norwegian Luna",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-pearl",
-      "name": "Norwegian Pearl",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-prima",
-      "name": "Norwegian Prima",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-sky",
-      "name": "Norwegian Sky",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-star",
-      "name": "Norwegian Star",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-sun",
-      "name": "Norwegian Sun",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "norwegian-viva",
-      "name": "Norwegian Viva",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "oasis-of-the-seas",
-      "name": "Oasis of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "odyssey-of-the-seas",
-      "name": "Odyssey of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "ovation-of-the-seas",
-      "name": "Ovation of the Seas",
-      "cruiseLineId": "royal-caribbean"
     },
     {
       "id": "pride-of-america",
@@ -577,39 +91,9 @@
       "cruiseLineId": "norwegian"
     },
     {
-      "id": "quantum-of-the-seas",
-      "name": "Quantum of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
       "id": "radiance-of-the-seas",
       "name": "Radiance of the Seas",
       "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "regal-princess",
-      "name": "Regal Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "rotterdam",
-      "name": "Rotterdam",
-      "cruiseLineId": "holland-america"
-    },
-    {
-      "id": "royal-princess",
-      "name": "Royal Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "ruby-princess",
-      "name": "Ruby Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "scarlet-lady",
-      "name": "Scarlet Lady",
-      "cruiseLineId": "virgin-voyages"
     },
     {
       "id": "serenade-of-the-seas",
@@ -617,65 +101,20 @@
       "cruiseLineId": "royal-caribbean"
     },
     {
-      "id": "sky-princess",
-      "name": "Sky Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "star-of-the-seas",
-      "name": "Star of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "star-princess",
-      "name": "Star Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "sun-princess",
-      "name": "Sun Princess",
-      "cruiseLineId": "princess"
-    },
-    {
-      "id": "symphony-of-the-seas",
-      "name": "Symphony of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "vision-of-the-seas",
-      "name": "Vision of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "volendam",
-      "name": "Volendam",
-      "cruiseLineId": "holland-america"
-    },
-    {
       "id": "westerdam",
       "name": "Westerdam",
-      "cruiseLineId": "holland-america"
-    },
-    {
-      "id": "wonder-of-the-seas",
-      "name": "Wonder of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "zaandam",
-      "name": "Zaandam",
       "cruiseLineId": "holland-america"
     }
   ],
   "assetDetails": {
     "adventure-of-the-seas": {
       "path": "apps/web/public/assets/ships/adventure-of-the-seas.jpg",
-      "bytes": 64285,
-      "sha256": "bb1e72bef647c2a293b1ba4ea54d8fa7251e0398023a25f500d846a7ae3a72b8",
+      "bytes": 192129,
+      "sha256": "38339ad626e1b32fafd36285e5180e3bc0b58eaf11284310320cfcaad40cfb80",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1273,
+        "height": 720
       }
     },
     "allure-of-the-seas": {
@@ -690,92 +129,92 @@
     },
     "anthem-of-the-seas": {
       "path": "apps/web/public/assets/ships/anthem-of-the-seas.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 161925,
+      "sha256": "ccb9418bece564b9a9540f21e2e289f46b7392b22dba363d62627356fe2ecff0",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1080,
+        "height": 720
       }
     },
     "brilliance-of-the-seas": {
       "path": "apps/web/public/assets/ships/brilliance-of-the-seas.jpg",
-      "bytes": 84264,
-      "sha256": "874124ef2213204fb450fa9c37298ad51c3046f3bc2d8d1bfbacddedc3580ed6",
+      "bytes": 197869,
+      "sha256": "e8a5a1d0c3274d1f1b992fe4e54f90d27aff4423171a8c3cbda30bf34be857d7",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 466
+        "width": 1280,
+        "height": 451
       }
     },
     "brilliant-lady": {
       "path": "apps/web/public/assets/ships/brilliant-lady.jpg",
-      "bytes": 76048,
-      "sha256": "125f98d11d9b7d94712b4365ecf92c19974275faf6b78868850304c0e5dd667e",
+      "bytes": 164056,
+      "sha256": "ab16f41e560524d921feb7fed563f8b1730c4831fe4995033c225f936dad1734",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 426
+        "width": 1280,
+        "height": 560
       }
     },
     "caribbean-princess": {
       "path": "apps/web/public/assets/ships/caribbean-princess.jpg",
-      "bytes": 76698,
-      "sha256": "0295e68919f55da8cc605c7d3ffad4424304ecce687a97bb16bf29a7a38a361f",
+      "bytes": 138587,
+      "sha256": "55ac25307bb338fd9e3b0845d0c0ee7237ba0d7f347b37f5603c48ed15712d06",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 960,
+        "height": 720
       }
     },
     "carnival-breeze": {
       "path": "apps/web/public/assets/ships/carnival-breeze.jpg",
-      "bytes": 40050,
-      "sha256": "39958a5b5335b35e283c72177d4f9f0ad46c3fd1f5b3feb84a82f4fbc7be38f3",
+      "bytes": 159049,
+      "sha256": "b25d4a93decea8a2aab560b3504e9ff296c3237e8ab4b247d1d604f8525fbc95",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 338
+        "width": 960,
+        "height": 720
       }
     },
     "carnival-celebration": {
       "path": "apps/web/public/assets/ships/carnival-celebration.jpg",
-      "bytes": 40050,
-      "sha256": "39958a5b5335b35e283c72177d4f9f0ad46c3fd1f5b3feb84a82f4fbc7be38f3",
+      "bytes": 270519,
+      "sha256": "55515e13a0ad2e16ea5d7d219b7979049b8a2b5742742bb8c68880fe899fed65",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 338
+        "width": 1280,
+        "height": 720
       }
     },
     "carnival-conquest": {
       "path": "apps/web/public/assets/ships/carnival-conquest.jpg",
-      "bytes": 40050,
-      "sha256": "39958a5b5335b35e283c72177d4f9f0ad46c3fd1f5b3feb84a82f4fbc7be38f3",
+      "bytes": 197257,
+      "sha256": "2053ff0b9720b61288f5b8ab7f81fb18bae324cfa2e7326369146c9b9de3bd05",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 338
+        "width": 1280,
+        "height": 720
       }
     },
     "carnival-dream": {
       "path": "apps/web/public/assets/ships/carnival-dream.jpg",
-      "bytes": 110033,
-      "sha256": "198a3a608517ee11032f2230fed1a77005a608151e3279fa0bc0ef021fe1f1fc",
+      "bytes": 111528,
+      "sha256": "a8bcb45dddc1c2adcd90522873fe040ed5f20cfe7a51d7be6a882a7c8ad6a49c",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1075,
+        "height": 720
       }
     },
     "carnival-festivale": {
       "path": "apps/web/public/assets/ships/carnival-festivale.jpg",
-      "bytes": 40050,
-      "sha256": "39958a5b5335b35e283c72177d4f9f0ad46c3fd1f5b3feb84a82f4fbc7be38f3",
+      "bytes": 110717,
+      "sha256": "c4bfdcc25569b2a6691b4e247cb291a8b74bd5df477062d50e5ddde6a718db83",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 338
+        "width": 1280,
+        "height": 427
       }
     },
     "carnival-firenze": {
@@ -790,142 +229,142 @@
     },
     "carnival-freedom": {
       "path": "apps/web/public/assets/ships/carnival-freedom.jpg",
-      "bytes": 40050,
-      "sha256": "39958a5b5335b35e283c72177d4f9f0ad46c3fd1f5b3feb84a82f4fbc7be38f3",
+      "bytes": 174412,
+      "sha256": "9de2377d23a4c65a5752a417a9fe966ca91fc350c302307b5868723ae53d3fa0",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 338
+        "width": 1213,
+        "height": 720
       }
     },
     "carnival-horizon": {
       "path": "apps/web/public/assets/ships/carnival-horizon.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 155258,
+      "sha256": "d970addf757f6495c5ecf17516f297d239a5c61ed6ba21339d8cb12356a9c4cc",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 720
       }
     },
     "carnival-jubilee": {
       "path": "apps/web/public/assets/ships/carnival-jubilee.jpg",
-      "bytes": 110033,
-      "sha256": "198a3a608517ee11032f2230fed1a77005a608151e3279fa0bc0ef021fe1f1fc",
+      "bytes": 196435,
+      "sha256": "c974113a82fc39794349e0c57a35f960ef38e0a6b7d81fbd506fad7355fdc311",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 511
       }
     },
     "carnival-legend": {
       "path": "apps/web/public/assets/ships/carnival-legend.jpg",
-      "bytes": 111914,
-      "sha256": "a591e8c5fb3f2ad7a3b364d38c66304e06a522ae08ab6a9cbf04b6da4adc5aa3",
+      "bytes": 210182,
+      "sha256": "95766c8d8cbe51a6220481ddf65b6554eb301090e8e3ba84455d3fad51cbe247",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1080,
+        "height": 720
       }
     },
     "carnival-liberty": {
       "path": "apps/web/public/assets/ships/carnival-liberty.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 113748,
+      "sha256": "caa0494b614c98aea4cc247f906135557005d6bd2a5e715738334734fc0fd97c",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "carnival-magic": {
       "path": "apps/web/public/assets/ships/carnival-magic.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 135795,
+      "sha256": "74b2dbea632573b7c2a4260e866fa56834b491dffb62ff4c9135bc6c312e7237",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "carnival-miracle": {
       "path": "apps/web/public/assets/ships/carnival-miracle.jpg",
-      "bytes": 40050,
-      "sha256": "39958a5b5335b35e283c72177d4f9f0ad46c3fd1f5b3feb84a82f4fbc7be38f3",
+      "bytes": 169902,
+      "sha256": "da5f9b6f3ce4299ab46f3c26c41d35364c1341e3912a0b7b352310bfc832cbb5",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 338
+        "width": 1079,
+        "height": 720
       }
     },
     "carnival-paradise": {
       "path": "apps/web/public/assets/ships/carnival-paradise.jpg",
-      "bytes": 101427,
-      "sha256": "ccc108c98e1485dcaefb3834b5771a3f5153b5bff94ae7679bc21d0b1a1d5ad9",
+      "bytes": 159610,
+      "sha256": "13032d529b1640e3738858728eee7b71cc6aec33af3884823debc3d8001e95d4",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1075,
+        "height": 720
       }
     },
     "carnival-pride": {
       "path": "apps/web/public/assets/ships/carnival-pride.jpg",
-      "bytes": 111914,
-      "sha256": "a591e8c5fb3f2ad7a3b364d38c66304e06a522ae08ab6a9cbf04b6da4adc5aa3",
+      "bytes": 134591,
+      "sha256": "de23cfead19d34d58cc11216b72c2a5ecb52dbd85bf5519f631ef1a4d8d97175",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "carnival-spirit": {
       "path": "apps/web/public/assets/ships/carnival-spirit.jpg",
-      "bytes": 40050,
-      "sha256": "39958a5b5335b35e283c72177d4f9f0ad46c3fd1f5b3feb84a82f4fbc7be38f3",
+      "bytes": 157265,
+      "sha256": "9bde11bd57b5c1ff06d21995735230296ea66277c5371fb3dc3c625ced8397e4",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 338
+        "width": 960,
+        "height": 720
       }
     },
     "carnival-sunrise": {
       "path": "apps/web/public/assets/ships/carnival-sunrise.jpg",
-      "bytes": 248678,
-      "sha256": "f38e51de4904597a588e9281f0d56d42cd717630fdd77dc0b82956328b06f354",
+      "bytes": 128430,
+      "sha256": "e4c507b2b6a7c55f42e41c9ce02ce53ce2eac261f997f8f6e7e67a8cdac35566",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 804
+        "width": 960,
+        "height": 720
       }
     },
     "carnival-sunshine": {
       "path": "apps/web/public/assets/ships/carnival-sunshine.jpg",
-      "bytes": 122260,
-      "sha256": "eb7c228b05aa75c8c7909043dc965e1cbce578866458b7cced5f8eadc765dab2",
+      "bytes": 99846,
+      "sha256": "d7be06dccd92d323afded1303b4dcf2459fcc7cb95f7b868e3102b8a5aa7a72e",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1080,
+        "height": 720
       }
     },
     "carnival-valor": {
       "path": "apps/web/public/assets/ships/carnival-valor.jpg",
-      "bytes": 105714,
-      "sha256": "640fc382b2b2872be114d718b7a1a93df928864b6ed87628b69da0ecf9766231",
+      "bytes": 170468,
+      "sha256": "86f3fab4b1b395ada88f126ad621af1ce0f34a06ed2e32b5a12cab9a9f2ce645",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1202,
+        "height": 720
       }
     },
     "carnival-venezia": {
       "path": "apps/web/public/assets/ships/carnival-venezia.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 111993,
+      "sha256": "3eb04c61e5b4086fe53e6ccab54a5fd1336a73e8a233c488da77a2871fb2aaa3",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "carnival-vista": {
@@ -940,32 +379,32 @@
     },
     "celebrity-apex": {
       "path": "apps/web/public/assets/ships/celebrity-apex.jpg",
-      "bytes": 64285,
-      "sha256": "bb1e72bef647c2a293b1ba4ea54d8fa7251e0398023a25f500d846a7ae3a72b8",
+      "bytes": 119070,
+      "sha256": "0fc0b8234de39c1da67c651dc8bbff84bde305813ad65f44985876cf2145d23e",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 960,
+        "height": 720
       }
     },
     "celebrity-ascent": {
       "path": "apps/web/public/assets/ships/celebrity-ascent.jpg",
-      "bytes": 64285,
-      "sha256": "bb1e72bef647c2a293b1ba4ea54d8fa7251e0398023a25f500d846a7ae3a72b8",
+      "bytes": 116150,
+      "sha256": "b02058f8e9a9d2c5534c480dcd2ddb56bf88477a9caaefdb69178e71aa0dc68f",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1257,
+        "height": 720
       }
     },
     "celebrity-beyond": {
       "path": "apps/web/public/assets/ships/celebrity-beyond.jpg",
-      "bytes": 64285,
-      "sha256": "bb1e72bef647c2a293b1ba4ea54d8fa7251e0398023a25f500d846a7ae3a72b8",
+      "bytes": 217918,
+      "sha256": "de9688a1b553a8fae1c1411ceb0b1891afa853bbea4bac8afc4c3c4bfe96579f",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1280,
+        "height": 720
       }
     },
     "celebrity-constellation": {
@@ -980,22 +419,22 @@
     },
     "celebrity-eclipse": {
       "path": "apps/web/public/assets/ships/celebrity-eclipse.jpg",
-      "bytes": 64285,
-      "sha256": "bb1e72bef647c2a293b1ba4ea54d8fa7251e0398023a25f500d846a7ae3a72b8",
+      "bytes": 158325,
+      "sha256": "0caa45f8dec3057eca7c8e2523a832ac9b40ede5137e961953ae5ecdb54166a5",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1024,
+        "height": 680
       }
     },
     "celebrity-edge": {
       "path": "apps/web/public/assets/ships/celebrity-edge.jpg",
-      "bytes": 72090,
-      "sha256": "740b7bf1ae86c8217d53fd7356822383de008d58a32d255f5b912f70fc70a45c",
+      "bytes": 213257,
+      "sha256": "d14174700eaa77dd14fff2680336fe912b0fc304625fc3fcb9043b2948018c0d",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 1280,
+        "height": 655
       }
     },
     "celebrity-equinox": {
@@ -1010,22 +449,22 @@
     },
     "celebrity-infinity": {
       "path": "apps/web/public/assets/ships/celebrity-infinity.jpg",
-      "bytes": 80613,
-      "sha256": "230616f932263ccec05965a336797a0bec93718c3407c917a9d78a2f336bbd03",
+      "bytes": 205919,
+      "sha256": "ccd2d0ff09f34907c7566b75e51756482e44b49f7ebcff65ac59dcb7963a5723",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 1087,
+        "height": 720
       }
     },
     "celebrity-millennium": {
       "path": "apps/web/public/assets/ships/celebrity-millennium.jpg",
-      "bytes": 80613,
-      "sha256": "230616f932263ccec05965a336797a0bec93718c3407c917a9d78a2f336bbd03",
+      "bytes": 230775,
+      "sha256": "092de3c7f99deaa6821c36b14d47cd7ff5bef090b3abccd6d514f53ed33e85ef",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 1257,
+        "height": 720
       }
     },
     "celebrity-reflection": {
@@ -1040,172 +479,172 @@
     },
     "celebrity-silhouette": {
       "path": "apps/web/public/assets/ships/celebrity-silhouette.jpg",
-      "bytes": 87760,
-      "sha256": "c41ecd191a3871057fa7e1638f3542a79aa4abe26bd02a36c425e4071512fcf8",
+      "bytes": 122564,
+      "sha256": "879650c171b0d1938ff5f76dce5374a23144aa643f2ce2abc22fe55804437dbf",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 1007,
+        "height": 720
       }
     },
     "celebrity-solstice": {
       "path": "apps/web/public/assets/ships/celebrity-solstice.jpg",
-      "bytes": 102563,
-      "sha256": "b9ac009380841576d0f0fb401d63bcbbd7bf0f48df63af5cba94097ffc221b67",
+      "bytes": 165747,
+      "sha256": "38c28b18cf413ff0ac12e2fb5e0ac6cc1cb8782bbaeec44cb17ca83ccd745eaf",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 422
+        "width": 1075,
+        "height": 720
       }
     },
     "celebrity-summit": {
       "path": "apps/web/public/assets/ships/celebrity-summit.jpg",
-      "bytes": 72090,
-      "sha256": "740b7bf1ae86c8217d53fd7356822383de008d58a32d255f5b912f70fc70a45c",
+      "bytes": 146289,
+      "sha256": "7426225553a3476919d77b1530f34618b25804d4d6410842164c8e522ac288af",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 1080,
+        "height": 720
       }
     },
     "celebrity-xcel": {
       "path": "apps/web/public/assets/ships/celebrity-xcel.jpg",
-      "bytes": 50373,
-      "sha256": "f6fb5ea6eab3caafcad748d2ac73367cefd8065c6d1b4e5c9a63650c5cd84793",
+      "bytes": 248958,
+      "sha256": "282005f948e6c68c245a55e7aeb1947b3d7b786ecbfd1d13588ae0ac7faab26e",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 382
+        "width": 1280,
+        "height": 720
       }
     },
     "crown-princess": {
       "path": "apps/web/public/assets/ships/crown-princess.jpg",
-      "bytes": 80247,
-      "sha256": "8a6c285d562d0fbab9dee71c6516e6fd68e3335cd4f9de394dc94d768bbd05d9",
+      "bytes": 109455,
+      "sha256": "8a9c6e7eeff417b580ac3a480d53476725fb7699d397308a23a5b11f0eb77df9",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 960,
+        "height": 720
       }
     },
     "discovery-princess": {
       "path": "apps/web/public/assets/ships/discovery-princess.jpg",
-      "bytes": 131143,
-      "sha256": "1ed6d09ca12e684f81b2c5c4312560b45fc0d877f4abc2297b9851c5d6924e5a",
+      "bytes": 170427,
+      "sha256": "2970cae7a26c1e02e5ae5c5f092b31c8cdaa7e2cfcf07bfa94b34cabd57edf7c",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "disney-adventure": {
       "path": "apps/web/public/assets/ships/disney-adventure.jpg",
-      "bytes": 80613,
-      "sha256": "230616f932263ccec05965a336797a0bec93718c3407c917a9d78a2f336bbd03",
+      "bytes": 118137,
+      "sha256": "85a69368631be8fb75c1d91954e6f32fc73542e381b4b34a0acfcb9edd6c44c8",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 1080,
+        "height": 720
       }
     },
     "disney-destiny": {
       "path": "apps/web/public/assets/ships/disney-destiny.jpg",
-      "bytes": 182154,
-      "sha256": "d243e7c9438ff6cf22bcb21cce1c71c032fe31b5276a98a133e6c0df4ec725dd",
+      "bytes": 131730,
+      "sha256": "e9c2234fd86381cf3c933c6fc047123e85f1823f952cb86aae7c2443c0206c89",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1280,
+        "height": 556
       }
     },
     "disney-dream": {
       "path": "apps/web/public/assets/ships/disney-dream.jpg",
-      "bytes": 182154,
-      "sha256": "d243e7c9438ff6cf22bcb21cce1c71c032fe31b5276a98a133e6c0df4ec725dd",
+      "bytes": 188083,
+      "sha256": "f52e7764f1f2ee565d6adc6da1f275a92af88d24948fe7b7bcee2b431e3548f8",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1145,
+        "height": 720
       }
     },
     "disney-fantasy": {
       "path": "apps/web/public/assets/ships/disney-fantasy.jpg",
-      "bytes": 182154,
-      "sha256": "d243e7c9438ff6cf22bcb21cce1c71c032fe31b5276a98a133e6c0df4ec725dd",
+      "bytes": 202128,
+      "sha256": "89c159005892f00ea24ebd4a12e246bb659c6678097e5c97f0375dae0621b0c6",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1280,
+        "height": 719
       }
     },
     "disney-magic": {
       "path": "apps/web/public/assets/ships/disney-magic.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 88425,
+      "sha256": "8173faa4f04fdd80252da7c128600084b7311790adea9dd1b07196ddb4a822fe",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "disney-treasure": {
       "path": "apps/web/public/assets/ships/disney-treasure.jpg",
-      "bytes": 182154,
-      "sha256": "d243e7c9438ff6cf22bcb21cce1c71c032fe31b5276a98a133e6c0df4ec725dd",
+      "bytes": 178399,
+      "sha256": "26d90c6560bb751d696b2770bbde67c1089978770507c32e802b332c1da25b08",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 960,
+        "height": 720
       }
     },
     "disney-wish": {
       "path": "apps/web/public/assets/ships/disney-wish.jpg",
-      "bytes": 182154,
-      "sha256": "d243e7c9438ff6cf22bcb21cce1c71c032fe31b5276a98a133e6c0df4ec725dd",
+      "bytes": 257979,
+      "sha256": "d8bde297777bbc774e364727873c40ffbe24d6bbc0beb3283a72876b6ae12a69",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1280,
+        "height": 720
       }
     },
     "disney-wonder": {
       "path": "apps/web/public/assets/ships/disney-wonder.jpg",
-      "bytes": 182154,
-      "sha256": "d243e7c9438ff6cf22bcb21cce1c71c032fe31b5276a98a133e6c0df4ec725dd",
+      "bytes": 113129,
+      "sha256": "bc10e59369fc0ebb06602fc6a08d8a6151f22e5929b8acea6ebf9dd5372ca519",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1080,
+        "height": 720
       }
     },
     "emerald-princess": {
       "path": "apps/web/public/assets/ships/emerald-princess.jpg",
-      "bytes": 87760,
-      "sha256": "c41ecd191a3871057fa7e1638f3542a79aa4abe26bd02a36c425e4071512fcf8",
+      "bytes": 223350,
+      "sha256": "a9e640c498469cc4a59906ca6c47de66b163df36afe391120f697f8a3170a68a",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 1087,
+        "height": 720
       }
     },
     "enchanted-princess": {
       "path": "apps/web/public/assets/ships/enchanted-princess.jpg",
-      "bytes": 76698,
-      "sha256": "0295e68919f55da8cc605c7d3ffad4424304ecce687a97bb16bf29a7a38a361f",
+      "bytes": 199749,
+      "sha256": "ae8889a158fb5ed92df8b9962551031021ebed7f43eb18cc2db27077c6b8b186",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1080,
+        "height": 720
       }
     },
     "enchantment-of-the-seas": {
       "path": "apps/web/public/assets/ships/enchantment-of-the-seas.jpg",
-      "bytes": 64285,
-      "sha256": "bb1e72bef647c2a293b1ba4ea54d8fa7251e0398023a25f500d846a7ae3a72b8",
+      "bytes": 156084,
+      "sha256": "1d3043725560dd4330e047f23426052a9ffbbf06c1b34f8c742e9209d454b3fc",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1000,
+        "height": 720
       }
     },
     "eurodam": {
@@ -1220,39 +659,42 @@
     },
     "explorer-of-the-seas": {
       "path": "apps/web/public/assets/ships/explorer-of-the-seas.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 202435,
+      "sha256": "6b5468cfa29f11b4754c08099481b5065b151dffc233938151f002ca56cb4a0d",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 674
       }
     },
     "freedom-of-the-seas": {
       "path": "apps/web/public/assets/ships/freedom-of-the-seas.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 109003,
+      "sha256": "68f2c196b6031fa00e2a36dc343d4bc418d745329d612bc387c7199a95e751f8",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "grandeur-of-the-seas": {
       "path": "apps/web/public/assets/ships/grandeur-of-the-seas.jpg",
-      "bytes": 477311,
-      "sha256": "ab6183e869289679a2a1e53656614410d7a6a784db8240d7e7a89ee1c8828d39",
-      "format": "png",
-      "dimensions": null
+      "bytes": 152632,
+      "sha256": "e92efbdc4a7a1a9da56b1b5e0c1602fbc5216feb550d39ff6b92364d39c76fd0",
+      "format": "jpg",
+      "dimensions": {
+        "width": 960,
+        "height": 720
+      }
     },
     "harmony-of-the-seas": {
       "path": "apps/web/public/assets/ships/harmony-of-the-seas.jpg",
-      "bytes": 96892,
-      "sha256": "134c8bcfbdbfd5edf79f3ed8112cc1f8ee9e0438102ba6e41840ed641ee69dfa",
+      "bytes": 223937,
+      "sha256": "7ea46efa45262621847dd1dbdc0fa6e64047eb8c2543c223fab14918f836cf74",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 426
+        "width": 1280,
+        "height": 720
       }
     },
     "icon-of-the-seas": {
@@ -1267,52 +709,62 @@
     },
     "independence-of-the-seas": {
       "path": "apps/web/public/assets/ships/independence-of-the-seas.jpg",
-      "bytes": 228125,
-      "sha256": "7a78e01d82b600c56c19341352d601bd89b645ea437cdba9553b0283459ebb58",
+      "bytes": 139657,
+      "sha256": "25e1f90462d8090fc52c07e3e02153a73b5ac47a6df6615157becb6bb4fcbfc4",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1084,
+        "height": 720
       }
     },
     "island-princess": {
       "path": "apps/web/public/assets/ships/island-princess.jpg",
-      "bytes": 76698,
-      "sha256": "0295e68919f55da8cc605c7d3ffad4424304ecce687a97bb16bf29a7a38a361f",
+      "bytes": 98657,
+      "sha256": "b641795e500d9e2ef8a12e949fa80808f94ad10de282f1ec5d023c5372393867",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 960,
+        "height": 720
       }
     },
     "jewel-of-the-seas": {
       "path": "apps/web/public/assets/ships/jewel-of-the-seas.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 130266,
+      "sha256": "f5106371252b5a7cbad259d8ff39ac454c9b5d2ed8d2ef1ed2c7a7bfb5975a61",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1095,
+        "height": 720
+      }
+    },
+    "koningsdam": {
+      "path": "apps/web/public/assets/ships/koningsdam.jpg",
+      "bytes": 175750,
+      "sha256": "dd054c378b7c4ecca92bd52c2ec4f6a697cd8e0bfbf575d05d14c1f0f6449e0e",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 639
       }
     },
     "liberty-of-the-seas": {
       "path": "apps/web/public/assets/ships/liberty-of-the-seas.jpg",
-      "bytes": 54003,
-      "sha256": "d849adf0da80305ca68c94b69eb65c20f6cfdfb12a8fbbe34551847862451f5b",
+      "bytes": 127432,
+      "sha256": "4c0d44c918ef657aed0a2dd8c80ce56c9f3389bcd641f4921d7d86d5bb714d1d",
       "format": "jpg",
       "dimensions": {
-        "width": 600,
-        "height": 350
+        "width": 970,
+        "height": 720
       }
     },
     "majestic-princess": {
       "path": "apps/web/public/assets/ships/majestic-princess.jpg",
-      "bytes": 80247,
-      "sha256": "8a6c285d562d0fbab9dee71c6516e6fd68e3335cd4f9de394dc94d768bbd05d9",
+      "bytes": 166852,
+      "sha256": "4e7bdcbd01da3504133cd187690de77f5a3ed4e0f772a0a64379cb6daca6aa54",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 960,
+        "height": 720
       }
     },
     "mardi-gras": {
@@ -1327,32 +779,42 @@
     },
     "mariner-of-the-seas": {
       "path": "apps/web/public/assets/ships/mariner-of-the-seas.jpg",
-      "bytes": 101349,
-      "sha256": "a0802bbfb441b0c5086001f403d312e3ac0b0e1bb831d83ce0ad4f9dfe221f70",
+      "bytes": 188329,
+      "sha256": "e842f24dc5d2af86d998109e7f8ffae539f6d3ae40545fa40e8c0829590bf50d",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1079,
+        "height": 720
       }
     },
     "msc-bellissima": {
       "path": "apps/web/public/assets/ships/msc-bellissima.jpg",
-      "bytes": 95791,
-      "sha256": "ca3ffd6c1abeb888528d4ef76644b5c66b93689053692c346284a539e783081d",
+      "bytes": 85340,
+      "sha256": "1a659c6347330e4feada77927b20c89e5daa00c093d9cf29f65b2ebf58fb39d2",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 482
+        "width": 799,
+        "height": 533
       }
     },
     "msc-divina": {
       "path": "apps/web/public/assets/ships/msc-divina.jpg",
-      "bytes": 75829,
-      "sha256": "427161fd05a6b93916b86a2d56a20bc2d7e2e79f375bf835a32013484d809766",
+      "bytes": 164382,
+      "sha256": "f298564c83f3cfda811ea463eb685088398d455328879abd500a711db857672f",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1082,
+        "height": 720
+      }
+    },
+    "msc-grandiosa": {
+      "path": "apps/web/public/assets/ships/msc-grandiosa.jpg",
+      "bytes": 105912,
+      "sha256": "6d952909bd6d2a58c78b8aa30cb3e4fbb68152d14d411f8d2ac035a49022c0ba",
+      "format": "jpg",
+      "dimensions": {
+        "width": 960,
+        "height": 720
       }
     },
     "msc-meraviglia": {
@@ -1365,14 +827,24 @@
         "height": 480
       }
     },
-    "msc-seascape": {
-      "path": "apps/web/public/assets/ships/msc-seascape.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+    "msc-opera": {
+      "path": "apps/web/public/assets/ships/msc-opera.jpg",
+      "bytes": 134040,
+      "sha256": "0733e2c34ce6a6ea503f5a9f762f7eb5fd5a593f3b70107d8baadf92cbfb5da4",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 646
+      }
+    },
+    "msc-seascape": {
+      "path": "apps/web/public/assets/ships/msc-seascape.jpg",
+      "bytes": 214181,
+      "sha256": "463fb4c65433dfc09a8f264380cd5d16e589f1adf2775f51ff0c908fb1266221",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 720
       }
     },
     "msc-seashore": {
@@ -1387,122 +859,152 @@
     },
     "msc-seaside": {
       "path": "apps/web/public/assets/ships/msc-seaside.jpg",
-      "bytes": 75829,
-      "sha256": "427161fd05a6b93916b86a2d56a20bc2d7e2e79f375bf835a32013484d809766",
+      "bytes": 201420,
+      "sha256": "beca306b7a142fd40920a03f574f1f5104f302b497d1bf7a0d1a8d918adff5c0",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 720
+      }
+    },
+    "msc-virtuosa": {
+      "path": "apps/web/public/assets/ships/msc-virtuosa.jpg",
+      "bytes": 170359,
+      "sha256": "294cc61dbc912a65e0e61911b1a9cd1f89c9eff1f9438f2d355a8dbeb3692d1d",
+      "format": "jpg",
+      "dimensions": {
+        "width": 960,
+        "height": 720
       }
     },
     "msc-world-america": {
       "path": "apps/web/public/assets/ships/msc-world-america.jpg",
-      "bytes": 95791,
-      "sha256": "ca3ffd6c1abeb888528d4ef76644b5c66b93689053692c346284a539e783081d",
+      "bytes": 152645,
+      "sha256": "7ddcc26da805c46b56b0000be1f1de2ae92ca81d09670df7f2d6533d6ce2dd10",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 482
+        "width": 1080,
+        "height": 720
       }
     },
     "navigator-of-the-seas": {
       "path": "apps/web/public/assets/ships/navigator-of-the-seas.jpg",
-      "bytes": 187760,
-      "sha256": "9596cbc5d865c11881d6120fb310c836732b25e6afe3f1c2d163097d00f2e1be",
+      "bytes": 141899,
+      "sha256": "5b5c1bf5e92542cc5258a961e081dd9b3fc18c23fe8f51335d5277a13049b7f1",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1280,
+        "height": 687
       }
     },
     "nieuw-amsterdam": {
       "path": "apps/web/public/assets/ships/nieuw-amsterdam.jpg",
-      "bytes": 118224,
-      "sha256": "b68f75389850d501b9bb2b2c40a0b25fc58fa5a08ebd6619d57fb48ecf616e01",
+      "bytes": 121193,
+      "sha256": "8b815e2ad96e8be8b7f4317e582fc49c52e1e85f8cb1cf59e93d594833a5accd",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
+      }
+    },
+    "nieuw-statendam": {
+      "path": "apps/web/public/assets/ships/nieuw-statendam.jpg",
+      "bytes": 194598,
+      "sha256": "e9f6fdc86d22b7db75bae8a85ad8c39f1939febd5c161dc0a26b54d1946bd7fc",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 678
+      }
+    },
+    "noordam": {
+      "path": "apps/web/public/assets/ships/noordam.jpg",
+      "bytes": 146607,
+      "sha256": "d0a08ca2a3fa5f2df61bcb5f7c94075a0d6f0c1f753f24133a3c74a778f19756",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1168,
+        "height": 720
       }
     },
     "norwegian-aqua": {
       "path": "apps/web/public/assets/ships/norwegian-aqua.jpg",
-      "bytes": 43796,
-      "sha256": "e1e481ebc2c80d2bf9a18a9b63fd6867965701162383e76131cb0350997e5696",
+      "bytes": 245546,
+      "sha256": "ba6f8cb6bd3c13984511e788e4c230e4803da6138afb1a21a2d51bb8c848c7f2",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 150
+        "width": 1280,
+        "height": 416
       }
     },
     "norwegian-bliss": {
       "path": "apps/web/public/assets/ships/norwegian-bliss.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 241205,
+      "sha256": "f1ca4aa613e3c6c9fcb03402e592697034b39b2be71bd8e45e77029ddc934774",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1278,
+        "height": 720
       }
     },
     "norwegian-breakaway": {
       "path": "apps/web/public/assets/ships/norwegian-breakaway.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 124088,
+      "sha256": "6393ce92f63b4de7b937dc52a35f4d00ca71bb80091ad5903dc941d2d25697f4",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "norwegian-encore": {
       "path": "apps/web/public/assets/ships/norwegian-encore.jpg",
-      "bytes": 86127,
-      "sha256": "0936670962cea86487c1265fa87e019082ef24149cc96c4a525d4ab1de96b5ac",
+      "bytes": 96680,
+      "sha256": "a51890a8e82b13b170c29e45ec1c5579941a088dc11691be51f54b49a2458059",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1080,
+        "height": 720
       }
     },
     "norwegian-escape": {
       "path": "apps/web/public/assets/ships/norwegian-escape.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 164142,
+      "sha256": "a6244834ecb7552190ef767f6b7212b035193d0b776f4a37cd123ab7c8572792",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1082,
+        "height": 720
       }
     },
     "norwegian-gem": {
       "path": "apps/web/public/assets/ships/norwegian-gem.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 151858,
+      "sha256": "65cfb577e35fe22599a02a1093cf4fb28b6a5a7968f941555352207d7616ea7d",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 900,
+        "height": 720
       }
     },
     "norwegian-getaway": {
       "path": "apps/web/public/assets/ships/norwegian-getaway.jpg",
-      "bytes": 43796,
-      "sha256": "e1e481ebc2c80d2bf9a18a9b63fd6867965701162383e76131cb0350997e5696",
+      "bytes": 102770,
+      "sha256": "834fea468ac0609f06d592ebbabac1ef7d28fcf67e2515f100baf5152c0c66c2",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 150
+        "width": 1195,
+        "height": 720
       }
     },
     "norwegian-jade": {
       "path": "apps/web/public/assets/ships/norwegian-jade.jpg",
-      "bytes": 43796,
-      "sha256": "e1e481ebc2c80d2bf9a18a9b63fd6867965701162383e76131cb0350997e5696",
+      "bytes": 282441,
+      "sha256": "6c7a826fa8408da87da1e218feec144c3bfadf00248285f03bc1ca6f48ccdd0c",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 150
+        "width": 1280,
+        "height": 720
       }
     },
     "norwegian-joy": {
@@ -1517,102 +1019,112 @@
     },
     "norwegian-luna": {
       "path": "apps/web/public/assets/ships/norwegian-luna.jpg",
-      "bytes": 86127,
-      "sha256": "0936670962cea86487c1265fa87e019082ef24149cc96c4a525d4ab1de96b5ac",
+      "bytes": 235628,
+      "sha256": "6fb56cc2aa968bef0fcc84785cb74c4d0e8795d9644e26bbffd1ba94deaa7927",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 539
       }
     },
     "norwegian-pearl": {
       "path": "apps/web/public/assets/ships/norwegian-pearl.jpg",
-      "bytes": 86127,
-      "sha256": "0936670962cea86487c1265fa87e019082ef24149cc96c4a525d4ab1de96b5ac",
+      "bytes": 125648,
+      "sha256": "0fb307e23c8779367b94599f3ee3d2a19dae1519cef38682568046c95435cc45",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "norwegian-prima": {
       "path": "apps/web/public/assets/ships/norwegian-prima.jpg",
-      "bytes": 43796,
-      "sha256": "e1e481ebc2c80d2bf9a18a9b63fd6867965701162383e76131cb0350997e5696",
+      "bytes": 304486,
+      "sha256": "b63e002bca974704f81ba157bd80014ed7fd68e11a8de4bd4ea475ee31173de0",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 150
+        "width": 1280,
+        "height": 720
       }
     },
     "norwegian-sky": {
       "path": "apps/web/public/assets/ships/norwegian-sky.jpg",
-      "bytes": 86127,
-      "sha256": "0936670962cea86487c1265fa87e019082ef24149cc96c4a525d4ab1de96b5ac",
+      "bytes": 141088,
+      "sha256": "c5f059ec9edab98a7ba996ed5c6097a876c2f8081c1126cad4c2a78b7dd80519",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1082,
+        "height": 720
       }
     },
     "norwegian-star": {
       "path": "apps/web/public/assets/ships/norwegian-star.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 130818,
+      "sha256": "9cfb3ed7862fba3d6ca0ae59cfc8b8cf76452d374723b6f96c509fc5ff075498",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "norwegian-sun": {
       "path": "apps/web/public/assets/ships/norwegian-sun.jpg",
-      "bytes": 97258,
-      "sha256": "13a0c2129bb3ef66c6bf3c7c903e3942d732092b20a9b53c9b46f4be7153da32",
+      "bytes": 242205,
+      "sha256": "0e5e802dcbd417e8adacc4a1de9159be0972aa5f3b1db041335a969062183b0f",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 988,
+        "height": 720
       }
     },
     "norwegian-viva": {
       "path": "apps/web/public/assets/ships/norwegian-viva.jpg",
-      "bytes": 43796,
-      "sha256": "e1e481ebc2c80d2bf9a18a9b63fd6867965701162383e76131cb0350997e5696",
+      "bytes": 93729,
+      "sha256": "fd6e6a8ea43097d4c1ace9d32be430646028162439ba624242b964ecf114a986",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 150
+        "width": 960,
+        "height": 720
       }
     },
     "oasis-of-the-seas": {
       "path": "apps/web/public/assets/ships/oasis-of-the-seas.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 183367,
+      "sha256": "d6373bc636fe557aabf2c879deb2ce85a82ba63a2e9119d747ab065ddf3c3acf",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "odyssey-of-the-seas": {
       "path": "apps/web/public/assets/ships/odyssey-of-the-seas.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 110743,
+      "sha256": "830d7259b9ddc9ed51e09c1342f0161397ff795632a6a5a8767523a2f26c6b45",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
+      }
+    },
+    "oosterdam": {
+      "path": "apps/web/public/assets/ships/oosterdam.jpg",
+      "bytes": 148323,
+      "sha256": "ccce4e9c537f8a3787e3f8d530a014ee887726c8038ca511a082b2a3ade2757c",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1176,
+        "height": 720
       }
     },
     "ovation-of-the-seas": {
       "path": "apps/web/public/assets/ships/ovation-of-the-seas.jpg",
-      "bytes": 90473,
-      "sha256": "e757f32af58cd2a23883a51d656ab1e560ca89300233f199764f5d4efc1fc60a",
+      "bytes": 165637,
+      "sha256": "7278459b9b20bfb9053a7083cea0c5647fdf0f92dd63b948f450ca7056c4452c",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1280,
+        "height": 720
       }
     },
     "pride-of-america": {
@@ -1627,12 +1139,12 @@
     },
     "quantum-of-the-seas": {
       "path": "apps/web/public/assets/ships/quantum-of-the-seas.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 143397,
+      "sha256": "27786c2e6752df4df3a15281ef14f359780a7d385eaec3dc7684a7d3ccab5a30",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 960,
+        "height": 720
       }
     },
     "radiance-of-the-seas": {
@@ -1647,52 +1159,62 @@
     },
     "regal-princess": {
       "path": "apps/web/public/assets/ships/regal-princess.jpg",
-      "bytes": 74955,
-      "sha256": "ec8d6c5c02a52f3719ee4c27172c458c92cacd0f6035cb9594b0df144b428de8",
+      "bytes": 186611,
+      "sha256": "bdb0f176601437dd64f2d162c218df563697685e07ed9cf90d400baef6fd98ca",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1080,
+        "height": 720
+      }
+    },
+    "resilient-lady": {
+      "path": "apps/web/public/assets/ships/resilient-lady.jpg",
+      "bytes": 130913,
+      "sha256": "f2e962d2910170d001cf10646e393eec40115bc49413a8e81450cf38040a95a9",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1080,
+        "height": 720
       }
     },
     "rotterdam": {
       "path": "apps/web/public/assets/ships/rotterdam.jpg",
-      "bytes": 98914,
-      "sha256": "ef444f74a4bb86323cb800c3f3b20b0f4e0fb9c96b3d5f10e9f54fb97e384f60",
+      "bytes": 118373,
+      "sha256": "6623a2879d0c53cc9be6cb5ae6c7dae02ed84163067812c7716040f9e8895620",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1102,
+        "height": 720
       }
     },
     "royal-princess": {
       "path": "apps/web/public/assets/ships/royal-princess.jpg",
-      "bytes": 76698,
-      "sha256": "0295e68919f55da8cc605c7d3ffad4424304ecce687a97bb16bf29a7a38a361f",
+      "bytes": 134906,
+      "sha256": "2d1458ed797cf14b497c8a9cfea89dc10f4c2d3dad02801604ef26e3c686fe7e",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1069,
+        "height": 720
       }
     },
     "ruby-princess": {
       "path": "apps/web/public/assets/ships/ruby-princess.jpg",
-      "bytes": 76698,
-      "sha256": "0295e68919f55da8cc605c7d3ffad4424304ecce687a97bb16bf29a7a38a361f",
+      "bytes": 87729,
+      "sha256": "837c6df01e29c7ac0e12637beebf6ca0333c3dca53757c49e0cc175e95a720a8",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 873,
+        "height": 720
       }
     },
     "scarlet-lady": {
       "path": "apps/web/public/assets/ships/scarlet-lady.jpg",
-      "bytes": 114263,
-      "sha256": "bd4d7fbbd95441aeb2eb55775937add88776b37b02c22854628ddea17f3e3f85",
+      "bytes": 123098,
+      "sha256": "7a4f43f00b2f7ba309a37decdf7d5ac9755e262fdd09a0d877618f16e9df7510",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 720,
+        "height": 720
       }
     },
     "serenade-of-the-seas": {
@@ -1707,72 +1229,102 @@
     },
     "sky-princess": {
       "path": "apps/web/public/assets/ships/sky-princess.jpg",
-      "bytes": 80613,
-      "sha256": "230616f932263ccec05965a336797a0bec93718c3407c917a9d78a2f336bbd03",
+      "bytes": 104516,
+      "sha256": "cb14203df53f2d80d1093fdecac7699f3f4e2aaba4270ec889f1e7c5b7c194cb",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 960,
+        "height": 720
+      }
+    },
+    "spectrum-of-the-seas": {
+      "path": "apps/web/public/assets/ships/spectrum-of-the-seas.jpg",
+      "bytes": 98754,
+      "sha256": "3d5e5b7a9b3c7403c1550a18d795b3be98c7ee72b7e66cadcdd7c9dc4fcb8c3c",
+      "format": "jpg",
+      "dimensions": {
+        "width": 960,
+        "height": 720
       }
     },
     "star-of-the-seas": {
       "path": "apps/web/public/assets/ships/star-of-the-seas.jpg",
-      "bytes": 76148,
-      "sha256": "73515978dbe5bde778d7f040537894d114c757c063935b45fec342af81f2ed7a",
+      "bytes": 176853,
+      "sha256": "067c30c9def165eb1fcd7ecb4ba89f2abc19fcc5918b6bbd514fc024cf5e4d4c",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1278,
+        "height": 720
       }
     },
     "star-princess": {
       "path": "apps/web/public/assets/ships/star-princess.jpg",
-      "bytes": 73764,
-      "sha256": "ba2a2e94e82e35e4c7daabff2ae5268f7458563ad8f43c2fe0105d47e2fe10e2",
+      "bytes": 255570,
+      "sha256": "bbcbbf8b6d620ea267d588a3f31bdab3432e10a329812e73c29580e7f5b13b06",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1075,
+        "height": 720
       }
     },
     "sun-princess": {
       "path": "apps/web/public/assets/ships/sun-princess.jpg",
-      "bytes": 76698,
-      "sha256": "0295e68919f55da8cc605c7d3ffad4424304ecce687a97bb16bf29a7a38a361f",
+      "bytes": 192458,
+      "sha256": "abc21a896916cea7a1714deed86aad478cc7ed7a3166c5b17382a8744fa9e41a",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1108,
+        "height": 720
       }
     },
     "symphony-of-the-seas": {
       "path": "apps/web/public/assets/ships/symphony-of-the-seas.jpg",
-      "bytes": 96892,
-      "sha256": "134c8bcfbdbfd5edf79f3ed8112cc1f8ee9e0438102ba6e41840ed641ee69dfa",
+      "bytes": 131178,
+      "sha256": "a217bfc5f9f9f42a5eecd4919f06cc0a12fcf3db85877599e769c3f1474882af",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 426
+        "width": 1080,
+        "height": 720
+      }
+    },
+    "utopia-of-the-seas": {
+      "path": "apps/web/public/assets/ships/utopia-of-the-seas.jpg",
+      "bytes": 174558,
+      "sha256": "5c28d4836c4ff3cb9b2564c60b0cb64c4d93c0e4e170195095603a0129bbf105",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1279,
+        "height": 720
+      }
+    },
+    "valiant-lady": {
+      "path": "apps/web/public/assets/ships/valiant-lady.jpg",
+      "bytes": 144713,
+      "sha256": "8fe090854727d700d79a4d24380cbb2cc3201544dc20cf446367af49ec8a16d5",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 591
       }
     },
     "vision-of-the-seas": {
       "path": "apps/web/public/assets/ships/vision-of-the-seas.jpg",
-      "bytes": 107667,
-      "sha256": "afa807aa5d0b6577fade477c7463cb71d28c976278599c8bf1739992d6f7278b",
+      "bytes": 113047,
+      "sha256": "9b33ca5244abd4e4bff7ebfb402be180d494ddb9f5a3edfe2921df9906ca193d",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 589
+        "width": 960,
+        "height": 720
       }
     },
     "volendam": {
       "path": "apps/web/public/assets/ships/volendam.jpg",
-      "bytes": 92222,
-      "sha256": "affcd2d91812564ef05b5295b9bbdbe87a14fb389e3ba3fdda9b56d78f96ac89",
+      "bytes": 131418,
+      "sha256": "d2965c6299f78f6540e81637a24c09a17dcf69d841d6e09d1965bf3b96b05bd6",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1086,
+        "height": 720
       }
     },
     "westerdam": {
@@ -1787,22 +1339,32 @@
     },
     "wonder-of-the-seas": {
       "path": "apps/web/public/assets/ships/wonder-of-the-seas.jpg",
-      "bytes": 64285,
-      "sha256": "bb1e72bef647c2a293b1ba4ea54d8fa7251e0398023a25f500d846a7ae3a72b8",
+      "bytes": 162869,
+      "sha256": "657cab8542d9d50e511fb1150946318b28fd63f411c0e617fb3efa03b7a84802",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 960,
+        "height": 720
       }
     },
     "zaandam": {
       "path": "apps/web/public/assets/ships/zaandam.jpg",
-      "bytes": 80004,
-      "sha256": "48cf30bdb2a4c1f1064de10a37c1e2e8d54a8e2c379502beea9aa9f26d3d3fbc",
+      "bytes": 140269,
+      "sha256": "56757916ef91c848a14c76b1f9c5c5ed2905826b53455b55b3492664aae0338b",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 426
+        "width": 1024,
+        "height": 720
+      }
+    },
+    "zuiderdam": {
+      "path": "apps/web/public/assets/ships/zuiderdam.jpg",
+      "bytes": 162964,
+      "sha256": "cbe033136c68cd7d3f649f049e829a7f6b785af895de731cc67048ae5bf69d60",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1280,
+        "height": 720
       }
     }
   },
@@ -1845,1076 +1407,12 @@
     }
   ],
   "hardcodedReferenceIssues": [],
-  "cdnResults": [
-    {
-      "url": "https://cruisekit.app/assets/ships/adventure-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "64285"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/allure-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "84813"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/anthem-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/brilliance-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "84264"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/brilliant-lady.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76048"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/caribbean-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76698"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-breeze.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "40050"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-celebration.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "40050"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-conquest.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "40050"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-dream.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "110033"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-festivale.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "40050"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-firenze.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "63241"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-freedom.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "40050"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-horizon.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-jubilee.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "110033"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-legend.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "111914"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-liberty.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-magic.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-miracle.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "40050"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-paradise.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "101427"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-pride.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "111914"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-spirit.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "40050"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-sunrise.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "248678"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-sunshine.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "122260"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-valor.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "105714"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-venezia.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/carnival-vista.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "98499"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-apex.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "64285"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-ascent.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "64285"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-beyond.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "64285"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-constellation.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "50373"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-eclipse.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "64285"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-edge.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "72090"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-equinox.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "96703"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-infinity.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "80613"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-millennium.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "80613"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-reflection.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "96703"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-silhouette.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "87760"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-solstice.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "102563"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-summit.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "72090"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/celebrity-xcel.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "50373"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/crown-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "80247"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/discovery-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "131143"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/disney-adventure.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "80613"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/disney-destiny.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "182154"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/disney-dream.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "182154"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/disney-fantasy.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "182154"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/disney-magic.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/disney-treasure.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "182154"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/disney-wish.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "182154"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/disney-wonder.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "182154"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/emerald-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "87760"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/enchanted-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76698"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/enchantment-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "64285"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/eurodam.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97355"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/explorer-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/freedom-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/grandeur-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "477311"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/harmony-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "96892"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/icon-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "140571"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/independence-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "228125"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/island-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76698"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/jewel-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/koningsdam.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/liberty-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "54003"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/majestic-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "80247"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/mardi-gras.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "81169"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/mariner-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "101349"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-bellissima.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "95791"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-divina.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "75829"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-grandiosa.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-meraviglia.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "83239"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-opera.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-seascape.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-seashore.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "82589"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-seaside.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "75829"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-virtuosa.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/msc-world-america.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "95791"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/navigator-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "187760"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/nieuw-amsterdam.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "118224"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/nieuw-statendam.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/noordam.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-aqua.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "43796"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-bliss.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-breakaway.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-encore.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "86127"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-escape.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-gem.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-getaway.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "43796"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-jade.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "43796"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-joy.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "114263"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-luna.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "86127"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-pearl.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "86127"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-prima.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "43796"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-sky.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "86127"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-star.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-sun.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "97258"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/norwegian-viva.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "43796"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/oasis-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/odyssey-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/oosterdam.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/ovation-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "90473"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/pride-of-america.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "52219"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/quantum-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/radiance-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "63686"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/regal-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "74955"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/resilient-lady.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/rotterdam.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "98914"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/royal-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76698"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/ruby-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76698"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/scarlet-lady.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "114263"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/serenade-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "63686"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/sky-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "80613"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/spectrum-of-the-seas.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/star-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76148"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/star-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "73764"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/sun-princess.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "76698"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/symphony-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "96892"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/utopia-of-the-seas.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/valiant-lady.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/vision-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "107667"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/volendam.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "92222"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/westerdam.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "119418"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/wonder-of-the-seas.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "64285"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/zaandam.jpg",
-      "ok": true,
-      "status": 200,
-      "contentType": "image/jpeg",
-      "contentLength": "80004"
-    },
-    {
-      "url": "https://cruisekit.app/assets/ships/zuiderdam.jpg",
-      "ok": false,
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "contentLength": "3655"
-    }
-  ],
-  "blockers": [
-    {
-      "severity": "blocker",
-      "id": "carnival-breeze",
-      "message": "Current asset renders as an airplane, not the Carnival Breeze cruise ship."
-    },
-    {
-      "severity": "blocker",
-      "id": "grandeur-of-the-seas",
-      "message": "Ship asset has invalid JPG bytes: apps/web/public/assets/ships/grandeur-of-the-seas.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "koningsdam",
-      "message": "Missing ship asset: apps/web/public/assets/ships/koningsdam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "msc-grandiosa",
-      "message": "Missing ship asset: apps/web/public/assets/ships/msc-grandiosa.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "msc-opera",
-      "message": "Missing ship asset: apps/web/public/assets/ships/msc-opera.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "msc-virtuosa",
-      "message": "Missing ship asset: apps/web/public/assets/ships/msc-virtuosa.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "nieuw-statendam",
-      "message": "Missing ship asset: apps/web/public/assets/ships/nieuw-statendam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "noordam",
-      "message": "Missing ship asset: apps/web/public/assets/ships/noordam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "oosterdam",
-      "message": "Missing ship asset: apps/web/public/assets/ships/oosterdam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "resilient-lady",
-      "message": "Missing ship asset: apps/web/public/assets/ships/resilient-lady.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "spectrum-of-the-seas",
-      "message": "Missing ship asset: apps/web/public/assets/ships/spectrum-of-the-seas.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "utopia-of-the-seas",
-      "message": "Missing ship asset: apps/web/public/assets/ships/utopia-of-the-seas.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "valiant-lady",
-      "message": "Missing ship asset: apps/web/public/assets/ships/valiant-lady.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "zuiderdam",
-      "message": "Missing ship asset: apps/web/public/assets/ships/zuiderdam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "koningsdam",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/koningsdam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "msc-grandiosa",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/msc-grandiosa.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "msc-opera",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/msc-opera.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "msc-virtuosa",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/msc-virtuosa.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "nieuw-statendam",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/nieuw-statendam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "noordam",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/noordam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "oosterdam",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/oosterdam.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "resilient-lady",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/resilient-lady.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "spectrum-of-the-seas",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/spectrum-of-the-seas.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "utopia-of-the-seas",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/utopia-of-the-seas.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "valiant-lady",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/valiant-lady.jpg"
-    },
-    {
-      "severity": "blocker",
-      "id": "zuiderdam",
-      "message": "Live CDN ship asset failed: 404 https://cruisekit.app/assets/ships/zuiderdam.jpg"
-    }
-  ],
+  "cdnResults": [],
+  "blockers": [],
   "warnings": [
     {
       "severity": "warning",
-      "id": "adventure-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "allure-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "anthem-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "brilliance-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "brilliant-lady",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "caribbean-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-breeze",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-celebration",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-conquest",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-dream",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-festivale",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     },
     {
@@ -2924,92 +1422,7 @@
     },
     {
       "severity": "warning",
-      "id": "carnival-freedom",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-horizon",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-jubilee",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-legend",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-liberty",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-magic",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-miracle",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-paradise",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-pride",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-spirit",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-sunrise",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-sunshine",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-valor",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-venezia",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "carnival-vista",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-apex",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-ascent",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-beyond",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     },
     {
@@ -3019,27 +1432,7 @@
     },
     {
       "severity": "warning",
-      "id": "celebrity-eclipse",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-edge",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "celebrity-equinox",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-infinity",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-millennium",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     },
     {
@@ -3049,117 +1442,7 @@
     },
     {
       "severity": "warning",
-      "id": "celebrity-silhouette",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-solstice",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-summit",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-xcel",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "crown-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "discovery-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "disney-adventure",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "disney-destiny",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "disney-dream",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "disney-fantasy",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "disney-magic",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "disney-treasure",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "disney-wish",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "disney-wonder",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "emerald-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "enchanted-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "enchantment-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "eurodam",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "explorer-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "freedom-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "grandeur-of-the-seas",
-      "message": "Could not read JPG dimensions: apps/web/public/assets/ships/grandeur-of-the-seas.jpg"
-    },
-    {
-      "severity": "warning",
-      "id": "grandeur-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "harmony-of-the-seas",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     },
     {
@@ -3169,47 +1452,7 @@
     },
     {
       "severity": "warning",
-      "id": "independence-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "island-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "jewel-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "liberty-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "majestic-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "mardi-gras",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "mariner-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "msc-bellissima",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "msc-divina",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     },
     {
@@ -3219,87 +1462,7 @@
     },
     {
       "severity": "warning",
-      "id": "msc-seascape",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "msc-seashore",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "msc-seaside",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "msc-world-america",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "navigator-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "nieuw-amsterdam",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-aqua",
-      "message": "Ship asset is low resolution (640x150): apps/web/public/assets/ships/norwegian-aqua.jpg"
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-aqua",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-bliss",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-breakaway",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-encore",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-escape",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-gem",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-getaway",
-      "message": "Ship asset is low resolution (640x150): apps/web/public/assets/ships/norwegian-getaway.jpg"
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-getaway",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-jade",
-      "message": "Ship asset is low resolution (640x150): apps/web/public/assets/ships/norwegian-jade.jpg"
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-jade",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     },
     {
@@ -3309,72 +1472,7 @@
     },
     {
       "severity": "warning",
-      "id": "norwegian-luna",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-pearl",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-prima",
-      "message": "Ship asset is low resolution (640x150): apps/web/public/assets/ships/norwegian-prima.jpg"
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-prima",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-sky",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-star",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-sun",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-viva",
-      "message": "Ship asset is low resolution (640x150): apps/web/public/assets/ships/norwegian-viva.jpg"
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-viva",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "oasis-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "odyssey-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "ovation-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "pride-of-america",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "quantum-of-the-seas",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     },
     {
@@ -3384,82 +1482,12 @@
     },
     {
       "severity": "warning",
-      "id": "regal-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "rotterdam",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "royal-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "ruby-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "scarlet-lady",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "serenade-of-the-seas",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     },
     {
       "severity": "warning",
-      "id": "sky-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "star-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "star-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "sun-princess",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "symphony-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "vision-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "volendam",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
       "id": "westerdam",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "wonder-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "zaandam",
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     }
   ],
