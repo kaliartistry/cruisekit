@@ -39,6 +39,7 @@
     "data:finalize:reviewed-refresh": "node scripts/finalize-reviewed-data-refresh.mjs",
     "data:audit:links": "node scripts/audit-public-links.mjs",
     "data:audit:images": "node scripts/audit-bundle-images.mjs",
+    "data:audit:ship-assets": "node scripts/audit-ship-assets.mjs",
     "data:freshness": "node scripts/data-freshness-report.mjs",
     "data:review:manual": "node scripts/generate-manual-review-queue.mjs",
     "data:coverage": "node scripts/cruise-line-coverage-report.mjs",

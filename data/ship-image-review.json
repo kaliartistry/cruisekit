@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-03",
+  "notes": [
+    "Ship photos must have a reviewed source before they are treated as verified.",
+    "Move a ship from blocked to verified only after replacing the image and recording sourceUrl, sourceName, reviewedAt, and reviewer."
+  ],
+  "verified": {},
+  "blocked": {
+    "carnival-breeze": {
+      "reason": "Current asset renders as an airplane, not the Carnival Breeze cruise ship.",
+      "detectedAt": "2026-07-03",
+      "evidence": "Confirmed by simulator startup screenshot and direct CDN visual check at https://cruisekit.app/assets/ships/carnival-breeze.jpg.",
+      "requiredAction": "Replace with a verified Carnival Breeze cruise ship image, then move this entry to verified with source metadata."
+    }
+  }
+}
