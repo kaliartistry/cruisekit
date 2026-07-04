@@ -4,23 +4,25 @@ import Footer from "@/components/layout/footer";
 import AppLandingClient from "./app-landing-client";
 
 export const metadata: Metadata = {
-  title: "CruiseKit App — Free Cruise Planner for iPhone and Android",
+  title: "CruiseKit App - MyDay, Spend Tracker, Port Maps",
   description:
-    "Download the free CruiseKit app for iPhone and Android to calculate true cruise costs, plan ship time and port time, use MyDay, and prepare port days. No booking required.",
+    "Download CruiseKit to save your cruise, use MyDay, track spending and drink package value, open itinerary port maps, and invite MyCrew.",
   keywords: [
     "cruise planner app",
-    "cruise cost calculator app",
-    "ship time planner",
-    "port day planner",
+    "cruise spend tracker",
+    "cruise drink package tracker",
+    "MyDay cruise planner",
+    "cruise port map app",
+    "cruise crew invite app",
     "cruise hidden costs",
   ],
   alternates: {
     canonical: "/app",
   },
   openGraph: {
-    title: "CruiseKit App — Free Cruise Planner",
+    title: "CruiseKit App - MyDay, Spend Tracker, Port Maps",
     description:
-      "Know what your cruise really costs and plan ship time, port time, MyDay, and port days before you board.",
+      "Save your cruise, use MyDay, track spend and drink package value, open itinerary port maps, and invite MyCrew.",
     url: "/app",
   },
 };

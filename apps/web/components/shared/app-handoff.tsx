@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { Smartphone, Calendar, DollarSign, Users } from "lucide-react";
+import Image from "next/image";
+import { Smartphone, Calendar, DollarSign, Users, Wine } from "lucide-react";
 import { StoreButtonRow } from "@/components/shared/store-buttons";
 import {
   trackAppHandoffViewed,
@@ -17,22 +18,23 @@ interface AppHandoffProps {
 const HEADLINES: Record<NonNullable<AppHandoffProps["variant"]>, { title: string; body: string }> = {
   "calculator-result": {
     title: "Take this on the ship.",
-    body: "MyDay counts down to your all-aboard, syncs ship time, and keeps your spend against the number you just calculated.",
+    body: "MyDay keeps the cruise day, ports, spend, and crew close after you run the web estimate.",
   },
   "saved-trip": {
     title: "Your cruise, in your pocket.",
-    body: "Download CruiseKit to keep trip planning, MyDay, and spend tracking closer than a browser tab.",
+    body: "Download CruiseKit to keep MyDay, spend tracking, drink package value, and itinerary port maps closer than a browser tab.",
   },
   footer: {
     title: "Your cruise, in your pocket.",
-    body: "CruiseKit is now available for iPhone and Android. Ship-time clocks, port-day planning, and spend tracking are built for cruise Wi-Fi conditions.",
+    body: "CruiseKit is available for iPhone and Android with MyDay, Spend, drink package value, itinerary port maps, and MyCrew invites.",
   },
 };
 
 const FEATURES = [
-  { icon: Calendar, label: "Ship time + schedule" },
-  { icon: DollarSign, label: "Spend tracker" },
-  { icon: Users, label: "MyCrew coordination" },
+  { icon: Calendar, label: "MyDay cruise companion" },
+  { icon: DollarSign, label: "Exact Spend tracker" },
+  { icon: Wine, label: "Drink package value" },
+  { icon: Users, label: "MyCrew invites" },
 ];
 
 /**
@@ -53,11 +55,11 @@ export default function AppHandoff({
 
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy to-[#143057] p-6 sm:p-8 text-white ${className}`}
+      className={`relative overflow-hidden rounded-lg bg-gradient-to-br from-navy to-[#143057] p-6 sm:p-8 text-white ${className}`}
     >
       <div className="relative z-10 grid gap-6 sm:grid-cols-[1.2fr_1fr] sm:items-center">
         <div>
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-teal border border-white/10">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase text-teal border border-white/10">
             <Smartphone className="h-3 w-3" />
             Free on iPhone and Android
           </div>
@@ -87,7 +89,6 @@ export default function AppHandoff({
           />
         </div>
 
-        {/* Phone mock — pure CSS, no asset required */}
         <div className="hidden sm:flex justify-end">
           <PhoneMock />
         </div>
@@ -106,44 +107,15 @@ function sourceSurfaceForVariant(
 
 function PhoneMock() {
   return (
-    <div className="relative h-[280px] w-[150px] rounded-[28px] bg-navy border-[3px] border-white/15 shadow-2xl overflow-hidden">
-      {/* Notch */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-5 w-20 bg-black rounded-b-xl" />
-      {/* Screen content */}
-      <div className="absolute inset-[3px] top-5 rounded-[24px] bg-gradient-to-b from-[#0F2B4E] to-navy p-3 text-left">
-        <div className="text-[8px] font-semibold uppercase tracking-wider text-teal mb-0.5">
-          MyDay
-        </div>
-        <div className="text-[10px] font-bold text-white mb-2">
-          Day 3 of 7
-        </div>
-        <div className="rounded-lg bg-white/10 px-2 py-1.5 mb-1.5">
-          <div className="text-[7px] uppercase tracking-wider text-white/50">
-            Ship time
-          </div>
-          <div className="font-mono text-sm font-bold text-amber-400">
-            2:41 PM
-          </div>
-        </div>
-        <div className="rounded-lg bg-white/10 px-2 py-1.5 mb-1.5">
-          <div className="text-[7px] uppercase tracking-wider text-white/50">
-            Port time
-          </div>
-          <div className="font-mono text-sm font-bold text-teal">
-            1:41 PM
-          </div>
-        </div>
-        <div className="rounded-lg bg-white/10 px-2 py-1.5">
-          <div className="text-[7px] uppercase tracking-wider text-white/50">
-            Spend
-          </div>
-          <div className="text-[10px] font-bold text-white">
-            $412 / $3,000
-          </div>
-          <div className="mt-1 h-1 w-full rounded-full bg-white/15 overflow-hidden">
-            <div className="h-full w-[14%] bg-teal" />
-          </div>
-        </div>
+    <div className="relative h-[280px] w-[150px] overflow-hidden rounded-[28px] border-[3px] border-white/15 bg-navy shadow-2xl">
+      <div className="relative h-full w-full">
+        <Image
+          src="/assets/app-screenshots/myday-home.png"
+          alt="CruiseKit MyDay app screenshot"
+          fill
+          sizes="150px"
+          className="object-cover object-top"
+        />
       </div>
     </div>
   );
