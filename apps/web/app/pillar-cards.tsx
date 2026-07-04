@@ -150,6 +150,22 @@ const HIDDEN_COSTS = [
   },
 ];
 
+function monthIndexFromDateOnly(dateString: string): number {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  return Number.isNaN(date.getTime()) ? 0 : date.getUTCMonth();
+}
+
+function formatDateOnly(dateString: string): string {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return "";
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
 /* ------------------------------------------------------------------ */
 /*  Animation variants                                                 */
 /* ------------------------------------------------------------------ */
@@ -215,7 +231,7 @@ export default function ContentSections() {
               return (
                 <Link
                   key={deal.id}
-                  href={`/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2&fare=${deal.fromPrice}${deal.departureDate ? `&month=${new Date(deal.departureDate).getMonth()}` : ""}`}
+                  href={`/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2&fare=${deal.fromPrice}${deal.departureDate ? `&month=${monthIndexFromDateOnly(deal.departureDate)}` : ""}`}
                   className="group flex-shrink-0 w-[280px] sm:w-[300px] snap-start rounded-xl border border-gray-200 bg-white shadow-[var(--shadow-sm)] transition-all hover:shadow-[var(--shadow-lg)] hover:-translate-y-1 overflow-hidden"
                 >
                   {/* Ship image area */}
@@ -311,7 +327,7 @@ export default function ContentSections() {
                       <div className="flex items-center justify-between mt-2">
                         {deal.departureDate && (
                           <p className="text-xs text-gray-400">
-                            {new Date(deal.departureDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                            {formatDateOnly(deal.departureDate)}
                           </p>
                         )}
                         <span className="flex items-center gap-1 text-xs font-semibold text-teal group-hover:text-teal-dark transition-colors ml-auto">
