@@ -1,6 +1,6 @@
 # Norwegian Staging Import Report
 
-Generated: 2026-05-16T20:06:34.115Z
+Generated: 2026-07-01T23:20:36.930Z
 
 Mode: staging-only
 
@@ -9,29 +9,22 @@ Mode: staging-only
 | Metric | Count |
 | --- | ---: |
 | Search pages | 1 |
-| Source itineraries sampled | 30 |
-| Staged sailings | 148 |
+| Source itineraries sampled | 40 |
+| Staged sailings | 40 |
 | Schema errors | 0 |
 
 ## Price Observation
 
 | Metric | Value |
 | --- | ---: |
-| Min observed starting price | 439 |
-| Max observed starting price | 2499 |
+| Min observed starting price | 1620 |
+| Max observed starting price | 4489 |
 
 ## By Ship
 
-- Norwegian Aqua: 32
-- Norwegian Bliss: 4
-- Norwegian Epic: 18
-- Norwegian Escape: 26
-- Norwegian Getaway: 19
-- Norwegian Joy: 1
-- Norwegian Luna: 18
-- Norwegian Pearl: 6
-- Norwegian Prima: 16
-- Norwegian Viva: 8
+- Norwegian Jade: 38
+- Norwegian Sky: 1
+- Norwegian Spirit: 1
 
 ## Promotion Rules
 

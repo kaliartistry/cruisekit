@@ -95,6 +95,33 @@ export const PORT_IMAGES: Record<string, string> = {
   "crete": "/assets/ports/chania-souda.jpg",
   "le havre": "/assets/ports/le-havre.jpg",
   "hamburg": "/assets/ports/hamburg.jpg",
+  "copenhagen": "/assets/ports/copenhagen.jpg",
+  "stockholm": "/assets/ports/stockholm.jpg",
+  "lisbon": "/assets/ports/lisbon.jpg",
+  "tenerife": "/assets/ports/tenerife.jpg",
+  "funchal": "/assets/ports/funchal.jpg",
+
+  // Asia
+  "asia": "/assets/ports/shanghai.jpg",
+  "shanghai": "/assets/ports/shanghai.jpg",
+  "busan": "/assets/ports/busan.jpg",
+  "jeju": "/assets/ports/jeju.jpg",
+  "tokyo": "/assets/ports/shanghai.jpg",
+  "yokohama": "/assets/ports/shanghai.jpg",
+
+  // Panama Canal / South America
+  "panama canal": "/assets/ports/cartagena.jpg",
+  "cartagena": "/assets/ports/cartagena.jpg",
+  "south america": "/assets/ports/cartagena.jpg",
+  "buenos aires": "/assets/ports/cartagena.jpg",
+  "brazil": "/assets/ports/cartagena.jpg",
+  "uruguay": "/assets/ports/cartagena.jpg",
+
+  // Australia / New Zealand / South Pacific
+  "australia": "/assets/ports/sydney.jpg",
+  "new zealand": "/assets/ports/auckland.jpg",
+  "auckland": "/assets/ports/auckland.jpg",
+  "sydney": "/assets/ports/sydney.jpg",
 
   // Region fallbacks
   "western caribbean": "/assets/ports/cozumel.jpg",
@@ -106,6 +133,8 @@ export const PORT_IMAGES: Record<string, string> = {
   "europe": "/assets/ports/barcelona.jpg",
   "mexico": "/assets/ports/cozumel.jpg",
   "hawaii": "/assets/ports/miami.jpg",
+  "canada new england": "/assets/ports/halifax.jpg",
+  "canada & new england": "/assets/ports/halifax.jpg",
 };
 
 export const DEFAULT_CRUISE_IMAGE = "/assets/ports/nassau.jpg";

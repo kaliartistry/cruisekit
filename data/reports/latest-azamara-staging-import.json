@@ -1,33 +1,22 @@
 {
-  "generatedAt": "2026-05-19T12:37:06.689Z",
+  "generatedAt": "2026-07-01T23:21:16.189Z",
   "provider": "azamara",
-  "runId": "2026-05-19T12-37-06-689Z",
+  "runId": "2026-07-01T23-21-16-189Z",
   "mode": "staging-only",
-  "sourceUrl": "https://www.azamara.com/cruises?destinations=CARIBBEAN,ALASKA",
+  "sourceUrl": "https://www.azamara.com/cruises?destinations=ASIA",
   "enrichDetails": true,
   "staging": {
-    "sailings": 45,
+    "sailings": 0,
     "deals": 0,
     "schemaErrors": 0,
-    "byRegion": {
-      "alaska": 24,
-      "other": 4,
-      "caribbean": 17
-    },
-    "byShip": {
-      "Azamara Pursuit": 25,
-      "Azamara Journey": 17,
-      "Azamara Quest": 3
-    },
-    "priceRange": {
-      "min": 1039,
-      "max": 14419
-    }
+    "byRegion": {},
+    "byShip": {},
+    "priceRange": null
   },
   "schemaErrors": [],
   "paths": {
-    "raw": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/raw/azamara/2026-05-19T12-37-06-689Z",
-    "staging": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/staging/azamara/2026-05-19T12-37-06-689Z",
-    "report": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/reports/azamara"
+    "raw": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/raw/azamara/2026-07-01T23-21-16-189Z",
+    "staging": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/staging/azamara/2026-07-01T23-21-16-189Z",
+    "report": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/reports/azamara"
   }
 }

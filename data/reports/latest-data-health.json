@@ -1,35 +1,65 @@
 {
-  "generatedAt": "2026-06-09T14:12:18.899Z",
-  "manifestGeneratedAt": "2026-06-09T14:12:18.847Z",
+  "generatedAt": "2026-07-01T23:27:57.591Z",
+  "manifestGeneratedAt": "2026-07-01T23:27:57.523Z",
   "counts": {
-    "seedSailings": 159,
-    "publicSailings": 143,
+    "seedSailings": 433,
+    "publicSailings": 388,
     "seedDeals": 0,
     "publicDeals": 0,
-    "mobileSailings": 143,
-    "mobileDeals": 143,
-    "filteredExpiredSeedSailings": 1
+    "mobileSailings": 388,
+    "mobileDeals": 388,
+    "filteredExpiredSeedSailings": 7
   },
   "byCruiseLine": {
     "azamara": 8,
-    "carnival": 73,
-    "holland-america": 8,
-    "norwegian": 50,
+    "carnival": 120,
+    "holland-america": 28,
+    "norwegian": 225,
     "royal-caribbean": 4,
-    "virgin-voyages": 16
+    "virgin-voyages": 48
   },
   "byConfidence": {
-    "internal_do_not_publish": 15,
-    "itinerary_verified_price_check_required": 144
+    "internal_do_not_publish": 38,
+    "itinerary_verified_price_check_required": 395
   },
-  "currentDate": "2026-06-09",
+  "currentDate": "2026-07-01",
   "blockers": [],
   "warnings": [],
   "info": [
     {
       "severity": "info",
+      "id": "holland-america-westerdam-20260621-7-day-glacier-discovery-northbound",
+      "message": "Expired seed sailing filtered from public bundles for 2026-07-01."
+    },
+    {
+      "severity": "info",
+      "id": "holland-america-oosterdam-20260628-7-day-mediterranean-greece-to-turkey",
+      "message": "Expired seed sailing filtered from public bundles for 2026-07-01."
+    },
+    {
+      "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
-      "message": "Expired seed sailing filtered from public bundles for 2026-06-09."
+      "message": "Expired seed sailing filtered from public bundles for 2026-07-01."
+    },
+    {
+      "severity": "info",
+      "id": "virgin-voyages-resilient-lady-20260613-5ngcb",
+      "message": "Expired seed sailing filtered from public bundles for 2026-07-01."
+    },
+    {
+      "severity": "info",
+      "id": "virgin-voyages-resilient-lady-20260618-4nkw",
+      "message": "Expired seed sailing filtered from public bundles for 2026-07-01."
+    },
+    {
+      "severity": "info",
+      "id": "virgin-voyages-valiant-lady-20260621-7nbb3",
+      "message": "Expired seed sailing filtered from public bundles for 2026-07-01."
+    },
+    {
+      "severity": "info",
+      "id": "virgin-voyages-resilient-lady-20260622-5ncm",
+      "message": "Expired seed sailing filtered from public bundles for 2026-07-01."
     }
   ]
 }

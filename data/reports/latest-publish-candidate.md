@@ -1,6 +1,6 @@
 # CruiseKit Publish Candidate
 
-Generated: 2026-06-08T14:50:17.494Z
+Generated: 2026-07-01T23:27:58.294Z
 
 Status: READY FOR MANUAL REVIEW
 
@@ -10,12 +10,13 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 
 | Metric | Value |
 | --- | ---: |
-| Public sailings | 144 |
-| Mobile sailings | 144 |
-| Mobile deals | 144 |
+| Public sailings | 388 |
+| Mobile sailings | 388 |
+| Mobile deals | 388 |
 | Blockers | 0 |
 | Warnings | 0 |
 | Public bundles prepared | yes |
+| Count source | apps/web/public/data/bundles/manifest.json |
 
 ## Steps
 
@@ -23,6 +24,7 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 | --- | --- | ---: |
 | build data bundles | ok | 0 |
 | data health | ok | 0 |
+| data freshness | ok | 0 |
 | link audit | ok | 0 |
 | image audit | ok | 0 |
 | prepare public data bundles | ok | 0 |
@@ -30,6 +32,11 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 ## Findings
 
 ### Data health
+
+- blocker: none
+- warning: none
+
+### Data freshness
 
 - blocker: none
 - warning: none
@@ -46,24 +53,32 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 
 ## Pending Git Changes
 
-- ` M apps/web/public/data/bundles/canonical/sailings.json`
-- ` M apps/web/public/data/bundles/manifest.json`
-- ` M apps/web/public/data/bundles/mobile/deals.json`
-- ` M apps/web/public/data/bundles/mobile/sailings.json`
-- ` M data/bundles/canonical/sailings.json`
-- ` M data/bundles/manifest.json`
-- ` M data/bundles/mobile/deals.json`
-- ` M data/bundles/mobile/sailings.json`
-- ` M data/reports/latest-daily-automation.json`
-- ` M data/reports/latest-daily-automation.md`
+- ` M data/reports/latest-azamara-staging-review.json`
+- ` M data/reports/latest-azamara-staging-review.md`
+- ` M data/reports/latest-data-freshness.json`
+- ` M data/reports/latest-data-freshness.md`
 - ` M data/reports/latest-data-health.json`
 - ` M data/reports/latest-data-health.md`
+- ` M data/reports/latest-holland-america-staging-import.json`
+- ` M data/reports/latest-holland-america-staging-import.md`
+- ` M data/reports/latest-holland-america-staging-review.json`
+- ` M data/reports/latest-holland-america-staging-review.md`
 - ` M data/reports/latest-image-audit.json`
 - ` M data/reports/latest-image-audit.md`
 - ` M data/reports/latest-link-audit.json`
 - ` M data/reports/latest-link-audit.md`
-- ` M data/reports/latest-manual-review-queue.json`
-- ` M data/reports/latest-manual-review-queue.md`
+- ` M data/reports/latest-msc-staging-import.json`
+- ` M data/reports/latest-msc-staging-import.md`
+- ` M data/reports/latest-norwegian-promotion.json`
+- ` M data/reports/latest-norwegian-promotion.md`
+- ` M data/reports/latest-norwegian-staging-import.json`
+- ` M data/reports/latest-norwegian-staging-import.md`
+- ` M data/reports/latest-norwegian-staging-review.json`
+- ` M data/reports/latest-norwegian-staging-review.md`
+- ` M data/reports/latest-princess-staging-import.json`
+- ` M data/reports/latest-princess-staging-import.md`
+- ` M data/reports/latest-princess-staging-review.json`
+- ` M data/reports/latest-princess-staging-review.md`
 - ` M data/reports/latest-publish-candidate.json`
 - ` M data/reports/latest-publish-candidate.md`
 - ` M data/seed/sailings.json`

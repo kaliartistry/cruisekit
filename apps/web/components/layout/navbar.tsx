@@ -12,6 +12,8 @@ import {
   Map,
   Navigation,
   BookOpen,
+  Calculator,
+  ChevronDown,
   Heart,
   LogOut,
   ArrowRight,
@@ -37,13 +39,31 @@ const NAV_LINKS = [
   { label: "Guides", href: "/guides", icon: BookOpen },
 ] as const;
 
+const CALCULATOR_LINKS = [
+  {
+    label: "Total Cruise Cost Calculator",
+    shortLabel: "Total Cruise Cost",
+    href: "/calculator",
+    description: "Estimate fare, fees, gratuities, drinks, WiFi, and port spending.",
+  },
+  {
+    label: "Drink Package Calculator",
+    shortLabel: "Drink Package",
+    href: "/cruise-drink-package-calculator",
+    description: "Compare drink packages, bundled fares, service charges, and Bar Tab credit.",
+  },
+] as const;
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileCalculatorsOpen, setMobileCalculatorsOpen] = useState(false);
+  const [calculatorsOpen, setCalculatorsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
   const { user, loading: authLoading, signOut } = useAuth();
   const userMenuRef = useRef<HTMLDivElement>(null);
+  const calculatorsMenuRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,13 +77,16 @@ export default function Navbar() {
   // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) setMobileOpen(false);
+      if (window.innerWidth >= 1024) {
+        setMobileOpen(false);
+        setMobileCalculatorsOpen(false);
+      }
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Close user menu on outside click
+  // Close floating menus on outside click
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
@@ -72,9 +95,27 @@ export default function Navbar() {
       ) {
         setUserMenuOpen(false);
       }
+
+      if (
+        calculatorsMenuRef.current &&
+        !calculatorsMenuRef.current.contains(e.target as Node)
+      ) {
+        setCalculatorsOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setCalculatorsOpen(false);
+        setUserMenuOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   const userInitial = user?.displayName
@@ -136,7 +177,83 @@ export default function Navbar() {
 
         {/* Desktop nav links */}
         <ul className="hidden lg:flex items-center gap-1">
-          {NAV_LINKS.map((link) => {
+          {NAV_LINKS.slice(0, 1).map((link) => {
+            const Icon = link.icon;
+            return (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={cn(
+                    "flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium",
+                    "text-gray-600 transition-colors",
+                    "hover:text-navy hover:bg-gray-50"
+                  )}
+                >
+                  <Icon className="h-4 w-4" />
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
+
+          <li className="relative" ref={calculatorsMenuRef}>
+            <button
+              type="button"
+              onClick={() => setCalculatorsOpen((prev) => !prev)}
+              aria-expanded={calculatorsOpen}
+              aria-haspopup="menu"
+              aria-controls="desktop-calculators-menu"
+              className={cn(
+                "flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium",
+                "text-gray-600 transition-colors",
+                "hover:bg-gray-50 hover:text-navy",
+                "focus:outline-none focus:ring-2 focus:ring-teal/40"
+              )}
+            >
+              <Calculator className="h-4 w-4" />
+              Calculators
+              <ChevronDown
+                className={cn(
+                  "h-3.5 w-3.5 transition-transform",
+                  calculatorsOpen && "rotate-180"
+                )}
+                strokeWidth={2.4}
+              />
+            </button>
+
+            <AnimatePresence>
+              {calculatorsOpen && (
+                <motion.div
+                  id="desktop-calculators-menu"
+                  role="menu"
+                  initial={{ opacity: 0, y: -4, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -4, scale: 0.98 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute left-0 top-full mt-2 w-80 rounded-xl border border-gray-200 bg-white p-2 shadow-lg"
+                >
+                  {CALCULATOR_LINKS.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      role="menuitem"
+                      onClick={() => setCalculatorsOpen(false)}
+                      className="block rounded-lg px-3 py-3 transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none"
+                    >
+                      <span className="block text-sm font-bold text-navy">
+                        {link.label}
+                      </span>
+                      <span className="mt-1 block text-xs leading-5 text-gray-500">
+                        {link.description}
+                      </span>
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </li>
+
+          {NAV_LINKS.slice(1).map((link) => {
             const Icon = link.icon;
             return (
               <li key={link.href}>
@@ -324,7 +441,88 @@ export default function Navbar() {
               )}
 
               <ul className="flex flex-col gap-1">
-                {NAV_LINKS.map((link) => {
+                {NAV_LINKS.slice(0, 1).map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={cn(
+                          "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
+                          "text-gray-600 transition-colors",
+                          "hover:text-navy hover:bg-gray-50",
+                          "active:bg-gray-100"
+                        )}
+                      >
+                        <Icon className="h-4 w-4" />
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
+
+                <li>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setMobileCalculatorsOpen((prev) => !prev)
+                    }
+                    aria-expanded={mobileCalculatorsOpen}
+                    aria-controls="mobile-calculators-menu"
+                    className={cn(
+                      "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
+                      "text-gray-600 transition-colors",
+                      "hover:text-navy hover:bg-gray-50",
+                      "active:bg-gray-100"
+                    )}
+                  >
+                    <Calculator className="h-4 w-4" />
+                    <span className="flex-1 text-left">Calculators</span>
+                    <ChevronDown
+                      className={cn(
+                        "h-4 w-4 transition-transform",
+                        mobileCalculatorsOpen && "rotate-180"
+                      )}
+                      strokeWidth={2.4}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {mobileCalculatorsOpen && (
+                      <motion.div
+                        id="mobile-calculators-menu"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                        className="overflow-hidden pl-7"
+                      >
+                        <div className="mt-1 grid gap-1 border-l border-gray-200 pl-3">
+                          {CALCULATOR_LINKS.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              onClick={() => {
+                                setMobileOpen(false);
+                                setMobileCalculatorsOpen(false);
+                              }}
+                              className="rounded-lg px-3 py-2 text-left transition-colors hover:bg-gray-50"
+                            >
+                              <span className="block text-sm font-bold text-navy">
+                                {link.shortLabel}
+                              </span>
+                              <span className="mt-0.5 block text-xs leading-5 text-gray-500">
+                                {link.description}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </li>
+
+                {NAV_LINKS.slice(1).map((link) => {
                   const Icon = link.icon;
                   return (
                     <li key={link.href}>
@@ -420,7 +618,7 @@ export default function Navbar() {
                       onClick={() => setMobileOpen(false)}
                       className="flex w-full items-center justify-center rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-teal hover:text-teal"
                     >
-                      Use web calculator
+                      Use cost calculator
                     </Link>
                   </div>
                 ) : (

@@ -1,6 +1,6 @@
 # Carnival Staging Import Report
 
-Generated: 2026-05-16T20:06:34.062Z
+Generated: 2026-07-01T22:32:22.485Z
 
 Mode: staging-only
 
@@ -8,39 +8,22 @@ Mode: staging-only
 
 | Metric | Count |
 | --- | ---: |
-| Raw pages | 3 |
-| Staged sailings | 1134 |
+| Raw pages | 1 |
+| Staged sailings | 39 |
 | Schema errors | 0 |
 
 ## Price Observation
 
 | Metric | Value |
 | --- | ---: |
-| Min observed starting price | 259 |
-| Max observed starting price | 1429 |
+| Min observed starting price | 746 |
+| Max observed starting price | 1506 |
 
 ## By Ship
 
-- Carnival Breeze: 104
-- Carnival Celebration: 88
-- Carnival Dream: 95
-- Carnival Festivale: 23
-- Carnival Firenze: 14
-- Carnival Freedom: 20
-- Carnival Horizon: 112
-- Carnival Jubilee: 50
-- Carnival Legend: 10
-- Carnival Liberty: 61
-- Carnival Magic: 94
-- Carnival Miracle: 14
-- Carnival Paradise: 122
-- Carnival Spirit: 9
-- Carnival Sunrise: 8
-- Carnival Sunshine: 28
-- Carnival Valor: 78
-- Carnival Venezia: 64
-- Carnival Vista: 92
-- Mardi Gras: 48
+- Carnival Legend: 7
+- Carnival Miracle: 17
+- Carnival Sunshine: 15
 
 ## Promotion Rules
 

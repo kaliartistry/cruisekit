@@ -133,6 +133,11 @@ const textImageRules = [
   [/st\.?\s*kitts|saint kitts/i, ["st-kitts"]],
   [/bermuda/i, ["bermuda"]],
   [/barcelona|mediterranean/i, ["barcelona"]],
+  [/asia|japan|tokyo|yokohama|shanghai|busan|jeju/i, ["shanghai", "busan", "jeju"]],
+  [/panama canal|cartagena/i, ["cartagena"]],
+  [/south america|buenos aires|brazil|uruguay|argentina/i, ["cartagena"]],
+  [/canada|new england|halifax/i, ["halifax"]],
+  [/australia|new zealand|sydney|auckland/i, ["sydney", "auckland"]],
   [/sicily|messina/i, ["sicily-messina"]],
   [
     /juneau|alaska/i,
@@ -180,6 +185,7 @@ async function main() {
 
   const blockers = [];
   const warnings = [];
+  const info = [];
   const usage = {};
   const all = [
     ...canonicalDeals.map((deal) => ({ bundle: "canonical", deal })),
@@ -227,8 +233,8 @@ async function main() {
     const expectedSlugs = expectedImageSlugsFor(deal);
     if (expectedSlugs.size > 0 && !expectedSlugs.has(imageSlug)) {
       add(
-        warnings,
-        "warning",
+        info,
+        "info",
         id,
         `Image ${imageSlug} does not match expected destination image(s): ${[...expectedSlugs].sort().join(", ")}`,
       );
@@ -247,6 +253,7 @@ async function main() {
     ),
     blockers,
     warnings,
+    info,
   };
 
   const markdown = `# CruiseKit Bundle Image Audit
@@ -267,6 +274,9 @@ ${markdownList(blockers)}
 ## Warnings
 
 ${markdownList(warnings)}
+## Info
+
+${markdownList(info)}
 
 ## Top Image Usage
 
@@ -282,7 +292,7 @@ ${Object.entries(report.imageUsage)
     writeFile(resolve(reportDir, "latest-image-audit.md"), markdown),
   ]);
 
-  console.log(`Image audit: ${blockers.length} blocker(s), ${warnings.length} warning(s).`);
+  console.log(`Image audit: ${blockers.length} blocker(s), ${warnings.length} warning(s), ${info.length} info.`);
   console.log("Report written to data/reports/latest-image-audit.md");
   if (blockers.length > 0) process.exit(1);
 }

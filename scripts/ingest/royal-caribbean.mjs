@@ -85,6 +85,12 @@ function slugify(value) {
 
 function normalizeRegion(value) {
   const region = String(value ?? "").toLowerCase();
+  if (region.includes("antarctica")) return "antarctica";
+  if (region.includes("south america") || region.includes("buenos aires") || region.includes("brazil") || region.includes("uruguay")) return "south-america";
+  if (region.includes("panama")) return "panama-canal";
+  if (region.includes("canada") && region.includes("england")) return "canada-new-england";
+  if (region.includes("australia") || region.includes("new zealand")) return "australia-new-zealand";
+  if (region.includes("asia") || region.includes("japan")) return "asia";
   if (region.includes("bahamas")) return "bahamas";
   if (region.includes("carib")) return "caribbean";
   if (region.includes("mexico")) return "mexico";

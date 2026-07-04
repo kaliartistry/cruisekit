@@ -1,0 +1,171 @@
+{
+  "generatedAt": "2026-07-01T14:33:16.820Z",
+  "mode": "weekly-ingest-and-review-report-only",
+  "providers": [
+    "azamara",
+    "carnival",
+    "holland-america",
+    "msc",
+    "norwegian",
+    "princess",
+    "royal-caribbean",
+    "viking",
+    "virgin-voyages"
+  ],
+  "reviews": [
+    "azamara",
+    "carnival",
+    "holland-america",
+    "norwegian",
+    "princess",
+    "virgin-voyages"
+  ],
+  "ok": true,
+  "failedProviders": [],
+  "failedReviews": [],
+  "results": [
+    {
+      "provider": "azamara",
+      "startedAt": "2026-07-01T14:29:51.666Z",
+      "finishedAt": "2026-07-01T14:30:52.653Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:azamara /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/azamara.mjs\n\nAzamara staging import: 0 sailing(s), 0 schema error(s).\nReport written to data/reports/latest-azamara-staging-import.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "carnival",
+      "startedAt": "2026-07-01T14:30:52.653Z",
+      "finishedAt": "2026-07-01T14:30:56.385Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:carnival /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/carnival.mjs\n\nCarnival staging import: 1075 sailing(s), 0 schema error(s).\nRaw snapshots: data/ingest/raw/carnival/2026-07-01T14-30-52-857Z\nStaging: data/ingest/staging/carnival/2026-07-01T14-30-52-857Z\nReport written to data/reports/latest-carnival-staging-import.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "holland-america",
+      "startedAt": "2026-07-01T14:30:56.385Z",
+      "finishedAt": "2026-07-01T14:31:30.476Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:holland-america /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/holland-america.mjs\n\nHolland America staging import: 22 sailing(s), 0 schema error(s).\nReport written to data/reports/latest-holland-america-staging-import.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "msc",
+      "startedAt": "2026-07-01T14:31:30.476Z",
+      "finishedAt": "2026-07-01T14:31:54.354Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:msc /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/msc.mjs\n\nMSC staging import: 40 sailing(s), 0 schema error(s).\nReport written to data/reports/latest-msc-staging-import.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "norwegian",
+      "startedAt": "2026-07-01T14:31:54.354Z",
+      "finishedAt": "2026-07-01T14:32:31.421Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:norwegian /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/norwegian.mjs\n\nNorwegian staging import: 149 sailing(s), 0 schema error(s).\nReport written to data/reports/latest-norwegian-staging-import.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "princess",
+      "startedAt": "2026-07-01T14:32:31.421Z",
+      "finishedAt": "2026-07-01T14:32:31.791Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:princess /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/princess.mjs\n\nPrincess staging import: 1990 sailing(s), 0 schema error(s).\nReport written to data/reports/latest-princess-staging-import.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "royal-caribbean",
+      "startedAt": "2026-07-01T14:32:31.791Z",
+      "finishedAt": "2026-07-01T14:33:00.741Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:royal-caribbean /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/royal-caribbean.mjs\n\nRoyal Caribbean staging import: 0 sailing(s), 0 schema error(s), 1 blocker(s).\nReport written to data/reports/latest-royal-caribbean-staging-import.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "viking",
+      "startedAt": "2026-07-01T14:33:00.741Z",
+      "finishedAt": "2026-07-01T14:33:11.746Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:viking /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/viking.mjs\n\nViking candidate import: 30 itinerary candidate(s).\nReport written to data/reports/latest-viking-staging-import.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "virgin-voyages",
+      "startedAt": "2026-07-01T14:33:11.747Z",
+      "finishedAt": "2026-07-01T14:33:15.569Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:ingest:virgin-voyages /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/ingest/virgin-voyages.mjs\n\nVirgin Voyages staging import: 39 sailing(s), 0 schema error(s).\nReport written to data/reports/latest-virgin-voyages-staging-import.md\n",
+      "stderrTail": ""
+    }
+  ],
+  "reviewResults": [
+    {
+      "provider": "azamara",
+      "command": "data:review:azamara",
+      "startedAt": "2026-07-01T14:33:15.569Z",
+      "finishedAt": "2026-07-01T14:33:15.765Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:review:azamara /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/review-official-source-staging.mjs --provider azamara\n\nAzamara staging review: 0 new candidate(s), 0 recommended.\nReport written to data/reports/latest-azamara-staging-review.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "carnival",
+      "command": "data:review:carnival",
+      "startedAt": "2026-07-01T14:33:15.765Z",
+      "finishedAt": "2026-07-01T14:33:15.989Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:review:carnival /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/review-carnival-staging.mjs\n\nCarnival staging review: 1005 new candidate(s), 70 exact match(es), 3 price change(s).\nReport written to data/reports/latest-carnival-staging-review.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "holland-america",
+      "command": "data:review:holland-america",
+      "startedAt": "2026-07-01T14:33:15.989Z",
+      "finishedAt": "2026-07-01T14:33:16.195Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:review:holland-america /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/review-official-source-staging.mjs --provider holland-america\n\nHolland America staging review: 22 new candidate(s), 20 recommended.\nReport written to data/reports/latest-holland-america-staging-review.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "norwegian",
+      "command": "data:review:norwegian",
+      "startedAt": "2026-07-01T14:33:16.195Z",
+      "finishedAt": "2026-07-01T14:33:16.402Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:review:norwegian /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/review-norwegian-staging.mjs\n\nNorwegian staging review: 107 new candidate(s), 42 exact match(es), 9 price change(s).\nReport written to data/reports/latest-norwegian-staging-review.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "princess",
+      "command": "data:review:princess",
+      "startedAt": "2026-07-01T14:33:16.402Z",
+      "finishedAt": "2026-07-01T14:33:16.613Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:review:princess /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/review-princess-staging.mjs\n\nPrincess staging review: 1990 new candidate(s), 0 exact match(es), 1990 price check(s).\nReport written to data/reports/latest-princess-staging-review.md\n",
+      "stderrTail": ""
+    },
+    {
+      "provider": "virgin-voyages",
+      "command": "data:review:virgin-voyages",
+      "startedAt": "2026-07-01T14:33:16.613Z",
+      "finishedAt": "2026-07-01T14:33:16.820Z",
+      "exitCode": 0,
+      "ok": true,
+      "stdoutTail": "functions                                |  WARN  Unsupported engine: wanted: {\"node\":\"22\"} (current: {\"node\":\"v25.9.0\",\"pnpm\":\"10.33.0\"})\n\n> cruisekit@ data:review:virgin-voyages /Users/kaliartistry-mac/CruiseKit-weekly-data-freshness\n> node scripts/review-virgin-voyages-staging.mjs\n\nVirgin Voyages staging review: 36 new candidate(s), 3 exact match(es).\nReport written to data/reports/latest-virgin-voyages-staging-review.md\n",
+      "stderrTail": ""
+    }
+  ]
+}

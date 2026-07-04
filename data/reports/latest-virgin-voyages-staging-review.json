@@ -1,369 +1,1101 @@
 {
-  "generatedAt": "2026-05-16T20:06:37.349Z",
+  "generatedAt": "2026-07-01T22:31:42.751Z",
   "provider": "virgin-voyages",
-  "sourceRunId": "2026-05-16T20-06-34-289Z",
+  "sourceRunId": "2026-07-01T22-31-35-142Z",
   "mode": "review-only",
   "matchKey": "cruiseLine + normalized shipName + departureDate",
   "thresholds": {
-    "maxRecommendations": 24
+    "maxRecommendations": 120
   },
   "counts": {
-    "seedVirgin": 10,
-    "stagedVirgin": 39,
-    "exactMatches": 10,
-    "newCandidates": 29,
-    "recommendedNew": 24
+    "seedVirgin": 40,
+    "stagedVirgin": 97,
+    "exactMatches": 28,
+    "newCandidates": 69,
+    "recommendedNew": 69
   },
   "recommendedNew": [
     {
-      "id": "virgin-voyages-resilient-lady-20260622-5ncm",
+      "id": "virgin-voyages-valiant-lady-20280113-4nkwn",
+      "shipName": "Valiant Lady",
+      "sailingName": "Bahamas & Bimini Beach Club",
+      "departureDate": "2028-01-13",
+      "returnDate": "2028-01-17",
+      "nights": 4,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Nassau, Bahamas",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 952,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKWN&priceType=perCabin&voyageId=VL2801134NKWN",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20261105-4nkwn",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Bahamas & Bimini Beach Club",
+      "departureDate": "2026-11-05",
+      "returnDate": "2026-11-09",
+      "nights": 4,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Nassau, Bahamas",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1192,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW4&priceType=perCabin&voyageId=SC2611054NKW4",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20261109-5ngcb",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Grand Cayman & Bimini Beach Club",
+      "departureDate": "2026-11-09",
+      "returnDate": "2026-11-14",
+      "nights": 5,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "George Town, Grand Cayman",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1290,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=SC2611095NGCB",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20261031-5nczh2",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Mexico & Bimini Beach Club Halloween",
+      "departureDate": "2026-10-31",
+      "returnDate": "2026-11-05",
+      "nights": 5,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Cozumel, Mexico",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1390,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZH2&priceType=perCabin&voyageId=SC2610315NCZH2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20261116-6nrm4",
       "shipName": "Resilient Lady",
       "sailingName": "Mexico & Bimini Beach Club",
-      "departureDate": "2026-06-22",
-      "returnDate": "2026-06-27",
-      "nights": 5,
+      "departureDate": "2026-11-16",
+      "returnDate": "2026-11-22",
+      "nights": 6,
       "departurePort": "Miami, Florida",
       "destinationRegion": "bahamas",
       "itineraryPorts": [
         "Miami, Florida",
         "Costa Maya, Mexico",
+        "Cozumel, Mexico",
         "The Beach Club at Bimini, Bahamas",
         "Miami, Florida"
       ],
-      "startingPrice": 2190,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCM&priceType=perCabin&voyageId=RS2606225NCM",
+      "startingPrice": 1428,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NRM4&priceType=perCabin&voyageId=RS2611166NRM4",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-resilient-lady-20260706-5npp",
+      "id": "virgin-voyages-scarlet-lady-20261226-4nkwn",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Bahamas & Bimini Beach Club",
+      "departureDate": "2026-12-26",
+      "returnDate": "2026-12-30",
+      "nights": 4,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Nassau, Bahamas",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1432,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW4&priceType=perCabin&voyageId=SC2612264NKW4",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20260813-4nkw",
       "shipName": "Resilient Lady",
-      "sailingName": "Dominican Republic & Bimini Beach Club",
-      "departureDate": "2026-07-06",
-      "returnDate": "2026-07-11",
+      "sailingName": "Key West & Bimini Beach Club",
+      "departureDate": "2026-08-13",
+      "returnDate": "2026-08-17",
+      "nights": 4,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Key West, Florida",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1512,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2608134NKW",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20270307-6nbog",
+      "shipName": "Resilient Lady",
+      "sailingName": "Western Caribbean & Bimini Beach Club",
+      "departureDate": "2027-03-07",
+      "returnDate": "2027-03-13",
+      "nights": 6,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "The Beach Club at Bimini, Bahamas",
+        "Ocho Rios, Jamaica",
+        "George Town, Grand Cayman",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1548,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NBOG&priceType=perCabin&voyageId=RS2703076NBOG",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20271030-5nczh2",
+      "shipName": "Valiant Lady",
+      "sailingName": "Mexico & Bimini Beach Club Halloween",
+      "departureDate": "2027-10-30",
+      "returnDate": "2027-11-04",
       "nights": 5,
       "departurePort": "Miami, Florida",
       "destinationRegion": "bahamas",
       "itineraryPorts": [
         "Miami, Florida",
-        "Puerto Plata, Dominican Republic",
+        "Cozumel, Mexico",
         "The Beach Club at Bimini, Bahamas",
         "Miami, Florida"
       ],
-      "startingPrice": 2390,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=RS2607065NPP",
+      "startingPrice": 1590,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZH&priceType=perCabin&voyageId=VL2710305NCZH",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-valiant-lady-20260621-7nbb3",
-      "shipName": "Valiant Lady",
-      "sailingName": "French Riviera, Italy & Ibiza Overnight",
-      "departureDate": "2026-06-21",
-      "returnDate": "2026-06-28",
-      "nights": 7,
-      "departurePort": "Barcelona",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Barcelona",
-        "Rome (Civitavecchia), Italy",
-        "Tuscany/Cinque Terre (La Spezia), Italy",
-        "Cannes, France",
-        "Ibiza, Spain",
-        "Barcelona"
-      ],
-      "startingPrice": 2366,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NBB3&priceType=perCabin&voyageId=VL2606217NBB3",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-valiant-lady-20260704-7nbcf",
-      "shipName": "Valiant Lady",
-      "sailingName": "French Riviera, Italy & Ibiza Overnight",
-      "departureDate": "2026-07-04",
-      "returnDate": "2026-07-11",
-      "nights": 7,
-      "departurePort": "Barcelona",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Barcelona",
-        "Rome (Civitavecchia), Italy",
-        "Florence/Pisa (Livorno), Italy",
-        "Cannes, France",
-        "Ibiza, Spain",
-        "Barcelona"
-      ],
-      "startingPrice": 2366,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NBCF&priceType=perCabin&voyageId=VL2607047NBCF",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-valiant-lady-20260719-7nbta",
-      "shipName": "Valiant Lady",
-      "sailingName": "French Riviera, Italy & Ibiza Overnight",
-      "departureDate": "2026-07-19",
-      "returnDate": "2026-07-26",
-      "nights": 7,
-      "departurePort": "Barcelona",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Barcelona",
-        "Provence (Toulon), France",
-        "Florence/Pisa (Livorno), Italy",
-        "Ajaccio, Corsica, France",
-        "Ibiza, Spain",
-        "Barcelona"
-      ],
-      "startingPrice": 2366,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NBTA&priceType=perCabin&voyageId=VL2607197NBTA",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-resilient-lady-20260525-5npp",
-      "shipName": "Resilient Lady",
-      "sailingName": "Dominican Republic & Bimini Beach Club",
-      "departureDate": "2026-05-25",
-      "returnDate": "2026-05-30",
+      "id": "virgin-voyages-scarlet-lady-20261221-5nch",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Mexico & Bimini Beach Club Holiday",
+      "departureDate": "2026-12-21",
+      "returnDate": "2026-12-26",
       "nights": 5,
       "departurePort": "Miami, Florida",
       "destinationRegion": "bahamas",
       "itineraryPorts": [
         "Miami, Florida",
+        "Cozumel, Mexico",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1590,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCH&priceType=perCabin&voyageId=SC2612215NCH",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20270329-5ngcb",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Grand Cayman & Bimini Beach Club",
+      "departureDate": "2027-03-29",
+      "returnDate": "2027-04-03",
+      "nights": 5,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "George Town, Grand Cayman",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1646,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=SC2703295NGCB",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20261101-7ngor3",
+      "shipName": "Resilient Lady",
+      "sailingName": "Western Caribbean & Bimini Beach Club",
+      "departureDate": "2026-11-01",
+      "returnDate": "2026-11-08",
+      "nights": 7,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "George Town, Grand Cayman",
+        "Ocho Rios, Jamaica",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1666,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGOR3&priceType=perCabin&voyageId=RS2611017NGOR3",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20270123-6nsjb",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Cruise",
+      "departureDate": "2027-01-23",
+      "returnDate": "2027-01-29",
+      "nights": 6,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Tortola, British Virgin Islands",
+        "Basseterre, St. Kitts and Nevis",
+        "St. John's, Antigua",
+        "Castries, St. Lucia",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 1668,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NSJB&priceType=perCabin&voyageId=VL2701236NSJB",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20261129-6nbog",
+      "shipName": "Resilient Lady",
+      "sailingName": "Western Caribbean & Bimini Beach Club",
+      "departureDate": "2026-11-29",
+      "returnDate": "2026-12-05",
+      "nights": 6,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "The Beach Club at Bimini, Bahamas",
+        "Ocho Rios, Jamaica",
+        "George Town, Grand Cayman",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1668,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NMGO&priceType=perCabin&voyageId=RS2611296NMGO",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20261213-6nbog",
+      "shipName": "Resilient Lady",
+      "sailingName": "Western Caribbean & Bimini Beach Club",
+      "departureDate": "2026-12-13",
+      "returnDate": "2026-12-19",
+      "nights": 6,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "The Beach Club at Bimini, Bahamas",
+        "Ocho Rios, Jamaica",
+        "George Town, Grand Cayman",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1668,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NMGO2&priceType=perCabin&voyageId=RS2612136NMGO2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20261123-5norb",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Jamaica & Bimini Beach Club",
+      "departureDate": "2026-11-23",
+      "returnDate": "2026-11-28",
+      "nights": 5,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Ocho Rios, Jamaica",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1690,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NORB&priceType=perCabin&voyageId=SC2611235NORB",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261114-6nsjb",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Cruise",
+      "departureDate": "2026-11-14",
+      "returnDate": "2026-11-20",
+      "nights": 6,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Tortola, British Virgin Islands",
+        "Basseterre, St. Kitts and Nevis",
+        "St. John's, Antigua",
+        "Castries, St. Lucia",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 1788,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NSJB2&priceType=perCabin&voyageId=VL2611146NSJB2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20270313-6nsjb",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Cruise",
+      "departureDate": "2027-03-13",
+      "returnDate": "2027-03-19",
+      "nights": 6,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Tortola, British Virgin Islands",
+        "Basseterre, St. Kitts and Nevis",
+        "St. John's, Antigua",
+        "Castries, St. Lucia",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 1788,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NSJB&priceType=perCabin&voyageId=VL2703136NSJB",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20271223-5nch",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Mexico & Bimini Beach Club Holiday",
+      "departureDate": "2027-12-23",
+      "returnDate": "2027-12-28",
+      "nights": 5,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Cozumel, Mexico",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1790,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZX&priceType=perCabin&voyageId=BR2712235NCZX",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20261108-8nsjm3",
+      "shipName": "Resilient Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2026-11-08",
+      "returnDate": "2026-11-16",
+      "nights": 8,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Puerto Plata, Dominican Republic",
+        "San Juan, Puerto Rico",
+        "Tortola, British Virgin Islands",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 1904,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NSJM3&priceType=perCabin&voyageId=RS2611088NSJM3",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20261205-8ncp2",
+      "shipName": "Resilient Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2026-12-05",
+      "returnDate": "2026-12-13",
+      "nights": 8,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "St. Croix, U.S. Virgin Islands",
+        "San Juan, Puerto Rico",
         "Puerto Plata, Dominican Republic",
         "The Beach Club at Bimini, Bahamas",
         "Miami, Florida"
       ],
-      "startingPrice": 2490,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=RS2605255NPP",
+      "startingPrice": 1904,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NCP2&priceType=perCabin&voyageId=RS2612058NCP2",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-scarlet-lady-20260524-7nga4",
-      "shipName": "Scarlet Lady",
-      "sailingName": "Greek Isles & The Adriatic",
-      "departureDate": "2026-05-24",
-      "returnDate": "2026-05-31",
-      "nights": 7,
-      "departurePort": "Athens (Piraeus)",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Athens (Piraeus)",
-        "Kotor, Montenegro",
-        "Dubrovnik, Croatia",
-        "Corfu, Greece",
-        "Mykonos, Greece",
-        "Athens (Piraeus)"
-      ],
-      "startingPrice": 1946,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGA4&priceType=perCabin&voyageId=SC2605247NGA4",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-valiant-lady-20260531-7ncb2",
+      "id": "virgin-voyages-valiant-lady-20261128-7nsjca",
       "shipName": "Valiant Lady",
-      "sailingName": "French Riviera, Italy & Ibiza Overnight",
-      "departureDate": "2026-05-31",
-      "returnDate": "2026-06-07",
+      "sailingName": "Southern Caribbean Cruise",
+      "departureDate": "2026-11-28",
+      "returnDate": "2026-12-05",
       "nights": 7,
-      "departurePort": "Barcelona",
-      "destinationRegion": "mediterranean",
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
       "itineraryPorts": [
-        "Barcelona",
-        "Palma de Mallorca, Spain",
-        "Rome (Civitavecchia), Italy",
-        "Cannes, France",
-        "Ibiza, Spain",
-        "Barcelona"
-      ],
-      "startingPrice": 2366,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NCB2&priceType=perCabin&voyageId=VL2605317NCB2",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-scarlet-lady-20260531-7ngm",
-      "shipName": "Scarlet Lady",
-      "sailingName": "Greek Island Glow",
-      "departureDate": "2026-05-31",
-      "returnDate": "2026-06-07",
-      "nights": 7,
-      "departurePort": "Athens (Piraeus)",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Athens (Piraeus)",
-        "Santorini, Greece",
-        "Rhodes, Greece",
-        "Bodrum, Turkey",
-        "Mykonos, Greece",
-        "Athens (Piraeus)"
-      ],
-      "startingPrice": 2366,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGM&priceType=perCabin&voyageId=SC2605317NGM",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-brilliant-lady-20260604-7nsbe",
-      "shipName": "Brilliant Lady",
-      "sailingName": "Alaska: Inside Passage & Glacial Fjords",
-      "departureDate": "2026-06-04",
-      "returnDate": "2026-06-11",
-      "nights": 7,
-      "departurePort": "Seattle, Washington",
-      "destinationRegion": "alaska",
-      "itineraryPorts": [
-        "Seattle, Washington",
-        "Inside Passage (Cruising), Alaska",
-        "Ketchikan, Alaska",
-        "Sitka, Alaska",
-        "Endicott Arm & Dawes Glacier (Cruising), Alaska",
-        "Prince Rupert, British Columbia",
-        "Seattle, Washington"
+        "San Juan, Puerto Rico",
+        "Charlotte Amalie, St. Thomas",
+        "Tortola, British Virgin Islands",
+        "Basseterre, St. Kitts and Nevis",
+        "St. John's, Antigua",
+        "Philipsburg, St. Maarten",
+        "San Juan, Puerto Rico"
       ],
       "startingPrice": 1946,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSBE&priceType=perCabin&voyageId=BR2606047NSBE",
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSJCA&priceType=perCabin&voyageId=VL2611287NSJCA",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-brilliant-lady-20260702-7nsbe",
-      "shipName": "Brilliant Lady",
-      "sailingName": "Alaska: Inside Passage & Glacial Fjords",
-      "departureDate": "2026-07-02",
-      "returnDate": "2026-07-09",
+      "id": "virgin-voyages-valiant-lady-20270109-7nse",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean & Aruban Nights",
+      "departureDate": "2027-01-09",
+      "returnDate": "2027-01-16",
       "nights": 7,
-      "departurePort": "Seattle, Washington",
-      "destinationRegion": "alaska",
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
       "itineraryPorts": [
-        "Seattle, Washington",
-        "Inside Passage (Cruising), Alaska",
-        "Ketchikan, Alaska",
-        "Sitka, Alaska",
-        "Endicott Arm & Dawes Glacier (Cruising), Alaska",
-        "Prince Rupert, British Columbia",
-        "Seattle, Washington"
+        "San Juan, Puerto Rico",
+        "Oranjestad, Aruba",
+        "Willemstad, Curaçao",
+        "Fort-de-France, Martinique",
+        "Basseterre, St. Kitts and Nevis",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 1946,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSE&priceType=perCabin&voyageId=VL2701097NSE",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20270327-8ncp2",
+      "shipName": "Resilient Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2027-03-27",
+      "returnDate": "2027-04-04",
+      "nights": 8,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "St. Croix, U.S. Virgin Islands",
+        "San Juan, Puerto Rico",
+        "Puerto Plata, Dominican Republic",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2064,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NCP&priceType=perCabin&voyageId=RS2703278NCP",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20270221-7ngor3",
+      "shipName": "Resilient Lady",
+      "sailingName": "Western Caribbean & Bimini Beach Club",
+      "departureDate": "2027-02-21",
+      "returnDate": "2027-02-28",
+      "nights": 7,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "George Town, Grand Cayman",
+        "Ocho Rios, Jamaica",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2086,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGOR2&priceType=perCabin&voyageId=RS2702217NGOR2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20270116-7nsjr",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Cruise",
+      "departureDate": "2027-01-16",
+      "returnDate": "2027-01-23",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Philipsburg, St. Maarten",
+        "Bridgetown, Barbados",
+        "Castries, St. Lucia",
+        "Fort-de-France, Martinique",
+        "Basseterre, St. Kitts and Nevis",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 2086,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSJR&priceType=perCabin&voyageId=VL2701167NSJR",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20270227-7nse",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean & Aruban Nights",
+      "departureDate": "2027-02-27",
+      "returnDate": "2027-03-06",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Oranjestad, Aruba",
+        "Willemstad, Curaçao",
+        "Fort-de-France, Martinique",
+        "Basseterre, St. Kitts and Nevis",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 2086,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSE&priceType=perCabin&voyageId=VL2702277NSE",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261219-7nsfo",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Holiday Cruise",
+      "departureDate": "2026-12-19",
+      "returnDate": "2026-12-26",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Basseterre, St. Kitts and Nevis",
+        "Fort-de-France, Martinique",
+        "Oranjestad, Aruba",
+        "Willemstad, Curaçao",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 2086,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSFO&priceType=perCabin&voyageId=VL2612197NSFO",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20261223-5nbch",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Grand Turk & Bimini Holiday Cruise",
+      "departureDate": "2026-12-23",
+      "returnDate": "2026-12-28",
+      "nights": 5,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "The Beach Club at Bimini, Bahamas",
+        "Grand Turk, Turks and Caicos",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2090,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NBCH&priceType=perCabin&voyageId=BR2612235NBCH",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261212-7nsjr",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Cruise",
+      "departureDate": "2026-12-12",
+      "returnDate": "2026-12-19",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Philipsburg, St. Maarten",
+        "Bridgetown, Barbados",
+        "Castries, St. Lucia",
+        "Fort-de-France, Martinique",
+        "Basseterre, St. Kitts and Nevis",
+        "San Juan, Puerto Rico"
       ],
       "startingPrice": 2226,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSBE&priceType=perCabin&voyageId=BR2607027NSBE",
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSJR&priceType=perCabin&voyageId=VL2612127NSJR",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-resilient-lady-20260627-5ntc",
-      "shipName": "Resilient Lady",
-      "sailingName": "Grand Turk & Bimini Beach Club",
-      "departureDate": "2026-06-27",
-      "returnDate": "2026-07-02",
-      "nights": 5,
+      "id": "virgin-voyages-valiant-lady-20261205-7nse",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean & Aruban Nights",
+      "departureDate": "2026-12-05",
+      "returnDate": "2026-12-12",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Oranjestad, Aruba",
+        "Willemstad, Curaçao",
+        "Fort-de-France, Martinique",
+        "Basseterre, St. Kitts and Nevis",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 2226,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSE&priceType=perCabin&voyageId=VL2612057NSE",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261031-7nse2",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Halloween Cruise",
+      "departureDate": "2026-10-31",
+      "returnDate": "2026-11-07",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Willemstad, Curaçao",
+        "Oranjestad, Aruba",
+        "Fort-de-France, Martinique",
+        "Basseterre, St. Kitts and Nevis",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 2366,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSE2&priceType=perCabin&voyageId=VL2610317NSE2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261120-8nsjc",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Cruise",
+      "departureDate": "2026-11-20",
+      "returnDate": "2026-11-28",
+      "nights": 8,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Charlotte Amalie, St. Thomas",
+        "Willemstad, Curaçao",
+        "Oranjestad, Aruba",
+        "Basseterre, St. Kitts and Nevis",
+        "Philipsburg, St. Maarten",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 2544,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NSJC&priceType=perCabin&voyageId=VL2611208NSJC",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20261214-9nsjm",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Eastern Caribbean & Bimini Holiday",
+      "departureDate": "2026-12-14",
+      "returnDate": "2026-12-23",
+      "nights": 9,
       "departurePort": "Miami, Florida",
       "destinationRegion": "bahamas",
       "itineraryPorts": [
         "Miami, Florida",
-        "Grand Turk, Turks and Caicos",
+        "Philipsburg, St. Maarten",
+        "Charlotte Amalie, St. Thomas",
+        "San Juan, Puerto Rico",
         "The Beach Club at Bimini, Bahamas",
         "Miami, Florida"
       ],
-      "startingPrice": 3890,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=RS2606275NTC",
+      "startingPrice": 1962,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=9NSJM&priceType=perCabin&voyageId=BR2612149NSJM",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-brilliant-lady-20260528-7nsje",
-      "shipName": "Brilliant Lady",
-      "sailingName": "Alaska: Inside Passage & Glacial Fjords",
-      "departureDate": "2026-05-28",
-      "returnDate": "2026-06-04",
-      "nights": 7,
-      "departurePort": "Seattle, Washington",
-      "destinationRegion": "alaska",
-      "itineraryPorts": [
-        "Seattle, Washington",
-        "Inside Passage (Cruising), Alaska",
-        "Ketchikan, Alaska",
-        "Juneau, Alaska",
-        "Endicott Arm & Dawes Glacier (Cruising), Alaska",
-        "Prince Rupert, British Columbia",
-        "Seattle, Washington"
-      ],
-      "startingPrice": 2426,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSJE&priceType=perCabin&voyageId=BR2605287NSJE",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-brilliant-lady-20260521-7nsea",
-      "shipName": "Brilliant Lady",
-      "sailingName": "Brilliant Lady Seattle MerMaiden",
-      "departureDate": "2026-05-21",
-      "returnDate": "2026-05-28",
-      "nights": 7,
-      "departurePort": "Seattle, Washington",
-      "destinationRegion": "alaska",
-      "itineraryPorts": [
-        "Seattle, Washington",
-        "Inside Passage (Cruising), Alaska",
-        "Ketchikan, Alaska",
-        "Sitka, Alaska",
-        "Endicott Arm & Dawes Glacier (Cruising), Alaska",
-        "Prince Rupert, British Columbia",
-        "Seattle, Washington"
-      ],
-      "startingPrice": 2506,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSEA&priceType=perCabin&voyageId=BR2605217NSEA",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-valiant-lady-20260628-6nbca",
+      "id": "virgin-voyages-valiant-lady-20261019-12nnbsl",
       "shipName": "Valiant Lady",
-      "sailingName": "French Riviera, Italy & Ibiza Overnight",
-      "departureDate": "2026-06-28",
-      "returnDate": "2026-07-04",
+      "sailingName": "Bermuda & Caribbean: NYC to San Juan",
+      "departureDate": "2026-10-19",
+      "returnDate": "2026-10-31",
+      "nights": 12,
+      "departurePort": "New York City, New York",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "New York City, New York",
+        "Royal Naval Dockyard, Bermuda",
+        "The Beach Club at Bimini, Bahamas",
+        "St. Croix, U.S. Virgin Islands",
+        "Philipsburg, St. Maarten",
+        "Tortola, British Virgin Islands",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 2136,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=12NNBSL&priceType=perCabin&voyageId=VL26101912NNBSL",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20270111-10ndp",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2027-01-11",
+      "returnDate": "2027-01-21",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Philipsburg, St. Maarten",
+        "Tortola, British Virgin Islands",
+        "St. Croix, U.S. Virgin Islands",
+        "San Juan, Puerto Rico",
+        "Puerto Plata, Dominican Republic",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2180,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NDP&priceType=perCabin&voyageId=BR27011110NDP",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20261115-10nmm",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2026-11-15",
+      "returnDate": "2026-11-25",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Philipsburg, St. Maarten",
+        "Tortola, British Virgin Islands",
+        "Basseterre, St. Kitts and Nevis",
+        "St. John's, Antigua",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2182,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NMM&priceType=perCabin&voyageId=BR26111510NMM",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20261130-10ndp",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2026-11-30",
+      "returnDate": "2026-12-10",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Philipsburg, St. Maarten",
+        "Tortola, British Virgin Islands",
+        "St. Croix, U.S. Virgin Islands",
+        "San Juan, Puerto Rico",
+        "Puerto Plata, Dominican Republic",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2182,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NDP&priceType=perCabin&voyageId=BR26113010NDP",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20270308-10ndp",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2027-03-08",
+      "returnDate": "2027-03-18",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Philipsburg, St. Maarten",
+        "Tortola, British Virgin Islands",
+        "St. Croix, U.S. Virgin Islands",
+        "San Juan, Puerto Rico",
+        "Puerto Plata, Dominican Republic",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2182,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NDP&priceType=perCabin&voyageId=BR27030810NDP",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20270125-10nmm",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2027-01-25",
+      "returnDate": "2027-02-04",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Philipsburg, St. Maarten",
+        "Tortola, British Virgin Islands",
+        "Basseterre, St. Kitts and Nevis",
+        "St. John's, Antigua",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2382,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NMM&priceType=perCabin&voyageId=BR27012510NMM",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20270222-10nmm",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Eastern Caribbean & Bimini Beach Club",
+      "departureDate": "2027-02-22",
+      "returnDate": "2027-03-04",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Philipsburg, St. Maarten",
+        "Tortola, British Virgin Islands",
+        "Basseterre, St. Kitts and Nevis",
+        "St. John's, Antigua",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2382,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NMM&priceType=perCabin&voyageId=BR27022210NMM",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20261024-5nlah",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Baja Mexico Halloween Cruise",
+      "departureDate": "2026-10-24",
+      "returnDate": "2026-10-29",
+      "nights": 5,
+      "departurePort": "Los Angeles, California",
+      "destinationRegion": "mexico",
+      "itineraryPorts": [
+        "Los Angeles, California",
+        "Catalina Island, California",
+        "San Diego, California",
+        "Ensenada, Mexico",
+        "Los Angeles, California"
+      ],
+      "startingPrice": 1192,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NLAH&priceType=perCabin&voyageId=BR2610245NLAH",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261013-6nnyb2",
+      "shipName": "Valiant Lady",
+      "sailingName": "Bermuda Overnight Cruise",
+      "departureDate": "2026-10-13",
+      "returnDate": "2026-10-19",
       "nights": 6,
+      "departurePort": "New York City, New York",
+      "destinationRegion": "other",
+      "itineraryPorts": [
+        "New York City, New York",
+        "Royal Naval Dockyard, Bermuda",
+        "New York City, New York"
+      ],
+      "startingPrice": 1428,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NNYB2&priceType=perCabin&voyageId=VL2610136NNYB2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261002-5nstuff",
+      "shipName": "Valiant Lady",
+      "sailingName": "Stuff at Sea",
+      "departureDate": "2026-10-02",
+      "returnDate": "2026-10-07",
+      "nights": 5,
+      "departurePort": "New York City, New York",
+      "destinationRegion": "other",
+      "itineraryPorts": [
+        "New York City, New York",
+        "Royal Naval Dockyard, Bermuda",
+        "New York City, New York"
+      ],
+      "startingPrice": 1490,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NSTUFF&priceType=perCabin&voyageId=VL2610025NSTUFF",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20261017-7nlax2",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Mexican Riviera Halloween Cruise",
+      "departureDate": "2026-10-17",
+      "returnDate": "2026-10-24",
+      "nights": 7,
+      "departurePort": "Los Angeles, California",
+      "destinationRegion": "mexico",
+      "itineraryPorts": [
+        "Los Angeles, California",
+        "Cabo San Lucas, Mexico",
+        "Mazatlán, Mexico",
+        "Puerto Vallarta, Mexico",
+        "Los Angeles, California"
+      ],
+      "startingPrice": 1528,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NLAX2&priceType=perCabin&voyageId=BR2610177NLAX2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261007-6nnyb2",
+      "shipName": "Valiant Lady",
+      "sailingName": "Bermuda Overnight Cruise",
+      "departureDate": "2026-10-07",
+      "returnDate": "2026-10-13",
+      "nights": 6,
+      "departurePort": "New York City, New York",
+      "destinationRegion": "other",
+      "itineraryPorts": [
+        "New York City, New York",
+        "Royal Naval Dockyard, Bermuda",
+        "New York City, New York"
+      ],
+      "startingPrice": 1798,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NNYB2&priceType=perCabin&voyageId=VL2610076NNYB2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20261011-14nbm3",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Spain to Morocco & Miami Transatlantic",
+      "departureDate": "2026-10-11",
+      "returnDate": "2026-10-25",
+      "nights": 14,
       "departurePort": "Barcelona",
       "destinationRegion": "mediterranean",
       "itineraryPorts": [
         "Barcelona",
-        "Nice (Villefranche), France",
-        "Rome (Civitavecchia), Italy",
-        "Ajaccio, Corsica, France",
-        "Ibiza, Spain",
-        "Barcelona"
+        "Casablanca, Morocco",
+        "Las Palmas de Gran Canaria, Spain",
+        "Santa Cruz de Tenerife, Spain",
+        "Miami, Florida"
       ],
-      "startingPrice": 2628,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NBCA&priceType=perCabin&voyageId=VL2606286NBCA",
+      "startingPrice": 2492,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=14NBM3&priceType=perCabin&voyageId=SC26101114NBM3",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-scarlet-lady-20270627-7ngm",
+      "id": "virgin-voyages-scarlet-lady-20261025-6ngt2",
       "shipName": "Scarlet Lady",
-      "sailingName": "Greek Island Glow",
-      "departureDate": "2027-06-27",
-      "returnDate": "2027-07-04",
-      "nights": 7,
-      "departurePort": "Athens (Piraeus)",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Athens (Piraeus)",
-        "Santorini, Greece",
-        "Rhodes, Greece",
-        "Bodrum, Turkey",
-        "Mykonos, Greece",
-        "Athens (Piraeus)"
-      ],
-      "startingPrice": 2928,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGM&priceType=perCabin&voyageId=SC2706277NGM",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-resilient-lady-20260530-5ntc",
-      "shipName": "Resilient Lady",
-      "sailingName": "Grand Turk & Bimini Beach Club",
-      "departureDate": "2026-05-30",
-      "returnDate": "2026-06-04",
-      "nights": 5,
+      "sailingName": "Eastern Caribbean & Bimini Halloween",
+      "departureDate": "2026-10-25",
+      "returnDate": "2026-10-31",
+      "nights": 6,
       "departurePort": "Miami, Florida",
       "destinationRegion": "bahamas",
       "itineraryPorts": [
         "Miami, Florida",
         "Grand Turk, Turks and Caicos",
+        "Puerto Plata, Dominican Republic",
         "The Beach Club at Bimini, Bahamas",
         "Miami, Florida"
       ],
-      "startingPrice": 2990,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=RS2605305NTC",
+      "startingPrice": 2628,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NGT2&priceType=perCabin&voyageId=SC2610256NGT2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261107-7nsjr",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean Cruise",
+      "departureDate": "2026-11-07",
+      "returnDate": "2026-11-14",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Philipsburg, St. Maarten",
+        "Bridgetown, Barbados",
+        "Castries, St. Lucia",
+        "Fort-de-France, Martinique",
+        "Basseterre, St. Kitts and Nevis",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 2646,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSJR&priceType=perCabin&voyageId=VL2611077NSJR",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20261230-5npny",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Dominican Republic & Bimini New Year's",
+      "departureDate": "2026-12-30",
+      "returnDate": "2026-01-04",
+      "nights": 5,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Puerto Plata, Dominican Republic",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2690,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPNY&priceType=perCabin&voyageId=SC2612305NPNY",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20261219-8npd3",
+      "shipName": "Resilient Lady",
+      "sailingName": "Eastern Caribbean & Bimini Holiday",
+      "departureDate": "2026-12-19",
+      "returnDate": "2026-12-27",
+      "nights": 8,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Puerto Plata, Dominican Republic",
+        "San Juan, Puerto Rico",
+        "Philipsburg, St. Maarten",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 2704,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NPD3&priceType=perCabin&voyageId=RS2612198NPD3",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-resilient-lady-20261227-7nrnya2",
+      "shipName": "Resilient Lady",
+      "sailingName": "Western Caribbean & Bimini New Year's",
+      "departureDate": "2026-12-27",
+      "returnDate": "2026-01-03",
+      "nights": 7,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "George Town, Grand Cayman",
+        "Ocho Rios, Jamaica",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 3486,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NRNYA2&priceType=perCabin&voyageId=RS2612277NRNYA2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20261226-7nsfs",
+      "shipName": "Valiant Lady",
+      "sailingName": "Southern Caribbean New Year's Cruise",
+      "departureDate": "2026-12-26",
+      "returnDate": "2026-01-02",
+      "nights": 7,
+      "departurePort": "San Juan, Puerto Rico",
+      "destinationRegion": "caribbean",
+      "itineraryPorts": [
+        "San Juan, Puerto Rico",
+        "Philipsburg, St. Maarten",
+        "Fort-de-France, Martinique",
+        "Bridgetown, Barbados",
+        "Castries, St. Lucia",
+        "St. John's, Antigua",
+        "San Juan, Puerto Rico"
+      ],
+      "startingPrice": 3906,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSFS&priceType=perCabin&voyageId=VL2612267NSFS",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
@@ -385,135 +1117,345 @@
         "Palermo, Sicily, Italy",
         "Barcelona"
       ],
-      "startingPrice": 3292,
+      "startingPrice": 3184,
       "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NBVA&priceType=perCabin&voyageId=VL2607118NBVA",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-valiant-lady-20260607-7ncb3",
-      "shipName": "Valiant Lady",
-      "sailingName": "French Riviera, Italy & Ibiza Overnight",
-      "departureDate": "2026-06-07",
-      "returnDate": "2026-06-14",
-      "nights": 7,
-      "departurePort": "Barcelona",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Barcelona",
-        "Provence (Toulon), France",
-        "Tuscany/Cinque Terre (Marina di Carrara), Italy",
-        "Ajaccio, Corsica, France",
-        "Ibiza, Spain",
-        "Barcelona"
-      ],
-      "startingPrice": 3812,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NCB3&priceType=perCabin&voyageId=VL2606077NCB3",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-scarlet-lady-20260607-7ncms",
+      "id": "virgin-voyages-scarlet-lady-20261004-7ngm6",
       "shipName": "Scarlet Lady",
-      "sailingName": "Greek Isles & Mykonos Overnight",
-      "departureDate": "2026-06-07",
-      "returnDate": "2026-06-14",
+      "sailingName": "Mediterranean: Athens to Barcelona",
+      "departureDate": "2026-10-04",
+      "returnDate": "2026-10-11",
       "nights": 7,
       "departurePort": "Athens (Piraeus)",
       "destinationRegion": "mediterranean",
       "itineraryPorts": [
         "Athens (Piraeus)",
-        "Chania (Souda Bay), Crete, Greece",
-        "Bodrum, Turkey",
         "Mykonos, Greece",
-        "Santorini, Greece",
-        "Athens (Piraeus)"
-      ],
-      "startingPrice": 3888,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NCMS&priceType=perCabin&voyageId=SC2606077NCMS",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-scarlet-lady-20260920-7ngm",
-      "shipName": "Scarlet Lady",
-      "sailingName": "Greek Island Glow",
-      "departureDate": "2026-09-20",
-      "returnDate": "2026-09-27",
-      "nights": 7,
-      "departurePort": "Athens (Piraeus)",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Athens (Piraeus)",
-        "Santorini, Greece",
-        "Rhodes, Greece",
-        "Bodrum, Turkey",
-        "Mykonos, Greece",
-        "Athens (Piraeus)"
-      ],
-      "startingPrice": 3906,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGM7&priceType=perCabin&voyageId=SC2609207NGM7",
-      "confidence": "itinerary_verified_price_check_required"
-    },
-    {
-      "id": "virgin-voyages-valiant-lady-20260614-7nbb2",
-      "shipName": "Valiant Lady",
-      "sailingName": "French Riviera, Spain & Ibiza Overnight",
-      "departureDate": "2026-06-14",
-      "returnDate": "2026-06-21",
-      "nights": 7,
-      "departurePort": "Barcelona",
-      "destinationRegion": "mediterranean",
-      "itineraryPorts": [
-        "Barcelona",
-        "Palma de Mallorca, Spain",
-        "Valencia, Spain",
-        "Cannes, France",
-        "Ibiza, Spain",
+        "Catania, Sicily, Italy",
+        "Amalfi Coast (Salerno), Italy",
+        "Rome (Civitavecchia), Italy",
         "Barcelona"
       ],
-      "startingPrice": 3946,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NBB2&priceType=perCabin&voyageId=VL2606147NBB2",
+      "startingPrice": 3486,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGM6&priceType=perCabin&voyageId=SC2610047NGM6",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-brilliant-lady-20260623-9nsabc",
+      "id": "virgin-voyages-brilliant-lady-20261228-10nbny",
       "shipName": "Brilliant Lady",
-      "sailingName": "Alaska: Inside Passage & Hubbard Glacier",
-      "departureDate": "2026-06-23",
-      "returnDate": "2026-07-02",
-      "nights": 9,
+      "sailingName": "Eastern Caribbean & Bimini New Year's",
+      "departureDate": "2026-12-28",
+      "returnDate": "2026-01-07",
+      "nights": 10,
+      "departurePort": "Miami, Florida",
+      "destinationRegion": "bahamas",
+      "itineraryPorts": [
+        "Miami, Florida",
+        "Philipsburg, St. Maarten",
+        "Basseterre, St. Kitts and Nevis",
+        "Tortola, British Virgin Islands",
+        "St. John's, Antigua",
+        "The Beach Club at Bimini, Bahamas",
+        "Miami, Florida"
+      ],
+      "startingPrice": 3980,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NBNY&priceType=perCabin&voyageId=BR26122810NBNY",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20260820-7npmcf",
+      "shipName": "Valiant Lady",
+      "sailingName": "Virgin Voyages Comedy Fest from the UK",
+      "departureDate": "2026-08-20",
+      "returnDate": "2026-08-27",
+      "nights": 7,
+      "departurePort": "Portsmouth",
+      "destinationRegion": "other",
+      "itineraryPorts": [
+        "Portsmouth",
+        "Bruges/Zeebrugge (Brussels), Belgium",
+        "Amsterdam, Netherlands",
+        "Hamburg, Germany",
+        "Portsmouth"
+      ],
+      "startingPrice": 2646,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NPMCF&priceType=perCabin&voyageId=VL2608207NPMCF",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20260820-7nsje",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Alaska: Inside Passage & Glacial Fjords",
+      "departureDate": "2026-08-20",
+      "returnDate": "2026-08-27",
+      "nights": 7,
       "departurePort": "Seattle, Washington",
       "destinationRegion": "alaska",
       "itineraryPorts": [
         "Seattle, Washington",
         "Inside Passage (Cruising), Alaska",
         "Ketchikan, Alaska",
-        "Icy Strait Point, Alaska",
-        "Hubbard Glacier (Cruising), Alaska",
-        "Sitka, Alaska",
-        "Victoria, British Columbia",
+        "Juneau, Alaska",
+        "Endicott Arm & Dawes Glacier (Cruising), Alaska",
+        "Prince Rupert, British Columbia",
         "Seattle, Washington"
       ],
-      "startingPrice": 2502,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=9NSABC&priceType=perCabin&voyageId=BR2606239NSABC",
+      "startingPrice": 2786,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSJE&priceType=perCabin&voyageId=BR2608207NSJE",
       "confidence": "itinerary_verified_price_check_required"
     },
     {
-      "id": "virgin-voyages-valiant-lady-20260525-6nciv",
+      "id": "virgin-voyages-valiant-lady-20260919-8nnbca",
       "shipName": "Valiant Lady",
-      "sailingName": "Mediterranean: Rome to Barcelona",
-      "departureDate": "2026-05-25",
-      "returnDate": "2026-05-31",
-      "nights": 6,
+      "sailingName": "New England & Canada Cruise",
+      "departureDate": "2026-09-19",
+      "returnDate": "2026-09-27",
+      "nights": 8,
+      "departurePort": "New York City, New York",
+      "destinationRegion": "canada-new-england",
+      "itineraryPorts": [
+        "New York City, New York",
+        "Boston, Massachusetts",
+        "Portland, Maine",
+        "Saint John, New Brunswick",
+        "Halifax, Nova Scotia",
+        "New York City, New York"
+      ],
+      "startingPrice": 2864,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NNBCA&priceType=perCabin&voyageId=VL2609198NNBCA",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20260724-9nbfa",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Italy, France, Spain & Ibiza Overnight",
+      "departureDate": "2026-07-24",
+      "returnDate": "2026-08-02",
+      "nights": 9,
+      "departurePort": "Barcelona",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Barcelona",
+        "Palma de Mallorca, Spain",
+        "Cannes, France",
+        "Rome (Civitavecchia), Italy",
+        "Florence/Pisa (Livorno), Italy",
+        "Ajaccio, Corsica, France",
+        "Ibiza, Spain",
+        "Barcelona"
+      ],
+      "startingPrice": 3402,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=9NBFA&priceType=perCabin&voyageId=SC2607249NBFA",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20270711-10nath",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Greek Isles & The Adriatic",
+      "departureDate": "2027-07-11",
+      "returnDate": "2027-07-21",
+      "nights": 10,
+      "departurePort": "Athens (Piraeus)",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Athens (Piraeus)",
+        "Santorini, Greece",
+        "Bodrum, Turkey",
+        "Mykonos, Greece",
+        "Dubrovnik, Croatia",
+        "Kotor, Montenegro",
+        "Corfu, Greece",
+        "Athens (Piraeus)"
+      ],
+      "startingPrice": 4180,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NATH&priceType=perCabin&voyageId=SC27071110NATH",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20260810-12nwdf",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Solar Eclipse: Barcelona to Rome",
+      "departureDate": "2026-08-10",
+      "returnDate": "2026-08-22",
+      "nights": 12,
+      "departurePort": "Barcelona",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Barcelona",
+        "Palma de Mallorca, Spain",
+        "Ibiza, Spain",
+        "Cannes, France",
+        "Ajaccio, Corsica, France",
+        "Tuscany/Cinque Terre (La Spezia), Italy",
+        "Amalfi Coast (Salerno), Italy",
+        "Catania, Sicily, Italy",
+        "Rome (Civitavecchia)"
+      ],
+      "startingPrice": 4296,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=12NWDF&priceType=perCabin&voyageId=SC26081012NWDF",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20260910-10nath",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Greek Isles & The Adriatic",
+      "departureDate": "2026-09-10",
+      "returnDate": "2026-09-20",
+      "nights": 10,
+      "departurePort": "Athens (Piraeus)",
+      "destinationRegion": "mediterranean",
+      "itineraryPorts": [
+        "Athens (Piraeus)",
+        "Santorini, Greece",
+        "Bodrum, Turkey",
+        "Mykonos, Greece",
+        "Dubrovnik, Croatia",
+        "Kotor, Montenegro",
+        "Corfu, Greece",
+        "Athens (Piraeus)"
+      ],
+      "startingPrice": 4380,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NATH4&priceType=perCabin&voyageId=SC26091010NATH4",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-scarlet-lady-20260831-10nca",
+      "shipName": "Scarlet Lady",
+      "sailingName": "Mediterranean: Rome to Athens",
+      "departureDate": "2026-08-31",
+      "returnDate": "2026-09-10",
+      "nights": 10,
       "departurePort": "Rome (Civitavecchia)",
       "destinationRegion": "mediterranean",
       "itineraryPorts": [
         "Rome (Civitavecchia)",
+        "Florence/Pisa (Livorno), Italy",
         "Amalfi Coast (Salerno), Italy",
-        "Cannes, France",
-        "Ibiza, Spain",
-        "Barcelona"
+        "Catania, Sicily, Italy",
+        "Chania (Souda Bay), Crete, Greece",
+        "Santorini, Greece",
+        "Mykonos, Greece",
+        "Athens (Piraeus)"
       ],
-      "startingPrice": 2868,
-      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=6NCIV&priceType=perCabin&voyageId=VL2605256NCIV",
+      "startingPrice": 4580,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NCA&priceType=perCabin&voyageId=SC26083110NCA",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20260709-7nsbe",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Alaska: Inside Passage & Glacial Fjords",
+      "departureDate": "2026-07-09",
+      "returnDate": "2026-07-16",
+      "nights": 7,
+      "departurePort": "Seattle, Washington",
+      "destinationRegion": "alaska",
+      "itineraryPorts": [
+        "Seattle, Washington",
+        "Inside Passage (Cruising), Alaska",
+        "Ketchikan, Alaska",
+        "Sitka, Alaska",
+        "Endicott Arm & Dawes Glacier (Cruising), Alaska",
+        "Prince Rupert, British Columbia",
+        "Seattle, Washington"
+      ],
+      "startingPrice": 12880,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSBE&priceType=perCabin&voyageId=BR2607097NSBE",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20260827-10npr2",
+      "shipName": "Valiant Lady",
+      "sailingName": "Northern Europe: Portsmouth to Iceland",
+      "departureDate": "2026-08-27",
+      "returnDate": "2026-09-06",
+      "nights": 10,
+      "departurePort": "Portsmouth",
+      "destinationRegion": "other",
+      "itineraryPorts": [
+        "Portsmouth",
+        "Amsterdam, Netherlands",
+        "Edinburgh, Scotland",
+        "Invergordon, Scotland",
+        "Akureyri, Iceland",
+        "Ísafjörður, Iceland",
+        "Reykjavik"
+      ],
+      "startingPrice": 2980,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NPR2&priceType=perCabin&voyageId=VL26082710NPR2",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-brilliant-lady-20261029-17nlaxh",
+      "shipName": "Brilliant Lady",
+      "sailingName": "Panama Canal: LA to Miami Halloween",
+      "departureDate": "2026-10-29",
+      "returnDate": "2026-11-15",
+      "nights": 17,
+      "departurePort": "Los Angeles, California",
+      "destinationRegion": "panama-canal",
+      "itineraryPorts": [
+        "Los Angeles, California",
+        "Cabo San Lucas, Mexico",
+        "Puerto Quetzal, Guatemala",
+        "Puntarenas, Costa Rica",
+        "Panama City, Panama",
+        "Panama Canal (Cruising), Panama",
+        "Cartagena, Colombia",
+        "Miami, Florida"
+      ],
+      "startingPrice": 3708,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=17NLAXH&priceType=perCabin&voyageId=BR26102917NLAXH",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20260805-15nwdf",
+      "shipName": "Valiant Lady",
+      "sailingName": "Solar Eclipse: Iceland & British Isles",
+      "departureDate": "2026-08-05",
+      "returnDate": "2026-08-20",
+      "nights": 15,
+      "departurePort": "Portsmouth",
+      "destinationRegion": "other",
+      "itineraryPorts": [
+        "Portsmouth",
+        "Dublin (Dun Laoghaire), Ireland",
+        "Glasgow (Greenock), Scotland",
+        "Liverpool, United Kingdom",
+        "Belfast, Northern Ireland",
+        "Siglufjörður, Iceland",
+        "Ísafjörður, Iceland",
+        "Reykjavik, Iceland",
+        "Edinburgh, Scotland",
+        "Portsmouth"
+      ],
+      "startingPrice": 3870,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=15NWDF&priceType=perCabin&voyageId=VL26080515NWDF",
+      "confidence": "itinerary_verified_price_check_required"
+    },
+    {
+      "id": "virgin-voyages-valiant-lady-20260906-13nrnb",
+      "shipName": "Valiant Lady",
+      "sailingName": "Iceland & Greenland to NYC",
+      "departureDate": "2026-09-06",
+      "returnDate": "2026-09-19",
+      "nights": 13,
+      "departurePort": "Reykjavik",
+      "destinationRegion": "other",
+      "itineraryPorts": [
+        "Reykjavik",
+        "Ísafjörður, Iceland",
+        "Prince Christian Sound (Cruising), Greenland",
+        "Qaqortoq, Greenland",
+        "Nuuk, Greenland",
+        "St. John's, Newfoundland",
+        "Halifax, Nova Scotia",
+        "New York City, New York"
+      ],
+      "startingPrice": 3874,
+      "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=13NRNB&priceType=perCabin&voyageId=VL26090613NRNB",
       "confidence": "itinerary_verified_price_check_required"
     }
   ],
@@ -560,11 +1502,183 @@
     },
     {
       "seed": {
-        "id": "virgin-voyages-scarlet-lady-20270403-5ntc",
+        "id": "virgin-voyages-resilient-lady-20260706-5npp",
+        "shipName": "Resilient Lady",
+        "sailingName": "Dominican Republic & Bimini Beach Club",
+        "departureDate": "2026-07-06",
+        "returnDate": "2026-07-11",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Puerto Plata, Dominican Republic",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 2390,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=RS2607065NPP",
+        "confidence": "internal_do_not_publish"
+      },
+      "staged": {
+        "id": "virgin-voyages-resilient-lady-20260706-5npp",
+        "shipName": "Resilient Lady",
+        "sailingName": "Dominican Republic & Bimini Beach Club",
+        "departureDate": "2026-07-06",
+        "returnDate": "2026-07-11",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Puerto Plata, Dominican Republic",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 8290,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=RS2607065NPP",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-resilient-lady-20260803-5npp",
+        "shipName": "Resilient Lady",
+        "sailingName": "Dominican Republic & Bimini Beach Club",
+        "departureDate": "2026-08-03",
+        "returnDate": "2026-08-08",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Puerto Plata, Dominican Republic",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 1690,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=RS2608035NPP",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-resilient-lady-20260803-5npp",
+        "shipName": "Resilient Lady",
+        "sailingName": "Dominican Republic & Bimini Beach Club",
+        "departureDate": "2026-08-03",
+        "returnDate": "2026-08-08",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Puerto Plata, Dominican Republic",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 1690,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NPP&priceType=perCabin&voyageId=RS2608035NPP",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-brilliant-lady-20260730-7nsbe",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Alaska: Inside Passage & Glacial Fjords",
+        "departureDate": "2026-07-30",
+        "returnDate": "2026-08-06",
+        "nights": 7,
+        "departurePort": "Seattle, Washington",
+        "destinationRegion": "alaska",
+        "itineraryPorts": [
+          "Seattle, Washington",
+          "Inside Passage (Cruising), Alaska",
+          "Ketchikan, Alaska",
+          "Sitka, Alaska",
+          "Endicott Arm & Dawes Glacier (Cruising), Alaska",
+          "Prince Rupert, British Columbia",
+          "Seattle, Washington"
+        ],
+        "startingPrice": 2366,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSBE&priceType=perCabin&voyageId=BR2607307NSBE",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-brilliant-lady-20260730-7nsbe",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Alaska: Inside Passage & Glacial Fjords",
+        "departureDate": "2026-07-30",
+        "returnDate": "2026-08-06",
+        "nights": 7,
+        "departurePort": "Seattle, Washington",
+        "destinationRegion": "alaska",
+        "itineraryPorts": [
+          "Seattle, Washington",
+          "Inside Passage (Cruising), Alaska",
+          "Ketchikan, Alaska",
+          "Sitka, Alaska",
+          "Endicott Arm & Dawes Glacier (Cruising), Alaska",
+          "Prince Rupert, British Columbia",
+          "Seattle, Washington"
+        ],
+        "startingPrice": 2086,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSBE&priceType=perCabin&voyageId=BR2607307NSBE",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-brilliant-lady-20260723-7nsbe",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Alaska: Inside Passage & Glacial Fjords",
+        "departureDate": "2026-07-23",
+        "returnDate": "2026-07-30",
+        "nights": 7,
+        "departurePort": "Seattle, Washington",
+        "destinationRegion": "alaska",
+        "itineraryPorts": [
+          "Seattle, Washington",
+          "Inside Passage (Cruising), Alaska",
+          "Ketchikan, Alaska",
+          "Sitka, Alaska",
+          "Endicott Arm & Dawes Glacier (Cruising), Alaska",
+          "Prince Rupert, British Columbia",
+          "Seattle, Washington"
+        ],
+        "startingPrice": 2558,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSBE&priceType=perCabin&voyageId=BR2607237NSBE",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-brilliant-lady-20260723-7nsbe",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Alaska: Inside Passage & Glacial Fjords",
+        "departureDate": "2026-07-23",
+        "returnDate": "2026-07-30",
+        "nights": 7,
+        "departurePort": "Seattle, Washington",
+        "destinationRegion": "alaska",
+        "itineraryPorts": [
+          "Seattle, Washington",
+          "Inside Passage (Cruising), Alaska",
+          "Ketchikan, Alaska",
+          "Sitka, Alaska",
+          "Endicott Arm & Dawes Glacier (Cruising), Alaska",
+          "Prince Rupert, British Columbia",
+          "Seattle, Washington"
+        ],
+        "startingPrice": 3068,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NSBE&priceType=perCabin&voyageId=BR2607237NSBE",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-scarlet-lady-20261207-5ntc",
         "shipName": "Scarlet Lady",
         "sailingName": "Grand Turk & Bimini Beach Club",
-        "departureDate": "2027-04-03",
-        "returnDate": "2027-04-08",
+        "departureDate": "2026-12-07",
+        "returnDate": "2026-12-12",
         "nights": 5,
         "departurePort": "Miami, Florida",
         "destinationRegion": "bahamas",
@@ -575,15 +1689,15 @@
           "Miami, Florida"
         ],
         "startingPrice": 1290,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=SC2704035NTC",
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=SC2612075NTC",
         "confidence": "itinerary_verified_price_check_required"
       },
       "staged": {
-        "id": "virgin-voyages-scarlet-lady-20270403-5ntc",
+        "id": "virgin-voyages-scarlet-lady-20261207-5ntc",
         "shipName": "Scarlet Lady",
         "sailingName": "Grand Turk & Bimini Beach Club",
-        "departureDate": "2027-04-03",
-        "returnDate": "2027-04-08",
+        "departureDate": "2026-12-07",
+        "returnDate": "2026-12-12",
         "nights": 5,
         "departurePort": "Miami, Florida",
         "destinationRegion": "bahamas",
@@ -594,36 +1708,263 @@
           "Miami, Florida"
         ],
         "startingPrice": 1290,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=SC2704035NTC",
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=SC2612075NTC",
         "confidence": "itinerary_verified_price_check_required"
       }
     },
     {
       "seed": {
-        "id": "virgin-voyages-scarlet-lady-20270225-4nkw",
-        "shipName": "Scarlet Lady",
-        "sailingName": "Key West & Bimini Beach Club",
-        "departureDate": "2027-02-25",
-        "returnDate": "2027-03-01",
-        "nights": 4,
+        "id": "virgin-voyages-resilient-lady-20260711-5ntc",
+        "shipName": "Resilient Lady",
+        "sailingName": "Grand Turk & Bimini Beach Club",
+        "departureDate": "2026-07-11",
+        "returnDate": "2026-07-16",
+        "nights": 5,
         "departurePort": "Miami, Florida",
         "destinationRegion": "bahamas",
         "itineraryPorts": [
           "Miami, Florida",
-          "Key West, Florida",
+          "Grand Turk, Turks and Caicos",
           "The Beach Club at Bimini, Bahamas",
           "Miami, Florida"
         ],
-        "startingPrice": 952,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=SC2702254NKW",
+        "startingPrice": 3726,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=RS2607115NTC",
         "confidence": "itinerary_verified_price_check_required"
       },
       "staged": {
-        "id": "virgin-voyages-scarlet-lady-20270225-4nkw",
-        "shipName": "Scarlet Lady",
+        "id": "virgin-voyages-resilient-lady-20260711-5ntc",
+        "shipName": "Resilient Lady",
+        "sailingName": "Grand Turk & Bimini Beach Club",
+        "departureDate": "2026-07-11",
+        "returnDate": "2026-07-16",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Grand Turk, Turks and Caicos",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 3726,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=RS2607115NTC",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-resilient-lady-20260725-5ntc",
+        "shipName": "Resilient Lady",
+        "sailingName": "Grand Turk & Bimini Beach Club",
+        "departureDate": "2026-07-25",
+        "returnDate": "2026-07-30",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Grand Turk, Turks and Caicos",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 2190,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=RS2607255NTC",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-resilient-lady-20260725-5ntc",
+        "shipName": "Resilient Lady",
+        "sailingName": "Grand Turk & Bimini Beach Club",
+        "departureDate": "2026-07-25",
+        "returnDate": "2026-07-30",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Grand Turk, Turks and Caicos",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 2590,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NTC&priceType=perCabin&voyageId=RS2607255NTC",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-valiant-lady-20280401-5ncz",
+        "shipName": "Valiant Lady",
+        "sailingName": "Mexico & Bimini Beach Club",
+        "departureDate": "2028-04-01",
+        "returnDate": "2028-04-06",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Cozumel, Mexico",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 1290,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZ&priceType=perCabin&voyageId=VL2804015NCZ",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-valiant-lady-20280401-5ncz",
+        "shipName": "Valiant Lady",
+        "sailingName": "Mexico & Bimini Beach Club",
+        "departureDate": "2028-04-01",
+        "returnDate": "2028-04-06",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Cozumel, Mexico",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 1290,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZ&priceType=perCabin&voyageId=VL2804015NCZ",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-resilient-lady-20260720-5ncz",
+        "shipName": "Resilient Lady",
+        "sailingName": "Mexico & Bimini Beach Club",
+        "departureDate": "2026-07-20",
+        "returnDate": "2026-07-25",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Cozumel, Mexico",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 2090,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZ&priceType=perCabin&voyageId=RS2607205NCZ",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-resilient-lady-20260720-5ncz",
+        "shipName": "Resilient Lady",
+        "sailingName": "Mexico & Bimini Beach Club",
+        "departureDate": "2026-07-20",
+        "returnDate": "2026-07-25",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Cozumel, Mexico",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 2090,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZ&priceType=perCabin&voyageId=RS2607205NCZ",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-valiant-lady-20270621-5ncz",
+        "shipName": "Valiant Lady",
+        "sailingName": "Mexico & Bimini Beach Club",
+        "departureDate": "2027-06-21",
+        "returnDate": "2027-06-26",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Cozumel, Mexico",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 1490,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZ&priceType=perCabin&voyageId=VL2706215NCZ",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-valiant-lady-20270621-5ncz",
+        "shipName": "Valiant Lady",
+        "sailingName": "Mexico & Bimini Beach Club",
+        "departureDate": "2027-06-21",
+        "returnDate": "2027-06-26",
+        "nights": 5,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Cozumel, Mexico",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 1490,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCZ&priceType=perCabin&voyageId=VL2706215NCZ",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-valiant-lady-20260726-10nwdf",
+        "shipName": "Valiant Lady",
+        "sailingName": "Europe: Barcelona to Portsmouth",
+        "departureDate": "2026-07-26",
+        "returnDate": "2026-08-05",
+        "nights": 10,
+        "departurePort": "Barcelona",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Barcelona",
+          "Tangier, Morocco",
+          "Lisbon, Portugal",
+          "La Coruña, Spain",
+          "Bilbao, Spain",
+          "Bordeaux (Le Verdon), France",
+          "Portsmouth"
+        ],
+        "startingPrice": 2580,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NWDF&priceType=perCabin&voyageId=VL26072610NWDF",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-valiant-lady-20260726-10nwdf",
+        "shipName": "Valiant Lady",
+        "sailingName": "Europe: Barcelona to Portsmouth",
+        "departureDate": "2026-07-26",
+        "returnDate": "2026-08-05",
+        "nights": 10,
+        "departurePort": "Barcelona",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Barcelona",
+          "Tangier, Morocco",
+          "Lisbon, Portugal",
+          "La Coruña, Spain",
+          "Bilbao, Spain",
+          "Bordeaux (Le Verdon), France",
+          "Portsmouth"
+        ],
+        "startingPrice": 2580,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=10NWDF&priceType=perCabin&voyageId=VL26072610NWDF",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-brilliant-lady-20261210-4nkw",
+        "shipName": "Brilliant Lady",
         "sailingName": "Key West & Bimini Beach Club",
-        "departureDate": "2027-02-25",
-        "returnDate": "2027-03-01",
+        "departureDate": "2026-12-10",
+        "returnDate": "2026-12-14",
         "nights": 4,
         "departurePort": "Miami, Florida",
         "destinationRegion": "bahamas",
@@ -633,18 +1974,37 @@
           "The Beach Club at Bimini, Bahamas",
           "Miami, Florida"
         ],
-        "startingPrice": 952,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=SC2702254NKW",
+        "startingPrice": 1010,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=BR2612104NKW",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-brilliant-lady-20261210-4nkw",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Key West & Bimini Beach Club",
+        "departureDate": "2026-12-10",
+        "returnDate": "2026-12-14",
+        "nights": 4,
+        "departurePort": "Miami, Florida",
+        "destinationRegion": "bahamas",
+        "itineraryPorts": [
+          "Miami, Florida",
+          "Key West, Florida",
+          "The Beach Club at Bimini, Bahamas",
+          "Miami, Florida"
+        ],
+        "startingPrice": 872,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=BR2612104NKW",
         "confidence": "itinerary_verified_price_check_required"
       }
     },
     {
       "seed": {
-        "id": "virgin-voyages-resilient-lady-20260604-4nkw",
+        "id": "virgin-voyages-resilient-lady-20260730-4nkw",
         "shipName": "Resilient Lady",
         "sailingName": "Key West & Bimini Beach Club",
-        "departureDate": "2026-06-04",
-        "returnDate": "2026-06-08",
+        "departureDate": "2026-07-30",
+        "returnDate": "2026-08-03",
         "nights": 4,
         "departurePort": "Miami, Florida",
         "destinationRegion": "bahamas",
@@ -655,15 +2015,15 @@
           "Miami, Florida"
         ],
         "startingPrice": 1832,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2606044NKW",
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2607304NKW",
         "confidence": "itinerary_verified_price_check_required"
       },
       "staged": {
-        "id": "virgin-voyages-resilient-lady-20260604-4nkw",
+        "id": "virgin-voyages-resilient-lady-20260730-4nkw",
         "shipName": "Resilient Lady",
         "sailingName": "Key West & Bimini Beach Club",
-        "departureDate": "2026-06-04",
-        "returnDate": "2026-06-08",
+        "departureDate": "2026-07-30",
+        "returnDate": "2026-08-03",
         "nights": 4,
         "departurePort": "Miami, Florida",
         "destinationRegion": "bahamas",
@@ -674,47 +2034,485 @@
           "Miami, Florida"
         ],
         "startingPrice": 1832,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2606044NKW",
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2607304NKW",
         "confidence": "itinerary_verified_price_check_required"
       }
     },
     {
       "seed": {
-        "id": "virgin-voyages-resilient-lady-20260618-4nkw",
-        "shipName": "Resilient Lady",
-        "sailingName": "Key West & Bimini Beach Club",
-        "departureDate": "2026-06-18",
-        "returnDate": "2026-06-22",
-        "nights": 4,
-        "departurePort": "Miami, Florida",
-        "destinationRegion": "bahamas",
+        "id": "virgin-voyages-scarlet-lady-20260802-8nbb",
+        "shipName": "Scarlet Lady",
+        "sailingName": "French Riviera, Italy & Spain",
+        "departureDate": "2026-08-02",
+        "returnDate": "2026-08-10",
+        "nights": 8,
+        "departurePort": "Barcelona",
+        "destinationRegion": "mediterranean",
         "itineraryPorts": [
-          "Miami, Florida",
-          "Key West, Florida",
-          "The Beach Club at Bimini, Bahamas",
-          "Miami, Florida"
+          "Barcelona",
+          "Palma de Mallorca, Spain",
+          "Provence (Marseille), France",
+          "Cannes, France",
+          "Ajaccio, Corsica, France",
+          "Tuscany/Cinque Terre (La Spezia), Italy",
+          "Barcelona"
         ],
-        "startingPrice": 1752,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2606184NKW",
+        "startingPrice": 2864,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NBB&priceType=perCabin&voyageId=SC2608028NBB",
         "confidence": "itinerary_verified_price_check_required"
       },
       "staged": {
-        "id": "virgin-voyages-resilient-lady-20260618-4nkw",
-        "shipName": "Resilient Lady",
-        "sailingName": "Key West & Bimini Beach Club",
-        "departureDate": "2026-06-18",
-        "returnDate": "2026-06-22",
-        "nights": 4,
-        "departurePort": "Miami, Florida",
-        "destinationRegion": "bahamas",
+        "id": "virgin-voyages-scarlet-lady-20260802-8nbb",
+        "shipName": "Scarlet Lady",
+        "sailingName": "French Riviera, Italy & Spain",
+        "departureDate": "2026-08-02",
+        "returnDate": "2026-08-10",
+        "nights": 8,
+        "departurePort": "Barcelona",
+        "destinationRegion": "mediterranean",
         "itineraryPorts": [
-          "Miami, Florida",
-          "Key West, Florida",
-          "The Beach Club at Bimini, Bahamas",
-          "Miami, Florida"
+          "Barcelona",
+          "Palma de Mallorca, Spain",
+          "Provence (Marseille), France",
+          "Cannes, France",
+          "Ajaccio, Corsica, France",
+          "Tuscany/Cinque Terre (La Spezia), Italy",
+          "Barcelona"
         ],
-        "startingPrice": 1752,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=4NKW&priceType=perCabin&voyageId=RS2606184NKW",
+        "startingPrice": 2864,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NBB&priceType=perCabin&voyageId=SC2608028NBB",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-scarlet-lady-20260822-9ncc",
+        "shipName": "Scarlet Lady",
+        "sailingName": "Italy & French Riviera",
+        "departureDate": "2026-08-22",
+        "returnDate": "2026-08-31",
+        "nights": 9,
+        "departurePort": "Rome (Civitavecchia)",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Rome (Civitavecchia)",
+          "Catania, Sicily, Italy",
+          "Pompeii/Capri (Naples), Italy",
+          "Ajaccio, Corsica, France",
+          "Cannes, France",
+          "Florence/Pisa (Livorno), Italy",
+          "Rome (Civitavecchia)"
+        ],
+        "startingPrice": 2322,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=9NCC&priceType=perCabin&voyageId=SC2608229NCC",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-scarlet-lady-20260822-9ncc",
+        "shipName": "Scarlet Lady",
+        "sailingName": "Italy & French Riviera",
+        "departureDate": "2026-08-22",
+        "returnDate": "2026-08-31",
+        "nights": 9,
+        "departurePort": "Rome (Civitavecchia)",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Rome (Civitavecchia)",
+          "Catania, Sicily, Italy",
+          "Pompeii/Capri (Naples), Italy",
+          "Ajaccio, Corsica, France",
+          "Cannes, France",
+          "Florence/Pisa (Livorno), Italy",
+          "Rome (Civitavecchia)"
+        ],
+        "startingPrice": 2322,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=9NCC&priceType=perCabin&voyageId=SC2608229NCC",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-brilliant-lady-20260903-8nsabc",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Alaska: Seattle to Vancouver",
+        "departureDate": "2026-09-03",
+        "returnDate": "2026-09-11",
+        "nights": 8,
+        "departurePort": "Seattle, Washington",
+        "destinationRegion": "alaska",
+        "itineraryPorts": [
+          "Seattle, Washington",
+          "Sitka, Alaska",
+          "Icy Strait Point, Alaska",
+          "Skagway, Alaska",
+          "Endicott Arm & Dawes Glacier (Cruising), Alaska",
+          "Ketchikan, Alaska",
+          "Vancouver, British Columbia"
+        ],
+        "startingPrice": 2224,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NSABC&priceType=perCabin&voyageId=BR2609038NSABC",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-brilliant-lady-20260903-8nsabc",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Alaska: Seattle to Vancouver",
+        "departureDate": "2026-09-03",
+        "returnDate": "2026-09-11",
+        "nights": 8,
+        "departurePort": "Seattle, Washington",
+        "destinationRegion": "alaska",
+        "itineraryPorts": [
+          "Seattle, Washington",
+          "Sitka, Alaska",
+          "Icy Strait Point, Alaska",
+          "Skagway, Alaska",
+          "Endicott Arm & Dawes Glacier (Cruising), Alaska",
+          "Ketchikan, Alaska",
+          "Vancouver, British Columbia"
+        ],
+        "startingPrice": 2224,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NSABC&priceType=perCabin&voyageId=BR2609038NSABC",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-brilliant-lady-20260911-8nvac",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Pacific Coastal: Vancouver to LA",
+        "departureDate": "2026-09-11",
+        "returnDate": "2026-09-19",
+        "nights": 8,
+        "departurePort": "Vancouver, British Columbia",
+        "destinationRegion": "california-coast",
+        "itineraryPorts": [
+          "Vancouver, British Columbia",
+          "San Francisco, California",
+          "Santa Barbara, California",
+          "Catalina Island, California",
+          "San Diego, California",
+          "Los Angeles, California"
+        ],
+        "startingPrice": 1858,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NVAC&priceType=perCabin&voyageId=BR2609118NVAC",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-brilliant-lady-20260911-8nvac",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Pacific Coastal: Vancouver to LA",
+        "departureDate": "2026-09-11",
+        "returnDate": "2026-09-19",
+        "nights": 8,
+        "departurePort": "Vancouver, British Columbia",
+        "destinationRegion": "other",
+        "itineraryPorts": [
+          "Vancouver, British Columbia",
+          "San Francisco, California",
+          "Santa Barbara, California",
+          "Catalina Island, California",
+          "San Diego, California",
+          "Los Angeles, California"
+        ],
+        "startingPrice": 1858,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=8NVAC&priceType=perCabin&voyageId=BR2609118NVAC",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-brilliant-lady-20260926-7nlax",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Mexican Riviera Cruise",
+        "departureDate": "2026-09-26",
+        "returnDate": "2026-10-03",
+        "nights": 7,
+        "departurePort": "Los Angeles, California",
+        "destinationRegion": "mexico",
+        "itineraryPorts": [
+          "Los Angeles, California",
+          "Cabo San Lucas, Mexico",
+          "Mazatlán, Mexico",
+          "Puerto Vallarta, Mexico",
+          "Los Angeles, California"
+        ],
+        "startingPrice": 1526,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NLAX&priceType=perCabin&voyageId=BR2609267NLAX",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-brilliant-lady-20260926-7nlax",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Mexican Riviera Cruise",
+        "departureDate": "2026-09-26",
+        "returnDate": "2026-10-03",
+        "nights": 7,
+        "departurePort": "Los Angeles, California",
+        "destinationRegion": "mexico",
+        "itineraryPorts": [
+          "Los Angeles, California",
+          "Cabo San Lucas, Mexico",
+          "Mazatlán, Mexico",
+          "Puerto Vallarta, Mexico",
+          "Los Angeles, California"
+        ],
+        "startingPrice": 1526,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NLAX&priceType=perCabin&voyageId=BR2609267NLAX",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-brilliant-lady-20260919-7nlax",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Mexican Riviera Cruise",
+        "departureDate": "2026-09-19",
+        "returnDate": "2026-09-26",
+        "nights": 7,
+        "departurePort": "Los Angeles, California",
+        "destinationRegion": "mexico",
+        "itineraryPorts": [
+          "Los Angeles, California",
+          "Cabo San Lucas, Mexico",
+          "Mazatlán, Mexico",
+          "Puerto Vallarta, Mexico",
+          "Los Angeles, California"
+        ],
+        "startingPrice": 1668,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NLAX&priceType=perCabin&voyageId=BR2609197NLAX",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-brilliant-lady-20260919-7nlax",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Mexican Riviera Cruise",
+        "departureDate": "2026-09-19",
+        "returnDate": "2026-09-26",
+        "nights": 7,
+        "departurePort": "Los Angeles, California",
+        "destinationRegion": "mexico",
+        "itineraryPorts": [
+          "Los Angeles, California",
+          "Cabo San Lucas, Mexico",
+          "Mazatlán, Mexico",
+          "Puerto Vallarta, Mexico",
+          "Los Angeles, California"
+        ],
+        "startingPrice": 1668,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NLAX&priceType=perCabin&voyageId=BR2609197NLAX",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-brilliant-lady-20261003-7nlax",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Mexican Riviera Cruise",
+        "departureDate": "2026-10-03",
+        "returnDate": "2026-10-10",
+        "nights": 7,
+        "departurePort": "Los Angeles, California",
+        "destinationRegion": "mexico",
+        "itineraryPorts": [
+          "Los Angeles, California",
+          "Cabo San Lucas, Mexico",
+          "Mazatlán, Mexico",
+          "Puerto Vallarta, Mexico",
+          "Los Angeles, California"
+        ],
+        "startingPrice": 1528,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NLAX&priceType=perCabin&voyageId=BR2610037NLAX",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-brilliant-lady-20261003-7nlax",
+        "shipName": "Brilliant Lady",
+        "sailingName": "Mexican Riviera Cruise",
+        "departureDate": "2026-10-03",
+        "returnDate": "2026-10-10",
+        "nights": 7,
+        "departurePort": "Los Angeles, California",
+        "destinationRegion": "mexico",
+        "itineraryPorts": [
+          "Los Angeles, California",
+          "Cabo San Lucas, Mexico",
+          "Mazatlán, Mexico",
+          "Puerto Vallarta, Mexico",
+          "Los Angeles, California"
+        ],
+        "startingPrice": 1528,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NLAX&priceType=perCabin&voyageId=BR2610037NLAX",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-scarlet-lady-20270523-7nbra",
+        "shipName": "Scarlet Lady",
+        "sailingName": "Greek Isles & Mykonos Overnight",
+        "departureDate": "2027-05-23",
+        "returnDate": "2027-05-30",
+        "nights": 7,
+        "departurePort": "Athens (Piraeus)",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Athens (Piraeus)",
+          "Santorini, Greece",
+          "Bodrum, Turkey",
+          "Rhodes, Greece",
+          "Mykonos, Greece",
+          "Athens (Piraeus)"
+        ],
+        "startingPrice": 2506,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NBRA&priceType=perCabin&voyageId=SC2705237NBRA",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-scarlet-lady-20270523-7nbra",
+        "shipName": "Scarlet Lady",
+        "sailingName": "Greek Isles & Mykonos Overnight",
+        "departureDate": "2027-05-23",
+        "returnDate": "2027-05-30",
+        "nights": 7,
+        "departurePort": "Athens (Piraeus)",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Athens (Piraeus)",
+          "Santorini, Greece",
+          "Bodrum, Turkey",
+          "Rhodes, Greece",
+          "Mykonos, Greece",
+          "Athens (Piraeus)"
+        ],
+        "startingPrice": 2506,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NBRA&priceType=perCabin&voyageId=SC2705237NBRA",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-scarlet-lady-20260920-7nbra",
+        "shipName": "Scarlet Lady",
+        "sailingName": "Greek Isles & Mykonos Overnight",
+        "departureDate": "2026-09-20",
+        "returnDate": "2026-09-27",
+        "nights": 7,
+        "departurePort": "Athens (Piraeus)",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Athens (Piraeus)",
+          "Santorini, Greece",
+          "Bodrum, Turkey",
+          "Rhodes, Greece",
+          "Mykonos, Greece",
+          "Athens (Piraeus)"
+        ],
+        "startingPrice": 3206,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGM7&priceType=perCabin&voyageId=SC2609207NGM7",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-scarlet-lady-20260920-7nbra",
+        "shipName": "Scarlet Lady",
+        "sailingName": "Greek Isles & Mykonos Overnight",
+        "departureDate": "2026-09-20",
+        "returnDate": "2026-09-27",
+        "nights": 7,
+        "departurePort": "Athens (Piraeus)",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Athens (Piraeus)",
+          "Santorini, Greece",
+          "Bodrum, Turkey",
+          "Rhodes, Greece",
+          "Mykonos, Greece",
+          "Athens (Piraeus)"
+        ],
+        "startingPrice": 3206,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGM7&priceType=perCabin&voyageId=SC2609207NGM7",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-scarlet-lady-20260927-7nbra",
+        "shipName": "Scarlet Lady",
+        "sailingName": "Greek Isles & Mykonos Overnight",
+        "departureDate": "2026-09-27",
+        "returnDate": "2026-10-04",
+        "nights": 7,
+        "departurePort": "Athens (Piraeus)",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Athens (Piraeus)",
+          "Santorini, Greece",
+          "Bodrum, Turkey",
+          "Rhodes, Greece",
+          "Mykonos, Greece",
+          "Athens (Piraeus)"
+        ],
+        "startingPrice": 2926,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGMK&priceType=perCabin&voyageId=SC2609277NGMK",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-scarlet-lady-20260927-7nbra",
+        "shipName": "Scarlet Lady",
+        "sailingName": "Greek Isles & Mykonos Overnight",
+        "departureDate": "2026-09-27",
+        "returnDate": "2026-10-04",
+        "nights": 7,
+        "departurePort": "Athens (Piraeus)",
+        "destinationRegion": "mediterranean",
+        "itineraryPorts": [
+          "Athens (Piraeus)",
+          "Santorini, Greece",
+          "Bodrum, Turkey",
+          "Rhodes, Greece",
+          "Mykonos, Greece",
+          "Athens (Piraeus)"
+        ],
+        "startingPrice": 2926,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=7NGMK&priceType=perCabin&voyageId=SC2609277NGMK",
+        "confidence": "itinerary_verified_price_check_required"
+      }
+    },
+    {
+      "seed": {
+        "id": "virgin-voyages-valiant-lady-20260927-5nnyb",
+        "shipName": "Valiant Lady",
+        "sailingName": "Bermuda Overnight Cruise",
+        "departureDate": "2026-09-27",
+        "returnDate": "2026-10-02",
+        "nights": 5,
+        "departurePort": "New York City, New York",
+        "destinationRegion": "bermuda",
+        "itineraryPorts": [
+          "New York City, New York",
+          "Royal Naval Dockyard, Bermuda",
+          "New York City, New York"
+        ],
+        "startingPrice": 1552,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NNYB&priceType=perCabin&voyageId=VL2609275NNYB",
+        "confidence": "itinerary_verified_price_check_required"
+      },
+      "staged": {
+        "id": "virgin-voyages-valiant-lady-20260927-5nnyb",
+        "shipName": "Valiant Lady",
+        "sailingName": "Bermuda Overnight Cruise",
+        "departureDate": "2026-09-27",
+        "returnDate": "2026-10-02",
+        "nights": 5,
+        "departurePort": "New York City, New York",
+        "destinationRegion": "other",
+        "itineraryPorts": [
+          "New York City, New York",
+          "Royal Naval Dockyard, Bermuda",
+          "New York City, New York"
+        ],
+        "startingPrice": 1788,
+        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NNYB&priceType=perCabin&voyageId=VL2609275NNYB",
         "confidence": "itinerary_verified_price_check_required"
       }
     },
@@ -736,7 +2534,7 @@
         ],
         "startingPrice": 1190,
         "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=VL2712065NGCB",
-        "confidence": "itinerary_verified_price_check_required"
+        "confidence": "internal_do_not_publish"
       },
       "staged": {
         "id": "virgin-voyages-valiant-lady-20271206-5ngcb",
@@ -755,86 +2553,6 @@
         ],
         "startingPrice": 1190,
         "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=VL2712065NGCB",
-        "confidence": "itinerary_verified_price_check_required"
-      }
-    },
-    {
-      "seed": {
-        "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
-        "shipName": "Resilient Lady",
-        "sailingName": "Grand Cayman & Bimini Beach Club",
-        "departureDate": "2026-06-08",
-        "returnDate": "2026-06-13",
-        "nights": 5,
-        "departurePort": "Miami, Florida",
-        "destinationRegion": "bahamas",
-        "itineraryPorts": [
-          "Miami, Florida",
-          "George Town, Grand Cayman",
-          "The Beach Club at Bimini, Bahamas",
-          "Miami, Florida"
-        ],
-        "startingPrice": 1890,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606085NGCB",
-        "confidence": "itinerary_verified_price_check_required"
-      },
-      "staged": {
-        "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
-        "shipName": "Resilient Lady",
-        "sailingName": "Grand Cayman & Bimini Beach Club",
-        "departureDate": "2026-06-08",
-        "returnDate": "2026-06-13",
-        "nights": 5,
-        "departurePort": "Miami, Florida",
-        "destinationRegion": "bahamas",
-        "itineraryPorts": [
-          "Miami, Florida",
-          "George Town, Grand Cayman",
-          "The Beach Club at Bimini, Bahamas",
-          "Miami, Florida"
-        ],
-        "startingPrice": 1890,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606085NGCB",
-        "confidence": "itinerary_verified_price_check_required"
-      }
-    },
-    {
-      "seed": {
-        "id": "virgin-voyages-resilient-lady-20260613-5ngcb",
-        "shipName": "Resilient Lady",
-        "sailingName": "Grand Cayman & Bimini Beach Club",
-        "departureDate": "2026-06-13",
-        "returnDate": "2026-06-18",
-        "nights": 5,
-        "departurePort": "Miami, Florida",
-        "destinationRegion": "bahamas",
-        "itineraryPorts": [
-          "Miami, Florida",
-          "George Town, Grand Cayman",
-          "The Beach Club at Bimini, Bahamas",
-          "Miami, Florida"
-        ],
-        "startingPrice": 2090,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606135NGCB",
-        "confidence": "itinerary_verified_price_check_required"
-      },
-      "staged": {
-        "id": "virgin-voyages-resilient-lady-20260613-5ngcb",
-        "shipName": "Resilient Lady",
-        "sailingName": "Grand Cayman & Bimini Beach Club",
-        "departureDate": "2026-06-13",
-        "returnDate": "2026-06-18",
-        "nights": 5,
-        "departurePort": "Miami, Florida",
-        "destinationRegion": "bahamas",
-        "itineraryPorts": [
-          "Miami, Florida",
-          "George Town, Grand Cayman",
-          "The Beach Club at Bimini, Bahamas",
-          "Miami, Florida"
-        ],
-        "startingPrice": 2090,
-        "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NGCB&priceType=perCabin&voyageId=RS2606135NGCB",
         "confidence": "itinerary_verified_price_check_required"
       }
     },
@@ -856,7 +2574,7 @@
         ],
         "startingPrice": 1090,
         "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCM&priceType=perCabin&voyageId=SC2611285NCM",
-        "confidence": "itinerary_verified_price_check_required"
+        "confidence": "internal_do_not_publish"
       },
       "staged": {
         "id": "virgin-voyages-scarlet-lady-20261128-5ncm",
@@ -896,7 +2614,7 @@
         ],
         "startingPrice": 1310,
         "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCM&priceType=perCabin&voyageId=SC2701045NCM",
-        "confidence": "itinerary_verified_price_check_required"
+        "confidence": "internal_do_not_publish"
       },
       "staged": {
         "id": "virgin-voyages-scarlet-lady-20270104-5ncm",
@@ -913,7 +2631,7 @@
           "The Beach Club at Bimini, Bahamas",
           "Miami, Florida"
         ],
-        "startingPrice": 1310,
+        "startingPrice": 1290,
         "directLink": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&packageCode=5NCM&priceType=perCabin&voyageId=SC2701045NCM",
         "confidence": "itinerary_verified_price_check_required"
       }

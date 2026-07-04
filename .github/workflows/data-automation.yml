@@ -29,6 +29,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 concurrency:
   group: cruisekit-data-automation-${{ github.ref }}
@@ -87,6 +88,7 @@ jobs:
           path: |
             data/reports/latest-publish-candidate.*
             data/reports/latest-data-health.*
+            data/reports/latest-data-freshness.*
             data/reports/latest-link-audit.*
             data/reports/latest-image-audit.*
             apps/web/public/data/bundles/manifest.json
@@ -108,8 +110,17 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Install Playwright browser
         run: pnpm exec playwright install chromium
-      - name: Run weekly ingest report-only pass
+      - name: Run weekly ingest and review report-only pass
         run: pnpm run data:ingest:weekly-report
+      - name: Run weekly production freshness gate
+        id: freshness
+        continue-on-error: true
+        run: pnpm run data:build && pnpm run data:freshness
+      - name: Create or update data freshness issue
+        if: steps.freshness.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/create-data-freshness-issue.mjs
       - uses: actions/upload-artifact@v7
         if: always()
         with:
@@ -117,6 +128,9 @@ jobs:
           path: |
             data/reports/
             data/ingest/reports/
+      - name: Fail when production data is stale
+        if: steps.freshness.outcome == 'failure'
+        run: exit 1
 
   launch-readiness:
     if: >-

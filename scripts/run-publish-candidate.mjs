@@ -18,6 +18,7 @@ const reportOnly = process.env.CRUISEKIT_REPORT_ONLY === "1";
 
 const gateReports = [
   { key: "dataHealth", label: "Data health", path: "data/reports/latest-data-health.json" },
+  { key: "dataFreshness", label: "Data freshness", path: "data/reports/latest-data-freshness.json" },
   { key: "linkAudit", label: "Link audit", path: "data/reports/latest-link-audit.json" },
   { key: "imageAudit", label: "Image audit", path: "data/reports/latest-image-audit.json" },
 ];
@@ -115,6 +116,12 @@ async function main() {
     }),
   );
   steps.push(
+    await runCommand("data freshness", "node", ["scripts/data-freshness-report.mjs"], {}, {
+      softFailure: true,
+      reportPath: "data/reports/latest-data-freshness.json",
+    }),
+  );
+  steps.push(
     await runCommand("link audit", "pnpm", ["run", "data:audit:links"], {}, {
       softFailure: true,
       reportPath: "data/reports/latest-link-audit.json",
@@ -156,7 +163,10 @@ async function main() {
     publishedAssets = publishStep.ok;
   }
 
-  const manifest = await loadJson("apps/web/public/data/bundles/manifest.json").catch(() => null);
+  const manifestPath = publishedAssets
+    ? "apps/web/public/data/bundles/manifest.json"
+    : "data/bundles/manifest.json";
+  const manifest = await loadJson(manifestPath).catch(() => null);
   const counts = manifestCounts(manifest);
   const statusLines = await gitStatus();
   const ready = gatesClean && publishedAssets;
@@ -170,6 +180,7 @@ async function main() {
     warningCount,
     failedSteps: automationFailures.map((step) => step.name),
     counts,
+    manifestPath,
     steps,
     gates: gateSummaries,
     gitStatus: statusLines,
@@ -199,6 +210,7 @@ This is a guarded publish candidate. It never commits, pushes, or deploys.
 | Blockers | ${blockerCount} |
 | Warnings | ${warningCount} |
 | Public bundles prepared | ${publishedAssets ? "yes" : "no"} |
+| Count source | ${report.manifestPath} |
 
 ## Steps
 

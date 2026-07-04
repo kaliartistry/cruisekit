@@ -1,34 +1,33 @@
 {
-  "generatedAt": "2026-05-19T12:00:57.038Z",
+  "generatedAt": "2026-07-01T23:21:57.358Z",
   "provider": "holland-america",
-  "runId": "2026-05-19T12-00-57-038Z",
+  "runId": "2026-07-01T23-21-57-358Z",
   "mode": "staging-only",
   "sourceUrl": "https://www.hollandamerica.com/en/us/find-a-cruise",
-  "maxPages": 8,
+  "maxPages": 6,
   "staging": {
-    "sailings": 19,
+    "sailings": 14,
     "deals": 0,
     "schemaErrors": 0,
     "byShip": {
+      "Westerdam": 2,
+      "Nieuw Statendam": 5,
+      "Rotterdam": 2,
       "Koningsdam": 1,
       "Eurodam": 1,
-      "Oosterdam": 8,
-      "Noordam": 1,
-      "Westerdam": 1,
-      "Rotterdam": 4,
+      "Zuiderdam": 1,
       "Zaandam": 1,
-      "Nieuw Amsterdam": 1,
-      "Nieuw Statendam": 1
+      "Noordam": 1
     },
     "priceRange": {
-      "min": 599,
-      "max": 3454
+      "min": 629,
+      "max": 17084
     }
   },
   "schemaErrors": [],
   "paths": {
-    "raw": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/raw/holland-america/2026-05-19T12-00-57-038Z",
-    "staging": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/staging/holland-america/2026-05-19T12-00-57-038Z",
-    "report": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/reports/holland-america"
+    "raw": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/raw/holland-america/2026-07-01T23-21-57-358Z",
+    "staging": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/staging/holland-america/2026-07-01T23-21-57-358Z",
+    "report": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/reports/holland-america"
   }
 }

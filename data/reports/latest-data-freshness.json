@@ -1,0 +1,170 @@
+{
+  "generatedAt": "2026-07-01T23:27:57.656Z",
+  "currentDate": "2026-07-01",
+  "mode": "production-data-freshness",
+  "thresholds": {
+    "maxPublicAgeDays": 7,
+    "maxIngestAgeDays": 7
+  },
+  "manifestGeneratedAt": "2026-07-01T23:27:57.523Z",
+  "counts": {
+    "publicSailings": 388,
+    "stalePublicSailings": 0,
+    "weeklyWatchlistSources": 9,
+    "blockers": 0,
+    "warnings": 0,
+    "info": 7
+  },
+  "byCruiseLine": [
+    {
+      "cruiseLine": "carnival",
+      "publicSailings": 117,
+      "stalePublicSailings": 0,
+      "oldestLastVerified": "2026-07-01",
+      "latestLastVerified": "2026-07-01"
+    },
+    {
+      "cruiseLine": "holland-america",
+      "publicSailings": 20,
+      "stalePublicSailings": 0,
+      "oldestLastVerified": "2026-07-01",
+      "latestLastVerified": "2026-07-01"
+    },
+    {
+      "cruiseLine": "norwegian",
+      "publicSailings": 217,
+      "stalePublicSailings": 0,
+      "oldestLastVerified": "2026-07-01",
+      "latestLastVerified": "2026-07-01"
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "publicSailings": 34,
+      "stalePublicSailings": 0,
+      "oldestLastVerified": "2026-07-01",
+      "latestLastVerified": "2026-07-01"
+    }
+  ],
+  "watchlist": [
+    {
+      "cruiseLine": "royal-caribbean",
+      "cadence": "weekly",
+      "hasImporter": true,
+      "hasReviewCommand": false,
+      "latestImportGeneratedAt": "2026-07-01T14:32:32.121Z",
+      "latestReviewGeneratedAt": null,
+      "publicSailings": 0
+    },
+    {
+      "cruiseLine": "carnival",
+      "cadence": "weekly",
+      "hasImporter": true,
+      "hasReviewCommand": true,
+      "latestImportGeneratedAt": "2026-07-01T22:32:22.485Z",
+      "latestReviewGeneratedAt": "2026-07-01T22:32:27.063Z",
+      "publicSailings": 117
+    },
+    {
+      "cruiseLine": "norwegian",
+      "cadence": "weekly",
+      "hasImporter": true,
+      "hasReviewCommand": true,
+      "latestImportGeneratedAt": "2026-07-01T23:20:36.930Z",
+      "latestReviewGeneratedAt": "2026-07-01T23:21:16.003Z",
+      "publicSailings": 217
+    },
+    {
+      "cruiseLine": "celebrity",
+      "cadence": "weekly",
+      "hasImporter": false,
+      "hasReviewCommand": false,
+      "latestImportGeneratedAt": null,
+      "latestReviewGeneratedAt": null,
+      "publicSailings": 0
+    },
+    {
+      "cruiseLine": "princess",
+      "cadence": "weekly",
+      "hasImporter": true,
+      "hasReviewCommand": true,
+      "latestImportGeneratedAt": "2026-07-01T23:21:16.023Z",
+      "latestReviewGeneratedAt": "2026-07-01T23:21:57.177Z",
+      "publicSailings": 0
+    },
+    {
+      "cruiseLine": "holland-america",
+      "cadence": "weekly",
+      "hasImporter": true,
+      "hasReviewCommand": true,
+      "latestImportGeneratedAt": "2026-07-01T23:21:57.358Z",
+      "latestReviewGeneratedAt": "2026-07-01T23:22:32.059Z",
+      "publicSailings": 20
+    },
+    {
+      "cruiseLine": "msc",
+      "cadence": "weekly",
+      "hasImporter": true,
+      "hasReviewCommand": false,
+      "latestImportGeneratedAt": "2026-07-01T23:21:57.368Z",
+      "latestReviewGeneratedAt": null,
+      "publicSailings": 0
+    },
+    {
+      "cruiseLine": "disney",
+      "cadence": "weekly",
+      "hasImporter": false,
+      "hasReviewCommand": false,
+      "latestImportGeneratedAt": null,
+      "latestReviewGeneratedAt": null,
+      "publicSailings": 0
+    },
+    {
+      "cruiseLine": "virgin-voyages",
+      "cadence": "weekly",
+      "hasImporter": true,
+      "hasReviewCommand": true,
+      "latestImportGeneratedAt": "2026-07-01T22:31:35.142Z",
+      "latestReviewGeneratedAt": "2026-07-01T22:31:42.751Z",
+      "publicSailings": 34
+    }
+  ],
+  "blockers": [],
+  "warnings": [],
+  "info": [
+    {
+      "severity": "info",
+      "id": "royal-caribbean-coverage",
+      "message": "Weekly source has no public sailings in the production bundle."
+    },
+    {
+      "severity": "info",
+      "id": "celebrity-importer",
+      "message": "Weekly source is on the watchlist but has no automated importer yet."
+    },
+    {
+      "severity": "info",
+      "id": "celebrity-coverage",
+      "message": "Weekly source has no public sailings in the production bundle."
+    },
+    {
+      "severity": "info",
+      "id": "princess-coverage",
+      "message": "Weekly source has no public sailings in the production bundle."
+    },
+    {
+      "severity": "info",
+      "id": "msc-coverage",
+      "message": "Weekly source has no public sailings in the production bundle."
+    },
+    {
+      "severity": "info",
+      "id": "disney-importer",
+      "message": "Weekly source is on the watchlist but has no automated importer yet."
+    },
+    {
+      "severity": "info",
+      "id": "disney-coverage",
+      "message": "Weekly source has no public sailings in the production bundle."
+    }
+  ]
+}

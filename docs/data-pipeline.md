@@ -52,11 +52,13 @@ The command rebuilds bundles, then writes:
 | --- | --- |
 | `data/reports/latest-data-health.md` | Human-readable data health report for scheduled automation. |
 | `data/reports/latest-data-health.json` | Structured report for future dashboards or CI checks. |
+| `data/reports/latest-data-freshness.md` | Human-readable production freshness report with the 7-day public sailing threshold. |
+| `data/reports/latest-data-freshness.json` | Structured freshness report for scheduled automation and approval issues. |
 | `data/reports/latest-link-audit.md` | Human-readable public link audit. |
 | `data/reports/latest-link-audit.json` | Structured public link audit. |
 
-The report exits non-zero for blockers and exits zero when only warnings are
-present.
+The report exits non-zero for blockers, including public sailing fare checks
+older than 7 days, and exits zero when only warnings are present.
 
 ## Provider refresh commands
 
@@ -221,9 +223,9 @@ basis, taxes/fees language, and booking links are verified.
 pnpm run data:publish
 ```
 
-The command runs the health report and, if no blockers are found, copies bundles
-into `apps/web/public/data/bundles/`. After the website deploys, those files are
-available at:
+The command runs the health, freshness, link, and image reports and, if no
+blockers are found, copies bundles into `apps/web/public/data/bundles/`. After
+the website deploys, those files are available at:
 
 | URL | Purpose |
 | --- | --- |
@@ -242,9 +244,9 @@ before it goes live:
 pnpm run data:publish:candidate
 ```
 
-The command builds bundles, runs the data health report, link audit, and image
-audit, then prepares public bundles only when there are zero blockers and zero
-warnings. It writes:
+The command builds bundles, runs the data health report, data freshness report,
+link audit, and image audit, then prepares public bundles only when there are
+zero blockers and zero warnings. It writes:
 
 | Report | Purpose |
 | --- | --- |
@@ -273,7 +275,7 @@ on the local Mac being awake:
 | --- | --- | --- | --- |
 | Daily | `daily` | `pnpm run data:automation:daily` | `cruisekit-daily-data-reports` artifact |
 | Monday/Wednesday/Friday | `publish-candidate` | `pnpm run data:publish:candidate` | `cruisekit-publish-candidate` artifact |
-| Monday | `weekly-ingest` | `pnpm run data:ingest:weekly-report` | `cruisekit-weekly-ingest-reports` artifact |
+| Monday | `weekly-ingest` | `pnpm run data:ingest:weekly-report` + `pnpm run data:freshness` | `cruisekit-weekly-ingest-reports` artifact and `needs-kali` issue when stale |
 | Friday | `launch-readiness` | `pnpm run site:readiness` | `cruisekit-launch-readiness` artifact |
 | Monthly | `monthly-coverage` | `pnpm run data:automation:monthly` | `cruisekit-monthly-coverage-report` artifact |
 | Daily | `Deploy CruiseKit to GitHub Pages` | `pnpm --filter web build` | GitHub Pages deploy |
@@ -285,6 +287,13 @@ the workflow is run manually, and once per day on the schedule above. That daily
 deploy rebuilds the web app and data bundles from the current approved seed
 records without committing generated files, so expired sailings age out of the
 live `/data/bundles/` output automatically.
+
+The weekly ingest job also runs the provider staging-review tools and then runs
+the production freshness gate. Public sailing fare checks are expected to be no
+more than 7 days old. If the public bundle is stale, the weekly job creates or
+updates a GitHub issue titled `[needs-kali] CruiseKit data freshness review`,
+labels it `needs-kali`, uploads the reports, and fails the run so the stale
+state is visible.
 
 Manual GitHub runs can target a single job by choosing the `job` workflow input
 instead of running every automation job at once.
@@ -323,10 +332,14 @@ website + mobile app
 
 ### Weekly
 
+- Run every provider importer in report-only mode.
+- Run staging-review reports for providers that support review summaries.
 - Run full direct-link and affiliate-link audit.
-- Check stale `lastVerified` dates.
+- Block the weekly freshness gate when public `lastVerified` dates are older than 7 days.
 - Compare web/mobile bundle parity.
 - Review source failure rates.
+- Create or update a `needs-kali` issue when source-backed price/link/date
+  changes need approval before seed records can be promoted.
 
 ### Before enabling auto-publish
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
+import CalculatorSwitcher from "@/components/calculator/calculator-switcher";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CalculatorWithParams from "./calculator-with-params";
@@ -68,7 +69,11 @@ export default function CalculatorPage() {
           subtitle="Cruise fares leave out gratuities, taxes, drinks, WiFi, excursions, port spending, parking, insurance, and onboard extras. CruiseKit adds it up before you commit."
           breadcrumbs={[{ label: "Cruise Cost Calculator" }]}
         />
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
+          <CalculatorSwitcher active="total-cost" />
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <CalculatorWithParams />
         </section>
 

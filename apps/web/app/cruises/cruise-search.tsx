@@ -139,6 +139,11 @@ const REGION_LABELS: Record<DealRegion, string> = {
   alaska: "Alaska",
   pacific: "Pacific",
   asia: "Asia",
+  "south-america": "South America",
+  antarctica: "Antarctica",
+  "panama-canal": "Panama Canal",
+  "canada-new-england": "Canada & New England",
+  "australia-new-zealand": "Australia & New Zealand",
   other: "Other",
 };
 const ALL_REGIONS = [

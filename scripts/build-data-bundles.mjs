@@ -121,25 +121,41 @@ const PORT_IMAGE_SLUGS = new Set([
 ]);
 
 const PORT_IMAGE_ALIASES = {
+  "adriatic": "dubrovnik",
+  "arctic crossing": "oslo",
+  "athens": "santorini",
   "belize": "belize-city",
   "belize city": "belize-city",
+  "boston": "halifax",
   "cape liberty": "manhattan",
   "charlotte amalie": "st-thomas",
   "civitavecchia": "rome-civitavecchia",
+  "canada and new england": "halifax",
+  "canada & new england": "halifax",
+  "croatia": "dubrovnik",
+  "dominican": "puerto-plata",
+  "eastern caribbean": "st-thomas",
   "ephesus": "kusadasi",
   "george town": "grand-cayman",
   "grand cayman": "grand-cayman",
   "great stirrup cay": "great-stirrup-cay",
+  "greek isles": "santorini",
   "half moon": "half-moon-cay",
   "half moon cay": "half-moon-cay",
   "icy strait": "icy-strait-point",
+  "istanbul": "dubrovnik",
   "katakolon": "olympia-katakolon",
   "kralendijk": "bonaire",
   "malta": "valletta",
   "messina": "sicily-messina",
+  "new zealand": "auckland",
+  "new brunswick": "halifax",
+  "new england": "halifax",
   "new york": "manhattan",
+  "north cape": "oslo",
   "oranjestad": "aruba",
   "orlando": "port-canaveral",
+  "panama canal": "cartagena",
   "paris": "le-havre",
   "perfect day": "cococay",
   "philipsburg": "st-maarten",
@@ -147,11 +163,13 @@ const PORT_IMAGE_ALIASES = {
   "relaxaway half moon cay": "half-moon-cay",
   "road town": "tortola",
   "rome": "rome-civitavecchia",
+  "rotterdam": "amsterdam",
   "saint kitts": "st-kitts",
   "saint lucia": "st-lucia",
   "san miguel de cozumel": "cozumel",
   "sicily": "sicily-messina",
   "souda": "chania-souda",
+  "south america": "cartagena",
   "st kitts": "st-kitts",
   "st lucia": "st-lucia",
   "st maarten": "st-maarten",
@@ -160,21 +178,29 @@ const PORT_IMAGE_ALIASES = {
   "st. lucia": "st-lucia",
   "st. maarten": "st-maarten",
   "st. thomas": "st-thomas",
+  "trieste": "dubrovnik",
+  "western caribbean": "cozumel",
   "willemstad": "curacao",
 };
 
 const REGION_IMAGE_SLUGS = {
   alaska: "juneau",
+  antarctica: "cartagena",
+  asia: "shanghai",
   bahamas: "nassau",
   caribbean: "nassau",
   "california-coast": "san-diego",
+  "canada-new-england": "halifax",
   europe: "barcelona",
   hawaii: "miami",
   mediterranean: "barcelona",
   mexico: "cozumel",
   "mexican-riviera": "cabo-san-lucas",
   "northern-europe": "hamburg",
+  "panama-canal": "cartagena",
+  "south-america": "cartagena",
   "south-pacific": "sydney",
+  "australia-new-zealand": "sydney",
   transatlantic: "barcelona",
 };
 
@@ -300,11 +326,17 @@ function mobileImagePathForSailing(sailing) {
 }
 
 function imageSlugForSailing(sailing) {
+  const departure = normalizeImageText(sailing.departurePort);
+  const returning = normalizeImageText(sailing.returnPort);
+  const destinationPorts = sailing.itineraryPorts.filter((port) => {
+    const normalized = normalizeImageText(port);
+    return normalized && normalized !== departure && normalized !== returning;
+  });
   const candidates = [
-    ...sailing.itineraryPorts,
+    ...destinationPorts,
     sailing.sailingName,
-    sailing.departurePort,
     sailing.destinationRegion,
+    sailing.departurePort,
   ];
 
   for (const candidate of candidates) {
@@ -378,6 +410,8 @@ function dealScore(sailing) {
   if (sailing.nights >= 4 && sailing.nights <= 6) score += 18;
   if (sailing.nights === 7) score += 14;
   if (sailing.destinationRegion === "caribbean" || sailing.destinationRegion === "bahamas") score += 12;
+  if (["mediterranean", "asia", "south-america", "panama-canal"].includes(sailing.destinationRegion)) score += 10;
+  if (["canada-new-england", "australia-new-zealand", "antarctica"].includes(sailing.destinationRegion)) score += 6;
   if (sailing.confidence === "verified_from_cruise_line") score += 8;
   if (sailing.confidence === "itinerary_verified_price_check_required") score += 4;
   return score;

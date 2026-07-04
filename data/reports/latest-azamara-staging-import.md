@@ -1,16 +1,16 @@
 # Azamara Staging Import
 
-Generated: 2026-05-19T12:37:06.689Z
+Generated: 2026-07-01T23:21:16.189Z
 
 Mode: staging-only
 
-Source: https://www.azamara.com/cruises?destinations=CARIBBEAN,ALASKA
+Source: https://www.azamara.com/cruises?destinations=ASIA
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
-| Staged sailings | 45 |
+| Staged sailings | 0 |
 | Schema errors | 0 |
 
 ## Notes

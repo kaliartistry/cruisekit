@@ -120,6 +120,7 @@ final confidenceValues = EnumValues({
 
 ///Canonical cruise line slug.
 enum CruiseLine {
+    AZAMARA,
     CARNIVAL,
     CELEBRITY,
     DISNEY,
@@ -128,10 +129,12 @@ enum CruiseLine {
     NORWEGIAN,
     PRINCESS,
     ROYAL_CARIBBEAN,
+    VIKING,
     VIRGIN_VOYAGES
 }
 
 final cruiseLineValues = EnumValues({
+    "azamara": CruiseLine.AZAMARA,
     "carnival": CruiseLine.CARNIVAL,
     "celebrity": CruiseLine.CELEBRITY,
     "disney": CruiseLine.DISNEY,
@@ -140,6 +143,7 @@ final cruiseLineValues = EnumValues({
     "norwegian": CruiseLine.NORWEGIAN,
     "princess": CruiseLine.PRINCESS,
     "royal-caribbean": CruiseLine.ROYAL_CARIBBEAN,
+    "viking": CruiseLine.VIKING,
     "virgin-voyages": CruiseLine.VIRGIN_VOYAGES
 });
 
@@ -147,10 +151,13 @@ final cruiseLineValues = EnumValues({
 ///Primary marketing region for the itinerary.
 enum DestinationRegion {
     ALASKA,
+    ANTARCTICA,
     ASIA,
+    AUSTRALIA_NEW_ZEALAND,
     BAHAMAS,
     BERMUDA,
     CALIFORNIA_COAST,
+    CANADA_NEW_ENGLAND,
     CARIBBEAN,
     HAWAII,
     MEDITERRANEAN,
@@ -159,16 +166,21 @@ enum DestinationRegion {
     MIDDLE_EAST,
     NORTHERN_EUROPE,
     OTHER,
+    PANAMA_CANAL,
+    SOUTH_AMERICA,
     SOUTH_PACIFIC,
     TRANSATLANTIC
 }
 
 final destinationRegionValues = EnumValues({
     "alaska": DestinationRegion.ALASKA,
+    "antarctica": DestinationRegion.ANTARCTICA,
     "asia": DestinationRegion.ASIA,
+    "australia-new-zealand": DestinationRegion.AUSTRALIA_NEW_ZEALAND,
     "bahamas": DestinationRegion.BAHAMAS,
     "bermuda": DestinationRegion.BERMUDA,
     "california-coast": DestinationRegion.CALIFORNIA_COAST,
+    "canada-new-england": DestinationRegion.CANADA_NEW_ENGLAND,
     "caribbean": DestinationRegion.CARIBBEAN,
     "hawaii": DestinationRegion.HAWAII,
     "mediterranean": DestinationRegion.MEDITERRANEAN,
@@ -177,6 +189,8 @@ final destinationRegionValues = EnumValues({
     "middle-east": DestinationRegion.MIDDLE_EAST,
     "northern-europe": DestinationRegion.NORTHERN_EUROPE,
     "other": DestinationRegion.OTHER,
+    "panama-canal": DestinationRegion.PANAMA_CANAL,
+    "south-america": DestinationRegion.SOUTH_AMERICA,
     "south-pacific": DestinationRegion.SOUTH_PACIFIC,
     "transatlantic": DestinationRegion.TRANSATLANTIC
 });

@@ -1,67 +1,58 @@
 # Norwegian Staging Review
 
-Generated: 2026-05-16T22:29:47.296Z
+Generated: 2026-07-01T23:21:16.003Z
 
 Mode: review-only
 
-Source run: 2026-05-16T20-06-34-114Z
+Source run: 2026-07-01T23-20-36-930Z
 
 ## Counts
 
 | Metric | Count |
 | --- | ---: |
-| Seed Norwegian records | 40 |
-| Staged Norwegian records | 148 |
-| Exact matches | 35 |
+| Seed Norwegian records | 194 |
+| Staged Norwegian records | 40 |
+| Exact matches | 9 |
 | Hidden seed matches | 0 |
 | Price changes above threshold | 0 |
-| New candidates | 113 |
-| Missing from staging | 5 |
+| New candidates | 31 |
+| Missing from staging | 185 |
 
 ## Recommended New Candidates
 
 | Ship | Date | Nights | Price | Status | Link |
 | --- | --- | ---: | ---: | --- | --- |
-| Norwegian Epic | 2028-01-07 | 7 | $869 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334775) |
-| Norwegian Viva | 2026-12-05 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369081) |
-| Norwegian Epic | 2028-01-14 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334776) |
-| Norwegian Epic | 2027-01-24 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361667) |
-| Norwegian Getaway | 2027-03-31 | 5 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=23468076) |
-| Norwegian Epic | 2027-01-17 | 7 | $879 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIMBJGECCZMPCV&guests=2&gateway=NONE&packageId=23361666) |
-| Norwegian Escape | 2027-01-15 | 7 | $889 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369110) |
-| Norwegian Escape | 2027-01-22 | 7 | $889 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369111) |
-| Norwegian Escape | 2027-01-29 | 7 | $889 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=23369112) |
-| Norwegian Escape | 2027-08-04 | 5 | $889 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223946) |
-| Norwegian Epic | 2026-11-22 | 7 | $889 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIMBJGECCZMPCV&guests=2&gateway=NONE&packageId=23361658) |
-| Norwegian Escape | 2026-07-05 | 7 | $899 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997526) |
-| Norwegian Escape | 2026-07-12 | 7 | $899 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997527) |
-| Norwegian Prima | 2026-09-13 | 7 | $899 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925676) |
-| Norwegian Getaway | 2027-03-26 | 5 | $899 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=GETAWAY5PCVCZMNPIPCV&guests=2&gateway=NONE&packageId=23468022) |
-| Norwegian Escape | 2026-05-31 | 7 | $899 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997521) |
-| Norwegian Escape | 2026-06-07 | 7 | $899 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE7MIACZMRTBBPICMAMIA&guests=2&gateway=NONE&packageId=22997522) |
-| Norwegian Prima | 2026-08-23 | 7 | $909 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925659) |
-| Norwegian Epic | 2027-12-03 | 7 | $909 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334770) |
-| Norwegian Epic | 2027-03-28 | 7 | $909 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361676) |
-| Norwegian Viva | 2026-10-31 | 7 | $919 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369076) |
-| Norwegian Epic | 2027-11-12 | 7 | $919 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334767) |
-| Norwegian Epic | 2027-11-26 | 7 | $929 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=25334769) |
-| Norwegian Escape | 2027-06-09 | 5 | $929 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223942) |
-| Norwegian Escape | 2027-07-07 | 5 | $929 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223944) |
-| Norwegian Epic | 2027-02-07 | 7 | $939 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361669) |
-| Norwegian Epic | 2027-02-28 | 7 | $939 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361672) |
-| Norwegian Prima | 2026-08-09 | 7 | $959 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVPOPSTTTOVNPIPCV&guests=2&gateway=NONE&packageId=22925658) |
-| Norwegian Epic | 2027-03-07 | 7 | $959 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIOCJGECCZMPCV&guests=2&gateway=NONE&packageId=23361673) |
-| Norwegian Luna | 2026-11-28 | 7 | $969 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367512) |
-| Norwegian Escape | 2027-06-23 | 5 | $969 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=ESCAPE5PCVPOPNPIPCV&guests=2&gateway=NONE&packageId=24223943) |
-| Norwegian Viva | 2026-11-07 | 7 | $989 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=VIVA7GALCZMRTBBPICMAGAL&guests=2&gateway=NONE&packageId=23369077) |
-| Norwegian Epic | 2027-03-21 | 7 | $989 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=EPIC7PCVNPIMBJGECCZMPCV&guests=2&gateway=NONE&packageId=23361675) |
-| Norwegian Luna | 2026-11-07 | 7 | $1,029 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367509) |
-| Norwegian Luna | 2026-11-14 | 7 | $1,029 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICZMNPIMIA&guests=2&gateway=NONE&packageId=23367510) |
-| Norwegian Prima | 2026-08-02 | 7 | $1,049 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=PRIMA7PCVNPIFMHGECCZMPCV&guests=2&gateway=NONE&packageId=22925673) |
-| Norwegian Luna | 2026-12-05 | 7 | $1,049 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367513) |
-| Norwegian Luna | 2026-12-12 | 7 | $1,049 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367514) |
-| Norwegian Aqua | 2026-12-13 | 7 | $1,059 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=AQUA7MIAPOPSTTTOVNPIMIA&guests=2&gateway=NONE&packageId=23353045) |
-| Norwegian Luna | 2027-01-09 | 7 | $1,059 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=LUNA7MIARTBBPICMACZMMIA&guests=2&gateway=NONE&packageId=23367518) |
+| Norwegian Jade | 2028-03-04 | 9 | $1,999 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9TOKSMZNGOOSAKCZHSMKOJNGSJJUINC&guests=2&gateway=NONE&packageId=25376618) |
+| Norwegian Jade | 2028-01-03 | 12 | $2,009 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE12HKGCORPPSKKBMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25382099) |
+| Norwegian Jade | 2027-03-14 | 9 | $2,069 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSSHIHSMBE9KCZNGOSMZYOK&guests=2&gateway=NONE&packageId=24564956) |
+| Norwegian Jade | 2026-11-12 | 9 | $2,119 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9YOKSMZNGOKOBKCZHSMKOJNGSJJUINC&guests=2&gateway=NONE&packageId=24544549) |
+| Norwegian Jade | 2028-01-28 | 12 | $2,139 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE12HKGCORPPSKKBMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25382100) |
+| Norwegian Jade | 2027-03-05 | 9 | $2,139 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9TOKSMZNGOOSAKCZHSMKOJNGSJJUINC&guests=2&gateway=NONE&packageId=23410581) |
+| Norwegian Jade | 2028-03-13 | 9 | $2,159 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSHK1HSMMATWAKNGOSMZYOK&guests=2&gateway=NONE&packageId=25480097) |
+| Norwegian Jade | 2028-03-22 | 9 | $2,159 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9YOKSMZNGOKOBWAKKOJNGSJJUINC&guests=2&gateway=NONE&packageId=25480099) |
+| Norwegian Jade | 2026-11-21 | 9 | $2,179 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSKOJHSMKCZOSANGOSMZYOK&guests=2&gateway=NONE&packageId=24564052) |
+| Norwegian Jade | 2028-01-15 | 13 | $2,239 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE13SINKOHLCHSGNMUAKKBPPSCORHKG&guests=2&gateway=NONE&packageId=25373178) |
+| Norwegian Jade | 2028-03-31 | 9 | $2,249 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSKOJHSMBE9TKSNGOSMZYOK&guests=2&gateway=NONE&packageId=25480098) |
+| Norwegian Jade | 2027-10-24 | 11 | $2,249 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11INCSAKNIIAKIAOMHKDNGOOSASMZTOK&guests=2&gateway=NONE&packageId=25367237) |
+| Norwegian Jade | 2027-11-18 | 11 | $2,309 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11TOKSMZNGOOSAKCZHSMHK1SHINGSJJUSASTOK&guests=2&gateway=NONE&packageId=25367407) |
+| Norwegian Jade | 2027-01-17 | 11 | $2,339 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11SINLCHKOHSGNCMYHANHKG&guests=2&gateway=NONE&packageId=25425836) |
+| Norwegian Jade | 2028-02-09 | 13 | $2,359 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE13SINKOHLCHSGNMUAKKBPPSCORHKG&guests=2&gateway=NONE&packageId=25373179) |
+| Norwegian Jade | 2027-12-21 | 13 | $2,399 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE13SINKOHLCHSGNMUAKKBPPSCORHKG&guests=2&gateway=NONE&packageId=25373177) |
+| Norwegian Jade | 2027-10-13 | 11 | $2,419 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11YOKSMZNGOKOBSDAHKDAKIKZWMAIINC&guests=2&gateway=NONE&packageId=25480096) |
+| Norwegian Jade | 2027-03-23 | 9 | $2,599 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9YOKSMZNGOTKSKCZHSMKOJNGSJJUINC&guests=2&gateway=NONE&packageId=24564958) |
+| Norwegian Jade | 2026-12-23 | 11 | $2,759 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11SINKOHLCHSGNCMYHANHKG&guests=2&gateway=NONE&packageId=25425470) |
+| Norwegian Jade | 2026-10-07 | 11 | $2,829 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11YOKSMZOSASDAHKDAOMAKIKZWSAKINC&guests=2&gateway=NONE&packageId=24544151) |
+| Norwegian Jade | 2027-01-28 | 12 | $2,909 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE12HKGCORPPSKKBMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=23410568) |
+| Norwegian Jade | 2027-04-01 | 9 | $2,979 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE9INCJJUNGSKOJHSMBE9KCZKOBNGOYOK&guests=2&gateway=NONE&packageId=24565539) |
+| Norwegian Jade | 2027-01-03 | 14 | $3,069 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14HKGCORBORPPSKKBMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25425653) |
+| Norwegian Jade | 2026-12-09 | 14 | $3,259 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14HKGCORBORPPSMUASGNLCHKOHSIN&guests=2&gateway=NONE&packageId=25425196) |
+| Norwegian Jade | 2027-02-22 | 11 | $3,329 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE11HKGKAOKEEISHNGSKOJHSMKCZKOBSMZTOK&guests=2&gateway=NONE&packageId=23410569) |
+| Norwegian Jade | 2027-11-04 | 14 | $3,399 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14TOKSDAHKDAOMAKINIIKZWPUSSHIHSMKCZOSANGOSMZTOK&guests=2&gateway=NONE&packageId=25367238) |
+| Norwegian Jade | 2026-10-29 | 14 | $3,629 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14TOKSDAHKDAOMAKISKTKZWPUSSHIHSMKCZOSANGOSMZYOK&guests=2&gateway=NONE&packageId=24544541) |
+| Norwegian Jade | 2028-04-09 | 14 | $3,699 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14YOKNGOSMZOSAKCZHSMKOJNGSPUSSAKKZWAKIHKDSDAYOK&guests=2&gateway=NONE&packageId=25480100) |
+| Norwegian Jade | 2027-02-09 | 13 | $3,739 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE13SINKOHLCHSGNMUAKKBPPSCORHKG&guests=2&gateway=NONE&packageId=23410577) |
+| Norwegian Jade | 2027-04-10 | 14 | $4,489 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=JADE14YOKSMZNGOKONBE9HSMKOJNGSPUSKZWAKIHKDSDAYOK&guests=2&gateway=NONE&packageId=24568755) |
+| Norwegian Spirit | 2028-02-09 | 19 | $3,159 | new candidate | [source](https://www.ncl.com/vacation-builder/planning/cruiseItinerary?itineraryCode=SPIRIT19SINSUBDPSFREBUSADLKANMELBWTQDNSYD&guests=2&gateway=NONE&packageId=25343358) |
 
 ## Price Changes To Review
 

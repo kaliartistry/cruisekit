@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-19T06:19:05.935Z",
+  "generatedAt": "2026-07-01T14:33:01.058Z",
   "provider": "viking",
-  "runId": "2026-05-19T06-19-05-935Z",
+  "runId": "2026-07-01T14-33-01-058Z",
   "mode": "itinerary-candidates-only",
   "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
   "pageTitle": "Find A Cruise | Viking Ocean Cruises®",
@@ -12,7 +12,7 @@
   },
   "priceRange": {
     "min": 2499,
-    "max": 21998
+    "max": 9999
   },
   "sampleCandidates": [
     {
@@ -21,55 +21,7 @@
       "route": "Barcelona to Rome (Civitavecchia)",
       "days": 8,
       "nights": 7,
-      "fromPrice": 2599,
-      "currency": "USD",
-      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
-      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
-      "confidence": "itinerary_level_price_check_required"
-    },
-    {
-      "cruiseLine": "viking",
-      "title": "NEW! Grand Africa to Asia Explorer",
-      "route": "Cape Town to Tokyo",
-      "days": 37,
-      "nights": 36,
-      "fromPrice": 11999,
-      "currency": "USD",
-      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
-      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
-      "confidence": "itinerary_level_price_check_required"
-    },
-    {
-      "cruiseLine": "viking",
-      "title": "NEW! Grand Iberia, Africa & Asia Passage",
-      "route": "Barcelona to Tokyo",
-      "days": 65,
-      "nights": 64,
-      "fromPrice": 21998,
-      "currency": "USD",
-      "offerText": "FREE AIRFARE* | REDUCED FARES | $25 DEPOSIT",
-      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
-      "confidence": "itinerary_level_price_check_required"
-    },
-    {
-      "cruiseLine": "viking",
-      "title": "Journey to Antiquities",
-      "route": "Rome (Civitavecchia) to Athens (Piraeus)",
-      "days": 8,
-      "nights": 7,
       "fromPrice": 2499,
-      "currency": "USD",
-      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
-      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
-      "confidence": "itinerary_level_price_check_required"
-    },
-    {
-      "cruiseLine": "viking",
-      "title": "Ancient Mediterranean Treasures",
-      "route": "Istanbul to Athens (Piraeus)",
-      "days": 8,
-      "nights": 7,
-      "fromPrice": 2599,
       "currency": "USD",
       "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
       "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
@@ -101,6 +53,66 @@
     },
     {
       "cruiseLine": "viking",
+      "title": "British Isles Explorer",
+      "route": "Bergen to London (Greenwich)",
+      "days": 15,
+      "nights": 14,
+      "fromPrice": 6999,
+      "currency": "USD",
+      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
+      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
+      "confidence": "itinerary_level_price_check_required"
+    },
+    {
+      "cruiseLine": "viking",
+      "title": "Viking Homelands",
+      "route": "Stockholm to Bergen",
+      "days": 15,
+      "nights": 14,
+      "fromPrice": 8499,
+      "currency": "USD",
+      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
+      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
+      "confidence": "itinerary_level_price_check_required"
+    },
+    {
+      "cruiseLine": "viking",
+      "title": "NEW! British Isles & Ireland",
+      "route": "London (Greenwich) to Belfast",
+      "days": 15,
+      "nights": 14,
+      "fromPrice": 7999,
+      "currency": "USD",
+      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
+      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
+      "confidence": "itinerary_level_price_check_required"
+    },
+    {
+      "cruiseLine": "viking",
+      "title": "Journey to Antiquities",
+      "route": "Rome (Civitavecchia) to Athens (Piraeus)",
+      "days": 8,
+      "nights": 7,
+      "fromPrice": 2499,
+      "currency": "USD",
+      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
+      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
+      "confidence": "itinerary_level_price_check_required"
+    },
+    {
+      "cruiseLine": "viking",
+      "title": "Ancient Mediterranean Treasures",
+      "route": "Istanbul to Athens (Piraeus)",
+      "days": 8,
+      "nights": 7,
+      "fromPrice": 2499,
+      "currency": "USD",
+      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
+      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
+      "confidence": "itinerary_level_price_check_required"
+    },
+    {
+      "cruiseLine": "viking",
       "title": "NEW! Spain & Portugal Discovery",
       "route": "Lisbon to Barcelona",
       "days": 8,
@@ -113,23 +125,11 @@
     },
     {
       "cruiseLine": "viking",
-      "title": "Greek Odyssey",
-      "route": "Roundtrip Athens (Piraeus), Greece",
+      "title": "Alaska & the Inside Passage",
+      "route": "Vancouver, British Columbia to Seward, Alaska",
       "days": 11,
       "nights": 10,
-      "fromPrice": 3799,
-      "currency": "USD",
-      "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
-      "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
-      "confidence": "itinerary_level_price_check_required"
-    },
-    {
-      "cruiseLine": "viking",
-      "title": "Mediterranean Odyssey",
-      "route": "Barcelona to Venice (Chioggia)",
-      "days": 13,
-      "nights": 12,
-      "fromPrice": 6299,
+      "fromPrice": 5499,
       "currency": "USD",
       "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
       "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
@@ -137,9 +137,9 @@
     }
   ],
   "paths": {
-    "raw": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/raw/viking/2026-05-19T06-19-05-935Z",
-    "staging": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/staging/viking/2026-05-19T06-19-05-935Z",
-    "report": "/Users/kaliartistry-mac/Cruise Travel Agent/data/ingest/reports/viking"
+    "raw": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/raw/viking/2026-07-01T14-33-01-058Z",
+    "staging": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/staging/viking/2026-07-01T14-33-01-058Z",
+    "report": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/reports/viking"
   },
   "notes": [
     "Viking's search cards are official but itinerary-level; they do not include specific departure dates on the first search page.",

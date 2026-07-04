@@ -1,6 +1,6 @@
 # Viking Itinerary Candidate Import
 
-Generated: 2026-05-19T06:19:05.935Z
+Generated: 2026-07-01T14:33:01.058Z
 
 Mode: itinerary-candidates-only
 
