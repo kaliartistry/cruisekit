@@ -7,9 +7,9 @@ import DrinkPackageCalculator from "@/components/calculator/drink-package-calcul
 
 const PAGE_URL = "https://cruisekit.app/cruise-drink-package-calculator/";
 const PAGE_TITLE =
-  "Cruise Drink Package Calculator: Find the Best Value for Your Sailing";
+  "Cruise Drink Package Calculator: Is It Worth It?";
 const PAGE_DESCRIPTION =
-  "Use our cruise drink package calculator to estimate whether Carnival CHEERS, Royal Caribbean Deluxe, NCL Free at Sea, Princess Plus, MSC, Celebrity, Holland America, or Virgin Bar Tab is worth it based on your planned onboard purchases.";
+  "Use CruiseKit's drink package calculator to compare break-even value, bundles, and covered drink tracking without pressure to drink more.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     "drink package calculator cruise",
     "cruise beverage package calculator",
     "is a cruise drink package worth it",
+    "are cruise drink packages worth it",
+    "cruise drink package worth it calculator",
+    "drink package break even",
     "how many drinks to break even on a cruise",
     "Carnival CHEERS calculator",
     "Royal Caribbean drink package calculator",
@@ -62,6 +65,11 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
+    question: "Is a cruise drink package worth it?",
+    answer:
+      "A cruise drink package is worth it only when the package cost plus service charge is less than the value of drinks and non-alcoholic items you would already buy. Port days, cabin rules, buyer requirements, package caps, and bundled perks can change the answer. CruiseKit treats this as value tracking, not a reason to drink more.",
+  },
+  {
     question: "What is the best cruise drink package calculator?",
     answer:
       "The best calculator for your cruise is one that uses your actual sailing price, applies cruise-line-specific rules, and lets you compare package cost against what you already plan to buy onboard.",
@@ -70,7 +78,7 @@ const faqs = [
     question:
       "How many drinks do you need to break even on a cruise drink package?",
     answer:
-      "The break-even point depends on the package price, service charge, required buyers, cruise length, and the menu value of drinks or non-alcoholic items you would already buy. Many packages land near 5 to 8 paid drinks per day for one buyer, but cabin rules and port days can change the result.",
+      "The break-even point depends on the package price, service charge, required buyers, cruise length, and the menu value of drinks or non-alcoholic items you would already buy. Many packages land near 5 to 8 paid drinks per day for one buyer, but cabin rules, port days, and included specialty coffees, water, soda, or mocktails can change the result.",
   },
   {
     question: "Is Carnival CHEERS worth it?",
@@ -101,6 +109,11 @@ const faqs = [
     question: "Why do some cruise lines require me to enter the package price?",
     answer:
       "Some cruise lines change beverage package prices by ship, date, itinerary, booking portal, offer, or fare selection. Entering the price from your cruise planner gives a more useful estimate than hardcoding a generic number.",
+  },
+  {
+    question: "Can I use CruiseKit after I already bought the drink package?",
+    answer:
+      "Yes. Use the calculator before the cruise, then use CruiseKit Spend in the mobile app to track covered drink value separately from regular trip spend. The app can show whether the package value is paying off without turning break-even into a drinking goal.",
   },
 ];
 
@@ -222,13 +235,13 @@ export default function CruiseDrinkPackageCalculatorPage() {
 
             <div className="max-w-4xl">
               <h1 className="text-4xl font-bold tracking-tight text-navy sm:text-5xl lg:text-6xl">
-                Cruise Drink Package Calculator
+                Is the Cruise Drink Package Worth It?
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-gray-700">
-                Estimate whether a drink package, bundled fare, or prepaid Bar
-                Tab is the best value for your sailing based on planned onboard
-                purchases, cabin rules, service charges, and line-specific
-                package limits.
+                Run the break-even math before you buy, then use CruiseKit
+                Spend in the app to track covered value during the trip. The
+                goal is to compare package cost against what you would already
+                buy, not to push anyone to drink more.
               </p>
               <CalculatorSwitcher
                 active="drink-package"
@@ -236,13 +249,13 @@ export default function CruiseDrinkPackageCalculatorPage() {
               />
               <div className="mt-6 grid gap-3 text-sm text-gray-700 sm:grid-cols-3">
                 <div className="rounded-lg border border-gray-200 bg-white p-4">
-                  Cruise-line-specific rules
+                  Break-even before you buy
                 </div>
                 <div className="rounded-lg border border-gray-200 bg-white p-4">
-                  Service charges and buyer limits
+                  Track covered value onboard
                 </div>
                 <div className="rounded-lg border border-gray-200 bg-white p-4">
-                  Source-backed assumptions
+                  No-pressure value language
                 </div>
               </div>
             </div>
@@ -286,7 +299,19 @@ export default function CruiseDrinkPackageCalculatorPage() {
                 result compares available credit with expected total spend and
                 notes that unused credit may be forfeited.
               </p>
+              <p>
+                During your cruise, CruiseKit Spend can track covered drink
+                value separately from trip spend. That keeps the package
+                decision practical: you can see whether prepaid value is paying
+                off without treating break-even as a drinking target.
+              </p>
             </div>
+            <Link
+              href="/app"
+              className="mt-7 inline-flex rounded-md bg-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-navy/90"
+            >
+              Track drink package value in the app
+            </Link>
           </div>
         </section>
 
