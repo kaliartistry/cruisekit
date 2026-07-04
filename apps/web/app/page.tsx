@@ -9,15 +9,16 @@ import MapFeatureTeaser from "./map-feature-teaser";
 import AuthorityHubTeaser from "./authority-hub-teaser";
 
 export const metadata: Metadata = {
-  title: "Free Cruise Planner App With Route Maps + Port Guides",
+  title: "CruiseKit - MyDay Cruise Planner, Spend Tracker, Port Maps",
   description:
-    "Download CruiseKit for iPhone and Android to visualize cruise routes, explore cruise port guides, compare destinations, and calculate true cruise costs.",
+    "Download CruiseKit for iPhone and Android to save your cruise, use MyDay, track spending and drink package value, and open itinerary port maps.",
   keywords: [
-    "cruise app with map",
-    "cruise route map app",
-    "cruise port guide app",
+    "cruise planner app",
+    "cruise spend tracker",
+    "cruise drink package tracker",
+    "MyDay cruise planner",
     "free cruise planning app",
-    "cruise itinerary planner",
+    "cruise port map app",
   ],
 };
 

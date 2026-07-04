@@ -8,15 +8,12 @@ import {
   Ship,
   Menu,
   X,
-  Calculator,
+  DollarSign,
   Map,
   Navigation,
-  Star,
-  Anchor,
   BookOpen,
   Heart,
   LogOut,
-  Scale,
   ArrowRight,
   Smartphone,
 } from "lucide-react";
@@ -33,12 +30,10 @@ import {
 import { trackDownloadCtaClicked } from "@/lib/analytics";
 
 const NAV_LINKS = [
-  { label: "Compare", href: "/compare", icon: Scale },
-  { label: "Calculator", href: "/calculator", icon: Calculator },
-  { label: "Sailings", href: "/cruises", icon: Anchor },
-  { label: "Ports", href: "/ports", icon: Map },
+  { label: "App", href: "/app", icon: Smartphone },
   { label: "MyDay", href: "/myday", icon: Navigation },
-  { label: "Loyalty", href: "/loyalty", icon: Star },
+  { label: "Spend", href: "/app#spend", icon: DollarSign },
+  { label: "Ports", href: "/ports", icon: Map },
   { label: "Guides", href: "/guides", icon: BookOpen },
 ] as const;
 
@@ -92,10 +87,10 @@ export default function Navbar() {
   const mobileAppLive = iosLive || androidLive;
   const mobileLaunchText =
     iosLive && androidLive
-      ? "CruiseKit is live on iPhone and Android."
+      ? "CruiseKit is available now."
       : iosLive
-        ? "CruiseKit for iPhone is live."
-        : "CruiseKit for Android is live.";
+        ? "CruiseKit is available for iPhone."
+        : "CruiseKit is available for Android.";
   const trackAppDownload = () => trackDownloadCtaClicked("unknown", "other");
 
   return (

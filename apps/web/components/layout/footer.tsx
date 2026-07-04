@@ -6,15 +6,14 @@ const FOOTER_COLUMNS = [
   {
     title: "Platform",
     links: [
-      { label: "Browse Sailings", href: "/cruises" },
       { label: "Download the App", href: "/app" },
-      { label: "Cruise Route Map", href: "/features/cruise-route-map" },
-      { label: "Explore Map", href: "/features/explore-map" },
-      { label: "True Cost Calculator", href: "/calculator" },
-      { label: "Port Day Planner", href: "/ports" },
       { label: "MyDay", href: "/myday" },
-      { label: "Loyalty Hub", href: "/loyalty" },
-      { label: "Compare Cruise Lines", href: "/compare" },
+      { label: "Spend Tracker", href: "/app#spend" },
+      { label: "Drink Package Tracker", href: "/cruise-drink-package-calculator" },
+      { label: "Itinerary Port Guides", href: "/ports" },
+      { label: "Cruise Route Map", href: "/features/cruise-route-map" },
+      { label: "True Cost Calculator", href: "/calculator" },
+      { label: "Browse Sailings", href: "/cruises" },
     ],
   },
   {

@@ -48,11 +48,11 @@ export default function AuthorityHubTeaser() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-[0.9fr_1.1fr]">
-          <div className="overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+          <div className="overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
             <div className="relative aspect-[4/3] bg-gray-100">
               <Image
-                src="/assets/app-screenshots/myday-itinerary.png"
-                alt="CruiseKit itinerary screen showing organized cruise plans"
+                src="/assets/app-screenshots/myday-home.png"
+                alt="CruiseKit MyDay screen showing saved cruise tools"
                 fill
                 sizes="(min-width: 1024px) 22vw, 100vw"
                 className="object-cover object-top"
@@ -60,7 +60,7 @@ export default function AuthorityHubTeaser() {
             </div>
           </div>
           <div className="grid gap-3">
-            <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
+            <div className="rounded-lg border border-gray-200 bg-gray-50 p-5">
               <FileText className="h-5 w-5 text-teal" />
               <h3 className="mt-3 text-base font-bold text-navy">
                 Clear public facts
@@ -70,7 +70,7 @@ export default function AuthorityHubTeaser() {
                 assistants.
               </p>
             </div>
-            <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
+            <div className="rounded-lg border border-gray-200 bg-gray-50 p-5">
               <ShieldCheck className="h-5 w-5 text-teal" />
               <h3 className="mt-3 text-base font-bold text-navy">
                 Boundaries and trust

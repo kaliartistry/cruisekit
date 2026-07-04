@@ -1,24 +1,24 @@
 import Link from "next/link";
-import { ArrowRight, Compass, MapPinned, Route } from "lucide-react";
+import { ArrowRight, CalendarDays, MapPinned, Route } from "lucide-react";
 
 const MAP_FEATURES = [
   {
-    title: "Cruise Route Map",
-    body: "See each cruise day, sea day, and port stop as a simple visual itinerary.",
+    title: "Itinerary Route Context",
+    body: "See the cruise days, sea days, and port sequence tied to the sailing you saved.",
     href: "/features/cruise-route-map",
     icon: Route,
   },
   {
-    title: "Port Guide Map Cards",
-    body: "Preview walkability, tender status, currency, Wi-Fi, cell coverage, and top things to do.",
+    title: "Itinerary Port Maps",
+    body: "Open maps for the ports on your cruise, with terminal and point-of-interest context.",
     href: "/features/cruise-port-guides",
     icon: MapPinned,
   },
   {
-    title: "Explore Map",
-    body: "Browse cruise ports visually, filter by region, and open destination guides.",
-    href: "/features/explore-map",
-    icon: Compass,
+    title: "Plan Port Day",
+    body: "Start plans from port details and points of interest, then keep them close in MyDay.",
+    href: "/app",
+    icon: CalendarDays,
   },
 ] as const;
 
@@ -28,18 +28,18 @@ export default function MapFeatureTeaser() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-              Visual cruise planning without expensive or complicated tools.
+            <h2 className="text-2xl font-bold text-navy sm:text-3xl">
+              Port maps that stay tied to your actual itinerary.
             </h2>
             <p className="mt-4 text-base leading-7 text-gray-600">
-              CruiseKit is a free cruise planning app that helps travelers
-              visualize cruise routes, explore cruise ports, compare
-              destinations, and plan better cruise days.
+              CruiseKit keeps port planning focused on the stops you are
+              visiting. Save a cruise, open the relevant port guides, and use
+              the map as context for getting back to the ship on time.
             </p>
             <p className="mt-3 text-sm leading-6 text-gray-500">
-              CruiseKit maps are built for planning and discovery: see where
-              your cruise is going, preview ports, and understand each
-              destination before you sail.
+              Public port research still lives on the website, but the mobile
+              app avoids overwhelming travelers with ports that are not part of
+              their sailing.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
@@ -47,7 +47,7 @@ export default function MapFeatureTeaser() {
               <Link
                 key={href}
                 href={href}
-                className="group rounded-xl border border-gray-200 bg-white p-5 shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-teal/40 hover:shadow-[var(--shadow-md)]"
+                className="group rounded-lg border border-gray-200 bg-white p-5 shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-teal/40 hover:shadow-[var(--shadow-md)]"
               >
                 <Icon className="h-6 w-6 text-teal" strokeWidth={2.1} />
                 <h3 className="mt-4 text-base font-extrabold text-navy">

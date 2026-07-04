@@ -5,7 +5,15 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Ship, Check, Calculator, Map, Navigation, ArrowRight, Smartphone } from "lucide-react";
+import {
+  Ship,
+  Check,
+  DollarSign,
+  Navigation,
+  ArrowRight,
+  Smartphone,
+  Wine,
+} from "lucide-react";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import {
@@ -22,22 +30,22 @@ import {
 
 const HERO_PROOF = [
   {
-    icon: Calculator,
-    label: "Calculator",
-    value: "Estimate the full cost. No sticker-price tricks.",
-    href: "/calculator",
-  },
-  {
-    icon: Map,
-    label: "Ports",
-    value: "Ship time, port time, and all-aboard math for every port.",
-    href: "/ports",
-  },
-  {
     icon: Navigation,
     label: "MyDay",
-    value: "Ship-time, schedule, and spend tools in the app.",
-    href: "/myday",
+    value: "Your cruise countdown, current day, ports, reminders, and crew.",
+    href: "/app",
+  },
+  {
+    icon: DollarSign,
+    label: "Spend",
+    value: "Track exact trip spend and see what remains in your budget.",
+    href: "/app",
+  },
+  {
+    icon: Wine,
+    label: "Drink package",
+    value: "Log covered value without pressure to chase break-even.",
+    href: "/app",
   },
 ] as const;
 
@@ -76,10 +84,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5 tracking-tight leading-[1.05]"
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5 leading-[1.05]"
         >
-          Your phone says 2pm.{" "}
-          <span className="text-amber-400">The ship says 1pm.</span>
+          Save your cruise.{" "}
+          <span className="text-amber-400">Let MyDay keep it straight.</span>
         </motion.h1>
 
         <motion.p
@@ -88,9 +96,9 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-base sm:text-lg text-white/85 mb-6 max-w-2xl mx-auto"
         >
-          Cruises look cheap on the sticker and expensive on the folio.
-          CruiseKit helps you estimate the full cost, plan the schedule, and
-          understand the logistics before you board.
+          CruiseKit keeps the mobile app focused on what cruisers actually use:
+          MyDay, exact spend tracking, drink package value, itinerary port
+          maps, and MyCrew invites.
         </motion.p>
 
         <motion.div
@@ -106,7 +114,7 @@ export default function HeroSection() {
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-all hover:bg-teal hover:text-white sm:w-auto"
             >
               <Smartphone className="h-4 w-4" strokeWidth={2.2} />
-              Download the free app
+              Get the free app
             </Link>
           )}
           <Link
@@ -133,9 +141,9 @@ export default function HeroSection() {
           className="flex items-center justify-center gap-3 sm:gap-5 mb-8 flex-wrap"
         >
           {[
-            "Major cruise lines",
-            "Transparent cost estimates",
-            "No booking, no upsell",
+            "No booking flow",
+            "Itinerary-first ports",
+            "Spend and drink package tracking",
           ].map((text) => (
             <span
               key={text}
@@ -179,9 +187,9 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-5 sm:p-6 max-w-2xl mx-auto"
         >
-          <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 text-left">
+          <label className="block text-xs font-semibold text-gray-500 uppercase mb-2 text-left">
             <Ship className="inline h-3.5 w-3.5 mr-1" />
-            Pick your cruise line
+            Want a web estimate first?
           </label>
 
           {hasSelectedLine && (
@@ -211,7 +219,7 @@ export default function HeroSection() {
             onClick={handleSubmit}
             className="w-full bg-teal hover:bg-teal-dark text-white font-bold py-4 px-6 rounded-xl text-base transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
           >
-            Estimate my cruise cost
+            Estimate before I sail
             <span aria-hidden="true">&rarr;</span>
           </button>
         </motion.div>
