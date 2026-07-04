@@ -27,6 +27,7 @@ export type FeaturePageProps = {
   title: string;
   description: string;
   shortAnswer: string;
+  canonicalPath: string;
   visual: FeatureVisual;
   featureBullets: string[];
   does: string[];
@@ -39,6 +40,7 @@ export function FeaturePage({
   title,
   description,
   shortAnswer,
+  canonicalPath,
   visual,
   featureBullets,
   does,
@@ -46,23 +48,71 @@ export function FeaturePage({
   faqs,
   relatedLinks = [],
 }: FeaturePageProps) {
+  const canonicalUrl = `https://cruisekit.app${canonicalPath}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: title,
+        description,
+        isPartOf: {
+          "@type": "WebSite",
+          name: "CruiseKit",
+          url: "https://cruisekit.app",
+        },
+        about: {
+          "@type": "SoftwareApplication",
+          name: "CruiseKit",
+          applicationCategory: "TravelApplication",
+          operatingSystem: "iOS, Android",
+          url: "https://cruisekit.app",
+        },
+        breadcrumb: {
+          "@id": `${canonicalUrl}#breadcrumb`,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://cruisekit.app",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: title,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faq`,
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
-          }),
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
       <section className="border-b border-gray-200 bg-white">

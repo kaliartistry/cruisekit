@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-07-04T14:42:13.586Z",
+  "checks": {
+    "path": {
+      "ok": true,
+      "output": "C:\\Users\\ilak_\\Projects\\cruisekit"
+    },
+    "status": {
+      "ok": true,
+      "output": "## codex/growthops-2026-07-04"
+    },
+    "remote": {
+      "ok": true,
+      "output": "origin\thttps://github.com/kaliartistry/cruisekit.git (fetch)\norigin\thttps://github.com/kaliartistry/cruisekit.git (push)"
+    },
+    "fetch": {
+      "ok": true,
+      "output": ""
+    },
+    "branch": {
+      "ok": true,
+      "output": "codex/growthops-2026-07-04"
+    },
+    "ghPrs": {
+      "ok": true,
+      "output": "[{\"headRefName\":\"codex/active-cruise-sync\",\"number\":39,\"state\":\"OPEN\",\"title\":\"Add active cruise sync\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/39\"},{\"headRefName\":\"codex/growthops-2026-07-03\",\"number\":37,\"state\":\"OPEN\",\"title\":\"[codex] Add MyDay schema metadata\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/37\"},{\"headRefName\":\"codex/growthops-2026-07-02\",\"number\":35,\"state\":\"OPEN\",\"title\":\"[codex] Add blog index metadata\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/35\"},{\"headRefName\":\"codex/growthops-2026-07-01\",\"number\":29,\"state\":\"OPEN\",\"title\":\"[codex] Add Group Hub schema metadata\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/29\"},{\"headRefName\":\"codex/growthops-2026-06-30\",\"number\":26,\"state\":\"OPEN\",\"title\":\"[codex] Clarify GrowthOps reporting boundaries\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/26\"},{\"headRefName\":\"codex/growthops-2026-06-29\",\"number\":25,\"state\":\"OPEN\",\"title\":\"[codex] Add cruise line app planner blog\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/25\"},{\"headRefName\":\"codex/growthops-2026-06-28\",\"number\":24,\"state\":\"OPEN\",\"title\":\"[codex] Add AI visibility QA report\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/24\"},{\"headRefName\":\"codex/growthops-2026-06-27\",\"number\":23,\"state\":\"OPEN\",\"title\":\"[codex] Clarify CruiseKit trust boundaries\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/23\"},{\"headRefName\":\"codex/cruise-spend-tracker-authority-page\",\"number\":21,\"state\":\"OPEN\",\"title\":\"[codex] Add cruise spend tracker authority page\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/21\"}]"
+    },
+    "ghIssues": {
+      "ok": true,
+      "output": "[{\"number\":4,\"state\":\"OPEN\",\"title\":\"CruiseKit GrowthOps approvals needed\",\"url\":\"https://github.com/kaliartistry/cruisekit/issues/4\"}]"
+    },
+    "branchGuard": {
+      "ok": true,
+      "output": "Current branch: codex/growthops-2026-07-04"
+    }
+  },
+  "duplicateRoutes": [],
+  "routeCount": 40,
+  "contentPageCount": 32,
+  "schemaCount": 14,
+  "approvalRequiredPatterns": [
+    "pricing",
+    "subscriptions",
+    "paid tools",
+    "API credits",
+    "paid ads",
+    "creator payments",
+    "legal",
+    "privacy",
+    "affiliate agreements",
+    "partnership contracts",
+    "external outreach",
+    "#1",
+    "official",
+    "partnered",
+    "certified"
+  ],
+  "inventoryReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\initial-inventory-2026-07-04.md",
+  "initialInventoryRefreshed": true,
+  "auditReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\preflight-2026-07-04.json"
+}

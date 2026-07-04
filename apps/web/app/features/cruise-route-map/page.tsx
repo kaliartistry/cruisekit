@@ -66,6 +66,7 @@ export default function CruiseRouteMapPage() {
           title="Cruise Route Map for Visual Cruise Planning"
           description="See your itinerary as a simple visual route. CruiseKit organizes each cruise day, sea day, and port stop into a clean route view so your trip is easier to understand at a glance."
           shortAnswer="CruiseKit helps travelers see their cruise itinerary as a simple visual route, with each port organized by day."
+          canonicalPath="/features/cruise-route-map"
           visual="route"
           featureBullets={[
             "Ports appear in sailing order with day labels.",

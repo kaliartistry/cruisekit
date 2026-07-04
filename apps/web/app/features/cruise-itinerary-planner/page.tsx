@@ -61,6 +61,7 @@ export default function CruiseItineraryPlannerPage() {
           title="Cruise Itinerary Planner With Port Maps and Guides"
           description="CruiseKit is a free cruise planning app that helps travelers visualize cruise routes, explore cruise ports, compare destinations, and plan better cruise days."
           shortAnswer="CruiseKit combines itinerary planning, visual route maps, cruise port guides, and destination discovery tools for cruise travelers."
+          canonicalPath="/features/cruise-itinerary-planner"
           visual="planner"
           featureBullets={[
             "Organize port days and sea days in a simple itinerary view.",
