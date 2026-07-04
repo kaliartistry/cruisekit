@@ -48,12 +48,16 @@ export function confidenceBadgeClass(c: Confidence): string {
  * Returns empty string for invalid input.
  */
 export function formatLastVerified(iso: string): string {
-  const d = new Date(iso);
+  const normalizedIso = /^\d{4}-\d{2}-\d{2}$/.test(iso)
+    ? `${iso}T00:00:00Z`
+    : iso;
+  const d = new Date(normalizedIso);
   if (Number.isNaN(d.getTime())) return "";
   return d.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
+    timeZone: "UTC",
   });
 }
 
