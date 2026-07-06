@@ -61,6 +61,7 @@ export default function ExploreMapPage() {
           title="Explore Cruise Ports on a Map"
           description="Browse cruise ports visually. Filter by region, tap a destination, and open the full CruiseKit port guide with cruise-specific planning details."
           shortAnswer="CruiseKit's Explore Map helps travelers browse cruise destinations by region and open port guides from visual pins."
+          canonicalPath="/features/explore-map"
           visual="explore-map"
           featureBullets={[
             "Browse ports visually from the Explore area.",

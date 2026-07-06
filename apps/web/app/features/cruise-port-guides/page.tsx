@@ -61,6 +61,7 @@ export default function CruisePortGuidesPage() {
           title="Cruise Port Guides With Simple Map-Style Overviews"
           description="Each port guide includes a simple map-style destination snapshot with key details like walkability, tender status, currency, Wi-Fi, cell coverage, and top things to do."
           shortAnswer="CruiseKit helps cruise travelers understand a port area before they arrive, using cruise-specific guide data and simple destination snapshots."
+          canonicalPath="/features/cruise-port-guides"
           visual="port-card"
           featureBullets={[
             "See walkability, tender status, currency, Wi-Fi, and cell coverage.",
