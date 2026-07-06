@@ -50,6 +50,136 @@ service cloud.firestore {
           && request.resource.data[field].size() <= maxLength);
     }
 
+    function validOptionalActiveCruiseString(field, maxLength) {
+      return !request.resource.data.keys().hasAny([field])
+        || request.resource.data[field] == null
+        || (request.resource.data[field] is string
+          && request.resource.data[field].size() <= maxLength);
+    }
+
+    function validOptionalSailingString(field, maxLength) {
+      return !request.resource.data.sailing.keys().hasAny([field])
+        || (request.resource.data.sailing[field] is string
+          && request.resource.data.sailing[field].size() <= maxLength);
+    }
+
+    function validSyncedSailing() {
+      return request.resource.data.sailing is map
+        && request.resource.data.sailing.keys().hasOnly([
+          'id',
+          'cruiseLineId',
+          'shipName',
+          'shipId',
+          'departureDate',
+          'returnDate',
+          'duration',
+          'departurePort',
+          'region',
+          'itinerary'
+        ])
+        && request.resource.data.sailing.keys().hasAll([
+          'id',
+          'cruiseLineId',
+          'shipName',
+          'departureDate',
+          'returnDate',
+          'duration',
+          'departurePort',
+          'region',
+          'itinerary'
+        ])
+        && request.resource.data.sailing.id is string
+        && request.resource.data.sailing.id.size() <= 160
+        && request.resource.data.sailing.cruiseLineId is string
+        && request.resource.data.sailing.cruiseLineId.size() <= 80
+        && request.resource.data.sailing.shipName is string
+        && request.resource.data.sailing.shipName.size() <= 160
+        && validOptionalSailingString('shipId', 160)
+        && request.resource.data.sailing.departureDate is string
+        && request.resource.data.sailing.departureDate.size() <= 10
+        && request.resource.data.sailing.returnDate is string
+        && request.resource.data.sailing.returnDate.size() <= 10
+        && request.resource.data.sailing.duration is number
+        && request.resource.data.sailing.duration >= 1
+        && request.resource.data.sailing.duration <= 365
+        && request.resource.data.sailing.departurePort is string
+        && request.resource.data.sailing.departurePort.size() <= 160
+        && request.resource.data.sailing.region is string
+        && request.resource.data.sailing.region.size() <= 80
+        && request.resource.data.sailing.itinerary is list
+        && request.resource.data.sailing.itinerary.size() <= 60;
+    }
+
+    function validActiveCruiseDocument() {
+      return request.resource.data.schemaVersion == 1
+        && request.resource.data.status in ['active', 'deleted']
+        && request.resource.data.sourcePlatform in ['web', 'ios', 'android']
+        && (
+          (
+            request.resource.data.status == 'active'
+            && request.resource.data.keys().hasOnly([
+              'schemaVersion',
+              'status',
+              'sourcePlatform',
+              'createdAt',
+              'updatedAt',
+              'sailing',
+              'confirmedItinerary',
+              'confirmedAt',
+              'itineraryTitle',
+              'imageUrl',
+              'sourceUrl'
+            ])
+            && request.resource.data.keys().hasAll([
+              'schemaVersion',
+              'status',
+              'sourcePlatform',
+              'createdAt',
+              'updatedAt',
+              'sailing',
+              'confirmedItinerary'
+            ])
+            && validSyncedSailing()
+            && request.resource.data.confirmedItinerary is list
+            && request.resource.data.confirmedItinerary.size() <= 60
+            && validOptionalActiveCruiseString('confirmedAt', 40)
+            && validOptionalActiveCruiseString('itineraryTitle', 240)
+            && validOptionalActiveCruiseString('imageUrl', 2000)
+            && validOptionalActiveCruiseString('sourceUrl', 2000)
+          )
+          ||
+          (
+            request.resource.data.status == 'deleted'
+            && request.resource.data.keys().hasOnly([
+              'schemaVersion',
+              'status',
+              'sourcePlatform',
+              'createdAt',
+              'updatedAt'
+            ])
+            && request.resource.data.keys().hasAll([
+              'schemaVersion',
+              'status',
+              'sourcePlatform',
+              'createdAt',
+              'updatedAt'
+            ])
+          )
+        );
+    }
+
+    function validActiveCruiseCreate() {
+      return validActiveCruiseDocument()
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.updatedAt == request.time;
+    }
+
+    function validActiveCruiseUpdate() {
+      return validActiveCruiseDocument()
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.updatedAt == request.time;
+    }
+
     function validAdminLeadStatus() {
       return request.resource.data.status in [
         'new',
@@ -125,6 +255,17 @@ service cloud.firestore {
           && request.resource.data.savedAt is string
           && request.resource.data.fromPrice is number
           && request.resource.data.size() < 30;
+      }
+
+      match /activeCruise/{cruiseDocId} {
+        allow read: if cruiseDocId == 'current' && isOwner(uid);
+        allow create: if cruiseDocId == 'current'
+          && isOwner(uid)
+          && validActiveCruiseCreate();
+        allow update: if cruiseDocId == 'current'
+          && isOwner(uid)
+          && validActiveCruiseUpdate();
+        allow delete: if false;
       }
     }
 

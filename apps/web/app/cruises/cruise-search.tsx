@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils/cn";
 import HeartButton from "@/components/shared/heart-button";
+import ActiveCruiseButton from "@/components/shared/active-cruise-button";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import {
   confidenceLabel,
@@ -443,8 +444,12 @@ function DealCard({ deal }: { deal: RealDeal }) {
             <div className="mt-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2">
               <p className="mb-1 text-[10px] font-bold uppercase tracking-wide text-gray-400">Ports</p>
               <div className="flex flex-wrap gap-1">
-              {visiblePorts.map((port) => (
-                <Badge key={port} variant="outline" className="text-[10px]">
+              {visiblePorts.map((port, index) => (
+                <Badge
+                  key={`${port}-${index}`}
+                  variant="outline"
+                  className="text-[10px]"
+                >
                   {getPortWithCountry(port)}
                 </Badge>
               ))}
@@ -514,6 +519,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link href={calcHref}>Estimate total cost</Link>
           </Button>
+          <ActiveCruiseButton deal={deal} />
           <AffiliateDisclosure className="mt-1 text-right md:text-right" />
         </div>
       </div>

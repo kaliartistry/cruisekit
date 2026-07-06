@@ -2,9 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  deleteDoc,
+  doc,
+  onSnapshot,
+} from "firebase/firestore";
 import { db } from "@/lib/firebase/config";
 import { useAuth } from "@/lib/firebase/auth";
+import {
+  isActiveCruiseDocument,
+  tombstoneActiveCruiseForUser,
+  type ActiveCruiseDocument,
+} from "@/lib/sync/active-cruise";
 import SignInModal from "@/components/shared/sign-in-modal";
 import AppHandoff from "@/components/shared/app-handoff";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
@@ -20,6 +31,7 @@ import {
   Calculator,
   Anchor,
   Heart,
+  Smartphone,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import type { SavedDealData } from "@/components/shared/heart-button";
@@ -31,6 +43,85 @@ import type { SavedDealData } from "@/components/shared/heart-button";
 interface SavedDeal extends SavedDealData {
   id: string;
   savedAt: string;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Active cruise card                                                 */
+/* ------------------------------------------------------------------ */
+
+function ActiveCruiseCard({
+  cruise,
+  onClear,
+}: {
+  cruise: ActiveCruiseDocument;
+  onClear: () => Promise<void>;
+}) {
+  const [clearing, setClearing] = useState(false);
+  const sailing = cruise.sailing;
+
+  if (!sailing) return null;
+
+  const handleClear = async () => {
+    setClearing(true);
+    await onClear();
+  };
+
+  return (
+    <div className="overflow-hidden rounded-xl border border-teal/30 bg-white shadow-[var(--shadow-sm)]">
+      <div className="border-b border-teal/15 bg-teal/10 px-4 py-2 text-xs font-bold uppercase tracking-wide text-teal">
+        Active cruise synced to the app
+      </div>
+      <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+        <div className="min-w-0">
+          <div className="flex items-start gap-3">
+            <CruiseLineLogo cruiseLineId={sailing.cruiseLineId} size="md" />
+            <div className="min-w-0">
+              <h3 className="font-bold text-navy">
+                {cruise.itineraryTitle || `${sailing.duration}-night cruise`}
+              </h3>
+              <p className="mt-1 text-xs text-gray-500">
+                {sailing.shipName} &middot; {sailing.duration} nights
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-gray-500">
+            <span className="flex items-center gap-1">
+              <MapPin className="h-3.5 w-3.5 text-gray-400" />
+              {sailing.departurePort}
+            </span>
+            <span className="flex items-center gap-1">
+              <Calendar className="h-3.5 w-3.5 text-gray-400" />
+              {new Date(sailing.departureDate).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </span>
+            <span className="flex items-center gap-1 text-teal">
+              <Smartphone className="h-3.5 w-3.5" />
+              Open CruiseKit on your phone and sign in with this same Google
+              account.
+            </span>
+          </div>
+        </div>
+
+        <button
+          onClick={handleClear}
+          disabled={clearing}
+          className={cn(
+            "inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200",
+            "px-3 py-2 text-xs font-medium text-gray-500",
+            "transition-colors hover:border-red-200 hover:bg-red-50 hover:text-red-600",
+            "disabled:cursor-not-allowed disabled:opacity-50",
+          )}
+        >
+          <Trash2 className="h-3.5 w-3.5" />
+          {clearing ? "Removing..." : "Clear active cruise"}
+        </button>
+      </div>
+    </div>
+  );
 }
 
 /* ------------------------------------------------------------------ */
@@ -107,8 +198,12 @@ function SavedDealCard({
 
           {deal.ports.length > 0 && (
             <div className="mt-3 flex flex-wrap gap-1">
-              {deal.ports.slice(0, 5).map((port) => (
-                <Badge key={port} variant="outline" className="text-[10px]">
+              {deal.ports.slice(0, 5).map((port, index) => (
+                <Badge
+                  key={`${port}-${index}`}
+                  variant="outline"
+                  className="text-[10px]"
+                >
                   {port}
                 </Badge>
               ))}
@@ -171,8 +266,8 @@ function EmptyState() {
         No saved cruises yet
       </h2>
       <p className="mt-1 text-sm text-gray-500 max-w-sm">
-        When you find a cruise you love, tap the heart icon to save it here for
-        easy comparison later.
+        Use Add to My Trips to sync one active cruise to the app, or tap the
+        heart icon to save cruises here for easy comparison later.
       </p>
       <Button asChild className="mt-6">
         <Link href="/cruises">
@@ -216,8 +311,11 @@ function SignInPrompt() {
 
 export default function MyTripsPage() {
   const { user, loading: authLoading } = useAuth();
+  const [activeCruise, setActiveCruise] =
+    useState<ActiveCruiseDocument | null>(null);
   const [deals, setDeals] = useState<SavedDeal[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeCruiseLoading, setActiveCruiseLoading] = useState(true);
 
   /* Fetch saved deals */
   useEffect(() => {
@@ -259,6 +357,31 @@ export default function MyTripsPage() {
     };
   }, [user]);
 
+  /* Listen to active cruise sync doc */
+  useEffect(() => {
+    if (!user) {
+      setActiveCruise(null);
+      setActiveCruiseLoading(false);
+      return;
+    }
+
+    setActiveCruiseLoading(true);
+    const activeCruiseRef = doc(db, "users", user.uid, "activeCruise", "current");
+    return onSnapshot(
+      activeCruiseRef,
+      (snapshot) => {
+        const data = snapshot.exists() ? snapshot.data() : null;
+        setActiveCruise(isActiveCruiseDocument(data) ? data : null);
+        setActiveCruiseLoading(false);
+      },
+      (err) => {
+        console.error("Error listening to active cruise:", err);
+        setActiveCruise(null);
+        setActiveCruiseLoading(false);
+      },
+    );
+  }, [user]);
+
   /* Remove a deal */
   const handleRemove = async (dealId: string) => {
     if (!user) return;
@@ -270,8 +393,19 @@ export default function MyTripsPage() {
     }
   };
 
+  const handleClearActiveCruise = async () => {
+    if (!user) return;
+    try {
+      await tombstoneActiveCruiseForUser(user.uid);
+    } catch (err) {
+      console.error("Error clearing active cruise:", err);
+    }
+  };
+
+  const totalTripCount = deals.length + (activeCruise ? 1 : 0);
+
   /* Loading skeleton */
-  if (authLoading || (user && loading)) {
+  if (authLoading || (user && (loading || activeCruiseLoading))) {
     return (
       <>
         <Navbar />
@@ -312,9 +446,13 @@ export default function MyTripsPage() {
                 My Trips
               </h1>
             </div>
-            {user && deals.length > 0 && (
+            {user && totalTripCount > 0 && (
               <p className="text-sm text-gray-500">
-                {deals.length} saved cruise{deals.length !== 1 ? "s" : ""}
+                {activeCruise ? "1 active cruise" : ""}
+                {activeCruise && deals.length > 0 ? " · " : ""}
+                {deals.length > 0
+                  ? `${deals.length} saved cruise${deals.length !== 1 ? "s" : ""}`
+                  : ""}
               </p>
             )}
           </div>
@@ -324,11 +462,17 @@ export default function MyTripsPage() {
         <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
           {!user ? (
             <SignInPrompt />
-          ) : deals.length === 0 ? (
+          ) : totalTripCount === 0 ? (
             <EmptyState />
           ) : (
             <>
               <div className="space-y-4">
+                {activeCruise ? (
+                  <ActiveCruiseCard
+                    cruise={activeCruise}
+                    onClear={handleClearActiveCruise}
+                  />
+                ) : null}
                 {deals.map((deal) => (
                   <SavedDealCard
                     key={deal.id}
