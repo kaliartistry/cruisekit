@@ -9,6 +9,7 @@ export default function PortGuideStatus({
   governance,
 }: PortGuideStatusProps) {
   const isReviewed = governance.reviewStatus === "reviewed";
+  const statusCopy = reviewStatusCopy[governance.reviewStatus];
   const timeZoneReview = governance.fieldFreshness.find(
     (field) => field.fieldPath === "ianaTimeZone",
   );
@@ -29,14 +30,14 @@ export default function PortGuideStatus({
             Guide status
           </p>
           <p className="mt-1 font-semibold text-navy">
-            {isReviewed ? "Source-reviewed" : "Source review in progress"}
+            {statusCopy.label}
           </p>
           <dl className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-xs text-gray-600">
             <div className="flex gap-1.5">
               <dt>Editorial last reviewed:</dt>
               <dd className="font-semibold text-navy">
                 {formatReviewDate(governance.lastEditorialReviewAt) ??
-                  "Not yet published"}
+                  "Not yet source-reviewed"}
               </dd>
             </div>
             {timeZoneReview?.lastVerifiedAt && (
@@ -49,17 +50,37 @@ export default function PortGuideStatus({
             )}
           </dl>
           <p className="mt-2 max-w-3xl text-xs leading-5 text-gray-600">
-            {isReviewed
-              ? "Review dates apply only to the fields shown."
-              : "Editorial details are being source-reviewed."} Confirm
-            time-sensitive safety, prices, and emergency information with the
-            cruise line and relevant official sources before acting.
+            {statusCopy.description} Confirm time-sensitive safety, prices, and
+            emergency information with the cruise line and relevant official
+            sources before acting.
           </p>
         </div>
       </div>
     </aside>
   );
 }
+
+const reviewStatusCopy: Record<
+  PortGovernanceMetadata["reviewStatus"],
+  { label: string; description: string }
+> = {
+  "needs-review": {
+    label: "Needs source review",
+    description: "Editorial details have not completed source review.",
+  },
+  reviewed: {
+    label: "Source-reviewed",
+    description: "Review dates apply only to the fields shown.",
+  },
+  stale: {
+    label: "Review expired",
+    description: "One or more previously reviewed fields need rechecking.",
+  },
+  blocked: {
+    label: "Review blocked",
+    description: "This guide has an unresolved source-review issue.",
+  },
+};
 
 function formatReviewDate(value: string | null): string | null {
   if (!value) return null;

@@ -9,12 +9,26 @@ describe("PortGuideStatus", () => {
       <PortGuideStatus governance={baselinePortGovernance()} />,
     );
 
-    expect(html).toContain("Source review in progress");
+    expect(html).toContain("Needs source review");
     expect(html).toContain("Editorial last reviewed:");
-    expect(html).toContain("Not yet published");
-    expect(html).toContain("Editorial details are being source-reviewed");
+    expect(html).toContain("Not yet source-reviewed");
+    expect(html).toContain("Editorial details have not completed source review");
     expect(html).toContain("safety, prices, and emergency information");
     expect(html).toContain("official sources");
+  });
+
+  it("distinguishes stale and blocked review states", () => {
+    const stale = baselinePortGovernance();
+    stale.reviewStatus = "stale";
+    const blocked = baselinePortGovernance();
+    blocked.reviewStatus = "blocked";
+
+    expect(
+      renderToStaticMarkup(<PortGuideStatus governance={stale} />),
+    ).toContain("Review expired");
+    expect(
+      renderToStaticMarkup(<PortGuideStatus governance={blocked} />),
+    ).toContain("Review blocked");
   });
 
   it("renders review dates from governance metadata", () => {
