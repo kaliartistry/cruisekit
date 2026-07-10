@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Anchor, Ship, Footprints, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import {
-  PORTS,
   REGION_LABELS,
   type PortData,
   type PortRegion,
@@ -101,12 +100,12 @@ function PortCard({ port, index }: { port: PortData; index: number }) {
   );
 }
 
-export default function PortsExplorerClient() {
+export default function PortsExplorerClient({ ports }: { ports: PortData[] }) {
   const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
   const filtered =
     activeFilter === "all"
-      ? PORTS
-      : PORTS.filter((port) => port.region === activeFilter);
+      ? ports
+      : ports.filter((port) => port.region === activeFilter);
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -125,7 +124,7 @@ export default function PortsExplorerClient() {
             {option.label}
             {option.key !== "all" && (
               <span className="ml-1.5 text-xs opacity-70">
-                ({PORTS.filter((port) => port.region === option.key).length})
+                ({ports.filter((port) => port.region === option.key).length})
               </span>
             )}
           </button>
@@ -144,7 +143,7 @@ export default function PortsExplorerClient() {
       </AnimatePresence>
 
       <p className="mt-6 text-center text-sm text-gray-400">
-        Showing {filtered.length} of {PORTS.length} cruise ports
+        Showing {filtered.length} of {ports.length} cruise ports
       </p>
     </section>
   );

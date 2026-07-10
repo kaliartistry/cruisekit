@@ -5,6 +5,7 @@ import { ChevronRight, MapPinned } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { PORTS, REGION_LABELS } from "@/lib/data/ports";
+import { resolvePortHeroMedia } from "@/lib/ports/port-media";
 import PortsExplorerClient from "./ports-explorer-client";
 
 export const metadata: Metadata = {
@@ -44,14 +45,18 @@ export const metadata: Metadata = {
 const FEATURED_PORT_SLUGS = ["cozumel", "nassau", "roatan"];
 
 export default function PortsPage() {
+  const resolvedPorts = PORTS.map((port) => ({
+    ...port,
+    imageUrl: resolvePortHeroMedia(port).url,
+  }));
   const regionSummaries = Object.entries(REGION_LABELS).map(([key, label]) => ({
     key,
     label,
-    count: PORTS.filter((port) => port.region === key).length,
+    count: resolvedPorts.filter((port) => port.region === key).length,
   }));
   const featuredPorts = FEATURED_PORT_SLUGS.map((slug) =>
-    PORTS.find((port) => port.slug === slug)
-  ).filter((port): port is (typeof PORTS)[number] => Boolean(port));
+    resolvedPorts.find((port) => port.slug === slug)
+  ).filter((port): port is (typeof resolvedPorts)[number] => Boolean(port));
 
   return (
     <>
@@ -221,7 +226,7 @@ export default function PortsPage() {
           </div>
         </section>
         <div id="port-list">
-          <PortsExplorerClient />
+          <PortsExplorerClient ports={resolvedPorts} />
         </div>
       </main>
       <Footer />

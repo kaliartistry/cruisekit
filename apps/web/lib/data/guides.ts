@@ -570,7 +570,7 @@ const portDayGuide: Guide = {
   slug: "port-day-tips",
   title: "How Much Cash to Bring on a Cruise: Tips, Ports & Excursions",
   description:
-    "Plan cash, port spending, excursion budgets, tips, ship time, and documentation for stress-free cruise port days.",
+    "Plan cash, port spending, excursion budgets, tips, time-zone checks, and documentation for stress-free cruise port days.",
   category: "port-days",
   icon: "\uD83C\uDFDD\uFE0F",
   readTime: "10 min read",

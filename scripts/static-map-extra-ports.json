@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "cape-liberty",
+    "name": "Cape Liberty Cruise Port",
+    "country": "United States",
+    "lat": 40.6646,
+    "lng": -74.0746,
+    "walkabilityRating": 3,
+    "isTenderPort": false,
+    "region": "homeport"
+  },
+  {
+    "slug": "la-spezia",
+    "name": "Florence/Pisa (La Spezia)",
+    "country": "Italy",
+    "lat": 44.1038,
+    "lng": 9.8315,
+    "walkabilityRating": 6,
+    "isTenderPort": false,
+    "region": "europe-med"
+  },
+  {
+    "slug": "cannes",
+    "name": "Cannes",
+    "country": "France",
+    "lat": 43.5508,
+    "lng": 7.0174,
+    "walkabilityRating": 8,
+    "isTenderPort": true,
+    "region": "europe-med"
+  },
+  {
+    "slug": "piraeus-athens",
+    "name": "Athens (Piraeus)",
+    "country": "Greece",
+    "lat": 37.9446,
+    "lng": 23.633,
+    "walkabilityRating": 5,
+    "isTenderPort": false,
+    "region": "europe-med"
+  },
+  {
+    "slug": "virgin-gorda",
+    "name": "Virgin Gorda",
+    "country": "British Virgin Islands",
+    "lat": 18.4483,
+    "lng": -64.4373,
+    "walkabilityRating": 6,
+    "isTenderPort": true,
+    "region": "eastern"
+  },
+  {
+    "slug": "tobago",
+    "name": "Scarborough, Tobago",
+    "country": "Trinidad and Tobago",
+    "lat": 11.1833,
+    "lng": -60.7356,
+    "walkabilityRating": 8,
+    "isTenderPort": false,
+    "region": "southern"
+  },
+  {
+    "slug": "nevis",
+    "name": "Charlestown, Nevis",
+    "country": "St. Kitts and Nevis",
+    "lat": 17.1367,
+    "lng": -62.6215,
+    "walkabilityRating": 8,
+    "isTenderPort": true,
+    "region": "eastern"
+  },
+  {
+    "slug": "st-barts",
+    "name": "Gustavia, St. Barts",
+    "country": "St. Barthélemy",
+    "lat": 17.897,
+    "lng": -62.851,
+    "walkabilityRating": 9,
+    "isTenderPort": true,
+    "region": "eastern"
+  },
+  {
+    "slug": "mayreau",
+    "name": "Mayreau",
+    "country": "St. Vincent and the Grenadines",
+    "lat": 12.6367,
+    "lng": -61.39,
+    "walkabilityRating": 5,
+    "isTenderPort": true,
+    "region": "southern"
+  },
+  {
+    "slug": "castaway-cay",
+    "name": "Disney Castaway Cay",
+    "country": "Bahamas",
+    "lat": 26.090556,
+    "lng": -77.539972,
+    "walkabilityRating": 6,
+    "isTenderPort": false,
+    "region": "private-island"
+  },
+  {
+    "slug": "toulon",
+    "name": "Toulon (Provence)",
+    "country": "France",
+    "lat": 43.1181,
+    "lng": 5.9333,
+    "walkabilityRating": 8,
+    "isTenderPort": false,
+    "region": "europe-med"
+  },
+  {
+    "slug": "ajaccio",
+    "name": "Ajaccio, Corsica",
+    "country": "France",
+    "lat": 41.9187,
+    "lng": 8.7367,
+    "walkabilityRating": 9,
+    "isTenderPort": false,
+    "region": "europe-med"
+  }
+]

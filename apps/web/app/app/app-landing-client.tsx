@@ -80,7 +80,7 @@ const SCREENSHOTS = [
   {
     src: "/assets/app-screenshots/port-guide.png",
     title: "Port guide",
-    body: "Keep ship-time, all-aboard context, basics, and planning notes together.",
+    body: "Keep port-local time, ship-time verification, all-aboard context, basics, and planning notes together.",
   },
   {
     src: "/assets/app-screenshots/spend-exact.png",

@@ -25,7 +25,11 @@ export function trackEvent(
   name: string,
   params: Record<string, AnalyticsParam> = {},
 ) {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+  if (
+    typeof window === "undefined" ||
+    typeof window.gtag !== "function" ||
+    !hasAnalyticsConsent()
+  ) {
     return;
   }
 
@@ -33,6 +37,17 @@ export function trackEvent(
     window.gtag("event", name, compactParams(params));
   } catch {
     // Analytics must never affect rendering or navigation.
+  }
+}
+
+export function hasAnalyticsConsent() {
+  try {
+    return (
+      window.localStorage.getItem("cruisekit_analytics_consent_v1") ===
+      "granted"
+    );
+  } catch {
+    return false;
   }
 }
 

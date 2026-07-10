@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/help',
     '/how-we-make-money',
     '/privacy',
+    '/account-deletion',
     '/terms',
     '/loyalty',
     '/myday',

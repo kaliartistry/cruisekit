@@ -111,7 +111,7 @@ const FAQS = [
   {
     question: "Is my data safe?",
     answer:
-      "Yes. CruiseKit uses Firebase Authentication (Google sign-in) for accounts and Firebase Firestore for saved trip data. We do not use tracking cookies, we do not sell your data, and we do not share personal information with third parties for marketing. MyDay is built around user-entered schedule, spend, and crew status data, not background location tracking.",
+      "CruiseKit uses Firebase Authentication and Firestore for account-linked features, keeps website analytics off unless you allow it, and does not sell personal information or share it for third-party marketing. MyDay uses user-entered schedule, spend, and manual crew status data; the current app does not request or collect location. See the Privacy Policy for the full data and deletion details.",
   },
   {
     question: "How do I save cruises and trips?",
@@ -121,7 +121,7 @@ const FAQS = [
   {
     question: "What is MyDay?",
     answer:
-      "MyDay is CruiseKit's during-cruise command center. It includes a daily schedule with ship time / port time clocks, itinerary-based all-aboard context, an onboard spend tracker that compares actual spending to your Plan budget, and MyCrew status check-ins for lightweight group coordination.",
+      "MyDay is CruiseKit's during-cruise command center. It includes a daily schedule, device-time and port-local clocks with a reminder to verify official ship time, itinerary-based all-aboard context, an onboard spend tracker, and MyCrew status check-ins for lightweight group coordination. CruiseKit does not schedule event notifications yet.",
   },
   {
     question: "Is CruiseKit free?",

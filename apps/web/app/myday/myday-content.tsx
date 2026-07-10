@@ -28,9 +28,9 @@ const fadeUp = {
 const FEATURES = [
   {
     icon: Clock,
-    title: "Ship + Port Clocks",
+    title: "Device + Port Clocks",
     description:
-      "Ship time and port time stay visible together, so timezone changes do not turn into day-three confusion.",
+      "Device time and port-local time stay visible together, with a clear reminder to confirm the cruise line's official ship clock.",
     color: "text-amber-500",
     bg: "bg-amber-500/10",
   },
@@ -81,9 +81,9 @@ const TABS = [
     name: "Today",
     icon: CalendarDays,
     features: [
-      "Ship time and port time at a glance",
+      "Device time and port-local time at a glance",
       "All-aboard context from your itinerary",
-      "Personal event schedule with reminders",
+      "Personal event schedule you add and edit",
       '"What\'s Open Now" venue strip',
       "Crew status at a glance",
     ],
@@ -115,11 +115,11 @@ const TABS = [
 const APP_SCREENSHOTS = [
   {
     eyebrow: "Today",
-    title: "Ship time, port time, and what is next",
+    title: "Device time, port time, and what is next",
     description:
       "The Today tab keeps clocks, all-aboard context, open venues, and your daily schedule in one cruise-day view.",
     src: "/assets/app-screenshots/myday-today.png",
-    alt: "CruiseKit iPhone MyDay Today tab showing ship time, port time, venues, and schedule",
+    alt: "CruiseKit iPhone MyDay Today tab showing device time, port-local time, venues, and schedule",
   },
   {
     eyebrow: "Itinerary",
@@ -175,7 +175,7 @@ export default function MyDayContent() {
               variants={fadeUp}
               className="mx-auto mt-5 max-w-2xl text-lg text-white/90 lg:mx-0"
             >
-              Ship time drift. Surprise charges on your folio. Dinner plans
+              Time-zone confusion. Surprise charges on your folio. Dinner plans
               scattered across texts. MyDay pulls the day into one calm view
               &mdash; clocks, schedule, spend, and MyCrew check-ins, designed
               for unreliable cruise WiFi.

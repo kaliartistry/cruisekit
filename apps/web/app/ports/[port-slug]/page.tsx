@@ -30,6 +30,7 @@ import PortSectionNav from "./port-section-nav";
 import { hasViatorProducts } from "@/lib/data/viator-destinations";
 import { getHotelLink, getBoatRentalLink } from "@/lib/affiliate-config";
 import { cn } from "@/lib/utils/cn";
+import { resolvePortHeroMedia } from "@/lib/ports/port-media";
 import {
   getPortBySlug,
   getAllPortSlugs,
@@ -64,6 +65,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${port.name}, ${port.country} Cruise Port Guide`;
   const description = `CruiseKit guide to ${port.name}, ${port.country}: walkability, tender or dock status, port hours, currency, Wi-Fi, excursions, food, and a non-live destination snapshot.`;
   const url = `/ports/${port.slug}`;
+  const heroMedia = resolvePortHeroMedia(port);
 
   return {
     title,
@@ -87,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       images: [
         {
-          url: port.imageUrl,
+          url: heroMedia.url,
           alt: `${port.name}, ${port.country} cruise port`,
         },
       ],
@@ -96,7 +98,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: [port.imageUrl],
+      images: [heroMedia.url],
     },
   };
 }
@@ -313,6 +315,7 @@ export default async function PortDetailPage({ params }: Props) {
 
   const faqs = getPortFaqs(port);
   const canonicalUrl = `https://cruisekit.app/ports/${port.slug}`;
+  const heroMedia = resolvePortHeroMedia(port);
 
   return (
     <>
@@ -327,7 +330,7 @@ export default async function PortDetailPage({ params }: Props) {
                 "@id": `${canonicalUrl}#destination`,
                 name: `${port.name} Cruise Port`,
                 url: canonicalUrl,
-                image: port.imageUrl,
+                image: heroMedia.url,
                 description: port.overview,
                 geo: {
                   "@type": "GeoCoordinates",
@@ -381,13 +384,44 @@ export default async function PortDetailPage({ params }: Props) {
         {/* ============================================================ */}
         <section className="relative h-[340px] sm:h-[400px] lg:h-[440px] overflow-hidden">
           <Image
-            src={port.imageUrl}
-            alt={`${port.name}, ${port.country}`}
+            src={heroMedia.url}
+            alt={heroMedia.alt}
             fill
             className="object-cover"
             priority
             sizes="100vw"
           />
+          {heroMedia.isMapFallback ? (
+            <div className="absolute right-3 top-3 z-10 rounded-lg bg-white/90 px-3 py-2 text-[10px] font-medium text-slate-700 shadow-sm backdrop-blur-sm sm:right-5 sm:top-5 sm:text-xs">
+              Map: {" "}
+              <a
+                href="https://openfreemap.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                OpenFreeMap
+              </a>{" "}
+              © {" "}
+              <a
+                href="https://openmaptiles.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                OpenMapTiles
+              </a>{" "}
+              · Data © {" "}
+              <a
+                href="https://www.openstreetmap.org/copyright"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                OpenStreetMap contributors
+              </a>
+            </div>
+          ) : null}
           <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/40 to-navy/10" />
           <div className="absolute inset-0 flex items-end">
             <div className="mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">

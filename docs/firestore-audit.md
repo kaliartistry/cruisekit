@@ -70,7 +70,7 @@ No Cloud Functions, no Firebase Storage, no Realtime Database. Firebase Auth use
 
 | Collection | Type | Read by | Written by | Notes |
 |---|---|---|---|---|
-| `groups/{groupId}` | shared-collaborative | any signed-in user (see read-leak note) | organizer (create/kick/metadata), self-join, self-leave | Top-level fields: `name`, `organizerId`, `organizerName`, `inviteCode`, `createdAt`, `cruiseLineId?`, `shipName?`, `departureDate?`, `memberUserIds: string[]`, `members: {userId, name, role, joinedAt}[]`. Source of truth for membership is `memberUserIds`. |
+| `groups/{groupId}` | shared-collaborative | members only | organizer (create/kick/metadata), self-join, self-leave | Non-members resolve invite codes through `findGroupByInvite`, which returns only a safe preview. Top-level membership authority remains `memberUserIds`. |
 | `groups/{groupId}/locations/{userId}` | per-member presence | group members only | self only (doc id == uid); organizer can delete on kick | Fields: `lat`, `lng`, `whereabouts`, `quickStatus?`, `distanceFromShipMeters?`, `lastUpdated`. |
 | `groups/{groupId}/messages/{msgId}` | group chat | group members only | members only with `senderId == auth.uid` | Fields: `senderId`, `senderName`, `text`, `timestamp`. Append-only — no update or delete. |
 | `dealLeadRequests/{requestId}` | operational queue | admin only | authenticated mobile clients, including anonymous | Fields: `createdAt`, `status`, source metadata, requester UID/anonymity, contact fields, note, and deal snapshot fields. |
@@ -80,7 +80,7 @@ No Cloud Functions, no Firebase Storage, no Realtime Database. Firebase Auth use
 - **Membership** is tracked in two parallel arrays on `groups/{groupId}`:
   - `memberUserIds: string[]` — source of truth for the rules' `isGroupMember` helper.
   - `members: {userId, name, role, joinedAt}[]` — display-only shape; `role` and `name` are presentational, not authority-bearing. Rules deliberately do not validate the contents of this array.
-- **Join flow**: a non-member queries `groups` collection with `where('inviteCode', isEqualTo: code).limit(1)`, then runs an `arrayUnion` update adding themselves to `memberUserIds` and `members`.
+- **Join flow**: a non-member calls authenticated `findGroupByInvite`, then runs the existing `arrayUnion` self-join update against the returned group ID. Direct non-member group reads are denied.
 - **Leave flow**: a member runs an `arrayRemove` update on themselves, then deletes their own `locations/{uid}` doc.
 - **Kick flow**: organizer (only) runs `arrayRemove` on the target uid in both arrays and deletes the target's `locations/{uid}` doc.
 
@@ -102,7 +102,7 @@ Owner-only CRUD. Validation is intentionally light: `savedAt` must be a string, 
 The trailing `match /{document=**} { allow read, write: if false; }` is the safety net. Anything not explicitly allowed above is rejected. There are no `request.time` expirations anywhere — that pattern is the Test Mode trap we're escaping.
 
 ### `groups/{groupId}` (Flutter)
-Reads are open to any signed-in user; subcollections (`locations`, `messages`) are gated to members. This is a **deliberate compromise** — see [Known follow-ups](#known-follow-ups) for the reasoning. Create requires `organizerId == auth.uid` and that the organizer be present in `memberUserIds`. Updates fall into three valid shapes: organizer-mutates-metadata (everything except `organizerId` and `inviteCode`), self-join (exactly one element appended to `memberUserIds`, must be self), or self-leave (exactly one element removed, must be self). Delete is denied — the Flutter code has no group-delete flow, so there's no legitimate caller.
+Reads are member-only. Non-members resolve an invite through the authenticated Admin SDK-backed `findGroupByInvite` callable, which returns only the group ID, safe trip labels, and a caller-relative `isMember` boolean. Create requires `organizerId == auth.uid` and that the organizer be present in `memberUserIds`. Updates remain organizer metadata changes, self-join, or self-leave. Client delete is denied; trusted account deletion can remove an empty group.
 
 ### `groups/{groupId}/locations/{userId}`
 Reads gated by group membership via the `isGroupMember` helper that consults the parent doc's `memberUserIds`. Writes gated by both membership AND `userId == auth.uid` so users can only update their own dot on the map. Deletes are allowed for the user themselves (leave flow) or the organizer (kick flow).
@@ -132,10 +132,10 @@ Self-readable admin marker used by `/internal/leads`. Client writes are denied; 
 ## Deployment
 
 ### Hard gate
-~~Do not deploy until the mobile audit's rule fragment is merged here and tested.~~ **Resolved 2026-04-25.** The mobile audit is reflected in [`firestore.rules`](../firestore.rules) and covered by tests in [`firestore.rules.test.ts`](../firestore.rules.test.ts). All 46 rule assertions pass against the Firestore emulator.
+~~Do not deploy until the mobile audit's rule fragment is merged here and tested.~~ **Resolved 2026-04-25.** The mobile audit is reflected in [`firestore.rules`](../firestore.rules) and covered by tests in [`firestore.rules.test.ts`](../firestore.rules.test.ts). All 62 rule assertions pass against the Firestore emulator.
 
 ### Pre-deploy checklist
-- [x] All `pnpm test:rules` cases pass (60 / 60, web + mobile combined)
+- [x] All `pnpm test:rules` cases pass (62 / 62, web + mobile combined)
 - [x] Combined `firestore.rules` reflects both audits
 - [x] This audit doc updated with the mobile-side findings
 - [x] `.gitignore` covers service-account JSONs (`*service-account*.json`, `*-firebase-adminsdk-*.json`)
@@ -178,13 +178,13 @@ Document the actual results next to each row when running them.
 
 ## Known follow-ups
 
-- **User-deletion flow** — rules deny client deletes on `users/{uid}`. When the product needs account deletion, build an Admin-SDK-backed Cloud Function or admin endpoint.
+- **Account deletion deployment** — `deleteUserAccount` is implemented and tested. Deploy the callable before releasing the compatible app; see [`account-deletion-release-readiness.md`](./account-deletion-release-readiness.md).
 - **Apple OAuth** — when implemented, no rule change is needed (`request.auth != null` is provider-agnostic).
 - **Field validation depth** — kept minimal. Tighten only if a real abuse pattern emerges.
 - **Lead notifications / CRM handoff.** `dealLeadRequests` is durable storage and now has Resend-backed create, retry, and customer-reply email functions in `functions/index.js`, plus an internal `/internal/leads` dashboard for funnel status. Later, add CRM or spreadsheet sync if lead volume justifies it.
 - **App Check.** Direct mobile writes are acceptable for beta, but App Check should be enabled before broad public marketing traffic to reduce automated abuse against lead and group endpoints.
-- **`groups/{groupId}` read-leak (open to any signed-in user).** The Flutter join flow runs `where('inviteCode', isEqualTo: code).limit(1).get()` BEFORE the user is in `memberUserIds`. A strict member-only read rule would break joining, and Firestore rules can't introspect `where`-clause contents to scope an exception. Group IDs are 20-char auto-IDs and invite codes are 6-char from a 32-char alphabet (~1B combinations), so direct enumeration is impractical, but a determined signed-in attacker could brute-force invite codes if they had unlimited requests. The proper fix is one of:
-  1. Move invite lookup to a separate `groupInvites/{inviteCode}` collection (small, just stores `groupId`); allow signed-in reads only on that collection. Then lock `groups/{groupId}` reads to members.
-  2. Replace the client-side join with a Cloud Function that runs as admin, validates the code, and adds the user.
-  Both require Flutter code changes + a backfill migration; deferred from this rules deploy. Track separately.
+- **Invite lookup read leak — resolved in code.** `findGroupByInvite` performs the
+  lookup as a callable and returns a minimal safe response. The rules now make
+  top-level group reads member-only. Follow the coordinated deployment order so
+  the older mobile join flow is not broken before the compatible release lands.
 - **`members[]` array contents not validated.** The rule only checks `memberUserIds` size deltas on join/leave; it does not enforce that the appended `members` element has `userId == auth.uid` or `role == 'member'`. `role` is display-only — actual authority comes from the immutable `organizerId`, so tampering is cosmetic. If `role` ever becomes authority-bearing, tighten this.

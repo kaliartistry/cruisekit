@@ -579,9 +579,9 @@ const shipTimePost: BlogPost = {
       ],
     },
     {
-      heading: "Let CruiseKit Keep Ship Time Close",
+      heading: "Keep Official Time Guidance Close",
       paragraphs: [
-        "CruiseKit's MyDay and Port Day Planner keep ship time, port time, and all-aboard context close to the rest of your plans. Photograph the cruise line's official all-aboard notice, keep your phone alarms on ship time, and use CruiseKit as the planning layer that helps you avoid time-zone math in your head.",
+        "CruiseKit's MyDay and Port Day Planner keep device time, port-local time, and saved all-aboard context close to the rest of your plans. CruiseKit does not know the ship's official clock: photograph the cruise line's official notice, follow the daily program, and use the app as a planning layer rather than an authoritative time source.",
       ],
     },
   ],

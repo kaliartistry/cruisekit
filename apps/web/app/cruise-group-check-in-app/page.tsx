@@ -64,7 +64,7 @@ const CHECK_IN_JOBS: Feature[] = [
   {
     title: "Cruise-day context",
     description:
-      "Status updates sit beside ship time, port time, daily plans, and itinerary context instead of living in a generic notes app.",
+      "Status updates sit beside device time, port-local time, ship-time verification, daily plans, and itinerary context instead of living in a generic notes app.",
     icon: CalendarDays,
   },
   {
@@ -99,7 +99,7 @@ const FLOW = [
   {
     title: "Use MyDay onboard",
     description:
-      "Keep the daily schedule, spend tracker, ship-time context, and MyCrew check-ins close during the trip.",
+      "Keep the daily schedule, spend tracker, device and port-local clocks, ship-time verification, and MyCrew check-ins close during the trip.",
     href: "/myday",
   },
   {
@@ -120,7 +120,7 @@ const SCREENSHOTS = [
   },
   {
     src: "/assets/app-screenshots/myday-today.png",
-    alt: "CruiseKit MyDay Today screen showing ship time, port time, and daily plans",
+    alt: "CruiseKit MyDay Today screen showing device time, port-local time, and daily plans",
     title: "Day context",
     description:
       "Group updates make more sense when the day's timing and plans are visible too.",
@@ -143,7 +143,7 @@ const FAQS = [
   {
     question: "How does CruiseKit support group check-ins?",
     answer:
-      "CruiseKit supports group coordination through Group Hub planning and MyCrew-oriented check-ins inside MyDay, where status updates sit near ship-time, port-time, itinerary, schedule, and spend context.",
+      "CruiseKit supports group coordination through Group Hub planning and MyCrew-oriented check-ins inside MyDay, where status updates sit near device time, port-local time, ship-time verification, itinerary, schedule, and spend context.",
   },
   {
     question: "Is MyCrew a replacement for the cruise line app?",

@@ -103,7 +103,7 @@ const TIME_VISUALS = [
     alt: "CruiseKit itinerary screen for cruise day planning",
     title: "Keep the plan visible",
     description:
-      "Use the app for reminders and day structure, then check official onboard information before committing to the timing.",
+      "Use the app for saved plans and day structure, then check official onboard information and set phone alarms before committing to the timing.",
   },
   {
     src: "/assets/ports/cozumel.jpg",
@@ -409,7 +409,7 @@ export default function ShipTimeVsPortTimePage() {
               Use CruiseKit for the plan, then verify onboard
             </h2>
             <p className="mt-3 text-sm leading-6 text-gray-600">
-              CruiseKit can help organize port-day context and reminders, but
+              CruiseKit can help organize port-day context and saved plans, but
               official ship information should always be checked before final
               timing decisions.
             </p>

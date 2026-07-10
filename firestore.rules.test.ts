@@ -13,6 +13,9 @@ import {
   deleteDoc,
   addDoc,
   collection,
+  limit,
+  query,
+  where,
   arrayUnion,
   arrayRemove,
   serverTimestamp,
@@ -416,10 +419,30 @@ describe("groups/{groupId}", () => {
     await assertFails(getDoc(doc(db, "groups", GROUP_ID)));
   });
 
-  it("allows any signed-in user to read (invite-code lookup is open by design)", async () => {
-    await seedGroupDoc([ALICE]);
+  it("allows a member to read the group", async () => {
+    await seedGroupDoc([ALICE, BOB]);
     const db = env.authenticatedContext(BOB).firestore();
     await assertSucceeds(getDoc(doc(db, "groups", GROUP_ID)));
+  });
+
+  it("denies a signed-in non-member from reading the group", async () => {
+    await seedGroupDoc([ALICE]);
+    const db = env.authenticatedContext(BOB).firestore();
+    await assertFails(getDoc(doc(db, "groups", GROUP_ID)));
+  });
+
+  it("denies client-side invite-code lookup for a non-member", async () => {
+    await seedGroupDoc([ALICE]);
+    const db = env.authenticatedContext(BOB).firestore();
+    await assertFails(
+      getDocs(
+        query(
+          collection(db, "groups"),
+          where("inviteCode", "==", "ABC123"),
+          limit(1),
+        ),
+      ),
+    );
   });
 
   it("allows organizer to create a valid group", async () => {
@@ -493,6 +516,54 @@ describe("groups/{groupId}", () => {
     );
   });
 
+  it("denies self-join that replaces existing members", async () => {
+    await seedGroupDoc([ALICE]);
+    const db = env.authenticatedContext(BOB).firestore();
+    await assertFails(
+      updateDoc(doc(db, "groups", GROUP_ID), {
+        memberUserIds: [BOB, CAROL],
+        members: [
+          {
+            userId: BOB,
+            name: "Bob",
+            role: "member",
+            joinedAt: new Date().toISOString(),
+          },
+          {
+            userId: CAROL,
+            name: "Carol",
+            role: "member",
+            joinedAt: new Date().toISOString(),
+          },
+        ],
+      }),
+    );
+  });
+
+  it("denies self-join that mutates an existing member record", async () => {
+    await seedGroupDoc([ALICE]);
+    const db = env.authenticatedContext(BOB).firestore();
+    await assertFails(
+      updateDoc(doc(db, "groups", GROUP_ID), {
+        memberUserIds: [ALICE, BOB],
+        members: [
+          {
+            userId: ALICE,
+            name: "Changed without consent",
+            role: "organizer",
+            joinedAt: new Date().toISOString(),
+          },
+          {
+            userId: BOB,
+            name: "Bob",
+            role: "member",
+            joinedAt: new Date().toISOString(),
+          },
+        ],
+      }),
+    );
+  });
+
   it("allows member to self-leave", async () => {
     await seedGroupDoc([ALICE, BOB]);
     let memberObj: Record<string, unknown> | undefined;
@@ -516,6 +587,48 @@ describe("groups/{groupId}", () => {
     await assertFails(
       updateDoc(doc(db, "groups", GROUP_ID), {
         memberUserIds: arrayRemove(CAROL),
+      }),
+    );
+  });
+
+  it("denies self-leave that substitutes another member", async () => {
+    await seedGroupDoc([ALICE, BOB, CAROL]);
+    const db = env.authenticatedContext(BOB).firestore();
+    await assertFails(
+      updateDoc(doc(db, "groups", GROUP_ID), {
+        memberUserIds: [ALICE, "replacement-user"],
+        members: [
+          {
+            userId: ALICE,
+            name: "Alice",
+            role: "organizer",
+            joinedAt: new Date().toISOString(),
+          },
+          {
+            userId: "replacement-user",
+            name: "Replacement",
+            role: "member",
+            joinedAt: new Date().toISOString(),
+          },
+        ],
+      }),
+    );
+  });
+
+  it("denies organizer self-leave that would orphan the group", async () => {
+    await seedGroupDoc([ALICE, BOB]);
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      updateDoc(doc(db, "groups", GROUP_ID), {
+        memberUserIds: [BOB],
+        members: [
+          {
+            userId: BOB,
+            name: "Member",
+            role: "member",
+            joinedAt: new Date().toISOString(),
+          },
+        ],
       }),
     );
   });

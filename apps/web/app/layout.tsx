@@ -29,7 +29,7 @@ const jetbrains = JetBrains_Mono({
 
 const SITE_TITLE = "CruiseKit — Everything You Need for Your Cruise";
 const SITE_DESCRIPTION =
-  "Free cruise planner app and true cruise cost calculator for hidden costs, ship time, port time, MyDay planning, and port days on iPhone and Android.";
+  "Free cruise planner app and true cruise cost calculator for hidden costs, port-time awareness, MyDay planning, and port days on iPhone and Android.";
 const OG_IMAGE = {
   url: "/cruisekit_square.png",
   width: 512,
@@ -86,6 +86,25 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${jakarta.variable} ${inter.variable} ${jetbrains.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          id="cruisekit-consent-default"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = window.gtag || gtag;
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                wait_for_update: 500
+              });
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <AuthProvider>{children}</AuthProvider>
         <AnalyticsLoader />
@@ -101,7 +120,7 @@ export default function RootLayout({
                   name: "CruiseKit",
                   url: "https://cruisekit.app",
                   description:
-                    "Free cruise planning toolkit for true cruise costs, ship time, port time, MyDay planning, and port days.",
+                    "Free cruise planning toolkit for true cruise costs, port-time awareness, MyDay planning, and port days.",
                 },
                 {
                   "@type": "WebSite",

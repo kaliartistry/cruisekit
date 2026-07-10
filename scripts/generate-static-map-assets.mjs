@@ -8,6 +8,7 @@ const execFileAsync = promisify(execFile);
 
 const rootDir = process.cwd();
 const portsSourcePath = path.join(rootDir, 'apps/web/lib/data/ports.ts');
+const extraPortsPath = path.join(rootDir, 'scripts/static-map-extra-ports.json');
 const outputDir = path.join(rootDir, 'apps/web/public/assets/maps/static');
 const width = 2400;
 const height = 1560;
@@ -17,10 +18,10 @@ const mapLibreCssUrl = 'https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.cs
 const args = process.argv.slice(2);
 const shouldRenderPorts = !args.includes('--regions-only');
 const shouldRenderRegions = !args.includes('--ports-only') && !args.some((arg) => arg.startsWith('--only-port='));
-const onlyPortSlug = args
-  .find((arg) => arg.startsWith('--only-port='))
-  ?.split('=')
-  .at(1);
+const onlyPortSlugs = args
+  .filter((arg) => arg.startsWith('--only-port='))
+  .map((arg) => arg.split('=').at(1))
+  .filter(Boolean);
 
 const regionAssets = [
   { id: 'all', label: 'CruiseKit Port Atlas', filter: () => true },
@@ -448,7 +449,16 @@ async function createOpenFreeMapRenderer() {
 
 await mkdir(outputDir, { recursive: true });
 const source = await readFile(portsSourcePath, 'utf8');
-const ports = parsePorts(source);
+let extraPorts = [];
+try {
+  extraPorts = JSON.parse(await readFile(extraPortsPath, 'utf8'));
+} catch (error) {
+  if (error?.code !== 'ENOENT') throw error;
+}
+const ports = [...parsePorts(source), ...extraPorts].filter(
+  (port, index, allPorts) =>
+    allPorts.findIndex((candidate) => candidate.slug === port.slug) === index,
+);
 if (ports.length < 20) {
   throw new Error(`Parsed only ${ports.length} ports from ${portsSourcePath}`);
 }
@@ -479,11 +489,13 @@ if (shouldRenderRegions) {
 }
 
 if (shouldRenderPorts) {
-  const selectedPorts = onlyPortSlug
-    ? ports.filter((port) => port.slug === onlyPortSlug)
+  const selectedPorts = onlyPortSlugs.length > 0
+    ? ports.filter((port) => onlyPortSlugs.includes(port.slug))
     : ports;
-  if (onlyPortSlug && selectedPorts.length === 0) {
-    throw new Error(`No port found for --only-port=${onlyPortSlug}`);
+  if (onlyPortSlugs.length > 0 && selectedPorts.length !== onlyPortSlugs.length) {
+    const found = new Set(selectedPorts.map((port) => port.slug));
+    const missing = onlyPortSlugs.filter((slug) => !found.has(slug));
+    throw new Error(`No port found for --only-port=${missing.join(',')}`);
   }
 
   for (const port of selectedPorts) {

@@ -48,6 +48,7 @@ const FOOTER_COLUMNS = [
       { label: "How we make money", href: "/how-we-make-money" },
       { label: "Affiliate Disclosure", href: "/affiliate-disclosure" },
       { label: "Privacy Policy", href: "/privacy" },
+      { label: "Delete Your Account", href: "/account-deletion" },
       { label: "Terms of Service", href: "/terms" },
     ],
   },
