@@ -4,6 +4,7 @@ import path from 'node:path';
 
 const rootDir = process.cwd();
 const portsSourcePath = path.join(rootDir, 'apps/web/lib/data/ports.ts');
+const extraPortsPath = path.join(rootDir, 'scripts/static-map-extra-ports.json');
 const outputDir = path.join(rootDir, 'apps/web/public/assets/maps/static');
 
 function parsePorts(source) {
@@ -33,7 +34,11 @@ async function exists(filePath) {
 }
 
 const source = await readFile(portsSourcePath, 'utf8');
-const ports = parsePorts(source);
+const extraPorts = JSON.parse(await readFile(extraPortsPath, 'utf8'));
+const ports = [...parsePorts(source), ...extraPorts].filter(
+  (port, index, allPorts) =>
+    allPorts.findIndex((candidate) => candidate.slug === port.slug) === index,
+);
 const regions = parseRegionLabels(source);
 
 if (ports.length < 20) {

@@ -6,7 +6,7 @@ import MyDayContent from "./myday-content";
 export const metadata: Metadata = {
   title: "MyDay — Your Cruise Day, Handled",
   description:
-    "CruiseKit MyDay for iPhone helps cruisers manage ship time, port time, daily schedules, onboard spend, and MyCrew check-ins.",
+    "CruiseKit MyDay helps cruisers compare device and port-local time, keep official ship-time verification close, manage daily plans, track spend, and use MyCrew check-ins.",
 };
 
 export default function MyDayPage() {

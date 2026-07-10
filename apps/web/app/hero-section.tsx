@@ -32,7 +32,7 @@ const HERO_PROOF = [
   {
     icon: Navigation,
     label: "MyDay",
-    value: "Your cruise countdown, current day, ports, reminders, and crew.",
+    value: "Your cruise countdown, current day, ports, saved plans, and crew.",
     href: "/app",
   },
   {

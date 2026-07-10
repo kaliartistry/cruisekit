@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node ../../scripts/build-data-bundles.mjs && node ../../scripts/publish-data-bundles.mjs",
+    "prebuild": "node ../../scripts/generate-port-timezone-artifact.mjs && pnpm run test:ports && node ../../scripts/build-data-bundles.mjs && node ../../scripts/publish-data-bundles.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:ports": "vitest run lib/ports/__tests__/port-foundation.test.ts 'app/ports/[port-slug]/port-today-header.test.tsx' 'app/ports/[port-slug]/port-guide-status.test.tsx'"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -44,6 +46,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^2.1.9"
   }
 }

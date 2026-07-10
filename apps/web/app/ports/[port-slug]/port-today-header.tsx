@@ -2,11 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { Clock, AlertTriangle } from "lucide-react";
+import {
+  formatTimeInZone,
+  resolvedDeviceTimeZone,
+  zoneDifferenceLabel,
+} from "@/lib/ports/port-time";
 
 interface PortTodayHeaderProps {
   portName: string;
-  timezone: string;
-  timeZoneAlert?: string | null;
+  ianaTimeZone: string;
 }
 
 /**
@@ -18,21 +22,30 @@ interface PortTodayHeaderProps {
  */
 export default function PortTodayHeader({
   portName,
-  timezone,
-  timeZoneAlert,
+  ianaTimeZone,
 }: PortTodayHeaderProps) {
-  const [now, setNow] = useState(() => new Date());
+  // Keep the server render and the browser's first render identical. The
+  // browser clock is introduced only after hydration.
+  const [now, setNow] = useState<Date | null>(null);
 
   useEffect(() => {
+    const initial = window.setTimeout(() => setNow(new Date()), 0);
     const t = setInterval(() => setNow(new Date()), 30_000);
-    return () => clearInterval(t);
+    return () => {
+      window.clearTimeout(initial);
+      clearInterval(t);
+    };
   }, []);
 
-  const portTime = formatInTimeZone(now, extractIanaZone(timezone));
-  const deviceTime = now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-  const offsetLabel = now
-    ? timezoneOffsetLabel(now, extractIanaZone(timezone))
+  const deviceTimeZone = now ? resolvedDeviceTimeZone() : null;
+  const portTime = now ? formatTimeInZone(now, ianaTimeZone) : null;
+  const deviceTime = now
+    ? now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })
     : null;
+  const offsetLabel =
+    now && deviceTimeZone
+      ? zoneDifferenceLabel(now, ianaTimeZone, deviceTimeZone)
+      : null;
 
   return (
     <div className="sticky top-16 z-30 -mx-4 mb-8 border-y border-navy/10 bg-white/95 px-4 py-3 backdrop-blur-md sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
@@ -42,24 +55,23 @@ export default function PortTodayHeader({
           Today at {portName}
         </div>
         <TimeBlock
-          label="Port time"
-          value={portTime ?? "—"}
+          label="Port local time"
+          value={now ? (portTime ?? "Unavailable") : "—"}
           suffix={offsetLabel}
           color="text-teal"
         />
         <TimeBlock
-          label="Your time"
+          label="Your phone time"
           value={deviceTime ?? "—"}
           color="text-navy"
         />
-        {timeZoneAlert && (
-          <div className="flex items-start gap-1.5 text-[11px] text-amber-700 sm:ml-auto">
-            <AlertTriangle className="mt-0.5 h-3 w-3 flex-shrink-0" />
-            <span className="leading-tight">
-              Time-zone alert — scroll down for details.
-            </span>
-          </div>
-        )}
+        <div className="flex basis-full items-start gap-1.5 text-[11px] text-amber-700 lg:ml-auto lg:basis-auto">
+          <AlertTriangle className="mt-0.5 h-3 w-3 flex-shrink-0" />
+          <span className="max-w-xl leading-tight">
+            These are port-local and phone times, not ship time. Follow the
+            ship&apos;s official clock and all-aboard instructions.
+          </span>
+        </div>
       </div>
     </div>
   );
@@ -87,40 +99,4 @@ function TimeBlock({
       )}
     </div>
   );
-}
-
-function extractIanaZone(tz: string): string {
-  const match = tz.match(/([A-Z][a-z]+\/[A-Za-z_]+(?:\/[A-Za-z_]+)?)/);
-  return match ? match[1] : tz;
-}
-
-function formatInTimeZone(date: Date, timeZone: string): string {
-  try {
-    return date.toLocaleTimeString([], {
-      hour: "numeric",
-      minute: "2-digit",
-      timeZone,
-    });
-  } catch {
-    return date.toLocaleTimeString([], {
-      hour: "numeric",
-      minute: "2-digit",
-    });
-  }
-}
-
-function timezoneOffsetLabel(date: Date, timeZone: string): string | null {
-  try {
-    const deviceHour = date.getHours() * 60 + date.getMinutes();
-    const portDate = new Date(
-      date.toLocaleString("en-US", { timeZone })
-    );
-    const portHour = portDate.getHours() * 60 + portDate.getMinutes();
-    const diffMin = portHour - deviceHour;
-    const diffHours = Math.round(diffMin / 60);
-    if (diffHours === 0) return null;
-    return diffHours > 0 ? `(+${diffHours}h)` : `(${diffHours}h)`;
-  } catch {
-    return null;
-  }
 }

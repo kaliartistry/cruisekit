@@ -4,6 +4,9 @@ const { HttpsError, onCall } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
 const { logger } = require("firebase-functions");
 const { Resend } = require("resend");
+const {
+  createAccountLifecycleHandlers,
+} = require("./account-lifecycle");
 
 admin.initializeApp();
 
@@ -11,6 +14,23 @@ const resendApiKey = defineSecret("RESEND_API_KEY");
 
 const DEFAULT_TO = "info@cruisekit.app";
 const DEFAULT_FROM = "CruiseKit <info@cruisekit.app>";
+
+const accountLifecycle = createAccountLifecycleHandlers({
+  db: admin.firestore(),
+  auth: admin.auth(),
+  logger,
+  FieldValue: admin.firestore.FieldValue,
+});
+
+exports.findGroupByInvite = onCall(
+  { region: "us-central1", maxInstances: 20 },
+  accountLifecycle.findGroupByInvite,
+);
+
+exports.deleteUserAccount = onCall(
+  { region: "us-central1", maxInstances: 10 },
+  accountLifecycle.deleteUserAccount,
+);
 
 exports.emailDealLeadRequest = onDocumentCreated(
   {

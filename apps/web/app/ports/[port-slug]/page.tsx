@@ -24,11 +24,13 @@ import Footer from "@/components/layout/footer";
 import AffiliateLink from "@/components/shared/affiliate-link";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import ViatorExcursions from "@/components/viator/viator-excursions";
+import PortGuideStatus from "./port-guide-status";
 import PortTodayHeader from "./port-today-header";
 import PortSectionNav from "./port-section-nav";
 import { hasViatorProducts } from "@/lib/data/viator-destinations";
 import { getHotelLink, getBoatRentalLink } from "@/lib/affiliate-config";
 import { cn } from "@/lib/utils/cn";
+import { resolvePortHeroMedia } from "@/lib/ports/port-media";
 import {
   getPortBySlug,
   getAllPortSlugs,
@@ -63,6 +65,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${port.name}, ${port.country} Cruise Port Guide`;
   const description = `CruiseKit guide to ${port.name}, ${port.country}: walkability, tender or dock status, port hours, currency, Wi-Fi, excursions, food, and a non-live destination snapshot.`;
   const url = `/ports/${port.slug}`;
+  const heroMedia = resolvePortHeroMedia(port);
 
   return {
     title,
@@ -86,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       images: [
         {
-          url: port.imageUrl,
+          url: heroMedia.url,
           alt: `${port.name}, ${port.country} cruise port`,
         },
       ],
@@ -95,7 +98,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: [port.imageUrl],
+      images: [heroMedia.url],
     },
   };
 }
@@ -151,7 +154,7 @@ function getPortFaqs(port: PortData): PortFaq[] {
     {
       question: `Does this ${port.name} page use a live map provider?`,
       answer:
-        "No. This port guide uses a static destination snapshot for planning. CruiseKit's optional Explore Map is a separate app view and is only loaded when enabled and opened by the user.",
+        "No. This port guide uses a pre-rendered OpenStreetMap-derived image that CruiseKit serves directly. It does not request live map tiles when you visit the page. CruiseKit's optional Explore Map is a separate app view and is only loaded when enabled and opened by the user.",
     },
   ];
 }
@@ -166,31 +169,52 @@ function DestinationSnapshot({ port }: { port: PortData }) {
   return (
     <div className="mt-8 grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
       <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
-        <div className="relative h-64 bg-[linear-gradient(135deg,rgba(0,180,216,.16),rgba(244,232,209,.94))] p-6">
-          <div className="absolute -right-14 -top-16 h-48 w-48 rounded-full bg-white/45" />
-          <div className="absolute bottom-0 right-0 h-44 w-2/3 rounded-tl-[4rem] bg-sand/80" />
-          <div className="absolute bottom-12 right-12 h-2 w-36 rotate-[-18deg] rounded-full bg-white/90" />
-          <div className="absolute bottom-20 right-32 h-2 w-28 rotate-[24deg] rounded-full bg-white/90" />
-          <div className="absolute bottom-10 left-10 flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-teal text-white shadow-lg">
-            {port.isTenderPort ? (
-              <Anchor className="h-5 w-5" />
-            ) : (
-              <Ship className="h-5 w-5" />
-            )}
+        <figure>
+          <div className="relative aspect-[20/13] bg-slate-100">
+            <Image
+              src={`/assets/maps/static/port-${port.slug}.webp`}
+              alt={`Street map of the ${port.name}, ${port.country} port area`}
+              fill
+              sizes="(max-width: 1024px) 100vw, 54vw"
+              className="object-cover"
+            />
+            <div className="absolute left-4 top-4 rounded-full border border-white/80 bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-navy shadow-sm backdrop-blur-sm">
+              Static port-area map
+            </div>
           </div>
-          <div className="absolute bottom-24 right-20 flex h-11 w-11 items-center justify-center rounded-full border-4 border-white bg-coral text-white shadow-lg">
-            <MapPin className="h-5 w-5" />
-          </div>
-          <div className="relative max-w-sm">
-            <p className="text-xs font-bold uppercase tracking-wider text-teal-dark">
-              Destination Snapshot
-            </p>
-            <h3 className="mt-2 text-2xl font-extrabold tracking-tight text-navy">
-              {port.name}
-            </h3>
-            <p className="text-sm font-semibold text-ocean">{port.country}</p>
-          </div>
-        </div>
+          <figcaption className="flex flex-col gap-1 border-t border-gray-100 px-4 py-3 text-xs leading-relaxed text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+            <span>Pre-rendered and served by CruiseKit—no live tile request.</span>
+            <span>
+              Map: {" "}
+              <a
+                href="https://openfreemap.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+              >
+                OpenFreeMap
+              </a>{" "}
+              © {" "}
+              <a
+                href="https://openmaptiles.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+              >
+                OpenMapTiles
+              </a>
+              {" · Data © "}
+              <a
+                href="https://www.openstreetmap.org/copyright"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+              >
+                OpenStreetMap contributors (ODbL)
+              </a>
+            </span>
+          </figcaption>
+        </figure>
       </div>
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
         <h3 className="text-lg font-bold text-navy">
@@ -291,6 +315,7 @@ export default async function PortDetailPage({ params }: Props) {
 
   const faqs = getPortFaqs(port);
   const canonicalUrl = `https://cruisekit.app/ports/${port.slug}`;
+  const heroMedia = resolvePortHeroMedia(port);
 
   return (
     <>
@@ -305,7 +330,7 @@ export default async function PortDetailPage({ params }: Props) {
                 "@id": `${canonicalUrl}#destination`,
                 name: `${port.name} Cruise Port`,
                 url: canonicalUrl,
-                image: port.imageUrl,
+                image: heroMedia.url,
                 description: port.overview,
                 geo: {
                   "@type": "GeoCoordinates",
@@ -359,13 +384,44 @@ export default async function PortDetailPage({ params }: Props) {
         {/* ============================================================ */}
         <section className="relative h-[340px] sm:h-[400px] lg:h-[440px] overflow-hidden">
           <Image
-            src={port.imageUrl}
-            alt={`${port.name}, ${port.country}`}
+            src={heroMedia.url}
+            alt={heroMedia.alt}
             fill
             className="object-cover"
             priority
             sizes="100vw"
           />
+          {heroMedia.isMapFallback ? (
+            <div className="absolute right-3 top-3 z-10 rounded-lg bg-white/90 px-3 py-2 text-[10px] font-medium text-slate-700 shadow-sm backdrop-blur-sm sm:right-5 sm:top-5 sm:text-xs">
+              Map: {" "}
+              <a
+                href="https://openfreemap.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                OpenFreeMap
+              </a>{" "}
+              © {" "}
+              <a
+                href="https://openmaptiles.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                OpenMapTiles
+              </a>{" "}
+              · Data © {" "}
+              <a
+                href="https://www.openstreetmap.org/copyright"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                OpenStreetMap contributors
+              </a>
+            </div>
+          ) : null}
           <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/40 to-navy/10" />
           <div className="absolute inset-0 flex items-end">
             <div className="mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
@@ -459,7 +515,7 @@ export default async function PortDetailPage({ params }: Props) {
               <QuickStat
                 icon={Clock}
                 label="Time Zone"
-                value={port.timezone}
+                value={port.ianaTimeZone}
               />
             </div>
           </div>
@@ -469,8 +525,7 @@ export default async function PortDetailPage({ params }: Props) {
           {/* Pinned "Today at [port]" header — live port time + TZ delta */}
           <PortTodayHeader
             portName={port.name}
-            timezone={port.timezone}
-            timeZoneAlert={port.timeZoneAlert}
+            ianaTimeZone={port.ianaTimeZone}
           />
 
           {/* Section tabs — IntersectionObserver-powered in-page nav */}
@@ -479,19 +534,20 @@ export default async function PortDetailPage({ params }: Props) {
           {/* ============================================================ */}
           {/*  3. Time Zone Alert                                          */}
           {/* ============================================================ */}
-          {port.timeZoneAlert && (
-            <div className="mb-10 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-5">
-              <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
-              <div>
-                <p className="font-semibold text-amber-900">
-                  Time Zone Alert
-                </p>
-                <p className="mt-1 text-sm leading-relaxed text-amber-800">
-                  {port.timeZoneAlert}
-                </p>
-              </div>
+          <div className="mb-10 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-5">
+            <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
+            <div>
+              <p className="font-semibold text-amber-900">Time check</p>
+              <p className="mt-1 text-sm leading-relaxed text-amber-800">
+                {port.name} uses {port.ianaTimeZone}. Your phone may switch to
+                local time automatically, while the ship may keep a different
+                clock. Treat the times on this page as planning aids and follow
+                the ship&apos;s official time and all-aboard instructions.
+              </p>
             </div>
-          )}
+          </div>
+
+          <PortGuideStatus governance={port.governance} />
 
           {/* ============================================================ */}
           {/*  4. Overview                                                  */}

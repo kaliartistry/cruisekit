@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import { AnalyticsPreferenceButton } from "@/components/shared/analytics-loader";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "CruiseKit privacy policy. Learn how we handle your data, what we collect, and what we don't.",
+    "How CruiseKit handles account, MyDay, MyCrew, local device, analytics, diagnostics, and support data.",
+  alternates: {
+    canonical: "https://cruisekit.app/privacy",
+  },
 };
 
 export default function PrivacyPage() {
@@ -18,239 +23,247 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="mt-2 text-sm text-gray-500">
-            Last updated: May 16, 2026
+            Last updated: July 10, 2026
           </p>
 
-          <div className="mt-10 space-y-8 text-base leading-relaxed text-gray-700">
-            {/* 1 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                1. Introduction
-              </h2>
+          <div className="mt-10 space-y-9 text-base leading-relaxed text-gray-700">
+            <PolicySection title="1. Scope">
               <p>
                 CruiseKit (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
-                &ldquo;our&rdquo;) operates the website at{" "}
-                <strong>cruisekit.app</strong> and the CruiseKit mobile app.
-                This Privacy Policy explains what information we collect, how
-                we use it, and the choices you have. We are committed to
-                protecting your privacy and being transparent about our data
-                practices.
+                &ldquo;our&rdquo;) operates cruisekit.app and the CruiseKit
+                mobile app, including the MyDay and MyCrew experiences. This
+                policy describes the information those services handle, why we
+                use it, and the controls available to you.
               </p>
-            </section>
+            </PolicySection>
 
-            {/* 2 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                2. Information We Collect
-              </h2>
-              <h3 className="mb-2 text-lg font-semibold text-gray-800">
-                2.1 Account Information
-              </h3>
-              <p className="mb-4">
-                When you sign in with Google via Firebase Authentication, we
-                receive your name, email address, and profile photo from your
-                Google account. We use this information solely to identify
-                your account and personalize your experience.
-              </p>
-              <h3 className="mb-2 text-lg font-semibold text-gray-800">
-                2.2 Saved Trip Data
-              </h3>
-              <p className="mb-4">
-                If you save trips or cruise comparisons, that data is stored
-                in Firebase Firestore and associated with your account. This
-                data is used only to provide the &ldquo;My Trips&rdquo;
-                feature and is not shared with any third party.
-              </p>
-              <h3 className="mb-2 text-lg font-semibold text-gray-800">
-                2.3 Analytics Data
-              </h3>
-              <p className="mb-4">
-                We use Google Analytics and Firebase Analytics to understand
-                how visitors and app testers use CruiseKit. Analytics events
-                may include pages viewed, feature usage, deal shortlist
-                actions, deal handoff actions, device type, and general
-                geographic region. Deal funnel analytics do not include lead
-                form names, emails, phone numbers, or notes.
-              </p>
-              <h3 className="mb-2 text-lg font-semibold text-gray-800">
-                2.4 Location Data
-              </h3>
-              <p className="mb-4">
-                In the mobile app, CruiseKit may request location permission
-                for active return-to-ship guidance and for one-time MyCrew
-                check-ins that you choose to share. MyCrew check-ins are
-                intentional status updates; CruiseKit does not use MyCrew as
-                continuous live tracking.
-              </p>
-              <h3 className="mb-2 text-lg font-semibold text-gray-800">
-                2.5 Deal and Support Requests
-              </h3>
+            <PolicySection title="2. Information we handle">
+              <Subheading>Account and sign-in information</Subheading>
               <p>
-                If you ask CruiseKit for help with a deal or contact support,
-                we may collect the name, email address, phone number, and note
-                you provide so we can respond to your request.
+                CruiseKit can use anonymous Firebase Authentication and, when
+                you choose to link an account, Google or Apple sign-in. Depending
+                on the method, Firebase Authentication and the identity provider
+                may provide a user ID, name, email address, profile image, and
+                provider identifier. Anonymous accounts generally have a user ID
+                without a name or email address.
               </p>
-            </section>
 
-            {/* 3 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                3. What We Do NOT Collect
-              </h2>
+              <Subheading>Saved cruise and MyDay information</Subheading>
+              <p>
+                Saved cruises, itinerary choices, cabin details you enter,
+                schedule items, all-aboard entries, and related planning data may
+                be associated with your account in Firebase Firestore or kept on
+                your device, depending on the feature. Spend entries, budgets,
+                drink-package tracking, and port-planning notes are planning
+                records you enter; they are not bank, card, or payment-processor
+                records and are currently stored locally on the device.
+              </p>
+
+              <Subheading>MyCrew information</Subheading>
+              <p>
+                If you use MyCrew, Firestore stores group details, membership,
+                display names, messages, and manual status check-ins you
+                intentionally share. The current app does not request or collect
+                precise or approximate location and does not provide live or
+                background location tracking. Other members of a group can see
+                shared group content while they remain members. Account deletion
+                also removes any legacy MyCrew location records from older builds.
+              </p>
+
+              <Subheading>Support and deal requests</Subheading>
+              <p>
+                When you contact us or request help with a cruise deal, we handle
+                the name, email, phone number, note, cruise details, and other
+                information you submit so we can respond. These requests may
+                also create support emails through our email provider.
+              </p>
+
+              <Subheading>Usage, device, and diagnostic information</Subheading>
+              <p>
+                If you allow optional website analytics, Google Analytics may
+                receive page and feature interactions, device/browser details,
+                approximate region, and campaign information. The mobile app may
+                use Firebase Analytics and Firebase Crashlytics for feature use,
+                app/device details, crash reports, diagnostics, and identifiers
+                used by those services. Do not include private information in
+                free-text fields when reporting a problem.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="3. Website analytics choice and local technologies">
+              <p>
+                CruiseKit keeps Google Analytics off on this website unless you
+                choose to allow it. We save only your analytics choice in local
+                storage for this control. Essential browser storage used for
+                authentication, security, saved preferences, or core site
+                operation is not disabled by the analytics choice.
+              </p>
+              <p className="mt-3">
+                <AnalyticsPreferenceButton />.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="4. How we use information">
               <ul className="list-disc space-y-2 pl-5">
+                <li>Authenticate accounts and restore account-linked data.</li>
+                <li>Provide MyDay, saved cruise, MyCrew, and support features.</li>
+                <li>Keep shared groups working for their remaining members.</li>
+                <li>Respond to support and deal requests.</li>
                 <li>
-                  <strong>No tracking cookies.</strong> CruiseKit does not use
-                  cookies for advertising or cross-site tracking. The only
-                  cookies on the site are those required by Firebase
-                  Authentication and Google Analytics.
+                  Understand reliability and feature use, where analytics or
+                  diagnostics are enabled.
                 </li>
-                <li>
-                  <strong>No payment information.</strong> CruiseKit is a free
-                  tool. We do not process payments or store any financial
-                  data.
-                </li>
-                <li>
-                  <strong>No always-on MyCrew tracking.</strong> MyCrew uses
-                  one-time check-ins. Location guidance is used only while
-                  active return-to-ship guidance is running.
-                </li>
+                <li>Prevent abuse, investigate errors, and protect the service.</li>
               </ul>
-            </section>
+            </PolicySection>
 
-            {/* 4 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                4. How We Use Your Information
-              </h2>
-              <p>We use the information we collect to:</p>
-              <ul className="mt-2 list-disc space-y-2 pl-5">
-                <li>
-                  Provide, maintain, and improve CruiseKit&rsquo;s features
-                </li>
-                <li>
-                  Authenticate your account and restore saved trips
-                </li>
-                <li>
-                  Understand usage patterns so we can improve the product
-                </li>
-                <li>
-                  Measure deal shortlist, handoff, and booking-link funnel
-                  performance
-                </li>
-                <li>
-                  Respond to support requests and feedback
-                </li>
-              </ul>
-            </section>
-
-            {/* 5 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                5. Data Sharing
-              </h2>
+            <PolicySection title="5. Service providers and sharing">
               <p>
-                <strong>We do not sell your personal data.</strong> We do not
-                share your personal information with third parties for
-                marketing purposes. The only third-party services that
-                receive data are:
+                We do not sell personal information and do not share it with
+                third parties for their independent marketing. Providers process
+                information for CruiseKit only as needed to deliver their
+                services:
               </p>
-              <ul className="mt-2 list-disc space-y-2 pl-5">
+              <ul className="mt-3 list-disc space-y-2 pl-5">
                 <li>
-                  <strong>Firebase (Google)</strong> &mdash; for
-                  authentication and data storage
+                  <strong>Google Firebase</strong> for Authentication,
+                  Firestore, Analytics, and Crashlytics.
                 </li>
                 <li>
-                  <strong>Google Analytics</strong> &mdash; for anonymized
-                  usage analytics
+                  <strong>Google Analytics</strong> for optional website usage
+                  measurement after consent.
                 </li>
                 <li>
-                  <strong>Firebase Analytics</strong> &mdash; for mobile app
-                  usage and deal funnel analytics
+                  <strong>Google and Apple</strong> when you choose their sign-in
+                  methods.
+                </li>
+                <li>
+                  <strong>Resend and our email systems</strong> for support,
+                  deal-request notifications, and replies.
+                </li>
+                <li>
+                  <strong>GitHub</strong> for static website hosting and
+                  deployment infrastructure.
                 </li>
               </ul>
-            </section>
-
-            {/* 6 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                6. Affiliate Links
-              </h2>
-              <p>
-                CruiseKit contains affiliate links to cruise line websites
-                and booking platforms. When you click these links and make a
-                purchase, we may earn a small commission. These links do not
-                track you on CruiseKit&rsquo;s site. Once you click an
-                affiliate link, you are subject to that third party&rsquo;s
-                own privacy policy.
+              <p className="mt-3">
+                Affiliate or booking sites receive information under their own
+                policies only after you choose to follow an outbound link. We do
+                not send them your MyDay or MyCrew records.
               </p>
-            </section>
+            </PolicySection>
 
-            {/* 7 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                7. Data Retention
-              </h2>
+            <PolicySection title="6. Payments and financial information">
               <p>
-                Your account data and saved trips are retained as long as you
-                have an active account. If you wish to delete your data,
-                contact us at{" "}
-                <a
-                  href="mailto:info@cruisekit.app"
-                  className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
+                CruiseKit does not process cruise bookings, card payments, or
+                bank transactions, and we do not collect card or bank account
+                numbers. The Spend feature stores user-entered planning amounts
+                locally so you can compare onboard spending with a budget; it is
+                not connected to your payment card or cruise-line folio.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="7. Retention and deletion">
+              <p>
+                Account profile and account-linked Firestore data are generally
+                kept while the account remains active. MyCrew messages and group
+                data remain available to group members until removed through the
+                product or account-deletion process. Local device data remains
+                until you clear it in the app or remove the app.
+              </p>
+              <p className="mt-3">
+                You can request deletion from MyDay by CruiseKit even if you can
+                no longer access the app. Authenticated deletion removes the
+                account, account-linked Firestore records, MyCrew membership,
+                check-in/location data, messages authored by the account, and
+                requester-linked lead records. Shared groups remain for other
+                members; an empty group owned only by the requester is deleted.
+                See the{" "}
+                <Link
+                  href="/account-deletion"
+                  className="font-medium text-teal underline decoration-teal/30 underline-offset-2 hover:text-teal-dark"
                 >
-                  info@cruisekit.app
-                </a>{" "}
-                and we will delete your account and all associated data
-                within 30 days.
+                  account-deletion instructions
+                </Link>
+                .
               </p>
-            </section>
-
-            {/* 8 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                8. Children&rsquo;s Privacy
-              </h2>
-              <p>
-                CruiseKit is not directed at children under the age of 13. We
-                do not knowingly collect personal information from children.
+              <p className="mt-3">
+                In-app deletion begins immediately. Verified email requests are
+                completed within 30 days. Limited security logs, provider
+                backups, diagnostics, and prior support or deal-request emails
+                may remain until their normal retention periods end. We do not
+                use retained copies to recreate a deleted account.
               </p>
-            </section>
+            </PolicySection>
 
-            {/* 9 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                9. Changes to This Policy
-              </h2>
+            <PolicySection title="8. Security and your choices">
               <p>
-                We may update this Privacy Policy from time to time. If we
-                make material changes, we will update the &ldquo;Last
-                updated&rdquo; date at the top of this page. Your continued
-                use of CruiseKit after any changes constitutes acceptance of
-                the updated policy.
+                We use access controls and Firebase security rules to limit
+                account and MyCrew data to authorized users. No internet service
+                can promise absolute security. You can choose whether to link an
+                identity provider, whether to share a manual MyCrew status, and
+                whether to allow website analytics. Do not send passwords,
+                sign-in codes, or card details to CruiseKit support.
               </p>
-            </section>
+            </PolicySection>
 
-            {/* 10 */}
-            <section>
-              <h2 className="mb-3 text-xl font-bold text-navy">
-                10. Contact
-              </h2>
+            <PolicySection title="9. Children">
               <p>
-                If you have questions about this Privacy Policy, contact us
-                at{" "}
+                CruiseKit is not directed to children under 13, and we do not
+                knowingly collect personal information from children under 13.
+                A parent or guardian who believes a child submitted information
+                can contact us to request review and deletion.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="10. Changes and contact">
+              <p>
+                We may update this policy as CruiseKit changes. We will update
+                the date at the top when we make changes. Questions, privacy
+                requests, and account-deletion support can be sent to{" "}
                 <a
                   href="mailto:info@cruisekit.app"
-                  className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
+                  className="font-medium text-teal underline decoration-teal/30 underline-offset-2 hover:text-teal-dark"
                 >
                   info@cruisekit.app
                 </a>
+                , or through the{" "}
+                <Link
+                  className="font-medium text-teal underline decoration-teal/30 underline-offset-2 hover:text-teal-dark"
+                  href="/contact"
+                >
+                  contact page
+                </Link>
                 .
               </p>
-            </section>
+            </PolicySection>
           </div>
         </section>
       </main>
       <Footer />
     </>
+  );
+}
+
+function PolicySection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section>
+      <h2 className="mb-3 text-xl font-bold text-navy">{title}</h2>
+      {children}
+    </section>
+  );
+}
+
+function Subheading({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="mb-2 mt-5 text-lg font-semibold text-gray-800 first:mt-0">
+      {children}
+    </h3>
   );
 }
