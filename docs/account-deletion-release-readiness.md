@@ -27,10 +27,12 @@
 The repository changes are complete, but deployment must be coordinated to
 avoid breaking the currently released mobile join flow.
 
-1. Deploy the new Firestore collection-group index, then the callable functions:
+1. Deploy the callable functions. The account cleanup uses Firestore's automatic
+   single-field index for its collection-group sender lookup, so no custom index
+   is required:
 
    ```bash
-   firebase deploy --only firestore:indexes,functions:findGroupByInvite,functions:deleteUserAccount
+   firebase deploy --only functions:findGroupByInvite,functions:deleteUserAccount
    ```
 
 2. Publish the static website so `/account-deletion`, `/mycrew/join`, the AASA
