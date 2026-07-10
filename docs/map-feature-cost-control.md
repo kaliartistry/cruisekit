@@ -8,7 +8,8 @@ Ship useful cruise map-style planning features while keeping provider usage clos
 
 - Cruise route graphic: custom Flutter drawing from itinerary days, sea days, and resolved port-guide slugs.
 - Port guide destination snapshot: custom Flutter drawing from bundled port-guide data.
-- Web feature and port pages: static/crawlable content with custom visuals and no live map provider.
+- Web port pages: pre-rendered OpenFreeMap/OpenMapTiles maps using OpenStreetMap data, served as local WebP assets with visible attribution and no live map provider request.
+- Web feature pages: static/crawlable content with custom visuals and no live map provider.
 - Explore Map: the only live map surface, disabled by default and loaded only after a user switches to Map view.
 
 ## Live Map Gating
@@ -23,6 +24,8 @@ Ship useful cruise map-style planning features while keeping provider usage clos
 
 - Do not use paid directions, route, places, geocoding, or matrix APIs for Phase 1.
 - Do not add background map loading to route graphics or port guide cards.
+- Fetch OpenFreeMap tiles only in the explicit static-asset generation workflow. Public port-page visits must request only CruiseKit-hosted map images.
+- Do not download or bulk-cache tiles from the public OpenStreetMap tile servers.
 - Do not request location permission for port guide cards or the default Explore list.
 - Do not add offline tile downloads in Phase 1.
 - Do not commit API keys, tokens, or provider secrets.
@@ -40,4 +43,6 @@ Ship useful cruise map-style planning features while keeping provider usage clos
 - Switch to Map with the flag enabled and no token, and confirm fallback copy renders.
 - Confirm route graphics and port snapshot cards render without network map calls.
 - Confirm port guide pages and feature pages build as static public content.
+- Confirm a port-page network trace contains the local `/assets/maps/static/port-*.webp` request and no third-party tile, Mapbox, Google Maps, or OpenFreeMap request.
+- Confirm each rendered map keeps visible OpenFreeMap, OpenMapTiles, and OpenStreetMap/ODbL attribution.
 - Review bundle output for accidental token or secret exposure.

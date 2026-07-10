@@ -152,7 +152,7 @@ function getPortFaqs(port: PortData): PortFaq[] {
     {
       question: `Does this ${port.name} page use a live map provider?`,
       answer:
-        "No. This port guide uses a static destination snapshot for planning. CruiseKit's optional Explore Map is a separate app view and is only loaded when enabled and opened by the user.",
+        "No. This port guide uses a pre-rendered OpenStreetMap-derived image that CruiseKit serves directly. It does not request live map tiles when you visit the page. CruiseKit's optional Explore Map is a separate app view and is only loaded when enabled and opened by the user.",
     },
   ];
 }
@@ -167,31 +167,52 @@ function DestinationSnapshot({ port }: { port: PortData }) {
   return (
     <div className="mt-8 grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
       <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
-        <div className="relative h-64 bg-[linear-gradient(135deg,rgba(0,180,216,.16),rgba(244,232,209,.94))] p-6">
-          <div className="absolute -right-14 -top-16 h-48 w-48 rounded-full bg-white/45" />
-          <div className="absolute bottom-0 right-0 h-44 w-2/3 rounded-tl-[4rem] bg-sand/80" />
-          <div className="absolute bottom-12 right-12 h-2 w-36 rotate-[-18deg] rounded-full bg-white/90" />
-          <div className="absolute bottom-20 right-32 h-2 w-28 rotate-[24deg] rounded-full bg-white/90" />
-          <div className="absolute bottom-10 left-10 flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-teal text-white shadow-lg">
-            {port.isTenderPort ? (
-              <Anchor className="h-5 w-5" />
-            ) : (
-              <Ship className="h-5 w-5" />
-            )}
+        <figure>
+          <div className="relative aspect-[20/13] bg-slate-100">
+            <Image
+              src={`/assets/maps/static/port-${port.slug}.webp`}
+              alt={`Street map of the ${port.name}, ${port.country} port area`}
+              fill
+              sizes="(max-width: 1024px) 100vw, 54vw"
+              className="object-cover"
+            />
+            <div className="absolute left-4 top-4 rounded-full border border-white/80 bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-navy shadow-sm backdrop-blur-sm">
+              Static port-area map
+            </div>
           </div>
-          <div className="absolute bottom-24 right-20 flex h-11 w-11 items-center justify-center rounded-full border-4 border-white bg-coral text-white shadow-lg">
-            <MapPin className="h-5 w-5" />
-          </div>
-          <div className="relative max-w-sm">
-            <p className="text-xs font-bold uppercase tracking-wider text-teal-dark">
-              Destination Snapshot
-            </p>
-            <h3 className="mt-2 text-2xl font-extrabold tracking-tight text-navy">
-              {port.name}
-            </h3>
-            <p className="text-sm font-semibold text-ocean">{port.country}</p>
-          </div>
-        </div>
+          <figcaption className="flex flex-col gap-1 border-t border-gray-100 px-4 py-3 text-xs leading-relaxed text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+            <span>Pre-rendered and served by CruiseKit—no live tile request.</span>
+            <span>
+              Map: {" "}
+              <a
+                href="https://openfreemap.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+              >
+                OpenFreeMap
+              </a>{" "}
+              © {" "}
+              <a
+                href="https://openmaptiles.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+              >
+                OpenMapTiles
+              </a>
+              {" · Data © "}
+              <a
+                href="https://www.openstreetmap.org/copyright"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+              >
+                OpenStreetMap contributors (ODbL)
+              </a>
+            </span>
+          </figcaption>
+        </figure>
       </div>
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
         <h3 className="text-lg font-bold text-navy">
