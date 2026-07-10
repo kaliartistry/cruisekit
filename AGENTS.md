@@ -7,6 +7,8 @@ CruiseKit is the free independent cruise command center for true cruise cost, My
 ## Source Of Truth
 
 - Use GitHub as the source of truth for CruiseKit.
+- Read `docs/agent-handoff.md` before starting work. Update it whenever a release, deployment, store status, material architecture decision, or cross-repository dependency changes.
+- `AGENTS.md` is the Codex entry point and root `CLAUDE.md` is the Claude Code entry point. Both must direct agents to the same handoff document.
 - Work in branches, not directly on `main`, except for explicitly approved one-time repository setup or emergency repair.
 - Before creating a page, route, tool, component, doc, campaign, or automation, check the repo for existing equivalents to avoid duplicates.
 - Preserve existing work. Do not delete or overwrite files unless Kali explicitly approves the exact change.
