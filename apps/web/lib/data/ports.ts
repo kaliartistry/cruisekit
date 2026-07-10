@@ -2,6 +2,14 @@
 /*  Cruise Port Data                                                    */
 /* ------------------------------------------------------------------ */
 
+import {
+  baselinePortGovernance,
+  canonicalPortId,
+  ianaTimeZoneForPort,
+  type PortGovernanceMetadata,
+  validatePortCatalog,
+} from "../ports/port-governance";
+
 export type PortRegion = "western" | "eastern" | "southern" | "bahamas" | "alaska" | "europe-med" | "europe-north" | "homeport" | "private-island" | "asia" | "mexico-pacific" | "canada-new-england";
 
 export interface PortExcursion {
@@ -20,7 +28,7 @@ export interface PortRestaurant {
   priceRange: "$" | "$$" | "$$$" | "$$$$";
 }
 
-export interface PortData {
+export interface PortEditorialData {
   slug: string;
   name: string;
   country: string;
@@ -50,7 +58,16 @@ export interface PortData {
   imageUrl: string;
 }
 
-const EXPANDED_PORTS: PortData[] = [
+export interface PortData extends PortEditorialData {
+  /** Stable cross-surface identifier. Slugs remain URL aliases. */
+  canonicalId: `cruisekit:port:${string}`;
+  /** Exact civil time zone. Never substitute the legacy display label. */
+  ianaTimeZone: string;
+  /** Field-level evidence and freshness state for incremental review. */
+  governance: PortGovernanceMetadata;
+}
+
+const EXPANDED_PORTS: PortEditorialData[] = [
   {
     slug: "los-angeles",
     name: "Los Angeles",
@@ -1311,7 +1328,7 @@ const EXPANDED_PORTS: PortData[] = [
   },
 ];
 
-export const PORTS: PortData[] = [
+const PORT_RECORDS: PortEditorialData[] = [
   /* ================================================================ */
   /*  1. Cozumel, Mexico                                              */
   /* ================================================================ */
@@ -4736,6 +4753,15 @@ export const PORTS: PortData[] = [
   },
   ...EXPANDED_PORTS,
 ];
+
+export const PORTS: PortData[] = PORT_RECORDS.map((port) => ({
+  ...port,
+  canonicalId: canonicalPortId(port.slug),
+  ianaTimeZone: ianaTimeZoneForPort(port.slug),
+  governance: baselinePortGovernance(),
+}));
+
+validatePortCatalog(PORTS);
 
 /* ------------------------------------------------------------------ */
 /*  Helper Functions                                                   */

@@ -12,6 +12,7 @@
     "schema:gen:dart": "quicktype --src-lang schema --lang dart --top-level Sailing --use-freezed data/schema/sailing.schema.json -o shared/models/dart/lib/sailing.dart && quicktype --src-lang schema --lang dart --top-level Deal --use-freezed data/schema/deal.schema.json -o shared/models/dart/lib/deal.dart",
     "schema:gen": "pnpm run schema:gen:ts && pnpm run schema:gen:dart",
     "schema:validate": "node scripts/validate-seed-records.mjs",
+    "data:build:port-timezones": "node scripts/generate-port-timezone-artifact.mjs",
     "data:build": "node scripts/build-data-bundles.mjs",
     "data:refresh:viator": "node scripts/update-viator-products.mjs",
     "data:ingest:carnival": "node scripts/ingest/carnival.mjs",

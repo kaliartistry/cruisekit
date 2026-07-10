@@ -24,6 +24,7 @@ import Footer from "@/components/layout/footer";
 import AffiliateLink from "@/components/shared/affiliate-link";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import ViatorExcursions from "@/components/viator/viator-excursions";
+import PortGuideStatus from "./port-guide-status";
 import PortTodayHeader from "./port-today-header";
 import PortSectionNav from "./port-section-nav";
 import { hasViatorProducts } from "@/lib/data/viator-destinations";
@@ -459,7 +460,7 @@ export default async function PortDetailPage({ params }: Props) {
               <QuickStat
                 icon={Clock}
                 label="Time Zone"
-                value={port.timezone}
+                value={port.ianaTimeZone}
               />
             </div>
           </div>
@@ -469,8 +470,7 @@ export default async function PortDetailPage({ params }: Props) {
           {/* Pinned "Today at [port]" header — live port time + TZ delta */}
           <PortTodayHeader
             portName={port.name}
-            timezone={port.timezone}
-            timeZoneAlert={port.timeZoneAlert}
+            ianaTimeZone={port.ianaTimeZone}
           />
 
           {/* Section tabs — IntersectionObserver-powered in-page nav */}
@@ -479,19 +479,20 @@ export default async function PortDetailPage({ params }: Props) {
           {/* ============================================================ */}
           {/*  3. Time Zone Alert                                          */}
           {/* ============================================================ */}
-          {port.timeZoneAlert && (
-            <div className="mb-10 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-5">
-              <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
-              <div>
-                <p className="font-semibold text-amber-900">
-                  Time Zone Alert
-                </p>
-                <p className="mt-1 text-sm leading-relaxed text-amber-800">
-                  {port.timeZoneAlert}
-                </p>
-              </div>
+          <div className="mb-10 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-5">
+            <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
+            <div>
+              <p className="font-semibold text-amber-900">Time check</p>
+              <p className="mt-1 text-sm leading-relaxed text-amber-800">
+                {port.name} uses {port.ianaTimeZone}. Your phone may switch to
+                local time automatically, while the ship may keep a different
+                clock. Treat the times on this page as planning aids and follow
+                the ship&apos;s official time and all-aboard instructions.
+              </p>
             </div>
-          )}
+          </div>
+
+          <PortGuideStatus governance={port.governance} />
 
           {/* ============================================================ */}
           {/*  4. Overview                                                  */}
