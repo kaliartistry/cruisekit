@@ -49,6 +49,9 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: apps/web/out
+          # Required for Apple Universal Links: .well-known is hidden by default.
+          # The build contains only the reviewed AASA file in that directory.
+          include-hidden-files: true
 
   deploy:
     environment:
