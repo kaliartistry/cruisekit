@@ -200,12 +200,12 @@ service cloud.firestore {
 
     // ───── groups/{groupId} (Flutter MyCrew) ─────
     //
-    // Group documents are member-only. Non-members resolve a six-character
-    // invite through the authenticated `findGroupByInvite` callable, which
-    // returns only a minimal safe preview before the existing self-join write.
+    // Compatibility window: the new app resolves invites through the
+    // authenticated callable, but the currently public older build still
+    // performs a direct signed-in query. Tighten this to member-only reads
+    // after the compatible release is public and adoption is sufficient.
     match /groups/{groupId} {
-      allow read: if isSignedIn()
-        && request.auth.uid in resource.data.memberUserIds;
+      allow read: if isSignedIn();
 
       allow create: if isSignedIn()
         && request.resource.data.organizerId == request.auth.uid
