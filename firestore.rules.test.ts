@@ -528,16 +528,16 @@ describe("groups/{groupId}", () => {
     await assertSucceeds(getDoc(doc(db, "groups", GROUP_ID)));
   });
 
-  it("denies a signed-in non-member from reading the group", async () => {
+  it("temporarily allows signed-in non-member reads for released-app compatibility", async () => {
     await seedGroupDoc([ALICE]);
     const db = env.authenticatedContext(BOB).firestore();
-    await assertFails(getDoc(doc(db, "groups", GROUP_ID)));
+    await assertSucceeds(getDoc(doc(db, "groups", GROUP_ID)));
   });
 
-  it("denies client-side invite-code lookup for a non-member", async () => {
+  it("temporarily allows legacy client invite-code lookup", async () => {
     await seedGroupDoc([ALICE]);
     const db = env.authenticatedContext(BOB).firestore();
-    await assertFails(
+    await assertSucceeds(
       getDocs(
         query(
           collection(db, "groups"),
