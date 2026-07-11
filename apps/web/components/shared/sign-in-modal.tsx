@@ -9,13 +9,14 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { useAuth } from "@/lib/firebase/auth";
+import type { User } from "firebase/auth";
 import { Ship } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
 interface SignInModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  onSuccess?: () => void;
+  onSuccess?: (user: User) => void;
 }
 
 export default function SignInModal({
@@ -32,7 +33,7 @@ export default function SignInModal({
       const user = await signInWithGoogle();
       if (user) {
         onOpenChange(false);
-        onSuccess?.();
+        onSuccess?.(user);
       }
     } finally {
       setLoading(false);

@@ -97,16 +97,85 @@ export function trackCalculatorCompleted() {
 
 export function trackResultShared(params: {
   cruiseLineId?: string;
-  fare?: number;
-  estimatedTotal?: number;
   method: "native_share" | "clipboard";
 }) {
   trackEvent("result_shared", {
     cruise_line_id: params.cruiseLineId,
-    fare: params.fare,
-    estimated_total: params.estimatedTotal,
     method: params.method,
   });
+}
+
+export type DistributionSourceType =
+  | "calculator"
+  | "traveler"
+  | "advisor"
+  | "creator"
+  | "organic"
+  | "direct";
+
+export type LandingContext =
+  | "generic"
+  | "cruise_line"
+  | "ship"
+  | "sailing"
+  | "itinerary"
+  | "port";
+
+type DistributionEventParams = {
+  sourceType?: DistributionSourceType;
+  sourceId?: string;
+  landingContext?: LandingContext;
+  cruiseLineId?: string;
+};
+
+function distributionParams(params: DistributionEventParams) {
+  return {
+    source_type: params.sourceType,
+    source_id: params.sourceId,
+    landing_context: params.landingContext,
+    cruise_line_id: params.cruiseLineId,
+  };
+}
+
+export function trackSaveCruiseStarted(params: DistributionEventParams) {
+  trackEvent("save_cruise_started", distributionParams(params));
+}
+
+export function trackSaveCruiseCompleted(params: DistributionEventParams) {
+  trackEvent("save_cruise_completed", distributionParams(params));
+}
+
+export function trackSavedCruiseHandoffOpened(params: DistributionEventParams) {
+  trackEvent("saved_cruise_handoff_opened", distributionParams(params));
+}
+
+export function trackAppHandoffClicked(
+  params: DistributionEventParams & { platform?: StorePlatform },
+) {
+  trackEvent("app_handoff_clicked", {
+    ...distributionParams(params),
+    platform: params.platform,
+  });
+}
+
+export function trackAppHandoffImported(params: DistributionEventParams) {
+  trackEvent("app_handoff_imported", distributionParams(params));
+}
+
+export function trackMyCrewInviteCreated(params: DistributionEventParams) {
+  trackEvent("mycrew_invite_created", distributionParams(params));
+}
+
+export function trackMyCrewInviteOpened(params: DistributionEventParams) {
+  trackEvent("mycrew_invite_opened", distributionParams(params));
+}
+
+export function trackMyCrewInviteAccepted(params: DistributionEventParams) {
+  trackEvent("mycrew_invite_accepted", distributionParams(params));
+}
+
+export function trackReferredCruiseCreated(params: DistributionEventParams) {
+  trackEvent("referred_cruise_created", distributionParams(params));
 }
 
 export function trackBlogCtaClick(source: string, href: string) {

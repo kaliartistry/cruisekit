@@ -25,6 +25,9 @@ import AnimatedCounter from "@/components/shared/animated-counter";
 import AffiliateLink from "@/components/shared/affiliate-link";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import AppHandoff from "@/components/shared/app-handoff";
+import CalculatorSaveCard, {
+  type CalculatorSailingContext,
+} from "@/components/calculator/calculator-save-card";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { Button } from "@/components/ui/button";
 import { getHotelLink, getMedEvacLink } from "@/lib/affiliate-config";
@@ -47,6 +50,7 @@ interface CostBreakdownProps {
   onRemoveWifi?: () => void;
   onRemoveSpecialtyDining?: () => void;
   onRemoveExcursions?: () => void;
+  sailingContext?: CalculatorSailingContext;
 }
 
 const COST_ITEMS = [
@@ -124,12 +128,7 @@ function DeltaHero({
     if (typeof navigator !== "undefined" && "share" in navigator) {
       try {
         await navigator.share({ text: shareText });
-        trackResultShared({
-          cruiseLineId,
-          fare: advertised,
-          estimatedTotal: real,
-          method: "native_share",
-        });
+        trackResultShared({ cruiseLineId, method: "native_share" });
         return;
       } catch {
         // User cancelled or share unavailable — fall through to clipboard.
@@ -137,12 +136,7 @@ function DeltaHero({
     }
     try {
       await navigator.clipboard.writeText(shareText);
-      trackResultShared({
-        cruiseLineId,
-        fare: advertised,
-        estimatedTotal: real,
-        method: "clipboard",
-      });
+      trackResultShared({ cruiseLineId, method: "clipboard" });
       setCopied(true);
       setTimeout(() => setCopied(false), 2200);
     } catch {
@@ -363,6 +357,7 @@ function SingleBreakdown({
   onRemoveWifi,
   onRemoveSpecialtyDining,
   onRemoveExcursions,
+  sailingContext,
 }: {
   breakdown: CostBreakdownType;
   cruiseLineId: string;
@@ -372,6 +367,7 @@ function SingleBreakdown({
   onRemoveWifi?: () => void;
   onRemoveSpecialtyDining?: () => void;
   onRemoveExcursions?: () => void;
+  sailingContext?: CalculatorSailingContext;
 }) {
   const totalGuests = inputs.adults + inputs.children;
   const visibleItems = COST_ITEMS.filter((item) => breakdown[item.key] > 0);
@@ -618,7 +614,15 @@ function SingleBreakdown({
         </div>
       </div>
 
-      {/* Mobile handoff — post-calc signal moment */}
+      <div className="mx-auto mt-10 max-w-3xl">
+        <CalculatorSaveCard
+          inputs={inputs}
+          breakdown={breakdown}
+          sailingContext={sailingContext}
+        />
+      </div>
+
+      {/* Mobile handoff — post-save continuation */}
       <div className="mx-auto mt-10 max-w-3xl">
         <AppHandoff variant="calculator-result" />
       </div>
@@ -939,6 +943,7 @@ export default function CostBreakdown({
   onRemoveWifi,
   onRemoveSpecialtyDining,
   onRemoveExcursions,
+  sailingContext,
 }: CostBreakdownProps) {
   // Comparison mode: both props provided
   if (comparisonBreakdown && comparisonCruiseLineId) {
@@ -964,6 +969,7 @@ export default function CostBreakdown({
       onRemoveWifi={onRemoveWifi}
       onRemoveSpecialtyDining={onRemoveSpecialtyDining}
       onRemoveExcursions={onRemoveExcursions}
+      sailingContext={sailingContext}
     />
   );
 }

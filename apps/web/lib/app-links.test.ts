@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 describe("mobile app links", () => {
-  it("publishes the verified iOS MyCrew association without guessing Android credentials", () => {
+  it("publishes verified iOS handoff routes without guessing Android credentials", () => {
     const association = JSON.parse(
       readFileSync("public/.well-known/apple-app-site-association", "utf8"),
     );
@@ -10,7 +10,7 @@ describe("mobile app links", () => {
     expect(association.applinks.details).toEqual([
       {
         appID: "8FCKSS2JB5.com.cruisekit.mobile",
-        paths: ["/mycrew/join*"],
+        paths: ["/mycrew/join*", "/cruise/handoff*"],
       },
     ]);
     expect(() =>
