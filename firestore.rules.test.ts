@@ -59,6 +59,54 @@ function validSavedDeal() {
   };
 }
 
+function validSavedCruise() {
+  return {
+    source: "web",
+    version: "test",
+    updatedAt: serverTimestamp(),
+    confirmedAt: new Date().toISOString(),
+    cabinType: "balcony",
+    importState: "saved",
+    calculatorSnapshot: {
+      version: "1",
+      travelers: { adults: 2, children: 0 },
+      cabinType: "balcony",
+      duration: 7,
+      region: "caribbean",
+      selectedAddOns: ["wifi"],
+      estimate: {
+        advertisedFare: 1200,
+        estimatedTotal: 2100,
+        totalAdditional: 900,
+      },
+    },
+    attribution: {
+      firstTouch: {
+        sourceType: "calculator",
+        landingContext: "cruise_line",
+      },
+      convertingTouch: {
+        sourceType: "calculator",
+        landingContext: "cruise_line",
+      },
+    },
+    sailing: {
+      id: "web-cruise-1",
+      cruiseLineId: "carnival",
+      shipName: "Carnival Celebration",
+      departureDate: "2026-08-02",
+      returnDate: "2026-08-09",
+      duration: 7,
+      departurePort: "Miami",
+      region: "eastern",
+      itinerary: [{ day: 1, type: "departure", portName: "Miami" }],
+    },
+    confirmedItinerary: [
+      { day: 1, type: "departure", portName: "Miami" },
+    ],
+  };
+}
+
 function validLeadRequest(uid = ALICE) {
   return {
     createdAt: serverTimestamp(),
@@ -241,6 +289,61 @@ describe("users/{uid}/savedDeals/{dealId}", () => {
     const db = env.authenticatedContext(ALICE).firestore();
     await assertFails(
       setDoc(doc(db, "users", BOB, "savedDeals", "d1"), validSavedDeal()),
+    );
+  });
+});
+
+describe("users/{uid}/savedCruises/{cruiseId}", () => {
+  it("denies unauthed read", async () => {
+    const db = env.unauthenticatedContext().firestore();
+    await assertFails(
+      getDoc(doc(db, "users", ALICE, "savedCruises", "active")),
+    );
+  });
+
+  it("allows owner to create and read the active saved cruise", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    const cruiseRef = doc(db, "users", ALICE, "savedCruises", "active");
+    await assertSucceeds(setDoc(cruiseRef, validSavedCruise()));
+    await assertSucceeds(getDoc(cruiseRef));
+  });
+
+  it("denies non-owner read and write", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await setDoc(
+        doc(ctx.firestore(), "users", BOB, "savedCruises", "active"),
+        validSavedCruise(),
+      );
+    });
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(getDoc(doc(db, "users", BOB, "savedCruises", "active")));
+    await assertFails(
+      setDoc(
+        doc(db, "users", BOB, "savedCruises", "active"),
+        validSavedCruise(),
+      ),
+    );
+  });
+
+  it("denies non-active ids and invalid payloads", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      setDoc(
+        doc(db, "users", ALICE, "savedCruises", "future"),
+        validSavedCruise(),
+      ),
+    );
+    await assertFails(
+      setDoc(doc(db, "users", ALICE, "savedCruises", "active"), {
+        ...validSavedCruise(),
+        adminOnly: true,
+      }),
+    );
+    await assertFails(
+      setDoc(doc(db, "users", ALICE, "savedCruises", "active"), {
+        ...validSavedCruise(),
+        importState: "claimed-by-someone-else",
+      }),
     );
   });
 });

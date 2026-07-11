@@ -1,10 +1,17 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { CheckCircle2, Smartphone, Users } from "lucide-react";
 import { StoreButtonRow } from "@/components/shared/store-buttons";
+import { trackMyCrewInviteOpened } from "@/lib/analytics";
 
 export default function InviteLandingClient() {
+  useEffect(() => {
+    trackMyCrewInviteOpened({
+      sourceType: "traveler",
+      landingContext: "sailing",
+    });
+  }, []);
   const search = useSyncExternalStore(
     subscribeToStaticUrl,
     () => window.location.search,

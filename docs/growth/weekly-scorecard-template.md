@@ -28,6 +28,9 @@ Week ending:
 | Completion rate |  |  |  |  |
 | Result shares |  |  |  |  |
 | Share rate |  |  |  |  |
+| Save cruise starts |  |  |  |  |
+| Saved cruises |  |  |  |  |
+| **Calculator completion → saved cruise** |  |  |  | Primary 30-day metric |
 
 ## App Funnel
 
@@ -38,6 +41,20 @@ Week ending:
 | Store click rate |  |  |  |  |
 | App downloads |  |  |  |  |
 | Saved trips |  |  |  |  |
+| Saved-cruise handoff opens |  |  |  |  |
+| App handoff imports |  |  |  |  |
+| Save → handoff-open rate |  |  |  |  |
+| Handoff-open → import rate |  |  |  |  |
+
+## MyCrew Distribution Funnel
+
+| Metric | Current week | Previous week | Change | Notes |
+| --- | ---: | ---: | ---: | --- |
+| Invites created |  |  |  |  |
+| Invite landing opens |  |  |  |  |
+| Invites accepted |  |  |  |  |
+| Open → accepted rate |  |  |  |  |
+| Referred travelers creating a future cruise |  |  |  |  |
 
 ## Monetization Signals
 

@@ -35,6 +35,7 @@ import {
 import AnimatedCounter from "@/components/shared/animated-counter";
 import CruiseLineSelector from "./cruise-line-selector";
 import CostBreakdown from "./cost-breakdown";
+import type { CalculatorSailingContext } from "./calculator-save-card";
 import { cn } from "@/lib/utils/cn";
 import {
   trackCalculatorCompleted,
@@ -201,6 +202,7 @@ interface CalculatorFormProps {
   defaultMonth?: number;
   /** Pre-fill base fare (e.g., from a deal card click) */
   defaultFare?: string;
+  sailingContext?: CalculatorSailingContext;
 }
 
 export default function CalculatorForm({
@@ -210,6 +212,7 @@ export default function CalculatorForm({
   defaultAdults,
   defaultMonth,
   defaultFare,
+  sailingContext,
 }: CalculatorFormProps = {}) {
   /* -- Resolve default cruise line IDs with backward compat ---------- */
   const resolvedDefaultIds = useMemo(() => {
@@ -1125,6 +1128,7 @@ export default function CalculatorForm({
               }}
               onRemoveSpecialtyDining={() => setSpecialtyMeals(0)}
               onRemoveExcursions={() => setExcursionBudget(0)}
+              sailingContext={sailingContext}
             />
           </motion.div>
         )}
