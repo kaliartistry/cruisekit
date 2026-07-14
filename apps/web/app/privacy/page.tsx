@@ -138,10 +138,6 @@ export default function PrivacyPage() {
                   methods.
                 </li>
                 <li>
-                  <strong>Resend and our email systems</strong> for support,
-                  deal-request notifications, and replies.
-                </li>
-                <li>
                   <strong>GitHub</strong> for static website hosting and
                   deployment infrastructure.
                 </li>

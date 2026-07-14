@@ -13,7 +13,6 @@ import {
   Timestamp,
   updateDoc,
 } from "firebase/firestore";
-import { httpsCallable } from "firebase/functions";
 import {
   Archive,
   Calendar,
@@ -28,12 +27,11 @@ import {
   Phone,
   RefreshCw,
   Search,
-  Send,
   Ship,
   UserRound,
   XCircle,
 } from "lucide-react";
-import { db, functions } from "@/lib/firebase/config";
+import { db } from "@/lib/firebase/config";
 import { useAuth } from "@/lib/firebase/auth";
 import SignInModal from "@/components/shared/sign-in-modal";
 import { Badge } from "@/components/ui/badge";
@@ -271,26 +269,6 @@ function leadFromDoc(id: string, data: Record<string, unknown>): LeadRequest {
   };
 }
 
-const retryDealLeadEmail = httpsCallable<
-  { requestId: string },
-  {
-    ok: boolean;
-    status: LeadStatus;
-    notificationId?: string;
-    confirmationId?: string | null;
-    customerConfirmationSent?: boolean;
-  }
->(functions, "retryDealLeadEmail");
-
-const sendDealLeadReply = httpsCallable<
-  { requestId: string; message: string },
-  {
-    ok: boolean;
-    status: LeadStatus;
-    emailId?: string;
-  }
->(functions, "sendDealLeadReply");
-
 function matchesFilter(lead: LeadRequest, filter: FilterKey) {
   if (filter === "all") return true;
   if (filter === "open") {
@@ -324,7 +302,6 @@ export default function LeadDashboard() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [savingId, setSavingId] = useState<string | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
-  const [replyDraft, setReplyDraft] = useState("");
 
   const loadLeads = useCallback(async () => {
     if (!user) return;
@@ -416,7 +393,6 @@ export default function LeadDashboard() {
 
   useEffect(() => {
     setNoteDraft(selectedLead?.internalNote ?? "");
-    setReplyDraft("");
   }, [selectedLead?.id, selectedLead?.internalNote]);
 
   const updateLocalLead = useCallback((id: string, patch: Partial<LeadRequest>) => {
@@ -489,61 +465,6 @@ export default function LeadDashboard() {
     }
   };
 
-  const retryEmail = async (lead: LeadRequest) => {
-    setSavingId(lead.id);
-    setError(null);
-
-    try {
-      const result = await retryDealLeadEmail({ requestId: lead.id });
-      const data = result.data;
-      updateLocalLead(lead.id, {
-        status: data.status ?? "email_sent",
-        resendNotificationId: data.notificationId ?? lead.resendNotificationId,
-        resendConfirmationId: data.confirmationId ?? lead.resendConfirmationId,
-        emailError: "",
-        emailRetriedAt: new Date(),
-        emailRetryCount: lead.emailRetryCount + 1,
-        updatedAt: new Date(),
-      });
-    } catch (err) {
-      console.error("Failed to retry lead email:", err);
-      setError("Could not resend this lead email. Check Resend and try again.");
-    } finally {
-      setSavingId(null);
-    }
-  };
-
-  const sendCustomerReply = async (lead: LeadRequest) => {
-    const message = replyDraft.trim();
-    if (!message) {
-      setError("Write a reply before sending.");
-      return;
-    }
-
-    setSavingId(lead.id);
-    setError(null);
-
-    try {
-      const result = await sendDealLeadReply({ requestId: lead.id, message });
-      const data = result.data;
-      updateLocalLead(lead.id, {
-        status: data.status ?? "contacted",
-        lastCustomerReplyAt: new Date(),
-        lastCustomerReplyPreview: message.slice(0, 240),
-        lastCustomerReplyResendId: data.emailId ?? lead.lastCustomerReplyResendId,
-        customerReplyCount: lead.customerReplyCount + 1,
-        contactedAt: lead.contactedAt ?? new Date(),
-        updatedAt: new Date(),
-      });
-      setReplyDraft("");
-    } catch (err) {
-      console.error("Failed to send CruiseKit reply:", err);
-      setError("Could not send the CruiseKit reply. Check Resend and try again.");
-    } finally {
-      setSavingId(null);
-    }
-  };
-
   if (authLoading || !adminChecked) {
     return <CenteredState icon={Loader2} title="Loading leads" spin />;
   }
@@ -599,7 +520,7 @@ export default function LeadDashboard() {
             </p>
             <h1 className="mt-2 text-3xl font-bold text-navy">Lead Dashboard</h1>
             <p className="mt-2 text-sm text-slate-600">
-              Deal requests from the app, backed by Firestore and Resend notifications. Times are shown in Eastern Time.
+              Historical deal requests retained after the personal-help offer was retired. No new requests or automated emails are accepted. Times are shown in Eastern Time.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -692,13 +613,9 @@ export default function LeadDashboard() {
           <LeadDetail
             lead={selectedLead}
             noteDraft={noteDraft}
-            replyDraft={replyDraft}
             onNoteChange={setNoteDraft}
-            onReplyChange={setReplyDraft}
             onSaveNote={saveNote}
             onSetStatus={setLeadStatus}
-            onRetryEmail={retryEmail}
-            onSendReply={sendCustomerReply}
             saving={Boolean(selectedLead && savingId === selectedLead.id)}
           />
         </section>
@@ -835,24 +752,16 @@ function LeadRow({
 function LeadDetail({
   lead,
   noteDraft,
-  replyDraft,
   onNoteChange,
-  onReplyChange,
   onSaveNote,
   onSetStatus,
-  onRetryEmail,
-  onSendReply,
   saving,
 }: {
   lead: LeadRequest | null;
   noteDraft: string;
-  replyDraft: string;
   onNoteChange: (value: string) => void;
-  onReplyChange: (value: string) => void;
   onSaveNote: (lead: LeadRequest) => void;
   onSetStatus: (lead: LeadRequest, status: LeadStatus) => void;
-  onRetryEmail: (lead: LeadRequest) => void;
-  onSendReply: (lead: LeadRequest) => void;
   saving: boolean;
 }) {
   if (!lead) {
@@ -928,17 +837,6 @@ function LeadDetail({
               </a>
             </Button>
           )}
-          {lead.status === "email_failed" && (
-            <Button
-              variant="coral"
-              size="sm"
-              disabled={saving}
-              onClick={() => onRetryEmail(lead)}
-            >
-              <RefreshCw className={cn("h-4 w-4", saving && "animate-spin")} />
-              {saving ? "Retrying" : "Retry email"}
-            </Button>
-          )}
           <Button
             variant="secondary"
             size="sm"
@@ -972,37 +870,6 @@ function LeadDetail({
             Archive
           </Button>
         </div>
-      </section>
-
-      <section className="border-b border-slate-100 py-4">
-        <label
-          htmlFor="customer-reply"
-          className="text-sm font-bold uppercase tracking-wide text-slate-500"
-        >
-          Send from CruiseKit
-        </label>
-        <textarea
-          id="customer-reply"
-          value={replyDraft}
-          onChange={(event) => onReplyChange(event.target.value)}
-          maxLength={4000}
-          placeholder="Write the message the customer should receive from info@cruisekit.app"
-          className="mt-3 min-h-32 w-full resize-y rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
-        />
-        <div className="mt-2 flex items-center justify-between gap-3">
-          <span className="text-xs text-slate-400">{replyDraft.length}/4000</span>
-          <Button
-            size="sm"
-            disabled={saving || replyDraft.trim().length === 0}
-            onClick={() => onSendReply(lead)}
-          >
-            <Send className="h-4 w-4" />
-            {saving ? "Sending" : "Send reply"}
-          </Button>
-        </div>
-        <p className="mt-2 text-xs text-slate-500">
-          Sends through Resend from info@cruisekit.app. Replies go back to the CruiseKit inbox.
-        </p>
       </section>
 
       <section className="border-b border-slate-100 py-4">
