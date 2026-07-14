@@ -20,11 +20,13 @@
 | 7 | [apps/web/app/my-trips/page.tsx:265](../apps/web/app/my-trips/page.tsx#L265) | `deleteDoc` | `users/{uid}/savedDeals/{dealId}` |
 | 8 | [apps/web/app/internal/leads/lead-dashboard.tsx](../apps/web/app/internal/leads/lead-dashboard.tsx) | `getDoc` | `adminUsers/{uid}` |
 | 9 | [apps/web/app/internal/leads/lead-dashboard.tsx](../apps/web/app/internal/leads/lead-dashboard.tsx) | `getDocs`, `updateDoc` | `dealLeadRequests/{requestId}` |
-| 10 | [apps/web/app/internal/leads/lead-dashboard.tsx](../apps/web/app/internal/leads/lead-dashboard.tsx) | callable Functions | `retryDealLeadEmail`, `sendDealLeadReply` |
 
-The Flutter app writes deal handoff requests to `dealLeadRequests/{requestId}` from `~/CruiseKit-Mobile/lib/services/plan/deal_funnel_service.dart`.
+The Flutter deal-help form was retired on 2026-07-14 and no longer writes
+`dealLeadRequests/{requestId}`. The web dashboard retains admin-only access to
+the six historical records; see [`lead-email-automation.md`](./lead-email-automation.md).
 
-No `onSnapshot`, no transactions, no batches, no `collectionGroup`, no Admin SDK, and no `app/api/` routes. The backend now includes Cloud Functions for lead email notification, retry, and admin replies; see [`lead-email-automation.md`](./lead-email-automation.md).
+No `onSnapshot`, no transactions, no batches, no `collectionGroup`, no Admin
+SDK, and no `app/api/` routes are used by the web client.
 
 ### Collection map (web)
 
@@ -33,7 +35,7 @@ No `onSnapshot`, no transactions, no batches, no `collectionGroup`, no Admin SDK
 | `users/{uid}` | user-owned | client (owner only) | client (owner only) | Profile doc; created on Google sign-in. Fields: `displayName`, `email`, `photoURL`, `createdAt`, `lastLoginAt`. |
 | `users/{uid}/savedDeals/{dealId}` | user-owned | client (owner only) | client (owner only) | Saved cruise deals. Variable-shape payload of cruise metadata + `savedAt`. |
 | `adminUsers/{uid}` | admin access gate | client (self only) | trusted Admin SDK / console only | Presence of this doc grants internal dashboard access in rules. |
-| `dealLeadRequests/{requestId}` | operational queue | admin only | mobile client create-only; admin status updates | Deal handoff lead queue. Admins can update funnel status and internal note only. |
+| `dealLeadRequests/{requestId}` | historical queue | admin only | new creates denied; admin status updates | Retired deal-help records. Admins can update funnel status and internal note only. |
 
 ### Auth pattern
 - Firebase init at [apps/web/lib/firebase/config.ts](../apps/web/lib/firebase/config.ts). Auth + Firestore only (no Storage / Functions / RTDB).
@@ -47,7 +49,9 @@ No `onSnapshot`, no transactions, no batches, no `collectionGroup`, no Admin SDK
 - No group / shared-trip Firestore yet. The `/groups` page is a stateless calculator with React-state-only inputs.
 
 ### Cross-repo dependency
-The mobile repo (`~/CruiseKit-Mobile`) has an active Firestore group system for the MyDay pillar plus deal handoff lead capture. Its rule fragment is merged into [`firestore.rules`](../firestore.rules) — see the next section.
+The mobile repo (`~/CruiseKit-Mobile`) has an active Firestore group system for
+the MyDay pillar. Its rule fragment is merged into
+[`firestore.rules`](../firestore.rules) — see the next section.
 
 ---
 
@@ -55,14 +59,17 @@ The mobile repo (`~/CruiseKit-Mobile`) has an active Firestore group system for 
 
 ### Firestore call sites
 
-Flutter Firestore traffic is concentrated in [`group_service.dart`](file:///Users/kaliartistry-mac/CruiseKit-Mobile/lib/services/group_service.dart) for MyCrew and [`deal_funnel_service.dart`](file:///Users/kaliartistry-mac/CruiseKit-Mobile/lib/services/plan/deal_funnel_service.dart) for deal handoff requests. No client touches `users/` or `savedDeals/` from Flutter — those are web-only collections. Four top-level operations reach Firestore:
+Flutter Firestore traffic is concentrated in
+[`group_service.dart`](file:///Users/kaliartistry-mac/CruiseKit-Mobile/lib/services/group_service.dart)
+for MyCrew. No client touches `users/`, `savedDeals/`, or
+`dealLeadRequests/` from Flutter. Three top-level operation groups reach
+Firestore:
 
 | Operation | Path | Mode |
 |---|---|---|
 | Create / lookup / join / leave / kick / metadata stream / "my groups" query | `groups/{groupId}` (and the `groups` collection) | `add`, `where`, `update`, `get`, `snapshots` |
 | Per-member presence | `groups/{groupId}/locations/{userId}` | `set(merge:true)`, `delete`, `snapshots` |
 | Crew chat | `groups/{groupId}/messages/{msgId}` | `add`, `orderBy + limitToLast(100).snapshots` |
-| Deal handoff requests | `dealLeadRequests/{requestId}` | `add` |
 
 No Cloud Functions, no Firebase Storage, no Realtime Database. Firebase Auth uses anonymous sign-in on cold start with upgrade-to-Google for any group features (Apple is referenced in UI copy but not yet wired).
 
@@ -73,7 +80,7 @@ No Cloud Functions, no Firebase Storage, no Realtime Database. Firebase Auth use
 | `groups/{groupId}` | shared-collaborative | members only | organizer (create/kick/metadata), self-join, self-leave | Non-members resolve invite codes through `findGroupByInvite`, which returns only a safe preview. Top-level membership authority remains `memberUserIds`. |
 | `groups/{groupId}/locations/{userId}` | per-member presence | group members only | self only (doc id == uid); organizer can delete on kick | Fields: `lat`, `lng`, `whereabouts`, `quickStatus?`, `distanceFromShipMeters?`, `lastUpdated`. |
 | `groups/{groupId}/messages/{msgId}` | group chat | group members only | members only with `senderId == auth.uid` | Fields: `senderId`, `senderName`, `text`, `timestamp`. Append-only — no update or delete. |
-| `dealLeadRequests/{requestId}` | operational queue | admin only | authenticated mobile clients, including anonymous | Fields: `createdAt`, `status`, source metadata, requester UID/anonymity, contact fields, note, and deal snapshot fields. |
+| `dealLeadRequests/{requestId}` | historical queue | admin only | no client writes | Preserved records from the retired personal-help offer. |
 
 ### Group access pattern
 
@@ -111,7 +118,11 @@ Reads gated by group membership via the `isGroupMember` helper that consults the
 Append-only. Members can read; members can create with `senderId == auth.uid` and `text.size() < 5000` to cap payload; nobody can update or delete (Flutter has no edit-message flow). The size cap is a sanity guard against pathological payloads, not a strict UX constraint.
 
 ### `dealLeadRequests/{requestId}`
-Create-only from signed-in mobile clients, including anonymous sessions. The rule requires `requesterUid == request.auth.uid`, `status == 'new'`, `createdAt == request.time`, an approved field set, numeric `fromPrice`, and bounded string lengths. Reads are limited to admin-gated accounts. Admin updates are limited to funnel fields (`status`, `internalNote`, status timestamps, `updatedAt`, `updatedBy`) so captured customer and deal data cannot be edited from the dashboard. Email retry and customer-reply fields are written only by the Admin SDK-backed callable Functions.
+The personal-help offer is retired and all new creates are denied. Reads remain
+limited to admin-gated accounts so historical records can be reviewed. Admin
+updates remain limited to funnel fields (`status`, `internalNote`, status
+timestamps, `updatedAt`, `updatedBy`) so captured customer and deal data cannot
+be edited from the dashboard.
 
 ### `adminUsers/{uid}`
 Self-readable admin marker used by `/internal/leads`. Client writes are denied; membership is managed through trusted Admin SDK or Firebase Console operations. `isAdmin()` checks for document existence before allowing lead queue reads or operational updates.
@@ -181,8 +192,10 @@ Document the actual results next to each row when running them.
 - **Account deletion deployment** — `deleteUserAccount` is implemented and tested. Deploy the callable before releasing the compatible app; see [`account-deletion-release-readiness.md`](./account-deletion-release-readiness.md).
 - **Apple OAuth** — when implemented, no rule change is needed (`request.auth != null` is provider-agnostic).
 - **Field validation depth** — kept minimal. Tighten only if a real abuse pattern emerges.
-- **Lead notifications / CRM handoff.** `dealLeadRequests` is durable storage and now has Resend-backed create, retry, and customer-reply email functions in `functions/index.js`, plus an internal `/internal/leads` dashboard for funnel status. Later, add CRM or spreadsheet sync if lead volume justifies it.
-- **App Check.** Direct mobile writes are acceptable for beta, but App Check should be enabled before broad public marketing traffic to reduce automated abuse against lead and group endpoints.
+- **Historical lead retention.** The six retired `dealLeadRequests` records remain
+  admin-only until a separate retention/deletion decision is approved.
+- **App Check.** Enable App Check before broad public marketing traffic to
+  reduce automated abuse against group endpoints.
 - **Invite lookup read leak — resolved in code.** `findGroupByInvite` performs the
   lookup as a callable and returns a minimal safe response. The rules now make
   top-level group reads member-only. Follow the coordinated deployment order so

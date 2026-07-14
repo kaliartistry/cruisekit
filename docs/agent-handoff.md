@@ -1,6 +1,18 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-07-10
+Last verified: 2026-07-14
+
+## Deal-help retirement
+
+- Branch `codex/retire-deal-help-web-20260714` retires the personal cruise-deal
+  help offer and its Resend email automation.
+- The six existing `dealLeadRequests` records remain preserved as historical
+  admin-only data. New client creates are denied.
+- The `emailDealLeadRequest`, `retryDealLeadEmail`, and `sendDealLeadReply`
+  functions must be deleted from production when this branch is deployed.
+- The verified `cruisekit.app` Resend domain can be removed only after that
+  backend deployment is verified. The domain removal does not delete the
+  historical Firestore records.
 
 This file is the durable handoff between Codex, Claude Code, and human contributors for the website/backend repository. GitHub and the deployed services are authoritative; chat history is not.
 
@@ -25,9 +37,10 @@ This file is the durable handoff between Codex, Claude Code, and human contribut
 ## Verification baseline
 
 - Web tests: 25 passing.
-- Static export: 192 pages generated.
+- Static export: 193 pages generated.
 - Functions tests: 6 passing.
-- Firestore rules tests: 66 passing.
+- Firestore rules tests: 63 passing after replacing the retired lead-create
+  matrix with an explicit all-creates-denied test.
 
 Re-run the relevant checks after source changes; these numbers record the 2026-07-10 release baseline, not a permanent guarantee.
 

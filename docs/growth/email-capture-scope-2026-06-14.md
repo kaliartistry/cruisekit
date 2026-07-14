@@ -34,3 +34,7 @@ If email capture is approved later, start with a narrow calculator result email 
 ## Approval Gate
 
 Ask for approval before implementation because email capture changes privacy, consent, storage, and compliance scope.
+# Historical note
+
+The personal deal-help capture and its Resend automation were retired on
+2026-07-14. This document is retained only as a record of the earlier scope.

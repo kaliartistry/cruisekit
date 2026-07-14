@@ -356,74 +356,17 @@ describe("default deny", () => {
 });
 
 describe("dealLeadRequests/{requestId}", () => {
-  it("allows an authenticated user to create a valid lead request", async () => {
+  it("denies new lead requests after the personal-help offer is retired", async () => {
     const db = env.authenticatedContext(ALICE).firestore();
-    await assertSucceeds(
-      addDoc(collection(db, "dealLeadRequests"), validLeadRequest(ALICE)),
-    );
-  });
-
-  it("denies unauthenticated create", async () => {
-    const db = env.unauthenticatedContext().firestore();
     await assertFails(
       addDoc(collection(db, "dealLeadRequests"), validLeadRequest(ALICE)),
     );
-  });
-
-  it("denies create when requesterUid does not match auth uid", async () => {
-    const db = env.authenticatedContext(ALICE).firestore();
+    const signedOutDb = env.unauthenticatedContext().firestore();
     await assertFails(
-      addDoc(collection(db, "dealLeadRequests"), validLeadRequest(BOB)),
-    );
-  });
-
-  it("denies create with extra fields", async () => {
-    const db = env.authenticatedContext(ALICE).firestore();
-    await assertFails(
-      addDoc(collection(db, "dealLeadRequests"), {
-        ...validLeadRequest(ALICE),
-        internalPriority: "high",
-      }),
-    );
-  });
-
-  it("denies create without a plausible email address", async () => {
-    const db = env.authenticatedContext(ALICE).firestore();
-    await assertFails(
-      addDoc(collection(db, "dealLeadRequests"), {
-        ...validLeadRequest(ALICE),
-        contactEmail: "alice.example.com",
-      }),
-    );
-  });
-
-  it("denies create with whitespace in email address", async () => {
-    const db = env.authenticatedContext(ALICE).firestore();
-    await assertFails(
-      addDoc(collection(db, "dealLeadRequests"), {
-        ...validLeadRequest(ALICE),
-        contactEmail: "alice @example.com",
-      }),
-    );
-  });
-
-  it("denies create unless status is new", async () => {
-    const db = env.authenticatedContext(ALICE).firestore();
-    await assertFails(
-      addDoc(collection(db, "dealLeadRequests"), {
-        ...validLeadRequest(ALICE),
-        status: "contacted",
-      }),
-    );
-  });
-
-  it("denies overlong notes", async () => {
-    const db = env.authenticatedContext(ALICE).firestore();
-    await assertFails(
-      addDoc(collection(db, "dealLeadRequests"), {
-        ...validLeadRequest(ALICE),
-        note: "x".repeat(2001),
-      }),
+      addDoc(
+        collection(signedOutDb, "dealLeadRequests"),
+        validLeadRequest(ALICE),
+      ),
     );
   });
 
