@@ -41,6 +41,15 @@ function CalculatorFormWithSearchParams() {
       ? fareParam
       : undefined;
 
+  const sailingContext = {
+    sailingId: searchParams.get("sailing") ?? undefined,
+    shipName: searchParams.get("ship") ?? undefined,
+    departureDate: searchParams.get("departure") ?? undefined,
+    returnDate: searchParams.get("return") ?? undefined,
+    departurePort: searchParams.get("port") ?? undefined,
+    region: searchParams.get("region") ?? undefined,
+  };
+
   return (
     <CalculatorForm
       defaultCruiseLineIds={defaultCruiseLineIds}
@@ -48,6 +57,7 @@ function CalculatorFormWithSearchParams() {
       defaultAdults={defaultAdults}
       defaultMonth={defaultMonth}
       defaultFare={defaultFare}
+      sailingContext={sailingContext}
     />
   );
 }

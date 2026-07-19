@@ -56,6 +56,75 @@ function validSavedDeal() {
   };
 }
 
+function validSavedCruise() {
+  return {
+    source: "web",
+    version: "test",
+    updatedAt: serverTimestamp(),
+    confirmedAt: new Date().toISOString(),
+    cabinType: "balcony",
+    importState: "saved",
+    calculatorSnapshot: {
+      version: "1",
+      travelers: { adults: 2, children: 0 },
+      cabinType: "balcony",
+      duration: 7,
+      region: "caribbean",
+      selectedAddOns: ["wifi"],
+      estimate: {
+        advertisedFare: 1200,
+        estimatedTotal: 2100,
+        totalAdditional: 900,
+      },
+    },
+    attribution: {
+      firstTouch: {
+        sourceType: "calculator",
+        landingContext: "cruise_line",
+      },
+      convertingTouch: {
+        sourceType: "calculator",
+        landingContext: "cruise_line",
+      },
+    },
+    sailing: {
+      id: "web-cruise-1",
+      cruiseLineId: "carnival",
+      shipName: "Carnival Celebration",
+      departureDate: "2026-08-02",
+      returnDate: "2026-08-09",
+      duration: 7,
+      departurePort: "Miami",
+      region: "eastern",
+      isRealUpcoming: true,
+      itinerary: [
+        { day: 1, type: "departure", portName: "Miami" },
+        {
+          day: 2,
+          type: "port",
+          portSlug: "st-thomas",
+          portName: "St. Thomas",
+          arrivalTime: "08:00",
+          allAboardTime: "16:30",
+          departureTime: "17:00",
+        },
+      ],
+    },
+    confirmedItinerary: [
+      { day: 1, type: "departure", portName: "Miami" },
+      {
+        day: 2,
+        type: "port",
+        portSlug: "st-thomas",
+        portName: "St. Thomas",
+        arrivalTime: "08:00",
+        allAboardTime: "16:30",
+        departureTime: "17:00",
+      },
+    ],
+  };
+}
+
 function validLeadRequest(uid = ALICE) {
   return {
     createdAt: serverTimestamp(),
@@ -242,10 +311,145 @@ describe("users/{uid}/savedDeals/{dealId}", () => {
   });
 });
 
+describe("users/{uid}/savedCruises/{cruiseId}", () => {
+  it("denies unauthed read", async () => {
+    const db = env.unauthenticatedContext().firestore();
+    await assertFails(
+      getDoc(doc(db, "users", ALICE, "savedCruises", "active")),
+    );
+  });
+
+  it("allows owner to create and read the active saved cruise", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    const cruiseRef = doc(db, "users", ALICE, "savedCruises", "active");
+
+    await assertSucceeds(setDoc(cruiseRef, validSavedCruise()));
+    await assertSucceeds(getDoc(cruiseRef));
+  });
+
+  it("denies non-owner read and write", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await setDoc(
+        doc(ctx.firestore(), "users", BOB, "savedCruises", "active"),
+        validSavedCruise(),
+      );
+    });
+
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(getDoc(doc(db, "users", BOB, "savedCruises", "active")));
+    await assertFails(
+      setDoc(
+        doc(db, "users", BOB, "savedCruises", "active"),
+        validSavedCruise(),
+      ),
+    );
+  });
+
+  it("denies non-active cruise document ids for now", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      setDoc(
+        doc(db, "users", ALICE, "savedCruises", "future"),
+        validSavedCruise(),
+      ),
+    );
+  });
+
+  it("denies invalid or overbroad saved cruise payloads", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(
+      setDoc(doc(db, "users", ALICE, "savedCruises", "active"), {
+        ...validSavedCruise(),
+        adminOnly: true,
+      }),
+    );
+    await assertFails(
+      setDoc(doc(db, "users", ALICE, "savedCruises", "active"), {
+        ...validSavedCruise(),
+        sailing: { id: "missing-required-shape" },
+      }),
+    );
+    await assertFails(
+      setDoc(doc(db, "users", ALICE, "savedCruises", "active"), {
+        ...validSavedCruise(),
+        sailing: {
+          ...validSavedCruise().sailing,
+          isRealUpcoming: "true",
+        },
+      }),
+    );
+    await assertFails(
+      setDoc(doc(db, "users", ALICE, "savedCruises", "active"), {
+        ...validSavedCruise(),
+        sailing: {
+          ...validSavedCruise().sailing,
+          derivedGrowthState: "activated",
+        },
+      }),
+    );
+    await assertFails(
+      setDoc(doc(db, "users", ALICE, "savedCruises", "active"), {
+        ...validSavedCruise(),
+        importState: "claimed-by-someone-else",
+      }),
+    );
+  });
+
+  it("keeps legacy saved cruises valid without the real-sailing marker", async () => {
+    const db = env.authenticatedContext(ALICE).firestore();
+    const cruise = validSavedCruise();
+    const { isRealUpcoming: _isRealUpcoming, ...legacySailing } = cruise.sailing;
+    await assertSucceeds(
+      setDoc(doc(db, "users", ALICE, "savedCruises", "active"), {
+        ...cruise,
+        sailing: legacySailing,
+      }),
+    );
+  });
+});
+
 describe("default deny", () => {
   it("denies authed read of arbitrary collection", async () => {
     const db = env.authenticatedContext(ALICE).firestore();
     await assertFails(getDoc(doc(db, "randomCollection", "foo")));
+  });
+});
+
+describe("Growth Engine server-owned collections", () => {
+  it("denies direct application, referral, event, and profile writes even to an admin", async () => {
+    await grantAdmin();
+    const db = env.authenticatedContext(ADMIN).firestore();
+
+    await assertFails(
+      setDoc(doc(db, "growthApplications", "application-1"), {
+        status: "activated",
+      }),
+    );
+    await assertFails(
+      setDoc(doc(db, "referralCodes", "ABCDEFGH"), {
+        isActive: true,
+      }),
+    );
+    await assertFails(
+      setDoc(doc(db, "growthEvents", "event-1"), {
+        eventName: "activation_completed",
+      }),
+    );
+    await assertFails(
+      setDoc(doc(db, "growthProfiles", ADMIN), {
+        activation: { state: "activated" },
+      }),
+    );
+  });
+
+  it("denies direct reads of server-owned applicant data", async () => {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await setDoc(doc(ctx.firestore(), "growthApplications", "application-1"), {
+        contact: { email: "traveler@example.com" },
+      });
+    });
+    const db = env.authenticatedContext(ALICE).firestore();
+    await assertFails(getDoc(doc(db, "growthApplications", "application-1")));
   });
 });
 
@@ -609,26 +813,22 @@ describe("groups/{groupId}/locations/{userId}", () => {
       );
     });
     const db = env.authenticatedContext(BOB).firestore();
-    await assertFails(
-      getDoc(doc(db, "groups", GROUP_ID, "locations", ALICE)),
-    );
+    await assertFails(getDoc(doc(db, "groups", GROUP_ID, "locations", ALICE)));
   });
 
   it("denies unauthed location read", async () => {
     await seedGroupDoc([ALICE]);
     const db = env.unauthenticatedContext().firestore();
-    await assertFails(
-      getDoc(doc(db, "groups", GROUP_ID, "locations", ALICE)),
-    );
+    await assertFails(getDoc(doc(db, "groups", GROUP_ID, "locations", ALICE)));
   });
 
   it("allows organizer to delete another member's location (kick)", async () => {
     await seedGroupDoc([ALICE, BOB]);
     await env.withSecurityRulesDisabled(async (ctx) => {
-      await setDoc(
-        doc(ctx.firestore(), "groups", GROUP_ID, "locations", BOB),
-        { lat: 1, lng: 1 },
-      );
+      await setDoc(doc(ctx.firestore(), "groups", GROUP_ID, "locations", BOB), {
+        lat: 1,
+        lng: 1,
+      });
     });
     const db = env.authenticatedContext(ALICE).firestore();
     await assertSucceeds(
@@ -639,10 +839,10 @@ describe("groups/{groupId}/locations/{userId}", () => {
   it("allows member to delete own location (leave)", async () => {
     await seedGroupDoc([ALICE, BOB]);
     await env.withSecurityRulesDisabled(async (ctx) => {
-      await setDoc(
-        doc(ctx.firestore(), "groups", GROUP_ID, "locations", BOB),
-        { lat: 1, lng: 1 },
-      );
+      await setDoc(doc(ctx.firestore(), "groups", GROUP_ID, "locations", BOB), {
+        lat: 1,
+        lng: 1,
+      });
     });
     const db = env.authenticatedContext(BOB).firestore();
     await assertSucceeds(
@@ -707,38 +907,40 @@ describe("groups/{groupId}/messages/{msgId}", () => {
   it("allows member to read messages", async () => {
     await seedGroupDoc([ALICE, BOB]);
     await env.withSecurityRulesDisabled(async (ctx) => {
-      await setDoc(
-        doc(ctx.firestore(), "groups", GROUP_ID, "messages", "m1"),
-        { senderId: ALICE, senderName: "Alice", text: "hi", timestamp: new Date() },
-      );
+      await setDoc(doc(ctx.firestore(), "groups", GROUP_ID, "messages", "m1"), {
+        senderId: ALICE,
+        senderName: "Alice",
+        text: "hi",
+        timestamp: new Date(),
+      });
     });
     const db = env.authenticatedContext(BOB).firestore();
-    await assertSucceeds(
-      getDoc(doc(db, "groups", GROUP_ID, "messages", "m1")),
-    );
+    await assertSucceeds(getDoc(doc(db, "groups", GROUP_ID, "messages", "m1")));
   });
 
   it("denies non-member reading messages", async () => {
     await seedGroupDoc([ALICE]);
     await env.withSecurityRulesDisabled(async (ctx) => {
-      await setDoc(
-        doc(ctx.firestore(), "groups", GROUP_ID, "messages", "m1"),
-        { senderId: ALICE, senderName: "Alice", text: "hi", timestamp: new Date() },
-      );
+      await setDoc(doc(ctx.firestore(), "groups", GROUP_ID, "messages", "m1"), {
+        senderId: ALICE,
+        senderName: "Alice",
+        text: "hi",
+        timestamp: new Date(),
+      });
     });
     const db = env.authenticatedContext(BOB).firestore();
-    await assertFails(
-      getDoc(doc(db, "groups", GROUP_ID, "messages", "m1")),
-    );
+    await assertFails(getDoc(doc(db, "groups", GROUP_ID, "messages", "m1")));
   });
 
   it("denies updating an existing message", async () => {
     await seedGroupDoc([ALICE, BOB]);
     await env.withSecurityRulesDisabled(async (ctx) => {
-      await setDoc(
-        doc(ctx.firestore(), "groups", GROUP_ID, "messages", "m1"),
-        { senderId: BOB, senderName: "Bob", text: "hi", timestamp: new Date() },
-      );
+      await setDoc(doc(ctx.firestore(), "groups", GROUP_ID, "messages", "m1"), {
+        senderId: BOB,
+        senderName: "Bob",
+        text: "hi",
+        timestamp: new Date(),
+      });
     });
     const db = env.authenticatedContext(BOB).firestore();
     await assertFails(
@@ -751,14 +953,14 @@ describe("groups/{groupId}/messages/{msgId}", () => {
   it("denies deleting an existing message", async () => {
     await seedGroupDoc([ALICE, BOB]);
     await env.withSecurityRulesDisabled(async (ctx) => {
-      await setDoc(
-        doc(ctx.firestore(), "groups", GROUP_ID, "messages", "m1"),
-        { senderId: BOB, senderName: "Bob", text: "hi", timestamp: new Date() },
-      );
+      await setDoc(doc(ctx.firestore(), "groups", GROUP_ID, "messages", "m1"), {
+        senderId: BOB,
+        senderName: "Bob",
+        text: "hi",
+        timestamp: new Date(),
+      });
     });
     const db = env.authenticatedContext(BOB).firestore();
-    await assertFails(
-      deleteDoc(doc(db, "groups", GROUP_ID, "messages", "m1")),
-    );
+    await assertFails(deleteDoc(doc(db, "groups", GROUP_ID, "messages", "m1")));
   });
 });

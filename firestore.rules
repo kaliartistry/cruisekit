@@ -92,6 +92,101 @@ service cloud.firestore {
         && validAdminLeadTimestamp('archivedAt');
     }
 
+    function validOptionalString(field, maxLength) {
+      return !request.resource.data.keys().hasAny([field])
+        || (request.resource.data[field] is string
+          && request.resource.data[field].size() <= maxLength);
+    }
+
+    function validOptionalSavedCruiseTimestamp(field) {
+      return !request.resource.data.keys().hasAny([field])
+        || request.resource.data[field] is timestamp
+        || request.resource.data[field] is string;
+    }
+
+    function validSavedCruiseSailing() {
+      return request.resource.data.sailing.keys().hasOnly([
+          'id',
+          'cruiseLineId',
+          'shipName',
+          'shipId',
+          'departureDate',
+          'returnDate',
+          'duration',
+          'departurePort',
+          'region',
+          'itinerary',
+          'isRealUpcoming'
+        ])
+        && request.resource.data.sailing.id is string
+        && request.resource.data.sailing.id.size() >= 1
+        && request.resource.data.sailing.id.size() <= 160
+        && request.resource.data.sailing.cruiseLineId is string
+        && request.resource.data.sailing.cruiseLineId.size() >= 1
+        && request.resource.data.sailing.cruiseLineId.size() <= 80
+        && request.resource.data.sailing.shipName is string
+        && request.resource.data.sailing.shipName.size() >= 1
+        && request.resource.data.sailing.shipName.size() <= 120
+        && (!request.resource.data.sailing.keys().hasAny(['shipId'])
+          || (request.resource.data.sailing.shipId is string
+            && request.resource.data.sailing.shipId.size() <= 120))
+        && request.resource.data.sailing.departureDate is string
+        && request.resource.data.sailing.returnDate is string
+        && request.resource.data.sailing.duration is number
+        && request.resource.data.sailing.departurePort is string
+        && request.resource.data.sailing.region is string
+        && request.resource.data.sailing.itinerary is list
+        && request.resource.data.sailing.itinerary.size() <= 60
+        && (!request.resource.data.sailing.keys().hasAny(['isRealUpcoming'])
+          || request.resource.data.sailing.isRealUpcoming is bool);
+    }
+
+    function validSavedCruise() {
+      return request.resource.data.keys().hasOnly([
+          'source',
+          'version',
+          'sailing',
+          'confirmedItinerary',
+          'cabinNumber',
+          'cabinType',
+          'confirmedAt',
+          'calculatorSnapshot',
+          'attribution',
+          'importState',
+          'updatedAt'
+        ])
+        && request.resource.data.sailing is map
+        && request.resource.data.confirmedItinerary is list
+        && request.resource.data.confirmedItinerary.size() <= 60
+        && validSavedCruiseSailing()
+        && validOptionalString('source', 40)
+        && validOptionalString('version', 40)
+        && validOptionalString('cabinNumber', 40)
+        && validOptionalString('cabinType', 80)
+        && validOptionalSavedCruiseTimestamp('confirmedAt')
+        && (!request.resource.data.keys().hasAny(['calculatorSnapshot'])
+          || (request.resource.data.calculatorSnapshot is map
+            && request.resource.data.calculatorSnapshot.keys().hasOnly([
+              'version', 'travelers', 'cabinType', 'duration', 'region',
+              'selectedAddOns', 'estimate'
+            ])
+            && request.resource.data.calculatorSnapshot.version == '1'
+            && request.resource.data.calculatorSnapshot.travelers is map
+            && request.resource.data.calculatorSnapshot.selectedAddOns is list
+            && request.resource.data.calculatorSnapshot.selectedAddOns.size() <= 12
+            && request.resource.data.calculatorSnapshot.estimate is map))
+        && (!request.resource.data.keys().hasAny(['attribution'])
+          || (request.resource.data.attribution is map
+            && request.resource.data.attribution.keys().hasOnly([
+              'firstTouch', 'convertingTouch'
+            ])
+            && request.resource.data.attribution.firstTouch is map
+            && request.resource.data.attribution.convertingTouch is map))
+        && (!request.resource.data.keys().hasAny(['importState'])
+          || request.resource.data.importState in ['saved', 'opened', 'imported'])
+        && validOptionalSavedCruiseTimestamp('updatedAt');
+    }
+
     // ───── adminUsers/{uid} (ops access gate) ─────
     //
     // Membership is managed through trusted Admin SDK / console operations.
@@ -99,6 +194,35 @@ service cloud.firestore {
     match /adminUsers/{uid} {
       allow read: if isOwner(uid);
       allow write: if false;
+    }
+
+    // ───── Growth Engine (Cloud Functions / Admin SDK only) ─────
+    //
+    // These documents can include applicant contact details, pseudonymous
+    // attribution, anti-abuse state, and derived activation. They are never
+    // client-writable; public and admin flows use authenticated callables.
+    match /growthApplications/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /growthProfiles/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /growthEvents/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /growthAttributions/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /growthRateLimits/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /referralCodes/{document=**} {
+      allow read, write: if false;
     }
 
     // ───── users/{uid} (web) ─────
@@ -125,6 +249,14 @@ service cloud.firestore {
           && request.resource.data.savedAt is string
           && request.resource.data.fromPrice is number
           && request.resource.data.size() < 30;
+      }
+
+      match /savedCruises/{cruiseId} {
+        allow read, delete: if isOwner(uid);
+
+        allow create, update: if isOwner(uid)
+          && cruiseId == 'active'
+          && validSavedCruise();
       }
     }
 

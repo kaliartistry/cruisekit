@@ -344,7 +344,21 @@ function DealCard({ deal }: { deal: RealDeal }) {
   const imgSrc = getDealImage(deal);
 
   const ctaHref = deal.affiliateLink ?? deal.directLink ?? null;
-  const calcHref = `/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2&fare=${deal.fromPrice}${deal.departureDate ? `&month=${new Date(deal.departureDate).getMonth()}` : ""}`;
+  const calcParams = new URLSearchParams({
+    line: deal.cruiseLineId,
+    duration: String(deal.duration),
+    adults: "2",
+    fare: String(deal.fromPrice),
+    sailing: deal.id,
+    ship: deal.shipName,
+    port: deal.departurePort,
+    region: deal.region,
+  });
+  if (deal.departureDate) {
+    calcParams.set("departure", deal.departureDate);
+    calcParams.set("month", String(new Date(deal.departureDate).getMonth()));
+  }
+  const calcHref = `/calculator?${calcParams.toString()}`;
   const basisText = priceBasisLabel(deal.priceBasis) || "per person, double occupancy";
   const taxText = deal.taxesAndFeesIncluded
     ? "Taxes, fees, and gratuities included."

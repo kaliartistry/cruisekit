@@ -7,9 +7,11 @@ import {
 } from "@/lib/config/app-store-urls";
 import {
   trackStoreBadgeClicked,
+  trackAppHandoffClicked,
   type SourceSurface,
   type StorePlatform,
 } from "@/lib/analytics";
+import { trackGrowthEvent } from "@/lib/growth/analytics";
 import { cn } from "@/lib/utils/cn";
 
 type StoreButtonVariant = "panel" | "dark" | "light";
@@ -69,13 +71,35 @@ export function StoreButton({
 }) {
   const store = STORE_DETAILS[platform];
   const Icon = store.icon;
+  const href =
+    platform === "android"
+      ? withPlayInstallReferrer(store.href, sourceSurface)
+      : store.href;
+  const calculatorHandoff =
+    sourceSurface === "saved_trip" || sourceSurface === "calculator_result";
 
   return (
     <a
-      href={store.href}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => trackStoreBadgeClicked(platform, sourceSurface)}
+      onClick={() => {
+        trackStoreBadgeClicked(platform, sourceSurface);
+        trackGrowthEvent("store_link_clicked", {
+          platform,
+          store: platform === "ios" ? "apple" : "google",
+        });
+        trackAppHandoffClicked({
+          platform,
+          sourceType: calculatorHandoff ? "calculator" : "direct",
+          landingContext:
+            sourceSurface === "saved_trip"
+              ? "sailing"
+              : sourceSurface === "calculator_result"
+                ? "cruise_line"
+                : "generic",
+        });
+      }}
       className={cn(
         "group flex items-center justify-between gap-4 rounded-xl border px-5 py-4 text-left transition-all",
         variant === "panel" &&
@@ -125,4 +149,15 @@ export function StoreButton({
       />
     </a>
   );
+}
+
+function withPlayInstallReferrer(href: string, sourceSurface: SourceSurface) {
+  const url = new URL(href);
+  const referrer = new URLSearchParams({
+    utm_source: "cruisekit_web",
+    utm_medium: "app_handoff",
+    utm_campaign: sourceSurface,
+  });
+  url.searchParams.set("referrer", referrer.toString());
+  return url.toString();
 }

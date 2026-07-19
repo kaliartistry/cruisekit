@@ -4,6 +4,7 @@ import "./globals.css";
 import { AuthProvider } from "@/lib/firebase/auth";
 import AnalyticsLoader from "@/components/shared/analytics-loader";
 import UtmLandingTracker from "@/components/shared/utm-landing-tracker";
+import GrowthAttributionTracker from "@/components/growth/growth-attribution-tracker";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/config/app-store-urls";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -87,7 +88,10 @@ export default function RootLayout({
       className={`${jakarta.variable} ${inter.variable} ${jetbrains.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          {children}
+          <GrowthAttributionTracker />
+        </AuthProvider>
         <AnalyticsLoader />
         <UtmLandingTracker />
         <script

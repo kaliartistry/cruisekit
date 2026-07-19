@@ -35,11 +35,13 @@ import {
 import AnimatedCounter from "@/components/shared/animated-counter";
 import CruiseLineSelector from "./cruise-line-selector";
 import CostBreakdown from "./cost-breakdown";
+import type { CalculatorSailingContext } from "./calculator-save-card";
 import { cn } from "@/lib/utils/cn";
 import {
   trackCalculatorCompleted,
   trackCalculatorStarted,
 } from "@/lib/analytics";
+import { trackGrowthEvent } from "@/lib/growth/analytics";
 
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
@@ -201,6 +203,7 @@ interface CalculatorFormProps {
   defaultMonth?: number;
   /** Pre-fill base fare (e.g., from a deal card click) */
   defaultFare?: string;
+  sailingContext?: CalculatorSailingContext;
 }
 
 export default function CalculatorForm({
@@ -210,6 +213,7 @@ export default function CalculatorForm({
   defaultAdults,
   defaultMonth,
   defaultFare,
+  sailingContext,
 }: CalculatorFormProps = {}) {
   /* -- Resolve default cruise line IDs with backward compat ---------- */
   const resolvedDefaultIds = useMemo(() => {
@@ -473,8 +477,18 @@ export default function CalculatorForm({
     selectedLines.length >= 1 && (parseFloat(baseFare) > 0 || fareEstimate !== null);
 
   const goNext = () => {
-    if (step === 1) trackCalculatorStarted();
-    if (step === 2) trackCalculatorCompleted();
+    if (step === 1) {
+      trackCalculatorStarted();
+      trackGrowthEvent("calculator_started", {
+        cruiseLine: primaryLineId ?? undefined,
+      });
+    }
+    if (step === 2) {
+      trackCalculatorCompleted();
+      trackGrowthEvent("calculator_completed", {
+        cruiseLine: primaryLineId ?? undefined,
+      });
+    }
     setDirection(1);
     setStep((s) => Math.min(3, s + 1));
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1125,6 +1139,7 @@ export default function CalculatorForm({
               }}
               onRemoveSpecialtyDining={() => setSpecialtyMeals(0)}
               onRemoveExcursions={() => setExcursionBudget(0)}
+              sailingContext={sailingContext}
             />
           </motion.div>
         )}
