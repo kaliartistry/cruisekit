@@ -17,6 +17,11 @@ import { access, mkdir, readdir, readFile, stat, writeFile } from "node:fs/promi
 import { createHash } from "node:crypto";
 import { dirname, extname, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  buildShipCodeIndex,
+  loadShipCodeReference,
+  resolveShipName,
+} from "./lib/ship-code-names.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const reportDir = resolve(repoRoot, "data/reports");
@@ -26,7 +31,7 @@ const reviewManifestPath = "data/ship-image-review.json";
 const defaultCdnBaseUrl = "https://cruisekit.app/assets/ships";
 const siteReferenceDirs = ["apps/web/app", "apps/web/components", "apps/web/lib"];
 
-function parseArgs(argv) {
+export function parseArgs(argv) {
   const args = {
     checkCdn: false,
     cdnBaseUrl: defaultCdnBaseUrl,
@@ -43,9 +48,19 @@ function parseArgs(argv) {
     } else if (arg === "--fail-on-unverified") {
       args.failOnUnverified = true;
     } else if (arg === "--mobile-root") {
-      args.mobileRoot = argv[++i];
+      const value = argv[i + 1];
+      if (!value || value === "--" || value.startsWith("--")) {
+        throw new Error("--mobile-root requires a path.");
+      }
+      args.mobileRoot = value;
+      i += 1;
     } else if (arg === "--cdn-base-url") {
-      args.cdnBaseUrl = argv[++i];
+      const value = argv[i + 1];
+      if (!value || value === "--" || value.startsWith("--")) {
+        throw new Error("--cdn-base-url requires a URL.");
+      }
+      args.cdnBaseUrl = value;
+      i += 1;
     } else {
       throw new Error(`Unknown argument: ${arg}`);
     }
@@ -95,6 +110,14 @@ function normalizeShip(entry, source) {
   };
 }
 
+function shipAssetIdForName(name) {
+  return String(name ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 async function loadWebShips() {
   const source = await readFile(resolve(repoRoot, webShipDataPath), "utf8");
   const matches = [
@@ -114,12 +137,20 @@ async function loadWebShips() {
   );
 }
 
-async function resolveMobileRoot(explicitRoot) {
+export async function resolveMobileRoot(explicitRoot) {
+  if (explicitRoot) {
+    const resolvedRoot = resolve(explicitRoot);
+    const shipsPath = resolve(resolvedRoot, "assets/data/ships.json");
+    if (await fileExists(shipsPath)) return resolvedRoot;
+    throw new Error(
+      `Explicit mobile root does not contain assets/data/ships.json: ${resolvedRoot}`,
+    );
+  }
+
   const candidates = [
-    explicitRoot,
-    resolve(repoRoot, "../CruiseKit-Mobile-analytics-tracking"),
     resolve(repoRoot, "../CruiseKit-Mobile"),
-  ].filter(Boolean);
+    resolve(repoRoot, "../CruiseKit-Mobile-analytics-tracking"),
+  ];
 
   for (const candidate of candidates) {
     const shipsPath = resolve(candidate, "assets/data/ships.json");
@@ -130,13 +161,103 @@ async function resolveMobileRoot(explicitRoot) {
   return null;
 }
 
-async function loadMobileShips(mobileRoot) {
-  if (!mobileRoot) return { root: null, ships: [], available: false };
+export async function loadMobileShips(mobileRoot) {
+  if (!mobileRoot) {
+    return {
+      root: null,
+      ships: [],
+      available: false,
+      sailingCatalogAvailable: false,
+      shipCatalogCount: 0,
+      sailingCatalogRowCount: 0,
+      sailingCatalogShipCount: 0,
+      unresolvedBareCodeRows: 0,
+      unresolvedBareCodes: {},
+    };
+  }
   const shipsPath = resolve(mobileRoot, "assets/data/ships.json");
-  const ships = JSON.parse(await readFile(shipsPath, "utf8")).map((ship) =>
+  const shipCatalog = JSON.parse(await readFile(shipsPath, "utf8")).map((ship) =>
     normalizeShip(ship, "mobile"),
   );
-  return { root: mobileRoot, ships, available: true };
+  const sailingCatalogPath = resolve(
+    mobileRoot,
+    "assets/data/sailing_catalog.json",
+  );
+  if (!(await fileExists(sailingCatalogPath))) {
+    return {
+      root: mobileRoot,
+      ships: shipCatalog,
+      available: true,
+      sailingCatalogAvailable: false,
+      shipCatalogCount: shipCatalog.length,
+      sailingCatalogRowCount: 0,
+      sailingCatalogShipCount: 0,
+      unresolvedBareCodeRows: 0,
+      unresolvedBareCodes: {},
+    };
+  }
+
+  const [payload, reference] = await Promise.all([
+    readFile(sailingCatalogPath, "utf8").then(JSON.parse),
+    loadShipCodeReference(),
+  ]);
+  const sailings = Array.isArray(payload) ? payload : payload?.sailings;
+  if (!Array.isArray(sailings)) {
+    throw new TypeError(
+      "Mobile sailing catalog must be an array or an object with a sailings array.",
+    );
+  }
+  const shipCodeIndex = buildShipCodeIndex(reference);
+  const sailingShipById = new Map();
+  const unresolvedBareCodes = new Map();
+  const sailingRows = sailings;
+  for (const entry of sailingRows) {
+    const mapped = resolveShipName(entry, shipCodeIndex);
+    const name = mapped?.shipName ?? String(entry?.shipName ?? "").trim();
+    if (!name) continue;
+    if (/^[A-Za-z]{2}$/.test(name)) {
+      const cruiseLineId = String(
+        entry?.cruiseLineId ?? entry?.cruiseLine ?? "unknown",
+      )
+        .trim()
+        .toLowerCase();
+      const key = `${cruiseLineId}:${name.toUpperCase()}`;
+      unresolvedBareCodes.set(key, (unresolvedBareCodes.get(key) ?? 0) + 1);
+      continue;
+    }
+    const id = shipAssetIdForName(name);
+    if (!id || sailingShipById.has(id)) continue;
+    sailingShipById.set(
+      id,
+      normalizeShip(
+        {
+          id,
+          name,
+          cruiseLineId: entry?.cruiseLineId ?? entry?.cruiseLine,
+        },
+        "mobile-sailing-catalog",
+      ),
+    );
+  }
+
+  return {
+    root: mobileRoot,
+    ships: [...shipCatalog, ...sailingShipById.values()],
+    available: true,
+    sailingCatalogAvailable: true,
+    shipCatalogCount: shipCatalog.length,
+    sailingCatalogRowCount: sailingRows.length,
+    sailingCatalogShipCount: sailingShipById.size,
+    unresolvedBareCodeRows: [...unresolvedBareCodes.values()].reduce(
+      (sum, count) => sum + count,
+      0,
+    ),
+    unresolvedBareCodes: Object.fromEntries(
+      [...unresolvedBareCodes.entries()].sort(([left], [right]) =>
+        left.localeCompare(right),
+      ),
+    ),
+  };
 }
 
 function buildCatalog(webShips, mobileShips) {
@@ -355,6 +476,11 @@ function escapeHtml(value) {
 }
 
 function statusForShip(ship, assetById, reviewManifest) {
+  const allowedMissing =
+    !assetById.has(ship.id) &&
+    reviewManifest.blocked?.[ship.id]?.allowMissing === true;
+  if (allowedMissing) return ["fallback"];
+
   const statuses = [];
   if (!assetById.has(ship.id)) statuses.push("missing");
   if (reviewManifest.blocked?.[ship.id]) statuses.push("blocked");
@@ -420,6 +546,7 @@ async function writeContactSheet(catalogRows, assetById, reviewManifest) {
     .card { overflow: hidden; border: 1px solid #d9e2ec; border-radius: 8px; background: #ffffff; }
     .card.blocked { border-color: #d14545; box-shadow: 0 0 0 2px rgba(209, 69, 69, 0.12); }
     .card.missing { border-style: dashed; }
+    .card.fallback { border-style: dashed; border-color: #6f56a8; }
     .thumb { aspect-ratio: 16 / 9; display: grid; place-items: center; background: #d9e2ec; }
     img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .placeholder { color: #6c7b91; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
@@ -430,6 +557,7 @@ async function writeContactSheet(catalogRows, assetById, reviewManifest) {
     .badge { border-radius: 999px; padding: 3px 7px; font-size: 11px; font-weight: 700; background: #edf2f7; color: #475569; }
     .badge.blocked { background: #ffe4e4; color: #a92828; }
     .badge.missing { background: #fff2bf; color: #7a4f00; }
+    .badge.fallback { background: #eee8ff; color: #56368a; }
     .badge.unverified { background: #e7f0ff; color: #235aa6; }
     .badge.verified { background: #ddf6e8; color: #11643a; }
   </style>
@@ -480,6 +608,23 @@ async function main() {
       "mobile-catalog",
       "Mobile ship catalog not found. Pass --mobile-root or set CRUISEKIT_MOBILE_ROOT for app-wide audit.",
     );
+  } else if (!mobile.sailingCatalogAvailable) {
+    add(
+      warnings,
+      "warning",
+      "mobile-sailing-catalog",
+      "Mobile rich sailing catalog not found; sailing-only ship photo coverage was not audited.",
+    );
+  } else if (mobile.unresolvedBareCodeRows > 0) {
+    const details = Object.entries(mobile.unresolvedBareCodes)
+      .map(([key, count]) => `${key}=${count}`)
+      .join(", ");
+    add(
+      warnings,
+      "warning",
+      "mobile-sailing-catalog-bare-codes",
+      `${mobile.unresolvedBareCodeRows} rich-catalog row(s) use bare ship codes outside the audited website reference; they were reported instead of silently omitted from sailing-derived ship IDs: ${details}.`,
+    );
   }
 
   for (const ship of catalog.values()) {
@@ -503,8 +648,29 @@ async function main() {
 
   for (const ship of [...catalog.values()].sort((a, b) => a.id.localeCompare(b.id))) {
     const asset = assetById.get(ship.id);
+    const blockedReview = reviewManifest.blocked?.[ship.id];
     if (!asset) {
-      missing.push({ id: ship.id, name: ship.name, cruiseLineId: ship.cruiseLineId });
+      missing.push({
+        id: ship.id,
+        name: ship.name,
+        cruiseLineId: ship.cruiseLineId,
+        allowMissing: blockedReview?.allowMissing === true,
+      });
+      if (blockedReview?.allowMissing === true) {
+        blocked.push({
+          id: ship.id,
+          name: ship.name,
+          cruiseLineId: ship.cruiseLineId,
+          ...blockedReview,
+        });
+        add(
+          info,
+          "info",
+          ship.id,
+          blockedReview.reason ?? "Ship intentionally uses the designed fallback.",
+        );
+        continue;
+      }
       add(blockers, "blocker", ship.id, `Missing ship asset: ${shipAssetDir}/${ship.id}.jpg`);
       continue;
     }
@@ -534,7 +700,6 @@ async function main() {
       );
     }
 
-    const blockedReview = reviewManifest.blocked?.[ship.id];
     if (blockedReview) {
       blocked.push({ id: ship.id, name: ship.name, cruiseLineId: ship.cruiseLineId, ...blockedReview });
       add(blockers, "blocker", ship.id, blockedReview.reason ?? "Ship asset is manually blocked.");
@@ -584,8 +749,15 @@ async function main() {
 
   let cdnResults = [];
   if (args.checkCdn) {
-    const ships = [...catalog.values()].sort((a, b) => a.id.localeCompare(b.id));
-    cdnResults = await mapWithConcurrency(ships, 8, (ship) => checkCdnAsset(ship.id, args.cdnBaseUrl));
+    const ships = [...catalog.values()]
+      .filter(
+        (ship) =>
+          assetById.has(ship.id) || reviewManifest.blocked?.[ship.id]?.allowMissing !== true,
+      )
+      .sort((a, b) => a.id.localeCompare(b.id));
+    cdnResults = await mapWithConcurrency(ships, 8, (ship) =>
+      checkCdnAsset(ship.id, args.cdnBaseUrl),
+    );
     for (let i = 0; i < ships.length; i += 1) {
       const ship = ships[i];
       const result = cdnResults[i];
@@ -621,14 +793,24 @@ async function main() {
     generatedAt: new Date().toISOString(),
     inputs: {
       webShipDataPath,
-      mobileShipDataPath: mobile.root ? reportPath(resolve(mobile.root, "assets/data/ships.json")) : null,
+      mobileShipDataPath: mobile.root
+        ? reportPath(resolve(mobile.root, "assets/data/ships.json"))
+        : null,
+      mobileSailingCatalogPath:
+        mobile.root && mobile.sailingCatalogAvailable
+          ? reportPath(resolve(mobile.root, "assets/data/sailing_catalog.json"))
+          : null,
       shipAssetDir,
       reviewManifestPath,
       cdnBaseUrl: args.checkCdn ? args.cdnBaseUrl : null,
     },
     counts: {
       webCatalogShips: webShips.length,
-      mobileCatalogShips: mobile.ships.length,
+      mobileCatalogShips: mobile.shipCatalogCount,
+      mobileSailingCatalogRows: mobile.sailingCatalogRowCount,
+      mobileSailingCatalogShips: mobile.sailingCatalogShipCount,
+      mobileSailingCatalogUnresolvedBareCodeRows:
+        mobile.unresolvedBareCodeRows,
       expectedShipIds: catalog.size,
       siteShipAssets: assets.length,
       missingAssets: missing.length,
@@ -647,6 +829,7 @@ async function main() {
     assetDetails,
     hardcodedSiteReferences: hardcodedRefs,
     hardcodedReferenceIssues,
+    mobileSailingCatalogUnresolvedBareCodes: mobile.unresolvedBareCodes,
     cdnResults,
     blockers,
     warnings,
@@ -683,6 +866,11 @@ Generated: ${report.generatedAt}
 - Site assets: \`${shipAssetDir}\`
 - Web ship catalog: \`${webShipDataPath}\`
 - Mobile ship catalog: ${mobile.root ? `\`${reportPath(resolve(mobile.root, "assets/data/ships.json"))}\`` : "not found"}
+- Mobile rich sailing catalog: ${
+    mobile.root && mobile.sailingCatalogAvailable
+      ? `\`${reportPath(resolve(mobile.root, "assets/data/sailing_catalog.json"))}\``
+      : "not found"
+  }
 - Review manifest: \`${reviewManifestPath}\`
 - Contact sheet: \`data/reports/ship-asset-contact-sheet.html\`
 
@@ -692,6 +880,9 @@ Generated: ${report.generatedAt}
 | --- | ---: |
 | Web catalog ships | ${report.counts.webCatalogShips} |
 | Mobile catalog ships | ${report.counts.mobileCatalogShips} |
+| Mobile rich-catalog rows | ${report.counts.mobileSailingCatalogRows} |
+| Mobile rich-catalog resolved ship IDs | ${report.counts.mobileSailingCatalogShips} |
+| Mobile rich-catalog unresolved bare-code rows | ${report.counts.mobileSailingCatalogUnresolvedBareCodeRows} |
 | Expected ship IDs | ${report.counts.expectedShipIds} |
 | Site ship JPG assets | ${report.counts.siteShipAssets} |
 | Missing assets | ${report.counts.missingAssets} |
@@ -744,7 +935,12 @@ ${markdownList(info)}
   if (blockers.length > 0) process.exit(1);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+if (
+  process.argv[1] &&
+  resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

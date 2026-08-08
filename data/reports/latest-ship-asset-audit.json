@@ -1,29 +1,69 @@
 {
-  "generatedAt": "2026-07-03T14:09:42.469Z",
+  "generatedAt": "2026-08-08T18:36:07.007Z",
   "inputs": {
     "webShipDataPath": "apps/web/lib/data/ships.ts",
-    "mobileShipDataPath": "../CruiseKit-Mobile-analytics-tracking/assets/data/ships.json",
+    "mobileShipDataPath": "../CruiseKit-Mobile/assets/data/ships.json",
+    "mobileSailingCatalogPath": "../CruiseKit-Mobile/assets/data/sailing_catalog.json",
     "shipAssetDir": "apps/web/public/assets/ships",
     "reviewManifestPath": "data/ship-image-review.json",
     "cdnBaseUrl": null
   },
   "counts": {
     "webCatalogShips": 126,
-    "mobileCatalogShips": 126,
-    "expectedShipIds": 126,
-    "siteShipAssets": 126,
-    "missingAssets": 0,
+    "mobileCatalogShips": 130,
+    "mobileSailingCatalogRows": 3875,
+    "mobileSailingCatalogShips": 99,
+    "mobileSailingCatalogUnresolvedBareCodeRows": 36,
+    "expectedShipIds": 137,
+    "siteShipAssets": 135,
+    "missingAssets": 2,
     "orphanedAssets": 0,
-    "blockedAssets": 0,
+    "blockedAssets": 2,
     "unverifiedAssets": 16,
     "cdnChecked": 0,
     "cdnFailures": 0,
     "hardcodedSiteReferences": 6,
     "hardcodedSiteReferenceIssues": 0
   },
-  "missing": [],
+  "missing": [
+    {
+      "id": "brilliant-lady",
+      "name": "Brilliant Lady",
+      "cruiseLineId": "virgin-voyages",
+      "allowMissing": true
+    },
+    {
+      "id": "norwegian-aura",
+      "name": "Norwegian Aura",
+      "cruiseLineId": "norwegian",
+      "allowMissing": true
+    }
+  ],
   "orphaned": [],
-  "blocked": [],
+  "blocked": [
+    {
+      "id": "brilliant-lady",
+      "name": "Brilliant Lady",
+      "cruiseLineId": "virgin-voyages",
+      "reason": "No suitable hero image with audited commercial-reuse rights is available. The former official-site derivative was removed because Virgin Voyages did not grant commercial redistribution rights.",
+      "allowMissing": true,
+      "sourceUrl": "https://www.virginvoyages.com/terms-and-conditions",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "A CC BY-SA alternative was rejected because Commons flags it as AI-upscaled and it did not meet CruiseKit's hero-quality requirements. Use the designed fallback pending permission or a suitable licensed photograph."
+    },
+    {
+      "id": "norwegian-aura",
+      "name": "Norwegian Aura",
+      "cruiseLineId": "norwegian",
+      "reason": "No suitable hero image with commercial-reuse rights was found. NCL's current legal notice requires advance written permission for commercial copying or redistribution.",
+      "allowMissing": true,
+      "sourceUrl": "https://www.ncl.com/uk/en/legal-notice-uk",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "NCL published an official April 2026 float-out photo, but newsroom availability is not a reusable commercial license. Use the designed fallback pending written permission or an open-license photograph."
+    }
+  ],
   "unverified": [
     {
       "id": "allure-of-the-seas",
@@ -137,6 +177,16 @@
         "height": 720
       }
     },
+    "azamara-journey": {
+      "path": "apps/web/public/assets/ships/azamara-journey.jpg",
+      "bytes": 218331,
+      "sha256": "153b6c1745905e59a08e0af24569b314986f046f534a235539151e48a078c868",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      }
+    },
     "brilliance-of-the-seas": {
       "path": "apps/web/public/assets/ships/brilliance-of-the-seas.jpg",
       "bytes": 197869,
@@ -145,16 +195,6 @@
       "dimensions": {
         "width": 1280,
         "height": 451
-      }
-    },
-    "brilliant-lady": {
-      "path": "apps/web/public/assets/ships/brilliant-lady.jpg",
-      "bytes": 164056,
-      "sha256": "ab16f41e560524d921feb7fed563f8b1730c4831fe4995033c225f936dad1734",
-      "format": "jpg",
-      "dimensions": {
-        "width": 1280,
-        "height": 560
       }
     },
     "caribbean-princess": {
@@ -517,6 +557,16 @@
         "height": 720
       }
     },
+    "coral-princess": {
+      "path": "apps/web/public/assets/ships/coral-princess.jpg",
+      "bytes": 240391,
+      "sha256": "ac9249683990043393c3e173c21dfa60881db82806b9fea61a8d91022faaf0d4",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      }
+    },
     "crown-princess": {
       "path": "apps/web/public/assets/ships/crown-princess.jpg",
       "bytes": 109455,
@@ -525,6 +575,16 @@
       "dimensions": {
         "width": 960,
         "height": 720
+      }
+    },
+    "diamond-princess": {
+      "path": "apps/web/public/assets/ships/diamond-princess.jpg",
+      "bytes": 244033,
+      "sha256": "8ac4bf9932ff88c26138e610e956623ec9527903db036deffd35876e0e251470",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
       }
     },
     "discovery-princess": {
@@ -675,6 +735,16 @@
       "dimensions": {
         "width": 960,
         "height": 720
+      }
+    },
+    "grand-princess": {
+      "path": "apps/web/public/assets/ships/grand-princess.jpg",
+      "bytes": 206129,
+      "sha256": "aa100deee0d8e6d7f0954309c20a931b6352b8cfc0f9ffd1c248e2b7dacbcb85",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
       }
     },
     "grandeur-of-the-seas": {
@@ -837,6 +907,16 @@
         "height": 646
       }
     },
+    "msc-poesia": {
+      "path": "apps/web/public/assets/ships/msc-poesia.jpg",
+      "bytes": 222363,
+      "sha256": "bd3ef586e85ac1f7d28e80b50b9da4a7db7fb3f8d79d500319274524aac1e370",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      }
+    },
     "msc-seascape": {
       "path": "apps/web/public/assets/ships/msc-seascape.jpg",
       "bytes": 214181,
@@ -957,6 +1037,16 @@
         "height": 720
       }
     },
+    "norwegian-dawn": {
+      "path": "apps/web/public/assets/ships/norwegian-dawn.jpg",
+      "bytes": 225538,
+      "sha256": "f1fa5015731a3f979525b02072738b766de0ad46f71ebacf3887eae8d1d71a7c",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      }
+    },
     "norwegian-encore": {
       "path": "apps/web/public/assets/ships/norwegian-encore.jpg",
       "bytes": 96680,
@@ -965,6 +1055,16 @@
       "dimensions": {
         "width": 1080,
         "height": 720
+      }
+    },
+    "norwegian-epic": {
+      "path": "apps/web/public/assets/ships/norwegian-epic.jpg",
+      "bytes": 214851,
+      "sha256": "d69aeda21331cfb7df2e34e4e3663094c3ae17621198e4b73afa45c16960bb53",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
       }
     },
     "norwegian-escape": {
@@ -1005,6 +1105,16 @@
       "dimensions": {
         "width": 1280,
         "height": 720
+      }
+    },
+    "norwegian-jewel": {
+      "path": "apps/web/public/assets/ships/norwegian-jewel.jpg",
+      "bytes": 216930,
+      "sha256": "7113997a477f8fcdac9ad6ca0df71a302860e81631e6ee636be825bf6754c6f8",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
       }
     },
     "norwegian-joy": {
@@ -1207,6 +1317,16 @@
         "height": 720
       }
     },
+    "sapphire-princess": {
+      "path": "apps/web/public/assets/ships/sapphire-princess.jpg",
+      "bytes": 180110,
+      "sha256": "fc9ecb50dbe9b8f400f036cfe712b3e8747e70d6bbef2ba9706fac76e86d620b",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      }
+    },
     "scarlet-lady": {
       "path": "apps/web/public/assets/ships/scarlet-lady.jpg",
       "bytes": 123098,
@@ -1305,6 +1425,16 @@
       "dimensions": {
         "width": 1280,
         "height": 591
+      }
+    },
+    "viking-star": {
+      "path": "apps/web/public/assets/ships/viking-star.jpg",
+      "bytes": 217400,
+      "sha256": "34e52cefa1743aa19bed03ad43a82c2127a6214d666ca01130b05f6fe30b01a5",
+      "format": "jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
       }
     },
     "vision-of-the-seas": {
@@ -1407,9 +1537,18 @@
     }
   ],
   "hardcodedReferenceIssues": [],
+  "mobileSailingCatalogUnresolvedBareCodes": {
+    "celebrity:AT": 6,
+    "virgin-voyages:BR": 30
+  },
   "cdnResults": [],
   "blockers": [],
   "warnings": [
+    {
+      "severity": "warning",
+      "id": "mobile-sailing-catalog-bare-codes",
+      "message": "36 rich-catalog row(s) use bare ship codes outside the audited website reference; they were reported instead of silently omitted from sailing-derived ship IDs: celebrity:AT=6, virgin-voyages:BR=30."
+    },
     {
       "severity": "warning",
       "id": "allure-of-the-seas",
@@ -1491,5 +1630,16 @@
       "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     }
   ],
-  "info": []
+  "info": [
+    {
+      "severity": "info",
+      "id": "brilliant-lady",
+      "message": "No suitable hero image with audited commercial-reuse rights is available. The former official-site derivative was removed because Virgin Voyages did not grant commercial redistribution rights."
+    },
+    {
+      "severity": "info",
+      "id": "norwegian-aura",
+      "message": "No suitable hero image with commercial-reuse rights was found. NCL's current legal notice requires advance written permission for commercial copying or redistribution."
+    }
+  ]
 }

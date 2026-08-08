@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-08-08",
   "notes": [
     "Ship photos must have a reviewed source before they are treated as verified.",
-    "Move a ship from blocked to verified only after replacing the image and recording sourceUrl, sourceName, reviewedAt, and reviewer."
+    "Move a ship from blocked to verified only after replacing the image and recording sourceUrl, sourceName, reviewedAt, and reviewer.",
+    "A blocked entry with allowMissing=true records an intentional designed-fallback decision when no suitable commercially reusable hero image is available."
   ],
   "verified": {
     "carnival-breeze": {
@@ -444,11 +445,11 @@
       "sourceDescription": "Credit : Sakis Antoniou | Celebrity Ascent - June 2024",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "author": "ND44",
-      "attribution": "ND44",
-      "reviewedAt": "2026-07-03",
-      "reviewer": "Codex visual asset audit",
-      "reviewNotes": "Replaced and visually checked as Celebrity Ascent cruise ship asset during the ship asset audit."
+      "author": "Sakis Antoniou / Commons user ND44",
+      "attribution": "Sakis Antoniou / Commons user ND44",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Existing image, author credit, and CC BY 4.0 source record were re-reviewed during the ship photo gap audit."
     },
     "celebrity-beyond": {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ACelebrity_BEYOND_La_Rochelle_(cropped).jpg",
@@ -1302,18 +1303,125 @@
       "reviewer": "Codex visual asset audit",
       "reviewNotes": "Replaced and visually checked as Zaandam cruise ship asset during the ship asset audit."
     },
-    "brilliant-lady": {
-      "sourceUrl": "https://www.virginvoyages.com/ships/brilliant-lady",
-      "sourceName": "Virgin Voyages Brilliant Lady ship page",
-      "sourceDescription": "Official Brilliant Lady ship image from Virgin Voyages.",
-      "sourceImageUrl": "https://virginvoyages.imgix.net/dam/jcr:2b337ca7-e4fc-4c69-84de-36b3a96daebd/1600x700.png",
-      "license": "Official source image; reuse rights not audited",
+    "grand-princess": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AGrand_Princess_returns_to_port_in_Oakland_(6472325).jpg",
+      "sourceName": "File:Grand Princess returns to port in Oakland (6472325).jpg",
+      "sourceDescription": "Grand Princess returns to the Port of Oakland.",
+      "license": "Public domain U.S. Coast Guard work",
+      "licenseUrl": "https://www.dvidshub.net/image/6472325/grand-princess-returns-port-oakland",
+      "author": "U.S. Coast Guard photo by Petty Officer 3rd Class Taylor Bacon",
+      "attribution": "U.S. Coast Guard photo by Petty Officer 3rd Class Taylor Bacon",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG; visually checked for ship identity and hero framing."
+    },
+    "coral-princess": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ACoral_Princess_(16877529030).jpg",
+      "sourceName": "File:Coral Princess (16877529030).jpg",
+      "sourceDescription": "Coral Princess in daylight.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author": "Bernard Spragg. NZ",
+      "attribution": "Bernard Spragg. NZ",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG; visually checked for ship identity and hero framing."
+    },
+    "sapphire-princess": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASapphire_Princess_Samui.JPG",
+      "sourceName": "File:Sapphire Princess Samui.JPG",
+      "sourceDescription": "Sapphire Princess at Koh Samui.",
+      "license": "Public domain release by the photographer",
       "licenseUrl": null,
-      "author": "Virgin Voyages",
-      "attribution": "Virgin Voyages",
-      "reviewedAt": "2026-07-03",
-      "reviewer": "Codex visual asset audit",
-      "reviewNotes": "Replaced and visually checked as brilliant lady cruise ship asset during the ship asset audit."
+      "author": "Hjanko",
+      "attribution": "Hjanko",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG; visually checked for ship identity and hero framing."
+    },
+    "diamond-princess": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ADiamond_Princess_(9073247995).jpg",
+      "sourceName": "File:Diamond Princess (9073247995).jpg",
+      "sourceDescription": "Diamond Princess in daylight.",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author": "Bernard Spragg. NZ",
+      "attribution": "Bernard Spragg. NZ",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG; visually checked for ship identity and hero framing."
+    },
+    "norwegian-epic": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ANorwegian_Epic_1.JPG",
+      "sourceName": "File:Norwegian Epic 1.JPG",
+      "sourceDescription": "Norwegian Epic on its maiden voyage from Southampton.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "author": "Brian Burnell",
+      "attribution": "Brian Burnell @ nuclear-weapons.info",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG. CruiseKit's derivative remains available under CC BY-SA 3.0."
+    },
+    "norwegian-dawn": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ANorwegian_Dawn_Leaving_Boston_Harbor.jpg",
+      "sourceName": "File:Norwegian Dawn Leaving Boston Harbor.jpg",
+      "sourceDescription": "Norwegian Dawn leaving Boston Harbor.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "author": "Matthew Hill / Commons user Fletcher6",
+      "attribution": "Matthew Hill / Commons user Fletcher6",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG; visually checked for ship identity and hero framing."
+    },
+    "azamara-journey": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AAzamara_Journey_closing_in_to_dock.jpg",
+      "sourceName": "File:Azamara Journey closing in to dock.jpg",
+      "sourceDescription": "Azamara Journey closing in to dock.",
+      "license": "Public domain release by the photographer",
+      "licenseUrl": null,
+      "author": "Szilas",
+      "attribution": "Szilas",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG; visually checked for ship identity and hero framing."
+    },
+    "norwegian-jewel": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ANorwegian_Jewel.jpg",
+      "sourceName": "File:Norwegian Jewel.jpg",
+      "sourceDescription": "Norwegian Jewel underway in daylight.",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "author": "Ján Sokoly",
+      "attribution": "Ján Sokoly",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG; visually checked for ship identity and hero framing."
+    },
+    "msc-poesia": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMSC_Poesia_Gdynia_2025-06-30.jpg",
+      "sourceName": "File:MSC Poesia Gdynia 2025-06-30.jpg",
+      "sourceDescription": "MSC Poesia at Gdynia in daylight.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "author": "Maciej Nux",
+      "attribution": "Maciej Nux",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG. CruiseKit's derivative remains available under CC BY-SA 4.0."
+    },
+    "viking-star": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AViking_Star_MG_4738_(29783898676).jpg",
+      "sourceName": "File:Viking Star MG 4738 (29783898676).jpg",
+      "sourceDescription": "Viking Star in daylight.",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "author": "Ronnie Robertson",
+      "attribution": "Ronnie Robertson",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "Cropped, resized, and compressed to a 1600x900 hero JPEG. CruiseKit's derivative remains available under CC BY-SA 2.0."
     },
     "carnival-festivale": {
       "sourceUrl": "https://www.carnival-news.com/ship/coming-2027-carnival-festivale",
@@ -1329,5 +1437,22 @@
       "reviewNotes": "Replaced and visually checked as carnival festivale cruise ship asset during the ship asset audit."
     }
   },
-  "blocked": {}
+  "blocked": {
+    "brilliant-lady": {
+      "reason": "No suitable hero image with audited commercial-reuse rights is available. The former official-site derivative was removed because Virgin Voyages did not grant commercial redistribution rights.",
+      "allowMissing": true,
+      "sourceUrl": "https://www.virginvoyages.com/terms-and-conditions",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "A CC BY-SA alternative was rejected because Commons flags it as AI-upscaled and it did not meet CruiseKit's hero-quality requirements. Use the designed fallback pending permission or a suitable licensed photograph."
+    },
+    "norwegian-aura": {
+      "reason": "No suitable hero image with commercial-reuse rights was found. NCL's current legal notice requires advance written permission for commercial copying or redistribution.",
+      "allowMissing": true,
+      "sourceUrl": "https://www.ncl.com/uk/en/legal-notice-uk",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship photo licensing audit",
+      "reviewNotes": "NCL published an official April 2026 float-out photo, but newsroom availability is not a reusable commercial license. Use the designed fallback pending written permission or an open-license photograph."
+    }
+  }
 }

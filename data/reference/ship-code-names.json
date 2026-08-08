@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "lastVerified": "2026-08-08",
+  "mappings": [
+    {
+      "cruiseLineId": "virgin-voyages",
+      "shipCode": "RS",
+      "shipName": "Resilient Lady",
+      "observedAffectedRows": 91,
+      "authoritativeSources": [
+        {
+          "url": "https://www.virginvoyages.com/book/voyage-planner/pre-checkout?currencyCode=USD&dateFrom=2026-04-26&dateTo=2028-05-04&metaType=SEA%20TERRACE&packageCode=6NMGO2&priceType=cabinPerNight&voyageId=RS2612136NMGO2",
+          "evidence": "Virgin Voyages' booking page identifies voyageId RS2612136NMGO2 as Resilient Lady."
+        }
+      ]
+    },
+    {
+      "cruiseLineId": "celebrity",
+      "shipCode": "AX",
+      "shipName": "Celebrity Apex",
+      "observedAffectedRows": 7,
+      "authoritativeSources": [
+        {
+          "url": "https://www.celebritycruises.com/guest-terms/content/uploads/2023/08/Booking-Conditions-Other-Locations-ENGLISH.pdf",
+          "evidence": "Celebrity Cruises' ship-code table on page 60 lists Celebrity Apex as AX."
+        },
+        {
+          "url": "https://www.celebritycruises.com/itinerary/13-night-bermuda-portugal-transatlantic-from-orlando-port-canaveral-on-apex-AX13T150",
+          "evidence": "Celebrity's itinerary page identifies package AX13T150 as sailing on Celebrity Apex."
+        }
+      ]
+    },
+    {
+      "cruiseLineId": "celebrity",
+      "shipCode": "CS",
+      "shipName": "Celebrity Constellation",
+      "observedAffectedRows": 5,
+      "authoritativeSources": [
+        {
+          "url": "https://www.celebritycruises.com/guest-terms/content/uploads/2023/08/Booking-Conditions-Other-Locations-ENGLISH.pdf",
+          "evidence": "Celebrity Cruises' ship-code table on page 60 lists Celebrity Constellation as CS."
+        },
+        {
+          "url": "https://www.celebritycruises.com/itinerary-details/11-night-best-of-italy-croatia-cruise-from-rome-civitavecchia-italy?cCD=CO&country=USA&groupId=CS11ROM-4130807571&packageID=CS11M294&sDT=2026-10-12",
+          "evidence": "Celebrity's booking page for an affected source row identifies group CS11ROM-4130807571 and package CS11M294 as Celebrity Constellation."
+        }
+      ]
+    },
+    {
+      "cruiseLineId": "celebrity",
+      "shipCode": "EC",
+      "shipName": "Celebrity Eclipse",
+      "observedAffectedRows": 5,
+      "authoritativeSources": [
+        {
+          "url": "https://www.celebritycruises.com/guest-terms/content/uploads/2023/08/Booking-Conditions-Other-Locations-ENGLISH.pdf",
+          "evidence": "Celebrity Cruises' ship-code table on page 60 lists Celebrity Eclipse as EC."
+        },
+        {
+          "url": "https://www.celebritycruises.com/ca/itinerary/13-night-portugal-bermuda-transatlantic-from-fort-lauderdale-on-eclipse-EC13T152",
+          "evidence": "Celebrity's itinerary page identifies package EC13T152 as sailing on Celebrity Eclipse."
+        }
+      ]
+    },
+    {
+      "cruiseLineId": "celebrity",
+      "shipCode": "EG",
+      "shipName": "Celebrity Edge",
+      "observedAffectedRows": 2,
+      "authoritativeSources": [
+        {
+          "url": "https://www.celebritycruises.com/guest-terms/content/uploads/2023/08/Booking-Conditions-Other-Locations-ENGLISH.pdf",
+          "evidence": "Celebrity Cruises' ship-code table on page 60 lists Celebrity Edge as EG."
+        },
+        {
+          "url": "https://www.celebritycruises.com/nz/itinerary/12-night-new-zealand-cruise-from-sydney-on-edge-EG12K191",
+          "evidence": "Celebrity's itinerary page for an affected source row identifies package EG12K191 as Celebrity Edge."
+        }
+      ]
+    }
+  ]
+}
