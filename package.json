@@ -15,6 +15,7 @@
     "schema:validate": "node scripts/validate-seed-records.mjs",
     "data:build:port-timezones": "node scripts/generate-port-timezone-artifact.mjs",
     "data:build": "node scripts/build-data-bundles.mjs",
+    "data:build:ship-attribution": "node scripts/generate-ship-attribution.mjs",
     "data:normalize:ship-codes": "node scripts/normalize-sailing-catalog-ship-names.mjs",
     "data:test:ship-gaps": "node --test scripts/tests/ship-code-names.test.mjs scripts/tests/ship-hero-assets.test.mjs",
     "data:refresh:viator": "node scripts/update-viator-products.mjs",

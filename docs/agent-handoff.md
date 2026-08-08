@@ -1,6 +1,36 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-07-14
+Last verified: 2026-08-08
+
+## Ship image license-hygiene stacked candidate
+
+- Candidate verified locally on branch `codex/ship-image-license-hygiene`,
+  stacked on `codex/ship-photo-and-code-data-gaps` / draft PR #56. Merge the
+  base branch first; this candidate is not deployed or live.
+- Sixteen inherited ship JPEGs had no recoverable rights provenance. Git
+  history traces them to a Google Places photo harvester that discarded source
+  and author-attribution metadata. Several were also wrong-subject duplicates.
+  All sixteen are replaced with visually checked, ship-specific Commons
+  sources under CC BY, CC BY-SA, or CC0 terms and recorded in
+  `data/ship-image-review.json`.
+- Carnival Festivale now intentionally uses the designed fallback for its 40
+  bundled sailings. The exact Carnival News rendering was traced and removed,
+  because its download link does not grant commercial redistribution rights
+  and a future ship has no truthful licensed exterior photograph yet.
+- The registry now accounts for 134 verified JPEGs and three intentional
+  fallbacks. Every verified record has an explicitly approved commercial-use
+  license label and its matching canonical license or public-domain URL.
+  `ATTRIBUTION.txt` is generated from the registry and includes every verified
+  asset.
+- PR checks now run `pnpm run data:test:ship-gaps`. The suite blocks an
+  unregistered JPG, a verified record with a disallowed or mismatched
+  license/deed pair, a blocked record that still has a file, missing provenance
+  fields, stale generated attribution, and reviewed heroes outside the
+  1600x900/100-250KB budget.
+- Pending after both stacked pull requests merge: wait for the GitHub Pages
+  deployment, verify the sixteen replacement URLs return HTTP 200, and verify
+  Carnival Festivale returns 404 so the app exercises its fallback. Record
+  those states as live only after direct CDN checks pass.
 
 ## Ship hero assets and ship-code normalization candidate
 

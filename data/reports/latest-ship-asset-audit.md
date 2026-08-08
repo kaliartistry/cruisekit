@@ -1,6 +1,6 @@
 # CruiseKit Ship Asset Audit
 
-Generated: 2026-08-08T18:36:07.007Z
+Generated: 2026-08-08T19:59:03.179Z
 
 ## Scope
 
@@ -21,11 +21,11 @@ Generated: 2026-08-08T18:36:07.007Z
 | Mobile rich-catalog resolved ship IDs | 99 |
 | Mobile rich-catalog unresolved bare-code rows | 36 |
 | Expected ship IDs | 137 |
-| Site ship JPG assets | 135 |
-| Missing assets | 2 |
+| Site ship JPG assets | 134 |
+| Missing assets | 3 |
 | Orphaned assets | 0 |
-| Manually blocked assets | 2 |
-| Assets without verified source metadata | 16 |
+| Manually blocked assets | 3 |
+| Assets without verified source metadata | 0 |
 | CDN assets checked | 0 |
 | CDN failures | 0 |
 | Hardcoded site ship references | 6 |
@@ -34,11 +34,13 @@ Generated: 2026-08-08T18:36:07.007Z
 ## Missing Ship Assets
 
 - brilliant-lady (Brilliant Lady, Virgin Voyages)
+- carnival-festivale (Carnival Festivale, Carnival)
 - norwegian-aura (Norwegian Aura, Norwegian)
 
 ## Manually Blocked Assets
 
 - brilliant-lady (Brilliant Lady) - No suitable hero image with audited commercial-reuse rights is available. The former official-site derivative was removed because Virgin Voyages did not grant commercial redistribution rights.
+- carnival-festivale (Carnival Festivale) - Carnival Festivale is a future ship, and no truthful exterior photograph with audited commercial-reuse rights is available. The former Carnival News rendering was removed because a press-site download is not a commercial redistribution license.
 - norwegian-aura (Norwegian Aura) - No suitable hero image with commercial-reuse rights was found. NCL's current legal notice requires advance written permission for commercial copying or redistribution.
 
 ## Orphaned Site Assets
@@ -61,24 +63,9 @@ Generated: 2026-08-08T18:36:07.007Z
 ## Warnings
 
 - warning: mobile-sailing-catalog-bare-codes - 36 rich-catalog row(s) use bare ship codes outside the audited website reference; they were reported instead of silently omitted from sailing-derived ship IDs: celebrity:AT=6, virgin-voyages:BR=30.
-- warning: allure-of-the-seas - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: carnival-firenze - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: carnival-vista - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: celebrity-constellation - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: celebrity-equinox - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: celebrity-reflection - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: eurodam - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: icon-of-the-seas - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: mardi-gras - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: msc-meraviglia - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: msc-seashore - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: norwegian-joy - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: pride-of-america - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: radiance-of-the-seas - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: serenade-of-the-seas - Ship asset lacks verified source metadata in data/ship-image-review.json.
-- warning: westerdam - Ship asset lacks verified source metadata in data/ship-image-review.json.
 
 ## Info
 
 - info: brilliant-lady - No suitable hero image with audited commercial-reuse rights is available. The former official-site derivative was removed because Virgin Voyages did not grant commercial redistribution rights.
+- info: carnival-festivale - Carnival Festivale is a future ship, and no truthful exterior photograph with audited commercial-reuse rights is available. The former Carnival News rendering was removed because a press-site download is not a commercial redistribution license.
 - info: norwegian-aura - No suitable hero image with commercial-reuse rights was found. NCL's current legal notice requires advance written permission for commercial copying or redistribution.

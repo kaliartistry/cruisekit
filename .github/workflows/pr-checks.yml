@@ -38,6 +38,9 @@ jobs:
       - name: Functions lint
         run: pnpm --filter cruisekit-functions lint
 
+      - name: Ship asset and code data tests
+        run: pnpm run data:test:ship-gaps
+
       - name: Firestore rules tests
         run: pnpm run test:rules
 
