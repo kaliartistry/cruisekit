@@ -43,7 +43,7 @@ const FAQS = [
   {
     question: "Does CruiseKit include map-style planning tools?",
     answer:
-      "Yes. CruiseKit includes visual route maps, destination snapshot cards, and an Explore Map for browsing cruise ports.",
+      "Yes. CruiseKit includes a visual route map for your saved itinerary plus static map snapshots in port guides under More, then Ports.",
   },
   {
     question: "Does CruiseKit replace official cruise-line information?",

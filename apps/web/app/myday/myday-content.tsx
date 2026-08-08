@@ -78,11 +78,11 @@ const FEATURES = [
 
 const TABS = [
   {
-    name: "Today",
+    name: "MyDay",
     icon: CalendarDays,
     features: [
       "Device time and port-local time at a glance",
-      "All-aboard context from your itinerary",
+      "Saved itinerary and all-aboard context",
       "Personal event schedule you add and edit",
       '"What\'s Open Now" venue strip',
       "Crew status at a glance",
@@ -94,20 +94,20 @@ const TABS = [
     features: [
       "Fast charge entry for onboard purchases",
       "Smart tip prompt after dining or bar charges",
-      "Budget vs actual from Plan calculator",
+      "Budget vs actual from your saved cruise estimate",
       "Category breakdown with progress bars",
       "Learned frequent items for quick repeat",
     ],
   },
   {
-    name: "MyCrew",
-    icon: Users,
+    name: "More",
+    icon: Smartphone,
     features: [
-      "Quick status check-ins for your group",
-      "Dinner, pool, and meetup plan updates",
-      "Crew list with current shared status",
-      "Sea-day coordination without location noise",
-      "Location-sharing language only when it is appropriate",
+      "Manage your saved cruise and itinerary",
+      "Open guides for ports on your itinerary",
+      "Share manual MyCrew status check-ins",
+      "Review sources and planning methodology",
+      "Open settings, privacy, and help",
     ],
   },
 ];
@@ -117,9 +117,9 @@ const APP_SCREENSHOTS = [
     eyebrow: "Today",
     title: "Device time, port time, and what is next",
     description:
-      "The Today tab keeps clocks, all-aboard context, open venues, and your daily schedule in one cruise-day view.",
+      "MyDay keeps clocks, all-aboard context, open venues, and your daily schedule in one cruise-day view.",
     src: "/assets/app-screenshots/myday-today.png",
-    alt: "CruiseKit iPhone MyDay Today tab showing device time, port-local time, venues, and schedule",
+    alt: "CruiseKit iPhone MyDay view showing device time, port-local time, venues, and schedule",
   },
   {
     eyebrow: "Itinerary",
@@ -133,9 +133,9 @@ const APP_SCREENSHOTS = [
     eyebrow: "MyCrew",
     title: "Check-ins without constant location tracking",
     description:
-      "MyCrew uses simple status updates and map context for group coordination without turning the app into always-on GPS tracking.",
+      "Open MyCrew under More for simple status updates and map context without turning the app into always-on GPS tracking.",
     src: "/assets/app-screenshots/myday-crew-map.png",
-    alt: "CruiseKit iPhone MyCrew tab showing a port map, group check-ins, and status buttons",
+    alt: "CruiseKit iPhone MyCrew screen under More showing a port map, group check-ins, and status buttons",
   },
 ] as const;
 
@@ -388,7 +388,7 @@ export default function MyDayContent() {
             variants={fadeUp}
             className="text-center text-3xl font-black text-navy"
           >
-            Three tabs. One pillar.
+            Three tabs. One calm cruise companion.
           </motion.h2>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-3">
@@ -454,9 +454,9 @@ export default function MyDayContent() {
             variants={fadeUp}
             className="mx-auto mt-3 max-w-lg text-muted"
           >
-            MyDay joins Plan, Explore, Coordinate, and Optimize to give you the
-            complete cruise planning toolkit before, during, and after your
-            voyage.
+            CruiseKit keeps your saved itinerary and daily plans in MyDay,
+            onboard purchases in Spend, and Ports, MyCrew check-ins, sources,
+            and settings under More.
           </motion.p>
           <motion.div custom={3} variants={fadeUp} className="mx-auto mt-7 max-w-xl">
             <StoreButtonRow sourceSurface="other" variant="light" />

@@ -29,6 +29,11 @@ export type CalculatorSailingContext = {
   region?: string;
 };
 
+type SaveableCalculatorSailingContext = CalculatorSailingContext & {
+  shipName: string;
+  departureDate: string;
+};
+
 export default function CalculatorSaveCard({
   inputs,
   breakdown,
@@ -43,12 +48,15 @@ export default function CalculatorSaveCard({
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const canSave = hasRealSailing(sailingContext);
   const attribution = useMemo(
     () => readCampaignAttribution(sailingContext),
     [sailingContext],
   );
 
   const save = async (uid?: string) => {
+    if (!hasRealSailing(sailingContext)) return;
+
     const targetUid = uid ?? user?.uid;
     trackSaveCruiseStarted({
       sourceType: attribution.sourceType,
@@ -66,19 +74,19 @@ export default function CalculatorSaveCard({
     setError(null);
     try {
       const dates = resolveDates(inputs.duration, sailingContext);
-      const shipName = sailingContext?.shipName?.trim() || "Cruise not selected yet";
+      const shipName = sailingContext.shipName.trim();
       await saveActiveCruiseForUser(targetUid, {
         sailing: {
           id:
-            sailingContext?.sailingId ||
+            sailingContext.sailingId ||
             `calculator-${inputs.cruiseLineId}-${dates.departureDate}`,
           cruiseLineId: inputs.cruiseLineId,
           shipName,
           departureDate: dates.departureDate,
           returnDate: dates.returnDate,
           duration: inputs.duration,
-          departurePort: sailingContext?.departurePort || "Not selected yet",
-          region: sailingContext?.region || inputs.region,
+          departurePort: sailingContext.departurePort || "Not selected yet",
+          region: sailingContext.region || inputs.region,
           itinerary: [],
         },
         confirmedItinerary: [],
@@ -132,21 +140,37 @@ export default function CalculatorSaveCard({
               ? "Continue in CruiseKit to finish the sailing details and use MyDay onboard."
               : "Keep this estimate across devices, then carry the cruise into MyDay, Spend, and MyCrew."}
           </p>
+          {!saved && !canSave && (
+            <p
+              id="calculator-save-sailing-help"
+              className="mt-3 text-sm font-medium text-slate-600"
+            >
+              Pick a sailing above to save it.
+            </p>
+          )}
           {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             {saved ? (
-              <Button asChild>
-                <Link href="/cruise/handoff?v=1">Continue in CruiseKit</Link>
-              </Button>
+              <>
+                <Button asChild>
+                  <Link href="/cruise/handoff?v=1">Continue in CruiseKit</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <a href={activeCruiseHandoffUrl()}>Open handoff page</a>
+                </Button>
+              </>
             ) : (
-              <Button onClick={() => void save()} disabled={saving}>
+              <Button
+                onClick={() => void save()}
+                disabled={saving || !canSave}
+                aria-describedby={
+                  canSave ? undefined : "calculator-save-sailing-help"
+                }
+              >
                 <Save className="h-4 w-4" />
                 {saving ? "Saving..." : "Save this cruise"}
               </Button>
             )}
-            <Button asChild variant="outline">
-              <a href={activeCruiseHandoffUrl()}>Open handoff page</a>
-            </Button>
           </div>
         </div>
       </div>
@@ -180,15 +204,22 @@ function persistBrowserDraft(
   }
 }
 
-function resolveDates(duration: number, context?: CalculatorSailingContext) {
-  const departure = context?.departureDate
-    ? new Date(`${context.departureDate}T12:00:00Z`)
-    : new Date(Date.now() + 90 * 24 * 60 * 60 * 1000);
+export function hasRealSailing(
+  context?: CalculatorSailingContext,
+): context is SaveableCalculatorSailingContext {
+  return Boolean(context?.shipName?.trim() && context.departureDate?.trim());
+}
+
+export function resolveDates(
+  duration: number,
+  context: SaveableCalculatorSailingContext,
+) {
+  const departure = new Date(`${context.departureDate.trim()}T12:00:00Z`);
   const fallbackReturn = new Date(departure);
   fallbackReturn.setUTCDate(fallbackReturn.getUTCDate() + duration);
   return {
     departureDate: departure.toISOString().slice(0, 10),
-    returnDate: context?.returnDate || fallbackReturn.toISOString().slice(0, 10),
+    returnDate: context.returnDate || fallbackReturn.toISOString().slice(0, 10),
   };
 }
 

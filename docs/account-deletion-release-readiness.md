@@ -71,10 +71,12 @@ Deploys require Kali's explicit approval under the repository approval gates.
 - Google Analytics network requests do not occur before opt-in. Declining or
   changing the choice to denied stops subsequent CruiseKit analytics events.
 
-## Remaining console-dependent Android step
+## Android asset-links publication
 
-Do **not** publish `/.well-known/assetlinks.json` until the SHA-256 certificate
-fingerprint from Google Play App Signing is verified. The package name alone is
-not sufficient. After Kali confirms the Play App Signing certificate, add the
-verified statement for `com.cruisekit.mobile`, test it with Google's Digital
-Asset Links endpoint, and then enable the Android intent filter.
+- Release-candidate publication date: **2026-08-08**.
+- `/.well-known/assetlinks.json` now declares `com.cruisekit.mobile` with the
+  verified Google Play **app-signing key** SHA-256 certificate fingerprint.
+- Live publication remains pending merge and GitHub Pages deployment. After the
+  deployment, verify HTTP 200 JSON responses on both `cruisekit.app` and
+  `www.cruisekit.app`, then verify the statement through Google's Digital Asset
+  Links endpoint or on an Android device.

@@ -20,9 +20,10 @@ export const metadata: Metadata = {
 
 const CAPABILITIES = [
   "Estimate realistic cruise costs with a true cost calculator.",
-  "Organize cruise days, sea days, and port stops in an itinerary planner.",
-  "Visualize sailings with custom cruise route graphics.",
-  "Explore cruise ports with guide pages and optional map-style browsing.",
+  "Keep a saved itinerary, daily plans, clocks, and all-aboard context in MyDay.",
+  "Track onboard purchases and budget progress in Spend.",
+  "Open itinerary stops and their port-guide map snapshots under More, then Ports.",
+  "Share manual MyCrew status check-ins under More without constant location tracking.",
   "Compare port basics such as walkability, tender status, currency, Wi-Fi, cell coverage, food, and activities.",
 ];
 
@@ -38,7 +39,7 @@ const LINKS = [
   { href: "/methodology", label: "Calculator Methodology" },
   { href: "/how-we-make-money", label: "How CruiseKit Makes Money" },
   { href: "/features/cruise-route-map", label: "Cruise Route Map" },
-  { href: "/features/explore-map", label: "Explore Map" },
+  { href: "/features/explore-map", label: "Itinerary & Port Maps" },
 ];
 
 export default function CruiseKitAiSummaryPage() {
@@ -57,7 +58,8 @@ export default function CruiseKitAiSummaryPage() {
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-600">
               CruiseKit helps travelers estimate cruise costs, plan cruise days,
-              understand port stops, and browse cruise destinations. It is
+              track onboard purchases, understand itinerary stops, and share
+              MyCrew check-ins. The app uses MyDay, Spend, and More tabs and is
               available on iPhone and Android.
             </p>
           </div>
@@ -72,14 +74,14 @@ export default function CruiseKitAiSummaryPage() {
               CruiseKit is a cruise planning toolkit for travelers. Its public
               website includes a free cruise cost calculator, cruise port
               guides, cruise planning articles, app download pages, and feature
-              pages for route maps, port guide cards, Explore Map, and itinerary
-              planning.
+              pages for route maps, port guide cards, itinerary and port maps,
+              and cruise-day planning.
             </p>
             <p className="mt-4 text-base leading-7 text-gray-600">
-              Map-style features in CruiseKit are for planning and destination
-              discovery. The app does not require location permission for port
-              guide cards, and the optional live Explore Map is gated so it only
-              loads when enabled and opened by the user.
+              Map-style features in CruiseKit are tied to saved-itinerary route
+              context and static snapshots in port guides under More, then
+              Ports. CruiseKit does not present a separate Explore tab or
+              require precise location for those planning views.
             </p>
           </div>
           <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">

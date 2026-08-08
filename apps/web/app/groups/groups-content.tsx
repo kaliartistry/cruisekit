@@ -359,7 +359,7 @@ const CHECKLIST_SECTIONS = [
     items: [
       "Make final payment (typically due 90 days before sailing)",
       "Book specialty dining reservations for the group",
-      "Coordinate room assignments and cabin proximity",
+      "Confirm room assignments and cabin proximity",
       "Research port activities and create a shared itinerary",
       "Purchase travel insurance for each party",
     ],
@@ -373,7 +373,7 @@ const CHECKLIST_SECTIONS = [
       "Complete online check-in for all group members",
       "Upload passport photos and emergency contacts",
       "Download the cruise line's mobile app",
-      "Coordinate transportation to the cruise port",
+      "Arrange transportation to the cruise port",
       "Create a packing list and share with the group",
     ],
   },

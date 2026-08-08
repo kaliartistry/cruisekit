@@ -24,7 +24,7 @@ const PAGE_URL = "https://cruisekit.app/what-is-cruisekit";
 export const metadata: Metadata = {
   title: "What Is CruiseKit?",
   description:
-    "CruiseKit is an independent cruise planning toolkit for estimating cruise costs, planning cruise days, exploring ports, coordinating groups, and downloading the free app.",
+    "CruiseKit is an independent cruise planning toolkit for true-cost estimates and a free MyDay, Spend, and More cruise companion app.",
   alternates: { canonical: "/what-is-cruisekit" },
   keywords: [
     "what is cruisekit",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "What Is CruiseKit?",
     description:
-      "A plain-English overview of CruiseKit, the independent cruise planning toolkit for costs, cruise days, ports, groups, and app-based trip planning.",
+      "A plain-English overview of CruiseKit: true-cost estimates plus MyDay itinerary planning, Spend tracking, port guides, and MyCrew check-ins.",
     url: "/what-is-cruisekit",
     images: [
       {
@@ -65,25 +65,25 @@ const CAPABILITIES: Capability[] = [
     href: "/calculator",
   },
   {
-    title: "Plan cruise days",
+    title: "Build your MyDay itinerary",
     description:
-      "Organize sea days, port days, onboard plans, group status, and daily trip context around the way cruises actually work.",
+      "Keep sea days, port days, a saved route, onboard plans, clocks, and all-aboard context together in MyDay.",
     icon: CalendarDays,
     href: "/myday",
   },
   {
-    title: "Explore cruise ports",
+    title: "Open itinerary port maps",
     description:
-      "Read cruise port guides with practical planning context for getting around, local basics, food, activities, and port-day decisions.",
+      "Open More, then Ports, for the stops on your saved itinerary and their map snapshots, local basics, food, activities, and port-day context.",
     icon: MapPinned,
-    href: "/ports",
+    href: "/features/explore-map",
   },
   {
-    title: "Coordinate group trips",
+    title: "Share MyCrew check-ins",
     description:
-      "Use Group Hub and MyCrew-oriented planning features to keep shared cruise plans, costs, and day-of coordination easier to follow.",
+      "Open Crew check-in under More to share manual MyCrew status updates without constant location tracking.",
     icon: Users,
-    href: "/groups",
+    href: "/cruise-group-check-in-app",
   },
   {
     title: "Compare cruise context",
@@ -104,7 +104,7 @@ const BOUNDARIES = [
 const PUBLIC_FACTS = [
   "CruiseKit is available for iPhone and Android.",
   "The website includes a cruise cost calculator, port guides, cruise planning guides, blog content, and app download pages.",
-  "CruiseKit organizes planning around costs, itinerary context, port days, group coordination, and loyalty/program comparison.",
+  "The mobile app uses three tabs: MyDay, Spend, and More; Ports and MyCrew check-ins are under More.",
   "CruiseKit uses public-facing pages and structured metadata to make its core purpose easier for search engines and AI assistants to understand.",
 ];
 
@@ -112,7 +112,7 @@ const FAQS = [
   {
     question: "What is CruiseKit?",
     answer:
-      "CruiseKit is an independent cruise planning toolkit and mobile app for travelers who want help estimating cruise costs, planning cruise days, exploring ports, coordinating groups, and understanding cruise planning tradeoffs before and during a trip.",
+      "CruiseKit is an independent cruise planning toolkit and mobile app for estimating cruise costs, keeping a saved itinerary and cruise-day plans in MyDay, tracking purchases in Spend, and opening Ports or MyCrew check-ins under More.",
   },
   {
     question: "Is CruiseKit a cruise line app?",
@@ -127,7 +127,7 @@ const FAQS = [
   {
     question: "What is CruiseKit best used for?",
     answer:
-      "CruiseKit is useful for estimating the full trip cost beyond the advertised fare, keeping cruise-day plans organized, exploring port context, coordinating group trips, and understanding cruise planning details in one place.",
+      "CruiseKit is useful for estimating the full trip cost beyond the advertised fare, keeping a saved itinerary and cruise-day plans organized, tracking onboard purchases, opening port context, and sharing manual MyCrew check-ins.",
   },
   {
     question: "Is CruiseKit free?",
@@ -179,7 +179,7 @@ function JsonLd() {
         url: PAGE_URL,
         name: "What Is CruiseKit?",
         description:
-          "CruiseKit is an independent cruise planning toolkit for costs, cruise days, ports, group planning, and app-based trip organization.",
+          "CruiseKit is an independent cruise planning toolkit for cost estimates, MyDay itinerary planning, Spend tracking, port guides, and MyCrew check-ins.",
         isPartOf: {
           "@type": "WebSite",
           name: "CruiseKit",
@@ -242,8 +242,7 @@ export default function WhatIsCruiseKitPage() {
       <main className="flex-1">
         <PageHeader
           title="What is CruiseKit?"
-          subtitle="CruiseKit is an independent cruise planning toolkit for estimating real trip costs, planning cruise days, exploring ports, coordinating groups, and downloading the free mobile app."
-          pillar="plan"
+          subtitle="CruiseKit is an independent toolkit for true-cost estimates plus a free mobile app with MyDay, Spend, and More tabs."
           breadcrumbs={[{ label: "What is CruiseKit?" }]}
         />
 
@@ -274,9 +273,9 @@ export default function WhatIsCruiseKitPage() {
                 <p>
                   Cruise planning usually starts with a fare, but the real trip
                   includes gratuities, taxes, WiFi, drinks, excursions, port
-                  spending, daily schedules, group coordination, and
-                  destination decisions. CruiseKit brings those planning jobs
-                  into one cruise-specific toolkit.
+                  spending, daily schedules, itinerary stops, and manual
+                  MyCrew check-ins. CruiseKit brings those planning jobs into
+                  one cruise-specific toolkit.
                 </p>
                 <p>
                   It is independent, app-based, and built for travelers who
