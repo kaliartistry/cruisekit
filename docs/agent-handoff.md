@@ -4,9 +4,9 @@ Last verified: 2026-08-08
 
 ## Ship image license-hygiene stacked candidate
 
-- Candidate verified locally on branch `codex/ship-image-license-hygiene`,
-  stacked on `codex/ship-photo-and-code-data-gaps` / draft PR #56. Merge the
-  base branch first; this candidate is not deployed or live.
+- Candidate verified locally on branch `codex/ship-image-license-hygiene` /
+  draft PR #57, stacked on `codex/ship-photo-and-code-data-gaps` / draft PR
+  #56. Merge the base branch first; this candidate is not deployed or live.
 - Sixteen inherited ship JPEGs had no recoverable rights provenance. Git
   history traces them to a Google Places photo harvester that discarded source
   and author-attribution metadata. Several were also wrong-subject duplicates.
