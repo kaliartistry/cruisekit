@@ -71,7 +71,13 @@ function normalizeRegion(value) {
 }
 
 function cleanPortName(value) {
-  return String(value ?? "").replace(/\s+/g, " ").trim();
+  return String(value ?? "")
+    .replace(/\s+/g, " ")
+    // Rejoin hyphenated place names that the source wrapped across a line
+    // break ("Saint- Pierre" -> "Saint-Pierre"). Spaced separators such as
+    // "Rome - Civitavecchia" keep their spacing.
+    .replace(/(\p{L})-\s+(?=\p{L})/gu, "$1-")
+    .trim();
 }
 
 function visiblePorts(days, departurePort, returnPort) {

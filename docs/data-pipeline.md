@@ -418,3 +418,40 @@ Mapbox, ShipSafe, and data bundle URLs should be passed as `--dart-define`
 values or injected by the release build system. `CRUISEKIT_DATA_BUNDLE_BASE_URL`
 is optional when the manifest is served from `/data/bundles/` because bundle
 paths are relative to the manifest URL.
+
+## Why `mobileSailingCatalog` is not published (audited 2026-08-09)
+
+The Flutter app's `DataRefreshService` already maps two manifest keys,
+`mobileSailingCatalog` and `sailingCatalog`, onto its bundled
+`assets/data/sailing_catalog.json`. Publishing either key in
+`/data/bundles/manifest.json` would therefore reach already-shipped installs
+with no app release. `scripts/build-data-bundles.mjs` intentionally does not
+emit that key today, because this repository has no catalog source that would
+be an improvement over the asset the app already ships:
+
+- The module that produced `sailing_catalog.json`,
+  `apps/web/lib/data/sailing-catalog.ts`, was deleted in commit `1f5c62c` when
+  the canonical schema/seed pipeline replaced it. It derived the catalog at
+  build time from the raw provider captures now parked in
+  `archive/scraped-sailings-2026-04/scraped/`. Its exporter,
+  `archive/scripts/export_plan_data.ts`, still imports the deleted path and no
+  longer runs.
+- Those archived captures are a frozen April 2026 snapshot. Reviving them would
+  republish the same rows the app already carries, including the ones that have
+  since expired, so it would not fix freshness. Archived scrapers and their
+  captures are historical reference only and must not become production
+  dependencies without a fresh compliance and reliability review.
+- The live canonical seed is not a substitute. It covers Norwegian, Carnival,
+  Virgin Voyages, Holland America, Azamara, and four Royal Caribbean records,
+  and it contains no Celebrity, MSC, or Princess sailings at all. The bundled
+  catalog carries roughly 3,875 rows across nine lines. Because a refreshed
+  bundle replaces the bundled asset wholesale, publishing a seed-derived
+  catalog would shrink the app's line/ship/date setup picker instead of
+  refreshing it.
+
+Feeding the key therefore requires a real catalog ingest in this repository
+first: current provider coverage for the lines the picker depends on, a
+redistribution review for booking links, prices, and provider image URLs, and
+Kali's approval to publish that data from `cruisekit.app`. Until that exists,
+the missing manifest key is the symptom, not the blocker. A missing key is a
+safe no-op on the app side.

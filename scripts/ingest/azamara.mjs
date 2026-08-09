@@ -94,6 +94,11 @@ function parseTitlePorts(title) {
 function cleanPortName(value) {
   return String(value ?? "")
     .replace(/\s+/g, " ")
+    // Source markup wraps hyphenated place names across a line break, which
+    // collapses to "Saint- Pierre". Rejoin the hyphen so the canonical seed
+    // stores "Saint-Pierre". Only a hyphen glued to the preceding letter is
+    // rejoined, so spaced separators such as "Rome - Civitavecchia" are kept.
+    .replace(/(\p{L})-\s+(?=\p{L})/gu, "$1-")
     .trim();
 }
 

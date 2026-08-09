@@ -1,6 +1,27 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-07-14
+Last verified: 2026-08-09
+
+## Mobile setup-catalog over-the-air refresh is blocked on a data source
+
+- Audited 2026-08-09 on branch
+  `codex/publish-catalog-audit-and-port-name-typo`. No pipeline or manifest
+  change was made.
+- Public mobile builds already map the manifest keys `mobileSailingCatalog`
+  and `sailingCatalog` onto the bundled `assets/data/sailing_catalog.json`, so
+  publishing either key from this repository would reach shipped installs with
+  no app release.
+- The blocker is the payload, not the wiring. This repository has no current
+  sailing-catalog source. `apps/web/lib/data/sailing-catalog.ts` was deleted in
+  commit `1f5c62c`, its raw inputs are the frozen April 2026 captures under
+  `archive/scraped-sailings-2026-04/`, and the canonical seed covers none of
+  the Celebrity, MSC, or Princess sailings the app's setup picker relies on.
+- A refreshed bundle replaces the app's bundled asset wholesale, so publishing
+  a seed-derived catalog would shrink the setup picker rather than refresh it.
+- Next step for whoever picks this up: build a current catalog ingest for the
+  lines the picker needs, complete a redistribution review for booking links,
+  prices, and provider image URLs, and get Kali's approval before adding the
+  manifest key. Rationale and evidence are in `docs/data-pipeline.md`.
 
 ## Deal-help retirement
 
