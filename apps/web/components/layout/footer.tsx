@@ -47,6 +47,7 @@ const FOOTER_COLUMNS = [
       { label: "Contact", href: "/contact" },
       { label: "How we make money", href: "/how-we-make-money" },
       { label: "Affiliate Disclosure", href: "/affiliate-disclosure" },
+      { label: "Image Credits", href: "/assets/ships/ATTRIBUTION.txt" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Delete Your Account", href: "/account-deletion" },
       { label: "Terms of Service", href: "/terms" },

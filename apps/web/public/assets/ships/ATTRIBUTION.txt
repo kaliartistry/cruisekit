@@ -1,0 +1,81 @@
+CruiseKit ship image credits
+Last updated: 2026-08-08
+
+CruiseKit cropped, resized, and compressed the source photographs listed below
+for use as ship hero images. These credits do not imply that any photographer,
+cruise line, or rights holder endorses CruiseKit.
+This file covers images added or re-reviewed during the 2026-08-08 ship-gap
+remediation; the repository review ledger records the remaining ship images.
+
+grand-princess.jpg
+  Photo: U.S. Coast Guard photo by Petty Officer 3rd Class Taylor Bacon
+  Source: https://commons.wikimedia.org/wiki/File:Grand_Princess_returns_to_port_in_Oakland_(6472325).jpg
+  Rights: Public domain U.S. Coast Guard work
+  Rights record: https://www.dvidshub.net/image/6472325/grand-princess-returns-port-oakland
+
+coral-princess.jpg
+  Photo: Bernard Spragg. NZ
+  Source: https://commons.wikimedia.org/wiki/File:Coral_Princess_(16877529030).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+sapphire-princess.jpg
+  Photo: Hjanko
+  Source: https://commons.wikimedia.org/wiki/File:Sapphire_Princess_Samui.JPG
+  Rights: Released into the public domain by the photographer
+
+diamond-princess.jpg
+  Photo: Bernard Spragg. NZ
+  Source: https://commons.wikimedia.org/wiki/File:Diamond_Princess_(9073247995).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+celebrity-ascent.jpg
+  Photo: Sakis Antoniou / Commons user ND44
+  Source: https://commons.wikimedia.org/wiki/File:Celebrity_Ascent_-_Le_Pir%C3%A9e_-_June_2024.png
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0/
+
+norwegian-epic.jpg
+  Photo: Brian Burnell @ http://nuclear-weapons.info
+  Source: https://commons.wikimedia.org/wiki/File:Norwegian_Epic_1.JPG
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0/
+  CruiseKit's cropped, resized, and compressed derivative is available under
+  the same CC BY-SA 3.0 license.
+
+norwegian-dawn.jpg
+  Photo: Matthew Hill / Commons user Fletcher6
+  Source: https://commons.wikimedia.org/wiki/File:Norwegian_Dawn_Leaving_Boston_Harbor.jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0/
+
+azamara-journey.jpg
+  Photo: Szilas
+  Source: https://commons.wikimedia.org/wiki/File:Azamara_Journey_closing_in_to_dock.jpg
+  Rights: Released into the public domain by the photographer
+
+norwegian-jewel.jpg
+  Photo: Ján Sokoly
+  Source: https://commons.wikimedia.org/wiki/File:Norwegian_Jewel.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0/
+
+msc-poesia.jpg
+  Photo: Maciej Nux
+  Source: https://commons.wikimedia.org/wiki/File:MSC_Poesia_Gdynia_2025-06-30.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+  CruiseKit's cropped, resized, and compressed derivative is available under
+  the same CC BY-SA 4.0 license.
+
+viking-star.jpg
+  Photo: Ronnie Robertson
+  Source: https://commons.wikimedia.org/wiki/File:Viking_Star_MG_4738_(29783898676).jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0/
+  CruiseKit's cropped, resized, and compressed derivative is available under
+  the same CC BY-SA 2.0 license.
+
+Full internal provenance and review notes are maintained in
+data/ship-image-review.json in the CruiseKit website repository.

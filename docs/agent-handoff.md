@@ -13,6 +13,48 @@ Last verified: 2026-08-08
   `www.cruisekit.app`, followed by Google's Digital Asset Links checker or
   Android device re-verification.
 
+## Ship hero assets and ship-code normalization candidate
+
+- Candidate verified locally: 2026-08-08.
+- Branch `codex/ship-photo-and-code-data-gaps` adds ten commercially reusable
+  1600x900 ship hero JPEGs: Grand Princess, Coral Princess, Sapphire Princess,
+  Diamond Princess, Norwegian Epic, Norwegian Dawn, Azamara Journey, Norwegian
+  Jewel, MSC Poesia, and Viking Star.
+- Celebrity Ascent was already present and live; its existing CC BY 4.0 credit
+  is corrected to `Sakis Antoniou / Commons user ND44`. Public source and
+  license credits are linked from the website footer through
+  `/assets/ships/ATTRIBUTION.txt`.
+- Brilliant Lady intentionally uses the app's designed fallback. The former
+  official-site derivative was removed because commercial redistribution
+  rights were not granted, and the available CC BY-SA alternative was
+  AI-upscaled and did not meet the hero-quality bar. Norwegian Aura also stays
+  on the fallback because NCL's legal notice requires written permission for
+  commercial copying. Both decisions are recorded as `allowMissing` in
+  `data/ship-image-review.json`.
+- The reported 4,018 mobile sailings reconcile to 3,875 rich-catalog rows plus
+  143 runtime sailings. The 110 targeted rich-catalog rows trace to archived
+  pre-canonical captures; the active web seed and web-published bundles contain
+  no bare ship names. The mobile rich catalog also retains 36 `AT`/`BR` rows
+  that its existing display map already resolves; the asset audit now reports
+  these unresolved stored codes explicitly instead of silently omitting them.
+- `data/reference/ship-code-names.json` records official-source mappings for
+  `RS` to Resilient Lady, `AX` to Celebrity Apex, `CS` to Celebrity
+  Constellation, `EC` to Celebrity Eclipse, and `EG` to Celebrity Edge.
+  `pnpm data:normalize:ship-codes` applies those mappings to an explicitly
+  supplied catalog without rewriting raw archive provenance or coupling this
+  repository to a local mobile checkout.
+- This branch does not change a CruiseKit Mobile file, app binary, store
+  listing, or screenshot set. The CDN photo additions become available to the
+  existing app after the website deploy. The 110 affected names live in a
+  bundled rich catalog and still require correction there, so reaching shipped
+  users with that part requires a separately reviewed mobile catalog update and
+  a new build; that follow-on is intentionally outside this website/data
+  branch.
+- Pending after merge: wait for the GitHub Pages deployment, verify HTTP 200 for
+  each of the ten new asset URLs, and verify the intentional 404/fallback state
+  for Brilliant Lady and Norwegian Aura. Do not record these as live until the
+  public CDN checks pass.
+
 ## Deal-help retirement
 
 - Branch `codex/retire-deal-help-web-20260714` retires the personal cruise-deal
