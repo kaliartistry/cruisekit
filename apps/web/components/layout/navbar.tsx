@@ -15,6 +15,7 @@ import {
   Calculator,
   ChevronDown,
   Heart,
+  LogIn,
   LogOut,
   ArrowRight,
   Smartphone,
@@ -587,7 +588,7 @@ export default function Navbar() {
                         "hover:text-navy hover:bg-gray-50"
                       )}
                     >
-                      <LogOut className="h-4 w-4" />
+                      <LogIn className="h-4 w-4" />
                       Sign In
                     </button>
                   )}

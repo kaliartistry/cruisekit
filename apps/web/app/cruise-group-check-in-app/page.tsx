@@ -91,16 +91,16 @@ const BOUNDARIES = [
 
 const FLOW = [
   {
-    title: "Plan the group",
+    title: "Save the cruise context",
     description:
-      "Use Group Hub for shared planning context, cost conversations, and the decisions that happen before the sailing.",
-    href: "/groups",
+      "Keep the sailing itinerary and the cruise-day details your group needs close in MyDay.",
+    href: "/myday",
   },
   {
-    title: "Use MyDay onboard",
+    title: "Open MyCrew under More",
     description:
-      "Keep the daily schedule, spend tracker, device and port-local clocks, ship-time verification, and MyCrew check-ins close during the trip.",
-    href: "/myday",
+      "Use manual Crew check-in updates while MyDay keeps the itinerary, schedule, and time context nearby and Spend holds purchases.",
+    href: "/app",
   },
   {
     title: "Verify official details",
@@ -113,7 +113,7 @@ const FLOW = [
 const SCREENSHOTS = [
   {
     src: "/assets/app-screenshots/myday-crew-map.png",
-    alt: "CruiseKit MyCrew tab showing a port map, crew list, and check-in actions",
+    alt: "CruiseKit MyCrew screen under More showing a port map, crew list, and check-in actions",
     title: "MyCrew check-ins",
     description:
       "A lightweight status view for group coordination during cruise days.",
@@ -143,7 +143,7 @@ const FAQS = [
   {
     question: "How does CruiseKit support group check-ins?",
     answer:
-      "CruiseKit supports group coordination through Group Hub planning and MyCrew-oriented check-ins inside MyDay, where status updates sit near device time, port-local time, ship-time verification, itinerary, schedule, and spend context.",
+      "CruiseKit puts manual MyCrew check-ins under More. MyDay keeps device time, port-local time, ship-time verification, itinerary, and schedule context nearby, while Spend tracks purchases.",
   },
   {
     question: "Is MyCrew a replacement for the cruise line app?",
@@ -158,7 +158,7 @@ const FAQS = [
 ];
 
 const RELATED_LINKS = [
-  { href: "/groups", label: "Open Group Hub" },
+  { href: "/groups", label: "Group planning guide" },
   { href: "/myday", label: "See MyDay" },
   { href: "/ship-time-vs-port-time", label: "Ship time guide" },
   { href: "/app", label: "Download the app" },
@@ -235,7 +235,6 @@ export default function CruiseGroupCheckInAppPage() {
         <PageHeader
           title="Cruise Group Check-In App"
           subtitle="CruiseKit helps groups coordinate cruise-day status, meetup plans, port-day timing, and MyCrew context without turning the trip into a full-time group chat."
-          pillar="coordinate"
           breadcrumbs={[{ label: "Cruise Group Check-In App" }]}
         />
 
@@ -272,8 +271,8 @@ export default function CruiseGroupCheckInAppPage() {
                 </p>
                 <p>
                   CruiseKit connects that status context to the cruise day
-                  itself: ship time, port time, itinerary, schedule, spending,
-                  and Group Hub planning.
+                  itself: ship time, port time, itinerary, schedule, and
+                  spending. MyCrew is available under More.
                 </p>
               </div>
               <div className="mt-7 flex flex-wrap gap-3">
@@ -309,7 +308,7 @@ export default function CruiseGroupCheckInAppPage() {
                     Built around cruise days
                   </p>
                   <p className="mt-1 text-xl font-bold text-navy">
-                    MyCrew check-ins inside MyDay
+                    MyCrew check-ins under More
                   </p>
                 </div>
               </div>
@@ -356,7 +355,7 @@ export default function CruiseGroupCheckInAppPage() {
         <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
           <div className="mb-8 max-w-3xl">
             <h2 className="text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-              Screenshots from the CruiseKit MyDay experience
+              Screenshots from the CruiseKit app
             </h2>
             <p className="mt-3 text-base leading-7 text-gray-600">
               The check-in story is part of a broader cruise-day workflow:
@@ -490,11 +489,11 @@ export default function CruiseGroupCheckInAppPage() {
           <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_0.85fr] lg:px-8">
             <div>
               <h2 className="text-2xl font-bold tracking-tight">
-                Coordinate the cruise day in CruiseKit
+                Keep the cruise day connected in CruiseKit
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-6 text-white/70">
                 Download CruiseKit to keep MyCrew check-ins, ship-day context,
-                onboard spend, and group planning close during the trip.
+                your saved itinerary, and onboard spend close during the trip.
               </p>
             </div>
             <StoreButtonRow sourceSurface="other" variant="dark" />

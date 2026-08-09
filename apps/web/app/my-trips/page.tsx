@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import type { SavedDealData } from "@/components/shared/heart-button";
+import { buildCalculatorHref } from "./calculator-link";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -51,7 +52,7 @@ function SavedDealCard({
     await onRemove(deal.id);
   };
 
-  const calcHref = `/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2&fare=${deal.fromPrice}`;
+  const calcHref = buildCalculatorHref(deal);
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[var(--shadow-sm)] transition-all hover:shadow-[var(--shadow-lg)] sm:flex-row">

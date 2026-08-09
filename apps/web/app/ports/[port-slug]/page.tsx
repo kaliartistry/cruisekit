@@ -154,7 +154,7 @@ function getPortFaqs(port: PortData): PortFaq[] {
     {
       question: `Does this ${port.name} page use a live map provider?`,
       answer:
-        "No. This port guide uses a pre-rendered OpenStreetMap-derived image that CruiseKit serves directly. It does not request live map tiles when you visit the page. CruiseKit's optional Explore Map is a separate app view and is only loaded when enabled and opened by the user.",
+        "No. This port guide uses a pre-rendered OpenStreetMap-derived image that CruiseKit serves directly. It does not request live map tiles when you visit the page. In the app, route context comes from your saved itinerary and port guides are available under More, then Ports; there is no separate live destination-browsing map surface.",
     },
   ];
 }

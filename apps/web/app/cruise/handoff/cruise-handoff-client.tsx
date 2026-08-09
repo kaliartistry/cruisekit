@@ -122,7 +122,7 @@ export default function CruiseHandoffClient() {
       <div className="bg-navy p-6 text-white sm:p-8">
         <div className="mb-4 flex items-center gap-2"><Smartphone className="h-5 w-5 text-teal" /><h2 className="font-bold">Continue in the free app</h2></div>
         <StoreButtonRow sourceSurface="saved_trip" variant="dark" />
-        <p className="mt-4 text-xs leading-relaxed text-white/60">If CruiseKit is already installed, opening this same link from Messages, Mail, or your browser will take you directly to the saved-cruise handoff.</p>
+        <p className="mt-4 text-xs leading-relaxed text-white/60">If CruiseKit is already installed, opening this same link from Messages, Mail, or your browser will take you directly to the saved-cruise handoff. On Android, make sure the app is installed first.</p>
       </div>
     </div>
   );
