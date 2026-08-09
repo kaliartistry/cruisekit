@@ -1,81 +1,950 @@
 CruiseKit ship image credits
-Last updated: 2026-08-08
+Registry updated: 2026-08-08T19:51:10Z
 
-CruiseKit cropped, resized, and compressed the source photographs listed below
-for use as ship hero images. These credits do not imply that any photographer,
-cruise line, or rights holder endorses CruiseKit.
-This file covers images added or re-reviewed during the 2026-08-08 ship-gap
-remediation; the repository review ledger records the remaining ship images.
+CruiseKit serves transformed copies of the source photographs listed below.
+Files may be cropped, resized, and compressed from their originals. These
+credits do not imply that any photographer, cruise line, or rights holder
+endorses CruiseKit.
 
-grand-princess.jpg
-  Photo: U.S. Coast Guard photo by Petty Officer 3rd Class Taylor Bacon
-  Source: https://commons.wikimedia.org/wiki/File:Grand_Princess_returns_to_port_in_Oakland_(6472325).jpg
-  Rights: Public domain U.S. Coast Guard work
-  Rights record: https://www.dvidshub.net/image/6472325/grand-princess-returns-port-oakland
+CruiseKit's transformed copies of CC BY-SA sources are offered under the
+same license version listed for each file.
 
-coral-princess.jpg
-  Photo: Bernard Spragg. NZ
-  Source: https://commons.wikimedia.org/wiki/File:Coral_Princess_(16877529030).jpg
-  License: CC0 1.0
-  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Generated from data/ship-image-review.json. Do not edit by hand.
 
-sapphire-princess.jpg
-  Photo: Hjanko
-  Source: https://commons.wikimedia.org/wiki/File:Sapphire_Princess_Samui.JPG
-  Rights: Released into the public domain by the photographer
+adventure-of-the-seas.jpg
+  Photo: https://www.flickr.com/photos/jeanbaptistem/
+  Source name: File:Adventure of the Seas ship (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AAdventure_of_the_Seas_ship_(cropped).jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
 
-diamond-princess.jpg
-  Photo: Bernard Spragg. NZ
-  Source: https://commons.wikimedia.org/wiki/File:Diamond_Princess_(9073247995).jpg
-  License: CC0 1.0
-  License URL: https://creativecommons.org/publicdomain/zero/1.0/
-
-celebrity-ascent.jpg
-  Photo: Sakis Antoniou / Commons user ND44
-  Source: https://commons.wikimedia.org/wiki/File:Celebrity_Ascent_-_Le_Pir%C3%A9e_-_June_2024.png
-  License: CC BY 4.0
-  License URL: https://creativecommons.org/licenses/by/4.0/
-
-norwegian-epic.jpg
-  Photo: Brian Burnell @ http://nuclear-weapons.info
-  Source: https://commons.wikimedia.org/wiki/File:Norwegian_Epic_1.JPG
+allure-of-the-seas.jpg
+  Photo: Daniel Christensen; Commons crop by Ahecht
+  Source name: File:Allure of the Seas leaving Port Everglades (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File:Allure_of_the_Seas_leaving_Port_Everglades_(cropped).jpg
   License: CC BY-SA 3.0
   License URL: https://creativecommons.org/licenses/by-sa/3.0/
-  CruiseKit's cropped, resized, and compressed derivative is available under
-  the same CC BY-SA 3.0 license.
 
-norwegian-dawn.jpg
-  Photo: Matthew Hill / Commons user Fletcher6
-  Source: https://commons.wikimedia.org/wiki/File:Norwegian_Dawn_Leaving_Boston_Harbor.jpg
-  License: CC BY 4.0
-  License URL: https://creativecommons.org/licenses/by/4.0/
+anthem-of-the-seas.jpg
+  Photo: Javier Pérez Montes
+  Source name: File:Anthem of the Seas - Cruise Ship in Palma de Mallorca.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AAnthem_of_the_Seas_-_Cruise_Ship_in_Palma_de_Mallorca.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
 
 azamara-journey.jpg
   Photo: Szilas
-  Source: https://commons.wikimedia.org/wiki/File:Azamara_Journey_closing_in_to_dock.jpg
-  Rights: Released into the public domain by the photographer
+  Source name: File:Azamara Journey closing in to dock.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AAzamara_Journey_closing_in_to_dock.jpg
+  License: Public domain release by the photographer
+  License URL: https://commons.wikimedia.org/wiki/Template:PD-self
 
-norwegian-jewel.jpg
-  Photo: Ján Sokoly
-  Source: https://commons.wikimedia.org/wiki/File:Norwegian_Jewel.jpg
+brilliance-of-the-seas.jpg
+  Photo: Dicklyon
+  Source name: File:Brilliance of the Seas departing Sydney.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ABrilliance_of_the_Seas_departing_Sydney.jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+caribbean-princess.jpg
+  Photo: AK-Bino
+  Source name: File:Caribbean Princess,Quebec City.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACaribbean_Princess%2CQuebec_City.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+carnival-breeze.jpg
+  Photo: Tim Alex
+  Source name: File:Carnival Breeze.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Breeze.jpg
+  License: CC BY 3.0
+  License URL: https://creativecommons.org/licenses/by/3.0
+
+carnival-celebration.jpg
+  Photo: Jack Adamenko
+  Source name: File:Carnival Celebration (ship, 2022) Departs Miami (February 2026).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Celebration_(ship%2C_2022)_Departs_Miami_(February_2026).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+carnival-conquest.jpg
+  Photo: Jack Adamenko
+  Source name: File:Carnival Conquest (ship, 2002) docked in Celebration Key (February 2026).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Conquest_(ship%2C_2002)_docked_in_Celebration_Key_(February_2026).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+carnival-dream.jpg
+  Photo: Longbowe at English Wikipedia
+  Source name: File:Carnival Dream departing Port Canaveral (2010) – Bow.png
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Dream_departing_Port_Canaveral_(2010)_%E2%80%93_Bow.png
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0
+
+carnival-firenze.jpg
+  Photo: RL0919
+  Source name: File:Carnival Firenze at Puerto Vallarta Oct 2024.png
+  Source: https://commons.wikimedia.org/wiki/File:Carnival_Firenze_at_Puerto_Vallarta_Oct_2024.png
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0/
+
+carnival-freedom.jpg
+  Photo: Pete Markham
+  Source name: File:Carnival Freedom (ship, 2007) 001.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Freedom_(ship%2C_2007)_001.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+carnival-horizon.jpg
+  Photo: Elliott Bryson III
+  Source name: File:Carnival Horizon of the coast of Grand Turk (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Horizon_of_the_coast_of_Grand_Turk_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+carnival-jubilee.jpg
+  Photo: Ed Uthman
+  Source name: File:Carnival Jubilee Panorama Cozumel 2024.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Jubilee_Panorama_Cozumel_2024.jpg
   License: CC BY 2.0
-  License URL: https://creativecommons.org/licenses/by/2.0/
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+carnival-legend.jpg
+  Photo: Daniel Foster from Shreveport
+  Source name: File:Cruise Ship Carnival Legend docked in Roatán, Honduras - December 2010.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACruise_Ship_Carnival_Legend_docked_in_Roat%C3%A1n%2C_Honduras_-_December_2010.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+carnival-liberty.jpg
+  Photo: Keiteay
+  Source name: File:Carnival Liberty at Port Canaveral.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Liberty_at_Port_Canaveral.jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+carnival-magic.jpg
+  Photo: NOAA Photo Library
+  Source name: File:NOAA Ship OREGON II dwarfed by cruise ship CARNIVAL MAGIC (28244624579).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANOAA_Ship_OREGON_II_dwarfed_by_cruise_ship_CARNIVAL_MAGIC_(28244624579).jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+carnival-miracle.jpg
+  Photo: Sergey Yarmolyuk
+  Source name: File:Carnival Miracle.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Miracle.jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+carnival-paradise.jpg
+  Photo: Sergey Yarmolyuk
+  Source name: File:Carnival Paradise 20100216.JPG
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Paradise_20100216.JPG
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0
+
+carnival-pride.jpg
+  Photo: Pjotr Mahhonin
+  Source name: File:Carnival Pride Stern Pier 26 Port of Tallinn 14 July 2023.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Pride_Stern_Pier_26_Port_of_Tallinn_14_July_2023.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+carnival-spirit.jpg
+  Photo: Jack Adamenko
+  Source name: File:Carnival Spirit (ship, 2001) in Ogden Point, Canada (May 2025).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Spirit_(ship%2C_2001)_in_Ogden_Point%2C_Canada_(May_2025).jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+carnival-sunrise.jpg
+  Photo: Sushumnarao
+  Source name: File:Carnival Sunrise Cruise.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Sunrise_Cruise.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+carnival-sunshine.jpg
+  Photo: AbhiramJuvvadi
+  Source name: File:Carnival Sunshine Docked.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Sunshine_Docked.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+carnival-valor.jpg
+  Photo: Chris Gent from Orlando, Fla., USA
+  Source name: File:Carnival Valor Cruise Ship (2) (21185610632).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Valor_Cruise_Ship_(2)_(21185610632).jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+carnival-venezia.jpg
+  Photo: Yankeesman312
+  Source name: File:Carnival Venezia's maiden arrival at Bermuda 2.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACarnival_Venezia's_maiden_arrival_at_Bermuda_2.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+carnival-vista.jpg
+  Photo: Gordon Leggett; Commons crop by Angelgreat
+  Source name: File:2017-03-30 CARNIVAL VISTA - IMO 9692569, off Oranjestad, Aruba (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File:2017-03-30_CARNIVAL_VISTA_-_IMO_9692569,_off_Oranjestad,_Aruba_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+celebrity-apex.jpg
+  Photo: Pjotr Mahhonin
+  Source name: File:Celebrity Apex Stern Pier 26 Port of Tallinn 31 May 2022.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Apex_Stern_Pier_26_Port_of_Tallinn_31_May_2022.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+celebrity-ascent.jpg
+  Photo: Sakis Antoniou / Commons user ND44
+  Source name: File:Celebrity Ascent - Le Pirée - June 2024.png
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Ascent_-_Le_Pir%C3%A9e_-_June_2024.png
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+celebrity-beyond.jpg
+  Photo: Didier Duforest
+  Source name: File:Celebrity BEYOND La Rochelle (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_BEYOND_La_Rochelle_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+celebrity-constellation.jpg
+  Photo: kees torn
+  Source name: File:Celebrity Constellation (ship, 2002) 001.jpg
+  Source: https://commons.wikimedia.org/wiki/File:Celebrity_Constellation_(ship,_2002)_001.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0/
+
+celebrity-eclipse.jpg
+  Photo: Celebrity Eclipse cruise liner by Philip Halling
+  Source name: File:Celebrity Eclipse cruise liner - geograph.org.uk - 4250706.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Eclipse_cruise_liner_-_geograph.org.uk_-_4250706.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+celebrity-edge.jpg
+  Photo: Prayitno
+  Source name: File:Celebrity Edge leaving Port Everglades in Fort Lauderdale, Florida.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Edge_leaving_Port_Everglades_in_Fort_Lauderdale%2C_Florida.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+celebrity-equinox.jpg
+  Photo: Dickelbers
+  Source name: File:Celebrity Equinox 001.jpg
+  Source: https://commons.wikimedia.org/wiki/File:Celebrity_Equinox_001.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+celebrity-infinity.jpg
+  Photo: eGuide Travel
+  Source name: File:Celebrity Infinity (ship, 2001) 004.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Infinity_(ship%2C_2001)_004.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+celebrity-millennium.jpg
+  Photo: Velkiira
+  Source name: File:Celebrity Millennium at Ketchikan 2010-08-04.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Millennium_at_Ketchikan_2010-08-04.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+celebrity-reflection.jpg
+  Photo: Jud McCranie
+  Source name: File:Celebrity Reflection in 2017.jpg
+  Source: https://commons.wikimedia.org/wiki/File:Celebrity_Reflection_in_2017.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+celebrity-silhouette.jpg
+  Photo: Tony Hisgett from Birmingham, UK
+  Source name: File:Cruise Ship Celebrity Silhouette (7223710366).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACruise_Ship_Celebrity_Silhouette_(7223710366).jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+celebrity-solstice.jpg
+  Photo: Constantine Kulikovsky
+  Source name: File:Celebrity Solstice.JPG
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Solstice.JPG
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+celebrity-summit.jpg
+  Photo: Jud McCranie
+  Source name: File:Celebrity Summit 2017.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Summit_2017.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+celebrity-xcel.jpg
+  Photo: Tunestoons
+  Source name: File:Celebrity Xcel at Port Everglades 2025-11-05.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACelebrity_Xcel_at_Port_Everglades_2025-11-05.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+coral-princess.jpg
+  Photo: Bernard Spragg. NZ
+  Source name: File:Coral Princess (16877529030).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACoral_Princess_(16877529030).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+crown-princess.jpg
+  Photo: Calistemon
+  Source name: File:Crown Princess (ship, 2006) in Fremantle Harbour, November 2024 02.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACrown_Princess_(ship%2C_2006)_in_Fremantle_Harbour%2C_November_2024_02.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+diamond-princess.jpg
+  Photo: Bernard Spragg. NZ
+  Source name: File:Diamond Princess (9073247995).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADiamond_Princess_(9073247995).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+discovery-princess.jpg
+  Photo: Blake Handley from Victoria, Canada
+  Source name: File:2023 04 29b Discovery Princess 16 (52935882014).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3A2023_04_29b_Discovery_Princess_16_(52935882014).jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+disney-adventure.jpg
+  Photo: nagi usano from Tokyo, Japan
+  Source name: File:Disney Adventure Disney Cruise Line (55114135136).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADisney_Adventure_Disney_Cruise_Line_(55114135136).jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+disney-destiny.jpg
+  Photo: Ferriesworldwide
+  Source name: File:Disney Destiny (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADisney_Destiny_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+disney-dream.jpg
+  Photo: ajmexico from Melbourne, USA
+  Source name: File:Disney Dream (ship, 2011) 001.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADisney_Dream_(ship%2C_2011)_001.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+disney-fantasy.jpg
+  Photo: Chris Gent from Orlando, Fla., USA
+  Source name: File:Disney Fantasy Cruise Ship (6) (21000557309).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADisney_Fantasy_Cruise_Ship_(6)_(21000557309).jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+disney-magic.jpg
+  Photo: Maxum255
+  Source name: File:Disney Magic cruise liner.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADisney_Magic_cruise_liner.jpg
+  License: Attribution only license
+  License URL: https://commons.wikimedia.org/wiki/Template:Attribution_only_license
+
+disney-treasure.jpg
+  Photo: Seppecool10
+  Source name: File:Disney Treasure schip.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADisney_Treasure_schip.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+disney-wish.jpg
+  Photo: Wessel Blokzijl
+  Source name: File:Disney Wish in Papenburg after sunset (51907981918) (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADisney_Wish_in_Papenburg_after_sunset_(51907981918)_(cropped).jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+disney-wonder.jpg
+  Photo: GoToVan from Vancouver, Canada
+  Source name: File:Disney Wonder Cruise, Canada Place (48177340362).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ADisney_Wonder_Cruise%2C_Canada_Place_(48177340362).jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+emerald-princess.jpg
+  Photo: Quintin Soloviev
+  Source name: File:Emerald Princess cruise ship departing Halifax, Nova Scotia 2024.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AEmerald_Princess_cruise_ship_departing_Halifax%2C_Nova_Scotia_2024.jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+enchanted-princess.jpg
+  Photo: A Guy Named Nyal ( photos · photo sets )
+  Source name: File:Princess Cruise Lines Enchanted Princess.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3APrincess_Cruise_Lines_Enchanted_Princess.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+enchantment-of-the-seas.jpg
+  Photo: TerryDOtt
+  Source name: File:Cruise Ship Foreground, Space Launch Background.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACruise_Ship_Foreground%2C_Space_Launch_Background.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+eurodam.jpg
+  Photo: Gordon Leggett
+  Source name: File:2018-09-18 MS EURODAM - IMO 9378448 - Glacier Bay, Alaska USA.jpg
+  Source: https://commons.wikimedia.org/wiki/File:2018-09-18_MS_EURODAM_-_IMO_9378448_-_Glacier_Bay,_Alaska_USA.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+explorer-of-the-seas.jpg
+  Photo: kees torn
+  Source name: File:Explorer of the Seas (ship, 2000) 001.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AExplorer_of_the_Seas_(ship%2C_2000)_001.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+freedom-of-the-seas.jpg
+  Photo: Zach Parker ( Gailwin at en.wikipedia [1] )
+  Source name: File:Freedom of the Seas, Cozumel.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AFreedom_of_the_Seas%2C_Cozumel.jpg
+  License: Public domain
+  License URL: https://commons.wikimedia.org/wiki/Template:PD-user-en
+
+grand-princess.jpg
+  Photo: U.S. Coast Guard photo by Petty Officer 3rd Class Taylor Bacon
+  Source name: File:Grand Princess returns to port in Oakland (6472325).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AGrand_Princess_returns_to_port_in_Oakland_(6472325).jpg
+  License: Public domain U.S. Coast Guard work
+  License URL: https://commons.wikimedia.org/wiki/Template:PD-USCG
+
+grandeur-of-the-seas.jpg
+  Photo: Len Turner
+  Source name: File:Grandeur of the Seas at New Orleans.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AGrandeur_of_the_Seas_at_New_Orleans.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+harmony-of-the-seas.jpg
+  Photo: Frans Berkelaar
+  Source name: File:Harmony of the Seas (ship, 2016) 006.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AHarmony_of_the_Seas_(ship%2C_2016)_006.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+icon-of-the-seas.jpg
+  Photo: Corey Seeman; Commons crop and color correction by Ahecht
+  Source name: File:Icon of the Seas Puerto Rico 2025 (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File:Icon_of_the_Seas_Puerto_Rico_2025_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+independence-of-the-seas.jpg
+  Photo: Marc Ryckaert
+  Source name: File:Cruise ship Independence of the Seas R01.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACruise_ship_Independence_of_the_Seas_R01.jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+island-princess.jpg
+  Photo: Álvaro de la Paz Franco
+  Source name: File:Crucero Island Princess de cerca.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACrucero_Island_Princess_de_cerca.jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+jewel-of-the-seas.jpg
+  Photo: Carlos M
+  Source name: File:Jewel of the Seas (ship, 2004) 001.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AJewel_of_the_Seas_(ship%2C_2004)_001.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+koningsdam.jpg
+  Photo: kees torn
+  Source name: File:Koningsdam (ship, 2016) 004.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AKoningsdam_(ship%2C_2016)_004.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+liberty-of-the-seas.jpg
+  Photo: Andreas Hobi from Chur, Switzerland
+  Source name: File:Liberty of the Seas2.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ALiberty_of_the_Seas2.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0
+
+majestic-princess.jpg
+  Photo: Tunestoons
+  Source name: File:Majestic Princess in Melbourne - December 2019.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMajestic_Princess_in_Melbourne_-_December_2019.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+mardi-gras.jpg
+  Photo: ArcticDragonfly; Commons crop and brightness edits by Ahecht
+  Source name: File:Mardi Gras (2020 ship) in September 2020 (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File:Mardi_Gras_(2020_ship)_in_September_2020_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+mariner-of-the-seas.jpg
+  Photo: Rene Cortin
+  Source name: File:Mariner of the Seas cruise ship.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMariner_of_the_Seas_cruise_ship.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+msc-bellissima.jpg
+  Photo: Jakez Bo from NANTES, FRANCE
+  Source name: File:MSC BELLISSIMA.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_BELLISSIMA.jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+msc-divina.jpg
+  Photo: Rene Cortin
+  Source name: File:MSC Divina in Palma, Majorca, Balearic Islands.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_Divina_in_Palma%2C_Majorca%2C_Balearic_Islands.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+msc-grandiosa.jpg
+  Photo: HenSti
+  Source name: File:MSC Grandiosa leaving Kiel XI.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_Grandiosa_leaving_Kiel_XI.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+msc-meraviglia.jpg
+  Photo: Estormiz
+  Source name: File:MSC Meraviglia Grand Harbour Malta 20180307 03 (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File:MSC_Meraviglia_Grand_Harbour_Malta_20180307_03_(cropped).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+msc-opera.jpg
+  Photo: VollwertBIT
+  Source name: File:MSC Opera Seite.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_Opera_Seite.jpg
+  License: CC BY-SA 2.5
+  License URL: https://creativecommons.org/licenses/by-sa/2.5
 
 msc-poesia.jpg
   Photo: Maciej Nux
-  Source: https://commons.wikimedia.org/wiki/File:MSC_Poesia_Gdynia_2025-06-30.jpg
+  Source name: File:MSC Poesia Gdynia 2025-06-30.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_Poesia_Gdynia_2025-06-30.jpg
   License: CC BY-SA 4.0
   License URL: https://creativecommons.org/licenses/by-sa/4.0/
-  CruiseKit's cropped, resized, and compressed derivative is available under
-  the same CC BY-SA 4.0 license.
+
+msc-seascape.jpg
+  Photo: Rene Cortin
+  Source name: File:MSC Seascape cruise ship 3 (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_Seascape_cruise_ship_3_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+msc-seashore.jpg
+  Photo: Jack Adamenko
+  Source name: File:MSC Seashore (ship, 2021) Departs Port Canaveral (February 2026).jpg
+  Source: https://commons.wikimedia.org/wiki/File:MSC_Seashore_(ship,_2021)_Departs_Port_Canaveral_(February_2026).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+msc-seaside.jpg
+  Photo: Jack Adamenko
+  Source name: File:MSC Seaside (ship, 2017) docked in Miami (February 2026).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_Seaside_(ship%2C_2017)_docked_in_Miami_(February_2026).jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+msc-virtuosa.jpg
+  Photo: Jkg52-wiki
+  Source name: File:MSC Virtuosa.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_Virtuosa.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+msc-world-america.jpg
+  Photo: JPD115
+  Source name: File:MSC World America.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMSC_World_America.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+navigator-of-the-seas.jpg
+  Photo: Kleon3
+  Source name: File:Amsterdam Passenger Terminal, cruise ship Navigator of the Seas 01.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AAmsterdam_Passenger_Terminal%2C_cruise_ship_Navigator_of_the_Seas_01.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+nieuw-amsterdam.jpg
+  Photo: Kyle.died.rich
+  Source name: File:Nieuw Amsterdam San Juan.JPG
+  Source: https://commons.wikimedia.org/wiki/File%3ANieuw_Amsterdam_San_Juan.JPG
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0
+
+nieuw-statendam.jpg
+  Photo: Xemenendura
+  Source name: File:Nieuw Statendam. Ceuta.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANieuw_Statendam._Ceuta.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+noordam.jpg
+  Photo: Bernard Spragg. NZ from Christchurch, New Zealand
+  Source name: File:MS Noordam. Port Lyttelton. (52622233285).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AMS_Noordam._Port_Lyttelton._(52622233285).jpg
+  License: Public domain
+  License URL: https://commons.wikimedia.org/wiki/Template:PD-author-FlickrPDM
+
+norwegian-aqua.jpg
+  Photo: Geni
+  Source name: File:Norwegian Aqua southampton.JPG
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Aqua_southampton.JPG
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-bliss.jpg
+  Photo: James Hills of Cruise West Coast
+  Source name: File:Norwegian Bliss Cruise Ship Entering Puerto Vallarta Harbor.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Bliss_Cruise_Ship_Entering_Puerto_Vallarta_Harbor.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-breakaway.jpg
+  Photo: Pjotr Mahhonin
+  Source name: File:Norwegian Breakaway moored at Pier 27 in Port of Tallinn 23 May 2018.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Breakaway_moored_at_Pier_27_in_Port_of_Tallinn_23_May_2018.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-dawn.jpg
+  Photo: Matthew Hill / Commons user Fletcher6
+  Source name: File:Norwegian Dawn Leaving Boston Harbor.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Dawn_Leaving_Boston_Harbor.jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0/
+
+norwegian-encore.jpg
+  Photo: Joe Mabel
+  Source name: File:'Norwegian Encore' docked in Victoria, British Columbia 01.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3A'Norwegian_Encore'_docked_in_Victoria%2C_British_Columbia_01.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-epic.jpg
+  Photo: Brian Burnell @ nuclear-weapons.info
+  Source name: File:Norwegian Epic 1.JPG
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Epic_1.JPG
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0/
+
+norwegian-escape.jpg
+  Photo: Photo: Gordon Leggett / Wikimedia Commons
+  Source name: File:2023-03-04 01 NORWEGIAN ESCAPE - IMO 9677076 - Port Canaveral FL USA.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3A2023-03-04_01_NORWEGIAN_ESCAPE_-_IMO_9677076_-_Port_Canaveral_FL_USA.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-gem.jpg
+  Photo: Jag9889
+  Source name: File:NORWEGIAN GEM Kreuzfahrtschiff auf dem Hudson River, Manhattan, New York City 20140712-jag9889.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANORWEGIAN_GEM_Kreuzfahrtschiff_auf_dem_Hudson_River%2C_Manhattan%2C_New_York_City_20140712-jag9889.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-getaway.jpg
+  Photo: ITookSomePhotos
+  Source name: File:View of Southampton Docks, England, with cruise ship "Norwegian Getaway".jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AView_of_Southampton_Docks%2C_England%2C_with_cruise_ship_%22Norwegian_Getaway%22.jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+norwegian-jade.jpg
+  Photo: 4spring
+  Source name: File:Norwegian Jade in Hamburg Altona 170909 5.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Jade_in_Hamburg_Altona_170909_5.jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+norwegian-jewel.jpg
+  Photo: Ján Sokoly
+  Source name: File:Norwegian Jewel.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Jewel.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0/
+
+norwegian-joy.jpg
+  Photo: Fritzmann2002
+  Source name: File:NCL Norwegian Joy.jpg
+  Source: https://commons.wikimedia.org/wiki/File:NCL_Norwegian_Joy.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+norwegian-luna.jpg
+  Photo: Centurion222
+  Source name: File:LunaMiamiApr252006.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ALunaMiamiApr252006.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-pearl.jpg
+  Photo: PhilipRJ 89
+  Source name: File:Norwegian Pearl Skagway.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Pearl_Skagway.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-prima.jpg
+  Photo: Chrissy85
+  Source name: File:Norwegian Prima in Amsterdam (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Prima_in_Amsterdam_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-sky.jpg
+  Photo: Photo: Gordon Leggett / Wikimedia Commons
+  Source name: File:2023-09-04 01 NORWEGIAN SKY - IMO 9128532 - Charlottetown PEI CAN.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3A2023-09-04_01_NORWEGIAN_SKY_-_IMO_9128532_-_Charlottetown_PEI_CAN.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-star.jpg
+  Photo: Álvaro de la Paz Franco
+  Source name: File:Lejísimos el crucero Norwegian Star.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ALej%C3%ADsimos_el_crucero_Norwegian_Star.jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+norwegian-sun.jpg
+  Photo: Cullen328
+  Source name: File:The Norwegian Sun in Anchorage, Alaska.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AThe_Norwegian_Sun_in_Anchorage%2C_Alaska.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+norwegian-viva.jpg
+  Photo: Pjotr Mahhonin
+  Source name: File:Norwegian Viva Bow opposite Kountourioti Square Rhodes 16 August 2025.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ANorwegian_Viva_Bow_opposite_Kountourioti_Square_Rhodes_16_August_2025.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+oasis-of-the-seas.jpg
+  Photo: Katherine Bissonette
+  Source name: File:Oasis of the Seas in Cozumel.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AOasis_of_the_Seas_in_Cozumel.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+odyssey-of-the-seas.jpg
+  Photo: Pjotr Mahhonin
+  Source name: File:Odyssey of the Seas Bow Port of Rhodes 8 September 2024.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AOdyssey_of_the_Seas_Bow_Port_of_Rhodes_8_September_2024.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+oosterdam.jpg
+  Photo: AlMare
+  Source name: File:Oosterdam Holland America Line.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AOosterdam_Holland_America_Line.jpg
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0
+
+ovation-of-the-seas.jpg
+  Photo: Patrick
+  Source name: File:Ovation of the Seas.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AOvation_of_the_Seas.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+pride-of-america.jpg
+  Photo: Daniel Ramirez
+  Source name: File:Pride of America seen from Aloha Tower (4677840953).jpg
+  Source: https://commons.wikimedia.org/wiki/File:Pride_of_America_seen_from_Aloha_Tower_(4677840953).jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0/
+
+quantum-of-the-seas.jpg
+  Photo: Hummelhummel
+  Source name: File:The new cruise ship, Quantum of the Sea with the crane and the hinged glass gondola.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AThe_new_cruise_ship%2C_Quantum_of_the_Sea_with_the_crane_and_the_hinged_glass_gondola.jpg
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0
+
+radiance-of-the-seas.jpg
+  Photo: Bahnfrend
+  Source name: File:Radiance of the Seas, Fremantle, 2015 (03).JPG
+  Source: https://commons.wikimedia.org/wiki/File:Radiance_of_the_Seas,_Fremantle,_2015_(03).JPG
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0/
+
+regal-princess.jpg
+  Photo: W. Bulach
+  Source name: File:.00 0690 Ocean cruise ship “Regal Princess” in Oslo.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3A.00_0690_Ocean_cruise_ship_%E2%80%9CRegal_Princess%E2%80%9D_in_Oslo.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+resilient-lady.jpg
+  Photo: Thomas Dahlstrøm Nielsen
+  Source name: File:Resilient Lady (ship, 2022) in Palermo (2).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AResilient_Lady_(ship%2C_2022)_in_Palermo_(2).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+rotterdam.jpg
+  Photo: Marc Ryckaert
+  Source name: File:Rotterdam cruise ship R06.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ARotterdam_cruise_ship_R06.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+royal-princess.jpg
+  Photo: Sonse
+  Source name: File:Royal Princess Cruise Ship passing Howth into Dublin Port (42046211742).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ARoyal_Princess_Cruise_Ship_passing_Howth_into_Dublin_Port_(42046211742).jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+ruby-princess.jpg
+  Photo: Tony Hisgett from Birmingham, UK
+  Source name: File:Cruise Ship Ruby Princess Venice 2 (7223671712).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ACruise_Ship_Ruby_Princess_Venice_2_(7223671712).jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+sapphire-princess.jpg
+  Photo: Hjanko
+  Source name: File:Sapphire Princess Samui.JPG
+  Source: https://commons.wikimedia.org/wiki/File%3ASapphire_Princess_Samui.JPG
+  License: Public domain release by the photographer
+  License URL: https://commons.wikimedia.org/wiki/Template:PD-user-de
+
+scarlet-lady.jpg
+  Photo: Virtual-Pano
+  Source name: File:IMO 9804801 - Scarlet Lady alongside in Cozumel.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AIMO_9804801_-_Scarlet_Lady_alongside_in_Cozumel.jpg
+  License: CC BY 4.0
+  License URL: https://creativecommons.org/licenses/by/4.0
+
+serenade-of-the-seas.jpg
+  Photo: Sunnya343
+  Source name: File:Serenade of the Seas at Grand Cayman1 (cropped).JPG
+  Source: https://commons.wikimedia.org/wiki/File:Serenade_of_the_Seas_at_Grand_Cayman1_(cropped).JPG
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0/
+
+sky-princess.jpg
+  Photo: Pjotr Mahhonin
+  Source name: File:Sky Princess approaching Pier 26 in Port of Tallinn 20 May 2022.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ASky_Princess_approaching_Pier_26_in_Port_of_Tallinn_20_May_2022.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+spectrum-of-the-seas.jpg
+  Photo: User:Ymnes
+  Source name: File:Spectrum of the Seas.JPG
+  Source: https://commons.wikimedia.org/wiki/File%3ASpectrum_of_the_Seas.JPG
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+star-of-the-seas.jpg
+  Photo: D. Henton (via James Henton )
+  Source name: File:Star of the Seas - Cadiz - Spain 01 (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AStar_of_the_Seas_-_Cadiz_-_Spain_01_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+star-princess.jpg
+  Photo: Ivan T.
+  Source name: File:Star Princess (ship, 2002) IMO 9192363 at Split, Croatia, 2011-09-13.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AStar_Princess_(ship%2C_2002)_IMO_9192363_at_Split%2C_Croatia%2C_2011-09-13.jpg
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0
+
+sun-princess.jpg
+  Photo: Bahnfrend
+  Source name: File:Sun Princess, Fremantle, 2016 (03).JPG
+  Source: https://commons.wikimedia.org/wiki/File%3ASun_Princess%2C_Fremantle%2C_2016_(03).JPG
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+symphony-of-the-seas.jpg
+  Photo: Anthony Levrot
+  Source name: File:Barcelone - ESP - 2023.07.02 - Norwegian Cruise Line & Royal Carribean - « Norwegian Epic » & « Symphony of the Seas » © Anthony Levrot.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3ABarcelone_-_ESP_-_2023.07.02_-_Norwegian_Cruise_Line_%26_Royal_Carribean_-_%C2%AB_Norwegian_Epic_%C2%BB_%26_%C2%AB_Symphony_of_the_Seas_%C2%BB_%C2%A9_Anthony_Levrot.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+utopia-of-the-seas.jpg
+  Photo: Didier Duforest
+  Source name: File:Utopia of the Seas La Rochelle-b (cropped).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AUtopia_of_the_Seas_La_Rochelle-b_(cropped).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+valiant-lady.jpg
+  Photo: Master0Garfield
+  Source name: File:Valiant Lady Feb 29 2024.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AValiant_Lady_Feb_29_2024.jpg
+  License: CC0 1.0
+  License URL: https://creativecommons.org/publicdomain/zero/1.0/
 
 viking-star.jpg
   Photo: Ronnie Robertson
-  Source: https://commons.wikimedia.org/wiki/File:Viking_Star_MG_4738_(29783898676).jpg
+  Source name: File:Viking Star MG 4738 (29783898676).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AViking_Star_MG_4738_(29783898676).jpg
   License: CC BY-SA 2.0
   License URL: https://creativecommons.org/licenses/by-sa/2.0/
-  CruiseKit's cropped, resized, and compressed derivative is available under
-  the same CC BY-SA 2.0 license.
 
-Full internal provenance and review notes are maintained in
-data/ship-image-review.json in the CruiseKit website repository.
+vision-of-the-seas.jpg
+  Photo: Pjotr Mahhonin
+  Source name: File:Vision of the Seas flag Tallinn 2 August 2013.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AVision_of_the_Seas_flag_Tallinn_2_August_2013.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+volendam.jpg
+  Photo: Bahnfrend
+  Source name: File:MS Volendam, Fremantle, 2012.JPG
+  Source: https://commons.wikimedia.org/wiki/File%3AMS_Volendam%2C_Fremantle%2C_2012.JPG
+  License: CC BY-SA 3.0
+  License URL: https://creativecommons.org/licenses/by-sa/3.0
+
+westerdam.jpg
+  Photo: Roger Wollstadt
+  Source name: File:Westerdam in Costa Maya 002.jpg
+  Source: https://commons.wikimedia.org/wiki/File:Westerdam_in_Costa_Maya_002.jpg
+  License: CC BY-SA 2.0
+  License URL: https://creativecommons.org/licenses/by-sa/2.0/
+
+wonder-of-the-seas.jpg
+  Photo: Daniel Capilla
+  Source name: File:Wonder of the Seas in Málaga Port 03.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AWonder_of_the_Seas_in_M%C3%A1laga_Port_03.jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0
+
+zaandam.jpg
+  Photo: Daniel Ramirez
+  Source name: File:Zaandam (ship, 2000) 001.jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AZaandam_(ship%2C_2000)_001.jpg
+  License: CC BY 2.0
+  License URL: https://creativecommons.org/licenses/by/2.0
+
+zuiderdam.jpg
+  Photo: Bahnfrend
+  Source name: File:Zuiderdam, Fremantle, 2023 (05).jpg
+  Source: https://commons.wikimedia.org/wiki/File%3AZuiderdam%2C_Fremantle%2C_2023_(05).jpg
+  License: CC BY-SA 4.0
+  License URL: https://creativecommons.org/licenses/by-sa/4.0

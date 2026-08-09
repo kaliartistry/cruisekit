@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T18:36:07.007Z",
+  "generatedAt": "2026-08-08T19:59:03.179Z",
   "inputs": {
     "webShipDataPath": "apps/web/lib/data/ships.ts",
     "mobileShipDataPath": "../CruiseKit-Mobile/assets/data/ships.json",
@@ -15,11 +15,11 @@
     "mobileSailingCatalogShips": 99,
     "mobileSailingCatalogUnresolvedBareCodeRows": 36,
     "expectedShipIds": 137,
-    "siteShipAssets": 135,
-    "missingAssets": 2,
+    "siteShipAssets": 134,
+    "missingAssets": 3,
     "orphanedAssets": 0,
-    "blockedAssets": 2,
-    "unverifiedAssets": 16,
+    "blockedAssets": 3,
+    "unverifiedAssets": 0,
     "cdnChecked": 0,
     "cdnFailures": 0,
     "hardcodedSiteReferences": 6,
@@ -30,6 +30,12 @@
       "id": "brilliant-lady",
       "name": "Brilliant Lady",
       "cruiseLineId": "virgin-voyages",
+      "allowMissing": true
+    },
+    {
+      "id": "carnival-festivale",
+      "name": "Carnival Festivale",
+      "cruiseLineId": "carnival",
       "allowMissing": true
     },
     {
@@ -53,6 +59,17 @@
       "reviewNotes": "A CC BY-SA alternative was rejected because Commons flags it as AI-upscaled and it did not meet CruiseKit's hero-quality requirements. Use the designed fallback pending permission or a suitable licensed photograph."
     },
     {
+      "id": "carnival-festivale",
+      "name": "Carnival Festivale",
+      "cruiseLineId": "carnival",
+      "reason": "Carnival Festivale is a future ship, and no truthful exterior photograph with audited commercial-reuse rights is available. The former Carnival News rendering was removed because a press-site download is not a commercial redistribution license.",
+      "allowMissing": true,
+      "sourceUrl": "https://www.carnival-news.com/ship/coming-2027-carnival-festivale",
+      "reviewedAt": "2026-08-08",
+      "reviewer": "Codex ship image license hygiene audit",
+      "reviewNotes": "The exact Carnival News source was traced, but neither its media page nor download link grants commercial redistribution rights. The 40 bundled sailings use the designed fallback pending a licensed production photograph or written permission."
+    },
+    {
       "id": "norwegian-aura",
       "name": "Norwegian Aura",
       "cruiseLineId": "norwegian",
@@ -64,88 +81,7 @@
       "reviewNotes": "NCL published an official April 2026 float-out photo, but newsroom availability is not a reusable commercial license. Use the designed fallback pending written permission or an open-license photograph."
     }
   ],
-  "unverified": [
-    {
-      "id": "allure-of-the-seas",
-      "name": "Allure of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "carnival-firenze",
-      "name": "Carnival Firenze",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "carnival-vista",
-      "name": "Carnival Vista",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "celebrity-constellation",
-      "name": "Celebrity Constellation",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-equinox",
-      "name": "Celebrity Equinox",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "celebrity-reflection",
-      "name": "Celebrity Reflection",
-      "cruiseLineId": "celebrity"
-    },
-    {
-      "id": "eurodam",
-      "name": "Eurodam",
-      "cruiseLineId": "holland-america"
-    },
-    {
-      "id": "icon-of-the-seas",
-      "name": "Icon of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "mardi-gras",
-      "name": "Mardi Gras",
-      "cruiseLineId": "carnival"
-    },
-    {
-      "id": "msc-meraviglia",
-      "name": "MSC Meraviglia",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "msc-seashore",
-      "name": "MSC Seashore",
-      "cruiseLineId": "msc"
-    },
-    {
-      "id": "norwegian-joy",
-      "name": "Norwegian Joy",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "pride-of-america",
-      "name": "Pride of America",
-      "cruiseLineId": "norwegian"
-    },
-    {
-      "id": "radiance-of-the-seas",
-      "name": "Radiance of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "serenade-of-the-seas",
-      "name": "Serenade of the Seas",
-      "cruiseLineId": "royal-caribbean"
-    },
-    {
-      "id": "westerdam",
-      "name": "Westerdam",
-      "cruiseLineId": "holland-america"
-    }
-  ],
+  "unverified": [],
   "assetDetails": {
     "adventure-of-the-seas": {
       "path": "apps/web/public/assets/ships/adventure-of-the-seas.jpg",
@@ -159,12 +95,12 @@
     },
     "allure-of-the-seas": {
       "path": "apps/web/public/assets/ships/allure-of-the-seas.jpg",
-      "bytes": 84813,
-      "sha256": "5054320dc465ad81cb2ff47405e338c12ade4d1870346728f4ca1cbdd9e2d900",
+      "bytes": 226831,
+      "sha256": "59c2eb6b5a11e36f6811cbb734d2bb699549c0ffadee7fb89bebe72b9c80c2a8",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 427
+        "width": 1600,
+        "height": 900
       }
     },
     "anthem-of-the-seas": {
@@ -247,24 +183,14 @@
         "height": 720
       }
     },
-    "carnival-festivale": {
-      "path": "apps/web/public/assets/ships/carnival-festivale.jpg",
-      "bytes": 110717,
-      "sha256": "c4bfdcc25569b2a6691b4e247cb291a8b74bd5df477062d50e5ddde6a718db83",
-      "format": "jpg",
-      "dimensions": {
-        "width": 1280,
-        "height": 427
-      }
-    },
     "carnival-firenze": {
       "path": "apps/web/public/assets/ships/carnival-firenze.jpg",
-      "bytes": 63241,
-      "sha256": "9832fc55bdc3e1b1bcb0ad2b9e18cf425fba26431ee1a9bb885a39c9e1c8bfda",
+      "bytes": 229245,
+      "sha256": "27ea3735451d87b8a8482ee18ee053bf943f6ad22df8d425f37df1fb542bbd06",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "carnival-freedom": {
@@ -409,12 +335,12 @@
     },
     "carnival-vista": {
       "path": "apps/web/public/assets/ships/carnival-vista.jpg",
-      "bytes": 98499,
-      "sha256": "7c9c051bf374d36d876cf4e27f5117c889bcc900ae7fc7edfc1c8200118182ee",
+      "bytes": 199930,
+      "sha256": "9143ca4a0bd4ccec2643822f4a0e5bc7d3ba7c64a924483245e512c316f9f18b",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "celebrity-apex": {
@@ -449,12 +375,12 @@
     },
     "celebrity-constellation": {
       "path": "apps/web/public/assets/ships/celebrity-constellation.jpg",
-      "bytes": 50373,
-      "sha256": "f6fb5ea6eab3caafcad748d2ac73367cefd8065c6d1b4e5c9a63650c5cd84793",
+      "bytes": 164184,
+      "sha256": "959b62bac66ff6808a925581bb7f82014bfb8b155a9067b7b370716acab84e37",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 382
+        "width": 1600,
+        "height": 900
       }
     },
     "celebrity-eclipse": {
@@ -479,12 +405,12 @@
     },
     "celebrity-equinox": {
       "path": "apps/web/public/assets/ships/celebrity-equinox.jpg",
-      "bytes": 96703,
-      "sha256": "09cbbf84654d040bba12acb2e759dbb7db66431d2f59d4864222599e21ef62a1",
+      "bytes": 248911,
+      "sha256": "0e89877277318d47558db7d9bf58a5f79af4c66f686dd41ea4f359135b75a348",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "celebrity-infinity": {
@@ -509,12 +435,12 @@
     },
     "celebrity-reflection": {
       "path": "apps/web/public/assets/ships/celebrity-reflection.jpg",
-      "bytes": 96703,
-      "sha256": "09cbbf84654d040bba12acb2e759dbb7db66431d2f59d4864222599e21ef62a1",
+      "bytes": 203948,
+      "sha256": "eb5e22fe2b5f2f7b7d71858c273431b847b1be60100a63185617e19d988a6efa",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "celebrity-silhouette": {
@@ -709,12 +635,12 @@
     },
     "eurodam": {
       "path": "apps/web/public/assets/ships/eurodam.jpg",
-      "bytes": 97355,
-      "sha256": "776f404c7e68af482da2429b92a3c5ae326c536e00c89ebeeea819df9e6f7246",
+      "bytes": 248646,
+      "sha256": "f0315bf2c698deaab547ab81a55f914853a50970d978ba4770df426a2467f82e",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "explorer-of-the-seas": {
@@ -769,12 +695,12 @@
     },
     "icon-of-the-seas": {
       "path": "apps/web/public/assets/ships/icon-of-the-seas.jpg",
-      "bytes": 140571,
-      "sha256": "50b94649d3b83731f895c284534cfe4d565ad7a29ec662d3a685216edd8d95bd",
+      "bytes": 227665,
+      "sha256": "28454b87583d38d3814f8dca28b7b3bef14367caf4f31c8395751b9f6750c714",
       "format": "jpg",
       "dimensions": {
-        "width": 600,
-        "height": 450
+        "width": 1600,
+        "height": 900
       }
     },
     "independence-of-the-seas": {
@@ -839,12 +765,12 @@
     },
     "mardi-gras": {
       "path": "apps/web/public/assets/ships/mardi-gras.jpg",
-      "bytes": 81169,
-      "sha256": "e1595099231ed829b816c9442628fc023047d1a2b38621aa7ff55591045e67b1",
+      "bytes": 234586,
+      "sha256": "10c2c7b00898b7ebef5477727c0fcf4cbe657bb7b3aaabea1f2662cb6731dbd2",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "mariner-of-the-seas": {
@@ -889,12 +815,12 @@
     },
     "msc-meraviglia": {
       "path": "apps/web/public/assets/ships/msc-meraviglia.jpg",
-      "bytes": 83239,
-      "sha256": "225dd4fdcddf3bef1da4db7fb06efc916357ef95198a14a3bc7002a35cbf9c97",
+      "bytes": 245963,
+      "sha256": "903784d23d1bd96c4000cdcad1008daf6f5229a86cdfdcb06fd2ba8bbf4a3e84",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "msc-opera": {
@@ -929,12 +855,12 @@
     },
     "msc-seashore": {
       "path": "apps/web/public/assets/ships/msc-seashore.jpg",
-      "bytes": 82589,
-      "sha256": "a37082a80918b93cb270bab0343a8cbfe627d60d3820807d5e03490ff0094d2b",
+      "bytes": 247328,
+      "sha256": "12473aea6cae24eea0ef13a2f55d901b1e9f8e49d88d235956b3f448507d66b2",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "msc-seaside": {
@@ -1119,12 +1045,12 @@
     },
     "norwegian-joy": {
       "path": "apps/web/public/assets/ships/norwegian-joy.jpg",
-      "bytes": 114263,
-      "sha256": "bd4d7fbbd95441aeb2eb55775937add88776b37b02c22854628ddea17f3e3f85",
+      "bytes": 240071,
+      "sha256": "f5fab75480bded73790c1f385916987a78aaf448aa87c9d2c2f2c78cb0a428b4",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 480
+        "width": 1600,
+        "height": 900
       }
     },
     "norwegian-luna": {
@@ -1239,12 +1165,12 @@
     },
     "pride-of-america": {
       "path": "apps/web/public/assets/ships/pride-of-america.jpg",
-      "bytes": 52219,
-      "sha256": "793f2902d6eb0f49589613244292d5f183e33a73c426bfcbb1d3ce6f3da9884d",
+      "bytes": 203293,
+      "sha256": "d6f968ac92981be2a0e1c8e5e8ece843a88e00f6042dde9705e72054f9a80824",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 360
+        "width": 1600,
+        "height": 900
       }
     },
     "quantum-of-the-seas": {
@@ -1259,12 +1185,12 @@
     },
     "radiance-of-the-seas": {
       "path": "apps/web/public/assets/ships/radiance-of-the-seas.jpg",
-      "bytes": 63686,
-      "sha256": "a8230bd18f51be460ee845f181e547dfe0ac253a12b451c05a90b245458b96ae",
+      "bytes": 229657,
+      "sha256": "9f627fb14ffa3127c120b76fdfe4be8e55b444f418f34c113516edf81f4d25cb",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 446
+        "width": 1600,
+        "height": 900
       }
     },
     "regal-princess": {
@@ -1339,12 +1265,12 @@
     },
     "serenade-of-the-seas": {
       "path": "apps/web/public/assets/ships/serenade-of-the-seas.jpg",
-      "bytes": 63686,
-      "sha256": "a8230bd18f51be460ee845f181e547dfe0ac253a12b451c05a90b245458b96ae",
+      "bytes": 178650,
+      "sha256": "1aadf330cbdebec4cf6a395fd44e8fd6255349a24c1fd7c816e053211c391667",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 446
+        "width": 1600,
+        "height": 900
       }
     },
     "sky-princess": {
@@ -1459,12 +1385,12 @@
     },
     "westerdam": {
       "path": "apps/web/public/assets/ships/westerdam.jpg",
-      "bytes": 119418,
-      "sha256": "132292b29d691175fb58664221bb652a373435be831ac4699cee1f485642bec9",
+      "bytes": 171405,
+      "sha256": "ef07dbbc38dc2362c5ed25670b0321a8c297d3274105fe86ef621412f389068f",
       "format": "jpg",
       "dimensions": {
-        "width": 640,
-        "height": 853
+        "width": 1600,
+        "height": 900
       }
     },
     "wonder-of-the-seas": {
@@ -1548,86 +1474,6 @@
       "severity": "warning",
       "id": "mobile-sailing-catalog-bare-codes",
       "message": "36 rich-catalog row(s) use bare ship codes outside the audited website reference; they were reported instead of silently omitted from sailing-derived ship IDs: celebrity:AT=6, virgin-voyages:BR=30."
-    },
-    {
-      "severity": "warning",
-      "id": "allure-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-firenze",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "carnival-vista",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-constellation",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-equinox",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "celebrity-reflection",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "eurodam",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "icon-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "mardi-gras",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "msc-meraviglia",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "msc-seashore",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "norwegian-joy",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "pride-of-america",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "radiance-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "serenade-of-the-seas",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
-    },
-    {
-      "severity": "warning",
-      "id": "westerdam",
-      "message": "Ship asset lacks verified source metadata in data/ship-image-review.json."
     }
   ],
   "info": [
@@ -1635,6 +1481,11 @@
       "severity": "info",
       "id": "brilliant-lady",
       "message": "No suitable hero image with audited commercial-reuse rights is available. The former official-site derivative was removed because Virgin Voyages did not grant commercial redistribution rights."
+    },
+    {
+      "severity": "info",
+      "id": "carnival-festivale",
+      "message": "Carnival Festivale is a future ship, and no truthful exterior photograph with audited commercial-reuse rights is available. The former Carnival News rendering was removed because a press-site download is not a commercial redistribution license."
     },
     {
       "severity": "info",

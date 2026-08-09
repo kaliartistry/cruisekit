@@ -1,17 +1,49 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-08-08
+Last verified: 2026-08-09
 
-## Android App Links publication candidate
+## Android App Links publication
 
-- Branch `codex/android-app-links-and-funnel-fixes` adds
-  `/.well-known/assetlinks.json` for `com.cruisekit.mobile` using the verified
-  Google Play **app-signing key** SHA-256 fingerprint
+- PR #55 merged `codex/android-app-links-and-funnel-fixes` to `main` and
+  published `/.well-known/assetlinks.json` for `com.cruisekit.mobile` using
+  the verified Google Play **app-signing key** SHA-256 fingerprint
   `A0:C9:44:74:E6:D8:AF:B1:0C:5D:30:B2:05:E6:6A:6A:19:88:BA:B1:01:90:9D:32:E2:05:74:E0:89:39:A0:97`.
-- This is a source publication candidate, not a verified live deployment.
-  Post-merge checks remain pending for HTTP 200 JSON on both `cruisekit.app` and
-  `www.cruisekit.app`, followed by Google's Digital Asset Links checker or
-  Android device re-verification.
+- Direct checks on 2026-08-09 observed HTTP 200 JSON at
+  `https://cruisekit.app/.well-known/assetlinks.json`. The `www` host
+  intentionally returns HTTP 301 to the apex host and is not declared by the
+  mobile app.
+- Google Digital Asset Links and Android device re-verification remain pending;
+  do not record App Links as device-verified until those checks pass.
+
+## Ship image license-hygiene candidate
+
+- Candidate verified locally on branch `codex/ship-image-license-hygiene` /
+  PR #57. Base PR #56 has merged and PR #57 is now retargeted to `main`; this
+  candidate is not deployed or live.
+- Sixteen inherited ship JPEGs had no recoverable rights provenance. Git
+  history traces them to a Google Places photo harvester that discarded source
+  and author-attribution metadata. Several were also wrong-subject duplicates.
+  All sixteen are replaced with visually checked, ship-specific Commons
+  sources under CC BY, CC BY-SA, or CC0 terms and recorded in
+  `data/ship-image-review.json`.
+- Carnival Festivale now intentionally uses the designed fallback for its 40
+  bundled sailings. The exact Carnival News rendering was traced and removed,
+  because its download link does not grant commercial redistribution rights
+  and a future ship has no truthful licensed exterior photograph yet.
+- The registry now accounts for 134 verified JPEGs and three intentional
+  fallbacks. Every verified record has an explicitly approved commercial-use
+  license label and its matching canonical license or public-domain URL.
+  `ATTRIBUTION.txt` is generated from the registry and includes every verified
+  asset.
+- PR checks now run `pnpm run data:test:ship-gaps`. The suite blocks an
+  unregistered JPG, a verified record with a disallowed or mismatched
+  license/deed pair, a blocked record that still has a file, missing provenance
+  fields, stale generated attribution, and reviewed heroes outside the
+  1600x900/100-250KB budget.
+- Pending after PR #57 merges: wait for the GitHub Pages deployment, verify the
+  sixteen replacement URLs return HTTP 200, and verify Carnival Festivale
+  returns 404 so the app exercises its fallback. Record those states as live
+  only after direct CDN checks pass.
 
 ## Ship hero assets and ship-code normalization candidate
 

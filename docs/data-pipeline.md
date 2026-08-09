@@ -384,6 +384,36 @@ write into a neighboring mobile checkout. Shipping a corrected bundled catalog
 still requires a separate CruiseKit Mobile review, commit, build, and store
 release decision.
 
+## Ship image provenance and attribution
+
+`data/ship-image-review.json` is the source of truth for ship-photo rights
+review. Every JPEG in `apps/web/public/assets/ships/` must have exactly one
+`verified` record. A ship without an acceptable commercial-use source must be
+recorded under `blocked` with `allowMissing: true`, and its JPEG must not exist;
+the mobile app then uses its designed fallback.
+
+Verified records must use one of the explicit commercial-use-permitting
+license labels and matching canonical deed or public-domain template URLs in
+`scripts/lib/ship-image-licenses.mjs`. Do not treat a press-kit download button,
+an official marketing image, or an untraceable cached image as a reusable
+commercial license.
+
+After adding, replacing, or blocking a ship image, regenerate the public credit
+file instead of editing it by hand:
+
+```bash
+pnpm run data:build:ship-attribution
+pnpm run data:test:ship-gaps
+```
+
+The generator writes `apps/web/public/assets/ships/ATTRIBUTION.txt` from every
+verified record. The PR workflow runs the ship-gap tests, which enforce asset
+and registry parity, blocked-file absence, the license/deed allowlist, required
+provenance fields, generated attribution parity, and the 1600x900 JPEG budget
+for reviewed additions and replacements. When a source uses CC BY-SA, record
+the crop/resize/re-encoding and keep CruiseKit's transformed copy under the
+same license version.
+
 ## Ingestion staging
 
 Provider importers write to `data/ingest/` first. They must not edit
