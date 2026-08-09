@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer";
 export const metadata: Metadata = {
   title: "About — The Cruise Planning Toolkit",
   description:
-    "CruiseKit is an independent cruise planning toolkit built by a solo developer. Plan smarter with cost estimates, port guides, group coordination, and more.",
+    "CruiseKit is an independent cruise planning toolkit built by a solo developer, with true-cost estimates, MyDay planning, spend tracking, port guides, and MyCrew check-ins.",
   keywords: [
     "about cruisekit",
     "cruise planning tool",
@@ -83,11 +83,12 @@ export default function AboutPage() {
             </p>
 
             <h2 className="text-2xl font-bold text-navy pt-4">
-              The Five Pillars
+              Before and During Your Cruise
             </h2>
             <p>
-              Everything on CruiseKit is organized around five core pillars,
-              each tackling a different part of the cruise planning journey:
+              The website helps you estimate the trip before you go. The mobile
+              app keeps the onboard experience simple with three tabs:
+              MyDay, Spend, and More.
             </p>
             <ul className="space-y-3 pl-1">
               <li className="flex items-start gap-3">
@@ -95,9 +96,9 @@ export default function AboutPage() {
                   1
                 </span>
                 <span>
-                  <strong className="text-navy">Plan</strong> &mdash; The True
-                  Cost Calculator breaks down common add-ons across major
-                  cruise lines so you can estimate the full price before you book.
+                  <strong className="text-navy">True Cost Calculator</strong>{" "}
+                  &mdash; Estimate the advertised fare plus common add-ons such
+                  as gratuities, drinks, Wi-Fi, excursions, and dining.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -105,9 +106,9 @@ export default function AboutPage() {
                   2
                 </span>
                 <span>
-                  <strong className="text-navy">Explore</strong> &mdash; Port
-                  guides with real traveler intel, walking distances, and
-                  curated recommendations for every major cruise port.
+                  <strong className="text-navy">MyDay</strong> &mdash; Keep
+                  your saved itinerary, route context, cruise-day schedule,
+                  clocks, and all-aboard reference together.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -115,9 +116,9 @@ export default function AboutPage() {
                   3
                 </span>
                 <span>
-                  <strong className="text-navy">Coordinate</strong> &mdash;
-                  Group Hub lets you plan with friends and family, split costs,
-                  and keep everyone on the same page.
+                  <strong className="text-navy">Spend</strong> &mdash; Log
+                  onboard purchases and compare the running total with the
+                  budget attached to your saved cruise.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -125,10 +126,9 @@ export default function AboutPage() {
                   4
                 </span>
                 <span>
-                  <strong className="text-navy">MyDay</strong> &mdash;
-                  Your daily cruise command center with schedule management,
-                  onboard spend tracking, and MyCrew status coordination
-                  so everyone stays connected.
+                  <strong className="text-navy">Ports</strong> &mdash; Open
+                  More, then Ports, to see the stops on your saved itinerary
+                  and open their map snapshots and guides.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -136,9 +136,9 @@ export default function AboutPage() {
                   5
                 </span>
                 <span>
-                  <strong className="text-navy">Optimize</strong> &mdash; The
-                  Loyalty Hub compares reward programs across cruise lines and
-                  helps you find status-match opportunities.
+                  <strong className="text-navy">MyCrew</strong> &mdash; Open
+                  Crew check-in under More to share manual status updates
+                  without constant location tracking.
                 </span>
               </li>
             </ul>

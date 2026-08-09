@@ -83,7 +83,7 @@ export default function CruisePortGuidesPage() {
           faqs={FAQS}
           relatedLinks={[
             { label: "Browse all ports", href: "/ports" },
-            { label: "Explore Map", href: "/features/explore-map" },
+            { label: "Itinerary & port maps", href: "/features/explore-map" },
           ]}
         />
       </main>

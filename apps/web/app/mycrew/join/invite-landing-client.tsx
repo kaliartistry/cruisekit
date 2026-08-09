@@ -1,17 +1,26 @@
 "use client";
 
-import { useEffect, useSyncExternalStore } from "react";
-import { CheckCircle2, Smartphone, Users } from "lucide-react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { Check, CheckCircle2, Copy, Smartphone, Users } from "lucide-react";
 import { StoreButtonRow } from "@/components/shared/store-buttons";
 import { trackMyCrewInviteOpened } from "@/lib/analytics";
 
 export default function InviteLandingClient() {
+  const [copied, setCopied] = useState(false);
+
   useEffect(() => {
     trackMyCrewInviteOpened({
       sourceType: "traveler",
       landingContext: "sailing",
     });
   }, []);
+
+  useEffect(() => {
+    if (!copied) return;
+    const timeout = window.setTimeout(() => setCopied(false), 2000);
+    return () => window.clearTimeout(timeout);
+  }, [copied]);
+
   const search = useSyncExternalStore(
     subscribeToStaticUrl,
     () => window.location.search,
@@ -21,6 +30,12 @@ export default function InviteLandingClient() {
   const code = checkedUrl
     ? normalizePublicInviteCode(new URLSearchParams(search).get("code"))
     : null;
+
+  const copyInviteCode = async () => {
+    if (code && (await writePublicInviteCodeToClipboard(code))) {
+      setCopied(true);
+    }
+  };
 
   return (
     <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
@@ -37,7 +52,7 @@ export default function InviteLandingClient() {
         <p className="mt-4 text-base leading-7 text-slate-600">
           This page keeps the invitation code visible while you install or open
           CruiseKit. It does not claim that the app opened or that you joined a
-          group; joining happens only after you confirm it inside MyDay.
+          group; joining happens only after you confirm it under More in the app.
         </p>
 
         <div
@@ -53,9 +68,11 @@ export default function InviteLandingClient() {
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
                 Invite code
               </p>
-              <p className="mt-2 font-mono text-3xl font-extrabold tracking-[0.2em] text-navy">
-                {code}
-              </p>
+              <InviteCodeDisplay
+                code={code}
+                copied={copied}
+                onCopy={() => void copyInviteCode()}
+              />
             </>
           ) : (
             <p className="text-sm font-medium text-slate-700">
@@ -68,7 +85,7 @@ export default function InviteLandingClient() {
         <ol className="mt-8 space-y-4 text-sm leading-6 text-slate-700">
           <Step number="1">Install or open CruiseKit on iPhone or Android.</Step>
           <Step number="2">
-            In MyDay, open More, choose MyCrew, and sign in if prompted.
+            In the app, open More, choose MyCrew, and sign in if prompted.
           </Step>
           <Step number="3">
             Choose Join a crew, enter the code shown above, and review the group
@@ -101,6 +118,54 @@ export function normalizePublicInviteCode(value: string | null) {
   if (!value) return null;
   const normalized = value.trim().toUpperCase().replace(/[\s-]+/g, "");
   return /^[A-Z0-9]{6}$/.test(normalized) ? normalized : null;
+}
+
+type ClipboardWriter = Pick<Clipboard, "writeText">;
+
+export async function writePublicInviteCodeToClipboard(
+  code: string,
+  clipboard: ClipboardWriter | undefined =
+    typeof navigator === "undefined" ? undefined : navigator.clipboard,
+) {
+  if (!clipboard?.writeText) return false;
+
+  try {
+    await clipboard.writeText(code);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export function InviteCodeDisplay({
+  code,
+  copied,
+  onCopy,
+}: {
+  code: string;
+  copied: boolean;
+  onCopy: () => void;
+}) {
+  return (
+    <div className="mt-3 flex items-center justify-center gap-3">
+      <p className="font-mono text-3xl font-extrabold tracking-[0.2em] text-navy">
+        {code}
+      </p>
+      <button
+        type="button"
+        onClick={onCopy}
+        className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-teal/30 bg-white px-3 py-2 text-sm font-bold text-teal-dark shadow-sm transition-colors hover:bg-teal/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"
+        aria-label={`Copy invite code ${code}`}
+      >
+        {copied ? (
+          <Check className="h-4 w-4" aria-hidden="true" />
+        ) : (
+          <Copy className="h-4 w-4" aria-hidden="true" />
+        )}
+        {copied ? "Copied" : "Copy"}
+      </button>
+    </div>
+  );
 }
 
 function Step({ number, children }: { number: string; children: React.ReactNode }) {

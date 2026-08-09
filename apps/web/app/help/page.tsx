@@ -67,9 +67,9 @@ const TOOLS = [
     ),
   },
   {
-    name: "Port Day Planner",
+    name: "Port Guides",
     description:
-      "Explore cruise ports with walking distances, excursion options, and local recommendations from real travelers.",
+      "Open cruise port guides with map snapshots, walking context, activities, food, and other port-day basics.",
     href: "/ports",
     icon: (
       <svg
@@ -93,10 +93,10 @@ const TOOLS = [
     ),
   },
   {
-    name: "Group Hub",
+    name: "MyCrew Check-ins",
     description:
-      "Coordinate group cruises with shared planning tools. Split costs, manage cabins, and keep everyone on the same page.",
-    href: "/groups",
+      "Open Crew check-in under More to share manual MyCrew status updates without constant location tracking.",
+    href: "/cruise-group-check-in-app",
     icon: (
       <svg
         className="h-6 w-6"
@@ -114,9 +114,9 @@ const TOOLS = [
     ),
   },
   {
-    name: "MyDay",
+    name: "MyDay, Spend & More",
     description:
-      "Your daily cruise command center — schedule, spend tracking, and MyCrew coordination all in one place.",
+      "Keep your itinerary and daily plans in MyDay, purchases in Spend, and Ports, MyCrew, sources, and settings under More.",
     href: "/myday",
     icon: (
       <svg
@@ -135,9 +135,9 @@ const TOOLS = [
     ),
   },
   {
-    name: "Loyalty Hub",
+    name: "Cruise Loyalty Guides",
     description:
-      "Compare loyalty programs across 9 cruise lines. See tier benefits, points requirements, and status-match opportunities.",
+      "Read website reference guides for cruise-line loyalty tiers, points requirements, benefits, and status-match context.",
     href: "/loyalty",
     icon: (
       <svg

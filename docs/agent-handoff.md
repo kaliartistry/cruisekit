@@ -1,6 +1,17 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-07-14
+Last verified: 2026-08-08
+
+## Android App Links publication candidate
+
+- Branch `codex/android-app-links-and-funnel-fixes` adds
+  `/.well-known/assetlinks.json` for `com.cruisekit.mobile` using the verified
+  Google Play **app-signing key** SHA-256 fingerprint
+  `A0:C9:44:74:E6:D8:AF:B1:0C:5D:30:B2:05:E6:6A:6A:19:88:BA:B1:01:90:9D:32:E2:05:74:E0:89:39:A0:97`.
+- This is a source publication candidate, not a verified live deployment.
+  Post-merge checks remain pending for HTTP 200 JSON on both `cruisekit.app` and
+  `www.cruisekit.app`, followed by Google's Digital Asset Links checker or
+  Android device re-verification.
 
 ## Deal-help retirement
 
