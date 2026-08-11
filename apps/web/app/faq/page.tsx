@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/app-screenshots/myday-today.png",
-        width: 1290,
-        height: 2796,
-        alt: "CruiseKit MyDay app screen",
+        url: "/assets/app-screenshots/mobile-feature-graphic.png",
+        width: 1024,
+        height: 500,
+        alt: "CruiseKit mobile app showing MyDay and drink package tracking",
       },
     ],
   },
@@ -262,11 +262,11 @@ export default function FAQPage() {
               <div className="grid gap-3">
                 <div className="relative min-h-[225px] overflow-hidden rounded-xl bg-gray-100">
                   <Image
-                    src="/assets/app-screenshots/myday-today.png"
-                    alt="CruiseKit MyDay app screen for cruise day planning"
+                    src="/assets/app-screenshots/mobile-feature-graphic.png"
+                    alt="CruiseKit mobile app showing MyDay and drink package tracking"
                     fill
                     sizes="(min-width: 1024px) 26vw, 55vw"
-                    className="object-cover object-top"
+                    className="object-contain"
                     priority
                   />
                 </div>

@@ -45,31 +45,45 @@ const GUIDE_VISUALS: Record<
   {
     src: string;
     alt: string;
+    width: number;
+    height: number;
   }
 > = {
   "first-time-cruise-guide": {
-    src: "/assets/app-screenshots/myday-itinerary.png",
-    alt: "CruiseKit itinerary screen for planning cruise days",
+    src: "/assets/app-screenshots/mobile-feature-graphic.png",
+    alt: "CruiseKit mobile app showing MyDay and drink package tracking",
+    width: 1024,
+    height: 500,
   },
   "cruise-packing-list": {
     src: "/assets/ships/oasis-of-the-seas.jpg",
     alt: "Cruise ship at sea for packing and boarding preparation",
+    width: 960,
+    height: 720,
   },
   "drink-package-guide": {
     src: "/assets/ports/cozumel.jpg",
     alt: "Sunny cruise port scene for onboard drink package planning",
+    width: 1920,
+    height: 1080,
   },
   "cruise-tipping-guide": {
     src: "/assets/ships/carnival-celebration.jpg",
     alt: "Cruise ship deck scene for planning gratuities and cash tips",
+    width: 1280,
+    height: 720,
   },
   "port-day-tips": {
     src: "/assets/ports/nassau.jpg",
     alt: "Nassau cruise port scene for port day planning",
+    width: 1280,
+    height: 856,
   },
   "cruise-insurance-explained": {
     src: "/assets/ports/san-juan.jpg",
     alt: "San Juan cruise port scene for trip insurance planning",
+    width: 2048,
+    height: 1536,
   },
 };
 
@@ -120,8 +134,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [
         {
           url: visual.src,
-          width: 1200,
-          height: 630,
+          width: visual.width,
+          height: visual.height,
           alt: visual.alt,
         },
       ],
@@ -725,7 +739,11 @@ export default async function GuideDetailPage({ params }: Props) {
                   alt={visual.alt}
                   fill
                   sizes="(min-width: 1024px) 44vw, 100vw"
-                  className="object-cover"
+                  className={
+                    visual.src.includes("mobile-feature-graphic")
+                      ? "object-contain"
+                      : "object-cover"
+                  }
                   priority
                   loading="eager"
                   fetchPriority="high"

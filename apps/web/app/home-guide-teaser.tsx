@@ -68,7 +68,7 @@ export default function HomeGuideTeaser() {
           <div className="relative aspect-[1290/2796]">
             <Image
               src="/assets/app-screenshots/drink-package.png"
-              alt="CruiseKit drink package tracker showing covered value and break-even progress"
+              alt="CruiseKit drink package setup showing a package selection, estimated amount paid, and start tracking action"
               fill
               sizes="280px"
               className="object-cover"

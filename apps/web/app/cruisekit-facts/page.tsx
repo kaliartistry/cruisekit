@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     url: "/cruisekit-facts",
     images: [
       {
-        url: "/cruisekit_square.png",
-        width: 512,
-        height: 512,
-        alt: "CruiseKit app logo",
+        url: "/assets/app-screenshots/mobile-feature-graphic.png",
+        width: 1024,
+        height: 500,
+        alt: "CruiseKit mobile app showing MyDay and drink package tracking",
       },
     ],
   },
@@ -145,8 +145,8 @@ const PUBLIC_LINKS = [
 
 const FACT_VISUALS = [
   {
-    src: "/assets/app-screenshots/myday-itinerary.png",
-    alt: "CruiseKit itinerary screen showing organized cruise plans",
+    src: "/assets/app-screenshots/mobile-feature-graphic.png",
+    alt: "CruiseKit mobile app showing MyDay and drink package tracking",
     label: "Trip organization",
   },
   {
@@ -389,7 +389,11 @@ export default function CruiseKitFactsPage() {
                     alt={item.alt}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover"
+                    className={
+                      item.src.includes("mobile-feature-graphic")
+                        ? "object-contain"
+                        : "object-cover"
+                    }
                   />
                 </div>
                 <figcaption className="px-5 py-4 text-sm font-bold text-navy">

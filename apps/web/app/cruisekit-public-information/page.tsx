@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     url: "/cruisekit-public-information",
     images: [
       {
-        url: "/assets/app-screenshots/myday-itinerary.png",
-        width: 1290,
-        height: 2796,
-        alt: "CruiseKit app itinerary screen",
+        url: "/assets/app-screenshots/mobile-feature-graphic.png",
+        width: 1024,
+        height: 500,
+        alt: "CruiseKit mobile app showing MyDay and drink package tracking",
       },
     ],
   },
@@ -255,11 +255,11 @@ export default function CruiseKitPublicInformationPage() {
               </p>
               <div className="relative mt-5 aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 lg:hidden">
                 <Image
-                  src="/assets/app-screenshots/myday-itinerary.png"
-                  alt="CruiseKit itinerary screen showing cruise day planning"
+                  src="/assets/app-screenshots/mobile-feature-graphic.png"
+                  alt="CruiseKit mobile app showing MyDay and drink package tracking"
                   fill
                   sizes="100vw"
-                  className="object-cover object-top"
+                  className="object-contain"
                   priority
                   loading="eager"
                   fetchPriority="high"
@@ -291,11 +291,11 @@ export default function CruiseKitPublicInformationPage() {
             <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
               <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-gray-100">
                 <Image
-                  src="/assets/app-screenshots/myday-itinerary.png"
-                  alt="CruiseKit itinerary screen showing cruise day planning"
+                  src="/assets/app-screenshots/mobile-feature-graphic.png"
+                  alt="CruiseKit mobile app showing MyDay and drink package tracking"
                   fill
                   sizes="(min-width: 1024px) 44vw, 100vw"
-                  className="object-cover object-top"
+                  className="object-contain"
                   priority
                   loading="eager"
                   fetchPriority="high"

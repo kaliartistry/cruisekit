@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     url: "/guides",
     images: [
       {
-        url: "/assets/app-screenshots/myday-itinerary.png",
-        width: 1290,
-        height: 2796,
-        alt: "CruiseKit itinerary screen for cruise planning",
+        url: "/assets/app-screenshots/mobile-feature-graphic.png",
+        width: 1024,
+        height: 500,
+        alt: "CruiseKit mobile app showing MyDay and drink package tracking",
       },
     ],
   },
@@ -128,14 +128,14 @@ export default function GuidesPage() {
             <div className="grid gap-3 sm:grid-cols-[1.15fr_0.85fr]">
               <div className="relative min-h-[310px] overflow-hidden rounded-xl bg-gray-100">
                 <Image
-                  src="/assets/app-screenshots/myday-itinerary.png"
-                  alt="CruiseKit itinerary screen used for cruise guide planning"
+                  src="/assets/app-screenshots/mobile-feature-graphic.png"
+                  alt="CruiseKit mobile app showing MyDay and drink package tracking"
                   fill
                   priority
                   loading="eager"
                   fetchPriority="high"
                   sizes="(min-width: 1024px) 32vw, 60vw"
-                  className="object-cover object-top"
+                  className="object-contain"
                 />
               </div>
               <div className="grid gap-3">

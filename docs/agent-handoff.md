@@ -1,6 +1,39 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-08-09
+Last verified: 2026-08-10
+
+## Mobile 1.0.18 website screenshot refresh candidate
+
+- Candidate branch: `codex/refresh-approved-mobile-screenshots` from live
+  `main` commit `43d3cae5af65f8dab601d227c0f2267cde84b5ee`.
+- The seven stale canonical website phone captures are replaced byte-for-byte
+  with the approved 1.0.18 iPhone 6.7-inch release assets. The existing
+  `mycrew-invite.png` already matched the approved release asset and is kept.
+- Every reference to the retired May-era five-tab `myday-today`,
+  `myday-itinerary`, and `myday-crew-map` visuals is remapped to a current
+  MyDay, itinerary-ports, or MyCrew invite asset. The legacy files remain
+  preserved but are no longer referenced.
+- MyDay and group-check-in captions, drink-package alt text, first-time guide
+  image metadata, and the `/app` sample-data disclosure are aligned with what
+  the approved frames actually show.
+- The approved 1024x500 mobile feature graphic is added for landscape cards
+  and social previews so editorial pages no longer crop a portrait phone frame
+  down to an unreadable strip.
+- The overlapping `/myday` hero uses three current, screen-only 1.0.18 source
+  captures so its overlap does not hide marketing headlines. The complete
+  approved presentation frames remain unchanged in the screenshot galleries.
+- The homepage deal-card port chips now use unique React keys, removing the
+  existing Tampa/Galveston duplicate-key errors encountered during rendered QA.
+- Android tablet images are intentionally excluded. The local 7-inch and
+  10-inch sets predate the approved iPad captures and are not current Android
+  device screenshots.
+- Local verification passed: web lint; 13 test files / 37 tests; Next.js static
+  export of 193 pages; approved-asset hash checks; and rendered QA at 1440x1000
+  and 390x844 across `/`, `/app`, `/myday`, `/cruise-group-check-in-app`,
+  `/faq`, `/what-is-cruisekit`, and the first-time guide. No horizontal
+  overflow was observed, and the app gallery/menu/anchor navigation worked.
+- Pending: merge the reviewed branch, wait for GitHub Pages, and verify the
+  refreshed asset hashes and key pages directly on `https://cruisekit.app`.
 
 ## Android App Links publication
 
@@ -131,15 +164,23 @@ Re-run the relevant checks after source changes; these numbers record the 2026-0
 
 ## Important compatibility decision
 
-Do not deploy the stricter member-only Firestore rules until mobile rollout adoption is sufficient. Public mobile version 1.0.14 still uses the older direct-invite flow, and an early rules deployment would break that flow. Re-evaluate only after the compatible mobile release is public and adoption is confirmed.
+Do not deploy the stricter member-only Firestore rules until mobile rollout
+adoption is sufficient. The compatible 1.0.18 release is now public on both
+stores, but adoption has not been measured or approved as sufficient. Keep the
+rules gate closed until that separate verification is complete.
 
 ## Cross-platform release state
 
-- Mobile release: `1.0.15+39`.
-- iOS: submitted to App Store Connect and **Waiting for Review**; automatic release is enabled after approval.
-- Android: build 39 is available to internal testers. The full production rollout is prepared but Play Console is blocking submission with an incorrect `Incomplete advertising ID declaration` result.
-- Android Advertising ID declaration: **No**. The release merged manifest does not contain `com.google.android.gms.permission.AD_ID`, and the app does not use advertising ID.
-- Google Play support case: `7-6177000041483`.
+- Mobile release: `1.0.18+43`.
+- iOS: App Store Connect and Apple's public lookup show 1.0.18/build 43
+  **Ready for Distribution** after manual release on 2026-08-10 at 10:43 PM ET.
+  The public listing supports iPhone and iPad and has eight screenshots for
+  each device family.
+- Android: Google Play production shows 1.0.18/code 43 **Available on Google
+  Play** at 100% in the existing one-country scope, with no unpublished
+  changes. Alpha 18 and Internal 39 remain unchanged.
+- The Google Play default-listing screenshots still show the July listing set;
+  this website-only refresh does not mutate Play listing media.
 - Mobile `master` is not the shipped 1.0.14/1.0.15 lineage. Do not merge or rewrite it until mobile issue #17 is resolved by Kali.
 
 ## Required handoff workflow

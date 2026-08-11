@@ -293,9 +293,9 @@ export default function ContentSections() {
 
                     {deal.ports.length > 0 && (
                       <div className="flex flex-wrap gap-1 mt-2">
-                        {deal.ports.slice(0, 3).map((port) => (
+                        {deal.ports.slice(0, 3).map((port, index) => (
                           <span
-                            key={port}
+                            key={`${port}-${index}`}
                             className="text-[10px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded"
                           >
                             {getPortWithCountry(port)}

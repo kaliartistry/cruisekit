@@ -51,11 +51,11 @@ export default function AuthorityHubTeaser() {
           <div className="overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
             <div className="relative aspect-[4/3] bg-gray-100">
               <Image
-                src="/assets/app-screenshots/myday-home.png"
-                alt="CruiseKit MyDay screen showing saved cruise tools"
+                src="/assets/app-screenshots/mobile-feature-graphic.png"
+                alt="CruiseKit mobile app showing MyDay and drink package tracking"
                 fill
                 sizes="(min-width: 1024px) 22vw, 100vw"
-                className="object-cover object-top"
+                className="object-contain"
               />
             </div>
           </div>
