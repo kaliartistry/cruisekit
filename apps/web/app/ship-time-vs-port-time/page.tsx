@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     url: "/ship-time-vs-port-time",
     images: [
       {
-        url: "/cruisekit_square.png",
-        width: 512,
-        height: 512,
-        alt: "CruiseKit app logo",
+        url: "/assets/app-screenshots/mobile-feature-graphic.png",
+        width: 1024,
+        height: 500,
+        alt: "CruiseKit mobile app showing MyDay and drink package tracking",
       },
     ],
   },
@@ -99,9 +99,9 @@ const TIME_VISUALS = [
       "Once you step off the ship, local signs, taxis, and tours may be running on port time. That is why the ship's instruction matters.",
   },
   {
-    src: "/assets/app-screenshots/myday-itinerary.png",
-    alt: "CruiseKit itinerary screen for cruise day planning",
-    title: "Keep the plan visible",
+    src: "/assets/app-screenshots/mobile-feature-graphic.png",
+    alt: "CruiseKit mobile app showing MyDay and drink package tracking",
+    title: "Keep the day context visible",
     description:
       "Use the app for saved plans and day structure, then check official onboard information and set phone alarms before committing to the timing.",
   },
@@ -348,7 +348,11 @@ export default function ShipTimeVsPortTimePage() {
                     alt={item.alt}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover"
+                    className={
+                      item.src.includes("mobile-feature-graphic")
+                        ? "object-contain"
+                        : "object-cover"
+                    }
                   />
                 </div>
                 <div className="p-5">

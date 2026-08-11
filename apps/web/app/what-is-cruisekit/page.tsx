@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     url: "/what-is-cruisekit",
     images: [
       {
-        url: "/cruisekit_square.png",
-        width: 512,
-        height: 512,
-        alt: "CruiseKit app logo",
+        url: "/assets/app-screenshots/mobile-feature-graphic.png",
+        width: 1024,
+        height: 500,
+        alt: "CruiseKit mobile app showing MyDay and drink package tracking",
       },
     ],
   },
@@ -147,11 +147,11 @@ const NEXT_LINKS = [
 
 const VISUAL_STORIES = [
   {
-    src: "/assets/app-screenshots/myday-itinerary.png",
-    alt: "CruiseKit itinerary screen showing cruise day planning context",
-    title: "A cruise day view",
+    src: "/assets/app-screenshots/itinerary-ports.png",
+    alt: "CruiseKit Your ports screen showing the ports tied to a saved itinerary",
+    title: "Your saved itinerary ports",
     description:
-      "CruiseKit is built around the actual shape of a trip: sea days, port days, plans, and the small details people need close by.",
+      "CruiseKit keeps the ports tied to a saved trip close by, with practical dock, walking, currency, and Wi-Fi context for each stop.",
   },
   {
     src: "/assets/ports/cozumel.jpg",
@@ -255,11 +255,11 @@ export default function WhatIsCruiseKitPage() {
               </p>
               <div className="relative mt-5 aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 lg:hidden">
                 <Image
-                  src="/assets/app-screenshots/myday-today.png"
-                  alt="CruiseKit MyDay screen showing today view for cruise planning"
+                  src="/assets/app-screenshots/mobile-feature-graphic.png"
+                  alt="CruiseKit mobile app showing MyDay and drink package tracking"
                   fill
                   sizes="100vw"
-                  className="object-cover object-top"
+                  className="object-contain"
                   loading="eager"
                   fetchPriority="high"
                   priority
@@ -299,11 +299,11 @@ export default function WhatIsCruiseKitPage() {
             <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
               <div className="relative mb-5 aspect-[16/9] overflow-hidden rounded-xl bg-gray-100">
                 <Image
-                  src="/assets/app-screenshots/myday-today.png"
-                  alt="CruiseKit MyDay screen showing today view for cruise planning"
+                  src="/assets/app-screenshots/mobile-feature-graphic.png"
+                  alt="CruiseKit mobile app showing MyDay and drink package tracking"
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover object-top"
+                  className="object-contain"
                   loading="eager"
                   fetchPriority="high"
                   priority

@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     url: "/cruise-group-check-in-app",
     images: [
       {
-        url: "/assets/app-screenshots/myday-crew-map.png",
-        width: 1290,
-        height: 2796,
-        alt: "CruiseKit MyCrew screen showing group check-ins and map context",
+        url: "/assets/app-screenshots/mobile-feature-graphic.png",
+        width: 1024,
+        height: 500,
+        alt: "CruiseKit mobile app showing MyDay, crew check-in, and drink package tracking",
       },
     ],
   },
@@ -112,25 +112,25 @@ const FLOW = [
 
 const SCREENSHOTS = [
   {
-    src: "/assets/app-screenshots/myday-crew-map.png",
-    alt: "CruiseKit MyCrew screen under More showing a port map, crew list, and check-in actions",
-    title: "MyCrew check-ins",
+    src: "/assets/app-screenshots/mycrew-invite.png",
+    alt: "CruiseKit MyCrew invite sheet showing a QR code, join code, copy, email, and share actions",
+    title: "Invite MyCrew remotely",
     description:
-      "A lightweight status view for group coordination during cruise days.",
+      "Share a code, QR link, email, or text so everyone joins from their own phone before the trip.",
   },
   {
-    src: "/assets/app-screenshots/myday-today.png",
+    src: "/assets/app-screenshots/myday-home.png",
     alt: "CruiseKit MyDay Today screen showing device time, port-local time, and daily plans",
     title: "Day context",
     description:
       "Group updates make more sense when the day's timing and plans are visible too.",
   },
   {
-    src: "/assets/app-screenshots/myday-itinerary.png",
-    alt: "CruiseKit itinerary screen showing cruise days and port context",
-    title: "Itinerary anchor",
+    src: "/assets/app-screenshots/itinerary-ports.png",
+    alt: "CruiseKit Your ports screen showing ports tied to a saved itinerary",
+    title: "Saved itinerary ports",
     description:
-      "Sea days, port days, and onboard timing stay connected to the sailing plan.",
+      "Port guides and practical day context stay connected to the saved sailing.",
   },
 ];
 
@@ -247,8 +247,8 @@ export default function CruiseGroupCheckInAppPage() {
               </p>
               <div className="relative mt-5 aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 lg:hidden">
                 <Image
-                  src="/assets/app-screenshots/myday-crew-map.png"
-                  alt="CruiseKit MyCrew screen showing group check-ins and map context"
+                  src="/assets/app-screenshots/mycrew-invite.png"
+                  alt="CruiseKit MyCrew invite screen showing a QR code and remote sharing options"
                   fill
                   sizes="100vw"
                   className="object-cover object-top"
@@ -291,8 +291,8 @@ export default function CruiseGroupCheckInAppPage() {
             <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
               <div className="relative mx-auto mb-6 aspect-[1290/2796] w-full max-w-[250px] overflow-hidden rounded-[2rem] border border-white bg-navy shadow-xl ring-1 ring-black/10">
                 <Image
-                  src="/assets/app-screenshots/myday-crew-map.png"
-                  alt="CruiseKit MyCrew screen showing group check-ins and map context"
+                  src="/assets/app-screenshots/mycrew-invite.png"
+                  alt="CruiseKit MyCrew invite screen showing a QR code and remote sharing options"
                   fill
                   sizes="250px"
                   className="object-cover"
@@ -308,7 +308,7 @@ export default function CruiseGroupCheckInAppPage() {
                     Built around cruise days
                   </p>
                   <p className="mt-1 text-xl font-bold text-navy">
-                    MyCrew check-ins under More
+                    MyCrew invites and check-ins under More
                   </p>
                 </div>
               </div>
@@ -359,8 +359,8 @@ export default function CruiseGroupCheckInAppPage() {
             </h2>
             <p className="mt-3 text-base leading-7 text-gray-600">
               The check-in story is part of a broader cruise-day workflow:
-              status, schedule, timing, spending, and itinerary context in one
-              app surface.
+              remote setup, status, schedule, timing, spending, and itinerary
+              context in one app surface.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">

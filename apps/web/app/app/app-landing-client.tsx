@@ -65,7 +65,7 @@ const SCREENSHOTS = [
   {
     src: "/assets/app-screenshots/drink-package.png",
     title: "Drink package",
-    body: "Track covered value and break-even progress without encouraging overdrinking.",
+    body: "Choose the package and actual amount paid, then track covered value without encouraging overdrinking.",
   },
   {
     src: "/assets/app-screenshots/itinerary-ports.png",
@@ -160,7 +160,8 @@ export default function AppLandingClient() {
             <div className="grid gap-4">
               <PhoneScreenshot
                 src="/assets/app-screenshots/drink-package.png"
-                alt="CruiseKit drink package tracker showing covered value and break-even progress"
+                alt="CruiseKit drink package setup showing a package selection, estimated amount paid, and start tracking action"
+                priority
               />
               <div className="rounded-lg border border-teal/20 bg-teal/10 p-4">
                 <div className="flex items-center gap-3">
@@ -217,7 +218,8 @@ export default function AppLandingClient() {
             <p className="mt-3 text-base leading-7 text-gray-600">
               These are current app screens, focused on the moments cruisers
               actually use onboard: the day view, covered package value, port
-              maps, and joining a crew.
+              maps, and joining a crew. Sailing dates and spending amounts are
+              illustrative sample data.
             </p>
           </div>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -262,7 +264,7 @@ function PhoneScreenshot({
           fill
           sizes="(min-width: 1024px) 260px, 42vw"
           className="object-cover"
-          priority={priority}
+          loading={priority ? "eager" : "lazy"}
         />
       </div>
     </div>

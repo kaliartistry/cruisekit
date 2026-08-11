@@ -32,8 +32,8 @@ const CATEGORY_LABELS: Record<GuideCategory, string> = {
 
 const GUIDE_VISUALS: Record<string, { src: string; alt: string }> = {
   "first-time-cruise-guide": {
-    src: "/assets/app-screenshots/myday-itinerary.png",
-    alt: "CruiseKit itinerary screen for planning a first cruise",
+    src: "/assets/app-screenshots/mobile-feature-graphic.png",
+    alt: "CruiseKit mobile app showing MyDay and drink package tracking",
   },
   "cruise-packing-list": {
     src: "/assets/ships/oasis-of-the-seas.jpg",
@@ -107,7 +107,12 @@ export default function GuidesIndexClient() {
                   alt={visual.alt}
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  className={cn(
+                    "transition-transform duration-300",
+                    visual.src.includes("mobile-feature-graphic")
+                      ? "object-contain"
+                      : "object-cover group-hover:scale-[1.03]",
+                  )}
                 />
               </div>
               <div className="flex flex-1 flex-col p-6">

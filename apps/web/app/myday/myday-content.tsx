@@ -115,27 +115,27 @@ const TABS = [
 const APP_SCREENSHOTS = [
   {
     eyebrow: "Today",
-    title: "Device time, port time, and what is next",
+    title: "Today’s cruise context at a glance",
     description:
-      "MyDay keeps clocks, all-aboard context, open venues, and your daily schedule in one cruise-day view.",
-    src: "/assets/app-screenshots/myday-today.png",
-    alt: "CruiseKit iPhone MyDay view showing device time, port-local time, venues, and schedule",
+      "MyDay keeps today’s port, device and port time, all-aboard context, budget, saved ports, and crew check-in in one view.",
+    src: "/assets/app-screenshots/myday-home.png",
+    alt: "CruiseKit iPhone MyDay view showing today’s cruise port, all-aboard time, budget, saved ports, and crew check-in",
   },
   {
     eyebrow: "Itinerary",
-    title: "The day makes sense in context",
+    title: "Only the ports for your saved itinerary",
     description:
-      "CruiseKit anchors MyDay to the sailing itinerary, so sea days, port days, and all-aboard timing stay easy to scan.",
-    src: "/assets/app-screenshots/myday-itinerary.png",
-    alt: "CruiseKit iPhone itinerary screen showing current cruise day and upcoming ports",
+      "CruiseKit keeps the port guides tied to your saved sailing easy to scan, with day, dock, walking, currency, and Wi-Fi context.",
+    src: "/assets/app-screenshots/itinerary-ports.png",
+    alt: "CruiseKit iPhone Your ports screen showing the ports tied to a saved itinerary",
   },
   {
     eyebrow: "MyCrew",
-    title: "Check-ins without constant location tracking",
+    title: "Invite MyCrew before the trip",
     description:
-      "Open MyCrew under More for simple status updates and map context without turning the app into always-on GPS tracking.",
-    src: "/assets/app-screenshots/myday-crew-map.png",
-    alt: "CruiseKit iPhone MyCrew screen under More showing a port map, group check-ins, and status buttons",
+      "Share a join code, QR link, email, or text so everyone can connect from their own phone before check-ins begin.",
+    src: "/assets/app-screenshots/mycrew-invite.png",
+    alt: "CruiseKit iPhone MyCrew invite sheet showing a QR code, join code, copy, email, and share actions",
   },
 ] as const;
 
@@ -227,19 +227,21 @@ export default function MyDayContent() {
           >
             <div className="absolute left-4 top-12 hidden w-[30%] -rotate-6 opacity-70 blur-[0.2px] sm:block">
               <PhoneFrame
-                src="/assets/app-screenshots/myday-itinerary.png"
+                src="/assets/app-screenshots/itinerary-hero-screen.png"
                 alt="CruiseKit itinerary screenshot"
+                priority
               />
             </div>
             <div className="absolute bottom-8 right-2 hidden w-[32%] rotate-6 opacity-80 blur-[0.2px] sm:block">
               <PhoneFrame
-                src="/assets/app-screenshots/myday-crew-map.png"
-                alt="CruiseKit MyCrew map screenshot"
+                src="/assets/app-screenshots/mycrew-hero-screen.png"
+                alt="CruiseKit MyCrew invite screenshot"
+                priority
               />
             </div>
             <div className="relative z-10 mx-auto mt-2 w-[62%] min-w-[220px] max-w-[270px] sm:mt-0">
               <PhoneFrame
-                src="/assets/app-screenshots/myday-today.png"
+                src="/assets/app-screenshots/myday-hero-screen.png"
                 alt="CruiseKit MyDay Today screenshot"
                 priority
               />
@@ -291,7 +293,7 @@ export default function MyDayContent() {
             >
               MyDay is not just a website promise. The mobile app already
               includes the cruise-day screens people need most: time context,
-              itinerary context, and group coordination.
+              saved itinerary ports, and remote MyCrew setup.
             </motion.p>
           </motion.div>
 
@@ -483,7 +485,7 @@ function PhoneFrame({
         alt={alt}
         fill
         sizes="(min-width: 1024px) 270px, 70vw"
-        priority={priority}
+        loading={priority ? "eager" : "lazy"}
         className="object-cover"
       />
     </div>
