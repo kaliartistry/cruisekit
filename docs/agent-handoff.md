@@ -2,10 +2,12 @@
 
 Last verified: 2026-08-10
 
-## Mobile 1.0.18 website screenshot refresh candidate
+## Mobile 1.0.18 website screenshot refresh publication
 
-- Candidate branch: `codex/refresh-approved-mobile-screenshots` from live
-  `main` commit `43d3cae5af65f8dab601d227c0f2267cde84b5ee`.
+- PR #59 merged `codex/refresh-approved-mobile-screenshots` to `main` as
+  `a51a0f4ab412daf80f590423c664303b260ae034` on 2026-08-10 at 11:24 PM ET.
+- GitHub Pages run `31455308346` built and deployed that exact commit
+  successfully at 2026-08-10 11:26 PM ET.
 - The seven stale canonical website phone captures are replaced byte-for-byte
   with the approved 1.0.18 iPhone 6.7-inch release assets. The existing
   `mycrew-invite.png` already matched the approved release asset and is kept.
@@ -32,8 +34,12 @@ Last verified: 2026-08-10
   and 390x844 across `/`, `/app`, `/myday`, `/cruise-group-check-in-app`,
   `/faq`, `/what-is-cruisekit`, and the first-time guide. No horizontal
   overflow was observed, and the app gallery/menu/anchor navigation worked.
-- Pending: merge the reviewed branch, wait for GitHub Pages, and verify the
-  refreshed asset hashes and key pages directly on `https://cruisekit.app`.
+- Live verification passed after the Pages deployment: all 12 approved
+  presentation, feature, and hero image files matched their expected SHA-256
+  hashes; `/`, `/app`, `/myday`, `/cruise-group-check-in-app`, `/faq`,
+  `/what-is-cruisekit`, `/guides`, and `/cruisekit-public-information`
+  returned HTTP 200; and desktop/mobile browser QA on `/myday` and `/app`
+  found no broken images, horizontal overflow, or console errors.
 
 ## Android App Links publication
 
