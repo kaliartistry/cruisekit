@@ -1,6 +1,40 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-08-10
+Last verified: 2026-08-23
+
+## Drink-package ToolLoop and calculator sharing publication
+
+- PR #61 merged to `main` as
+  `b04772358b6195e76f3562ffe38aef1c52fcd4de` on 2026-08-23. GitHub Pages
+  run `32684219903` built and deployed that exact merge successfully.
+- The existing canonical Drink Package Calculator remains
+  `https://cruisekit.app/cruise-drink-package-calculator/`; no duplicate tool
+  route was added. The no-trailing-slash variant returns HTTP 301 to the
+  canonical slash URL. The full-cruise-cost routes, editorial drink-package
+  guide, and unrelated MSC price tracker remain separate.
+- The drink calculator now uses current records verified 2026-08-23 for all
+  eight supported lines, shows the verification date and 30-day maintainer
+  cadence, and supports whole-trip gratuity, required younger-guest packages,
+  partial-sailing coverage, bundled perks, and Virgin Bar Tab credit.
+- Drink-calculator analytics emit only cruise line, bounded party-size range,
+  bounded sailing-length range, bounded result bucket, and completion. Exact
+  prices, spend, savings, and itinerary details are not sent. Saved estimates
+  remain browser-local.
+- Search Console baseline values and the preregistered six-week query set are
+  preserved in
+  `docs/seo/drink-package-tooloop-launch-baseline-2026-08-23.md`. Those values
+  are the predecessor capture through 2026-08-21, not a fresh release-day pull.
+- Two share surfaces are live and were verified independently: **Share result**
+  on `/cruise-drink-package-calculator/` and **Share result** on the separate
+  `/calculator/` Total Cruise Cost result. Both opened the native/browser share
+  flow at 1440x1000 and 390x844. The Total Cruise Cost summary includes the
+  advertised fare, estimated real total, broad cost categories, and canonical
+  calculator link; it omits ship, departure, itinerary, child, and passenger
+  details.
+- Verification passed: 15 web test files / 55 tests; scoped ESLint; a Next.js
+  static export of 193 pages; local and live desktop/mobile rendered QA; live
+  partial-sailing and MSC Minors Package calculations; canonical behavior; and
+  zero local or live browser console errors.
 
 ## Mobile 1.0.18 website screenshot refresh publication
 
