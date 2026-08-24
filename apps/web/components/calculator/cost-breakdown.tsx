@@ -100,7 +100,21 @@ function getLineName(cruiseLineId: string): string {
 /*  percentage gap the headline and gives users a sharable one-liner.  */
 /* ------------------------------------------------------------------ */
 
-function DeltaHero({
+export function buildTotalCruiseShareText({
+  advertised,
+  real,
+}: {
+  advertised: number;
+  real: number;
+}) {
+  return (
+    `I ran the numbers for a cruise. Fare: $${advertised.toLocaleString()}. ` +
+    `Estimated real total: $${Math.round(real).toLocaleString()} after gratuities, drinks, WiFi, excursions, and port spending. ` +
+    "Calculate yours at https://cruisekit.app/calculator/"
+  );
+}
+
+export function DeltaHero({
   lineName,
   cruiseLineId,
   advertised,
@@ -113,34 +127,40 @@ function DeltaHero({
   real: number;
   percentOver: number;
 }) {
-  const [copied, setCopied] = useState(false);
+  const [shareStatus, setShareStatus] = useState<
+    "idle" | "shared" | "copied" | "canceled" | "error"
+  >("idle");
   const hidden = Math.max(0, real - advertised);
   // Bar widths clamp at 0–100 so a negative or zero delta still renders cleanly.
   const advertisedPct = real > 0 ? Math.max(0, Math.min(100, (advertised / real) * 100)) : 0;
   const hiddenPct = 100 - advertisedPct;
 
-  const shareText =
-    `I ran the numbers for a cruise. Fare: $${advertised.toLocaleString()}. ` +
-    `Estimated real total: $${Math.round(real).toLocaleString()} after gratuities, drinks, WiFi, excursions, and port spending. ` +
-    `Calculate yours at cruisekit.app/calculator`;
+  const shareText = buildTotalCruiseShareText({ advertised, real });
 
   const handleShare = async () => {
     if (typeof navigator !== "undefined" && "share" in navigator) {
       try {
-        await navigator.share({ text: shareText });
+        await navigator.share({
+          title: "CruiseKit Total Cruise Cost Calculator",
+          text: shareText,
+        });
         trackResultShared({ cruiseLineId, method: "native_share" });
+        setShareStatus("shared");
         return;
-      } catch {
-        // User cancelled or share unavailable — fall through to clipboard.
+      } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          setShareStatus("canceled");
+          return;
+        }
+        // A non-cancellation native-share failure can still use the clipboard.
       }
     }
     try {
       await navigator.clipboard.writeText(shareText);
       trackResultShared({ cruiseLineId, method: "clipboard" });
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2200);
+      setShareStatus("copied");
     } catch {
-      // Clipboard denied — no-op; UI gives no false feedback.
+      setShareStatus("error");
     }
   };
 
@@ -204,28 +224,39 @@ function DeltaHero({
           show.
         </p>
 
-        {/* Share link (growth loop) */}
+        {/* Share result (growth loop) */}
         <button
+          type="button"
           onClick={handleShare}
           className={cn(
-            "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors",
-            copied
+            "inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-bold transition-colors sm:w-auto",
+            shareStatus === "copied" || shareStatus === "shared"
               ? "border-green-200 bg-green-50 text-green-700"
               : "border-navy/20 bg-white text-navy hover:bg-navy/5"
           )}
         >
-          {copied ? (
+          {shareStatus === "copied" || shareStatus === "shared" ? (
             <>
               <Check className="h-4 w-4" />
-              Copied — share with a friend
+              {shareStatus === "shared" ? "Result shared" : "Share text copied"}
             </>
           ) : (
             <>
               <Share2 className="h-4 w-4" />
-              Share this gap
+              Share result
             </>
           )}
         </button>
+        {shareStatus === "canceled" && (
+          <p className="mt-2 text-xs font-semibold text-gray-500" role="status">
+            Share canceled.
+          </p>
+        )}
+        {shareStatus === "error" && (
+          <p className="mt-2 text-xs font-semibold text-coral" role="status">
+            Result could not be shared in this browser.
+          </p>
+        )}
       </div>
     </motion.div>
   );
