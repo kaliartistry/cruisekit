@@ -114,28 +114,36 @@ export function buildTotalCruiseShareText({
   );
 }
 
-export function DeltaHero({
-  lineName,
-  cruiseLineId,
-  advertised,
-  real,
-  percentOver,
+export function buildTotalCruiseComparisonShareText({
+  primaryLineName,
+  primaryTotal,
+  comparisonLineName,
+  comparisonTotal,
 }: {
-  lineName: string;
+  primaryLineName: string;
+  primaryTotal: number;
+  comparisonLineName: string;
+  comparisonTotal: number;
+}) {
+  return (
+    `I compared ${primaryLineName} and ${comparisonLineName}. ` +
+    `Estimated real totals: ${primaryLineName} $${Math.round(primaryTotal).toLocaleString()} vs. ` +
+    `${comparisonLineName} $${Math.round(comparisonTotal).toLocaleString()}. ` +
+    "These broad estimates include fare, gratuities, drinks, WiFi, excursions, and port spending. " +
+    "Compare yours at https://cruisekit.app/calculator/"
+  );
+}
+
+function ShareResultButton({
+  shareText,
+  cruiseLineId,
+}: {
+  shareText: string;
   cruiseLineId: string;
-  advertised: number;
-  real: number;
-  percentOver: number;
 }) {
   const [shareStatus, setShareStatus] = useState<
     "idle" | "shared" | "copied" | "canceled" | "error"
   >("idle");
-  const hidden = Math.max(0, real - advertised);
-  // Bar widths clamp at 0–100 so a negative or zero delta still renders cleanly.
-  const advertisedPct = real > 0 ? Math.max(0, Math.min(100, (advertised / real) * 100)) : 0;
-  const hiddenPct = 100 - advertisedPct;
-
-  const shareText = buildTotalCruiseShareText({ advertised, real });
 
   const handleShare = async () => {
     if (typeof navigator !== "undefined" && "share" in navigator) {
@@ -163,6 +171,64 @@ export function DeltaHero({
       setShareStatus("error");
     }
   };
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={handleShare}
+        className={cn(
+          "inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-bold transition-colors sm:w-auto",
+          shareStatus === "copied" || shareStatus === "shared"
+            ? "border-green-200 bg-green-50 text-green-700"
+            : "border-navy/20 bg-white text-navy hover:bg-navy/5"
+        )}
+      >
+        {shareStatus === "copied" || shareStatus === "shared" ? (
+          <>
+            <Check className="h-4 w-4" />
+            {shareStatus === "shared" ? "Result shared" : "Share text copied"}
+          </>
+        ) : (
+          <>
+            <Share2 className="h-4 w-4" />
+            Share result
+          </>
+        )}
+      </button>
+      {shareStatus === "canceled" && (
+        <p className="mt-2 text-xs font-semibold text-gray-500" role="status">
+          Share canceled.
+        </p>
+      )}
+      {shareStatus === "error" && (
+        <p className="mt-2 text-xs font-semibold text-coral" role="status">
+          Result could not be shared in this browser.
+        </p>
+      )}
+    </>
+  );
+}
+
+export function DeltaHero({
+  lineName,
+  cruiseLineId,
+  advertised,
+  real,
+  percentOver,
+}: {
+  lineName: string;
+  cruiseLineId: string;
+  advertised: number;
+  real: number;
+  percentOver: number;
+}) {
+  const hidden = Math.max(0, real - advertised);
+  // Bar widths clamp at 0–100 so a negative or zero delta still renders cleanly.
+  const advertisedPct = real > 0 ? Math.max(0, Math.min(100, (advertised / real) * 100)) : 0;
+  const hiddenPct = 100 - advertisedPct;
+
+  const shareText = buildTotalCruiseShareText({ advertised, real });
 
   return (
     <motion.div
@@ -225,38 +291,7 @@ export function DeltaHero({
         </p>
 
         {/* Share result (growth loop) */}
-        <button
-          type="button"
-          onClick={handleShare}
-          className={cn(
-            "inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-bold transition-colors sm:w-auto",
-            shareStatus === "copied" || shareStatus === "shared"
-              ? "border-green-200 bg-green-50 text-green-700"
-              : "border-navy/20 bg-white text-navy hover:bg-navy/5"
-          )}
-        >
-          {shareStatus === "copied" || shareStatus === "shared" ? (
-            <>
-              <Check className="h-4 w-4" />
-              {shareStatus === "shared" ? "Result shared" : "Share text copied"}
-            </>
-          ) : (
-            <>
-              <Share2 className="h-4 w-4" />
-              Share result
-            </>
-          )}
-        </button>
-        {shareStatus === "canceled" && (
-          <p className="mt-2 text-xs font-semibold text-gray-500" role="status">
-            Share canceled.
-          </p>
-        )}
-        {shareStatus === "error" && (
-          <p className="mt-2 text-xs font-semibold text-coral" role="status">
-            Result could not be shared in this browser.
-          </p>
-        )}
+        <ShareResultButton shareText={shareText} cruiseLineId={cruiseLineId} />
       </div>
     </motion.div>
   );
@@ -841,7 +876,7 @@ function ComparisonColumn({
 /*  Comparison mode layout                                             */
 /* ------------------------------------------------------------------ */
 
-function ComparisonBreakdown({
+export function ComparisonBreakdown({
   breakdown,
   cruiseLineId,
   comparisonBreakdown,
@@ -860,6 +895,12 @@ function ComparisonBreakdown({
   const cheaperName = primaryCheaper
     ? getLineName(cruiseLineId)
     : getLineName(comparisonCruiseLineId);
+  const shareText = buildTotalCruiseComparisonShareText({
+    primaryLineName: getLineName(cruiseLineId),
+    primaryTotal: breakdown.grandTotal,
+    comparisonLineName: getLineName(comparisonCruiseLineId),
+    comparisonTotal: comparisonBreakdown.grandTotal,
+  });
 
   return (
     <div className="mx-auto max-w-5xl">
@@ -930,6 +971,9 @@ function ComparisonBreakdown({
             with {cheaperName}
           </p>
         )}
+        <div className="mt-4">
+          <ShareResultButton shareText={shareText} cruiseLineId={cruiseLineId} />
+        </div>
       </motion.div>
 
       {/* Actions */}
