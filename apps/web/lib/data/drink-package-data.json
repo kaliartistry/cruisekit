@@ -3,8 +3,8 @@
     "name": "Cruise Drink Package Calculator Data",
     "version": "v1",
     "generated_from": "deep-research-report (2).md",
-    "last_verified": "2026-06-22",
-    "note": "Use safe defaults only where pricing_confidence_flag allows it. Require user-entered pricing where user_price_override is Yes. Do not frame outputs as encouragement to consume alcohol."
+    "last_verified": "2026-08-23",
+    "note": "Official package pages were reviewed on 2026-08-23. Recheck at least every 30 days and require user-entered pricing where user_price_override is Yes. Do not frame outputs as encouragement to consume alcohol."
   },
   "packages": [
     {
@@ -15,7 +15,7 @@
       "price_type": "fixed_public_price",
       "pricing_confidence_flag": "Safe Default",
       "package_service_charge_rate": 0.2,
-      "a_la_carte_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "All adults in the same stateroom must purchase.",
       "alcoholic_daily_limit": 15,
       "non_alcoholic_daily_limit": null,
@@ -49,7 +49,7 @@
         "https://www.carnival.com/drink-packages",
         "https://www.carnival.com/drink-packages/cheers-package/cheers-SUM"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -59,8 +59,8 @@
       "default_price": null,
       "price_type": "dynamic_by_sailing",
       "pricing_confidence_flag": "User Must Enter Actual Price",
-      "package_service_charge_rate": null,
-      "a_la_carte_service_charge_rate": null,
+      "package_service_charge_rate": 0.18,
+      "a_la_carte_service_charge_rate": 0.18,
       "required_adult_buyers_rule": "All legal-drinking-age guests in the same stateroom and booking number must purchase the same alcoholic package.",
       "alcoholic_daily_limit": null,
       "non_alcoholic_daily_limit": null,
@@ -97,7 +97,7 @@
         "https://www.royalcaribbean.com/faq/questions/what-is-the-deluxe-beverage-package",
         "https://www.royalcaribbean.com/content/dam/royal/resources/pdf/beverage-packages/deluxe-beverage-packages-cruises.pdf"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -108,7 +108,7 @@
       "price_type": "bundle_fare",
       "pricing_confidence_flag": "User Must Enter Actual Price",
       "package_service_charge_rate": null,
-      "a_la_carte_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "Applies to all guests in the stateroom age 21+; younger substitutions vary by guest position in booking.",
       "alcoholic_daily_limit": null,
       "non_alcoholic_daily_limit": null,
@@ -132,7 +132,7 @@
       "source_urls": [
         "https://www.ncl.com/cruise-deals/free-at-sea"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -143,8 +143,13 @@
       "price_type": "fixed_public_price",
       "pricing_confidence_flag": "Safe Default",
       "package_service_charge_rate": null,
-      "a_la_carte_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "Applies to eligible guests 1 and 2 age 21+ on qualifying bookings.",
+      "minor_package_name": "Free at Sea Plus modified package",
+      "minor_package_rule": "Guests 1 and 2 under age 21 receive a modified package for a reduced daily price.",
+      "minor_package_default_price": 40.0,
+      "minor_package_service_charge_rate": 0.0,
+      "minor_package_user_price_override": "Recommended",
       "alcoholic_daily_limit": null,
       "non_alcoholic_daily_limit": null,
       "per_drink_price_cap": null,
@@ -168,9 +173,10 @@
       "user_price_override": "Recommended",
       "calculator_warning": "Free at Sea Plus adds drink value, but it also bundles non-drink perks. Ask whether to count them.",
       "source_urls": [
-        "https://www.ncl.com/cruise-deals/free-at-sea"
+        "https://www.ncl.com/cruise-deals/free-at-sea",
+        "https://www.ncl.com/sites/default/files/1938394-BEV-Package-Flyer-UOBP-PPBP-Update.pdf"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -210,7 +216,7 @@
         "https://www.princess.com/cruise-dining/beverages",
         "https://www.princess.com/cruise-deals-promotions/plus-premier-cruise-packages"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -252,7 +258,7 @@
         "https://www.princess.com/cruise-dining/beverages",
         "https://www.princess.com/cruise-deals-promotions/plus-premier-cruise-packages"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -287,7 +293,7 @@
       "source_urls": [
         "https://www.princess.com/cruise-deals-promotions/plus-premier-cruise-packages"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -325,7 +331,7 @@
       "source_urls": [
         "https://www.princess.com/cruise-deals-promotions/plus-premier-cruise-packages"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -336,8 +342,13 @@
       "price_type": "dynamic_by_sailing",
       "pricing_confidence_flag": "User Must Enter Actual Price",
       "package_service_charge_rate": 0.0,
-      "a_la_carte_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.18,
       "required_adult_buyers_rule": "All guests in the same cabin must book; minors need the Minors Package; infants exempt.",
+      "minor_package_name": "Minors Package",
+      "minor_package_rule": "All underage guests must purchase the Minors Package with an adult package; infants are exempt.",
+      "minor_package_default_price": null,
+      "minor_package_service_charge_rate": 0.0,
+      "minor_package_user_price_override": "Yes",
       "alcoholic_daily_limit": 15,
       "non_alcoholic_daily_limit": null,
       "per_drink_price_cap": null,
@@ -370,7 +381,7 @@
       "source_urls": [
         "https://www.msccruisesusa.com/on-board/dining-drinks/drinks-packages"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -381,7 +392,7 @@
       "price_type": "dynamic_by_sailing",
       "pricing_confidence_flag": "User Must Enter Actual Price",
       "package_service_charge_rate": 0.2,
-      "a_la_carte_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "All legal-drinking-age guests in the same stateroom and booking number must purchase the same alcoholic package.",
       "alcoholic_daily_limit": null,
       "non_alcoholic_daily_limit": null,
@@ -410,10 +421,10 @@
       "user_price_override": "Yes",
       "calculator_warning": "Celebrity Classic pricing varies by sailing, and the package adds a 20% gratuity at checkout where applicable.",
       "source_urls": [
-        "https://www.celebritycruises.com/things-to-do-onboard/onboard-packages/beverage-packages",
+        "https://www.celebritycruises.com/ca/things-to-do-onboard/onboard-packages/beverage-packages",
         "https://www.celebritycruises.com/content/dam/celebrity/pdf/web-beverage-package-2025.pdf"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -424,7 +435,7 @@
       "price_type": "dynamic_by_sailing",
       "pricing_confidence_flag": "User Must Enter Actual Price",
       "package_service_charge_rate": 0.2,
-      "a_la_carte_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "All legal-drinking-age guests in the same stateroom and booking number must purchase the same alcoholic package.",
       "alcoholic_daily_limit": null,
       "non_alcoholic_daily_limit": null,
@@ -452,10 +463,10 @@
       "user_price_override": "Yes",
       "calculator_warning": "Celebrity Premium has a higher drink ceiling than Classic, but you still need the actual sailing price.",
       "source_urls": [
-        "https://www.celebritycruises.com/things-to-do-onboard/onboard-packages/beverage-packages",
+        "https://www.celebritycruises.com/ca/things-to-do-onboard/onboard-packages/beverage-packages",
         "https://www.celebritycruises.com/content/dam/celebrity/pdf/web-beverage-package-2025.pdf"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -466,7 +477,7 @@
       "price_type": "bundle_fare",
       "pricing_confidence_flag": "User Must Enter Actual Price",
       "package_service_charge_rate": null,
-      "a_la_carte_service_charge_rate": null,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "All guests in the same stateroom must choose the same rate.",
       "alcoholic_daily_limit": null,
       "non_alcoholic_daily_limit": null,
@@ -486,18 +497,18 @@
       "source_urls": [
         "https://www.celebritycruises.com/things-to-do-onboard/onboard-packages/all-included"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
       "cruise_line": "Holland America Line",
       "package_name": "Signature Beverage Package",
       "package_type": "standard_drink_package",
-      "default_price": 50.95,
+      "default_price": 55.95,
       "price_type": "fixed_public_price",
       "pricing_confidence_flag": "Safe Default",
-      "package_service_charge_rate": null,
-      "a_la_carte_service_charge_rate": 0.18,
+      "package_service_charge_rate": 0.2,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "All adults of legal drinking age in the same stateroom must also purchase.",
       "alcoholic_daily_limit": 15,
       "non_alcoholic_daily_limit": 15,
@@ -522,18 +533,18 @@
       "source_urls": [
         "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
       "cruise_line": "Holland America Line",
       "package_name": "Elite Beverage Package",
       "package_type": "standard_drink_package",
-      "default_price": 55.95,
+      "default_price": 60.95,
       "price_type": "fixed_public_price",
       "pricing_confidence_flag": "Safe Default",
-      "package_service_charge_rate": null,
-      "a_la_carte_service_charge_rate": 0.18,
+      "package_service_charge_rate": 0.2,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "All adults of legal drinking age in the same stateroom must also purchase.",
       "alcoholic_daily_limit": 15,
       "non_alcoholic_daily_limit": null,
@@ -558,7 +569,7 @@
       "source_urls": [
         "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -569,7 +580,7 @@
       "price_type": "fixed_public_price",
       "pricing_confidence_flag": "Safe Default",
       "package_service_charge_rate": null,
-      "a_la_carte_service_charge_rate": 0.18,
+      "a_la_carte_service_charge_rate": 0.2,
       "required_adult_buyers_rule": "Bundle summary page does not state a same-cabin all-adults rule, but the beverage component follows package rules.",
       "alcoholic_daily_limit": 15,
       "non_alcoholic_daily_limit": 15,
@@ -586,11 +597,12 @@
       "private_destination_rules": "No private-island rule stated on the cited page.",
       "ux_priority": "Show Conditionally",
       "user_price_override": "Recommended",
-      "calculator_warning": "Have It All includes more than drinks. Let the user subtract non-drink perk value if they want a drinks-only comparison.",
+      "calculator_warning": "Have It All includes more than drinks. The public $60 default applies to cruises departing before summer 2027; verify your sailing price and subtract non-drink perk value for a drinks-only comparison.",
       "source_urls": [
-        "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages"
+        "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages",
+        "https://www.hollandamerica.com/en/us/cruise-deals/have-it-all/have-it-all-upgrade"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     },
     {
@@ -628,7 +640,7 @@
       "source_urls": [
         "https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks"
       ],
-      "last_verified": "2026-06-22",
+      "last_verified": "2026-08-23",
       "confidence": "High"
     }
   ],

@@ -11,6 +11,7 @@ import {
   Minus,
   Plus,
   Save,
+  Share2,
   WalletCards,
 } from "lucide-react";
 import {
@@ -27,6 +28,11 @@ import {
   type DrinkPackage,
 } from "@/lib/data/drink-package-calculator";
 import { trackEvent } from "@/lib/analytics";
+import {
+  calculateDrinkPackage,
+  calculatePrepaidCredit,
+  safeDrinkCalculatorAnalytics,
+} from "@/lib/drink-package-math";
 import { cn } from "@/lib/utils/cn";
 
 type BundleMode = "drinksOnly" | "includePerks";
@@ -50,7 +56,11 @@ type StandardResult = {
   dailyDifference: number;
   tripDifference: number;
   buyers: number;
+  adultBuyers: number;
+  minorBuyers: number;
+  minorPackageTripCost: number;
   nights: number;
+  packageDays: number;
   bundleMode: BundleMode;
   bundleValue: number;
   warnings: Warning[];
@@ -272,9 +282,23 @@ export default function DrinkPackageCalculator() {
         ])
       )
   );
+  const [minorPackagePrices, setMinorPackagePrices] = useState<
+    Record<string, string>
+  >(() =>
+    Object.fromEntries(
+      drinkPackageData.packages.map((pkg) => [
+        getPackageKey(pkg),
+        pkg.minor_package_default_price == null
+          ? ""
+          : String(pkg.minor_package_default_price),
+      ])
+    )
+  );
   const [nights, setNights] = useState(7);
+  const [packageDays, setPackageDays] = useState(7);
   const [adultsInCabin, setAdultsInCabin] = useState(2);
   const [buyers, setBuyers] = useState(1);
+  const [minorPackageBuyers, setMinorPackageBuyers] = useState(0);
   const [manualBuyers, setManualBuyers] = useState("");
   const [drinkQuantities, setDrinkQuantities] = useState(initialDrinkQuantities);
   const [drinkPrices, setDrinkPrices] = useState(getDefaultDrinkPrices);
@@ -310,6 +334,7 @@ export default function DrinkPackageCalculator() {
       rateToPercent(pkg.a_la_carte_service_charge_rate)
     );
     setManualBuyers("");
+    setMinorPackageBuyers(0);
     setBundleMode("drinksOnly");
     setSaveMessage("");
   };
@@ -320,14 +345,26 @@ export default function DrinkPackageCalculator() {
     trackEvent("drink_calculator_start");
   };
 
-  const requiredBuyers = getRequiredBuyers(
+  const baseRequiredBuyers = getRequiredBuyers(
     selectedPackage,
     adultsInCabin,
     buyers,
     manualBuyers
   );
+  const requiredBuyers =
+    selectedBuyerRule === "guestsOneTwo" && selectedPackage.minor_package_name
+      ? Math.min(baseRequiredBuyers, Math.max(0, 2 - minorPackageBuyers))
+      : baseRequiredBuyers;
   const drinkTotals = buildDrinkTotals(drinkQuantities, drinkPrices);
   const packagePrice = numberOr(packagePrices[selectedPackageKey], Number.NaN);
+  const minorPackagePrice = numberOr(
+    minorPackagePrices[selectedPackageKey],
+    Number.NaN
+  );
+  const minorPackagePriceMissing =
+    minorPackageBuyers > 0 &&
+    selectedPackage.minor_package_user_price_override === "Yes" &&
+    (!Number.isFinite(minorPackagePrice) || minorPackagePrice <= 0);
   const packageChargeRate = packageChargePercent / 100;
   const paygoChargeRate = paygoChargePercent / 100;
   const paygoDailyWithService = drinkTotals.subtotal * (1 + paygoChargeRate);
@@ -343,6 +380,20 @@ export default function DrinkPackageCalculator() {
       nextWarnings.push({
         title: "Package note",
         text: selectedPackage.calculator_warning,
+      });
+    }
+
+    if (packageDays < nights) {
+      nextWarnings.push({
+        title: "Partial sailing coverage",
+        text: `The package cost is applied to ${packageDays} of ${nights} nights. Pay-as-you-go beverage value is still estimated across the full sailing.`,
+      });
+    }
+
+    if (minorPackageBuyers > 0 && selectedPackage.minor_package_rule) {
+      nextWarnings.push({
+        title: selectedPackage.minor_package_name ?? "Younger guest package",
+        text: selectedPackage.minor_package_rule,
       });
     }
 
@@ -435,14 +486,21 @@ export default function DrinkPackageCalculator() {
     drinkPrices,
     drinkTotals.alcoholicQty,
     drinkTotals.totalQty,
+    minorPackageBuyers,
+    nights,
+    packageDays,
     requiredBuyers,
     selectedPackage,
   ]);
 
   const result: CalculatorResult = useMemo(() => {
     if (selectedPackage.package_type === "prepaid_credit") {
-      const expectedSpend = paygoDailyWithService * nights;
-      const surplus = barTabCredit - expectedSpend;
+      const { expectedSpend, surplus } = calculatePrepaidCredit({
+        availableCredit: barTabCredit,
+        cruiseNights: nights,
+        paygoDailySubtotal: drinkTotals.subtotal,
+        paygoServiceChargeRate: paygoChargeRate,
+      });
       return {
         kind: "prepaid",
         resultType: surplus >= 0 ? "covered" : "shortfall",
@@ -464,15 +522,20 @@ export default function DrinkPackageCalculator() {
     }
 
     if (
-      selectedPackageRequiresPrice &&
-      (!Number.isFinite(packagePrice) || packagePrice <= 0)
+      (selectedPackageRequiresPrice &&
+        (!Number.isFinite(packagePrice) || packagePrice <= 0)) ||
+      minorPackagePriceMissing
     ) {
       return {
         kind: "blocked",
         resultType: "blocked",
         label: "Price needed",
-        headline: "Enter your actual package price",
-        detail: `${selectedPackage.cruise_line} pricing for ${selectedPackage.package_name} is not stable enough to hardcode. Add the price from your booking portal to calculate a useful estimate.`,
+        headline: minorPackagePriceMissing
+          ? `Enter the ${selectedPackage.minor_package_name} price`
+          : "Enter your actual package price",
+        detail: minorPackagePriceMissing
+          ? `${selectedPackage.cruise_line} does not publish a stable ${selectedPackage.minor_package_name} price. Add the daily price from your booking portal to include younger guests accurately.`
+          : `${selectedPackage.cruise_line} pricing for ${selectedPackage.package_name} is not stable enough to hardcode. Add the price from your booking portal to calculate a useful estimate.`,
         warnings,
       };
     }
@@ -480,23 +543,39 @@ export default function DrinkPackageCalculator() {
     const validPackagePrice = Number.isFinite(packagePrice)
       ? packagePrice
       : selectedPackage.default_price ?? 0;
-    const packageDailyPerPerson = validPackagePrice * (1 + packageChargeRate);
-    const cabinPackageDaily = packageDailyPerPerson * requiredBuyers;
-    const breakEvenDaily =
-      selectedPackage.package_type === "bundle_package"
-        ? Math.max(cabinPackageDaily - bundleValue, 0)
-        : cabinPackageDaily;
-    const dailyDifference = paygoDailyWithService - breakEvenDaily;
-    const tripDifference = dailyDifference * nights;
+    const calculation = calculateDrinkPackage({
+      cruiseNights: nights,
+      packageDays,
+      packagePricePerPerson: validPackagePrice,
+      packageServiceChargeRate: packageChargeRate,
+      packageBuyers: requiredBuyers,
+      minorPackagePricePerPerson: Number.isFinite(minorPackagePrice)
+        ? minorPackagePrice
+        : selectedPackage.minor_package_default_price ?? 0,
+      minorPackageServiceChargeRate: safeRate(
+        selectedPackage.minor_package_service_charge_rate,
+      ),
+      minorPackageBuyers,
+      paygoDailySubtotal: drinkTotals.subtotal,
+      paygoServiceChargeRate: paygoChargeRate,
+      bundleValuePerCoveredDay:
+        selectedPackage.package_type === "bundle_package" ? bundleValue : 0,
+    });
+    const packageDailyPerPerson = calculation.packageDailyPerAdult;
+    const cabinPackageDaily = calculation.cabinPackageTripCost / packageDays;
+    const breakEvenDaily = calculation.breakEvenDaily;
+    const dailyDifference = calculation.dailyDifference;
+    const tripDifference = calculation.tripDifference;
     const detail =
       dailyDifference > 10
         ? `This package may save about ${currency.format(Math.abs(dailyDifference))}/day based on your estimate.`
         : dailyDifference < -10
           ? `Pay-as-you-go may be cheaper by about ${currency.format(Math.abs(dailyDifference))}/day based on your plan.`
           : "This is close enough that pricing changes, itinerary, or actual menu choices could swing the result either way.";
+    const totalPackageBuyers = requiredBuyers + minorPackageBuyers;
     const breakEvenCopy =
-      requiredBuyers > 1
-        ? `With ${requiredBuyers} required buyers, your cabin would need about ${currency.format(breakEvenDaily)}/day in included drink value to break even.`
+      totalPackageBuyers > 1
+        ? `With ${totalPackageBuyers} package buyers, your cabin would need about ${currency.format(breakEvenDaily)}/day in included drink value to break even.`
         : `You would need about ${currency.format(breakEvenDaily)}/day in included drink value to break even.`;
 
     return {
@@ -511,8 +590,12 @@ export default function DrinkPackageCalculator() {
       paygoDailyWithService,
       dailyDifference,
       tripDifference,
-      buyers: requiredBuyers,
+      buyers: requiredBuyers + minorPackageBuyers,
+      adultBuyers: requiredBuyers,
+      minorBuyers: minorPackageBuyers,
+      minorPackageTripCost: calculation.minorPackageTripCost,
       nights,
+      packageDays,
       bundleMode,
       bundleValue,
       warnings,
@@ -521,9 +604,15 @@ export default function DrinkPackageCalculator() {
     barTabCredit,
     bundleMode,
     bundleValue,
+    drinkTotals.subtotal,
+    minorPackageBuyers,
+    minorPackagePrice,
+    minorPackagePriceMissing,
     nights,
+    packageDays,
     packageChargeRate,
     packagePrice,
+    paygoChargeRate,
     paygoDailyWithService,
     requiredBuyers,
     selectedPackage,
@@ -532,6 +621,8 @@ export default function DrinkPackageCalculator() {
   ]);
 
   useEffect(() => {
+    if (!startedRef.current) return;
+
     const resultKey = [
       selectedPackage.cruise_line,
       selectedPackage.package_name,
@@ -546,29 +637,28 @@ export default function DrinkPackageCalculator() {
     if (lastResultEventRef.current === resultKey) return;
     lastResultEventRef.current = resultKey;
 
-    trackEvent("result_viewed", {
-      cruise_line: selectedPackage.cruise_line,
-      package_name: selectedPackage.package_name,
-      package_type: selectedPackage.package_type,
-      result_type: result.resultType,
-      savings_or_loss:
-        result.kind === "standard"
-          ? result.dailyDifference
-          : result.kind === "prepaid"
-            ? result.surplus
-            : undefined,
-      user_price_override_used:
-        selectedPackage.default_price == null ||
-        packagePrices[selectedPackageKey] !== String(selectedPackage.default_price),
-      bundle_mode_selected:
-        selectedPackage.package_type === "bundle_package" ? bundleMode : undefined,
-    });
+    trackEvent(
+      "result_viewed",
+      safeDrinkCalculatorAnalytics({
+        cruiseLine: selectedPackage.cruise_line,
+        partySize: adultsInCabin + minorPackageBuyers,
+        nights,
+        resultType: result.resultType,
+        difference:
+          result.kind === "standard"
+            ? result.dailyDifference
+            : result.kind === "prepaid"
+              ? result.surplus / Math.max(1, nights)
+              : undefined,
+        completion: result.kind !== "blocked",
+      }),
+    );
   }, [
-    bundleMode,
-    packagePrices,
+    adultsInCabin,
+    minorPackageBuyers,
+    nights,
     result,
     selectedPackage,
-    selectedPackageKey,
   ]);
 
   const updateLine = (line: string) => {
@@ -579,7 +669,15 @@ export default function DrinkPackageCalculator() {
       setSelectedPackageKey(getPackageKey(nextPackage));
       resetPackageAssumptions(nextPackage);
     }
-    trackEvent("cruise_line_selected", { cruise_line: line });
+    trackEvent(
+      "cruise_line_selected",
+      safeDrinkCalculatorAnalytics({
+        cruiseLine: line,
+        partySize: adultsInCabin + minorPackageBuyers,
+        nights,
+        completion: false,
+      }),
+    );
   };
 
   const updatePackage = (packageKey: string) => {
@@ -587,11 +685,17 @@ export default function DrinkPackageCalculator() {
     setSelectedPackageKey(packageKey);
     const pkg = packageByKey.get(packageKey);
     if (pkg) resetPackageAssumptions(pkg);
-    trackEvent("package_selected", {
-      cruise_line: pkg?.cruise_line,
-      package_name: pkg?.package_name,
-      package_type: pkg?.package_type,
-    });
+    if (pkg) {
+      trackEvent(
+        "package_selected",
+        safeDrinkCalculatorAnalytics({
+          cruiseLine: pkg.cruise_line,
+          partySize: adultsInCabin,
+          nights,
+          completion: false,
+        }),
+      );
+    }
   };
 
   const updatePackagePrice = (value: string) => {
@@ -602,11 +706,15 @@ export default function DrinkPackageCalculator() {
     }));
 
     if (selectedPackageRequiresPrice && Number.parseFloat(value) > 0) {
-      trackEvent("dynamic_price_entered", {
-        cruise_line: selectedPackage.cruise_line,
-        package_name: selectedPackage.package_name,
-        package_type: selectedPackage.package_type,
-      });
+      trackEvent(
+        "dynamic_price_entered",
+        safeDrinkCalculatorAnalytics({
+          cruiseLine: selectedPackage.cruise_line,
+          partySize: adultsInCabin + minorPackageBuyers,
+          nights,
+          completion: false,
+        }),
+      );
     }
   };
 
@@ -614,11 +722,15 @@ export default function DrinkPackageCalculator() {
     markStarted();
     const preset = DRINK_PRESETS[presetKey] ?? DRINK_PRESETS.reset;
     setDrinkQuantities(preset.quantities);
-    trackEvent("preset_selected", {
-      preset: presetKey,
-      cruise_line: selectedPackage.cruise_line,
-      package_name: selectedPackage.package_name,
-    });
+    trackEvent(
+      "preset_selected",
+      safeDrinkCalculatorAnalytics({
+        cruiseLine: selectedPackage.cruise_line,
+        partySize: adultsInCabin + minorPackageBuyers,
+        nights,
+        completion: false,
+      }),
+    );
   };
 
   const updateQuantity = (key: DrinkCategoryKey, nextValue: number) => {
@@ -640,12 +752,15 @@ export default function DrinkPackageCalculator() {
   const updateBundleMode = (mode: BundleMode) => {
     markStarted();
     setBundleMode(mode);
-    trackEvent("package_selected", {
-      cruise_line: selectedPackage.cruise_line,
-      package_name: selectedPackage.package_name,
-      package_type: selectedPackage.package_type,
-      bundle_mode_selected: mode,
-    });
+    trackEvent(
+      "package_selected",
+      safeDrinkCalculatorAnalytics({
+        cruiseLine: selectedPackage.cruise_line,
+        partySize: adultsInCabin + minorPackageBuyers,
+        nights,
+        completion: false,
+      }),
+    );
   };
 
   const saveEstimate = async () => {
@@ -673,7 +788,9 @@ export default function DrinkPackageCalculator() {
           resultType: result.resultType,
           savingsOrLoss,
           nights,
+          packageDays,
           adultsInCabin,
+          minorPackageBuyers,
           drinkQuantities,
           drinkPrices,
         })
@@ -692,16 +809,67 @@ export default function DrinkPackageCalculator() {
       setSaveMessage("Estimate could not be saved in this browser.");
     }
 
-    trackEvent("save_estimate_clicked", {
-      cruise_line: selectedPackage.cruise_line,
-      package_name: selectedPackage.package_name,
-      package_type: selectedPackage.package_type,
-      result_type: result.resultType,
-      savings_or_loss: savingsOrLoss,
-      user_price_override_used: selectedPackageRequiresPrice,
-      bundle_mode_selected:
-        selectedPackage.package_type === "bundle_package" ? bundleMode : undefined,
-    });
+    trackEvent(
+      "save_estimate_clicked",
+      safeDrinkCalculatorAnalytics({
+        cruiseLine: selectedPackage.cruise_line,
+        partySize: adultsInCabin + minorPackageBuyers,
+        nights,
+        resultType: result.resultType,
+        difference: savingsOrLoss,
+        completion: result.kind !== "blocked",
+      }),
+    );
+  };
+
+  const shareEstimate = async () => {
+    markStarted();
+    const savingsOrLoss =
+      result.kind === "standard"
+        ? result.dailyDifference
+        : result.kind === "prepaid"
+          ? result.surplus / Math.max(1, nights)
+          : undefined;
+    const summary = [
+      "CruiseKit Drink Package Calculator",
+      `${selectedPackage.cruise_line} - ${selectedPackage.package_name}`,
+      `${result.label}: ${result.headline}`,
+      window.location.href,
+    ].join("\n");
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: "CruiseKit Drink Package Calculator",
+          text: summary,
+        });
+        setSaveMessage("Result shared.");
+      } else if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(summary);
+        setSaveMessage("Share text copied.");
+      } else {
+        setSaveMessage("Sharing is not supported in this browser.");
+        return;
+      }
+
+      trackEvent(
+        "result_shared",
+        safeDrinkCalculatorAnalytics({
+          cruiseLine: selectedPackage.cruise_line,
+          partySize: adultsInCabin + minorPackageBuyers,
+          nights,
+          resultType: result.resultType,
+          difference: savingsOrLoss,
+          completion: result.kind !== "blocked",
+        }),
+      );
+    } catch (error) {
+      setSaveMessage(
+        error instanceof DOMException && error.name === "AbortError"
+          ? "Share canceled."
+          : "Result could not be shared in this browser.",
+      );
+    }
   };
 
   const buyerRuleCopy =
@@ -918,9 +1086,69 @@ export default function DrinkPackageCalculator() {
           </div>
         )}
 
+        {selectedPackage.package_type !== "prepaid_credit" &&
+          selectedPackage.minor_package_name && (
+            <div className="mt-5 rounded-xl border border-blue-200 bg-blue-50/60 p-4">
+              <h3 className="font-bold text-navy">
+                {selectedPackage.minor_package_name}
+              </h3>
+              <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                {selectedPackage.minor_package_rule}
+              </p>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                <NumberField
+                  id="minor-package-buyers"
+                  label={
+                    selectedPackage.cruise_line === "Norwegian Cruise Line"
+                      ? "Under-21 guests in positions 1-2"
+                      : "Underage guests requiring package"
+                  }
+                  value={minorPackageBuyers}
+                  min={0}
+                  max={selectedPackage.cruise_line === "Norwegian Cruise Line" ? 2 : 8}
+                  step={1}
+                  onChange={(value) => {
+                    markStarted();
+                    setMinorPackageBuyers(
+                      Math.round(
+                        clampNumber(
+                          value,
+                          0,
+                          selectedPackage.cruise_line === "Norwegian Cruise Line"
+                            ? 2
+                            : 8,
+                        ),
+                      ),
+                    );
+                  }}
+                />
+                <NumberField
+                  id="minor-package-price"
+                  label="Younger guest package price/day"
+                  value={minorPackagePrices[selectedPackageKey] ?? ""}
+                  min={0}
+                  step={0.01}
+                  prefix="$"
+                  placeholder="Enter price"
+                  required={
+                    minorPackageBuyers > 0 &&
+                    selectedPackage.minor_package_user_price_override === "Yes"
+                  }
+                  onChangeString={(value) => {
+                    markStarted();
+                    setMinorPackagePrices((current) => ({
+                      ...current,
+                      [selectedPackageKey]: value,
+                    }));
+                  }}
+                />
+              </div>
+            </div>
+          )}
+
         <div className="mt-8 border-t border-gray-200 pt-8">
           <h3 className="text-xl font-bold text-navy">Set trip details</h3>
-          <div className="mt-4 grid gap-5 sm:grid-cols-3">
+          <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <NumberField
               id="cruise-length"
               label="Cruise length"
@@ -931,9 +1159,28 @@ export default function DrinkPackageCalculator() {
               suffix="nights"
               onChange={(value) => {
                 markStarted();
-                setNights(Math.round(clampNumber(value, 1, 60)));
+                const nextNights = Math.round(clampNumber(value, 1, 60));
+                setNights(nextNights);
+                setPackageDays((current) =>
+                  current === nights ? nextNights : Math.min(current, nextNights),
+                );
               }}
             />
+            {selectedPackage.package_type !== "prepaid_credit" && (
+              <NumberField
+                id="package-covered-days"
+                label="Package-covered days"
+                value={packageDays}
+                min={1}
+                max={nights}
+                step={1}
+                suffix="days"
+                onChange={(value) => {
+                  markStarted();
+                  setPackageDays(Math.round(clampNumber(value, 1, nights)));
+                }}
+              />
+            )}
             <NumberField
               id="adults-in-cabin"
               label="Adults in cabin"
@@ -963,7 +1210,9 @@ export default function DrinkPackageCalculator() {
               )}
           </div>
           <p className="mt-3 rounded-lg bg-gray-50 p-3 text-sm text-gray-600">
-            {buyerRuleCopy}
+            {buyerRuleCopy} Package-covered days defaults to the full sailing;
+            reduce it only when your cruise documents show delayed activation
+            or partial coverage.
           </p>
         </div>
 
@@ -1266,9 +1515,23 @@ export default function DrinkPackageCalculator() {
                 value={currency.format(result.packageDailyPerPerson)}
               />
               <Metric
-                label="Required buyers used"
-                value={String(result.buyers)}
+                label="Package buyers used"
+                value={
+                  result.minorBuyers > 0
+                    ? `${result.adultBuyers} adult + ${result.minorBuyers} younger`
+                    : String(result.buyers)
+                }
               />
+              <Metric
+                label="Package coverage"
+                value={`${result.packageDays} of ${result.nights} nights`}
+              />
+              {result.minorPackageTripCost > 0 && (
+                <Metric
+                  label="Younger guest package trip cost"
+                  value={currency.format(result.minorPackageTripCost)}
+                />
+              )}
               <Metric
                 label={
                   result.bundleMode === "includePerks"
@@ -1314,19 +1577,33 @@ export default function DrinkPackageCalculator() {
               <Save className="h-4 w-4" aria-hidden="true" />
               Save estimate
             </button>
+            <button
+              type="button"
+              onClick={shareEstimate}
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-navy/20 bg-white px-4 text-sm font-bold text-navy transition-colors hover:bg-navy/5 focus:outline-none focus:ring-2 focus:ring-teal"
+            >
+              <Share2 className="h-4 w-4" aria-hidden="true" />
+              Share result
+            </button>
             <Link
               href="/calculator"
               onClick={() =>
-                trackEvent("compare_fares_clicked", {
-                  cruise_line: selectedPackage.cruise_line,
-                  package_name: selectedPackage.package_name,
-                  package_type: selectedPackage.package_type,
-                  result_type: result.resultType,
-                  bundle_mode_selected:
-                    selectedPackage.package_type === "bundle_package"
-                      ? bundleMode
-                      : undefined,
-                })
+                trackEvent(
+                  "compare_fares_clicked",
+                  safeDrinkCalculatorAnalytics({
+                    cruiseLine: selectedPackage.cruise_line,
+                    partySize: adultsInCabin + minorPackageBuyers,
+                    nights,
+                    resultType: result.resultType,
+                    difference:
+                      result.kind === "standard"
+                        ? result.dailyDifference
+                        : result.kind === "prepaid"
+                          ? result.surplus / Math.max(1, nights)
+                          : undefined,
+                    completion: result.kind !== "blocked",
+                  }),
+                )
               }
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-navy/20 bg-white px-4 text-sm font-bold text-navy transition-colors hover:bg-navy/5 focus:outline-none focus:ring-2 focus:ring-teal"
             >
@@ -1363,6 +1640,12 @@ export default function DrinkPackageCalculator() {
             <p className="mt-1 text-sm text-gray-600">
               Last verified: {selectedPackage.last_verified}
             </p>
+            <p className="mt-2 text-xs leading-relaxed text-gray-500">
+              Maintained by the CruiseKit web data owner. Official package
+              pages are reviewed at least every 30 days and before any known
+              price or policy change. Dynamic sailing prices must always be
+              checked in your booking portal.
+            </p>
             <ul className="mt-2 space-y-1.5">
               {selectedPackage.source_urls.map((url) => (
                 <li key={url}>
@@ -1371,12 +1654,15 @@ export default function DrinkPackageCalculator() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() =>
-                      trackEvent("source_link_clicked", {
-                        cruise_line: selectedPackage.cruise_line,
-                        package_name: selectedPackage.package_name,
-                        package_type: selectedPackage.package_type,
-                        source_url: url,
-                      })
+                      trackEvent(
+                        "source_link_clicked",
+                        safeDrinkCalculatorAnalytics({
+                          cruiseLine: selectedPackage.cruise_line,
+                          partySize: adultsInCabin + minorPackageBuyers,
+                          nights,
+                          completion: result.kind !== "blocked",
+                        }),
+                      )
                     }
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal transition-colors hover:text-teal-dark"
                   >
