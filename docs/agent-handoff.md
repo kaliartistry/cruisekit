@@ -2,6 +2,29 @@
 
 Last verified: 2026-08-23
 
+## Total Cruise Cost comparison sharing repair
+
+- PR #63 merged to `main` as
+  `1cc06f6a80e4783abc2705e512b1002d29af3efc` on 2026-08-23. GitHub Pages
+  run `32685973786` built and deployed that exact merge successfully.
+- The final side-by-side result on `https://cruisekit.app/calculator/` now has
+  a clearly labeled **Share result** control. Its text contains the two cruise
+  line names, broad estimated real totals, broad cost categories, and the
+  canonical calculator link; it omits ship, itinerary, departure, date,
+  cabin, party, and passenger details.
+- The comparison control reuses the existing Total Cruise Cost share behavior.
+  The single-result share and the separate Drink Package Calculator share were
+  preserved; no EventSync, CruiseKit-Mobile, pricing data, or unrelated
+  calculator route changed.
+- Verification passed: 15 web test files / 57 tests, full web ESLint, a Next.js
+  static export of 193 pages, and local rendered QA for comparison and single
+  results at 1440x1000 and 390x844.
+- Independent live QA passed after deployment for the Disney Cruise Line vs
+  Norwegian Cruise Line comparison and the Disney single result on desktop
+  and 390x844 mobile. Both visible controls opened the browser/native share
+  flow, mobile had no horizontal overflow, and no browser console warnings or
+  errors were observed.
+
 ## Drink-package ToolLoop and calculator sharing publication
 
 - PR #61 merged to `main` as
