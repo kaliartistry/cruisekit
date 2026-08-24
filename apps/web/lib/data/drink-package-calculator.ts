@@ -23,6 +23,11 @@ export interface DrinkPackage {
   package_service_charge_rate: number | null;
   a_la_carte_service_charge_rate: number | null;
   required_adult_buyers_rule: string;
+  minor_package_name?: string;
+  minor_package_rule?: string;
+  minor_package_default_price?: number | null;
+  minor_package_service_charge_rate?: number | null;
+  minor_package_user_price_override?: "Yes" | "No" | "Recommended";
   alcoholic_daily_limit: number | null;
   non_alcoholic_daily_limit: number | null;
   per_drink_price_cap: number | null;
