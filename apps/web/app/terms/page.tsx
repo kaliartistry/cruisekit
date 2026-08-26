@@ -18,7 +18,7 @@ export default function TermsPage() {
             Terms of Service
           </h1>
           <p className="mt-2 text-sm text-gray-500">
-            Last updated: May 16, 2026
+            Last updated: August 26, 2026
           </p>
 
           <div className="mt-10 space-y-8 text-base leading-relaxed text-gray-700">
@@ -76,12 +76,13 @@ export default function TermsPage() {
                 The MyDay feature, including schedule management, spend tracking,
                 and MyCrew status check-ins, is a{" "}
                 <strong>planning aid only and not a guarantee</strong>.
-                MyCrew check-ins are one-time status updates and may be
-                affected by device settings, ship Wi-Fi, GPS signal quality,
-                and user-entered information. CruiseKit is not responsible for
+                MyCrew check-ins are manual, one-time status updates entered
+                by users and may be affected by device settings, ship Wi-Fi,
+                and user-entered information. The app does not request or
+                collect device location. CruiseKit is not responsible for
                 missed departures, inaccurate spend totals, inaccurate
-                locations, or any consequences resulting from reliance on
-                MyDay features. Always allow ample time to return to your ship
+                user-entered information, or any consequences resulting from
+                reliance on MyDay features. Always allow ample time to return to your ship
                 and follow the cruise line&rsquo;s official all-aboard time.
               </p>
             </section>
@@ -108,8 +109,10 @@ export default function TermsPage() {
                 6. Affiliate Disclosure
               </h2>
               <p>
-                CruiseKit contains affiliate links to cruise lines and
-                booking platforms. When you click these links and complete a
+                CruiseKit contains affiliate links to travel booking and
+                service platforms. CruiseKit has no financial relationship
+                with any cruise line; links to cruise line websites are
+                provided for convenience and verification only. When you click these links and complete a
                 purchase, we may earn a small commission at no additional cost
                 to you. Affiliate relationships do not influence our
                 editorial content, cost calculations, or recommendations.
@@ -122,8 +125,9 @@ export default function TermsPage() {
                 7. User Accounts
               </h2>
               <p>
-                Some features (such as saving trips) require you to sign in
-                with a Google account via Firebase Authentication. You are
+                Some features (such as saving trips) require an account via
+                Firebase Authentication. You may use the app anonymously or
+                sign in with a Google or Apple account. You are
                 responsible for maintaining the security of your account. We
                 reserve the right to suspend or terminate accounts that
                 violate these terms.

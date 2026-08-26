@@ -15,6 +15,7 @@ import {
   Wine,
 } from "lucide-react";
 import { CRUISE_LINES } from "@cruise/shared/constants";
+import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import {
   APP_STORE_STATUS,
@@ -208,7 +209,7 @@ export default function HeroSection() {
             className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal appearance-none cursor-pointer mb-4"
           >
             <option value="">Select a cruise line</option>
-            {CRUISE_LINES.map((line) => (
+            {CRUISE_LINES.filter((line) => CRUISE_LINE_COSTS[line.id]).map((line) => (
               <option key={line.id} value={line.id}>
                 {line.name}
               </option>

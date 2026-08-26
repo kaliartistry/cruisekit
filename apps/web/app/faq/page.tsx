@@ -116,7 +116,7 @@ const FAQS = [
   {
     question: "How do I save cruises and trips?",
     answer:
-      "Sign in with your Google account using the sign-in button in the navigation bar. Once signed in, you can save cruise comparisons and trip plans to your \"My Trips\" dashboard. Your saved data syncs across devices and is stored securely in Firebase.",
+      "Saving cruises happens in the free CruiseKit mobile app for iPhone and Android. Save your cruise in the app and MyDay keeps your countdown, ports, plans, and crew in one place. The website is for research and estimates — no sign-in needed.",
   },
   {
     question: "What is MyDay?",

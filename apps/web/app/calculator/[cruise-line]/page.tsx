@@ -12,8 +12,10 @@ import { CRUISE_LINES } from "@cruise/shared/constants";
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
 
-/** All valid cruise-line slugs derived from the shared CRUISE_LINES array. */
-const VALID_SLUGS = CRUISE_LINES.map((cl) => cl.id);
+/** Only cruise lines with published cost data get a calculator page. */
+const VALID_SLUGS = CRUISE_LINES.filter((cl) => CRUISE_LINE_COSTS[cl.id]).map(
+  (cl) => cl.id
+);
 
 /** Lookup a cruise line record by slug, or return undefined. */
 function getCruiseLine(slug: string) {
