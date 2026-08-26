@@ -98,9 +98,9 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "CHEERS! Beverage Program",
-          pricePerDay: 82.54,
+          pricePerDay: 83.94,
           description:
-            "Unlimited alcoholic and non-alcoholic drinks (pre-cruise price; $90.60/day onboard + 20% gratuity)",
+            "Unlimited alcoholic and non-alcoholic drinks ($69.95/day pre-cruise + 20% service charge; $89.94/day all-in if purchased onboard)",
         },
         {
           name: "CHEERS! Zero Proof",

@@ -1,33 +1,40 @@
 {
-  "generatedAt": "2026-07-01T23:20:36.930Z",
+  "generatedAt": "2026-08-26T12:59:13.001Z",
   "provider": "norwegian",
-  "runId": "2026-07-01T23-20-36-930Z",
+  "runId": "2026-08-26T12-59-13-000Z",
   "mode": "staging-only",
   "source": "https://www.ncl.com/api/v2/vacations/search",
   "destinations": [
-    "ASIA"
+    "CARIBBEAN"
   ],
-  "maxItineraries": 40,
-  "maxSailingsPerItinerary": 6,
+  "maxItineraries": 30,
+  "maxSailingsPerItinerary": 8,
   "searchPages": [
     {
-      "destination": "ASIA",
+      "destination": "CARIBBEAN",
       "offset": 0,
-      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=ASIA&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
-      "count": 47
+      "url": "https://www.ncl.com/api/v2/vacations/search?destinations=CARIBBEAN&numberOfGuests=2&filterConfig=search-filters-configuration&limit=50&offset=0",
+      "count": 50
     }
   ],
   "staging": {
-    "sailings": 40,
+    "sailings": 146,
     "deals": 0,
     "schemaErrors": 0,
     "byShip": {
-      "Norwegian Jade": 38,
-      "Norwegian Sky": 1,
-      "Norwegian Spirit": 1
+      "Norwegian Aqua": 33,
+      "Norwegian Breakaway": 8,
+      "Norwegian Epic": 19,
+      "Norwegian Escape": 25,
+      "Norwegian Getaway": 18,
+      "Norwegian Joy": 2,
+      "Norwegian Luna": 18,
+      "Norwegian Pearl": 6,
+      "Norwegian Prima": 9,
+      "Norwegian Viva": 8
     },
-    "minPrice": 1620,
-    "maxPrice": 4489
+    "minPrice": 249,
+    "maxPrice": 2349
   },
   "blockers": [],
   "warnings": [
@@ -36,8 +43,8 @@
     "Review exact booking URL, price basis, taxes/fees, and terms before promotion."
   ],
   "paths": {
-    "raw": "data/ingest/raw/norwegian/2026-07-01T23-20-36-930Z",
-    "staging": "data/ingest/staging/norwegian/2026-07-01T23-20-36-930Z",
-    "report": "data/ingest/reports/norwegian/2026-07-01T23-20-36-930Z.json"
+    "raw": "data/ingest/raw/norwegian/2026-08-26T12-59-13-000Z",
+    "staging": "data/ingest/staging/norwegian/2026-08-26T12-59-13-000Z",
+    "report": "data/ingest/reports/norwegian/2026-08-26T12-59-13-000Z.json"
   }
 }

@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-08-26T17:58:09.552Z",
+  "provider": "holland-america",
+  "mode": "apply",
+  "sourceRunId": "2026-08-26T17-45-59-152Z",
+  "sourceReviewGeneratedAt": "2026-08-26T17:48:46.797Z",
+  "semantics": "mirrors promote-carnival-staging.mjs updatePriceChanges()",
+  "counts": {
+    "reviewPriceChanges": 2,
+    "applied": 2
+  },
+  "updates": [
+    {
+      "id": "holland-america-oosterdam-20260829-7-day-western-mediterranean",
+      "shipName": "Oosterdam",
+      "departureDate": "2026-08-29",
+      "previousPrice": 1114,
+      "nextPrice": 774
+    },
+    {
+      "id": "holland-america-koningsdam-20261020-11-day-mexican-riviera-and-sea-of-cortez",
+      "shipName": "Koningsdam",
+      "departureDate": "2026-10-20",
+      "previousPrice": 1184,
+      "nextPrice": 999
+    }
+  ]
+}
