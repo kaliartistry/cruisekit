@@ -15,6 +15,7 @@ import {
   TrendingDown,
 } from "lucide-react";
 import { CRUISE_LINES } from "@cruise/shared/constants";
+import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { getTopDealsByRegion, DEAL_STATS } from "@/lib/data/real-deals";
 import { getDealImage } from "@/lib/data/port-images";
@@ -466,7 +467,7 @@ export default function ContentSections() {
           <div className="relative">
             <div className="pointer-events-none absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-white to-transparent z-10" />
           <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory" style={{ scrollbarWidth: "thin" }}>
-            {CRUISE_LINES.map((line) => (
+            {CRUISE_LINES.filter((line) => CRUISE_LINE_COSTS[line.id]).map((line) => (
               <Link
                 key={line.id}
                 href={`/calculator/${line.id}`}

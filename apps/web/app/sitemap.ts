@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'celebrity',
     'princess',
     'holland-america',
+    'virgin-voyages',
   ].map((slug) => ({
     url: `${baseUrl}/calculator/${slug}`,
     lastModified: new Date(),

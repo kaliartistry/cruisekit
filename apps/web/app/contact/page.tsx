@@ -95,7 +95,7 @@ export default function ContactPage() {
               </a>
             </div>
 
-            {/* Social */}
+            {/* Social — hidden until real profiles exist
             <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
               <h2 className="mb-2 text-xl font-bold text-navy">Social</h2>
               <p className="mb-4 text-sm leading-relaxed text-gray-600">
@@ -141,6 +141,7 @@ export default function ContactPage() {
                 </a>
               </div>
             </div>
+            */}
 
           </div>
         </section>

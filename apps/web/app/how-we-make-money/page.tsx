@@ -82,6 +82,7 @@ export default function HowWeMakeMoneyPage() {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[
                 { name: "Viator", role: "Shore excursions and tours" },
+                { name: "GetYourGuide", role: "Shore excursions and tours" },
                 { name: "Booking.com", role: "Pre- and post-cruise hotels" },
                 { name: "Medjet", role: "Medical evacuation insurance" },
                 { name: "SamBoat", role: "Private boat and yacht charters" },
