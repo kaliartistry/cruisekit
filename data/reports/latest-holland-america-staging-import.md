@@ -1,6 +1,6 @@
 # Holland America Staging Import
 
-Generated: 2026-07-01T23:21:57.358Z
+Generated: 2026-08-26T17:45:59.152Z
 
 Mode: staging-only
 
@@ -10,7 +10,7 @@ Source: https://www.hollandamerica.com/en/us/find-a-cruise
 
 | Metric | Count |
 | --- | ---: |
-| Staged sailings | 14 |
+| Staged sailings | 16 |
 | Schema errors | 0 |
 
 ## Notes

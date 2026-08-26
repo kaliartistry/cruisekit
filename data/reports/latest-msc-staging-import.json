@@ -1,24 +1,29 @@
 {
-  "generatedAt": "2026-07-01T23:21:57.368Z",
+  "generatedAt": "2026-08-26T13:20:16.551Z",
   "provider": "msc",
-  "runId": "2026-07-01T23-21-57-367Z",
+  "runId": "2026-08-26T13-20-16-551Z",
   "mode": "staging-only",
-  "sourceUrl": "https://www.msccruises.fi/search-result?area=ASI",
+  "sourceUrl": "https://www.msccruises.fi/search-result?ships=AM",
   "sourceMarket": "FI",
   "currency": "EUR",
   "capturedGraphqlResponses": 2,
   "staging": {
-    "sailings": 0,
+    "sailings": 40,
     "deals": 0,
     "schemaErrors": 0,
-    "byShip": {},
-    "priceRange": null
+    "byShip": {
+      "MSC World America": 40
+    },
+    "priceRange": {
+      "min": 489,
+      "max": 3509
+    }
   },
   "schemaErrors": [],
   "paths": {
-    "raw": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/raw/msc/2026-07-01T23-21-57-367Z",
-    "staging": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/staging/msc/2026-07-01T23-21-57-367Z",
-    "report": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/reports/msc"
+    "raw": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/raw/msc/2026-08-26T13-20-16-551Z",
+    "staging": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/staging/msc/2026-08-26T13-20-16-551Z",
+    "report": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/reports/msc"
   },
   "notes": [
     "MSC USA currently routes automated/headless sessions into a waiting-room or service-unavailable flow.",

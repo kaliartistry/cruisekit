@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-01T23:21:16.189Z",
+  "generatedAt": "2026-08-26T17:47:01.805Z",
   "provider": "azamara",
-  "runId": "2026-07-01T23-21-16-189Z",
+  "runId": "2026-08-26T17-47-01-805Z",
   "mode": "staging-only",
-  "sourceUrl": "https://www.azamara.com/cruises?destinations=ASIA",
+  "sourceUrl": "https://www.azamara.com/cruises?destinations=CARIBBEAN,ALASKA",
   "enrichDetails": true,
   "staging": {
     "sailings": 0,
@@ -15,8 +15,8 @@
   },
   "schemaErrors": [],
   "paths": {
-    "raw": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/raw/azamara/2026-07-01T23-21-16-189Z",
-    "staging": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/staging/azamara/2026-07-01T23-21-16-189Z",
-    "report": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/reports/azamara"
+    "raw": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/raw/azamara/2026-08-26T17-47-01-805Z",
+    "staging": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/staging/azamara/2026-08-26T17-47-01-805Z",
+    "report": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/reports/azamara"
   }
 }

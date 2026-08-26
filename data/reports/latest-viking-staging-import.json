@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-01T14:33:01.058Z",
+  "generatedAt": "2026-08-26T13:19:49.921Z",
   "provider": "viking",
-  "runId": "2026-07-01T14-33-01-058Z",
+  "runId": "2026-08-26T13-19-49-921Z",
   "mode": "itinerary-candidates-only",
   "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
   "pageTitle": "Find A Cruise | Viking Ocean Cruises®",
@@ -11,8 +11,8 @@
     "canonicalDeals": 0
   },
   "priceRange": {
-    "min": 2499,
-    "max": 9999
+    "min": 2599,
+    "max": 8999
   },
   "sampleCandidates": [
     {
@@ -21,7 +21,7 @@
       "route": "Barcelona to Rome (Civitavecchia)",
       "days": 8,
       "nights": 7,
-      "fromPrice": 2499,
+      "fromPrice": 2599,
       "currency": "USD",
       "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
       "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
@@ -33,7 +33,7 @@
       "route": "Rome (Civitavecchia) to Venice (Chioggia)",
       "days": 8,
       "nights": 7,
-      "fromPrice": 3599,
+      "fromPrice": 2999,
       "currency": "USD",
       "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
       "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
@@ -93,7 +93,7 @@
       "route": "Rome (Civitavecchia) to Athens (Piraeus)",
       "days": 8,
       "nights": 7,
-      "fromPrice": 2499,
+      "fromPrice": 2699,
       "currency": "USD",
       "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
       "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
@@ -105,7 +105,7 @@
       "route": "Istanbul to Athens (Piraeus)",
       "days": 8,
       "nights": 7,
-      "fromPrice": 2499,
+      "fromPrice": 2699,
       "currency": "USD",
       "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
       "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
@@ -129,7 +129,7 @@
       "route": "Vancouver, British Columbia to Seward, Alaska",
       "days": 11,
       "nights": 10,
-      "fromPrice": 5499,
+      "fromPrice": 5999,
       "currency": "USD",
       "offerText": "REDUCED AIRFARE | SPECIAL FARES | $25 DEPOSIT",
       "sourceUrl": "https://www.vikingcruises.com/oceans/search-cruises/index.html",
@@ -137,9 +137,9 @@
     }
   ],
   "paths": {
-    "raw": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/raw/viking/2026-07-01T14-33-01-058Z",
-    "staging": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/staging/viking/2026-07-01T14-33-01-058Z",
-    "report": "/Users/kaliartistry-mac/CruiseKit-weekly-data-freshness/data/ingest/reports/viking"
+    "raw": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/raw/viking/2026-08-26T13-19-49-921Z",
+    "staging": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/staging/viking/2026-08-26T13-19-49-921Z",
+    "report": "/Users/kaliartistry-mac/Cruise Travel Agent/.ck-data/data/ingest/reports/viking"
   },
   "notes": [
     "Viking's search cards are official but itinerary-level; they do not include specific departure dates on the first search page.",

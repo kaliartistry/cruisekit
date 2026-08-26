@@ -1,48 +1,48 @@
 {
-  "generatedAt": "2026-07-01T23:27:57.656Z",
-  "currentDate": "2026-07-01",
+  "generatedAt": "2026-08-26T17:58:29.821Z",
+  "currentDate": "2026-08-26",
   "mode": "production-data-freshness",
   "thresholds": {
     "maxPublicAgeDays": 7,
     "maxIngestAgeDays": 7
   },
-  "manifestGeneratedAt": "2026-07-01T23:27:57.523Z",
+  "manifestGeneratedAt": "2026-08-26T17:58:16.024Z",
   "counts": {
-    "publicSailings": 388,
-    "stalePublicSailings": 0,
+    "publicSailings": 439,
+    "stalePublicSailings": 268,
     "weeklyWatchlistSources": 9,
-    "blockers": 0,
-    "warnings": 0,
+    "blockers": 268,
+    "warnings": 1,
     "info": 7
   },
   "byCruiseLine": [
     {
-      "cruiseLine": "carnival",
-      "publicSailings": 117,
-      "stalePublicSailings": 0,
-      "oldestLastVerified": "2026-07-01",
-      "latestLastVerified": "2026-07-01"
-    },
-    {
-      "cruiseLine": "holland-america",
-      "publicSailings": 20,
-      "stalePublicSailings": 0,
-      "oldestLastVerified": "2026-07-01",
-      "latestLastVerified": "2026-07-01"
-    },
-    {
       "cruiseLine": "norwegian",
-      "publicSailings": 217,
-      "stalePublicSailings": 0,
+      "publicSailings": 214,
+      "stalePublicSailings": 138,
       "oldestLastVerified": "2026-07-01",
-      "latestLastVerified": "2026-07-01"
+      "latestLastVerified": "2026-08-26"
+    },
+    {
+      "cruiseLine": "carnival",
+      "publicSailings": 153,
+      "stalePublicSailings": 97,
+      "oldestLastVerified": "2026-07-01",
+      "latestLastVerified": "2026-08-26"
     },
     {
       "cruiseLine": "virgin-voyages",
-      "publicSailings": 34,
-      "stalePublicSailings": 0,
+      "publicSailings": 43,
+      "stalePublicSailings": 19,
       "oldestLastVerified": "2026-07-01",
-      "latestLastVerified": "2026-07-01"
+      "latestLastVerified": "2026-08-26"
+    },
+    {
+      "cruiseLine": "holland-america",
+      "publicSailings": 29,
+      "stalePublicSailings": 14,
+      "oldestLastVerified": "2026-07-01",
+      "latestLastVerified": "2026-08-26"
     }
   ],
   "watchlist": [
@@ -51,7 +51,7 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": false,
-      "latestImportGeneratedAt": "2026-07-01T14:32:32.121Z",
+      "latestImportGeneratedAt": "2026-08-26T13:20:52.696Z",
       "latestReviewGeneratedAt": null,
       "publicSailings": 0
     },
@@ -60,18 +60,18 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T22:32:22.485Z",
-      "latestReviewGeneratedAt": "2026-07-01T22:32:27.063Z",
-      "publicSailings": 117
+      "latestImportGeneratedAt": "2026-08-26T12:58:58.961Z",
+      "latestReviewGeneratedAt": "2026-08-26T13:21:48.489Z",
+      "publicSailings": 153
     },
     {
       "cruiseLine": "norwegian",
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T23:20:36.930Z",
-      "latestReviewGeneratedAt": "2026-07-01T23:21:16.003Z",
-      "publicSailings": 217
+      "latestImportGeneratedAt": "2026-08-26T12:59:13.001Z",
+      "latestReviewGeneratedAt": "2026-08-26T13:21:56.687Z",
+      "publicSailings": 214
     },
     {
       "cruiseLine": "celebrity",
@@ -87,8 +87,8 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T23:21:16.023Z",
-      "latestReviewGeneratedAt": "2026-07-01T23:21:57.177Z",
+      "latestImportGeneratedAt": "2026-08-26T13:15:43.330Z",
+      "latestReviewGeneratedAt": "2026-08-26T13:22:02.928Z",
       "publicSailings": 0
     },
     {
@@ -96,16 +96,16 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T23:21:57.358Z",
-      "latestReviewGeneratedAt": "2026-07-01T23:22:32.059Z",
-      "publicSailings": 20
+      "latestImportGeneratedAt": "2026-08-26T17:45:59.152Z",
+      "latestReviewGeneratedAt": "2026-08-26T17:48:46.797Z",
+      "publicSailings": 29
     },
     {
       "cruiseLine": "msc",
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": false,
-      "latestImportGeneratedAt": "2026-07-01T23:21:57.368Z",
+      "latestImportGeneratedAt": "2026-08-26T13:20:16.551Z",
       "latestReviewGeneratedAt": null,
       "publicSailings": 0
     },
@@ -123,13 +123,1896 @@
       "cadence": "weekly",
       "hasImporter": true,
       "hasReviewCommand": true,
-      "latestImportGeneratedAt": "2026-07-01T22:31:35.142Z",
-      "latestReviewGeneratedAt": "2026-07-01T22:31:42.751Z",
-      "publicSailings": 34
+      "latestImportGeneratedAt": "2026-08-26T17:46:42.087Z",
+      "latestReviewGeneratedAt": "2026-08-26T17:48:50.617Z",
+      "publicSailings": 43
     }
   ],
-  "blockers": [],
-  "warnings": [],
+  "blockers": [
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20260827-21627",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-magic-20260830-21895",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-sunrise-20260831-22008",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20260831-22087",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20260905-22088",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20260906-21629",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-magic-20260913-21897",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-paradise-20260920",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20260924-21633",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261004-21635",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261008-21636",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261022-21639",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-magic-20261025-21903",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-vista-20261025-22164",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20261031-22100",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-paradise-20261101",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261105-21642",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20261109-22102",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20261114-22103",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261115-21644",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261119-21645",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20261128-22106",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20261130-20907",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261203-21648",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20261205-20908",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-celebration-20261206",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-vista-20261206-22170",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20261207-22108",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-magic-20261212-21910",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261212-21650",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20261212-22109",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20261217-21651",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-magic-20270103-21913",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270104-21655",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270104-22114",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20270107-20915",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270109-21656",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270109-22115",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20270111-20916",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270114-21657",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270114-22116",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20270116-20917",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-magic-20270117-21915",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-vista-20270117-22176",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270118-22117",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270123-22118",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20270125-20919",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270128-21660",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270128-22119",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20270130-20920",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-magic-20270131-21917",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-vista-20270131-22178",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270201-21661",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270201-22120",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20270204-20921",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270215-22123",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20270218-20924",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-valor-20270220-22124",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-breeze-20270222-24540",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270408-21675",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270422-21678",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-sunshine-20270609-25076",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-sunshine-20270717-25080",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-sunshine-20270725-25081",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270808-24323",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270822-24326",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-sunshine-20270822-25084",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270826-24327",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270905-24329",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270909-24330",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-sunshine-20270911-25086",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-dream-20270913-23057",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-dream-20270918-23058",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270919-24332",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-sunshine-20270919-25087",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20270923-24333",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-dream-20270927-23060",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271003-24335",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271007-24336",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-sunshine-20271009-25089",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271017-24338",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271021-24339",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271031-24341",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271104-24342",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-firenze-20271114-25181",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271114-24344",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271118-24345",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20271202-24348",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-dream-20280108-23082",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20280113-24357",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-dream-20280117-23084",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-dream-20280122-23085",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20280127-24360",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-dream-20280131-23087",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-dream-20280205-23088",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20280210-24363",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "carnival-carnival-paradise-20280224-24366",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "carnival",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-rotterdam-20260830-14-day-arctic-crossing-and-north-cape",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-nieuw-statendam-20260904-8-day-norwegian-fjords-and-hidden-gems",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-nieuw-statendam-20260919-13-day-fjords-of-norway-spectacular-scenic-cruising",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-nieuw-amsterdam-20260920-7-day-alaska-inside-passage",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-oosterdam-20260923-10-day-adriatic-allure-croatia-greek-isles-and-istanbul",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-oosterdam-20260923-21-day-croatia-greece-and-istanbul-collectors-voyage",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-zuiderdam-20261003-7-day-canada-and-new-england-circle-new-brunswick",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-eurodam-20261004-4-day-pacific-coastal-cruise",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-eurodam-20261004-20-day-panama-canal",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-noordam-20261004-7-day-great-bear-rainforest",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-rotterdam-20261018-13-day-cultural-crossing-with-brugge-and-falmouth",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-oosterdam-20261024-11-day-mediterranean-splendor-greece-italy-and-provence",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-rotterdam-20261031-10-day-western-caribbean-greater-antilles-belize-and-mexico",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "holland-america-koningsdam-20261114-7-day-classic-california-coast",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "holland-america",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20260828-58646",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-dawn-20260830-58542",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20260830-58697",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-pearl-20260830-58753",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-prima-20260830-58198",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-sky-20260831-61019",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-dawn-20260906-58543",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20260907-58639",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-sky-20260909-63120",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-dawn-20260913-58544",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20260913-58699",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-pearl-20260913-58755",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20260916-60203",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20260920-58700",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-prima-20260920-58201",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20260921-61098",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20260926-60204",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20260927-58701",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-pearl-20260927-58757",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20261004-58624",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20261004-58702",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-prima-20261004-58203",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20261005-58641",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20261007-59513",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-dawn-20261011-58548",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20261011-58703",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-pearl-20261011-58759",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-dawn-20261018-58549",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20261018-58626",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20261018-58704",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20261018-59514",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-dawn-20261025-58550",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-pearl-20261025-58761",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20261029-59515",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20261031-59198",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20261112-59516",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20261114-59200",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-getaway-20261116",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20261120-59222",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20261121-59517",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20261122-59101",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-luna-20261128-59161",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20261130-59518",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20261204-61121",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20261209-62040",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-breakaway-20261213-59082",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20261223-62038",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270103-62041",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-breakaway-20270110-59086",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270115-59230",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270117-62039",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-getaway-20270120-59666",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270122-59231",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270128-59523",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270129-59232",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-getaway-20270129-59667",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-getaway-20270203-59668",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20270207-59112",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270209-59524",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20270213-62379",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270222-59525",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20270228-59115",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270305-59526",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-getaway-20270312-59673",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270314-59527",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-getaway-20270317-59674",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270323-59528",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-getaway-20270326-59675",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20270328-59119",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-getaway-20270331-59676",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270401-59529",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-bliss-20270409-60261",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270410-59530",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270428-60474",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20270502-60782",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270512-60477",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20270516-60755",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20270516-60784",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270526-60480",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20270530-60757",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20270530-60786",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270609-60483",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20270613-60788",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20270613-60911",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20270623-60912",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20270627-60790",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20270702-60913",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20270711-60914",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270721-60492",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20270721-60915",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-escape-20270804-60495",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20270808-60917",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-sun-20270905-62253",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20270905-60920",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20270915-60921",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20270919-60773",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20270928-62638",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20271003-60804",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20271003-60923",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20271013-61739",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-viva-20271013-61140",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20271024-61740",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20271104-61741",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20271109-62540",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20271112-61504",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20271118-61742",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20271119-62543",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20271129-61743",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20271130-62544",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20271202-62369",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20271203-61507",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20271209-61744",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jewel-20271209-61892",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-gem-20271211-62541",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-joy-20271216-63711",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20271217-62368",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20271221-61745",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20280102-62363",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280103-61746",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20280107-61512",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-epic-20280114-61513",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280115-61747",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20280117-62364",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280128-61748",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20280201-62365",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280209-61749",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-spirit-20280209-61707",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20280216-62366",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280222-61750",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20280302-62367",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280304-61751",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280313-61752",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-star-20280317-62370",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280322-61753",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280331-61754",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280409-61755",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-bliss-20280414-61727",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "norwegian-norwegian-jade-20280423-61756",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "norwegian",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20260831-10nca",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-brilliant-lady-20260903-8nsabc",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20260910-10nath",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-brilliant-lady-20260911-8nvac",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-brilliant-lady-20260919-7nlax",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20260920-7nbra",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-brilliant-lady-20260926-7nlax",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20260927-7nbra",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-valiant-lady-20260927-5nnyb",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-brilliant-lady-20261003-7nlax",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20261004-7ngm6",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20261011-14nbm3",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20261207-5ntc",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-brilliant-lady-20261210-4nkw",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20270523-7nbra",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-valiant-lady-20270621-5ncz",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-scarlet-lady-20270711-10nath",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-valiant-lady-20271211-5npp",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    },
+    {
+      "severity": "blocker",
+      "id": "virgin-voyages-valiant-lady-20280401-5ncz",
+      "message": "lastVerified=2026-07-01 is 56 days old; max allowed is 7 days.",
+      "cruiseLine": "virgin-voyages",
+      "ageDays": 56
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warning",
+      "id": "weekly-ingest-report",
+      "message": "latest-weekly-ingest.json is 56 days old; max expected is 7 days."
+    }
+  ],
   "info": [
     {
       "severity": "info",

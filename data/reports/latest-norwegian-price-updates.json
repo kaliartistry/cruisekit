@@ -1,0 +1,266 @@
+{
+  "generatedAt": "2026-08-26T17:58:09.359Z",
+  "provider": "norwegian",
+  "mode": "apply",
+  "sourceRunId": "2026-08-26T12-59-13-000Z",
+  "sourceReviewGeneratedAt": "2026-08-26T13:21:56.687Z",
+  "semantics": "mirrors promote-carnival-staging.mjs updatePriceChanges()",
+  "counts": {
+    "reviewPriceChanges": 36,
+    "applied": 36
+  },
+  "updates": [
+    {
+      "id": "norwegian-norwegian-viva-20261107-59199",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-11-07",
+      "previousPrice": 859,
+      "nextPrice": 709
+    },
+    {
+      "id": "norwegian-norwegian-viva-20261128-59202",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-11-28",
+      "previousPrice": 599,
+      "nextPrice": 689
+    },
+    {
+      "id": "norwegian-norwegian-viva-20261205-59203",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-12-05",
+      "previousPrice": 599,
+      "nextPrice": 729
+    },
+    {
+      "id": "norwegian-norwegian-viva-20261212-59204",
+      "shipName": "Norwegian Viva",
+      "departureDate": "2026-12-12",
+      "previousPrice": 599,
+      "nextPrice": 709
+    },
+    {
+      "id": "norwegian-norwegian-luna-20260829-58877",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-08-29",
+      "previousPrice": 809,
+      "nextPrice": 249
+    },
+    {
+      "id": "norwegian-norwegian-epic-20261129-59102",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2026-11-29",
+      "previousPrice": 499,
+      "nextPrice": 599
+    },
+    {
+      "id": "norwegian-norwegian-epic-20270117-59109",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-01-17",
+      "previousPrice": 579,
+      "nextPrice": 739
+    },
+    {
+      "id": "norwegian-norwegian-breakaway-20261122-59079",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2026-11-22",
+      "previousPrice": 929,
+      "nextPrice": 729
+    },
+    {
+      "id": "norwegian-norwegian-breakaway-20261129-59080",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2026-11-29",
+      "previousPrice": 929,
+      "nextPrice": 649
+    },
+    {
+      "id": "norwegian-norwegian-breakaway-20270103-59085",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2027-01-03",
+      "previousPrice": 579,
+      "nextPrice": 679
+    },
+    {
+      "id": "norwegian-norwegian-breakaway-20270117-59087",
+      "shipName": "Norwegian Breakaway",
+      "departureDate": "2027-01-17",
+      "previousPrice": 579,
+      "nextPrice": 679
+    },
+    {
+      "id": "norwegian-norwegian-prima-20260913-58200",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-09-13",
+      "previousPrice": 779,
+      "nextPrice": 599
+    },
+    {
+      "id": "norwegian-norwegian-prima-20260927-58202",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-09-27",
+      "previousPrice": 829,
+      "nextPrice": 649
+    },
+    {
+      "id": "norwegian-norwegian-prima-20261011-58204",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-10-11",
+      "previousPrice": 859,
+      "nextPrice": 679
+    },
+    {
+      "id": "norwegian-norwegian-prima-20261025-58206",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-10-25",
+      "previousPrice": 829,
+      "nextPrice": 679
+    },
+    {
+      "id": "norwegian-norwegian-escape-20261113-59221",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-11-13",
+      "previousPrice": 599,
+      "nextPrice": 779
+    },
+    {
+      "id": "norwegian-norwegian-escape-20261127-59223",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-11-27",
+      "previousPrice": 549,
+      "nextPrice": 679
+    },
+    {
+      "id": "norwegian-norwegian-escape-20261204-59224",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-12-04",
+      "previousPrice": 549,
+      "nextPrice": 759
+    },
+    {
+      "id": "norwegian-norwegian-escape-20261211-59225",
+      "shipName": "Norwegian Escape",
+      "departureDate": "2026-12-11",
+      "previousPrice": 549,
+      "nextPrice": 709
+    },
+    {
+      "id": "norwegian-norwegian-aqua-20261213-59055",
+      "shipName": "Norwegian Aqua",
+      "departureDate": "2026-12-13",
+      "previousPrice": 699,
+      "nextPrice": 889
+    },
+    {
+      "id": "norwegian-norwegian-prima-20260906-58199",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-09-06",
+      "previousPrice": 829,
+      "nextPrice": 549
+    },
+    {
+      "id": "norwegian-norwegian-prima-20261018-58205",
+      "shipName": "Norwegian Prima",
+      "departureDate": "2026-10-18",
+      "previousPrice": 929,
+      "nextPrice": 679
+    },
+    {
+      "id": "norwegian-norwegian-joy-20271017-61939",
+      "shipName": "Norwegian Joy",
+      "departureDate": "2027-10-17",
+      "previousPrice": 699,
+      "nextPrice": 549
+    },
+    {
+      "id": "norwegian-norwegian-luna-20261114-59159",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-11-14",
+      "previousPrice": 899,
+      "nextPrice": 699
+    },
+    {
+      "id": "norwegian-norwegian-luna-20261107-59158",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-11-07",
+      "previousPrice": 849,
+      "nextPrice": 699
+    },
+    {
+      "id": "norwegian-norwegian-luna-20261212-59163",
+      "shipName": "Norwegian Luna",
+      "departureDate": "2026-12-12",
+      "previousPrice": 749,
+      "nextPrice": 949
+    },
+    {
+      "id": "norwegian-norwegian-epic-20270124-59110",
+      "shipName": "Norwegian Epic",
+      "departureDate": "2027-01-24",
+      "previousPrice": 579,
+      "nextPrice": 739
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20261028-59658",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-10-28",
+      "previousPrice": 519,
+      "nextPrice": 419
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20261106-59659",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-11-06",
+      "previousPrice": 509,
+      "nextPrice": 429
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20261111-59660",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-11-11",
+      "previousPrice": 499,
+      "nextPrice": 419
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20270217-59670",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-02-17",
+      "previousPrice": 799,
+      "nextPrice": 679
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20261204-59663",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-12-04",
+      "previousPrice": 429,
+      "nextPrice": 359
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20261209-59664",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2026-12-09",
+      "previousPrice": 509,
+      "nextPrice": 409
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20270115-59665",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-01-15",
+      "previousPrice": 699,
+      "nextPrice": 569
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20270226-59671",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-02-26",
+      "previousPrice": 799,
+      "nextPrice": 669
+    },
+    {
+      "id": "norwegian-norwegian-getaway-20270212-59669",
+      "shipName": "Norwegian Getaway",
+      "departureDate": "2027-02-12",
+      "previousPrice": 799,
+      "nextPrice": 669
+    }
+  ]
+}

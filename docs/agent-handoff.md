@@ -1,6 +1,32 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-08-23
+Last verified: 2026-08-26
+
+## Sailing data and CHEERS pricing refresh candidate
+
+- Branch `fix/data-freshness` was refreshed from official-source staging runs
+  dated 2026-08-26. The reviewed promotion adds 117 sailings (Carnival 40,
+  Norwegian 40, Holland America 13, Virgin Voyages 24) and applies 54 price
+  corrections (Carnival 16, Norwegian 36, Holland America 2), with no seed
+  deletions or retirements.
+- Every newly promoted sailing remains labeled
+  `itinerary_verified_price_check_required`. Princess, MSC, Viking, Royal
+  Caribbean, and Azamara remain staging-only; Royal Caribbean recorded its
+  expected automated-access blocker and Azamara returned zero candidates.
+- Seed sailings increase from 433 to 550 and the public bundle from 388 to 439.
+  Data health reports zero schema blockers, but the stricter freshness report
+  still identifies 268 public sailings older than the seven-day threshold.
+  This is a curated partial refresh, not a claim that the entire catalog is
+  current.
+- Carnival CHEERS is corrected from `$82.54` to `$83.94` per day pre-cruise,
+  including the 20% service charge; the calculator description now states the
+  pre-cruise base and onboard all-in price explicitly.
+- Local verification passed: 550 sailings and zero deals validated with zero
+  schema errors; 10/10 ship-data tests; 57/57 web tests; full web ESLint; and a
+  Next.js static export of 191 pages. Node 26 emitted the repository's expected
+  Node 22 engine warning locally; GitHub Pages builds with Node 22.
+- Pending: protected-main PR review/merge, GitHub Pages deployment, and direct
+  live verification of bundle counts, checked dates, and the CHEERS value.
 
 ## Total Cruise Cost comparison sharing repair
 

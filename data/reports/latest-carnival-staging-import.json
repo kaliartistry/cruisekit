@@ -1,30 +1,58 @@
 {
-  "generatedAt": "2026-07-01T22:32:22.485Z",
+  "generatedAt": "2026-08-26T12:58:58.961Z",
   "provider": "carnival",
-  "runId": "2026-07-01T22-32-22-485Z",
+  "runId": "2026-08-26T12-58-58-961Z",
   "mode": "staging-only",
   "source": "https://www.carnival.com/cruisesearch/api/search",
-  "destination": "E",
-  "maxPages": 1,
+  "destination": "C",
+  "maxPages": 3,
   "pageSize": 50,
   "rawPages": [
     {
       "page": 1,
-      "url": "https://www.carnival.com/cruisesearch/api/search?dest=E&numAdults=2&pageNumber=1&pageSize=50&showBest=true&excludeResults=false&currency=USD&locality=1",
-      "totalResults": 36
+      "url": "https://www.carnival.com/cruisesearch/api/search?dest=C&numAdults=2&pageNumber=1&pageSize=50&showBest=true&excludeResults=false&currency=USD&locality=1",
+      "totalResults": 218
+    },
+    {
+      "page": 2,
+      "url": "https://www.carnival.com/cruisesearch/api/search?dest=C&numAdults=2&pageNumber=2&pageSize=50&showBest=true&excludeResults=false&currency=USD&locality=1",
+      "totalResults": 218
+    },
+    {
+      "page": 3,
+      "url": "https://www.carnival.com/cruisesearch/api/search?dest=C&numAdults=2&pageNumber=3&pageSize=50&showBest=true&excludeResults=false&currency=USD&locality=1",
+      "totalResults": 218
     }
   ],
   "staging": {
-    "sailings": 39,
+    "sailings": 993,
     "deals": 0,
     "schemaErrors": 0,
     "byShip": {
-      "Carnival Legend": 7,
+      "Carnival Breeze": 83,
+      "Carnival Celebration": 77,
+      "Carnival Conquest": 3,
+      "Carnival Dream": 91,
+      "Carnival Festivale": 23,
+      "Carnival Firenze": 16,
+      "Carnival Freedom": 20,
+      "Carnival Horizon": 96,
+      "Carnival Jubilee": 37,
+      "Carnival Legend": 13,
+      "Carnival Liberty": 53,
+      "Carnival Magic": 80,
       "Carnival Miracle": 17,
-      "Carnival Sunshine": 15
+      "Carnival Paradise": 103,
+      "Carnival Spirit": 9,
+      "Carnival Sunrise": 3,
+      "Carnival Sunshine": 29,
+      "Carnival Valor": 58,
+      "Carnival Venezia": 65,
+      "Carnival Vista": 81,
+      "Mardi Gras": 36
     },
-    "minPrice": 746,
-    "maxPrice": 1506
+    "minPrice": 247,
+    "maxPrice": 3268
   },
   "blockers": [],
   "warnings": [
@@ -33,8 +61,8 @@
     "Observed cabin prices are saved separately and are not part of the canonical public schema."
   ],
   "paths": {
-    "raw": "data/ingest/raw/carnival/2026-07-01T22-32-22-485Z",
-    "staging": "data/ingest/staging/carnival/2026-07-01T22-32-22-485Z",
-    "report": "data/ingest/reports/carnival/2026-07-01T22-32-22-485Z.json"
+    "raw": "data/ingest/raw/carnival/2026-08-26T12-58-58-961Z",
+    "staging": "data/ingest/staging/carnival/2026-08-26T12-58-58-961Z",
+    "report": "data/ingest/reports/carnival/2026-08-26T12-58-58-961Z.json"
   }
 }
