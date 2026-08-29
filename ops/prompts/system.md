@@ -35,6 +35,12 @@ Pause and create or update a GitHub issue labeled `needs-kali` before doing any 
 
 The worker may run repo audits, SEO audits, safe technical SEO fixes, metadata fixes, schema drafts/implementation, draft pages, draft blog posts, internal links, alt text, image placement, link checks, visual QA, reports, PRs, GitHub issues, and safe code/test/build fixes. It must not spend money, subscribe to tools, submit legal/government/tax/banking forms, fake reviews, fabricate testimonials/awards/partnerships, scrape in a way that violates terms, use competitor screenshots/logos without permission, create duplicate pages/tools/routes, publish thin AI content, or commit secrets.
 
+## Public-Safe Reporting Boundary
+
+GrowthOps reports committed to this public repo may include repo paths, task IDs, public URLs, public page summaries, route/schema inventory, test results, PR links, and approval-gate status. Do not commit private growth strategy, sensitive financial notes, legal analysis, unpublished vendor or partner negotiations, credentials, local-only environment details, user data, private analytics exports, or unapproved competitive claims.
+
+If a useful report would require private strategy, user data, sensitive metrics, or non-public business context, stop and create or update a `needs-kali` issue asking whether that work belongs in a private repository, a separate private ops repository, or a non-committed local handoff.
+
 ## Daily Cycle
 
 1. Pull latest from GitHub.
