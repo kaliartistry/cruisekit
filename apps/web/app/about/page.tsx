@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CheckCircle2, ShieldCheck } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     "cruise toolkit technology",
   ],
 };
+
+const NOT_CRUISEKIT = [
+  "Not an official cruise line app or certified cruise line product.",
+  "Not a travel agency, booking engine, or place to manage a reservation.",
+  "Not the source for onboard account balances, dining reservations, ship services, or sailing-specific alerts.",
+  "Not a replacement for confirming prices, rules, ship time, and itinerary changes with official sources.",
+];
 
 export default function AboutPage() {
   return (
@@ -72,6 +80,46 @@ export default function AboutPage() {
               and we don&rsquo;t take bookings. Instead, we give you the
               data and tools to make smarter decisions on your own.
             </p>
+
+            <section className="rounded-xl border border-teal/20 bg-teal/5 p-5">
+              <div className="flex items-start gap-3">
+                <ShieldCheck className="mt-0.5 h-6 w-6 shrink-0 text-teal" />
+                <div>
+                  <h2 className="text-xl font-bold text-navy">
+                    What CruiseKit is not
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    CruiseKit is useful because it stays focused on planning.
+                    Official cruise line apps and onboard sources still own the
+                    sailing-specific details travelers must verify before they
+                    act.
+                  </p>
+                </div>
+              </div>
+              <ul className="mt-5 space-y-3">
+                {NOT_CRUISEKIT.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm leading-6">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-teal" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {[
+                  { href: "/cruisekit-public-information", label: "Public information" },
+                  { href: "/methodology", label: "Calculator methodology" },
+                  { href: "/how-we-make-money", label: "How we make money" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="rounded-full border border-teal/25 bg-white px-3 py-1.5 text-xs font-semibold text-teal-dark transition-colors hover:border-teal hover:bg-white/80"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </section>
 
             <p>
               The platform is built and maintained by a solo developer who got
