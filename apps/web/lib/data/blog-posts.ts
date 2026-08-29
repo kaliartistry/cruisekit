@@ -1996,6 +1996,81 @@ const carnivalVsRoyalCaribbeanComparisonPost: BlogPost = {
 };
 
 /* ------------------------------------------------------------------ */
+/*  Post - Cruise Line App vs Independent Cruise Planner               */
+/* ------------------------------------------------------------------ */
+
+const cruiseLineAppVsIndependentPlannerPost: BlogPost = {
+  slug: "cruise-line-app-vs-independent-cruise-planner",
+  title: "Cruise Line App vs Independent Cruise Planner",
+  excerpt:
+    "Use the cruise line app for official onboard services, then use an independent planner for true cost, ship-time context, port days, and group coordination.",
+  category: "tips",
+  author: "CruiseKit Editorial",
+  publishedDate: "2026-06-29",
+  readTime: "7 min read",
+  imageUrl: "/assets/app-screenshots/myday-today.png",
+  tags: [
+    "cruise planning",
+    "cruise line app",
+    "independent cruise planner",
+    "ship time",
+    "port days",
+    "MyDay",
+  ],
+  content: [
+    {
+      heading: "Start With the Right Job for Each App",
+      paragraphs: [
+        "A cruise line app and an independent cruise planner should not do the same job. The cruise line app is the source for sailing-specific information controlled by the line. An independent planner helps you organize the parts of the trip that happen around that official information: realistic cost planning, daily structure, port-day notes, group plans, and the details you want to compare before and during the cruise.",
+        "That distinction matters because cruise trips have two layers. One layer is official and operational: account charges, dining reservations, boarding documents, ship announcements, onboard services, and itinerary changes. The other layer is personal planning: how much the trip will really cost, what your group is doing after breakfast, whether a port day has a ship-time risk, and which extras still fit the budget.",
+      ],
+    },
+    {
+      heading: "What the Cruise Line App Should Own",
+      paragraphs: [
+        "Use the cruise line app for anything that depends on the actual sailing record or onboard systems. That includes check-in, boarding documents, stateroom access where supported, onboard account details, dining reservations, show reservations, ship announcements, service requests, loyalty details, and messages from the cruise line.",
+        "CruiseKit is independent and is not a replacement for those official sources. If a time, rule, charge, reservation, or service instruction conflicts with your personal plan, follow the cruise line, the onboard crew, or the official information shown for your sailing.",
+      ],
+    },
+    {
+      heading: "What an Independent Planner Should Own",
+      paragraphs: [
+        "An independent cruise planner is strongest before the trip starts and during the moments when you are trying to make sense of the whole vacation. It can help you estimate the true cost beyond the fare, build a day-by-day plan, keep port notes in one place, track onboard spending against a budget, and coordinate what your group is doing without mixing every decision into a general chat thread.",
+        "This is the space CruiseKit is built for: true cruise cost, MyDay scheduling, ship-time and port-time context, onboard spend tracking, port days, and MyCrew coordination. Those planning jobs are useful because they sit beside the cruise line app instead of pretending to replace it.",
+      ],
+    },
+    {
+      heading: "Why True Cost Usually Needs a Separate Planning Layer",
+      paragraphs: [
+        "The fare is only one part of the trip. A realistic cruise budget also needs taxes and port fees, daily gratuities, drinks, WiFi, specialty dining, shore excursions, insurance, transportation, hotels, parking, port cash, and onboard extras. Some of those numbers appear during booking, some appear later, and some depend on how you travel.",
+        "A cruise line app is usually focused on the booked sailing and onboard account. A planning layer can start earlier, before you commit to the trip, and keep the estimate visible as plans change. That makes it easier to compare a bare-bones trip, a mid-range trip, and a more extras-heavy trip without waiting for the final onboard folio.",
+      ],
+    },
+    {
+      heading: "Why Ship Time and Port Time Need Extra Attention",
+      paragraphs: [
+        "Port days are where personal planning and official instructions overlap. The ship may follow one time while the destination uses another, and phones can change time zones automatically. Your cruise line's all-aboard instruction is the source of truth, but your personal plan still needs to keep that instruction close to excursions, meetups, meals, and return buffers.",
+        "CruiseKit's role is to keep ship-time and port-time context near the rest of the day plan. That helps you think through when to leave the beach, when to meet the group, and when to head back toward the pier. It does not replace checking the ship's posted all-aboard time before leaving.",
+      ],
+    },
+    {
+      heading: "How Groups Benefit From Both Tools",
+      paragraphs: [
+        "Group cruises create more coordination work than solo or couple trips. One person may be handling dinner plans, another may be tracking excursion ideas, and someone else may just need to know whether the group is on the ship, at the pool, or heading back from port.",
+        "The cruise line app is still where official reservations and onboard services live. An independent planner can help the group maintain a shared, practical view of plans without giving every small decision the weight of an official reservation. That is especially useful for loose plans, status check-ins, packing notes, port ideas, and budget reminders.",
+      ],
+    },
+    {
+      heading: "A Simple Rule for Choosing Which App to Open",
+      paragraphs: [
+        "Open the cruise line app when the question is official: What does the cruise line say? What is on my onboard account? What reservation did the ship confirm? What instruction applies to this sailing today?",
+        "Open an independent planner when the question is personal: What will this trip really cost? What are we doing today? How does ship time affect the port plan? Where is the group meeting? What extras have we already spent money on? Used together, the two tools make the trip easier to manage because each one has a clear job.",
+      ],
+    },
+  ],
+};
+
+/* ------------------------------------------------------------------ */
 
 export const BLOG_POSTS: BlogPost[] = [
   caribbeanCostPost,
@@ -2023,6 +2098,7 @@ export const BLOG_POSTS: BlogPost[] = [
   disneyVsCarnivalFamiliesPost,
   howMuchCruiseCost2026Post,
   fifteenHiddenCostsPost,
+  cruiseLineAppVsIndependentPlannerPost,
   carnivalVsRoyalCaribbeanComparisonPost,
 ];
 

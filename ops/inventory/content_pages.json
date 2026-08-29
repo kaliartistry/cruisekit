@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T14:07:40.937Z",
+  "generatedAt": "2026-06-29T14:07:06.829Z",
   "contentPages": [
     {
       "type": "blog",
@@ -41,6 +41,12 @@
       "type": "blog",
       "route": "/blog/celebrity-vs-princess",
       "title": "Celebrity vs Princess: Which Premium Line Costs Less?",
+      "source": "apps/web/lib/data/blog-posts.ts"
+    },
+    {
+      "type": "blog",
+      "route": "/blog/cruise-line-app-vs-independent-cruise-planner",
+      "title": "Cruise Line App vs Independent Cruise Planner",
       "source": "apps/web/lib/data/blog-posts.ts"
     },
     {
