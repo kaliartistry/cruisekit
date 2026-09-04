@@ -3,7 +3,7 @@ import { Calculator } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
 type CalculatorSwitcherProps = {
-  active: "total-cost" | "drink-package";
+  active: "total-cost" | "drink-package" | "gratuity" | "deadlines";
   className?: string;
 };
 
@@ -13,6 +13,18 @@ const calculatorOptions = [
     href: "/calculator",
     label: "Total Cruise Cost",
     description: "Fare, fees, gratuities, drinks, WiFi, excursions, and extras.",
+  },
+  {
+    id: "gratuity",
+    href: "/cruise-gratuity-calculator",
+    label: "Gratuities",
+    description: "Daily crew charges by line, cabin, guests, and booking cohort.",
+  },
+  {
+    id: "deadlines",
+    href: "/cruise-payment-deadline-calculator",
+    label: "Payment Deadlines",
+    description: "Final-payment and pre-cruise package calendar reminders.",
   },
   {
     id: "drink-package",
@@ -34,7 +46,7 @@ export default function CalculatorSwitcher({
         className
       )}
     >
-      <div className="grid gap-2 sm:grid-cols-2">
+      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
         {calculatorOptions.map((option) => {
           const isActive = option.id === active;
 

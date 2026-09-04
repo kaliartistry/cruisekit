@@ -490,7 +490,7 @@ export default async function CruiseLinePage({ params }: Props) {
           label: "Drink package break-even math",
         },
         {
-          href: "/guides/cruise-tipping-guide",
+          href: "/cruise-gratuity-calculator",
           label: "Cruise gratuity guide",
         },
         {

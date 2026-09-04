@@ -885,7 +885,7 @@ export default async function BlogPostPage({ params }: Props) {
                     label: "Drink package math",
                   },
                   {
-                    href: "/guides/cruise-tipping-guide",
+                    href: "/cruise-gratuity-calculator",
                     label: "Gratuity guide",
                   },
                   {

@@ -1,0 +1,167 @@
+export type DeadlineRule = {
+  id: string;
+  cruiseLine: string;
+  daysBeforeSailing: number;
+  appliesWhen: string;
+  sourceTitle: string;
+  sourceUrl: string;
+  retrievedAt: string;
+  recheckBy: string;
+};
+
+export const FINAL_PAYMENT_RULES: DeadlineRule[] = [
+  {
+    id: "royal-1-4",
+    cruiseLine: "Royal Caribbean",
+    daysBeforeSailing: 75,
+    appliesWhen: "1–4 nights",
+    sourceTitle: "Royal Caribbean final payment FAQ",
+    sourceUrl: "https://www.royalcaribbean.com/faq/questions/final-payment-schedule-policy",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+  },
+  {
+    id: "royal-5-14",
+    cruiseLine: "Royal Caribbean",
+    daysBeforeSailing: 90,
+    appliesWhen: "5–14 nights",
+    sourceTitle: "Royal Caribbean final payment FAQ",
+    sourceUrl: "https://www.royalcaribbean.com/faq/questions/final-payment-schedule-policy",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+  },
+  {
+    id: "royal-15-plus",
+    cruiseLine: "Royal Caribbean",
+    daysBeforeSailing: 120,
+    appliesWhen: "15+ nights",
+    sourceTitle: "Royal Caribbean final payment FAQ",
+    sourceUrl: "https://www.royalcaribbean.com/faq/questions/final-payment-schedule-policy",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+  },
+  {
+    id: "carnival-2-5",
+    cruiseLine: "Carnival",
+    daysBeforeSailing: 76,
+    appliesWhen: "2–5 days",
+    sourceTitle: "Carnival deposit and final payment requirements",
+    sourceUrl: "https://help.carnival.com/app/answers/detail/a_id/481",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+  },
+  {
+    id: "carnival-6-plus",
+    cruiseLine: "Carnival",
+    daysBeforeSailing: 91,
+    appliesWhen: "6+ days and listed special itineraries",
+    sourceTitle: "Carnival deposit and final payment requirements",
+    sourceUrl: "https://help.carnival.com/app/answers/detail/a_id/481",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+  },
+  {
+    id: "ncl-current",
+    cruiseLine: "Norwegian",
+    daysBeforeSailing: 120,
+    appliesWhen: "Current U.S. individual bookings; confirm your invoice",
+    sourceTitle: "Norwegian Cruise Line terms and conditions",
+    sourceUrl: "https://www.ncl.com/terms",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+  },
+  {
+    id: "princess-new-booking",
+    cruiseLine: "Princess",
+    daysBeforeSailing: 120,
+    appliesWhen: "Bookings made on or after September 2, 2026",
+    sourceTitle: "Princess passage contract",
+    sourceUrl: "https://www.princess.com/en-int/legal/passage-contract/plc",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+  },
+  {
+    id: "princess-legacy-short",
+    cruiseLine: "Princess",
+    daysBeforeSailing: 90,
+    appliesWhen: "Bookings before September 2, 2026; 1–13 days",
+    sourceTitle: "Princess passage contract",
+    sourceUrl: "https://www.princess.com/en-int/legal/passage-contract/plc",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+  },
+  {
+    id: "princess-legacy-long",
+    cruiseLine: "Princess",
+    daysBeforeSailing: 120,
+    appliesWhen: "Bookings before September 2, 2026; 14+ days",
+    sourceTitle: "Princess passage contract",
+    sourceUrl: "https://www.princess.com/en-int/legal/passage-contract/plc",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+  },
+  {
+    id: "virgin",
+    cruiseLine: "Virgin Voyages",
+    daysBeforeSailing: 120,
+    appliesWhen: "Standard bookings",
+    sourceTitle: "Virgin Voyages payments FAQ",
+    sourceUrl: "https://www.virginvoyages.com/faq/before-you-sail/payments",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+  },
+  {
+    id: "hal-short",
+    cruiseLine: "Holland America",
+    daysBeforeSailing: 90,
+    appliesWhen: "Most current 13-day-or-shorter cruises; cohort exceptions apply",
+    sourceTitle: "Holland America cancellation and final payment policy",
+    sourceUrl: "https://www.hollandamerica.com/en/us/legal-privacy/cancellation-policy-US-default",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+  },
+  {
+    id: "hal-long",
+    cruiseLine: "Holland America",
+    daysBeforeSailing: 120,
+    appliesWhen: "Most current 14+ day, Grand, Asia, Australia, and South America cruises",
+    sourceTitle: "Holland America cancellation and final payment policy",
+    sourceUrl: "https://www.hollandamerica.com/en/us/legal-privacy/cancellation-policy-US-default",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+  },
+  {
+    id: "disney-adventure",
+    cruiseLine: "Disney Cruise Line",
+    daysBeforeSailing: 90,
+    appliesWhen: "Disney Adventure; use the exact date on other booking confirmations",
+    sourceTitle: "Disney Adventure pre-arrival guide",
+    sourceUrl: "https://disneycruise.disney.go.com/en-ph/ships/adventure/disney-adventure-pre-arrival/",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+  },
+];
+
+export const PACKAGE_CUTOFFS = [
+  {
+    cruiseLine: "Carnival",
+    daysBeforeSailing: 2,
+    label: "CHEERS online pre-purchase",
+    priceDifference: "Current product page advertises an $8/day pre-cruise saving; Carnival help pages conflict, so confirm in Manage My Booking.",
+    sourceUrl: "https://www.carnival.com/drink-packages/cheers-package/cheers-BTA",
+  },
+  {
+    cruiseLine: "Royal Caribbean",
+    daysBeforeSailing: 3,
+    label: "Beverage package online purchase",
+    priceDifference: "No fixed public price difference; Cruise Planner pricing varies.",
+    sourceUrl: "https://www.royalcaribbean.com/faq/questions/beverage-package-cancellation-policy",
+  },
+  {
+    cruiseLine: "Princess",
+    daysBeforeSailing: 4,
+    label: "Princess Plus or Premier lower-price cutoff",
+    priceDifference: "$5 more per person per day within 96 hours or onboard.",
+    sourceUrl: "https://www.princess.com/cruise-dining/beverages",
+  },
+] as const;

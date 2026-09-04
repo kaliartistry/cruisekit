@@ -223,7 +223,7 @@ export default function CalculatorPage() {
                   Drink package break-even math
                 </Link>
                 <Link
-                  href="/guides/cruise-tipping-guide"
+                  href="/cruise-gratuity-calculator"
                   className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
                 >
                   Cruise gratuities

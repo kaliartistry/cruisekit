@@ -169,8 +169,8 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   norwegian: {
     cruiseLineId: "norwegian",
     lastUpdated: "2026-09-04",
-    gratuityPerPersonPerDay: 20.0,
-    suiteGratuityPerPersonPerDay: 25.0,
+    gratuityPerPersonPerDay: PRICE_FACTS.nclStandardGratuity.amount,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.nclSuiteGratuity.amount,
     serviceChargePercent: 20,
     drinkPackages: {
       tiers: [
@@ -302,7 +302,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
     cruiseLineId: "msc",
     lastUpdated: "2026-09-04",
     gratuityPerPersonPerDay: PRICE_FACTS.mscStandardCaribbean.amount,
-    suiteGratuityPerPersonPerDay: 23.0,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.mscSuiteCaribbean.amount,
     serviceChargePercent: 0,
     drinkPackages: {
       tiers: [
@@ -459,8 +459,8 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   princess: {
     cruiseLineId: "princess",
     lastUpdated: "2026-09-04",
-    gratuityPerPersonPerDay: 18.0,
-    suiteGratuityPerPersonPerDay: 20.0,
+    gratuityPerPersonPerDay: PRICE_FACTS.princessStandardGratuity.amount,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.princessSuiteGratuity.amount,
     serviceChargePercent: 20,
     drinkPackages: {
       tiers: [
@@ -685,8 +685,8 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   disney: {
     cruiseLineId: "disney",
     lastUpdated: "2026-09-04",
-    gratuityPerPersonPerDay: 16.0,
-    suiteGratuityPerPersonPerDay: 27.25,
+    gratuityPerPersonPerDay: PRICE_FACTS.disneyStandardGratuity.amount,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.disneyConciergeGratuity.amount,
     serviceChargePercent: 18,
     drinkPackages: {
       tiers: [],

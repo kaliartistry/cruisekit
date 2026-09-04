@@ -53,6 +53,18 @@ const CALCULATOR_LINKS = [
     href: "/cruise-drink-package-calculator",
     description: "Compare drink packages, bundled fares, service charges, and Bar Tab credit.",
   },
+  {
+    label: "Cruise Gratuity Calculator",
+    shortLabel: "Gratuities",
+    href: "/cruise-gratuity-calculator",
+    description: "Calculate daily tips by line, cabin, and voyage length.",
+  },
+  {
+    label: "Cruise Payment Deadline Calculator",
+    shortLabel: "Payment Deadlines",
+    href: "/cruise-payment-deadline-calculator",
+    description: "Save final-payment and package cutoffs to your calendar.",
+  },
 ] as const;
 
 export default function Navbar() {

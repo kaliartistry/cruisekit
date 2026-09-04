@@ -326,7 +326,7 @@ export default function FAQPage() {
                   label: "Drink package math",
                 },
                 {
-                  href: "/guides/cruise-tipping-guide",
+                  href: "/cruise-gratuity-calculator",
                   label: "Gratuity guide",
                 },
               ].map((link) => (

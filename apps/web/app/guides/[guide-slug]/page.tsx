@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import AffiliateLink from "@/components/shared/affiliate-link";
@@ -375,7 +375,7 @@ function CtaBanners({ slug }: { slug: string }) {
       href: "/calculator",
       links: [
         { href: "/ports", label: "Port guides" },
-        { href: "/guides/cruise-tipping-guide", label: "Tipping guide" },
+        { href: "/cruise-gratuity-calculator", label: "Gratuity calculator" },
         { href: "/blog/hidden-cruise-costs", label: "Hidden costs" },
       ],
     },
@@ -617,6 +617,9 @@ function MobileTableOfContents({
 
 export default async function GuideDetailPage({ params }: Props) {
   const { "guide-slug": slug } = await params;
+  if (slug === "cruise-tipping-guide") {
+    permanentRedirect("/cruise-gratuity-calculator/");
+  }
   const guide = getGuideBySlug(slug);
 
   if (!guide) notFound();
