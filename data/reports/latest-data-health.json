@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-26T17:58:29.765Z",
-  "manifestGeneratedAt": "2026-08-26T17:58:16.024Z",
+  "generatedAt": "2026-09-04T20:48:55.505Z",
+  "manifestGeneratedAt": "2026-09-04T20:48:41.573Z",
   "counts": {
     "seedSailings": 550,
-    "publicSailings": 439,
+    "publicSailings": 422,
     "seedDeals": 0,
     "publicDeals": 0,
-    "mobileSailings": 439,
-    "mobileDeals": 439,
-    "filteredExpiredSeedSailings": 73
+    "mobileSailings": 422,
+    "mobileDeals": 422,
+    "filteredExpiredSeedSailings": 90
   },
   "byCruiseLine": {
     "azamara": 8,
@@ -22,374 +22,459 @@
     "internal_do_not_publish": 38,
     "itinerary_verified_price_check_required": 512
   },
-  "currentDate": "2026-08-26",
+  "currentDate": "2026-09-04",
   "blockers": [],
   "warnings": [],
   "info": [
     {
       "severity": "info",
       "id": "carnival-celebration-20260802",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "carnival-carnival-paradise-20260809-21623",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "carnival-carnival-valor-20260822-22085",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "carnival-carnival-paradise-20260823-21626",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "carnival-carnival-paradise-20260827-21627",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "carnival-carnival-valor-20260827-22086",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "carnival-carnival-magic-20260830-21895",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "carnival-carnival-sunrise-20260831-22008",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "carnival-carnival-valor-20260831-22087",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "holland-america-westerdam-20260621-7-day-glacier-discovery-northbound",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "holland-america-oosterdam-20260628-7-day-mediterranean-greece-to-turkey",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "holland-america-oosterdam-20260705-7-day-mediterranean-splendor-corfu-sicily-and-spain",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "holland-america-westerdam-20260705-7-day-glacier-discovery-northbound",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "holland-america-nieuw-statendam-20260710-14-day-wild-british-isles-belfast-evening-stay",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "holland-america-eurodam-20260718-7-day-alaska-explorer",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "holland-america-oosterdam-20260829-7-day-western-mediterranean",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "holland-america-rotterdam-20260830-14-day-arctic-crossing-and-north-cape",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "holland-america-westerdam-20260830-7-day-glacier-discovery-northbound",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-viva-20260703-58644",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-epic-20260705-58611",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-gem-20260705-58689",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-pearl-20260705-58745",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-dawn-20260712-58535",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-escape-20260712-58719",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-gem-20260712-58690",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-pearl-20260712-58746",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-viva-20260713-58635",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-dawn-20260719-58536",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-epic-20260719-58613",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-escape-20260719-58720",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-gem-20260719-58691",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-pearl-20260719-58747",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-viva-20260722-58636",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-dawn-20260726-58537",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-escape-20260726-58721",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-gem-20260726-58692",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-pearl-20260726-58748",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-viva-20260731-58645",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-epic-20260802-58615",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-escape-20260802-58722",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-gem-20260802-58693",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-pearl-20260802-58749",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-luna-20260808-58874",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-dawn-20260809-58539",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-epic-20260809-58616",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-escape-20260809-58723",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-gem-20260809-58694",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-pearl-20260809-58750",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-prima-20260809-58195",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-viva-20260810-58637",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-luna-20260815-58875",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-dawn-20260816-58540",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-epic-20260816-58617",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-gem-20260816-58695",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-pearl-20260816-58751",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-prima-20260816-58196",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-luna-20260822-58876",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-dawn-20260823-58541",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-gem-20260823-58696",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-pearl-20260823-58752",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "norwegian-norwegian-prima-20260823-58197",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "norwegian-norwegian-viva-20260828-58646",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "norwegian-norwegian-luna-20260829-58877",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "norwegian-norwegian-dawn-20260830-58542",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "norwegian-norwegian-gem-20260830-58697",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "norwegian-norwegian-pearl-20260830-58753",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "norwegian-norwegian-prima-20260830-58198",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "norwegian-norwegian-sky-20260831-61019",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260608-5ngcb",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260613-5ngcb",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260618-4nkw",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-valiant-lady-20260621-7nbb3",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260622-5ncm",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260711-5ntc",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-valiant-lady-20260711-8nbva",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260716-4nkw",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-valiant-lady-20260719-7nbta",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260720-5ncz",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-brilliant-lady-20260723-7nsbe",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-scarlet-lady-20260724-9nbfa",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260725-5ntc",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-valiant-lady-20260726-10nwdf",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-brilliant-lady-20260730-7nsbe",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260730-4nkw",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-scarlet-lady-20260802-8nbb",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-resilient-lady-20260803-5npp",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-scarlet-lady-20260810-12nwdf",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     },
     {
       "severity": "info",
       "id": "virgin-voyages-scarlet-lady-20260822-9ncc",
-      "message": "Expired seed sailing filtered from public bundles for 2026-08-26."
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "virgin-voyages-scarlet-lady-20260831-10nca",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
+    },
+    {
+      "severity": "info",
+      "id": "virgin-voyages-brilliant-lady-20260903-8nsabc",
+      "message": "Expired seed sailing filtered from public bundles for 2026-09-04."
     }
   ]
 }
