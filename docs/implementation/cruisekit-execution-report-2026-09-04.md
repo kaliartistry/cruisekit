@@ -101,6 +101,14 @@ worktrees.
 - Search Console property `https://cruisekit.app/` confirmed the live
   `sitemap.xml` submission with the message that Google will process it and
   monitor future changes.
+- The authenticated three-month Search Console report (last update seven hours
+  before read-back) showed 399 clicks, 34.4K impressions, 1.2% CTR, and average
+  position 16.2. Its separate Generative AI features beta report showed 7.98K
+  impressions from June 3 through September 2. Top AI-feature pages were the
+  main calculator (1,226 impressions), Royal Caribbean calculator (1,065),
+  drink-package calculator (764), MSC calculator (699), Carnival calculator
+  (695), and Norwegian calculator (566). Google exposes impressions but not
+  click or CTR totals in that beta report, so none were inferred.
 
 ## Ordered follow-up implementation
 
