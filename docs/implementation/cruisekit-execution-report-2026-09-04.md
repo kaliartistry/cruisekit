@@ -243,9 +243,10 @@ overflow:
   store QR codes. Apple links contained `pt=128557928` and bounded `ct`; Play
   links contained the encoded Install Referrer campaign fields.
 - Current Virgin onboard cohort: $22 × 2 guests × 7 nights = $308.
-- Princess new-booking sailing date June 15, 2026: February 15 final-payment
-  planning date and June 11 package cutoff. Both dates were verified inside the
-  downloaded calendar file.
+- Princess new-booking sailing date June 15, 2027: February 15, 2027
+  final-payment planning date and June 11, 2027 package cutoff. Both dates were
+  verified inside the downloaded calendar file, and the invoice-confirmation
+  warning remained visible.
 - Ship-time answer, all five port answers, their canonicals, and their source
   links rendered correctly.
 - Home, calculator, gratuity, deadline, ship-time, port, and calculator-result
@@ -256,6 +257,8 @@ Rendered evidence on the release host:
 - `/tmp/cruisekit-final-passenger-qa/01-calculator-result-desktop.png`
 - `/tmp/cruisekit-final-passenger-qa/02-gratuity-virgin-onboard.png`
 - `/tmp/cruisekit-final-passenger-qa/03-deadline-princess.png`
+- `/tmp/cruisekit-final-passenger-qa/06-deadline-princess-future.png`
+- `/tmp/cruisekit-final-passenger-qa/cruisekit-princess-deadlines-2027.ics`
 - `/tmp/cruisekit-final-passenger-qa/04-calculator-result-mobile.png`
 - `/tmp/cruisekit-final-passenger-qa/evidence.json`
 
