@@ -2,6 +2,7 @@ import type {
   DistributionSourceType,
   LandingContext,
 } from "@/lib/analytics";
+import { safeToken } from "@/lib/analytics-contract";
 
 export type CampaignAttribution = {
   sourceType: DistributionSourceType;
@@ -11,6 +12,7 @@ export type CampaignAttribution = {
   utmMedium?: string;
   utmCampaign?: string;
   utmContent?: string;
+  utmTerm?: string;
 };
 
 const FIRST_TOUCH_KEY = "cruisekit:first-touch:v1";
@@ -27,6 +29,7 @@ export function readCampaignAttribution(
   const utmMedium = clean(params.get("utm_medium"));
   const utmCampaign = clean(params.get("utm_campaign"));
   const utmContent = clean(params.get("utm_content"));
+  const utmTerm = clean(params.get("utm_term"));
   const explicitSource = clean(params.get("source_type"));
   const sourceId = clean(params.get("source_id")) ?? utmCampaign;
   const sourceType = sourceTypeFrom(explicitSource, utmSource, utmMedium);
@@ -46,6 +49,7 @@ export function readCampaignAttribution(
     utmMedium,
     utmCampaign,
     utmContent,
+    utmTerm,
   };
 }
 
@@ -86,5 +90,5 @@ function sourceTypeFrom(
 
 function clean(value: string | null) {
   const trimmed = value?.trim();
-  return trimmed ? trimmed.slice(0, 100) : undefined;
+  return trimmed ? safeToken(trimmed) : undefined;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronLeft,
@@ -10,6 +10,7 @@ import {
   Ship,
   Sparkles,
   BarChart3,
+  History,
 } from "lucide-react";
 import InfoTip from "@/components/shared/info-tip";
 import type {
@@ -39,9 +40,18 @@ import CostBreakdown from "./cost-breakdown";
 import type { CalculatorSailingContext } from "./calculator-save-card";
 import { cn } from "@/lib/utils/cn";
 import {
+  hasAnalyticsConsent,
   trackCalculatorCompleted,
+  trackCalculatorInputChanged,
+  trackCalculatorResultReturned,
   trackCalculatorStarted,
+  trackCalculatorViewed,
 } from "@/lib/analytics";
+import {
+  clearCalculatorResult,
+  loadCalculatorResult,
+  type SavedCalculatorResult,
+} from "@/lib/calculator-result-storage";
 
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
@@ -229,6 +239,8 @@ export default function CalculatorForm({
   /* -- Step state -------------------------------------------------- */
   const [step, setStep] = useState(1);
   const [direction, setDirection] = useState(0);
+  const [savedResult, setSavedResult] = useState<SavedCalculatorResult | null>(null);
+  const startedRef = useRef(false);
 
   /* -- Step 1 state ------------------------------------------------ */
   const [selectedLines, setSelectedLines] = useState<string[]>(resolvedDefaultIds);
@@ -259,6 +271,58 @@ export default function CalculatorForm({
   const [parkingOn, setParkingOn] = useState(false);
   const [parkingDays, setParkingDays] = useState(defaultDuration ?? 7);
   const [parkingCost, setParkingCost] = useState("25");
+
+  useEffect(() => {
+    const storageTimer = window.setTimeout(
+      () => setSavedResult(loadCalculatorResult()),
+      0,
+    );
+    let tracked = false;
+    const trackView = () => {
+      if (tracked || !hasAnalyticsConsent()) return;
+      tracked = true;
+      trackCalculatorViewed();
+    };
+    trackView();
+    window.addEventListener("cruisekit:analytics-consent-changed", trackView);
+    return () => {
+      window.clearTimeout(storageTimer);
+      window.removeEventListener(
+        "cruisekit:analytics-consent-changed",
+        trackView,
+      );
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!startedRef.current) return;
+    const timer = window.setTimeout(
+      () => trackCalculatorInputChanged("trip_basics"),
+      500,
+    );
+    return () => window.clearTimeout(timer);
+  }, [selectedLines, duration, adults, children, cabinType, baseFare]);
+
+  useEffect(() => {
+    if (!startedRef.current) return;
+    const timer = window.setTimeout(
+      () => trackCalculatorInputChanged("add_ons"),
+      500,
+    );
+    return () => window.clearTimeout(timer);
+  }, [
+    drinkPackageOn,
+    drinkTier,
+    wifiOn,
+    wifiTier,
+    specialtyMeals,
+    excursionBudget,
+    numPorts,
+    insuranceOn,
+    parkingOn,
+    parkingDays,
+    parkingCost,
+  ]);
 
   /* -- Derived data ------------------------------------------------ */
   const primaryLineId = selectedLines[0] ?? null;
@@ -526,11 +590,73 @@ export default function CalculatorForm({
   const canProceedStep1 =
     selectedLines.length >= 1 && (parseFloat(baseFare) > 0 || fareEstimate !== null);
 
+  const analyticsContext = {
+    cruiseLineId: primaryLineId ?? undefined,
+    partySize: adults + children,
+    nights: duration,
+    hasManualFare: parseFloat(baseFare) > 0,
+    resultKind: secondaryLineId ? ("comparison" as const) : ("single" as const),
+    costCategoriesCount: breakdown
+      ? [
+          breakdown.baseFare,
+          breakdown.gratuities,
+          breakdown.drinkPackage,
+          breakdown.wifi,
+          breakdown.specialtyDining,
+          breakdown.excursions,
+          breakdown.travelInsurance,
+          breakdown.portFees,
+          breakdown.parking,
+          breakdown.photography,
+        ].filter((value) => value > 0).length
+      : undefined,
+  };
+
   const goNext = () => {
-    if (step === 1) trackCalculatorStarted();
-    if (step === 2) trackCalculatorCompleted();
+    if (step === 1 && !startedRef.current) {
+      startedRef.current = true;
+      trackCalculatorStarted(analyticsContext);
+    }
+    if (step === 2) trackCalculatorCompleted(analyticsContext);
     setDirection(1);
     setStep((s) => Math.min(3, s + 1));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const restoreSavedResult = () => {
+    if (!savedResult) return;
+    const savedInputs = savedResult.inputs;
+    const comparisonLineId = savedResult.comparison?.cruiseLineId;
+    setSelectedLines(
+      comparisonLineId
+        ? [savedInputs.cruiseLineId, comparisonLineId]
+        : [savedInputs.cruiseLineId],
+    );
+    setDuration(savedInputs.duration);
+    setAdults(savedInputs.adults);
+    setChildren(savedInputs.children);
+    setShowChildren(savedInputs.children > 0);
+    setCabinType(savedInputs.cabinType);
+    setBaseFare(String(savedInputs.baseFare));
+    setDrinkPackageOn(Boolean(savedInputs.drinkPackage));
+    setDrinkTier(savedInputs.drinkPackage ?? "");
+    setWifiOn(Boolean(savedInputs.wifiPackage));
+    setWifiTier(savedInputs.wifiPackage ?? "");
+    setSpecialtyMeals(savedInputs.specialtyDiningMeals);
+    setExcursionBudget(savedInputs.excursionBudgetPerPort);
+    setNumPorts(savedInputs.numberOfPorts);
+    setInsuranceOn(savedInputs.addTravelInsurance);
+    setParkingOn(savedInputs.addParking);
+    setParkingDays(savedInputs.parkingDays);
+    setParkingCost(String(savedInputs.parkingCostPerDay));
+    setDirection(1);
+    setStep(3);
+    trackCalculatorResultReturned({
+      cruiseLineId: savedInputs.cruiseLineId,
+      partySize: savedInputs.adults + savedInputs.children,
+      nights: savedInputs.duration,
+      resultKind: comparisonLineId ? "comparison" : "single",
+    });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const goBack = () => {
@@ -545,6 +671,36 @@ export default function CalculatorForm({
 
   return (
     <div className="mx-auto max-w-4xl">
+      {step === 1 && savedResult && (
+        <div className="mb-6 flex flex-col gap-4 rounded-2xl border border-teal/25 bg-teal/5 p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-3">
+            <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-teal text-white">
+              <History className="h-4 w-4" aria-hidden="true" />
+            </span>
+            <div>
+              <p className="font-bold text-navy">Your saved estimate is ready.</p>
+              <p className="mt-1 text-sm text-gray-600">
+                Return to it on this device, with today&rsquo;s calculator rules.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <Button type="button" onClick={restoreSavedResult}>
+              Return to result
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => {
+                clearCalculatorResult();
+                setSavedResult(null);
+              }}
+            >
+              Dismiss
+            </Button>
+          </div>
+        </div>
+      )}
       <StepIndicator current={step} />
 
       <AnimatePresence mode="wait" custom={direction}>

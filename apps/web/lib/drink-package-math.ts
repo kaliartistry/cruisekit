@@ -154,9 +154,18 @@ export function safeDrinkCalculatorAnalytics({
   completion: boolean;
 }) {
   return {
-    cruise_line: cruiseLine,
-    party_size_range: partySizeRange(partySize),
-    sailing_length_range: sailingLengthRange(nights),
+    cruise_line: cruiseLine
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "")
+      .slice(0, 64),
+    party_size_bucket: partySizeRange(partySize)
+      .replace("-", "_")
+      .replace("+", "_plus"),
+    nights_bucket: sailingLengthRange(nights)
+      .replace("-", "_")
+      .replace("+", "_plus"),
     result_bucket:
       resultType == null ? undefined : resultBucket(resultType, difference),
     completion,
