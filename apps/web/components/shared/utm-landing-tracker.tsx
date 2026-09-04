@@ -1,7 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import { hasAnalyticsConsent, trackUtmLandingVisit } from "@/lib/analytics";
+import {
+  hasAnalyticsConsent,
+  trackSessionEntry,
+  trackUtmLandingVisit,
+} from "@/lib/analytics";
 
 const UTM_KEYS = [
   "utm_source",
@@ -16,35 +20,47 @@ export default function UtmLandingTracker() {
     const searchParams = new URLSearchParams(window.location.search);
     const hasUtm = UTM_KEYS.some((key) => searchParams.has(key));
 
-    if (!hasUtm) return;
-
-    const storageKey = `cruisekit_utm_landing_visit:${window.location.pathname}:${window.location.search}`;
-    let tracked = false;
+    const entryStorageKey = `cruisekit_session_entry:${window.location.pathname}`;
+    const utmStorageKey = `cruisekit_utm_landing_visit:${window.location.pathname}`;
+    let entryTracked = false;
+    let utmTracked = false;
     let timer: number | undefined;
 
     const scheduleIfAllowed = () => {
-      if (tracked || !hasAnalyticsConsent()) return;
+      if (!hasAnalyticsConsent()) return;
 
       try {
-        if (window.sessionStorage.getItem(storageKey)) {
-          tracked = true;
-          return;
+        if (window.sessionStorage.getItem(entryStorageKey)) {
+          entryTracked = true;
+        } else {
+          window.sessionStorage.setItem(entryStorageKey, "1");
         }
-        window.sessionStorage.setItem(storageKey, "1");
+        if (hasUtm && window.sessionStorage.getItem(utmStorageKey)) {
+          utmTracked = true;
+        } else if (hasUtm) {
+          window.sessionStorage.setItem(utmStorageKey, "1");
+        }
       } catch {
         // Browsers can disable sessionStorage; the event can still be sent.
       }
 
-      tracked = true;
+      if (entryTracked && (!hasUtm || utmTracked)) return;
       timer = window.setTimeout(() => {
-        trackUtmLandingVisit({
-          landingPath: window.location.pathname,
-          utmSource: searchParams.get("utm_source") ?? undefined,
-          utmMedium: searchParams.get("utm_medium") ?? undefined,
-          utmCampaign: searchParams.get("utm_campaign") ?? undefined,
-          utmContent: searchParams.get("utm_content") ?? undefined,
-          utmTerm: searchParams.get("utm_term") ?? undefined,
-        });
+        if (!entryTracked) {
+          entryTracked = true;
+          trackSessionEntry();
+        }
+        if (hasUtm && !utmTracked) {
+          utmTracked = true;
+          trackUtmLandingVisit({
+            landingPath: window.location.pathname,
+            utmSource: searchParams.get("utm_source") ?? undefined,
+            utmMedium: searchParams.get("utm_medium") ?? undefined,
+            utmCampaign: searchParams.get("utm_campaign") ?? undefined,
+            utmContent: searchParams.get("utm_content") ?? undefined,
+            utmTerm: searchParams.get("utm_term") ?? undefined,
+          });
+        }
       }, 250);
     };
 

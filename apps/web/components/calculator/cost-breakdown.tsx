@@ -15,6 +15,7 @@ import {
   RotateCcw,
   ArrowUp,
   Share2,
+  Save,
   Check,
   Info,
 } from "lucide-react";
@@ -34,7 +35,11 @@ import { getHotelLink, getMedEvacLink } from "@/lib/affiliate-config";
 import { getDeckPlanLink } from "@/lib/data/deck-plan-urls";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import { cn } from "@/lib/utils/cn";
-import { trackResultShared } from "@/lib/analytics";
+import {
+  trackCalculatorResultSaved,
+  trackResultShared,
+} from "@/lib/analytics";
+import { saveCalculatorResult } from "@/lib/calculator-result-storage";
 
 interface CostBreakdownProps {
   breakdown: CostBreakdownType;
@@ -148,9 +153,11 @@ export function buildTotalCruiseComparisonShareText({
 function ShareResultButton({
   shareText,
   cruiseLineId,
+  resultKind = "single",
 }: {
   shareText: string;
   cruiseLineId: string;
+  resultKind?: "single" | "comparison";
 }) {
   const [shareStatus, setShareStatus] = useState<
     "idle" | "shared" | "copied" | "canceled" | "error"
@@ -163,7 +170,7 @@ function ShareResultButton({
           title: "CruiseKit Total Cruise Cost Calculator",
           text: shareText,
         });
-        trackResultShared({ cruiseLineId, method: "native_share" });
+        trackResultShared({ cruiseLineId, method: "native_share", resultKind });
         setShareStatus("shared");
         return;
       } catch (error) {
@@ -176,7 +183,7 @@ function ShareResultButton({
     }
     try {
       await navigator.clipboard.writeText(shareText);
-      trackResultShared({ cruiseLineId, method: "clipboard" });
+      trackResultShared({ cruiseLineId, method: "clipboard", resultKind });
       setShareStatus("copied");
     } catch {
       setShareStatus("error");
@@ -221,18 +228,72 @@ function ShareResultButton({
   );
 }
 
+function SaveResultButton({
+  inputs,
+  breakdown,
+  comparison,
+}: {
+  inputs: CalculatorInputs;
+  breakdown: CostBreakdownType;
+  comparison?: { cruiseLineId: string; breakdown: CostBreakdownType };
+}) {
+  const [status, setStatus] = useState<"idle" | "saved" | "error">("idle");
+
+  const save = () => {
+    try {
+      saveCalculatorResult(inputs, breakdown, comparison);
+      trackCalculatorResultSaved({
+        cruiseLineId: inputs.cruiseLineId,
+        partySize: inputs.adults + inputs.children,
+        nights: inputs.duration,
+        resultKind: comparison ? "comparison" : "single",
+      });
+      setStatus("saved");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={save}
+        className={cn(
+          "inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-bold transition-colors sm:w-auto",
+          status === "saved"
+            ? "border-green-200 bg-green-50 text-green-700"
+            : "border-navy/20 bg-white text-navy hover:bg-navy/5",
+        )}
+      >
+        {status === "saved" ? <Check className="h-4 w-4" /> : <Save className="h-4 w-4" />}
+        {status === "saved" ? "Result saved on this device" : "Save result"}
+      </button>
+      {status === "error" && (
+        <p className="mt-2 text-xs font-semibold text-coral" role="status">
+          This browser blocked local saving.
+        </p>
+      )}
+    </div>
+  );
+}
+
 export function DeltaHero({
   lineName,
   cruiseLineId,
   advertised,
   real,
   percentOver,
+  inputs,
+  breakdown,
 }: {
   lineName: string;
   cruiseLineId: string;
   advertised: number;
   real: number;
   percentOver: number;
+  inputs?: CalculatorInputs;
+  breakdown?: CostBreakdownType;
 }) {
   const hidden = Math.max(0, real - advertised);
   // Bar widths clamp at 0–100 so a negative or zero delta still renders cleanly.
@@ -302,7 +363,12 @@ export function DeltaHero({
         </p>
 
         {/* Share result (growth loop) */}
-        <ShareResultButton shareText={shareText} cruiseLineId={cruiseLineId} />
+        <div className="flex flex-col gap-3 sm:flex-row">
+          {inputs && breakdown && (
+            <SaveResultButton inputs={inputs} breakdown={breakdown} />
+          )}
+          <ShareResultButton shareText={shareText} cruiseLineId={cruiseLineId} />
+        </div>
       </div>
     </motion.div>
   );
@@ -461,6 +527,8 @@ function SingleBreakdown({
         advertised={inputs.baseFare}
         real={breakdown.grandTotal}
         percentOver={percentOver}
+        inputs={inputs}
+        breakdown={breakdown}
       />
 
       {/* Inline-adjust: let users drop the biggest four removable line
@@ -981,7 +1049,21 @@ export function ComparisonBreakdown({
           </p>
         )}
         <div className="mt-4">
-          <ShareResultButton shareText={shareText} cruiseLineId={cruiseLineId} />
+          <div className="flex flex-col justify-center gap-3 sm:flex-row">
+            <SaveResultButton
+              inputs={inputs}
+              breakdown={breakdown}
+              comparison={{
+                cruiseLineId: comparisonCruiseLineId,
+                breakdown: comparisonBreakdown,
+              }}
+            />
+            <ShareResultButton
+              shareText={shareText}
+              cruiseLineId={cruiseLineId}
+              resultKind="comparison"
+            />
+          </div>
         </div>
       </motion.div>
 
@@ -1007,6 +1089,10 @@ export function ComparisonBreakdown({
           <RotateCcw className="h-4 w-4" />
           Start Over
         </Button>
+      </div>
+
+      <div className="mx-auto mt-10 max-w-3xl">
+        <AppHandoff variant="calculator-result" />
       </div>
     </div>
   );
