@@ -113,4 +113,86 @@ describe("true-cost calculator arithmetic", () => {
     expect(withoutQuote.drinkPackage).toBe(0);
     expect(withQuote.drinkPackage).toBe(92.5 * 2 * 7);
   });
+
+  it("uses the selected Carnival CHEERS timing and exposes the full voyage premium", () => {
+    const costs = CRUISE_LINE_COSTS.carnival;
+    const prePurchase = calculateCosts(
+      {
+        ...baseInputs,
+        drinkPackage: "CHEERS! Beverage Program",
+        drinkPackagePurchaseTiming: "pre-purchase",
+      },
+      costs,
+    );
+    const onboard = calculateCosts(
+      {
+        ...baseInputs,
+        drinkPackage: "CHEERS! Beverage Program",
+        drinkPackagePurchaseTiming: "onboard",
+      },
+      costs,
+    );
+
+    expect(prePurchase.drinkPackage).toBeCloseTo(1_175.16);
+    expect(onboard.drinkPackage).toBeCloseTo(1_259.16);
+    expect(onboard.drinkPackage - prePurchase.drinkPackage).toBeCloseTo(84);
+  });
+
+  it("calculates Wi-Fi by selected plan count and purchase timing instead of every guest", () => {
+    const costs = CRUISE_LINE_COSTS.carnival;
+    const prePurchase = calculateCosts(
+      {
+        ...baseInputs,
+        adults: 2,
+        children: 2,
+        wifiPackage: "Premium WiFi",
+        wifiPackageQuantity: 1,
+        wifiPackagePurchaseTiming: "pre-purchase",
+      },
+      costs,
+    );
+    const onboard = calculateCosts(
+      {
+        ...baseInputs,
+        adults: 2,
+        children: 2,
+        wifiPackage: "Premium WiFi",
+        wifiPackageQuantity: 2,
+        wifiPackagePurchaseTiming: "onboard",
+      },
+      costs,
+    );
+
+    expect(prePurchase.wifi).toBeCloseTo(25.5 * 7);
+    expect(onboard.wifi).toBeCloseTo(28 * 2 * 7);
+  });
+
+  it("requires traveler-entered package and Wi-Fi quotes for Celebrity", () => {
+    const costs = CRUISE_LINE_COSTS.celebrity;
+    const withoutQuotes = calculateCosts(
+      {
+        ...baseInputs,
+        drinkPackage: "Classic Beverage Package",
+        wifiPackage: "Basic WiFi",
+        wifiPackageQuantity: 1,
+      },
+      costs,
+    );
+    const withQuotes = calculateCosts(
+      {
+        ...baseInputs,
+        drinkPackage: "Classic Beverage Package",
+        drinkPackagePricePerPersonPerDay: 82.5,
+        wifiPackage: "Basic WiFi",
+        wifiPackagePricePerDay: 19.25,
+        wifiPackageQuantity: 1,
+      },
+      costs,
+    );
+
+    expect(withoutQuotes.drinkPackage).toBe(0);
+    expect(withoutQuotes.wifi).toBe(0);
+    expect(withQuotes.drinkPackage).toBeCloseTo(82.5 * 2 * 7);
+    expect(withQuotes.wifi).toBeCloseTo(19.25 * 7);
+  });
 });

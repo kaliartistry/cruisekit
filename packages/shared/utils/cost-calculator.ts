@@ -2,7 +2,21 @@ import type {
   CalculatorInputs,
   CruiseLineCosts,
   CostBreakdown,
+  PackageTier,
+  PurchaseTiming,
 } from "../types";
+
+export function resolvePackageDailyPrice(
+  tier: PackageTier,
+  timing: PurchaseTiming = "pre-purchase",
+  userEnteredPrice = 0,
+) {
+  if (tier.priceEntryRequired) return Math.max(0, userEnteredPrice);
+  if (timing === "onboard" && tier.onboardPricePerDay !== undefined) {
+    return tier.onboardPricePerDay;
+  }
+  return tier.pricePerDay;
+}
 
 /**
  * Calculate the full cost breakdown for a cruise based on user inputs
@@ -36,9 +50,11 @@ export function calculateCosts(
   let drinkPackage = 0;
   if (inputs.drinkPackage) {
     if (selectedTier) {
-      const dailyPrice = selectedTier.priceEntryRequired
-        ? Math.max(0, inputs.drinkPackagePricePerPersonPerDay ?? 0)
-        : selectedTier.pricePerDay;
+      const dailyPrice = resolvePackageDailyPrice(
+        selectedTier,
+        inputs.drinkPackagePurchaseTiming,
+        inputs.drinkPackagePricePerPersonPerDay,
+      );
       drinkPackage = dailyPrice * adults * duration;
     }
   }
@@ -50,7 +66,16 @@ export function calculateCosts(
       (t) => t.name === inputs.wifiPackage
     );
     if (selectedTier) {
-      wifi = selectedTier.pricePerDay * totalGuests * duration;
+      const quantity = Math.max(
+        0,
+        Math.round(inputs.wifiPackageQuantity ?? totalGuests),
+      );
+      const dailyPrice = resolvePackageDailyPrice(
+        selectedTier,
+        inputs.wifiPackagePurchaseTiming,
+        inputs.wifiPackagePricePerDay,
+      );
+      wifi = dailyPrice * quantity * duration;
     }
   }
 

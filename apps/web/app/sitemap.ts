@@ -25,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/cruise-group-check-in-app',
     '/calculator',
     '/cruise-drink-package-calculator',
+    '/cruise-gratuity-calculator',
+    '/cruise-payment-deadline-calculator',
     '/cruise-costs',
     '/cruises',
     '/compare',
@@ -83,12 +85,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   /* ---- Dynamic guide pages ----------------------------------------- */
-  const guidePages = getAllGuideSlugs().map((slug) => ({
+  const guidePages = getAllGuideSlugs()
+    .filter((slug) => slug !== 'cruise-tipping-guide')
+    .map((slug) => ({
     url: toCanonicalSitemapUrl(`/guides/${slug}`),
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
-  }));
+    }));
 
   /* ---- Dynamic blog pages ------------------------------------------ */
   const blogPages = getIndexableBlogSlugs().map((slug) => ({

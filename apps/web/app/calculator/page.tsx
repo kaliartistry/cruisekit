@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 import CalculatorSwitcher from "@/components/calculator/calculator-switcher";
+import { WifiCostGuide } from "@/components/calculator/wifi-cost-guide";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CalculatorWithParams from "./calculator-with-params";
@@ -76,6 +77,8 @@ export default function CalculatorPage() {
         <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <CalculatorWithParams />
         </section>
+
+        <WifiCostGuide />
 
         {/* Server-rendered SEO content */}
         <section className="border-t border-gray-200 bg-gray-50/60">
@@ -223,7 +226,7 @@ export default function CalculatorPage() {
                   Drink package break-even math
                 </Link>
                 <Link
-                  href="/guides/cruise-tipping-guide"
+                  href="/cruise-gratuity-calculator"
                   className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
                 >
                   Cruise gratuities

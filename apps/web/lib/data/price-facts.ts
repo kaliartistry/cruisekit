@@ -1,13 +1,25 @@
 export type PriceFactStatus = "official" | "corroborated" | "estimate";
+export type PriceFactContext =
+  | "pre-purchase"
+  | "onboard"
+  | "included"
+  | "booking-cohort"
+  | "region-specific";
 
 export type PriceFact = {
   id: string;
   cruiseLineId: string;
-  category: "gratuity" | "drink-package" | "bundle" | "service-charge";
+  category:
+    | "gratuity"
+    | "drink-package"
+    | "wifi"
+    | "bundle"
+    | "service-charge";
   label: string;
   amount: number;
   currency: "USD" | "EUR";
   unit: "person-day" | "adult-day" | "package-day" | "percent";
+  priceContext?: PriceFactContext;
   status: PriceFactStatus;
   sourceTitle: string;
   sourceUrl: string;
@@ -96,6 +108,7 @@ export const PRICE_FACTS = {
     amount: 83.94,
     currency: "USD",
     unit: "adult-day",
+    priceContext: "pre-purchase",
     status: "official",
     sourceTitle: "Carnival CHEERS beverage program",
     sourceUrl: "https://www.carnival.com/onboard/cheers",
@@ -104,6 +117,122 @@ export const PRICE_FACTS = {
     conditions:
       "Purchase by 11:59 PM ET two days before embarkation; all eligible adults in the stateroom must participate.",
     calculation: "$69.95 base price x 1.20 service charge = $83.94.",
+  },
+  carnivalCheersOnboardAllIn: {
+    id: "carnival.cheers.onboard.all-in.current",
+    cruiseLineId: "carnival",
+    category: "drink-package",
+    label: "CHEERS onboard price including service charge",
+    amount: 89.94,
+    currency: "USD",
+    unit: "adult-day",
+    priceContext: "onboard",
+    status: "official",
+    sourceTitle: "Carnival CHEERS beverage program Q&A",
+    sourceUrl: "https://help.carnival.com/app/answers/detail/a_id/3525",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions:
+      "Purchased after boarding; all eligible adults in the stateroom must participate.",
+  },
+  carnivalWifiSocialAdvance: {
+    id: "carnival.wifi.social.advance.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Social Wi-Fi pre-cruise price",
+    amount: 20.4,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions:
+      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+  },
+  carnivalWifiSocialOnboard: {
+    id: "carnival.wifi.social.onboard.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Social Wi-Fi onboard price",
+    amount: 22,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "onboard",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions: "Cruise-long plan, one connected device at a time.",
+  },
+  carnivalWifiValueAdvance: {
+    id: "carnival.wifi.value.advance.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Value Wi-Fi pre-cruise price",
+    amount: 23.8,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions:
+      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+  },
+  carnivalWifiValueOnboard: {
+    id: "carnival.wifi.value.onboard.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Value Wi-Fi onboard price",
+    amount: 26,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "onboard",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions: "Cruise-long plan, one connected device at a time.",
+  },
+  carnivalWifiPremiumAdvance: {
+    id: "carnival.wifi.premium.advance.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Premium Wi-Fi pre-cruise price",
+    amount: 25.5,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions:
+      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+  },
+  carnivalWifiPremiumOnboard: {
+    id: "carnival.wifi.premium.onboard.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Premium Wi-Fi onboard price",
+    amount: 28,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "onboard",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions: "Cruise-long plan, one connected device at a time.",
   },
   nclFreeAtSeaAdult: {
     id: "norwegian.free-at-sea.gratuity.current.adult",
@@ -137,6 +266,38 @@ export const PRICE_FACTS = {
     recheckBy: "2026-10-04",
     conditions:
       "Only for applicable bookings made from October 1, 2024 through November 4, 2025; verify the booking confirmation.",
+  },
+  nclStandardGratuity: {
+    id: "norwegian.gratuity.standard.current",
+    cruiseLineId: "norwegian",
+    category: "gratuity",
+    label: "Club Balcony Suite and below daily service charge",
+    amount: 20,
+    currency: "USD",
+    unit: "person-day",
+    status: "official",
+    sourceTitle: "Norwegian onboard service charge FAQ",
+    sourceUrl: "https://www.ncl.com/faq/what-is-ncl-onboard-service-charge",
+    effectiveOn: "2023-01-01",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+    conditions: "Guests age 3 and older; Club Balcony Suite and below.",
+  },
+  nclSuiteGratuity: {
+    id: "norwegian.gratuity.suite.current",
+    cruiseLineId: "norwegian",
+    category: "gratuity",
+    label: "The Haven and Suites daily service charge",
+    amount: 25,
+    currency: "USD",
+    unit: "person-day",
+    status: "official",
+    sourceTitle: "Norwegian onboard service charge FAQ",
+    sourceUrl: "https://www.ncl.com/faq/what-is-ncl-onboard-service-charge",
+    effectiveOn: "2023-01-01",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+    conditions: "Guests age 3 and older; The Haven and Suites.",
   },
   celebrityStandardGratuity: {
     id: "celebrity.gratuity.standard.current",
@@ -202,6 +363,51 @@ export const PRICE_FACTS = {
     conditions:
       "Most ships; purchase at least 96 hours before sailing. Includes crew appreciation and four-device Wi-Fi. Sun and Star Princess are $105/day.",
   },
+  princessStandardGratuity: {
+    id: "princess.gratuity.standard.current",
+    cruiseLineId: "princess",
+    category: "gratuity",
+    label: "Interior, oceanview, and balcony crew appreciation",
+    amount: 18,
+    currency: "USD",
+    unit: "person-day",
+    status: "official",
+    sourceTitle: "Princess onboard experience FAQ",
+    sourceUrl: "https://www.princess.com/en-int/faq/onboard-experience",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+    conditions: "Interior, oceanview, and balcony staterooms; regional exceptions apply.",
+  },
+  princessMiniSuiteGratuity: {
+    id: "princess.gratuity.mini-suite.current",
+    cruiseLineId: "princess",
+    category: "gratuity",
+    label: "Mini-suite, cabana, and Reserve Collection crew appreciation",
+    amount: 19,
+    currency: "USD",
+    unit: "person-day",
+    status: "official",
+    sourceTitle: "Princess onboard experience FAQ",
+    sourceUrl: "https://www.princess.com/en-int/faq/onboard-experience",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+    conditions: "Mini-suite, cabana, and Reserve Collection staterooms; regional exceptions apply.",
+  },
+  princessSuiteGratuity: {
+    id: "princess.gratuity.suite.current",
+    cruiseLineId: "princess",
+    category: "gratuity",
+    label: "Suite crew appreciation",
+    amount: 20,
+    currency: "USD",
+    unit: "person-day",
+    status: "official",
+    sourceTitle: "Princess onboard experience FAQ",
+    sourceUrl: "https://www.princess.com/en-int/faq/onboard-experience",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+    conditions: "Suites; regional exceptions apply.",
+  },
   hollandAmericaStandardGratuity: {
     id: "holland-america.gratuity.standard.current",
     cruiseLineId: "holland-america",
@@ -251,6 +457,51 @@ export const PRICE_FACTS = {
     conditions:
       "Caribbean/Alaska planning assumption only. MSC official pages blocked automated retrieval; verify the booking terms because other regions use different currencies and rates.",
   },
+  mscSuiteCaribbean: {
+    id: "msc.gratuity.caribbean-yacht-club.corroborated",
+    cruiseLineId: "msc",
+    category: "gratuity",
+    label: "Caribbean and Alaska Yacht Club daily hotel service charge",
+    amount: 23,
+    currency: "USD",
+    unit: "person-day",
+    status: "corroborated",
+    sourceTitle: "MSC service-charge schedule (third-party corroboration)",
+    sourceUrl: "https://www.cruisecritic.com/articles/what-to-know-about-cruise-line-gratuities",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions: "Caribbean/Alaska Yacht Club planning assumption only; verify regional booking terms.",
+  },
+  disneyStandardGratuity: {
+    id: "disney.gratuity.standard.current",
+    cruiseLineId: "disney",
+    category: "gratuity",
+    label: "Standard stateroom recommended gratuity",
+    amount: 16,
+    currency: "USD",
+    unit: "person-day",
+    status: "official",
+    sourceTitle: "Disney Cruise Line gratuities FAQ",
+    sourceUrl: "https://disneycruise.disney.go.com/en/faq/onboard-services/gratuities/",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+    conditions: "Per night for every stateroom guest, including infants and children.",
+  },
+  disneyConciergeGratuity: {
+    id: "disney.gratuity.concierge.current",
+    cruiseLineId: "disney",
+    category: "gratuity",
+    label: "Concierge stateroom and suite recommended gratuity",
+    amount: 27.25,
+    currency: "USD",
+    unit: "person-day",
+    status: "official",
+    sourceTitle: "Disney Cruise Line gratuities FAQ",
+    sourceUrl: "https://disneycruise.disney.go.com/en/faq/onboard-services/gratuities/",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-12-03",
+    conditions: "Per night for every guest in Concierge staterooms and suites.",
+  },
   virginCurrentPrepaid: {
     id: "virgin-voyages.gratuity.current.prepaid",
     cruiseLineId: "virgin-voyages",
@@ -259,6 +510,7 @@ export const PRICE_FACTS = {
     amount: 20,
     currency: "USD",
     unit: "person-day",
+    priceContext: "pre-purchase",
     status: "official",
     sourceTitle: "Virgin Voyages VoyageFair Choices FAQ",
     sourceUrl:
@@ -277,6 +529,7 @@ export const PRICE_FACTS = {
     amount: 22,
     currency: "USD",
     unit: "person-day",
+    priceContext: "onboard",
     status: "official",
     sourceTitle: "Virgin Voyages VoyageFair Choices FAQ",
     sourceUrl:
@@ -295,6 +548,7 @@ export const PRICE_FACTS = {
     amount: 0,
     currency: "USD",
     unit: "person-day",
+    priceContext: "included",
     status: "official",
     sourceTitle: "Virgin Voyages VoyageFair Choices announcement",
     sourceUrl:
@@ -305,6 +559,76 @@ export const PRICE_FACTS = {
       "Bookings made before October 7, 2025 under the prior fare structure; confirm the original booking confirmation.",
   },
 } as const satisfies Record<string, PriceFact>;
+
+export type PurchasePricePair = Readonly<{
+  prePurchase: PriceFact;
+  onboard: PriceFact;
+}>;
+
+export const PURCHASE_PRICE_PAIRS = {
+  carnivalCheers: {
+    prePurchase: PRICE_FACTS.carnivalCheersAdvanceAllIn,
+    onboard: PRICE_FACTS.carnivalCheersOnboardAllIn,
+  },
+  carnivalWifiSocial: {
+    prePurchase: PRICE_FACTS.carnivalWifiSocialAdvance,
+    onboard: PRICE_FACTS.carnivalWifiSocialOnboard,
+  },
+  carnivalWifiValue: {
+    prePurchase: PRICE_FACTS.carnivalWifiValueAdvance,
+    onboard: PRICE_FACTS.carnivalWifiValueOnboard,
+  },
+  carnivalWifiPremium: {
+    prePurchase: PRICE_FACTS.carnivalWifiPremiumAdvance,
+    onboard: PRICE_FACTS.carnivalWifiPremiumOnboard,
+  },
+  virginGratuity: {
+    prePurchase: PRICE_FACTS.virginCurrentPrepaid,
+    onboard: PRICE_FACTS.virginCurrentOnboard,
+  },
+} as const satisfies Record<string, PurchasePricePair>;
+
+export function purchasePricePairSavings(
+  pair: PurchasePricePair,
+  quantity: number,
+  nights: number,
+) {
+  return (
+    (pair.onboard.amount - pair.prePurchase.amount) *
+    Math.max(0, quantity) *
+    Math.max(0, nights)
+  );
+}
+
+export function getDrinkPackagePurchasePricePair(
+  cruiseLineId: string,
+  tierName: string,
+): PurchasePricePair | undefined {
+  if (
+    cruiseLineId === "carnival" &&
+    tierName === "CHEERS! Beverage Program"
+  ) {
+    return PURCHASE_PRICE_PAIRS.carnivalCheers;
+  }
+  return undefined;
+}
+
+export function getWifiPurchasePricePair(
+  cruiseLineId: string,
+  tierName: string,
+): PurchasePricePair | undefined {
+  if (cruiseLineId !== "carnival") return undefined;
+  if (tierName === "Social WiFi") {
+    return PURCHASE_PRICE_PAIRS.carnivalWifiSocial;
+  }
+  if (tierName === "Value WiFi") {
+    return PURCHASE_PRICE_PAIRS.carnivalWifiValue;
+  }
+  if (tierName === "Premium WiFi") {
+    return PURCHASE_PRICE_PAIRS.carnivalWifiPremium;
+  }
+  return undefined;
+}
 
 export const MATERIAL_PRICE_FACTS: PriceFact[] = Object.values(PRICE_FACTS);
 

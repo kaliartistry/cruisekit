@@ -92,7 +92,7 @@ const categoryLinks: HubLink[] = [
     title: "Gratuities",
     description:
       "Daily service charges by line, who pays them, and how to budget them before final checkout.",
-    href: "/guides/cruise-tipping-guide",
+    href: "/cruise-gratuity-calculator",
     icon: Anchor,
   },
   {
@@ -327,7 +327,7 @@ export default function CruiseCostsPage() {
                   label: "Hidden cruise fees",
                 },
                 {
-                  href: "/guides/cruise-tipping-guide",
+                  href: "/cruise-gratuity-calculator",
                   label: "Gratuity guide",
                 },
                 {

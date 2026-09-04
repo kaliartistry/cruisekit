@@ -88,10 +88,10 @@ const CATEGORIES: CategoryRow[] = [
     label: "WiFi",
     icon: Wifi,
     source:
-      "Cruise-line published rates for a single-device streaming-capable package. We use the on-board / standard rate, not pre-cruise promo rates.",
-    frequency: "Reviewed quarterly.",
+      "Cruise-line published pre-cruise and onboard rates when both are public. The calculator asks how many plans to budget and uses a traveler-entered quote when pricing varies by sailing. Unverified fixed amounts remain labeled as planning inputs.",
+    frequency: "Official paired prices are reviewed monthly; other planning inputs quarterly.",
     verify:
-      "Each line publishes current WiFi plans — Royal's \"Surf & Stream,\" NCL's \"Premium WiFi,\" Carnival's \"Premium Plan.\"",
+      "Check the internet-plan page or cruise planner for your sailing, including the number of devices allowed at one time and the pre-purchase cutoff.",
   },
   {
     key: "specialtyDining",
@@ -150,7 +150,7 @@ const ASSUMPTIONS = [
   "A typical 7-night Caribbean itinerary for any category tied to itinerary (port fees, excursions, insurance).",
   "The cabin gratuity tier follows the cabin selection; line-specific booking cohorts are kept separate.",
   "Mid-tier unlimited alcohol package, one per adult. Non-alcoholic packages cost less; premium tiers cost more.",
-  "Streaming-capable WiFi for one device per adult.",
+  "One WiFi plan by default. Increase the plan count only when multiple travelers need separate simultaneous access; some lines allow device switching on one plan.",
   "One specialty dinner per adult, per cruise.",
   "One half-day excursion per port, per guest.",
   "Standard cruise travel insurance — not \"cancel for any reason.\"",

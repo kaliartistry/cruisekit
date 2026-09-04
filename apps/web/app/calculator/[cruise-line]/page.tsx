@@ -5,7 +5,9 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 import CalculatorForm from "@/components/calculator/calculator-form";
+import { LineWifiSummary } from "@/components/calculator/wifi-cost-guide";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
+import { PURCHASE_PRICE_PAIRS } from "@/lib/data/price-facts";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 
 /* ------------------------------------------------------------------ */
@@ -40,7 +42,7 @@ const LINE_SEO_OVERRIDES: Partial<Record<string, LineSeoOverride>> = {
   carnival: {
     title: "Carnival Cruise Cost Calculator: Fare, WiFi, Tips & CHEERS",
     description:
-      "Estimate the real Carnival cruise total with fare, taxes, gratuities, CHEERS, WiFi tiers, excursions, port spending, and onboard extras.",
+      "Estimate a real Carnival total with $17/$19 gratuities, CHEERS at $83.94 before sailing or $89.94 onboard, WiFi, port fees, and excursions.",
     keywords: [
       "Carnival cruise cost calculator",
       "Carnival cruise cost",
@@ -260,7 +262,7 @@ function buildFaqs(slug: string) {
         question: "How much does Carnival WiFi cost?",
         answer:
           costs.wifiPackages.tiers.length > 0
-            ? `Carnival WiFi starts with ${costs.wifiPackages.tiers[0].name} at $${costs.wifiPackages.tiers[0].pricePerDay.toFixed(2)} per day. The higher tiers in CruiseKit are ${costs.wifiPackages.tiers.slice(1).map((tier) => `${tier.name} at $${tier.pricePerDay.toFixed(2)} per day`).join(" and ")}. Add the tier you actually need before comparing the total fare.`
+            ? `Carnival WiFi starts with ${costs.wifiPackages.tiers[0].name} at $${costs.wifiPackages.tiers[0].pricePerDay.toFixed(2)} before sailing or $${costs.wifiPackages.tiers[0].onboardPricePerDay?.toFixed(2)} onboard. The other cruise-long plans are ${costs.wifiPackages.tiers.slice(1).map((tier) => `${tier.name} at $${tier.pricePerDay.toFixed(2)} pre-cruise or $${tier.onboardPricePerDay?.toFixed(2)} onboard`).join(" and ")}. Budget only the number of plans your group needs.`
             : "Carnival WiFi varies by sailing. Add the quoted internet package price to the calculator before comparing your full cruise budget.",
       },
       {
@@ -270,7 +272,7 @@ function buildFaqs(slug: string) {
       {
         question: "Is Carnival CHEERS worth it?",
         answer:
-          "Carnival CHEERS can be worth it when every adult in the cabin drinks enough each day to beat the package price plus service charge. For many couples, the all-adults-in-the-cabin rule matters more than one person's drink count.",
+          "Carnival CHEERS is $83.94 per adult per day when bought before sailing and $89.94 onboard, both including the 20% service charge. Pre-purchasing saves two adults $84 over seven nights. Whether the package itself is worthwhile still depends on what both adults would otherwise buy.",
       },
       {
         question:
@@ -367,6 +369,21 @@ function buildFaqs(slug: string) {
     );
   }
 
+  if (slug === "virgin-voyages") {
+    lineSpecificFaqs.push(
+      {
+        question: "Should I prepay Virgin Voyages gratuities?",
+        answer:
+          "For bookings made on or after October 7, 2025, Virgin Voyages charges $20 per sailor per night when prepaid or $22 per sailor per night onboard. Prepaying saves two sailors $28 over seven nights. Eligible earlier bookings may still have gratuities included, so check the original confirmation.",
+      },
+      {
+        question: "Are Virgin Voyages gratuities different for suites?",
+        answer:
+          "No. The current $20 prepaid and $22 onboard rates are based on payment timing, not cabin category. CruiseKit keeps the legacy included cohort separate from both current choices.",
+      },
+    );
+  }
+
   const faqs: { question: string; answer: string }[] = [
     ...(slug === "royal-caribbean"
       ? [
@@ -383,14 +400,12 @@ function buildFaqs(slug: string) {
           {
             question: "How much does Royal Caribbean WiFi cost?",
             answer:
-              costs.wifiPackages.tiers.length > 0
-                ? `Royal Caribbean's ${costs.wifiPackages.tiers[0].name} averages $${costs.wifiPackages.tiers[0].pricePerDay.toFixed(2)} per day, with dynamic pricing that can vary by ship, sailing, and purchase timing. Add WiFi in the calculator if you need streaming, messaging, or work access during the cruise.`
-                : "Royal Caribbean WiFi pricing varies by sailing. Add the quoted internet package price to the calculator when you compare your full cruise budget.",
+              "Royal Caribbean WiFi pricing varies by sailing. Enter the current per-plan daily quote shown in Cruise Planner instead of relying on a fixed public average, then choose how many plans your group actually needs.",
           },
           {
             question: "Is the Royal Caribbean drink package worth it?",
             answer:
-              "It depends on your daily drinks, port days, and whether every adult in the cabin must buy the package. Royal Caribbean's Deluxe Beverage Package averages about $78 per person per day before the 18% gratuity, so many travelers need roughly 6 to 7 paid drinks per day to break even.",
+              "It depends on the current quote for your sailing, daily drink plans, port days, and the all-adults-in-the-cabin rule. Royal Caribbean publishes that package pricing varies by sailing, so enter the all-in Cruise Planner quote rather than relying on a fixed public average.",
           },
           {
             question:
@@ -421,7 +436,9 @@ function buildFaqs(slug: string) {
       question: `How much does a drink package cost on ${displayName}?`,
       answer:
         costs.drinkPackages.tiers.length > 0
-          ? `${displayName} offers ${costs.drinkPackages.tiers.length} drink package tier${costs.drinkPackages.tiers.length > 1 ? "s" : ""}. ${costs.drinkPackages.tiers.map((t) => `The ${t.name} is $${t.pricePerDay.toFixed(2)}/day per person`).join(". ")}. ${costs.drinkPackages.notes || ""}`
+          ? costs.drinkPackages.tiers.some((tier) => tier.priceEntryRequired)
+            ? `${displayName} prices one or more beverage packages dynamically by sailing. Choose the package and enter the current all-in per-person daily quote shown for your booking; CruiseKit will not turn a $0 placeholder into a fake public price. ${costs.drinkPackages.notes || ""}`
+            : `${displayName} offers ${costs.drinkPackages.tiers.length} drink package tier${costs.drinkPackages.tiers.length > 1 ? "s" : ""}. ${costs.drinkPackages.tiers.map((t) => `The ${t.name} is $${t.pricePerDay.toFixed(2)}/day per person${t.onboardPricePerDay !== undefined ? ` before sailing or $${t.onboardPricePerDay.toFixed(2)}/day onboard` : ""}`).join(". ")}. ${costs.drinkPackages.notes || ""}`
           : `${displayName} does not offer traditional unlimited drink packages. ${costs.drinkPackages.notes || ""}`,
     },
     {
@@ -490,7 +507,7 @@ export default async function CruiseLinePage({ params }: Props) {
           label: "Drink package break-even math",
         },
         {
-          href: "/guides/cruise-tipping-guide",
+          href: "/cruise-gratuity-calculator",
           label: "Cruise gratuity guide",
         },
         {
@@ -542,11 +559,15 @@ export default async function CruiseLinePage({ params }: Props) {
                 Daily Gratuity
               </p>
               <p className="mt-1 font-price text-2xl font-bold text-navy">
-                ${costs.gratuityPerPersonPerDay.toFixed(2)}
+                {slug === "virgin-voyages"
+                  ? `$${PURCHASE_PRICE_PAIRS.virginGratuity.prePurchase.amount.toFixed(2)} / $${PURCHASE_PRICE_PAIRS.virginGratuity.onboard.amount.toFixed(2)}`
+                  : `$${costs.gratuityPerPersonPerDay.toFixed(2)}`}
               </p>
               <p className="mt-0.5 text-xs text-gray-500">
-                per person per day
-                {costs.suiteGratuityPerPersonPerDay !==
+                {slug === "virgin-voyages"
+                  ? "prepaid / onboard per sailor nightly"
+                  : "per person per day"}
+                {slug !== "virgin-voyages" && costs.suiteGratuityPerPersonPerDay !==
                   costs.gratuityPerPersonPerDay &&
                   ` ($${costs.suiteGratuityPerPersonPerDay.toFixed(2)} for suites)`}
               </p>
@@ -589,13 +610,21 @@ export default async function CruiseLinePage({ params }: Props) {
                 Drink Packages
               </p>
               <p className="mt-1 font-price text-2xl font-bold text-navy">
-                {costs.drinkPackages.tiers.length > 0
-                  ? `$${costs.drinkPackages.tiers[0].pricePerDay.toFixed(0)}`
+                {slug === "carnival"
+                  ? `$${PURCHASE_PRICE_PAIRS.carnivalCheers.prePurchase.amount.toFixed(2)} / $${PURCHASE_PRICE_PAIRS.carnivalCheers.onboard.amount.toFixed(2)}`
+                  : costs.drinkPackages.tiers.length > 0
+                  ? costs.drinkPackages.tiers[0].priceEntryRequired
+                    ? "Your quote"
+                    : `$${costs.drinkPackages.tiers[0].pricePerDay.toFixed(2)}`
                   : "N/A"}
               </p>
               <p className="mt-0.5 text-xs text-gray-500">
-                {costs.drinkPackages.tiers.length > 0
-                  ? `${costs.drinkPackages.tiers[0].name} /day`
+                {slug === "carnival"
+                  ? "CHEERS before sailing / onboard"
+                  : costs.drinkPackages.tiers.length > 0
+                  ? costs.drinkPackages.tiers[0].priceEntryRequired
+                    ? `${costs.drinkPackages.tiers[0].name} varies by sailing`
+                    : `${costs.drinkPackages.tiers[0].name} /day${costs.drinkPackages.tiers[0].onboardPricePerDay !== undefined ? " before sailing" : ""}`
                   : costs.drinkPackages.includedFree
                     ? "Included with booking"
                     : "No packages offered"}
@@ -728,6 +757,8 @@ export default async function CruiseLinePage({ params }: Props) {
           </p>
           <CalculatorForm defaultCruiseLineId={slug} />
         </section>
+
+        <LineWifiSummary cruiseLineId={slug} displayName={displayName} />
 
         {/* FAQ Section */}
         <section className="border-t border-gray-200 bg-gray-50/60">
