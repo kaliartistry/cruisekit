@@ -94,7 +94,8 @@ worktrees.
   `app_handoff_viewed`, and `app_offer_viewed`. No request contained a fare,
   full URL, or PII.
 - The authenticated GA4 property is CruiseKit property `541659242`, measurement
-  ID `G-X6NEBF4X3N`. Its September 4 dashboard read-back showed 27 active users,
+  ID `G-X6NEBF4X3N`; the mobile Firebase configuration identifies project
+  `cruisekit-app`. Its September 4 dashboard read-back showed 27 active users,
   51 views, and 217 events in the preceding seven days; the current event table
   included 29 `app_handoff_viewed`, 16 `calculator_started`, and 13
   `result_viewed` events. GA4 remains a consenting-user floor.
