@@ -17,6 +17,7 @@ import {
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
+import { MATERIAL_PRICE_FACTS } from "@/lib/data/price-facts";
 
 export const metadata: Metadata = {
   title: "Calculator Methodology",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
  *   - industry averages → reviewed on the cadence noted under each category
  */
 const REVIEW_DATES = {
-  cruiseLinePublishedRates: "March 28, 2026",
+  cruiseLinePublishedRates: "September 4, 2026",
   sailingPrices: "April 28, 2026",
   industryAverages: "March 28, 2026",
 } as const;
@@ -57,7 +58,7 @@ const CATEGORIES: CategoryRow[] = [
     label: "Base fare",
     icon: DollarSign,
     source:
-      "You enter the advertised fare you're seeing on the cruise line's site, CruiseDirect, or a search engine. We don't pull a fare for you — we take whatever number you're quoted and treat it as the anchor.",
+      "You enter one traveler's advertised fare. We multiply it by the guest count before adding party-level costs. If you leave it blank, the clearly labeled per-person market estimate is used.",
     frequency: "Real-time — reflects whatever you paste in.",
     verify:
       "Cross-check the fare on the cruise line's booking flow or a marketplace like CruiseDirect before trusting any total.",
@@ -67,7 +68,7 @@ const CATEGORIES: CategoryRow[] = [
     label: "Gratuities",
     icon: Heart,
     source:
-      "Cruise-line published daily gratuity rates for standard cabins (interior / oceanview / balcony). We use the line's own current per-guest per-day number — Carnival, Royal, NCL, Princess, MSC, and Celebrity each publish theirs publicly.",
+      "Cruise-line published daily rates with cabin, booking-date, payment-timing, age, and regional conditions kept separate. Suite rates apply when Suite is selected. Virgin's legacy/current cohorts are selected explicitly. MSC is labeled corroborated until its official page can be retrieved.",
     frequency: "Reviewed quarterly and any time a cruise line announces a rate change.",
     verify:
       "Search \"[cruise line] daily gratuity\" — every major line has a customer-service page listing the current rate.",
@@ -77,8 +78,8 @@ const CATEGORIES: CategoryRow[] = [
     label: "Drink package",
     icon: Wine,
     source:
-      "Cruise-line published package prices for the mid-tier unlimited alcohol package (e.g., Royal's Deluxe Beverage, NCL's Premium Plus, Carnival's Cheers!). We apply the per-guest per-day rate plus the line's automatic gratuity on packages.",
-    frequency: "Reviewed quarterly. Pre-cruise sale pricing is not used — we show the on-board / standard rate so the number isn't optimistic.",
+      "Official package or bundle prices where a stable public rate exists. Dynamic prices require the traveler to enter the current quote. Princess Plus/Premier are modeled as full bundles and their included gratuity and Wi-Fi are not counted twice.",
+    frequency: "High-volatility package facts are rechecked monthly; stable gratuity facts quarterly.",
     verify:
       "The cruise line's \"beverage package\" page shows the current list price. Sale pricing is common; the calculator intentionally does not chase it.",
   },
@@ -147,7 +148,7 @@ const CATEGORIES: CategoryRow[] = [
 const ASSUMPTIONS = [
   "Two adult guests sharing a standard interior cabin.",
   "A typical 7-night Caribbean itinerary for any category tied to itinerary (port fees, excursions, insurance).",
-  "Standard cruise-line gratuity rates — not the \"suite\" or \"butler\" tier.",
+  "The cabin gratuity tier follows the cabin selection; line-specific booking cohorts are kept separate.",
   "Mid-tier unlimited alcohol package, one per adult. Non-alcoholic packages cost less; premium tiers cost more.",
   "Streaming-capable WiFi for one device per adult.",
   "One specialty dinner per adult, per cruise.",
@@ -249,6 +250,41 @@ export default function MethodologyPage() {
                   </dd>
                 </div>
               </dl>
+            </div>
+          </section>
+
+          <section className="mb-10" aria-labelledby="material-price-facts">
+            <h2 id="material-price-facts" className="mb-3 text-2xl font-bold text-navy">
+              Material price fact register
+            </h2>
+            <p className="mb-5 text-sm leading-relaxed text-gray-600">
+              These are the dated records currently used for the calculator&apos;s highest-impact prices. “Official” means the linked cruise-line source supports the value; “corroborated” is visibly lower confidence. Effective, retrieval, and recheck dates are never generated from today&apos;s date.
+            </p>
+            <div className="space-y-3">
+              {MATERIAL_PRICE_FACTS.map((fact) => (
+                <article key={fact.id} className="rounded-xl border border-gray-200 bg-white p-4">
+                  <div className="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h3 className="text-sm font-semibold text-navy">{fact.label}</h3>
+                      <p className="mt-1 font-price text-lg font-bold text-teal-dark">
+                        {fact.currency === "USD" ? "$" : "€"}{fact.amount.toFixed(fact.amount % 1 ? 2 : 0)}
+                        <span className="ml-1 text-xs font-normal text-gray-500">/{fact.unit.replace("-", " ")}</span>
+                      </p>
+                    </div>
+                    <span className={fact.status === "official" ? "rounded-full bg-teal/10 px-2.5 py-1 text-xs font-semibold text-teal-dark" : "rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-800"}>
+                      {fact.status}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-xs leading-relaxed text-gray-600">{fact.conditions}</p>
+                  {fact.calculation && <p className="mt-1 text-xs text-gray-500">Derived: {fact.calculation}</p>}
+                  <p className="mt-2 text-[11px] text-gray-500">
+                    Retrieved {fact.retrievedAt}{fact.effectiveOn ? ` · Effective ${fact.effectiveOn}` : ""} · Recheck by {fact.recheckBy}
+                  </p>
+                  <a className="mt-1 inline-flex text-xs font-semibold text-teal-dark underline underline-offset-2" href={fact.sourceUrl} rel="noopener noreferrer" target="_blank">
+                    {fact.sourceTitle}
+                  </a>
+                </article>
+              ))}
             </div>
           </section>
 

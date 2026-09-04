@@ -14,25 +14,38 @@ export function calculateCosts(
 ): CostBreakdown {
   const { adults, children, duration, baseFare } = inputs;
   const totalGuests = adults + children;
+  const gratuityGuests = Math.min(
+    totalGuests,
+    Math.max(0, inputs.gratuityGuestCountOverride ?? totalGuests),
+  );
 
   // Gratuities
-  const gratuities =
-    costs.gratuityPerPersonPerDay * totalGuests * duration;
+  const selectedTier = inputs.drinkPackage
+    ? costs.drinkPackages.tiers.find((tier) => tier.name === inputs.drinkPackage)
+    : undefined;
+  const dailyGratuity =
+    inputs.gratuityRateOverride ??
+    (inputs.cabinType === "suite"
+      ? costs.suiteGratuityPerPersonPerDay
+      : costs.gratuityPerPersonPerDay);
+  const gratuities = selectedTier?.includesGratuities
+    ? 0
+    : dailyGratuity * gratuityGuests * duration;
 
   // Drink package — only adults get drink packages
   let drinkPackage = 0;
   if (inputs.drinkPackage) {
-    const selectedTier = costs.drinkPackages.tiers.find(
-      (t) => t.name === inputs.drinkPackage
-    );
     if (selectedTier) {
-      drinkPackage = selectedTier.pricePerDay * adults * duration;
+      const dailyPrice = selectedTier.priceEntryRequired
+        ? Math.max(0, inputs.drinkPackagePricePerPersonPerDay ?? 0)
+        : selectedTier.pricePerDay;
+      drinkPackage = dailyPrice * adults * duration;
     }
   }
 
   // WiFi — all guests
   let wifi = 0;
-  if (inputs.wifiPackage) {
+  if (inputs.wifiPackage && !selectedTier?.includesWifi) {
     const selectedTier = costs.wifiPackages.tiers.find(
       (t) => t.name === inputs.wifiPackage
     );
@@ -81,8 +94,10 @@ export function calculateCosts(
     photography;
 
   const grandTotal = baseFare + totalAdditional;
-  const percentAboveAdvertised = ((grandTotal - baseFare) / baseFare) * 100;
-  const perPersonPerDay = grandTotal / totalGuests / duration;
+  const percentAboveAdvertised =
+    baseFare > 0 ? ((grandTotal - baseFare) / baseFare) * 100 : 0;
+  const perPersonPerDay =
+    totalGuests > 0 && duration > 0 ? grandTotal / totalGuests / duration : 0;
 
   return {
     baseFare,
@@ -100,4 +115,9 @@ export function calculateCosts(
     percentAboveAdvertised,
     perPersonPerDay,
   };
+}
+
+/** Converts the explicitly per-person fare input into the party-level anchor. */
+export function partyFareFromPerPerson(perPersonFare: number, guests: number) {
+  return Math.max(0, perPersonFare) * Math.max(0, Math.round(guests));
 }

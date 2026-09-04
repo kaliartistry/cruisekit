@@ -1,11 +1,13 @@
 import type { CruiseLineCosts } from "@cruise/shared/types";
+import { PRICE_FACTS } from "./price-facts";
 
 /**
  * Cruise line cost pricing database.
  *
  * All prices are in USD. Per-day prices are per person unless noted.
  * Data sourced from official cruise line websites and verified against
- * published fare sheets as of 2026-03-28.
+ * official sources recorded in price-facts.ts. Non-material planning estimates
+ * remain labeled in their descriptions.
  */
 export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
@@ -13,17 +15,19 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   "royal-caribbean": {
     cruiseLineId: "royal-caribbean",
-    lastUpdated: "2026-03-28",
-    gratuityPerPersonPerDay: 18.5,
-    suiteGratuityPerPersonPerDay: 21.0,
+    lastUpdated: "2026-09-04",
+    gratuityPerPersonPerDay: PRICE_FACTS.royalCaribbeanStandardGratuity.amount,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.royalCaribbeanSuiteGratuity.amount,
     serviceChargePercent: 18,
     drinkPackages: {
       tiers: [
         {
           name: "Deluxe Beverage Package",
-          pricePerDay: 78.0,
+          pricePerDay: 0,
           description:
-            "Unlimited alcoholic and non-alcoholic drinks (avg pre-cruise price, ranges $56-$120 dynamic pricing + 18% gratuity)",
+            "Dynamically priced. Enter the current all-in per-person/day price shown in Cruise Planner.",
+          priceEntryRequired: true,
+          verificationStatus: "official",
         },
         {
           name: "Refreshment Package",
@@ -90,17 +94,18 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   carnival: {
     cruiseLineId: "carnival",
-    lastUpdated: "2026-03-28",
-    gratuityPerPersonPerDay: 17.0,
-    suiteGratuityPerPersonPerDay: 19.0,
+    lastUpdated: "2026-09-04",
+    gratuityPerPersonPerDay: PRICE_FACTS.carnivalStandardGratuity.amount,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.carnivalSuiteGratuity.amount,
     serviceChargePercent: 20,
     drinkPackages: {
       tiers: [
         {
           name: "CHEERS! Beverage Program",
-          pricePerDay: 83.94,
+          pricePerDay: PRICE_FACTS.carnivalCheersAdvanceAllIn.amount,
           description:
-            "Unlimited alcoholic and non-alcoholic drinks ($69.95/day pre-cruise + 20% service charge; $89.94/day all-in if purchased onboard)",
+            "Advance price including the 20% service charge; $89.94/day all-in onboard. Advance cutoff is 11:59 PM ET two days before embarkation.",
+          verificationStatus: "official",
         },
         {
           name: "CHEERS! Zero Proof",
@@ -163,17 +168,25 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   norwegian: {
     cruiseLineId: "norwegian",
-    lastUpdated: "2026-03-28",
+    lastUpdated: "2026-09-04",
     gratuityPerPersonPerDay: 20.0,
     suiteGratuityPerPersonPerDay: 25.0,
     serviceChargePercent: 20,
     drinkPackages: {
       tiers: [
         {
-          name: "Free at Sea Open Bar",
-          pricePerDay: 0,
+          name: "Free at Sea — current booking cohort",
+          pricePerDay: PRICE_FACTS.nclFreeAtSeaAdult.amount,
           description:
-            "Included with Free at Sea promo (mandatory $21.80/day gratuity applies separately)",
+            "Beverage package is promotional; this is the mandatory pre-cruise gratuity for each guest age 21+ ($28.50/day).",
+          verificationStatus: "official",
+        },
+        {
+          name: "More at Sea — legacy eligible booking",
+          pricePerDay: PRICE_FACTS.nclMoreAtSeaLegacy.amount,
+          description:
+            "Legacy cohort only for applicable bookings made October 1, 2024–November 4, 2025. Confirm the original booking.",
+          verificationStatus: "official",
         },
         {
           name: "Free at Sea Plus Upgrade",
@@ -199,7 +212,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       ],
       includedFree: true,
       notes:
-        "Free at Sea promo includes open bar with mandatory $21.80/day gratuity. Free at Sea drink packages no longer work at Great Stirrup Cay as of March 1, 2026. 20% service charge on all purchases.",
+        "Current Free at Sea beverage gratuity is $28.50/day for guests age 21+ when prepaid; onboard price varies. The $21.80/day selection is retained only for eligible legacy More at Sea bookings.",
     },
     wifiPackages: {
       tiers: [
@@ -287,9 +300,9 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   msc: {
     cruiseLineId: "msc",
-    lastUpdated: "2026-03-28",
-    gratuityPerPersonPerDay: 16.0,
-    suiteGratuityPerPersonPerDay: 16.0,
+    lastUpdated: "2026-09-04",
+    gratuityPerPersonPerDay: PRICE_FACTS.mscStandardCaribbean.amount,
+    suiteGratuityPerPersonPerDay: 23.0,
     serviceChargePercent: 0,
     drinkPackages: {
       tiers: [
@@ -358,9 +371,9 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   celebrity: {
     cruiseLineId: "celebrity",
-    lastUpdated: "2026-03-28",
-    gratuityPerPersonPerDay: 18.0,
-    suiteGratuityPerPersonPerDay: 23.0,
+    lastUpdated: "2026-09-04",
+    gratuityPerPersonPerDay: PRICE_FACTS.celebrityStandardGratuity.amount,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.celebritySuiteGratuity.amount,
     serviceChargePercent: 20,
     drinkPackages: {
       tiers: [
@@ -445,7 +458,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   princess: {
     cruiseLineId: "princess",
-    lastUpdated: "2026-03-28",
+    lastUpdated: "2026-09-04",
     gratuityPerPersonPerDay: 18.0,
     suiteGratuityPerPersonPerDay: 20.0,
     serviceChargePercent: 20,
@@ -453,15 +466,21 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "Plus Beverage Package",
-          pricePerDay: 65.0,
+          pricePerDay: PRICE_FACTS.princessPlusAdvance.amount,
           description:
-            "Drinks valued at $15 or less (included in Princess Plus bundle at $65/day total)",
+            "Full Princess Plus bundle on most ships; includes drinks, crew appreciation, and one-device Wi-Fi.",
+          includesGratuities: true,
+          includesWifi: true,
+          verificationStatus: "official",
         },
         {
           name: "Premier Beverage Package",
-          pricePerDay: 100.0,
+          pricePerDay: PRICE_FACTS.princessPremierAdvance.amount,
           description:
-            "Drinks valued at $20 or less (included in Princess Premier bundle at $100/day total)",
+            "Full Princess Premier bundle on most ships; includes drinks, crew appreciation, and four-device Wi-Fi. Sun/Star Princess are $105/day.",
+          includesGratuities: true,
+          includesWifi: true,
+          verificationStatus: "official",
         },
         {
           name: "Classic Soda Package",
@@ -471,7 +490,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       ],
       includedFree: false,
       notes:
-        "Drink packages are only available as part of Princess Plus or Premier bundles. Standalone soda package available separately. 20% service charge raised from 18%.",
+        "The $65/$100 choices are full bundles, not beverage-only prices. They already include crew appreciation and Wi-Fi, so CruiseKit does not add those components again.",
     },
     wifiPackages: {
       tiers: [
@@ -565,10 +584,10 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   "holland-america": {
     cruiseLineId: "holland-america",
-    lastUpdated: "2026-03-28",
-    gratuityPerPersonPerDay: 17.0,
-    suiteGratuityPerPersonPerDay: 19.0,
-    serviceChargePercent: 18,
+    lastUpdated: "2026-09-04",
+    gratuityPerPersonPerDay: PRICE_FACTS.hollandAmericaStandardGratuity.amount,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.hollandAmericaSuiteGratuity.amount,
+    serviceChargePercent: 20,
     drinkPackages: {
       tiers: [
         {
@@ -665,7 +684,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   disney: {
     cruiseLineId: "disney",
-    lastUpdated: "2026-03-28",
+    lastUpdated: "2026-09-04",
     gratuityPerPersonPerDay: 16.0,
     suiteGratuityPerPersonPerDay: 27.25,
     serviceChargePercent: 18,
@@ -741,9 +760,9 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
   // ---------------------------------------------------------------------------
   "virgin-voyages": {
     cruiseLineId: "virgin-voyages",
-    lastUpdated: "2026-03-28",
-    gratuityPerPersonPerDay: 20.0,
-    suiteGratuityPerPersonPerDay: 22.0,
+    lastUpdated: "2026-09-04",
+    gratuityPerPersonPerDay: PRICE_FACTS.virginCurrentPrepaid.amount,
+    suiteGratuityPerPersonPerDay: PRICE_FACTS.virginCurrentPrepaid.amount,
     serviceChargePercent: 0,
     drinkPackages: {
       tiers: [
