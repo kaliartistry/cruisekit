@@ -24,4 +24,11 @@ describe("sitemap canonical URLs", () => {
       sitemap().some((entry) => entry.url.includes("/calculator/?"))
     ).toBe(false);
   });
+
+  it("lists the new planning tools and removes the redirected tipping guide", () => {
+    const urls = sitemap().map((entry) => entry.url);
+    expect(urls).toContain("https://cruisekit.app/cruise-gratuity-calculator/");
+    expect(urls).toContain("https://cruisekit.app/cruise-payment-deadline-calculator/");
+    expect(urls).not.toContain("https://cruisekit.app/guides/cruise-tipping-guide/");
+  });
 });

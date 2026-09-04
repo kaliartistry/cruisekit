@@ -15,6 +15,12 @@ const calculatorOptions = [
     description: "Fare, fees, gratuities, drinks, WiFi, excursions, and extras.",
   },
   {
+    id: "drink-package",
+    href: "/cruise-drink-package-calculator",
+    label: "Drink Package",
+    description: "Packages, bundled fares, service charges, and Bar Tab credit.",
+  },
+  {
     id: "gratuity",
     href: "/cruise-gratuity-calculator",
     label: "Gratuities",
@@ -25,12 +31,6 @@ const calculatorOptions = [
     href: "/cruise-payment-deadline-calculator",
     label: "Payment Deadlines",
     description: "Final-payment and pre-cruise package calendar reminders.",
-  },
-  {
-    id: "drink-package",
-    href: "/cruise-drink-package-calculator",
-    label: "Drink Package",
-    description: "Packages, bundled fares, service charges, and Bar Tab credit.",
   },
 ] as const;
 
