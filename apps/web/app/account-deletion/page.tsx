@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Request deletion of your MyDay by CruiseKit account and associated cloud data, including options when you cannot access the app.",
   alternates: {
-    canonical: "https://cruisekit.app/account-deletion",
+    canonical: "https://cruisekit.app/account-deletion/",
   },
 };
 

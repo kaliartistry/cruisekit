@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "CruiseKit Summary for AI Assistants and Search",
   description:
     "A concise public summary of CruiseKit: a free cruise planning app with cost tools, visual route maps, cruise port guides, and destination discovery.",
-  alternates: { canonical: "/ai/cruisekit-summary" },
+  alternates: { canonical: "/ai/cruisekit-summary/" },
   openGraph: {
     title: "CruiseKit Summary for AI Assistants and Search",
     description:

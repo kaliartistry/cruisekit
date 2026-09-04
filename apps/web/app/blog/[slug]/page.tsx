@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils/cn";
 import {
   getBlogPostBySlug,
   getAllBlogSlugs,
+  getBlogRedirectTarget,
   getCanonicalBlogUrl,
   getRelatedPosts,
   type BlogCategory,
@@ -289,6 +290,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [post.imageUrl],
     },
   };
+}
+
+function StaticExportRedirect({
+  target,
+  title,
+}: {
+  target: string;
+  title: string;
+}) {
+  return (
+    <>
+      <meta httpEquiv="refresh" content={`0; url=${target}`} />
+      <Navbar />
+      <main className="flex flex-1 items-center justify-center px-4 py-20">
+        <div className="max-w-xl rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm">
+          <h1 className="text-2xl font-bold text-navy">This guide has moved</h1>
+          <p className="mt-3 text-gray-600">
+            {title} is now part of CruiseKit&apos;s complete ship-time and
+            port-time guide.
+          </p>
+          <Link
+            href={target}
+            className="mt-6 inline-flex rounded-lg bg-teal px-5 py-3 font-bold text-white hover:bg-teal-dark"
+          >
+            Open the updated guide
+          </Link>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 /* ------------------------------------------------------------------ */
@@ -642,6 +674,10 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPostBySlug(slug);
 
   if (!post) notFound();
+  const redirectTarget = getBlogRedirectTarget(slug);
+  if (redirectTarget) {
+    return <StaticExportRedirect target={redirectTarget} title={post.title} />;
+  }
   const showPriceDisclaimer =
     post.category === "deals" ||
     post.category === "tips" ||

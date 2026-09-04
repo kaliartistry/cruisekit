@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "CruiseKit - MyDay Cruise Planner, Spend Tracker, Port Maps",
   description:
     "Download CruiseKit for iPhone and Android to save your cruise, use MyDay, track spending and drink package value, and open itinerary port maps.",
+  alternates: { canonical: "/" },
   keywords: [
     "cruise planner app",
     "cruise spend tracker",

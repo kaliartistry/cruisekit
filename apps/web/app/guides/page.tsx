@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "cruise port day tips",
     "cruise insurance explained",
   ],
-  alternates: { canonical: "/guides" },
+  alternates: { canonical: "/guides/" },
   openGraph: {
     title: "Cruise Guides from CruiseKit",
     description:

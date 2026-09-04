@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Affiliate Disclosure",
   description:
     "FTC-required disclosure of CruiseKit's affiliate relationships, what they mean for our recommendations, and what they don't change.",
+  alternates: { canonical: "/affiliate-disclosure/" },
 };
 
 export default function AffiliateDisclosurePage() {

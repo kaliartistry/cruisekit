@@ -16,7 +16,7 @@ describe("account deletion page", () => {
 
   it("has canonical public metadata", () => {
     expect(metadata.alternates?.canonical).toBe(
-      "https://cruisekit.app/account-deletion",
+      "https://cruisekit.app/account-deletion/",
     );
   });
 });

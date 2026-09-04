@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Cruise Group Check-In App for MyCrew Coordination",
   description:
     "How CruiseKit helps cruise groups coordinate simple MyCrew status check-ins, cruise-day plans, port-day timing, and shared trip context.",
-  alternates: { canonical: "/cruise-group-check-in-app" },
+  alternates: { canonical: "/cruise-group-check-in-app/" },
   keywords: [
     "cruise group check in app",
     "cruise group coordination app",

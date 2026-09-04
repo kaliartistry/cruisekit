@@ -194,11 +194,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           "Royal Caribbean Cruise Cost Calculator: Estimate Your Real Total",
         description:
           "Estimate the real Royal Caribbean cruise total after gratuities, drink packages, WiFi, excursions, port fees, and common add-ons.",
-        url: "https://cruisekit.app/calculator/royal-caribbean",
+        url: "https://cruisekit.app/calculator/royal-caribbean/",
         type: "website",
       },
       alternates: {
-        canonical: "https://cruisekit.app/calculator/royal-caribbean",
+        canonical: "https://cruisekit.app/calculator/royal-caribbean/",
       },
     };
   }
@@ -211,11 +211,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: seoOverride.title,
         description: seoOverride.description,
-        url: `https://cruisekit.app/calculator/${slug}`,
+        url: `https://cruisekit.app/calculator/${slug}/`,
         type: "website",
       },
       alternates: {
-        canonical: `https://cruisekit.app/calculator/${slug}`,
+        canonical: `https://cruisekit.app/calculator/${slug}/`,
       },
     };
   }
@@ -232,11 +232,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${displayName} Cruise Cost Calculator: Estimate Your Real Total`,
       description: `Estimate the real ${displayName} cruise total after gratuities, drink packages, WiFi, excursions, port fees, and common add-ons.`,
-      url: `https://cruisekit.app/calculator/${slug}`,
+      url: `https://cruisekit.app/calculator/${slug}/`,
       type: "website",
     },
     alternates: {
-      canonical: `https://cruisekit.app/calculator/${slug}`,
+      canonical: `https://cruisekit.app/calculator/${slug}/`,
     },
   };
 }

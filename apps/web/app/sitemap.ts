@@ -6,9 +6,14 @@ import { getAllPortSlugs } from '@/lib/data/ports';
 import { getAllGuideSlugs } from '@/lib/data/guides';
 import { getIndexableBlogSlugs } from '@/lib/data/blog-posts';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cruisekit.app';
+const BASE_URL = 'https://cruisekit.app';
 
+export function toCanonicalSitemapUrl(path = ''): string {
+  const normalizedPath = path === '' ? '/' : `/${path.replace(/^\/+|\/+$/g, '')}/`;
+  return `${BASE_URL}${normalizedPath}`;
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
   /* ---- Static pages ------------------------------------------------ */
   const staticPages = [
     '',
@@ -45,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/myday',
     '/methodology',
   ].map((path) => ({
-    url: `${baseUrl}${path}`,
+    url: toCanonicalSitemapUrl(path),
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: path === '' ? 1.0 : 0.8,
@@ -63,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'holland-america',
     'virgin-voyages',
   ].map((slug) => ({
-    url: `${baseUrl}/calculator/${slug}`,
+    url: toCanonicalSitemapUrl(`/calculator/${slug}`),
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.75,
@@ -71,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   /* ---- Dynamic port pages ------------------------------------------ */
   const portPages = getAllPortSlugs().map((slug) => ({
-    url: `${baseUrl}/ports/${slug}`,
+    url: toCanonicalSitemapUrl(`/ports/${slug}`),
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -79,7 +84,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   /* ---- Dynamic guide pages ----------------------------------------- */
   const guidePages = getAllGuideSlugs().map((slug) => ({
-    url: `${baseUrl}/guides/${slug}`,
+    url: toCanonicalSitemapUrl(`/guides/${slug}`),
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -87,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   /* ---- Dynamic blog pages ------------------------------------------ */
   const blogPages = getIndexableBlogSlugs().map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
+    url: toCanonicalSitemapUrl(`/blog/${slug}`),
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.6,

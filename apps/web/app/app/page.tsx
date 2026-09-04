@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "cruise hidden costs",
   ],
   alternates: {
-    canonical: "/app",
+    canonical: "/app/",
   },
   openGraph: {
     title: "CruiseKit App - MyDay, Spend Tracker, Port Maps",

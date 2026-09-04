@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     "cruise port fees",
   ],
   alternates: {
-    canonical: "https://cruisekit.app/cruise-costs",
+    canonical: "https://cruisekit.app/cruise-costs/",
   },
   openGraph: {
     title: "Cruise Costs Guide: Fare, Fees, Tips, Drinks, WiFi & Extras",
     description:
       "Estimate the real total after fare, taxes, port fees, gratuities, drinks, WiFi, excursions, port spending, and extras.",
-    url: "https://cruisekit.app/cruise-costs",
+    url: "https://cruisekit.app/cruise-costs/",
     type: "website",
   },
 };

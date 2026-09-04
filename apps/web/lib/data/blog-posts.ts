@@ -2028,7 +2028,13 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const BLOG_CANONICAL_URLS: Record<string, string> = {
   "hidden-cruise-costs-nobody-tells-you":
-    "https://cruisekit.app/blog/hidden-cruise-costs",
+    "https://cruisekit.app/blog/hidden-cruise-costs/",
+  "cruise-ship-time-vs-local-time":
+    "https://cruisekit.app/ship-time-vs-port-time/",
+};
+
+export const BLOG_REDIRECT_TARGETS: Readonly<Record<string, string>> = {
+  "cruise-ship-time-vs-local-time": "/ship-time-vs-port-time/",
 };
 
 export const INDEXABLE_BLOG_POSTS = BLOG_POSTS.filter(
@@ -2036,7 +2042,11 @@ export const INDEXABLE_BLOG_POSTS = BLOG_POSTS.filter(
 );
 
 export function getCanonicalBlogUrl(slug: string): string {
-  return BLOG_CANONICAL_URLS[slug] ?? `https://cruisekit.app/blog/${slug}`;
+  return BLOG_CANONICAL_URLS[slug] ?? `https://cruisekit.app/blog/${slug}/`;
+}
+
+export function getBlogRedirectTarget(slug: string): string | undefined {
+  return BLOG_REDIRECT_TARGETS[slug];
 }
 
 /** Look up a single blog post by slug. */

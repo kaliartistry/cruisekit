@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Help Center",
   description:
     "Get help with CruiseKit's cruise planning tools. Find guides, FAQs, and contact information.",
+  alternates: { canonical: "/help/" },
   keywords: [
     "cruisekit help",
     "cruise planning help",

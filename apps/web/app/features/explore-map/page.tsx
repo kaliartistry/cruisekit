@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "cruise map app",
     "cruise app with map",
   ],
-  alternates: { canonical: "/features/explore-map" },
+  alternates: { canonical: "/features/explore-map/" },
   openGraph: {
     title: "Cruise Itinerary and Port Maps in MyDay",
     description:

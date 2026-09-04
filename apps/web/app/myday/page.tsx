@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "MyDay — Your Cruise Day, Handled",
   description:
     "CruiseKit MyDay helps cruisers compare device and port-local time, keep official ship-time verification close, manage daily plans, track spend, and use MyCrew check-ins.",
+  alternates: { canonical: "/myday/" },
 };
 
 export default function MyDayPage() {

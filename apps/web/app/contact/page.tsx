@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with the CruiseKit team. Bug reports, feature requests, partnership inquiries, and general feedback.",
+  alternates: { canonical: "/contact/" },
   keywords: [
     "contact cruisekit",
     "cruisekit support",

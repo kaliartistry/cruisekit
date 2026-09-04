@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Compare Cruise Lines — Side-by-Side Cost Comparison",
   description:
     "Compare gratuities, drink packages, WiFi, dining, and hidden costs across Royal Caribbean, Carnival, Norwegian, Celebrity, Princess, Disney, and more. Find the best value cruise line for your next trip.",
+  alternates: { canonical: "/compare/" },
   keywords: [
     "compare cruise lines",
     "cruise line comparison",

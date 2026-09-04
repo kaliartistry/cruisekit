@@ -3798,13 +3798,13 @@ const PORT_RECORDS: PortEditorialData[] = [
     walkabilityRating: 6,
     isTenderPort: true,
     typicalPortHours: 6,
-    walkingDistanceToTown: "N/A — private island with beach area at the tender landing",
+    walkingDistanceToTown: "N/A — private island; beach access begins from the pier or tender landing assigned to your ship",
     currency: "USD",
     usdAccepted: true,
     wifiAvailability: "none",
     cellularCoverage: "none",
     overview:
-      "Half Moon Cay (officially Little San Salvador Island) is Carnival Corporation's private island in the Bahamas. It features a stunning 2-mile white sand beach, consistently rated among the best private cruise islands. Used by Carnival and Holland America ships. Tender required.",
+      "RelaxAway, Half Moon Cay (officially Little San Salvador Island) is Carnival Corporation's private island in the Bahamas. Carnival opened a north-side pier in June 2026, while Holland America still publishes tendering guidance for its south-side visits, so the arrival method depends on the ship and sailing.",
     timeZoneAlert: null,
     excursionCategories: [
       { name: "Horseback Riding on Beach", priceRange: { min: 100, max: 130 }, typicalDuration: "1.5 hours" },
@@ -3820,7 +3820,7 @@ const PORT_RECORDS: PortEditorialData[] = [
       { name: "Captain Morgan Bar", priceRange: "$" },
     ],
     gettingAround:
-      "Walk along the beach. Tram service connects the tender landing to the far end of the beach. This is a small, self-contained beach destination.",
+      "Walk along the beach or use the island tram. Your starting point depends on whether your ship docks at the north-side pier or tenders to the south side, so follow the ship's arrival and return instructions.",
     emergencyInfo: {
       police: "Ship security",
       hospital: "Ship's medical center — no hospital on island",

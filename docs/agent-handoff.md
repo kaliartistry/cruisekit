@@ -2,6 +2,41 @@
 
 Last verified: 2026-08-26
 
+## Technical SEO and five-port arrival-answer candidate
+
+- Candidate branch `codex/execution-seo-ports-20260904` is based on production
+  `main` at `834cd6b58c2a86e6135d13074f20305d3ed4eea3`. It has not been pushed,
+  merged, or deployed.
+- The sitemap now emits only final trailing-slash URLs. A build-output verifier
+  confirms every sitemap entry has a corresponding exported page, and `llms.txt`
+  uses the same canonical form.
+- Self-referencing canonicals cover the 15 live pages that were missing them.
+  `/calculator/` is the bounded canonical for its query-string forms; measured
+  parameter URLs remain live, indexable, and excluded from the sitemap.
+- `/ship-time-vs-port-time/` now gives the all-aboard clock decision above the
+  fold, links current NCL and Royal Caribbean guidance, and absorbs the useful
+  intent of the older blog article. The old article is removed from sitemap and
+  index surfaces and uses a zero-delay static-export handoff plus a canonical to
+  the dedicated guide. GitHub Pages cannot emit a server-side 301 from Next.js
+  static export, so replacing this with an edge/server redirect remains a
+  hosting-level follow-up if that capability is added.
+- A single-switch pilot changes only Half Moon Cay, Falmouth, Aruba, Curaçao,
+  and Celebration Key to answer dock/tender intent in the title, H1, and first
+  answer block. Current official sources override the September report: Half
+  Moon Cay is ship-specific after Carnival opened its north-side pier in June
+  2026, while Holland America still publishes tendering guidance for south-side
+  visits. Aruba is presented as usually docked with provisional berth caveat;
+  the other three are normally docked. Every pilot page renders its source links
+  and September 4, 2026 verification date.
+- The port title formatter no longer produces duplicated labels such as
+  `Aruba, Aruba` or `Curaçao, Curaçao`. Free activities now appear before tour
+  and affiliate blocks on port pages.
+- Local verification: 17 test files / 63 tests; full web ESLint; Next.js static
+  export of 191 pages; static SEO verifier over 178 sitemap URLs, 15 repaired
+  canonicals, and five pilot pages; passenger-flow Playwright at 1440x1000 and
+  390x844 with no console warnings/errors or horizontal overflow. Browser plugin
+  was not available, so the repository Playwright runtime was used.
+
 ## Sailing data and CHEERS pricing refresh candidate
 
 - Branch `fix/data-freshness` was refreshed from official-source staging runs

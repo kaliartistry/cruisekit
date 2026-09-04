@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "How CruiseKit handles account, MyDay, MyCrew, local device, analytics, diagnostics, and support data.",
   alternates: {
-    canonical: "https://cruisekit.app/privacy",
+    canonical: "https://cruisekit.app/privacy/",
   },
 };
 

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "CruiseKit terms of service. Understand the terms under which CruiseKit provides its free cruise planning tools.",
+  alternates: { canonical: "/terms/" },
 };
 
 export default function TermsPage() {
