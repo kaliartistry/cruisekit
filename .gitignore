@@ -25,6 +25,7 @@ build/
 # Local automation/tool state
 $CODEX_HOME/
 .playwright-cli/
+output/playwright/
 
 # OS
 .DS_Store

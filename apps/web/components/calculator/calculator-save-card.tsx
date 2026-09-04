@@ -47,23 +47,34 @@ export default function CalculatorSaveCard({
   const [signInOpen, setSignInOpen] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [savedLocally, setSavedLocally] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const canSave = hasRealSailing(sailingContext);
+  const canSync = hasRealSailing(sailingContext);
   const attribution = useMemo(
     () => readCampaignAttribution(sailingContext),
     [sailingContext],
   );
 
   const save = async (uid?: string) => {
-    if (!hasRealSailing(sailingContext)) return;
-
-    const targetUid = uid ?? user?.uid;
     trackSaveCruiseStarted({
       sourceType: attribution.sourceType,
       sourceId: attribution.sourceId,
       landingContext: attribution.landingContext,
       cruiseLineId: inputs.cruiseLineId,
     });
+    if (!hasRealSailing(sailingContext)) {
+      persistBrowserDraft(inputs, breakdown, sailingContext);
+      setSavedLocally(true);
+      trackSaveCruiseCompleted({
+        sourceType: attribution.sourceType,
+        sourceId: attribution.sourceId,
+        landingContext: attribution.landingContext,
+        cruiseLineId: inputs.cruiseLineId,
+      });
+      return;
+    }
+
+    const targetUid = uid ?? user?.uid;
     if (!targetUid) {
       persistBrowserDraft(inputs, breakdown, sailingContext);
       setSignInOpen(true);
@@ -129,23 +140,29 @@ export default function CalculatorSaveCard({
     <div className="rounded-2xl border border-teal/25 bg-teal/5 p-6 sm:p-7">
       <div className="flex items-start gap-4">
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal text-white">
-          {saved ? <Check className="h-5 w-5" /> : <Ship className="h-5 w-5" />}
+          {saved || savedLocally ? <Check className="h-5 w-5" /> : <Ship className="h-5 w-5" />}
         </span>
         <div className="min-w-0 flex-1">
           <h3 className="text-lg font-bold text-navy">
-            {saved ? "Your cruise is saved." : "Save this cruise, not just the number."}
+            {saved
+              ? "Your cruise is saved."
+              : savedLocally
+                ? "Your estimate is saved on this device."
+                : "Save this cruise, not just the number."}
           </h3>
           <p className="mt-1 text-sm leading-relaxed text-gray-600">
             {saved
               ? "Continue in CruiseKit to finish the sailing details and use MyDay onboard."
+              : savedLocally
+                ? "It stays in this browser for 24 hours. Pick a sailing later to sync the cruise across devices."
               : "Keep this estimate across devices, then carry the cruise into MyDay, Spend, and MyCrew."}
           </p>
-          {!saved && !canSave && (
+          {!saved && !savedLocally && !canSync && (
             <p
               id="calculator-save-sailing-help"
               className="mt-3 text-sm font-medium text-slate-600"
             >
-              Pick a sailing above to save it.
+              No account or sailing selection is required for a local save.
             </p>
           )}
           {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
@@ -159,16 +176,23 @@ export default function CalculatorSaveCard({
                   <a href={activeCruiseHandoffUrl()}>Open handoff page</a>
                 </Button>
               </>
+            ) : savedLocally ? (
+              <Button disabled>
+                <Check className="h-4 w-4" />
+                Saved on this device
+              </Button>
             ) : (
               <Button
                 onClick={() => void save()}
-                disabled={saving || !canSave}
-                aria-describedby={
-                  canSave ? undefined : "calculator-save-sailing-help"
-                }
+                disabled={saving}
+                aria-describedby={canSync ? undefined : "calculator-save-sailing-help"}
               >
                 <Save className="h-4 w-4" />
-                {saving ? "Saving..." : "Save this cruise"}
+                {saving
+                  ? "Saving..."
+                  : canSync
+                    ? "Save this cruise"
+                    : "Save estimate on this device"}
               </Button>
             )}
           </div>

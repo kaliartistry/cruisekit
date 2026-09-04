@@ -32,6 +32,7 @@ import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { Button } from "@/components/ui/button";
 import { getHotelLink, getMedEvacLink } from "@/lib/affiliate-config";
 import { getDeckPlanLink } from "@/lib/data/deck-plan-urls";
+import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import { cn } from "@/lib/utils/cn";
 import { trackResultShared } from "@/lib/analytics";
 
@@ -91,6 +92,16 @@ function getBrandColor(cruiseLineId: string): string {
 function getLineName(cruiseLineId: string): string {
   const line = CRUISE_LINES.find((cl) => cl.id === cruiseLineId);
   return line?.name ?? cruiseLineId;
+}
+
+function formatVerifiedDate(value?: string) {
+  if (!value) return "date unavailable";
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${value}T00:00:00Z`));
 }
 
 /* ------------------------------------------------------------------ */
@@ -561,8 +572,10 @@ function SingleBreakdown({
         >
           <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
           <p className="leading-relaxed">
-            Base fares and add-on rates reflect published pricing as of{" "}
-            <span className="font-medium text-gray-700">April 2026</span> and are
+            Base fares and add-on rates reflect the dated records last reviewed{" "}
+            <span className="font-medium text-gray-700">
+              {formatVerifiedDate(CRUISE_LINE_COSTS[cruiseLineId]?.lastUpdated)}
+            </span>{" "}and are
             for comparison only. Confirm the final price with the cruise line
             before booking.
           </p>
@@ -702,11 +715,7 @@ function SingleBreakdown({
         >
           verified
         </Link>{" "}
-        {new Date().toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
+        {formatVerifiedDate(CRUISE_LINE_COSTS[cruiseLineId]?.lastUpdated)}
       </p>
 
       {/* Actions */}

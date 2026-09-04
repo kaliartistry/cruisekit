@@ -17,8 +17,9 @@ import type {
   CalculatorInputs,
   CostBreakdown as CostBreakdownType,
 } from "@cruise/shared/types";
-import { calculateCosts } from "@cruise/shared/utils";
+import { calculateCosts, partyFareFromPerPerson } from "@cruise/shared/utils";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
+import { PRICE_FACTS } from "@/lib/data/price-facts";
 import { getFareEstimate } from "@/lib/data/fare-estimates";
 import { MONTH_LABELS, getSeasonalMultiplier } from "@/lib/data/seasonal-pricing";
 import { Button } from "@/components/ui/button";
@@ -244,6 +245,11 @@ export default function CalculatorForm({
   /* -- Step 2 state ------------------------------------------------ */
   const [drinkPackageOn, setDrinkPackageOn] = useState(false);
   const [drinkTier, setDrinkTier] = useState<string>("");
+  const [customDrinkPrice, setCustomDrinkPrice] = useState("");
+  const [virginGratuityCohort, setVirginGratuityCohort] = useState<
+    "current-prepaid" | "current-onboard" | "legacy-included"
+  >("current-prepaid");
+  const [gratuityExemptGuests, setGratuityExemptGuests] = useState(0);
   const [wifiOn, setWifiOn] = useState(false);
   const [wifiTier, setWifiTier] = useState<string>("");
   const [specialtyMeals, setSpecialtyMeals] = useState(0);
@@ -266,12 +272,13 @@ export default function CalculatorForm({
     return getFareEstimate(primaryLineId, duration, cabinType, month);
   }, [primaryLineId, duration, cabinType, month]);
 
-  /** The effective base fare: user-entered value, or the mid estimate */
+  /** The UI accepts a per-person fare; the calculator operates on party totals. */
   const effectiveBaseFare = useMemo(() => {
     const userFare = parseFloat(baseFare);
-    if (!isNaN(userFare) && userFare > 0) return userFare;
-    return fareEstimate?.mid ?? 0;
-  }, [baseFare, fareEstimate]);
+    const perPersonFare =
+      !isNaN(userFare) && userFare > 0 ? userFare : (fareEstimate?.mid ?? 0);
+    return partyFareFromPerPerson(perPersonFare, adults + children);
+  }, [baseFare, fareEstimate, adults, children]);
 
   // When duration changes update default ports
   const handleDurationChange = useCallback(
@@ -289,6 +296,7 @@ export default function CalculatorForm({
       setSelectedLines(ids);
       setDrinkPackageOn(false);
       setDrinkTier("");
+      setCustomDrinkPrice("");
       setWifiOn(false);
       setWifiTier("");
     },
@@ -320,8 +328,12 @@ export default function CalculatorForm({
   const drinkImpact = useMemo(() => {
     if (!drinkPackageOn || !drinkTier || !costs) return 0;
     const tier = costs.drinkPackages.tiers.find((t) => t.name === drinkTier);
-    return tier ? tier.pricePerDay * adults * duration : 0;
-  }, [drinkPackageOn, drinkTier, costs, adults, duration]);
+    if (!tier) return 0;
+    const dailyPrice = tier.priceEntryRequired
+      ? Math.max(0, parseFloat(customDrinkPrice) || 0)
+      : tier.pricePerDay;
+    return dailyPrice * adults * duration;
+  }, [drinkPackageOn, drinkTier, costs, customDrinkPrice, adults, duration]);
 
   const wifiImpact = useMemo(() => {
     if (!wifiOn || !wifiTier || !costs) return 0;
@@ -352,8 +364,26 @@ export default function CalculatorForm({
   const runningTotal = useMemo(() => {
     const fare = effectiveBaseFare;
     if (!costs) return fare;
-    const gratuities =
-      costs.gratuityPerPersonPerDay * (adults + children) * duration;
+    const selectedTier = costs.drinkPackages.tiers.find(
+      (tier) => tier.name === drinkTier,
+    );
+    const cabinGratuity =
+      cabinType === "suite"
+        ? costs.suiteGratuityPerPersonPerDay
+        : costs.gratuityPerPersonPerDay;
+    const virginGratuity =
+      primaryLineId === "virgin-voyages"
+        ? virginGratuityCohort === "legacy-included"
+          ? PRICE_FACTS.virginLegacyIncluded.amount
+          : virginGratuityCohort === "current-onboard"
+            ? PRICE_FACTS.virginCurrentOnboard.amount
+            : PRICE_FACTS.virginCurrentPrepaid.amount
+        : cabinGratuity;
+    const gratuities = selectedTier?.includesGratuities
+      ? 0
+      : virginGratuity *
+        Math.max(0, adults + children - Math.min(children, gratuityExemptGuests)) *
+        duration;
     const portFees =
       costs.portFeesPerPersonPerDay * (adults + children) * duration;
     return (
@@ -361,7 +391,7 @@ export default function CalculatorForm({
       gratuities +
       portFees +
       drinkImpact +
-      wifiImpact +
+      (selectedTier?.includesWifi ? 0 : wifiImpact) +
       diningImpact +
       excursionImpact +
       insuranceImpact +
@@ -370,8 +400,13 @@ export default function CalculatorForm({
   }, [
     effectiveBaseFare,
     costs,
+    primaryLineId,
+    cabinType,
+    virginGratuityCohort,
+    drinkTier,
     adults,
     children,
+    gratuityExemptGuests,
     duration,
     drinkImpact,
     wifiImpact,
@@ -392,6 +427,19 @@ export default function CalculatorForm({
       cabinType,
       region: "caribbean",
       baseFare: effectiveBaseFare,
+      drinkPackagePricePerPersonPerDay: parseFloat(customDrinkPrice) || 0,
+      gratuityRateOverride:
+        primaryLineId === "virgin-voyages"
+          ? virginGratuityCohort === "legacy-included"
+            ? PRICE_FACTS.virginLegacyIncluded.amount
+            : virginGratuityCohort === "current-onboard"
+              ? PRICE_FACTS.virginCurrentOnboard.amount
+              : PRICE_FACTS.virginCurrentPrepaid.amount
+          : undefined,
+      gratuityGuestCountOverride: Math.max(
+        0,
+        adults + children - Math.min(children, gratuityExemptGuests),
+      ),
       drinkPackage: drinkPackageOn ? drinkTier || null : null,
       wifiPackage: wifiOn ? wifiTier || null : null,
       specialtyDiningMeals: specialtyMeals,
@@ -407,8 +455,11 @@ export default function CalculatorForm({
     duration,
     adults,
     children,
+    gratuityExemptGuests,
     cabinType,
     effectiveBaseFare,
+    customDrinkPrice,
+    virginGratuityCohort,
     drinkPackageOn,
     drinkTier,
     wifiOn,
@@ -667,10 +718,10 @@ export default function CalculatorForm({
             {/* Base Fare */}
             <div className="mb-8">
               <h2 className="mb-1 text-lg font-bold text-navy">
-                Advertised cruise price
+                Advertised cruise fare per person
               </h2>
               <p className="mb-3 text-sm text-gray-500">
-                Enter your price, or use our estimate based on current market rates
+                Enter one traveler&apos;s fare before add-ons. CruiseKit multiplies it by the number of guests.
               </p>
               <div className="relative max-w-xs">
                 <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-price text-sm font-semibold text-gray-400">
@@ -742,6 +793,62 @@ export default function CalculatorForm({
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_280px]">
               {/* Left: add-on cards */}
               <div className="space-y-4">
+                {primaryLineId === "virgin-voyages" && (
+                  <Card>
+                    <CardContent className="p-6">
+                      <p className="text-sm font-semibold text-navy">
+                        Which gratuity rule applies to your booking?
+                      </p>
+                      <p className="mt-1 text-xs leading-relaxed text-gray-500">
+                        Virgin changed from included tips to a daily gratuity on October 7, 2025. The rate does not depend on cabin type.
+                      </p>
+                      <Select
+                        value={virginGratuityCohort}
+                        onValueChange={(value) =>
+                          setVirginGratuityCohort(
+                            value as typeof virginGratuityCohort,
+                          )
+                        }
+                      >
+                        <SelectTrigger className="mt-3">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="current-prepaid">
+                            Booked Oct 7, 2025 or later — prepaid ($20/day)
+                          </SelectItem>
+                          <SelectItem value="current-onboard">
+                            Booked Oct 7, 2025 or later — onboard ($22/day)
+                          </SelectItem>
+                          <SelectItem value="legacy-included">
+                            Booked before Oct 7, 2025 — included ($0)
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {children > 0 && (
+                  <Card>
+                    <CardContent className="p-6">
+                      <p className="text-sm font-semibold text-navy">
+                        Guests exempt from daily gratuities
+                      </p>
+                      <p className="mb-3 mt-1 text-xs leading-relaxed text-gray-500">
+                        Age rules vary by cruise line and itinerary. Leave this at zero unless your booking terms explicitly exempt a guest.
+                      </p>
+                      <NumberStepper
+                        value={gratuityExemptGuests}
+                        onChange={setGratuityExemptGuests}
+                        min={0}
+                        max={children}
+                        label="Exempt"
+                      />
+                    </CardContent>
+                  </Card>
+                )}
+
                 {/* Drink Package */}
                 {costs.drinkPackages.tiers.length > 0 && (
                   <Card>
@@ -788,6 +895,46 @@ export default function CalculatorForm({
                               ))}
                             </SelectContent>
                           </Select>
+                          {costs.drinkPackages.tiers.find(
+                            (tier) => tier.name === drinkTier,
+                          )?.priceEntryRequired && (
+                            <div className="mt-3">
+                              <label
+                                htmlFor="live-drink-package-price"
+                                className="text-xs font-semibold text-navy"
+                              >
+                                Your current all-in quote, per adult per day
+                              </label>
+                              <div className="relative mt-1 max-w-xs">
+                                <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">
+                                  $
+                                </span>
+                                <input
+                                  id="live-drink-package-price"
+                                  type="number"
+                                  inputMode="decimal"
+                                  min="0"
+                                  step="0.01"
+                                  value={customDrinkPrice}
+                                  onChange={(event) =>
+                                    setCustomDrinkPrice(event.target.value)
+                                  }
+                                  placeholder="Price shown in Cruise Planner"
+                                  className="flex h-10 w-full rounded-lg border border-gray-200 bg-white py-2 pl-7 pr-3 text-sm text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+                                />
+                              </div>
+                              <p className="mt-1 text-[11px] text-gray-500">
+                                Royal Caribbean prices vary by sailing, ship, and sale; CruiseKit will not invent a fixed rate.
+                              </p>
+                            </div>
+                          )}
+                          {costs.drinkPackages.tiers.find(
+                            (tier) => tier.name === drinkTier,
+                          )?.includesGratuities && (
+                            <p className="mt-2 rounded-md bg-teal/5 px-3 py-2 text-xs leading-relaxed text-teal-dark">
+                              This is a full bundle. Crew appreciation and Wi-Fi are already included and will not be added twice.
+                            </p>
+                          )}
                         </div>
                       )}
                     </CardContent>

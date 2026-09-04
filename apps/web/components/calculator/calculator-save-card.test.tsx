@@ -67,13 +67,14 @@ describe("CalculatorSaveCard", () => {
     });
   });
 
-  it("disables placeholder saves and hides handoff actions before saving", () => {
+  it("offers a local save without requiring a sailing or account", () => {
     const html = renderToStaticMarkup(
       <CalculatorSaveCard inputs={inputs} breakdown={breakdown} />,
     );
 
-    expect(html).toContain("Pick a sailing above to save it.");
-    expect(html).toContain('disabled=""');
+    expect(html).toContain("No account or sailing selection is required");
+    expect(html).toContain("Save estimate on this device");
+    expect(html).not.toContain('disabled=""');
     expect(html).not.toContain("Open handoff page");
     expect(html).not.toContain("Continue in CruiseKit");
   });

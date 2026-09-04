@@ -45,7 +45,9 @@ export default function AnimatedCounter({
   const isInView = useInView(ref, { once: true });
   const prefersReducedMotion = useReducedMotion();
 
-  const motionValue = useMotionValue(0);
+  // Start from the real value so off-screen, reduced-motion, exported, and
+  // assistive-technology views never announce a misleading $0 placeholder.
+  const motionValue = useMotionValue(value);
 
   // Convert duration (seconds) to a spring config.
   // A higher damping + lower stiffness = slower, smoother animation.

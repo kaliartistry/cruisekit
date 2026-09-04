@@ -5,6 +5,13 @@ export interface PackageTier {
   name: string;
   pricePerDay: number;
   description: string;
+  /** A zero price means the traveler must enter the live price they were quoted. */
+  priceEntryRequired?: boolean;
+  /** Prevents bundle components from being counted twice. */
+  includesGratuities?: boolean;
+  includesWifi?: boolean;
+  /** Makes the displayed number's evidence quality explicit. */
+  verificationStatus?: "official" | "corroborated" | "estimate";
 }
 
 /** Drink package options for a cruise line */
@@ -70,6 +77,12 @@ export interface CalculatorInputs {
   cabinType: CabinType;
   region: CruiseRegion;
   baseFare: number;
+  /** Optional live per-person/day quote for dynamically priced packages. */
+  drinkPackagePricePerPersonPerDay?: number;
+  /** Optional cohort-specific daily gratuity override. */
+  gratuityRateOverride?: number;
+  /** Lets travelers exclude guests who are exempt under their booking terms. */
+  gratuityGuestCountOverride?: number;
   drinkPackage: string | null;
   wifiPackage: string | null;
   specialtyDiningMeals: number;
