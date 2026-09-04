@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Group Hub — Plan & Split Costs for Group Cruises",
   description:
     "Estimate per-person costs for your group cruise, follow a step-by-step planning timeline, and coordinate your group booking across all major cruise lines.",
+  alternates: { canonical: "/groups/" },
   keywords: [
     "group cruise planning",
     "group cruise cost calculator",

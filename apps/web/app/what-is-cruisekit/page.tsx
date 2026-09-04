@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: "What Is CruiseKit?",
   description:
     "CruiseKit is an independent cruise planning toolkit for true-cost estimates and a free MyDay, Spend, and More cruise companion app.",
-  alternates: { canonical: "/what-is-cruisekit" },
+  alternates: { canonical: "/what-is-cruisekit/" },
   keywords: [
     "what is cruisekit",
     "cruisekit app",

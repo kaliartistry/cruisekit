@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Cruise Loyalty Programs — Compare Tiers, Perks & Status Matching",
   description:
     "Compare loyalty programs across Royal Caribbean, Carnival, Norwegian, Celebrity, Princess, Disney, and more. Find your tier, see perks, and discover which lines offer status matching.",
+  alternates: { canonical: "/loyalty/" },
   keywords: [
     "cruise loyalty programs",
     "crown and anchor society",

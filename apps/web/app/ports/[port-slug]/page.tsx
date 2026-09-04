@@ -38,6 +38,11 @@ import {
   type PortData,
   type PortRegion,
 } from "@/lib/data/ports";
+import {
+  getPortArrivalPilot,
+  getPortPlaceLabel,
+  type PortArrivalPilot,
+} from "@/lib/data/port-arrival-pilot";
 
 /* ------------------------------------------------------------------ */
 /*  Static Generation                                                  */
@@ -62,9 +67,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const port = getPortBySlug(slug);
   if (!port) return {};
 
-  const title = `${port.name}, ${port.country} Cruise Port Guide`;
-  const description = `CruiseKit guide to ${port.name}, ${port.country}: walkability, tender or dock status, port hours, currency, Wi-Fi, excursions, food, and a non-live destination snapshot.`;
-  const url = `/ports/${port.slug}`;
+  const pilot = getPortArrivalPilot(slug);
+  const placeLabel = getPortPlaceLabel(port.name, port.country);
+  const title = pilot?.title ?? `${placeLabel} Cruise Port Guide`;
+  const description =
+    pilot?.description ??
+    `CruiseKit guide to ${placeLabel}: walkability, tender or dock status, port hours, currency, Wi-Fi, excursions, food, and a non-live destination snapshot.`;
+  const url = `/ports/${port.slug}/`;
   const heroMedia = resolvePortHeroMedia(port);
 
   return {
@@ -135,13 +144,15 @@ type PortFaq = {
   answer: string;
 };
 
-function getPortFaqs(port: PortData): PortFaq[] {
+function getPortFaqs(port: PortData, pilot?: PortArrivalPilot): PortFaq[] {
   return [
     {
       question: `Is ${port.name} a tender port or a docked port?`,
-      answer: port.isTenderPort
-        ? `${port.name} is commonly handled as a tender port in CruiseKit's guide, so cruise guests should build their port-day plan around tender boat operations.`
-        : `${port.name} is listed as a docked cruise port in CruiseKit's guide, which usually makes the port area simpler to plan than a tender stop.`,
+      answer:
+        pilot?.answer ??
+        (port.isTenderPort
+          ? `${port.name} is commonly handled as a tender port in CruiseKit's guide, so cruise guests should build their port-day plan around tender boat operations.`
+          : `${port.name} is listed as a docked cruise port in CruiseKit's guide, which usually makes the port area simpler to plan than a tender stop.`),
     },
     {
       question: `How walkable is ${port.name} from the cruise port?`,
@@ -159,7 +170,13 @@ function getPortFaqs(port: PortData): PortFaq[] {
   ];
 }
 
-function DestinationSnapshot({ port }: { port: PortData }) {
+function DestinationSnapshot({
+  port,
+  pilot,
+}: {
+  port: PortData;
+  pilot?: PortArrivalPilot;
+}) {
   const highlights = [
     port.freeActivities[0]?.name,
     port.excursionCategories[0]?.name,
@@ -222,9 +239,19 @@ function DestinationSnapshot({ port }: { port: PortData }) {
         </h3>
         <div className="mt-4 grid gap-3">
           <QuickStat
-            icon={port.isTenderPort ? Anchor : Ship}
+            icon={
+              pilot?.status === "tender" || (!pilot && port.isTenderPort)
+                ? Anchor
+                : Ship
+            }
             label="Arrival Style"
-            value={port.isTenderPort ? "Tender port" : "Docked port"}
+            value={
+              pilot?.status === "conditional"
+                ? "Varies by ship"
+                : pilot?.status === "tender" || (!pilot && port.isTenderPort)
+                  ? "Tender port"
+                  : "Docked port"
+            }
           />
           <QuickStat
             icon={Footprints}
@@ -313,8 +340,9 @@ export default async function PortDetailPage({ params }: Props) {
 
   if (!port) notFound();
 
-  const faqs = getPortFaqs(port);
-  const canonicalUrl = `https://cruisekit.app/ports/${port.slug}`;
+  const arrivalPilot = getPortArrivalPilot(slug);
+  const faqs = getPortFaqs(port, arrivalPilot);
+  const canonicalUrl = `https://cruisekit.app/ports/${port.slug}/`;
   const heroMedia = resolvePortHeroMedia(port);
 
   return (
@@ -455,14 +483,19 @@ export default async function PortDetailPage({ params }: Props) {
               {/* Port name + badges */}
               <div className="flex flex-wrap items-center gap-3">
                 <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                  {port.name}
+                  {arrivalPilot?.h1 ?? port.name}
                 </h1>
                 <WalkabilityBadge rating={port.walkabilityRating} />
               </div>
               <p className="mt-2 text-lg text-white/80">{port.country}</p>
               <div className="mt-3 flex flex-wrap items-center gap-3">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
-                  {port.isTenderPort ? (
+                  {arrivalPilot?.status === "conditional" ? (
+                    <>
+                      <Anchor className="h-3.5 w-3.5" /> Arrival varies by ship
+                    </>
+                  ) : arrivalPilot?.status === "tender" ||
+                    (!arrivalPilot && port.isTenderPort) ? (
                     <>
                       <Anchor className="h-3.5 w-3.5" /> Tender Port
                     </>
@@ -480,6 +513,57 @@ export default async function PortDetailPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {arrivalPilot && (
+          <section className="border-b border-teal/20 bg-seafoam/45">
+            <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 lg:px-8">
+              <div className="max-w-4xl rounded-2xl border border-teal/25 bg-white p-5 shadow-sm sm:p-6">
+                <p className="text-xs font-bold uppercase tracking-wider text-teal-dark">
+                  Direct answer
+                </p>
+                <h2 className="mt-2 text-2xl font-bold tracking-tight text-navy">
+                  {arrivalPilot.answerHeading}
+                </h2>
+                <p className="mt-3 text-base leading-7 text-gray-700">
+                  {arrivalPilot.answer}
+                </p>
+                <h3 className="mt-5 font-bold text-navy">
+                  What this changes about your port day
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-gray-700">
+                  {arrivalPilot.dayImpact}
+                </p>
+                <p className="mt-4 text-sm leading-6 text-gray-600">
+                  Tender status can change with berth availability, weather,
+                  and ship size. Confirm against your ship&apos;s daily programme.
+                  The programme&apos;s ship time and all-aboard instruction are the
+                  authority. Read the{" "}
+                  <Link
+                    href="/ship-time-vs-port-time/"
+                    className="font-semibold text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+                  >
+                    ship-time and port-time guide
+                  </Link>
+                  .
+                </p>
+                <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-500">
+                  <span>Last verified: {arrivalPilot.verifiedAt}</span>
+                  {arrivalPilot.sources.map((source) => (
+                    <a
+                      key={source.url}
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+                    >
+                      {source.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ============================================================ */}
         {/*  2. Quick Stats Bar                                           */}
@@ -561,20 +645,53 @@ export default async function PortDetailPage({ params }: Props) {
                 Direct answer
               </p>
               <p className="mt-2 text-base font-semibold leading-7 text-navy">
-                {port.name} is a {port.isTenderPort ? "tender" : "docked"}{" "}
-                cruise port with {port.walkabilityRating}/10 walkability,
-                about {port.typicalPortHours} typical port hours, and{" "}
-                {port.currency} as the local currency.
+                {arrivalPilot?.answerHeading ?? (
+                  <>
+                    {port.name} is a {port.isTenderPort ? "tender" : "docked"}{" "}
+                    cruise port with {port.walkabilityRating}/10 walkability,
+                    about {port.typicalPortHours} typical port hours, and{" "}
+                    {port.currency} as the local currency.
+                  </>
+                )}
               </p>
             </div>
             <p className="max-w-3xl text-base leading-relaxed text-gray-600">
               {port.overview}
             </p>
-            <DestinationSnapshot port={port} />
+            <DestinationSnapshot port={port} pilot={arrivalPilot} />
           </section>
 
           {/* ============================================================ */}
-          {/*  5. Top Excursions                                            */}
+          {/*  5. Free Things To Do                                         */}
+          {/* ============================================================ */}
+          <section className="mb-12">
+            <h2 className="mb-6 text-2xl font-bold tracking-tight text-navy">
+              Free Things To Do
+            </h2>
+            <div className="space-y-4">
+              {port.freeActivities.map((activity) => (
+                <div
+                  key={activity.name}
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-5"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50 text-green-600">
+                    <Star className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-navy">
+                      {activity.name}
+                    </h3>
+                    <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                      {activity.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ============================================================ */}
+          {/*  6. Top Excursions                                            */}
           {/* ============================================================ */}
           <section id="excursions" className="mb-12 scroll-mt-[160px]">
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-navy">
@@ -605,14 +722,14 @@ export default async function PortDetailPage({ params }: Props) {
           </section>
 
           {/* ============================================================ */}
-          {/*  5b. Book Tours — Viator (client-side, dynamic)               */}
+          {/*  6b. Book Tours — Viator (client-side, dynamic)               */}
           {/* ============================================================ */}
           {hasViatorProducts(slug) && (
             <ViatorExcursions portSlug={slug} portName={port.name} />
           )}
 
           {/* ============================================================ */}
-          {/*  5c. Affiliate CTAs — Hotels & Boat Rentals                   */}
+          {/*  6c. Affiliate CTAs — Hotels & Boat Rentals                   */}
           {/* ============================================================ */}
           <section className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {/* Booking.com Hotels */}
@@ -678,35 +795,6 @@ export default async function PortDetailPage({ params }: Props) {
                 <AffiliateDisclosure className="mt-2" />
               </div>
             )}
-          </section>
-
-          {/* ============================================================ */}
-          {/*  6. Free Things To Do                                         */}
-          {/* ============================================================ */}
-          <section className="mb-12">
-            <h2 className="mb-6 text-2xl font-bold tracking-tight text-navy">
-              Free Things To Do
-            </h2>
-            <div className="space-y-4">
-              {port.freeActivities.map((activity) => (
-                <div
-                  key={activity.name}
-                  className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-5"
-                >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50 text-green-600">
-                    <Star className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-navy">
-                      {activity.name}
-                    </h3>
-                    <p className="mt-1 text-sm leading-relaxed text-gray-600">
-                      {activity.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </section>
 
           {/* ============================================================ */}

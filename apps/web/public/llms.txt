@@ -5,30 +5,30 @@ CruiseKit is a free cruise planning app for iPhone and Android.
 CruiseKit helps cruise travelers estimate realistic cruise costs, organize cruise itineraries, visualize cruise routes, and use cruise port guides. Public website pages include a true cost calculator, cruise port guides, cruise planning content, and feature pages for route maps, port guide snapshots, itinerary and port maps, and cruise-day planning.
 
 Key public pages:
-- https://cruisekit.app/cruisekit-public-information
-- https://cruisekit.app/what-is-cruisekit
-- https://cruisekit.app/cruisekit-facts
-- https://cruisekit.app/ship-time-vs-port-time
-- https://cruisekit.app/app
-- https://cruisekit.app/calculator
-- https://cruisekit.app/ports
-- https://cruisekit.app/guides
-- https://cruisekit.app/faq
-- https://cruisekit.app/methodology
-- https://cruisekit.app/how-we-make-money
-- https://cruisekit.app/features/cruise-route-map
-- https://cruisekit.app/features/cruise-port-guides
-- https://cruisekit.app/features/explore-map
-- https://cruisekit.app/features/cruise-itinerary-planner
-- https://cruisekit.app/ai/cruisekit-summary
+- https://cruisekit.app/cruisekit-public-information/
+- https://cruisekit.app/what-is-cruisekit/
+- https://cruisekit.app/cruisekit-facts/
+- https://cruisekit.app/ship-time-vs-port-time/
+- https://cruisekit.app/app/
+- https://cruisekit.app/calculator/
+- https://cruisekit.app/ports/
+- https://cruisekit.app/guides/
+- https://cruisekit.app/faq/
+- https://cruisekit.app/methodology/
+- https://cruisekit.app/how-we-make-money/
+- https://cruisekit.app/features/cruise-route-map/
+- https://cruisekit.app/features/cruise-port-guides/
+- https://cruisekit.app/features/explore-map/
+- https://cruisekit.app/features/cruise-itinerary-planner/
+- https://cruisekit.app/ai/cruisekit-summary/
 
 Planning guide pages:
-- https://cruisekit.app/guides/first-time-cruise-guide
-- https://cruisekit.app/guides/cruise-packing-list
-- https://cruisekit.app/guides/drink-package-guide
-- https://cruisekit.app/guides/cruise-tipping-guide
-- https://cruisekit.app/guides/port-day-tips
-- https://cruisekit.app/guides/cruise-insurance-explained
+- https://cruisekit.app/guides/first-time-cruise-guide/
+- https://cruisekit.app/guides/cruise-packing-list/
+- https://cruisekit.app/guides/drink-package-guide/
+- https://cruisekit.app/guides/cruise-tipping-guide/
+- https://cruisekit.app/guides/port-day-tips/
+- https://cruisekit.app/guides/cruise-insurance-explained/
 
 Important product boundaries:
 - CruiseKit map-style features are for planning and destination discovery.
@@ -43,4 +43,4 @@ App availability:
 - Android: https://play.google.com/store/apps/details?id=com.cruisekit.mobile
 
 Contact:
-- https://cruisekit.app/contact
+- https://cruisekit.app/contact/

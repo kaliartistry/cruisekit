@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "cruise planning tool help",
   ],
   alternates: {
-    canonical: "https://cruisekit.app/faq",
+    canonical: "https://cruisekit.app/faq/",
   },
   openGraph: {
     title: "Cruise Cost FAQ: Hidden Fees, Tips, WiFi, Drinks & Budgeting",

@@ -18,13 +18,13 @@ import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 import { StoreButtonRow } from "@/components/shared/store-buttons";
 
-const PAGE_URL = "https://cruisekit.app/ship-time-vs-port-time";
+const PAGE_URL = "https://cruisekit.app/ship-time-vs-port-time/";
 
 export const metadata: Metadata = {
-  title: "Ship Time vs Port Time: What Cruisers Should Know",
+  title: { absolute: "Ship Time vs Port Time: Which Clock Do You Obey?" },
   description:
-    "Understand ship time vs port time on a cruise, why it matters on port days, and how to plan around official onboard instructions.",
-  alternates: { canonical: "/ship-time-vs-port-time" },
+    "Ship time is the clock your all-aboard time uses; port time is the local clock ashore. Here's which one to obey, and how to avoid being left behind.",
+  alternates: { canonical: "/ship-time-vs-port-time/" },
   keywords: [
     "ship time vs port time",
     "what is ship time on a cruise",
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     "port day planning",
   ],
   openGraph: {
-    title: "Ship Time vs Port Time: What Cruisers Should Know",
+    title: "Ship Time vs Port Time: Which Clock Do You Obey?",
     description:
-      "A practical guide to ship time, port time, and how to avoid time-zone confusion on cruise port days.",
-    url: "/ship-time-vs-port-time",
+      "Ship time is the clock your all-aboard time uses; port time is the local clock ashore. Learn which one to obey before returning to the ship.",
+    url: "/ship-time-vs-port-time/",
     images: [
       {
         url: "/assets/app-screenshots/mobile-feature-graphic.png",
@@ -56,13 +56,13 @@ type Guidance = {
 
 const BASICS: Guidance[] = [
   {
-    title: "Ship time",
+    title: "What ship time means",
     description:
       "Ship time is the time the cruise ship uses for onboard schedules, departure warnings, activity times, and return-to-ship instructions.",
     icon: ShipWheel,
   },
   {
-    title: "Port time",
+    title: "What port time means",
     description:
       "Port time is the local time at the destination. It may match ship time, but it can differ when the ship crosses time zones or keeps a consistent onboard clock.",
     icon: MapPinned,
@@ -151,7 +151,7 @@ function JsonLd() {
       {
         "@type": "Article",
         "@id": `${PAGE_URL}#article`,
-        headline: "Ship Time vs Port Time: What Cruisers Should Know",
+        headline: "Ship Time vs Port Time: Which Clock Do You Obey?",
         description:
           "A practical cruise planning guide to ship time, port time, and all aboard time.",
         url: PAGE_URL,
@@ -239,14 +239,16 @@ export default function ShipTimeVsPortTimePage() {
                 />
               </div>
               <h2 className="mt-5 text-3xl font-bold tracking-tight text-navy">
-                The clock that gets you back onboard is the clock the ship tells
-                you to follow.
+                The one-sentence answer
               </h2>
               <div className="mt-5 space-y-4 text-base leading-7 text-gray-700">
                 <p>
-                  Ship time is the onboard time used for cruise schedules and
-                  return-to-ship instructions. Port time is the local time at
-                  the destination. Sometimes they match. Sometimes they do not.
+                  <strong className="text-navy">
+                    Obey the time your ship identifies for all aboard.
+                  </strong>{" "}
+                  That is the only clock that controls when you must be back
+                  onboard. Port time is the local clock ashore; sometimes it
+                  matches the ship&apos;s instruction and sometimes it does not.
                 </p>
                 <p>
                   Before leaving the ship, confirm the official all aboard time
@@ -283,12 +285,14 @@ export default function ShipTimeVsPortTimePage() {
               </div>
               <ShieldAlert className="h-7 w-7 text-amber-600" />
               <h2 className="mt-4 text-xl font-bold text-navy">
-                Official information wins
+                What happens if you miss the ship
               </h2>
               <p className="mt-3 text-sm leading-6 text-gray-700">
-                This guide is planning help, not an official sailing rule. Your
-                cruise line, ship app, daily program, gangway signs, and crew
-                announcements are the source of truth for your specific sailing.
+                Cruise lines state that passengers exploring independently are
+                responsible for returning on time and for the cost of rejoining
+                the ship if they miss it. This guide is planning help; your
+                cruise line, ship app, daily programme, gangway signs, and crew
+                announcements are the source of truth for your sailing.
               </p>
               <div className="mt-5 rounded-xl bg-white p-4">
                 <p className="text-xs font-bold uppercase text-gray-500">
@@ -298,6 +302,25 @@ export default function ShipTimeVsPortTimePage() {
                   Confirm ship time before leaving, set a return alarm, and aim
                   to be back onboard well before all aboard.
                 </p>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs leading-5 text-gray-600">
+                <span>Official guidance checked September 4, 2026:</span>
+                <a
+                  href="https://www.ncl.com/faq/boarding-times"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+                >
+                  NCL shipboard-time guidance
+                </a>
+                <a
+                  href="https://www.royalcaribbean.com/faq/questions/do-i-need-to-book-a-shore-excursion"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-teal-dark underline decoration-teal/30 underline-offset-2 hover:text-teal"
+                >
+                  Royal Caribbean all-aboard guidance
+                </a>
               </div>
             </div>
           </div>
@@ -328,13 +351,20 @@ export default function ShipTimeVsPortTimePage() {
         <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
           <div className="mb-8 max-w-3xl">
             <h2 className="text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-              A port-day clock problem is easy to miss
+              When ship time and port time differ
             </h2>
             <p className="mt-3 text-base leading-7 text-gray-600">
               The risk is not that cruisers ignore the time. It is that there
               can be more than one clock in play. These are the moments where a
               little visual planning and a clear return buffer help.
             </p>
+            <div className="mt-5 rounded-xl border border-teal/25 bg-seafoam/50 p-5 text-sm leading-6 text-gray-700">
+              <strong className="text-navy">Cozumel example:</strong> Cozumel
+              stays on UTC-5 year-round. If a Florida-based ship keeps Eastern
+              Daylight Time (UTC-4), the ship&apos;s clock is one hour ahead of the
+              local clock. Confirm the ship&apos;s actual instruction before using
+              that offset.
+            </div>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {TIME_VISUALS.map((item) => (
@@ -409,8 +439,8 @@ export default function ShipTimeVsPortTimePage() {
         <section className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:py-16">
           <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
             <CalendarDays className="h-7 w-7 text-teal" />
-            <h2 className="mt-4 text-xl font-bold text-navy">
-              Use CruiseKit for the plan, then verify onboard
+              <h2 className="mt-4 text-xl font-bold text-navy">
+                Where MyDay helps with both clocks
             </h2>
             <p className="mt-3 text-sm leading-6 text-gray-600">
               CruiseKit can help organize port-day context and saved plans, but

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "About — The Cruise Planning Toolkit",
   description:
     "CruiseKit is an independent cruise planning toolkit built by a solo developer, with true-cost estimates, MyDay planning, spend tracking, port guides, and MyCrew check-ins.",
+  alternates: { canonical: "/about/" },
   keywords: [
     "about cruisekit",
     "cruise planning tool",

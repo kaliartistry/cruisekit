@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Curated Cruise Sailings — Compare Planning-Ready Options",
   description:
     "Browse curated cruise sailings with itinerary details, source dates, and planning fares that should be confirmed with the cruise line before booking.",
+  alternates: { canonical: "/cruises/" },
 };
 
 export default function CruisesPage() {

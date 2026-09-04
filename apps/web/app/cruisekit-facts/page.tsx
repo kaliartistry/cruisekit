@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: "CruiseKit Facts",
   description:
     "Public facts about CruiseKit: what it is, what it does, where it is available, what pages explain it, and what claims it does not make.",
-  alternates: { canonical: "/cruisekit-facts" },
+  alternates: { canonical: "/cruisekit-facts/" },
   keywords: [
     "cruisekit facts",
     "cruisekit information",

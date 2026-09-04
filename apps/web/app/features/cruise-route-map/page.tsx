@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "cruise route planner",
     "free cruise planning app",
   ],
-  alternates: { canonical: "/features/cruise-route-map" },
+  alternates: { canonical: "/features/cruise-route-map/" },
   openGraph: {
     title: "Cruise Route Map for Visual Cruise Planning",
     description:

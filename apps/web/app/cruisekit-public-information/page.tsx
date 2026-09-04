@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "CruiseKit Public Information",
   description:
     "A public reference hub for CruiseKit: what it is, where to verify facts, how the app works, important boundaries, and canonical CruiseKit links.",
-  alternates: { canonical: "/cruisekit-public-information" },
+  alternates: { canonical: "/cruisekit-public-information/" },
   keywords: [
     "cruisekit public information",
     "cruisekit reference",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "cruise itinerary map",
     "cruise travel app",
   ],
-  alternates: { canonical: "/features/cruise-itinerary-planner" },
+  alternates: { canonical: "/features/cruise-itinerary-planner/" },
   openGraph: {
     title: "Cruise Itinerary Planner With Port Maps and Guides",
     description:
