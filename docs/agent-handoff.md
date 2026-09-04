@@ -2,6 +2,22 @@
 
 Last verified: 2026-09-04
 
+## September 4 execution state
+
+- The calculator-truth, SEO/port, measurement/attribution, and calculator UX
+  candidates described below have been integrated as Releases A–D. PRs #67,
+  #68, #69, and #70 are merged to `main`; all four GitHub Pages deployments
+  succeeded, ending at production commit
+  `3673666356b489f147b56aba4b1f45b52d876eac`.
+- Final production passenger QA passed across 18 desktop/mobile page states:
+  calculator save/restore/share and app attribution, gratuities, payment
+  calendar download, ship-time, five port answers, canonicals, and sitemap.
+  The complete implementation and blocker record is in
+  `docs/implementation/cruisekit-execution-report-2026-09-04.md`.
+- Search Console sitemap submission and authenticated Analytics dashboard
+  readback remain blocked by the locked shared Mac; the live sitemap and GA
+  collection requests were verified directly.
+
 ## Calculator two-price and Wi-Fi UX candidate
 
 - Candidate branch `codex/execution-calculator-ux-20260904` is based on
