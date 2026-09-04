@@ -48,8 +48,11 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "VOOM Surf & Stream",
-          pricePerDay: 22.0,
-          description: "High-speed internet for streaming and browsing (dynamic pricing, ranges $17-$31/day)",
+          pricePerDay: 0,
+          description:
+            "Dynamically priced by sailing. Enter the current per-plan/day price shown in Cruise Planner.",
+          priceEntryRequired: true,
+          verificationStatus: "official",
         },
       ],
       includedFree: false,
@@ -103,6 +106,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
         {
           name: "CHEERS! Beverage Program",
           pricePerDay: PRICE_FACTS.carnivalCheersAdvanceAllIn.amount,
+          onboardPricePerDay: PRICE_FACTS.carnivalCheersOnboardAllIn.amount,
           description:
             "Advance price including the 20% service charge; $89.94/day all-in onboard. Advance cutoff is 11:59 PM ET two days before embarkation.",
           verificationStatus: "official",
@@ -123,11 +127,34 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
     },
     wifiPackages: {
       tiers: [
-        { name: "Social WiFi", pricePerDay: 20.4, description: "Access to social media platforms" },
-        { name: "Value WiFi", pricePerDay: 23.8, description: "Email and basic web browsing" },
-        { name: "Premium WiFi", pricePerDay: 25.5, description: "Full streaming and browsing" },
+        {
+          name: "Social WiFi",
+          pricePerDay: PRICE_FACTS.carnivalWifiSocialAdvance.amount,
+          onboardPricePerDay: PRICE_FACTS.carnivalWifiSocialOnboard.amount,
+          description:
+            "Social and messaging access; one connected device at a time per plan.",
+          verificationStatus: "official",
+        },
+        {
+          name: "Value WiFi",
+          pricePerDay: PRICE_FACTS.carnivalWifiValueAdvance.amount,
+          onboardPricePerDay: PRICE_FACTS.carnivalWifiValueOnboard.amount,
+          description:
+            "Email and web browsing; one connected device at a time per plan.",
+          verificationStatus: "official",
+        },
+        {
+          name: "Premium WiFi",
+          pricePerDay: PRICE_FACTS.carnivalWifiPremiumAdvance.amount,
+          onboardPricePerDay: PRICE_FACTS.carnivalWifiPremiumOnboard.amount,
+          description:
+            "Streaming and video chat where coverage allows; one connected device at a time per plan.",
+          verificationStatus: "official",
+        },
       ],
       includedFree: false,
+      notes:
+        "Pre-cruise prices are lower than onboard cruise-long plans. Pre-purchase closes at 11:59 PM ET the day before embarkation.",
     },
     specialtyDining: {
       restaurants: [
@@ -379,23 +406,35 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "Classic Beverage Package",
-          pricePerDay: 89.99,
-          description: "Drinks valued at $12 or less (+ 20% gratuity)",
+          pricePerDay: 0,
+          description:
+            "Dynamically priced by ship, itinerary, and length. Enter the current all-in quote shown in My Celebrity Cruise.",
+          priceEntryRequired: true,
+          verificationStatus: "official",
         },
         {
           name: "Premium Beverage Package",
-          pricePerDay: 104.99,
-          description: "Drinks valued at $19 or less (+ 20% gratuity)",
+          pricePerDay: 0,
+          description:
+            "Dynamically priced by ship, itinerary, and length. Enter the current all-in quote shown in My Celebrity Cruise.",
+          priceEntryRequired: true,
+          verificationStatus: "official",
         },
         {
           name: "Zero Proof Package",
-          pricePerDay: 45.0,
-          description: "Unlimited non-alcoholic specialty beverages (+ 20% gratuity)",
+          pricePerDay: 0,
+          description:
+            "Dynamically priced by ship, itinerary, and length. Enter the current all-in quote shown in My Celebrity Cruise.",
+          priceEntryRequired: true,
+          verificationStatus: "official",
         },
         {
           name: "Classic to Premium Upgrade",
-          pricePerDay: 20.0,
-          description: "Upgrade from Classic to Premium tier (+ 20% gratuity)",
+          pricePerDay: 0,
+          description:
+            "Dynamic upgrade price. Enter the current all-in quote shown for your sailing.",
+          priceEntryRequired: true,
+          verificationStatus: "official",
         },
       ],
       includedFree: false,
@@ -404,8 +443,22 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
     },
     wifiPackages: {
       tiers: [
-        { name: "Basic WiFi", pricePerDay: 20.0, description: "Email and basic web browsing" },
-        { name: "Premium WiFi", pricePerDay: 35.0, description: "High-speed streaming and browsing" },
+        {
+          name: "Basic WiFi",
+          pricePerDay: 0,
+          description:
+            "Dynamic sailing price. Enter the current per-plan/day quote shown for your booking.",
+          priceEntryRequired: true,
+          verificationStatus: "official",
+        },
+        {
+          name: "Premium WiFi",
+          pricePerDay: 0,
+          description:
+            "Dynamic sailing price. Enter the current per-plan/day quote shown for your booking.",
+          priceEntryRequired: true,
+          verificationStatus: "official",
+        },
       ],
       includedFree: false,
     },

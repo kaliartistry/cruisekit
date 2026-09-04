@@ -3,7 +3,10 @@ import type { CruiseLineId, CabinType, CruiseRegion } from "./cruise";
 /** Pricing tiers for packages */
 export interface PackageTier {
   name: string;
+  /** Default/pre-purchase price used when a stable public amount exists. */
   pricePerDay: number;
+  /** Official onboard price when the line publishes both purchase timings. */
+  onboardPricePerDay?: number;
   description: string;
   /** A zero price means the traveler must enter the live price they were quoted. */
   priceEntryRequired?: boolean;
@@ -79,12 +82,20 @@ export interface CalculatorInputs {
   baseFare: number;
   /** Optional live per-person/day quote for dynamically priced packages. */
   drinkPackagePricePerPersonPerDay?: number;
+  /** Purchase timing used when a package publishes a separate onboard price. */
+  drinkPackagePurchaseTiming?: PurchaseTiming;
   /** Optional cohort-specific daily gratuity override. */
   gratuityRateOverride?: number;
   /** Lets travelers exclude guests who are exempt under their booking terms. */
   gratuityGuestCountOverride?: number;
   drinkPackage: string | null;
   wifiPackage: string | null;
+  /** Optional live per-plan/day Wi-Fi quote for dynamically priced packages. */
+  wifiPackagePricePerDay?: number;
+  /** Number of Wi-Fi plans or simultaneous-user packages to budget. */
+  wifiPackageQuantity?: number;
+  /** Purchase timing used when a Wi-Fi plan publishes a separate onboard price. */
+  wifiPackagePurchaseTiming?: PurchaseTiming;
   specialtyDiningMeals: number;
   excursionBudgetPerPort: number;
   numberOfPorts: number;
@@ -93,6 +104,8 @@ export interface CalculatorInputs {
   parkingDays: number;
   parkingCostPerDay: number;
 }
+
+export type PurchaseTiming = "pre-purchase" | "onboard";
 
 /** Cost breakdown result */
 export interface CostBreakdown {

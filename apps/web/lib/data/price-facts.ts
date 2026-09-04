@@ -1,13 +1,25 @@
 export type PriceFactStatus = "official" | "corroborated" | "estimate";
+export type PriceFactContext =
+  | "pre-purchase"
+  | "onboard"
+  | "included"
+  | "booking-cohort"
+  | "region-specific";
 
 export type PriceFact = {
   id: string;
   cruiseLineId: string;
-  category: "gratuity" | "drink-package" | "bundle" | "service-charge";
+  category:
+    | "gratuity"
+    | "drink-package"
+    | "wifi"
+    | "bundle"
+    | "service-charge";
   label: string;
   amount: number;
   currency: "USD" | "EUR";
   unit: "person-day" | "adult-day" | "package-day" | "percent";
+  priceContext?: PriceFactContext;
   status: PriceFactStatus;
   sourceTitle: string;
   sourceUrl: string;
@@ -96,6 +108,7 @@ export const PRICE_FACTS = {
     amount: 83.94,
     currency: "USD",
     unit: "adult-day",
+    priceContext: "pre-purchase",
     status: "official",
     sourceTitle: "Carnival CHEERS beverage program",
     sourceUrl: "https://www.carnival.com/onboard/cheers",
@@ -104,6 +117,122 @@ export const PRICE_FACTS = {
     conditions:
       "Purchase by 11:59 PM ET two days before embarkation; all eligible adults in the stateroom must participate.",
     calculation: "$69.95 base price x 1.20 service charge = $83.94.",
+  },
+  carnivalCheersOnboardAllIn: {
+    id: "carnival.cheers.onboard.all-in.current",
+    cruiseLineId: "carnival",
+    category: "drink-package",
+    label: "CHEERS onboard price including service charge",
+    amount: 89.94,
+    currency: "USD",
+    unit: "adult-day",
+    priceContext: "onboard",
+    status: "official",
+    sourceTitle: "Carnival CHEERS beverage program Q&A",
+    sourceUrl: "https://help.carnival.com/app/answers/detail/a_id/3525",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions:
+      "Purchased after boarding; all eligible adults in the stateroom must participate.",
+  },
+  carnivalWifiSocialAdvance: {
+    id: "carnival.wifi.social.advance.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Social Wi-Fi pre-cruise price",
+    amount: 20.4,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions:
+      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+  },
+  carnivalWifiSocialOnboard: {
+    id: "carnival.wifi.social.onboard.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Social Wi-Fi onboard price",
+    amount: 22,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "onboard",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions: "Cruise-long plan, one connected device at a time.",
+  },
+  carnivalWifiValueAdvance: {
+    id: "carnival.wifi.value.advance.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Value Wi-Fi pre-cruise price",
+    amount: 23.8,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions:
+      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+  },
+  carnivalWifiValueOnboard: {
+    id: "carnival.wifi.value.onboard.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Value Wi-Fi onboard price",
+    amount: 26,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "onboard",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions: "Cruise-long plan, one connected device at a time.",
+  },
+  carnivalWifiPremiumAdvance: {
+    id: "carnival.wifi.premium.advance.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Premium Wi-Fi pre-cruise price",
+    amount: 25.5,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions:
+      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+  },
+  carnivalWifiPremiumOnboard: {
+    id: "carnival.wifi.premium.onboard.current",
+    cruiseLineId: "carnival",
+    category: "wifi",
+    label: "Premium Wi-Fi onboard price",
+    amount: 28,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "onboard",
+    status: "official",
+    sourceTitle: "Carnival internet plans",
+    sourceUrl: "https://www.carnival.com/internet-plans",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    conditions: "Cruise-long plan, one connected device at a time.",
   },
   nclFreeAtSeaAdult: {
     id: "norwegian.free-at-sea.gratuity.current.adult",
@@ -381,6 +510,7 @@ export const PRICE_FACTS = {
     amount: 20,
     currency: "USD",
     unit: "person-day",
+    priceContext: "pre-purchase",
     status: "official",
     sourceTitle: "Virgin Voyages VoyageFair Choices FAQ",
     sourceUrl:
@@ -399,6 +529,7 @@ export const PRICE_FACTS = {
     amount: 22,
     currency: "USD",
     unit: "person-day",
+    priceContext: "onboard",
     status: "official",
     sourceTitle: "Virgin Voyages VoyageFair Choices FAQ",
     sourceUrl:
@@ -417,6 +548,7 @@ export const PRICE_FACTS = {
     amount: 0,
     currency: "USD",
     unit: "person-day",
+    priceContext: "included",
     status: "official",
     sourceTitle: "Virgin Voyages VoyageFair Choices announcement",
     sourceUrl:
@@ -427,6 +559,76 @@ export const PRICE_FACTS = {
       "Bookings made before October 7, 2025 under the prior fare structure; confirm the original booking confirmation.",
   },
 } as const satisfies Record<string, PriceFact>;
+
+export type PurchasePricePair = Readonly<{
+  prePurchase: PriceFact;
+  onboard: PriceFact;
+}>;
+
+export const PURCHASE_PRICE_PAIRS = {
+  carnivalCheers: {
+    prePurchase: PRICE_FACTS.carnivalCheersAdvanceAllIn,
+    onboard: PRICE_FACTS.carnivalCheersOnboardAllIn,
+  },
+  carnivalWifiSocial: {
+    prePurchase: PRICE_FACTS.carnivalWifiSocialAdvance,
+    onboard: PRICE_FACTS.carnivalWifiSocialOnboard,
+  },
+  carnivalWifiValue: {
+    prePurchase: PRICE_FACTS.carnivalWifiValueAdvance,
+    onboard: PRICE_FACTS.carnivalWifiValueOnboard,
+  },
+  carnivalWifiPremium: {
+    prePurchase: PRICE_FACTS.carnivalWifiPremiumAdvance,
+    onboard: PRICE_FACTS.carnivalWifiPremiumOnboard,
+  },
+  virginGratuity: {
+    prePurchase: PRICE_FACTS.virginCurrentPrepaid,
+    onboard: PRICE_FACTS.virginCurrentOnboard,
+  },
+} as const satisfies Record<string, PurchasePricePair>;
+
+export function purchasePricePairSavings(
+  pair: PurchasePricePair,
+  quantity: number,
+  nights: number,
+) {
+  return (
+    (pair.onboard.amount - pair.prePurchase.amount) *
+    Math.max(0, quantity) *
+    Math.max(0, nights)
+  );
+}
+
+export function getDrinkPackagePurchasePricePair(
+  cruiseLineId: string,
+  tierName: string,
+): PurchasePricePair | undefined {
+  if (
+    cruiseLineId === "carnival" &&
+    tierName === "CHEERS! Beverage Program"
+  ) {
+    return PURCHASE_PRICE_PAIRS.carnivalCheers;
+  }
+  return undefined;
+}
+
+export function getWifiPurchasePricePair(
+  cruiseLineId: string,
+  tierName: string,
+): PurchasePricePair | undefined {
+  if (cruiseLineId !== "carnival") return undefined;
+  if (tierName === "Social WiFi") {
+    return PURCHASE_PRICE_PAIRS.carnivalWifiSocial;
+  }
+  if (tierName === "Value WiFi") {
+    return PURCHASE_PRICE_PAIRS.carnivalWifiValue;
+  }
+  if (tierName === "Premium WiFi") {
+    return PURCHASE_PRICE_PAIRS.carnivalWifiPremium;
+  }
+  return undefined;
+}
 
 export const MATERIAL_PRICE_FACTS: PriceFact[] = Object.values(PRICE_FACTS);
 

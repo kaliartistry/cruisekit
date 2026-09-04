@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import PageHeader from "@/components/layout/page-header";
 import CalculatorSwitcher from "@/components/calculator/calculator-switcher";
+import { WifiCostGuide } from "@/components/calculator/wifi-cost-guide";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CalculatorWithParams from "./calculator-with-params";
@@ -76,6 +77,8 @@ export default function CalculatorPage() {
         <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <CalculatorWithParams />
         </section>
+
+        <WifiCostGuide />
 
         {/* Server-rendered SEO content */}
         <section className="border-t border-gray-200 bg-gray-50/60">

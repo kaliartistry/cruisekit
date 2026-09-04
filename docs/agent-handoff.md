@@ -1,6 +1,34 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-08-26
+Last verified: 2026-09-04
+
+## Calculator two-price and Wi-Fi UX candidate
+
+- Candidate branch `codex/execution-calculator-ux-20260904` is based on
+  production `main` at `3871fa9bdeced2cf6aff96a3297e738d6f2274cc`.
+  It has not been pushed, merged, or deployed.
+- The existing Total Cruise Cost Calculator now treats purchase timing as a
+  calculation input. Carnival CHEERS renders the official $83.94/day
+  pre-cruise and $89.94/day onboard prices together, applies the selected one
+  to the result, and shows the full party/voyage savings. Virgin renders the
+  $20 prepaid and $22 onboard gratuities together while preserving the legacy
+  included cohort.
+- Carnival Social, Value, and Premium Wi-Fi now use official paired prices
+  from the central fact register. The calculator shows daily and voyage totals,
+  asks how many plans the party actually needs, and avoids silently charging
+  every guest. `/calculator/#wifi` is the one Wi-Fi cost hub; every line page
+  links back to it and no new Wi-Fi route exists.
+- Royal Caribbean and Celebrity drink and Wi-Fi package prices remain dynamic
+  traveler inputs. Celebrity's former fixed planning placeholders no longer
+  render as current public prices. Fixed Wi-Fi assumptions without an official
+  pair are explicitly labeled as planning inputs, and the passenger copy notes
+  that a port-heavy itinerary can reduce the value of ship internet.
+- The candidate does not change calculator save, share, app-offer, attribution,
+  or analytics components. Local verification: 20 test files / 82 tests; full
+  web ESLint; Next.js static export of 191 pages; Playwright at 1440x1000 and
+  390x844 covering Carnival, Virgin, Celebrity, and the Wi-Fi anchor with no
+  console warnings/errors or horizontal overflow. Browser plugin was not
+  available, so the repository Playwright runtime was used.
 
 ## Technical SEO and five-port arrival-answer candidate
 

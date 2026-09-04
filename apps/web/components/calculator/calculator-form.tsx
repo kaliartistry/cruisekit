@@ -17,10 +17,22 @@ import type {
   CabinType,
   CalculatorInputs,
   CostBreakdown as CostBreakdownType,
+  PurchaseTiming,
 } from "@cruise/shared/types";
-import { calculateCosts, partyFareFromPerPerson } from "@cruise/shared/utils";
+import {
+  calculateCosts,
+  partyFareFromPerPerson,
+  resolvePackageDailyPrice,
+} from "@cruise/shared/utils";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
-import { PRICE_FACTS } from "@/lib/data/price-facts";
+import {
+  getDrinkPackagePurchasePricePair,
+  getWifiPurchasePricePair,
+  PRICE_FACTS,
+  PURCHASE_PRICE_PAIRS,
+  purchasePricePairSavings,
+  type PurchasePricePair,
+} from "@/lib/data/price-facts";
 import { getFareEstimate } from "@/lib/data/fare-estimates";
 import { MONTH_LABELS, getSeasonalMultiplier } from "@/lib/data/seasonal-pricing";
 import { Button } from "@/components/ui/button";
@@ -78,6 +90,114 @@ const STEP_LABELS = [
   { num: 2, label: "Add-Ons", icon: Sparkles },
   { num: 3, label: "Results", icon: BarChart3 },
 ];
+
+function formatMoney(value: number) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+  }).format(value);
+}
+
+function formatFactDate(value: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${value}T00:00:00Z`));
+}
+
+function PurchaseTimingChoice({
+  pair,
+  selectedTiming,
+  onTimingChange,
+  quantity,
+  nights,
+  quantityLabel,
+  unitLabel,
+}: {
+  pair: PurchasePricePair;
+  selectedTiming: PurchaseTiming | null;
+  onTimingChange: (timing: PurchaseTiming) => void;
+  quantity: number;
+  nights: number;
+  quantityLabel: string;
+  unitLabel: string;
+}) {
+  const choices: Array<{
+    timing: PurchaseTiming;
+    label: string;
+    fact: PurchasePricePair["prePurchase"];
+  }> = [
+    {
+      timing: "pre-purchase",
+      label: "Before sailing",
+      fact: pair.prePurchase,
+    },
+    { timing: "onboard", label: "Onboard", fact: pair.onboard },
+  ];
+  const savings = purchasePricePairSavings(pair, quantity, nights);
+
+  return (
+    <div className="mt-3 rounded-xl border border-teal/20 bg-teal/5 p-4">
+      <p className="text-xs font-bold uppercase tracking-wider text-teal-dark">
+        Compare both purchase times
+      </p>
+      <div
+        className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2"
+        role="group"
+        aria-label="Choose purchase timing"
+      >
+        {choices.map(({ timing, label, fact }) => {
+          const isSelected = selectedTiming === timing;
+          return (
+            <button
+              key={timing}
+              type="button"
+              aria-pressed={isSelected}
+              onClick={() => onTimingChange(timing)}
+              className={cn(
+                "rounded-lg border p-3 text-left transition-colors",
+                isSelected
+                  ? "border-teal bg-white ring-2 ring-teal/15"
+                  : "border-gray-200 bg-white hover:border-teal/50",
+              )}
+            >
+              <span className="block text-xs font-semibold text-gray-500">
+                {label}
+              </span>
+              <span className="mt-1 block font-price text-lg font-bold text-navy">
+                {formatMoney(fact.amount)}
+              </span>
+              <span className="block text-[11px] text-gray-500">
+                {unitLabel}
+              </span>
+              <span className="mt-1 block font-price text-xs font-semibold text-teal-dark">
+                {formatMoney(fact.amount * quantity * nights)} voyage total
+              </span>
+            </button>
+          );
+        })}
+      </div>
+      <p className="mt-3 text-sm font-semibold leading-6 text-navy" role="status">
+        Buying before sailing saves {formatMoney(savings)} for {quantityLabel} over {nights} {nights === 1 ? "night" : "nights"}.
+      </p>
+      <p className="mt-2 text-[11px] leading-5 text-gray-500">
+        Official source checked {formatFactDate(pair.onboard.retrievedAt)}: {" "}
+        <a
+          href={pair.onboard.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-teal-dark underline decoration-teal/30 underline-offset-2"
+        >
+          {pair.onboard.sourceTitle}
+        </a>
+        .
+      </p>
+    </div>
+  );
+}
 
 /* ------------------------------------------------------------------ */
 /*  NumberStepper                                                      */
@@ -258,12 +378,18 @@ export default function CalculatorForm({
   const [drinkPackageOn, setDrinkPackageOn] = useState(false);
   const [drinkTier, setDrinkTier] = useState<string>("");
   const [customDrinkPrice, setCustomDrinkPrice] = useState("");
+  const [drinkPurchaseTiming, setDrinkPurchaseTiming] =
+    useState<PurchaseTiming>("pre-purchase");
   const [virginGratuityCohort, setVirginGratuityCohort] = useState<
     "current-prepaid" | "current-onboard" | "legacy-included"
   >("current-prepaid");
   const [gratuityExemptGuests, setGratuityExemptGuests] = useState(0);
   const [wifiOn, setWifiOn] = useState(false);
   const [wifiTier, setWifiTier] = useState<string>("");
+  const [customWifiPrice, setCustomWifiPrice] = useState("");
+  const [wifiPlanCount, setWifiPlanCount] = useState(1);
+  const [wifiPurchaseTiming, setWifiPurchaseTiming] =
+    useState<PurchaseTiming>("pre-purchase");
   const [specialtyMeals, setSpecialtyMeals] = useState(0);
   const [excursionBudget, setExcursionBudget] = useState(0);
   const [numPorts, setNumPorts] = useState(Math.max(1, (defaultDuration ?? 7) - 2));
@@ -329,6 +455,18 @@ export default function CalculatorForm({
   const secondaryLineId = selectedLines[1] ?? null;
   const costs = primaryLineId ? CRUISE_LINE_COSTS[primaryLineId] : null;
   const comparisonCosts = secondaryLineId ? CRUISE_LINE_COSTS[secondaryLineId] : null;
+  const selectedDrinkTier = costs?.drinkPackages.tiers.find(
+    (tier) => tier.name === drinkTier,
+  );
+  const selectedWifiTier = costs?.wifiPackages.tiers.find(
+    (tier) => tier.name === wifiTier,
+  );
+  const drinkPricePair = primaryLineId
+    ? getDrinkPackagePurchasePricePair(primaryLineId, drinkTier)
+    : undefined;
+  const wifiPricePair = primaryLineId
+    ? getWifiPurchasePricePair(primaryLineId, wifiTier)
+    : undefined;
 
   /* -- Fare estimate for discovery mode ------------------------------- */
   const fareEstimate = useMemo(() => {
@@ -361,8 +499,12 @@ export default function CalculatorForm({
       setDrinkPackageOn(false);
       setDrinkTier("");
       setCustomDrinkPrice("");
+      setDrinkPurchaseTiming("pre-purchase");
       setWifiOn(false);
       setWifiTier("");
+      setCustomWifiPrice("");
+      setWifiPlanCount(1);
+      setWifiPurchaseTiming("pre-purchase");
     },
     []
   );
@@ -390,20 +532,38 @@ export default function CalculatorForm({
 
   /* -- Price impact helpers ---------------------------------------- */
   const drinkImpact = useMemo(() => {
-    if (!drinkPackageOn || !drinkTier || !costs) return 0;
-    const tier = costs.drinkPackages.tiers.find((t) => t.name === drinkTier);
-    if (!tier) return 0;
-    const dailyPrice = tier.priceEntryRequired
-      ? Math.max(0, parseFloat(customDrinkPrice) || 0)
-      : tier.pricePerDay;
+    if (!drinkPackageOn || !selectedDrinkTier) return 0;
+    const dailyPrice = resolvePackageDailyPrice(
+      selectedDrinkTier,
+      drinkPurchaseTiming,
+      parseFloat(customDrinkPrice) || 0,
+    );
     return dailyPrice * adults * duration;
-  }, [drinkPackageOn, drinkTier, costs, customDrinkPrice, adults, duration]);
+  }, [
+    drinkPackageOn,
+    selectedDrinkTier,
+    drinkPurchaseTiming,
+    customDrinkPrice,
+    adults,
+    duration,
+  ]);
 
   const wifiImpact = useMemo(() => {
-    if (!wifiOn || !wifiTier || !costs) return 0;
-    const tier = costs.wifiPackages.tiers.find((t) => t.name === wifiTier);
-    return tier ? tier.pricePerDay * (adults + children) * duration : 0;
-  }, [wifiOn, wifiTier, costs, adults, children, duration]);
+    if (!wifiOn || !selectedWifiTier) return 0;
+    const dailyPrice = resolvePackageDailyPrice(
+      selectedWifiTier,
+      wifiPurchaseTiming,
+      parseFloat(customWifiPrice) || 0,
+    );
+    return dailyPrice * wifiPlanCount * duration;
+  }, [
+    wifiOn,
+    selectedWifiTier,
+    wifiPurchaseTiming,
+    customWifiPrice,
+    wifiPlanCount,
+    duration,
+  ]);
 
   const diningImpact = useMemo(() => {
     if (!costs) return 0;
@@ -492,6 +652,7 @@ export default function CalculatorForm({
       region: "caribbean",
       baseFare: effectiveBaseFare,
       drinkPackagePricePerPersonPerDay: parseFloat(customDrinkPrice) || 0,
+      drinkPackagePurchaseTiming: drinkPurchaseTiming,
       gratuityRateOverride:
         primaryLineId === "virgin-voyages"
           ? virginGratuityCohort === "legacy-included"
@@ -506,6 +667,9 @@ export default function CalculatorForm({
       ),
       drinkPackage: drinkPackageOn ? drinkTier || null : null,
       wifiPackage: wifiOn ? wifiTier || null : null,
+      wifiPackagePricePerDay: parseFloat(customWifiPrice) || 0,
+      wifiPackageQuantity: wifiPlanCount,
+      wifiPackagePurchaseTiming: wifiPurchaseTiming,
       specialtyDiningMeals: specialtyMeals,
       excursionBudgetPerPort: excursionBudget,
       numberOfPorts: numPorts,
@@ -523,11 +687,15 @@ export default function CalculatorForm({
     cabinType,
     effectiveBaseFare,
     customDrinkPrice,
+    drinkPurchaseTiming,
     virginGratuityCohort,
     drinkPackageOn,
     drinkTier,
     wifiOn,
     wifiTier,
+    customWifiPrice,
+    wifiPlanCount,
+    wifiPurchaseTiming,
     specialtyMeals,
     excursionBudget,
     numPorts,
@@ -981,6 +1149,32 @@ export default function CalculatorForm({
                           </SelectItem>
                         </SelectContent>
                       </Select>
+                      <PurchaseTimingChoice
+                        pair={PURCHASE_PRICE_PAIRS.virginGratuity}
+                        selectedTiming={
+                          virginGratuityCohort === "legacy-included"
+                            ? null
+                            : virginGratuityCohort === "current-onboard"
+                              ? "onboard"
+                              : "pre-purchase"
+                        }
+                        onTimingChange={(timing) =>
+                          setVirginGratuityCohort(
+                            timing === "onboard"
+                              ? "current-onboard"
+                              : "current-prepaid",
+                          )
+                        }
+                        quantity={adults + children}
+                        nights={duration}
+                        quantityLabel={`${adults + children} ${adults + children === 1 ? "sailor" : "sailors"}`}
+                        unitLabel="per sailor, per night"
+                      />
+                      {virginGratuityCohort === "legacy-included" && (
+                        <p className="mt-2 text-xs leading-5 text-gray-500">
+                          Your legacy selection remains $0. The two-price comparison above applies only to bookings made on or after October 7, 2025.
+                        </p>
+                      )}
                     </CardContent>
                   </Card>
                 )}
@@ -1045,15 +1239,15 @@ export default function CalculatorForm({
                                 <SelectItem key={t.name} value={t.name}>
                                   {t.name} &mdash;{" "}
                                   <span className="font-price">
-                                    ${t.pricePerDay.toFixed(0)}/day
+                                    {t.priceEntryRequired
+                                      ? "enter current quote"
+                                      : `${formatMoney(t.pricePerDay)}/day${t.onboardPricePerDay !== undefined ? " before sailing" : ""}`}
                                   </span>
                                 </SelectItem>
                               ))}
                             </SelectContent>
                           </Select>
-                          {costs.drinkPackages.tiers.find(
-                            (tier) => tier.name === drinkTier,
-                          )?.priceEntryRequired && (
+                          {selectedDrinkTier?.priceEntryRequired && (
                             <div className="mt-3">
                               <label
                                 htmlFor="live-drink-package-price"
@@ -1080,13 +1274,24 @@ export default function CalculatorForm({
                                 />
                               </div>
                               <p className="mt-1 text-[11px] text-gray-500">
-                                Royal Caribbean prices vary by sailing, ship, and sale; CruiseKit will not invent a fixed rate.
+                                {primaryLineId === "celebrity"
+                                  ? "Celebrity prices vary by ship, itinerary, and sailing length; CruiseKit will not invent a fixed rate."
+                                  : "Royal Caribbean prices vary by sailing, ship, and sale; CruiseKit will not invent a fixed rate."}
                               </p>
                             </div>
                           )}
-                          {costs.drinkPackages.tiers.find(
-                            (tier) => tier.name === drinkTier,
-                          )?.includesGratuities && (
+                          {drinkPricePair && (
+                            <PurchaseTimingChoice
+                              pair={drinkPricePair}
+                              selectedTiming={drinkPurchaseTiming}
+                              onTimingChange={setDrinkPurchaseTiming}
+                              quantity={adults}
+                              nights={duration}
+                              quantityLabel={`${adults} ${adults === 1 ? "adult" : "adults"}`}
+                              unitLabel="per adult, per day"
+                            />
+                          )}
+                          {selectedDrinkTier?.includesGratuities && (
                             <p className="mt-2 rounded-md bg-teal/5 px-3 py-2 text-xs leading-relaxed text-teal-dark">
                               This is a full bundle. Crew appreciation and Wi-Fi are already included and will not be added twice.
                             </p>
@@ -1104,17 +1309,17 @@ export default function CalculatorForm({
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="text-sm font-semibold text-navy flex items-center gap-1">
-                            WiFi
-                            <InfoTip text="Internet access at sea. Ranges from basic social media to full streaming." />
+                            Cruise WiFi cost
+                            <InfoTip text="Internet access at sea. Choose the plan and number of plans you actually need; one plan may allow only one connected device at a time." />
                           </p>
                           {wifiOn && wifiImpact > 0 && (
                             <p className="font-price text-xs font-medium text-teal">
-                              +${Math.round(wifiImpact).toLocaleString()}
+                              +{formatMoney(wifiImpact)} for this voyage
                             </p>
                           )}
                           {costs.wifiPackages.includedFree && (
-                            <p className="text-xs text-gray-400">
-                              Basic WiFi may be included free
+                            <p className="text-xs text-gray-500">
+                              Basic WiFi is included; add only the upgrade you expect to buy.
                             </p>
                           )}
                         </div>
@@ -1134,12 +1339,93 @@ export default function CalculatorForm({
                                 <SelectItem key={t.name} value={t.name}>
                                   {t.name} &mdash;{" "}
                                   <span className="font-price">
-                                    ${t.pricePerDay.toFixed(0)}/day
+                                    {t.priceEntryRequired
+                                      ? "enter current quote"
+                                      : t.pricePerDay === 0
+                                        ? "included"
+                                        : `${formatMoney(t.pricePerDay)}/day${t.onboardPricePerDay !== undefined ? " before sailing" : ""}`}
                                   </span>
                                 </SelectItem>
                               ))}
                             </SelectContent>
                           </Select>
+                          {selectedWifiTier && (
+                            <div className="mt-3 rounded-lg border border-gray-200 bg-gray-50 p-3">
+                              <p className="text-sm font-semibold text-navy">
+                                {selectedWifiTier.name}
+                              </p>
+                              <p className="mt-1 text-xs leading-5 text-gray-600">
+                                {selectedWifiTier.description}
+                              </p>
+                              {!selectedWifiTier.priceEntryRequired && (
+                                <p className="mt-2 font-price text-xs font-semibold text-teal-dark">
+                                  {selectedWifiTier.pricePerDay === 0
+                                    ? "Included in the selected fare or bundle"
+                                    : `${formatMoney(resolvePackageDailyPrice(selectedWifiTier, wifiPurchaseTiming))} per plan/day · ${formatMoney(wifiImpact)} for ${wifiPlanCount} ${wifiPlanCount === 1 ? "plan" : "plans"} across ${duration} ${duration === 1 ? "night" : "nights"}`}
+                                </p>
+                              )}
+                            </div>
+                          )}
+                          {selectedWifiTier?.priceEntryRequired && (
+                            <div className="mt-3">
+                              <label
+                                htmlFor="live-wifi-package-price"
+                                className="text-xs font-semibold text-navy"
+                              >
+                                Your current quote, per plan per day
+                              </label>
+                              <div className="relative mt-1 max-w-xs">
+                                <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">
+                                  $
+                                </span>
+                                <input
+                                  id="live-wifi-package-price"
+                                  type="number"
+                                  inputMode="decimal"
+                                  min="0"
+                                  step="0.01"
+                                  value={customWifiPrice}
+                                  onChange={(event) =>
+                                    setCustomWifiPrice(event.target.value)
+                                  }
+                                  placeholder="Price shown for your sailing"
+                                  className="flex h-10 w-full rounded-lg border border-gray-200 bg-white py-2 pl-7 pr-3 text-sm text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+                                />
+                              </div>
+                              <p className="mt-1 text-[11px] text-gray-500">
+                                This line does not publish one fixed public price for every sailing, so CruiseKit uses your quote.
+                              </p>
+                            </div>
+                          )}
+                          <div className="mt-3">
+                            <p className="mb-2 text-xs font-semibold text-navy">
+                              Plans to budget
+                            </p>
+                            <NumberStepper
+                              value={wifiPlanCount}
+                              onChange={setWifiPlanCount}
+                              min={1}
+                              max={8}
+                              label="Plans"
+                            />
+                            <p className="mt-2 text-[11px] leading-5 text-gray-500">
+                              Start with one plan if your group can take turns connecting. Increase this only when multiple people need separate access.
+                            </p>
+                          </div>
+                          {wifiPricePair && (
+                            <PurchaseTimingChoice
+                              pair={wifiPricePair}
+                              selectedTiming={wifiPurchaseTiming}
+                              onTimingChange={setWifiPurchaseTiming}
+                              quantity={wifiPlanCount}
+                              nights={duration}
+                              quantityLabel={`${wifiPlanCount} Wi-Fi ${wifiPlanCount === 1 ? "plan" : "plans"}`}
+                              unitLabel="per plan, per day"
+                            />
+                          )}
+                          <p className="mt-3 rounded-md bg-blue-50 px-3 py-2 text-xs leading-5 text-blue-900">
+                            On a port-heavy itinerary, cellular service or shore Wi-Fi may cover more of your trip. Check whether the cruise-long plan rule still makes buying onboard internet worthwhile.
+                          </p>
                         </div>
                       )}
                     </CardContent>
