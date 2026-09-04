@@ -10,11 +10,16 @@ when they differed from the research snapshot.
 
 - All website P0 work and the ordered website calculator/planning follow-up are
   merged to `main`, deployed, and live at `https://cruisekit.app`.
+- The public data feed was rebuilt from the current source and now publishes
+  422 current/future sailings with zero returned rows and no health warnings.
 - Android 1.0.21 code 48 is a completed 100% Production release. The Play
   listing now uses the CruiseKit name and the corrected metadata.
-- iOS 1.0.21 metadata and screenshot correction are complete in App Store
-  Connect, but the binary cannot yet be signed or submitted. The exact blocker
-  is the new countdown widget's App Group and distribution provisioning.
+- iOS 1.0.21 build 48 is signed, uploaded, processed as VALID, attached, and
+  submitted to App Review. Both version and review submission read back
+  `WAITING_FOR_REVIEW`; release type remains MANUAL.
+- Search Console confirms the sitemap submission, GA4 collection and the live
+  dashboard were read back, and current Play/App Store acquisition and
+  stability panels were inspected without changing advertising state.
 - The final passenger QA passed on the production website and on a fresh
   Android 36 install. Android QA found one save-flow defect; it was fixed,
   regression-tested, merged, rebuilt as code 48, and published before this
@@ -30,6 +35,7 @@ when they differed from the research snapshot.
 | B | Sitemap/canonical repair, ship-time answer page, five-port arrival pilot | [PR 68](https://github.com/kaliartistry/cruisekit/pull/68) / `3871fa9bdeced2cf6aff96a3297e738d6f2274cc` | [Pages run 33908487710](https://github.com/kaliartistry/cruisekit/actions/runs/33908487710), success | `rollback/web-before-release-b-20260904` |
 | C | Consent-aware measurement, save/share/app offers, QR, Apple tokens, Play referrer | [PR 69](https://github.com/kaliartistry/cruisekit/pull/69) / `866c450e9c77b5787e4bcb47f77615f4ef3a5121` | [Pages run 33909046692](https://github.com/kaliartistry/cruisekit/actions/runs/33909046692), success | `rollback/web-before-release-c-20260904` |
 | D | Calculator UX, gratuity relocation, Wi-Fi/purchase-timing comparison, payment deadline and `.ics` calendar | [PR 70](https://github.com/kaliartistry/cruisekit/pull/70) / `3673666356b489f147b56aba4b1f45b52d876eac` | [Pages run 33910820754](https://github.com/kaliartistry/cruisekit/actions/runs/33910820754), success | `rollback/web-before-release-d-20260904` |
+| Data refresh | Current production sailing/deal bundles | [PR 72](https://github.com/kaliartistry/cruisekit/pull/72) / `183b567bcbfb00e4ed89a2f13c162c91745f449f` | [Pages run 33918254163](https://github.com/kaliartistry/cruisekit/actions/runs/33918254163), success | Revert PR 72 merge; code rollbacks above remain intact |
 
 The dirty historical checkout at `/Users/kaliartistry-mac/Cruise Travel Agent`
 was preserved. Integration, testing, and release work used isolated clean
@@ -82,7 +88,19 @@ worktrees.
   port, MyCrew/deep-link, and share paths. Later-day activation is emitted once
   only when a saved cruise is used on a later local date.
 - Production network inspection confirmed the deployed GA collection requests.
-  Search Console and Analytics dashboard readback remain listed under blockers.
+  With consent granted, the completed calculator journey emitted
+  `session_entry`, `calculator_started`, `calculator_completed`,
+  `calculator_result_generated`, `qr_offer_displayed`,
+  `app_handoff_viewed`, and `app_offer_viewed`. No request contained a fare,
+  full URL, or PII.
+- The authenticated GA4 property is CruiseKit property `541659242`, measurement
+  ID `G-X6NEBF4X3N`. Its September 4 dashboard read-back showed 27 active users,
+  51 views, and 217 events in the preceding seven days; the current event table
+  included 29 `app_handoff_viewed`, 16 `calculator_started`, and 13
+  `result_viewed` events. GA4 remains a consenting-user floor.
+- Search Console property `https://cruisekit.app/` confirmed the live
+  `sitemap.xml` submission with the message that Google will process it and
+  monitor future changes.
 
 ## Ordered follow-up implementation
 
@@ -122,6 +140,11 @@ remains a divergent documentation pointer and was not rewritten while
 | Passenger save-flow correction and 1.0.21+48 | `27c976f` |
 | Implementation integration | [PR 28](https://github.com/kaliartistry/CruiseKit-Mobile/pull/28), merge `537f0b5b848c5721e20fb8cc6fb49758efada97f` |
 | Passenger correction | [PR 29](https://github.com/kaliartistry/CruiseKit-Mobile/pull/29), merge `5641647b6149550d18da68d24dc7a54f3e02bc8e` |
+| Release metadata and signing integration | [PR 30](https://github.com/kaliartistry/CruiseKit-Mobile/pull/30), merge `766375801298bbc0afa5d102a16d8b1b3065ab14` |
+| Widget distribution signing | [PR 31](https://github.com/kaliartistry/CruiseKit-Mobile/pull/31), merge `13701e1befb5ec40b86d2a3d20a4771edc9df68c` |
+| Current production catalog | [PR 32](https://github.com/kaliartistry/CruiseKit-Mobile/pull/32), merge `026fb6148be18611e37febfe6e534bdf6c47c8bb` |
+| Widget executable metadata | [PR 33](https://github.com/kaliartistry/CruiseKit-Mobile/pull/33), merge `3a248ad90d448aed8175f86dcb8db6f41c2cc5fa` |
+| Final signed-release and store handoff | [PR 34](https://github.com/kaliartistry/CruiseKit-Mobile/pull/34), merge `265d3de7f406940eb4bf73fb23437b9efea78b08` |
 
 ### Google Play
 
@@ -137,7 +160,10 @@ remains a divergent documentation pointer and was not rewritten while
 ### App Store Connect
 
 - Public version: 1.0.20, `READY_FOR_SALE`.
-- Candidate: 1.0.21, `PREPARE_FOR_SUBMISSION`, manual release.
+- Candidate: 1.0.21, `WAITING_FOR_REVIEW`, manual release.
+- The public 1.0.20 listing still displays `MyDay by CruiseKit`; the submitted
+  1.0.21 metadata carries the CruiseKit naming alignment and will not become
+  public unless App Review approves it and it is manually released.
 - App Store version ID: `ef4de2d0-85df-4395-aa95-8dbc89dd01ec`.
 - Metadata is aligned to `CruiseKit: Cruise Day Planner`; subtitle, keywords,
   description, promotional text, release notes, and the required age-rating
@@ -148,6 +174,34 @@ remains a divergent documentation pointer and was not rewritten while
 - Widget bundle identifier `com.cruisekit.mobile.CountdownWidget` was
   registered as Apple resource `722538D2FS`; App Groups capability is enabled
   on it and on main app resource `PT5P32D98M`.
+- App Group `group.com.cruisekit.mobile` is registered as resource
+  `8YUQ3N2N8M` and associated to both bundles. Regenerated distribution profile
+  UUIDs are `6aa5ed22-1ba3-4f10-a00d-027aeaa7b36c` for the host and
+  `f4af0d4d-4160-4f53-acde-671ac99504fb` for the widget.
+- Final IPA SHA-256:
+  `ff857c3457cba006fa3122e81fb68ebe23806a85b8c3bd40f07a2b60653d6b7a`
+  (54,457,130 bytes). Apple delivery/build UUID:
+  `e9df64dd-fa9c-4ed0-a713-7d21fb6c1b26`; processing is VALID, the build is
+  App Store eligible, and `usesNonExemptEncryption=false`.
+- Build 48 is attached to 1.0.21. Review submission
+  `502a87a0-4eb1-4339-be82-72d1f4014efd` was submitted at
+  `2026-09-04T21:16:32.058Z` and reads `WAITING_FOR_REVIEW`.
+
+### Current first-party distribution baseline
+
+- Google Play's dedicated device-acquisition report for August 7 through
+  September 3 shows 395 impressions, 10 acquisitions (9 Explore and 1 combined
+  Paid and direct), 6 first opens, and 7 monthly active devices. The combined
+  bucket cannot establish that its one acquisition came from paid ads.
+- App Store Analytics for June 6 through September 3 shows 5.59K impressions,
+  141 product-page views, 54 first-time downloads, 1 redownload, 96 updates,
+  and a 1.28% daily-average conversion rate. First-time downloads split to 32
+  App Store Search, 9 Web Referrer, 6 App Referrer, 4 Browse, and 3
+  Unavailable.
+- Apple campaign and retention panels say there is not enough data. Apple
+  crashes and Play code-48 crash/ANR rates are also unavailable at current
+  volume; dashes were not treated as zero. Play showed no crash/ANR issue
+  clusters for the current release.
 
 ## Verification
 
@@ -160,6 +214,13 @@ remains a divergent documentation pointer and was not rewritten while
   and desktop/mobile passenger QA passed.
 - Release D: 96 tests across 25 files, lint, 193-page production build, and SEO
   verification passed; the sitemap contains 179 URLs.
+- Data refresh: production manifest generated
+  `2026-09-04T20:51:29.484Z`, with 422 mobile sailing rows and zero returned
+  rows. Live and embedded mobile SHA-256 values match exactly:
+  `00f8754371e0b5956e268a2b53104a2fd68f4c97d21054724735be6cbd59f552`
+  for sailings and
+  `bff624855cb009bf14b3c9b5b5fd0f64e19de38cf2ea4899fb325c18a45f4c49`
+  for the deal view.
 
 ### Final production passenger QA
 
@@ -195,6 +256,10 @@ Rendered evidence on the release host:
 - `flutter test`: 258/258 passed.
 - Android debug APK, signed release AAB, and iOS simulator with embedded Widget
   extension compiled.
+- The signed iPhone+iPad archive and export succeeded. Strict signature
+  verification passed for the host and widget; both are 1.0.21 (48), both carry
+  `group.com.cruisekit.mobile`, and the widget exports its executable plus
+  `__swift5_entry` and `LC_MAIN`.
 - Fresh Android 36 passenger journey passed: launch, choose Carnival, October
   2026, select a sailing, save, MyDay countdown, $15 Spend quick-add and tip
   prompt, share/copy, More, itinerary-only Ports, and Grand Cayman tender guide.
@@ -219,29 +284,20 @@ Rendered evidence on the release host:
 | No native countdown surface | Privacy-minimized Android/iOS countdown widgets implemented |
 | Long sailing results could hide the final save action | Selection now moves the passenger directly to the Save action |
 
-## Exact remaining blockers
+## External gates and measurement limits
 
-1. **Apple signed archive and submission.** Register App Group
-   `group.com.cruisekit.mobile`, associate it with
-   `com.cruisekit.mobile` and `com.cruisekit.mobile.CountdownWidget`, and
-   regenerate/download App Store distribution profiles. The present
-   `CruiseKit App Store` profile lacks `com.apple.security.application-groups`;
-   no profile exists for the widget target. The Apple API completed the bundle
-   identifier and capability setup, but App Group registration requires the
-   authenticated Developer portal or Xcode account session. The shared Mac is
-   locked, so browser completion is currently unavailable.
-2. **Search Console submission and dashboard readback.** The production
-   sitemap is correct and live, but the prepared Search Console submission
-   cannot be clicked while the Mac is locked. The command-line attempt also
-   failed because the Search Console API is disabled for the active ADC quota
-   project. Analytics dashboard readback is similarly blocked by the locked
-   authenticated browser and ADC lacks `analytics.readonly`; deployed GA
-   collection was instead verified at the network layer.
-
-Once the Mac is unlocked, the remaining sequence is: submit `sitemap.xml` in
-Search Console; register/associate the Apple App Group; regenerate profiles;
-build and hash the signed IPA; upload build 48; wait for processing; attach it
-to 1.0.21; set export compliance; and submit with manual release.
+- No implementation, credential, signing, deployment, or store-submission
+  blocker remains. Apple App Review is now the external gate for 1.0.21.
+  Because release type is MANUAL, approval will not publish the version without
+  a later explicit release action.
+- Current install volumes are below both stores' thresholds for numerical
+  crash/ANR and retention rates. App Store campaign reporting also says there
+  is not enough data, and the existing App Store Connect API key lacks the
+  permission required to export `analyticsReportRequests`; authenticated
+  dashboard totals and source types were still read directly.
+- Google Play's general dashboard and dedicated acquisition report showed
+  different cached comparison/active-device figures. The dated dedicated
+  report is used above as the acquisition source of truth.
 
 ## Commercial controls
 
