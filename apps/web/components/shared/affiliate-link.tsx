@@ -1,6 +1,11 @@
 "use client";
 
-import { trackOutboundAffiliateClick } from "@/lib/analytics";
+import { useEffect, useRef } from "react";
+import {
+  hasAnalyticsConsent,
+  trackAffiliateOfferViewed,
+  trackOutboundAffiliateClick,
+} from "@/lib/analytics";
 
 /**
  * Client-side affiliate link component.
@@ -66,9 +71,39 @@ export default function AffiliateLink({
   children,
   className,
 }: AffiliateLinkProps) {
+  const linkRef = useRef<HTMLAnchorElement>(null);
   const handleClick = () => {
     trackOutboundAffiliateClick(partner, source);
   };
+
+  useEffect(() => {
+    const link = linkRef.current;
+    if (!link || typeof IntersectionObserver === "undefined") return;
+    let tracked = false;
+    let visible = false;
+    const trackIfAllowed = () => {
+      if (tracked || !visible || !hasAnalyticsConsent()) return;
+      tracked = true;
+      trackAffiliateOfferViewed(partner, source);
+      observer.disconnect();
+    };
+    const observer = new IntersectionObserver((entries) => {
+      visible = entries.some((entry) => entry.isIntersecting);
+      trackIfAllowed();
+    });
+    observer.observe(link);
+    window.addEventListener(
+      "cruisekit:analytics-consent-changed",
+      trackIfAllowed,
+    );
+    return () => {
+      observer.disconnect();
+      window.removeEventListener(
+        "cruisekit:analytics-consent-changed",
+        trackIfAllowed,
+      );
+    };
+  }, [partner, source]);
 
   if (!isAllowedDomain(href)) {
     // Render as plain text if URL is not from an allowed domain
@@ -77,6 +112,7 @@ export default function AffiliateLink({
 
   return (
     <a
+      ref={linkRef}
       href={href}
       target="_blank"
       rel="noopener noreferrer sponsored nofollow"

@@ -2,9 +2,11 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Smartphone, Calendar, DollarSign, Users, Wine } from "lucide-react";
 import { StoreButtonRow } from "@/components/shared/store-buttons";
 import {
+  hasAnalyticsConsent,
   trackAppHandoffViewed,
   type SourceSurface,
 } from "@/lib/analytics";
@@ -14,6 +16,11 @@ interface AppHandoffProps {
   variant?: "calculator-result" | "saved-trip" | "footer";
   className?: string;
 }
+
+const DesktopStoreQrCodes = dynamic(
+  () => import("@/components/shared/desktop-store-qr-codes"),
+  { ssr: false },
+);
 
 const HEADLINES: Record<NonNullable<AppHandoffProps["variant"]>, { title: string; body: string }> = {
   "calculator-result": {
@@ -50,7 +57,19 @@ export default function AppHandoff({
   const sourceSurface = sourceSurfaceForVariant(variant);
 
   useEffect(() => {
-    trackAppHandoffViewed(sourceSurface);
+    let tracked = false;
+    const trackView = () => {
+      if (tracked || !hasAnalyticsConsent()) return;
+      tracked = true;
+      trackAppHandoffViewed(sourceSurface);
+    };
+    trackView();
+    window.addEventListener("cruisekit:analytics-consent-changed", trackView);
+    return () =>
+      window.removeEventListener(
+        "cruisekit:analytics-consent-changed",
+        trackView,
+      );
   }, [sourceSurface]);
 
   return (
@@ -63,7 +82,7 @@ export default function AppHandoff({
             <Smartphone className="h-3 w-3" />
             Free on iPhone and Android
           </div>
-          <h3 className="mb-2 text-xl sm:text-2xl font-extrabold leading-tight tracking-tight">
+          <h3 className="mb-2 text-xl font-extrabold leading-tight tracking-tight text-white sm:text-2xl">
             {title}
           </h3>
           <p className="text-sm text-white/75 leading-relaxed mb-5">{body}</p>
@@ -87,6 +106,12 @@ export default function AppHandoff({
             variant="dark"
             className="sm:grid-cols-2"
           />
+          <div className="mt-4 hidden sm:block">
+            <p className="mb-2 text-xs font-semibold text-white/60">
+              On a computer? Scan the store for your phone.
+            </p>
+            <DesktopStoreQrCodes sourceSurface={sourceSurface} />
+          </div>
         </div>
 
         <div className="hidden sm:flex justify-end">

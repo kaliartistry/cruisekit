@@ -1,30 +1,26 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import { Apple, ArrowUpRight, Smartphone } from "lucide-react";
-import {
-  APP_STORE_URL,
-  PLAY_STORE_URL,
-} from "@/lib/config/app-store-urls";
 import {
   trackStoreBadgeClicked,
   trackAppHandoffClicked,
   type SourceSurface,
   type StorePlatform,
 } from "@/lib/analytics";
+import { buildAttributedStoreUrl } from "@/lib/distribution/app-attribution";
 import { cn } from "@/lib/utils/cn";
 
 type StoreButtonVariant = "panel" | "dark" | "light";
 
 const STORE_DETAILS = {
   ios: {
-    href: APP_STORE_URL,
     label: "App Store",
     eyebrow: "Download on",
     platformLabel: "iPhone",
     icon: Apple,
   },
   android: {
-    href: PLAY_STORE_URL,
     label: "Google Play",
     eyebrow: "Get it on",
     platformLabel: "Android",
@@ -70,12 +66,11 @@ export function StoreButton({
 }) {
   const store = STORE_DETAILS[platform];
   const Icon = store.icon;
-  const href =
-    platform === "android"
-      ? withPlayInstallReferrer(store.href, sourceSurface)
-      : store.href;
+  const href = useAttributedStoreUrl(platform, sourceSurface);
   const calculatorHandoff =
     sourceSurface === "saved_trip" || sourceSurface === "calculator_result";
+  const calculatorFamily =
+    sourceSurface === "calculator_result" ? "total_cost" : undefined;
 
   return (
     <a
@@ -83,8 +78,9 @@ export function StoreButton({
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => {
-        trackStoreBadgeClicked(platform, sourceSurface);
+        trackStoreBadgeClicked(platform, sourceSurface, { calculatorFamily });
         trackAppHandoffClicked({
+          calculatorFamily,
           platform,
           sourceType: calculatorHandoff ? "calculator" : "direct",
           landingContext:
@@ -93,6 +89,7 @@ export function StoreButton({
               : sourceSurface === "calculator_result"
                 ? "cruise_line"
                 : "generic",
+          sourceSurface,
         });
       }}
       className={cn(
@@ -146,13 +143,28 @@ export function StoreButton({
   );
 }
 
-function withPlayInstallReferrer(href: string, sourceSurface: SourceSurface) {
-  const url = new URL(href);
-  const referrer = new URLSearchParams({
-    utm_source: "cruisekit_web",
-    utm_medium: "app_handoff",
-    utm_campaign: sourceSurface,
+export function useAttributedStoreUrl(
+  platform: Exclude<StorePlatform, "unknown">,
+  sourceSurface: SourceSurface,
+) {
+  const hydrated = useSyncExternalStore(
+    emptySubscribe,
+    clientSnapshot,
+    serverSnapshot,
+  );
+  return buildAttributedStoreUrl(platform, sourceSurface, {
+    incomingSearch: hydrated ? window.location.search : undefined,
   });
-  url.searchParams.set("referrer", referrer.toString());
-  return url.toString();
+}
+
+function emptySubscribe() {
+  return () => {};
+}
+
+function clientSnapshot() {
+  return true;
+}
+
+function serverSnapshot() {
+  return false;
 }

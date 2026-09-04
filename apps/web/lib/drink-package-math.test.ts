@@ -176,11 +176,14 @@ describe("privacy-safe analytics buckets", () => {
       [
         "completion",
         "cruise_line",
-        "party_size_range",
+        "party_size_bucket",
         "result_bucket",
-        "sailing_length_range",
+        "nights_bucket",
       ].sort(),
     );
+    expect(params.cruise_line).toBe("carnival-cruise-line");
+    expect(params.party_size_bucket).toBe("2");
+    expect(params.nights_bucket).toBe("7_9");
     expect(JSON.stringify(params)).not.toContain("42.37");
   });
 });
