@@ -22,10 +22,19 @@ describe("mobile cruise-cost export", () => {
       .at(-1)!;
     const out: Record<string, unknown> = {};
     for (const [id, costs] of Object.entries(CRUISE_LINE_COSTS)) {
-      out[id] = { ...costs, lastUpdated: latestRetrieval };
+      out[id] = {
+        ...costs,
+        // The mobile model predates the rename on the web side; keep both
+        // keys so CruiseLineCosts.fromJson parses (it requires the old one).
+        averageActivityCostPerPort: costs.averageExcursionCostPerPort,
+        lastUpdated: latestRetrieval,
+      };
     }
     mkdirSync(dirname(target!), { recursive: true });
     writeFileSync(target!, `${JSON.stringify(out, null, 2)}\n`);
     expect(Object.keys(out)).toHaveLength(Object.keys(CRUISE_LINE_COSTS).length);
+    for (const line of Object.values(out) as Array<Record<string, unknown>>) {
+      expect(typeof line.averageActivityCostPerPort).toBe("number");
+    }
   });
 });
