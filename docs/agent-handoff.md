@@ -1,6 +1,42 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
-Last verified: 2026-09-04
+Last verified: 2026-09-10
+
+## September 10 price-fact follow-up (PR #74, branch `fix/price-constants-2026-09`)
+
+- The 2026-09-04 refactor moved calculator constants to `PRICE_FACTS`, but
+  blog and guide prose still carried retired numbers (CHEERS $82.54/18%,
+  the $21.80 Free at Sea gratuity and its derived totals, Royal Caribbean
+  three-tier gratuities, MSC $16, Holland America packages at old prices and
+  18%, Celebrity's retired Always Included / Elevate / Indulge tiers, Virgin
+  "unbundled in early 2026"). Those passages now interpolate `PRICE_FACTS`
+  through `usd()` / `usdRounded()`, and `price-facts.test.ts` bans the retired
+  figures from `blog-posts.ts` and `guides.ts`.
+- New official facts (verified 2026-09-10): Holland America Quench $17.95,
+  Signature $55.95, Elite $60.95, Have It All $65, 20% beverage service
+  charge; Princess beverage-only Plus $64.99, Premier $84.99, Zero-Alcohol
+  $29.99, Classic Soda $14.99; Carnival Bottomless Bubbles $9.50; NCL Free at
+  Sea ages 3-20 $12.50; Celebrity Concierge/AquaClass $20.50. Facts
+  re-verified on official pages today carry `retrievedAt 2026-09-10`,
+  `recheckBy 2026-12-09`. Carnival gratuities, Carnival Wi-Fi, and MSC keep
+  their 2026-09-04 dates (official pages block automated fetch; MSC remains
+  `corroborated`).
+- Princess "Plus/Premier Beverage Package" calculator tiers are the bundles
+  (`includesGratuities`/`includesWifi`), so they stay at bundle prices;
+  drinks-only tiers were added alongside. Do not price the bundle tiers at the
+  beverage-only rate.
+- Governance gap closed: `priceFactIsStale` defaulted `today` to a frozen
+  2026-09-04, so the freshness test could never fail. It now uses the real
+  date, and `pr-checks.yml` runs `pnpm --filter web test`. Expect PRs to fail
+  after 2026-12-09 until facts are re-verified; that is intended.
+- Cross-repo: `pnpm --filter web run export:mobile-cruise-costs` regenerates
+  `CruiseKit-Mobile/assets/data/cruise_costs.json` from `CRUISE_LINE_COSTS`.
+  The mobile app's Spend presets (`lib/data/drink_package_presets.dart`)
+  are a separate hand-maintained list updated in the mobile repo the same day.
+- `.ck-data/` in the local checkout is an untracked build copy, not a
+  maintained source; ignore it. The `feat/cruisekit-growth-engine-v1` branch
+  predates the PRICE_FACTS refactor and still has the old constants; rebase
+  it on `main` before merging.
 
 ## September 4 execution state
 
