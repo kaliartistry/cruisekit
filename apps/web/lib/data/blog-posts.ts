@@ -1,3 +1,4 @@
+import { PRICE_FACTS, usd, usdRounded } from "./price-facts";
 /* ------------------------------------------------------------------ */
 /*  Blog Post Data — SEO-Rich Cruise Articles for CruiseKit           */
 /* ------------------------------------------------------------------ */
@@ -64,7 +65,7 @@ const caribbeanCostPost: BlogPost = {
       heading: "A $374 Cruise That Costs $2,495",
       paragraphs: [
         "A $374 cruise. That is what Carnival Celebration advertises for a 7-night Eastern Caribbean sailing from Miami. And technically, they are not lying \u2014 that IS the base fare for an inside cabin. But by the time you step off the ship a week later, most passengers have spent somewhere between $2,400 and $3,800. Where does all that money go?",
-        "We tracked every hidden cost across nine major cruise lines, and the gap between \"advertised price\" and \"what you will actually pay\" is wider than you think. On that same Carnival Celebration sailing, here is where the money really goes: gratuities at $17 per day times two adults times seven nights equals $238, and that is mandatory and auto-charged to your onboard account. The CHEERS! drink package costs $82.54 per day all-in for two people over seven days, totaling $1,155. Premium WiFi runs $25.50 per day for seven days at $178.50. Two specialty dinners at Fahrenheit 555 steakhouse add $96. Three port excursions averaging $85 each come to $255. And if you grab the 10-photo ProPortraits package, that is another $199. Your $374 cruise just became $2,495 \u2014 that is 567% more than advertised.",
+        `We tracked every hidden cost across nine major cruise lines, and the gap between "advertised price" and "what you will actually pay" is wider than you think. On that same Carnival Celebration sailing, here is where the money really goes: gratuities at $17 per day times two adults times seven nights equals $238, and that is mandatory and auto-charged to your onboard account. The CHEERS! drink package costs ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day all-in for two people over seven days, totaling ${usdRounded(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 14)}. Premium WiFi runs $25.50 per day for seven days at $178.50. Two specialty dinners at Fahrenheit 555 steakhouse add $96. Three port excursions averaging $85 each come to $255. And if you grab the 10-photo ProPortraits package, that is another $199. Your $374 cruise just became $2,515 \u2014 that is 572% more than advertised.`,
       ],
     },
     {
@@ -77,14 +78,14 @@ const caribbeanCostPost: BlogPost = {
     {
       heading: "Gratuities: The Bill You Cannot Avoid",
       paragraphs: [
-        "Your cabin steward left a towel animal on your bed. Your waiter remembered you like sparkling water. Sweet gestures, right? They are also subsidized by mandatory daily gratuities that hit your onboard account whether you asked for them or not. Carnival charges $16 per person per day for standard cabins and $18 for suites. Royal Caribbean charges $16 to $18.50. Norwegian leads the pack at $20 per day. Disney is the most modest at $14.50. MSC charges $16.",
+        `Your cabin steward left a towel animal on your bed. Your waiter remembered you like sparkling water. Sweet gestures, right? They are also subsidized by mandatory daily gratuities that hit your onboard account whether you asked for them or not. Carnival charges ${usd(PRICE_FACTS.carnivalStandardGratuity.amount)} per person per day for standard cabins and ${usd(PRICE_FACTS.carnivalSuiteGratuity.amount)} for suites. Royal Caribbean charges ${usd(PRICE_FACTS.royalCaribbeanStandardGratuity.amount)} to ${usd(PRICE_FACTS.royalCaribbeanSuiteGratuity.amount)}. Norwegian charges ${usd(PRICE_FACTS.nclStandardGratuity.amount)} per day, or ${usd(PRICE_FACTS.nclSuiteGratuity.amount)} in The Haven and suites. Disney suggests ${usd(PRICE_FACTS.disneyStandardGratuity.amount)}. MSC charges ${usd(PRICE_FACTS.mscStandardCaribbean.amount)} on Caribbean and Alaska sailings.`,
         "For two adults on a 7-night cruise, that is $224 to $280 in gratuities alone. You can technically visit guest services to reduce them, but your cabin steward and dining team earn modest base salaries and depend on this income. This is not a cost you should try to avoid \u2014 it is one you should budget for upfront.",
       ],
     },
     {
       heading: "Drink Packages: The Single Biggest Add-On",
       paragraphs: [
-        "Here is where things get expensive fast. Carnival's CHEERS! package runs $59.95 to $89.95 per day before the 18% service charge, averaging about $82.54 per day all-in. Royal Caribbean's Deluxe Beverage Package costs $63 to $105 per day plus 18% gratuity. Norwegian includes a basic open bar in its Free at Sea promo, but the premium upgrade is $39.99 per day on top of your already-higher base fare.",
+        `Here is where things get expensive fast. Carnival's CHEERS! package is ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per person per day all-in when bought before sailing ($69.95 plus a 20% service charge) and ${usd(PRICE_FACTS.carnivalCheersOnboardAllIn.amount)} onboard. Royal Caribbean does not publish a fixed Deluxe Beverage Package price; it is sold at dynamic pre-cruise prices that vary by sailing, plus 18% gratuity. Norwegian includes a basic open bar in its Free at Sea promo, but the mandatory ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per person per day beverage gratuity and the roughly $50 per day Free at Sea Plus upgrade sit on top of your already-higher base fare.`,
         "For two guests over seven nights, a drink package adds $840 to $1,470 to your cruise cost. And here is the kicker: both Carnival and Royal Caribbean require ALL adults in the same cabin to buy the package if one person does. So if you are a cocktail enthusiast married to someone who drinks one glass of wine at dinner, you are still buying two packages. The math only works if you are consistently putting away five to seven alcoholic drinks per day. Every day. For a week.",
       ],
     },
@@ -146,21 +147,21 @@ const rciVsCarnivalPost: BlogPost = {
     {
       heading: "Gratuities: A $21 Difference You Will Barely Notice",
       paragraphs: [
-        "Carnival charges $16 per person per day for standard cabins and $18 for suites. Royal Caribbean charges $16 for interior and ocean view, $17.50 for balcony, and $18.50 for suites. For a 7-night cruise with two adults in balcony cabins, that is $224 on Carnival versus $245 on Royal Caribbean \u2014 a $21 difference. Both lines add an 18% to 20% service charge on drink packages and bar tabs, which is easy to miss when you are comparing beverage costs.",
+        `Carnival charges ${usd(PRICE_FACTS.carnivalStandardGratuity.amount)} per person per day for standard cabins and ${usd(PRICE_FACTS.carnivalSuiteGratuity.amount)} for suites. Royal Caribbean charges ${usd(PRICE_FACTS.royalCaribbeanStandardGratuity.amount)} for every non-suite stateroom and ${usd(PRICE_FACTS.royalCaribbeanSuiteGratuity.amount)} for suites. For a 7-night cruise with two adults in balcony cabins, that is ${usd(PRICE_FACTS.carnivalStandardGratuity.amount * 14)} on Carnival versus ${usd(PRICE_FACTS.royalCaribbeanStandardGratuity.amount * 14)} on Royal Caribbean \u2014 a ${usd((PRICE_FACTS.royalCaribbeanStandardGratuity.amount - PRICE_FACTS.carnivalStandardGratuity.amount) * 14)} difference. Carnival adds a 20% service charge and Royal Caribbean an 18% gratuity on drink packages and bar tabs, which is easy to miss when you are comparing beverage costs.`,
         "Here is what matters more than the gratuity math: neither line lets you opt out gracefully. The gratuities are auto-charged daily. You can visit guest services to adjust them, but crew members will notice, and the social pressure is real. Budget for these as a fixed cost on either line.",
       ],
     },
     {
       heading: "Drink Packages: Closer Than You Think",
       paragraphs: [
-        "This is where the \"Carnival is cheaper\" narrative starts to fall apart. Carnival's CHEERS! package averages $69.95 per day pre-cruise plus 18% gratuity, bringing the real daily cost to $82.54. Royal Caribbean's Deluxe Beverage Package ranges from $63 to $105 per day plus 18% gratuity, landing at roughly $74 to $124 per day depending on ship and sailing date.",
-        "On a budget off-season sailing, Royal Caribbean's drink package can actually be cheaper than Carnival's \u2014 $74 versus $82.54 per day. On a peak-season sailing, Royal Caribbean is more expensive. Both lines enforce the same frustrating rule: all adults in the cabin must buy the package if one person does. No exceptions. For two adults over seven nights, drink packages run $1,036 to $1,155 on Carnival and $1,036 to $1,736 on Royal Caribbean. The gap is real but not as dramatic as the base fare difference suggests.",
+        `This is where the "Carnival is cheaper" narrative starts to fall apart. Carnival's CHEERS! package averages $69.95 per day pre-cruise plus a 20% service charge, bringing the real daily cost to ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)}. Royal Caribbean's Deluxe Beverage Package ranges from $63 to $105 per day plus 18% gratuity, landing at roughly $74 to $124 per day depending on ship and sailing date.`,
+        `On a budget off-season sailing, Royal Caribbean's drink package can actually be cheaper than Carnival's \u2014 $74 versus ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day. On a peak-season sailing, Royal Caribbean is more expensive. Both lines enforce the same frustrating rule: all adults in the cabin must buy the package if one person does. No exceptions. For two adults over seven nights, drink packages run ${usdRounded(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 14)} on Carnival and $1,036 to $1,736 on Royal Caribbean. The gap is real but not as dramatic as the base fare difference suggests.`,
       ],
     },
     {
       heading: "WiFi, Dining, and Excursions: Side by Side",
       paragraphs: [
-        "Carnival's WiFi starts at $12.75 per day for social media and $17 for the Value plan. Royal Caribbean charges $16 to $25 per day. Slight edge to Carnival. Shore excursions are priced similarly on both lines at $75 to $150 per person per port for popular options \u2014 essentially a wash.",
+        `Carnival's WiFi starts at ${usd(PRICE_FACTS.carnivalWifiSocialAdvance.amount)} per day for the Social plan and ${usd(PRICE_FACTS.carnivalWifiValueAdvance.amount)} for the Value plan when bought before sailing (${usd(PRICE_FACTS.carnivalWifiSocialOnboard.amount)} and ${usd(PRICE_FACTS.carnivalWifiValueOnboard.amount)} onboard). Royal Caribbean prices VOOM dynamically by ship and sailing, so compare in the Cruise Planner. Shore excursions are priced similarly on both lines at $75 to $150 per person per port for popular options \u2014 essentially a wash.`,
         "Specialty dining is where Royal Caribbean pulls ahead in value. RCI ships typically have 8 to 12 specialty restaurants versus Carnival's 3 to 5, and RCI's prices range from $25 to $65 per person while Carnival's newer ships charge $38 to $89 for comparable experiences. If you like dining variety, Royal Caribbean gives you more options at lower per-meal prices. If you are happy with the main dining room and buffet, this category does not matter.",
       ],
     },
@@ -200,7 +201,7 @@ const hiddenCostsPost: BlogPost = {
       ],
     },
     {
-      heading: "2. Drink Packages \u2014 The $1,155 Question",
+      heading: `2. Drink Packages \u2014 The ${usdRounded(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 14)} Question`,
       paragraphs: [
         "You are on vacation. It is 11 AM. The sun is out, the pool is sparkling, and the bartender is making frozen cocktails that look incredible. You order one. It is $14. You order another at lunch. Another at the pool. Two at dinner. A nightcap. That is six drinks at roughly $13 each \u2014 $78 in a single day. Multiply by seven days and two people, and you are staring at $1,092 in bar charges.",
         "This is why drink packages exist, and why they are the single largest optional expense on any cruise. Prices range from $55 per day on budget sailings to $120 per day during peak season, plus 18% to 20% service charges on top. The catch that nobody tells you in the booking funnel: both Carnival and Royal Caribbean require ALL adults in the cabin to buy the package if one person does. No splitting allowed. For many couples where one partner barely drinks, the package becomes a losing bet.",
@@ -373,10 +374,10 @@ const carnivalCheersPost: BlogPost = {
       ],
     },
     {
-      heading: "The Real Price: $82.54 Per Day, Not $69.95",
+      heading: `The Real Price: ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} Per Day, Not $69.95`,
       paragraphs: [
-        "At $82.54 per day before you even take a sip, you need to drink roughly 6 to 7 cocktails daily to break even. That is one before breakfast, two at the pool, two at dinner, and a nightcap. Every. Single. Day. For an entire week. Sound like your kind of vacation? Then keep reading, because the CHEERS! package might actually save you money. If that sounds more like a job, you are better off paying per drink.",
-        "Here is how the math works. Carnival's CHEERS! Beverage Program is priced at $59.95 to $89.95 per person per day, with $69.95 being the most common pre-cruise price. But Carnival adds an 18% service charge on top, which brings $69.95 to $82.54 per day. For a 7-night cruise, that is $577.78 per person or $1,155.56 for two adults. If you wait to buy onboard, the price jumps to $79.95 to $99.95 per day. Always, always buy pre-cruise.",
+        `At ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day before you even take a sip, you need to drink roughly 6 to 7 cocktails daily to break even. That is one before breakfast, two at the pool, two at dinner, and a nightcap. Every. Single. Day. For an entire week. Sound like your kind of vacation? Then keep reading, because the CHEERS! package might actually save you money. If that sounds more like a job, you are better off paying per drink.`,
+        `Here is how the math works. Carnival's CHEERS! Beverage Program is $69.95 per person per day when bought before sailing, and Carnival adds a 20% service charge on top, which brings it to ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day. For a 7-night cruise, that is ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 7)} per person or ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 14)} for two adults. If you wait to buy onboard, the price rises to $74.95 plus the service charge, or ${usd(PRICE_FACTS.carnivalCheersOnboardAllIn.amount)} per day. Always, always buy pre-cruise.`,
       ],
     },
     {
@@ -389,15 +390,15 @@ const carnivalCheersPost: BlogPost = {
     {
       heading: "The Break-Even Math, Drink by Drink",
       paragraphs: [
-        "Let us be precise. A typical cocktail on Carnival costs $12 to $14. Domestic beer runs $7 to $8. A glass of wine is $10 to $14. Specialty coffee is $4 to $5. A smoothie is $5 to $6. Bottled water is $3. If you are primarily a cocktail drinker averaging $13 per drink, you need 6.3 cocktails per day to break even on the $82.54 daily cost.",
-        "But most people mix drink types throughout the day. Here is a realistic \"heavy drinker\" day: two specialty coffees ($10 value), one bottled water ($3), a beer at lunch ($8), two poolside cocktails ($26), a glass of wine at dinner ($12), an after-dinner cocktail ($14), and a nightcap ($13). That is $86 in value against an $82.54 cost \u2014 you just barely broke even, and you had 8 drinks. For a more moderate day with 4 to 5 total drinks, you are losing $15 to $25 versus paying per drink.",
+        `Let us be precise. A typical cocktail on Carnival costs $12 to $14. Domestic beer runs $7 to $8. A glass of wine is $10 to $14. Specialty coffee is $4 to $5. A smoothie is $5 to $6. Bottled water is $3. If you are primarily a cocktail drinker averaging $13 per drink, you need 6.3 cocktails per day to break even on the ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} daily cost.`,
+        `But most people mix drink types throughout the day. Here is a realistic "heavy drinker" day: two specialty coffees ($10 value), one bottled water ($3), a beer at lunch ($8), two poolside cocktails ($26), a glass of wine at dinner ($12), an after-dinner cocktail ($14), and a nightcap ($13). That is $86 in value against an ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} cost \u2014 you just barely broke even, and you had 8 drinks. For a more moderate day with 4 to 5 total drinks, you are losing $15 to $25 versus paying per drink.`,
       ],
     },
     {
       heading: "The Rule That Changes Everything",
       paragraphs: [
         "This is the restriction that trips up the most people, and Carnival buries it in the fine print. If one adult in a stateroom purchases CHEERS!, ALL adults aged 21 and older in that same stateroom must purchase it too. Zero exceptions. No loopholes. No asking nicely at guest services.",
-        "This fundamentally changes the math. You are no longer asking whether one person can drink $82.54 worth per day. You are asking whether the AVERAGE consumption across both adults justifies $165.08 per day combined. If you are a cocktail enthusiast married to someone who has one glass of wine at dinner, your combined daily consumption might be $95 to $110 \u2014 well below the $165 threshold. For couples where one person barely drinks, the package is almost always a losing bet.",
+        `This fundamentally changes the math. You are no longer asking whether one person can drink ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} worth per day. You are asking whether the AVERAGE consumption across both adults justifies ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 2)} per day combined. If you are a cocktail enthusiast married to someone who has one glass of wine at dinner, your combined daily consumption might be $95 to $110 \u2014 well below the ${usdRounded(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 2)} threshold. For couples where one person barely drinks, the package is almost always a losing bet.`,
       ],
     },
     {
@@ -465,14 +466,14 @@ const norwegianFreeAtSeaPost: BlogPost = {
       heading: "How the Perk System Works",
       paragraphs: [
         "The number of perks you get depends on your stateroom. Studio and inside cabins get one free perk. Ocean view cabins get two. Balcony gets three. Mini-suite and suite guests get all available perks. You choose from the list, so picking the right perks for your travel style matters more than the number you get.",
-        "Here is where most booking guides stop. They list the perks and say \"great deal!\" without mentioning that every single perk comes with its own mandatory gratuity charge that is NOT included in the advertised cruise fare. These gratuity charges add $20 to $40 per person per day to your real cost, and they are buried in the fine print of each perk's terms and conditions.",
+        `Here is where most booking guides stop. They list the perks and say "great deal!" without mentioning that every single perk comes with its own mandatory gratuity charge that is NOT included in the advertised cruise fare. The open bar alone adds ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per adult per day on top of the ${usd(PRICE_FACTS.nclStandardGratuity.amount)} daily service charge, and it is buried in the fine print of each perk's terms and conditions.`,
       ],
     },
     {
       heading: "Perk 1: The Open Bar (With a $140 Catch)",
       paragraphs: [
         "The most popular Free at Sea perk is the Open Bar, covering unlimited alcoholic and non-alcoholic beverages priced up to $15. Most cocktails and beers fall under this threshold, but premium spirits, top-shelf cocktails at certain venues, and wines by the glass over $15 are excluded. You will have to pay the difference or choose something cheaper.",
-        "The bigger catch: there is a mandatory $20 per person per day gratuity on the open bar perk. For a 7-night cruise, that is $140 per person or $280 for a couple. This gratuity is charged whether you use the bar that day or not. Spend a full day in port eating tacos and drinking local beer? You still owe $20 for the open bar you did not touch. Factor this into your cost comparison with Carnival and Royal Caribbean, where drink package gratuities are percentage-based rather than flat-rate.",
+        `The bigger catch: there is a mandatory ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per person per day gratuity on the open bar perk for every guest aged 21 and over, charged at the pre-cruise rate (the onboard rate varies). For a 7-night cruise, that is ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 7)} per person or ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 14)} for a couple. This gratuity is charged whether you use the bar that day or not. Spend a full day in port eating tacos and drinking local beer? You still owe ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} for the open bar you did not touch. Guests aged 3 to 20 in the same stateroom are charged ${usd(PRICE_FACTS.nclFreeAtSeaMinor.amount)} per day for a soda and juice package instead. Factor this into your cost comparison with Carnival and Royal Caribbean, where drink package gratuities are percentage-based rather than flat-rate.`,
       ],
     },
     {
@@ -693,7 +694,7 @@ const royalCaribbeanCostPost: BlogPost = {
     {
       heading: "Gratuities: $18.50 Per Day and Rising",
       paragraphs: [
-        "Royal Caribbean's daily gratuity rates as of 2026 are $16 per person per day for interior and ocean-view cabins, $17.50 for balcony staterooms, and $18.50 for suites. These charges are automatically added to your onboard account every day of the cruise and cover your cabin steward, dining room waitstaff, assistant waiter, and head waiter.",
+        `Royal Caribbean's daily gratuity rates as of 2026 are ${usd(PRICE_FACTS.royalCaribbeanStandardGratuity.amount)} per person per day for every non-suite stateroom (interior, ocean view, and balcony) and ${usd(PRICE_FACTS.royalCaribbeanSuiteGratuity.amount)} for suites. These charges are automatically added to your onboard account every day of the cruise and cover your cabin steward, dining room waitstaff, assistant waiter, and head waiter.`,
         "For two adults on a 7-night cruise in a balcony cabin, mandatory gratuities total $245 to $259. Suite guests pay even more at $21 per person per day, or $294 for a couple over seven nights. On top of this, Royal Caribbean adds an 18% service charge to every bar drink, drink package, and spa treatment. That 18% is easy to overlook but adds $10 to $15 per day if you are buying cocktails. The gratuity rates have increased every year since 2019, and there is no indication they will stop climbing.",
       ],
     },
@@ -730,7 +731,7 @@ const carnivalCruiseCostPost: BlogPost = {
   slug: "carnival-cruise-cost",
   title: "How Much Does a Carnival Cruise Really Cost?",
   excerpt:
-    "Carnival's base fares start under $300, but $17/day gratuities, an $82.54/day CHEERS! package, and WiFi from $20.40/day add up fast. We break down every dollar.",
+    `Carnival's base fares start under $300, but $17/day gratuities, an ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)}/day CHEERS! package, and WiFi from $20.40/day add up fast. We break down every dollar.`,
   category: "tips",
   author: "CruiseKit",
   publishedDate: "2026-03-28",
@@ -749,21 +750,21 @@ const carnivalCruiseCostPost: BlogPost = {
       heading: "The Budget King Has a Secret",
       paragraphs: [
         "Carnival Cruise Line has earned its reputation as the most affordable major cruise line. A 7-night Western Caribbean sailing on Carnival Celebration starts at $374 per person for an interior cabin, and older ships like Carnival Liberty drop as low as $249. Those fares include your stateroom, three daily meals in the main dining room and Lido buffet, Guy's Burgers, BlueIguana Cantina, comedy shows, pools, waterslides, and Camp Ocean for kids. For under $300, that is genuinely hard to beat.",
-        "But the budget king has a secret: Carnival's add-on prices are not proportionally cheaper than its base fare. The CHEERS! drink package costs $82.54 per day all-in. Gratuities run $17 per person per day. WiFi starts at $20.40 per day. By the time you add the extras that most vacationers consider essential, a $374 Carnival cruise costs $2,200 to $2,800 for two adults. Still affordable compared to competitors, but 500% more than the number in the advertisement.",
+        `But the budget king has a secret: Carnival's add-on prices are not proportionally cheaper than its base fare. The CHEERS! drink package costs ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day all-in. Gratuities run $17 per person per day. WiFi starts at $20.40 per day. By the time you add the extras that most vacationers consider essential, a $374 Carnival cruise costs $2,200 to $2,800 for two adults. Still affordable compared to competitors, but 500% more than the number in the advertisement.`,
       ],
     },
     {
       heading: "Gratuities: $17/Day, Effective April 2026",
       paragraphs: [
         "As of April 2, 2026, Carnival charges $17 per person per day for standard staterooms and $19 per person per day for suites. These gratuities are automatically added to your Sail and Sign account daily and cover your cabin steward, dining room server, assistant server, and maitre d'. For two adults over seven nights, that is $238 in standard cabins or $266 in suites.",
-        "On top of the daily gratuities, Carnival applies a 20% service charge (recently increased from 18%) to all bar purchases, drink packages, and spa services. If you buy two cocktails at $13 each, you are actually paying $31.20 once the service charge hits. This 20% surcharge is also applied to the CHEERS! package price, which is why the all-in daily cost is $82.54 rather than the advertised $68.78. Always calculate with the service charge included.",
+        `On top of the daily gratuities, Carnival applies a 20% service charge (recently increased from 18%) to all bar purchases, drink packages, and spa services. If you buy two cocktails at $13 each, you are actually paying $31.20 once the service charge hits. This 20% surcharge is also applied to the CHEERS! package price, which is why the all-in daily cost is ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} rather than the advertised $69.95. Always calculate with the service charge included.`,
       ],
     },
     {
-      heading: "CHEERS! Package: $82.54/Day After the 20% Service Charge",
+      heading: `CHEERS! Package: ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)}/Day After the 20% Service Charge`,
       paragraphs: [
-        "Carnival's CHEERS! Beverage Program is their unlimited drinks package covering alcoholic beverages up to $20 per drink, plus all non-alcoholic options including specialty coffees, smoothies, fresh juices, and bottled water. The pre-cruise price typically runs $68.78 per day, but the mandatory 20% service charge pushes the effective cost to $82.54 per day.",
-        "For two adults over seven nights, CHEERS! adds $1,156 to your cruise cost. The CHEERS! Zero Proof package for non-drinkers costs $43.95 per day after the service charge, and the basic Bottomless Bubbles soda package runs $11.99 per day. Remember: if one adult in the cabin buys CHEERS!, all adults must buy it. For couples where one person drinks lightly, paying per drink often saves $200 to $400 over the week.",
+        `Carnival's CHEERS! Beverage Program is their unlimited drinks package covering alcoholic beverages up to $20 per drink, plus all non-alcoholic options including specialty coffees, smoothies, fresh juices, and bottled water. The pre-cruise price typically runs $69.95 per day, but the mandatory 20% service charge pushes the effective cost to ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day.`,
+        `For two adults over seven nights, CHEERS! adds ${usdRounded(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 14)} to your cruise cost. The CHEERS! Zero Proof package for non-drinkers costs $43.95 per day after the service charge, and the basic Bottomless Bubbles soda package runs $11.99 per day. Remember: if one adult in the cabin buys CHEERS!, all adults must buy it. For couples where one person drinks lightly, paying per drink often saves $200 to $400 over the week.`,
         "The break-even point is approximately six to seven cocktails per day at an average price of $13 each. If you consistently drink that much from poolside lunch through a nightcap, the package pays for itself. If your typical day involves two drinks at dinner and one by the pool, you are losing money on the package.",
       ],
     },
@@ -792,7 +793,7 @@ const norwegianCruiseCostPost: BlogPost = {
   slug: "norwegian-cruise-cost",
   title: "How Much Does a Norwegian Cruise Really Cost?",
   excerpt:
-    "Norwegian markets \"Free at Sea\" perks, but $20/day gratuities plus a hidden $21.80/day bar gratuity mean \"free\" is anything but. Here is the true cost breakdown.",
+    `Norwegian markets "Free at Sea" perks, but ${usd(PRICE_FACTS.nclStandardGratuity.amount)}/day service charges plus a mandatory ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)}/day open-bar gratuity mean "free" is anything but. Here is the true cost breakdown.`,
   category: "tips",
   author: "CruiseKit",
   publishedDate: "2026-03-27",
@@ -818,13 +819,13 @@ const norwegianCruiseCostPost: BlogPost = {
       heading: "Standard Gratuities: $20/Day, the Industry's Highest",
       paragraphs: [
         "Norwegian charges $20 per person per day for standard staterooms and $25 per person per day for suites. These are the highest mandatory daily gratuities of any major cruise line. For two adults on a 7-night cruise, that is $280 in standard cabins or $350 in suites. Then add the 20% service charge on any bar purchases, spa treatments, and specialty dining beyond the Free at Sea allocation.",
-        "But the gratuity story does not stop there. The Free at Sea Open Bar perk carries its own separate mandatory gratuity of $21.80 per person per day. This is charged whether you use the bar that day or not. For a 7-night cruise, that is an additional $152.60 per person or $305.20 for a couple. Combined with the standard $20-per-day gratuity, Norwegian's total daily gratuity burden reaches $41.80 per person per day if you have the open bar perk. That is $585.20 for two adults over seven nights in gratuities alone.",
+        `But the gratuity story does not stop there. The Free at Sea Open Bar perk carries its own separate mandatory gratuity of ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per person per day for guests 21 and over, at the pre-cruise rate. This is charged whether you use the bar that day or not. For a 7-night cruise, that is an additional ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 7)} per person or ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 14)} for a couple. Combined with the standard ${usd(PRICE_FACTS.nclStandardGratuity.amount)}-per-day service charge, Norwegian's total daily gratuity burden reaches ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount + PRICE_FACTS.nclStandardGratuity.amount)} per person per day if you have the open bar perk. That is ${usd((PRICE_FACTS.nclFreeAtSeaAdult.amount + PRICE_FACTS.nclStandardGratuity.amount) * 14)} for two adults over seven nights in gratuities alone.`,
       ],
     },
     {
       heading: "The Open Bar Perk: Included but Limited",
       paragraphs: [
-        "The Free at Sea Open Bar covers alcoholic and non-alcoholic drinks priced up to $15. Most well cocktails, domestic beers, house wines, and sodas fall under this threshold. Premium spirits, top-shelf cocktails, and wines by the glass over $15 require you to pay the difference. The bar perk is available to all adults in the stateroom but each person generates the $21.80-per-day gratuity charge.",
+        `The Free at Sea Open Bar covers alcoholic and non-alcoholic drinks priced up to $15. Most well cocktails, domestic beers, house wines, and sodas fall under this threshold. Premium spirits, top-shelf cocktails, and wines by the glass over $15 require you to pay the difference. The bar perk is available to all adults in the stateroom, and each guest aged 21 and over generates the ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)}-per-day gratuity charge.`,
         "As of March 1, 2026, the Free at Sea drink package no longer works at Norwegian's private island, Great Stirrup Cay. Drinks purchased on the island are charged at regular menu prices plus the 20% service charge. This is a significant change that affects the per-day value calculation for itineraries stopping at the island. If your sailing visits Great Stirrup Cay, subtract one day from your bar-perk value calculation.",
       ],
     },
@@ -895,13 +896,13 @@ const mscCruiseCostPost: BlogPost = {
       heading: "The Lowest Fares in the Industry Come With Asterisks",
       paragraphs: [
         "MSC Cruises consistently offers the most aggressive base fares of any major cruise line. A 7-night Caribbean sailing can start at $249 per person for an interior cabin, and their European itineraries are even more competitive. For a Geneva-based company competing against American giants, MSC has chosen to win on price and scale. Their newest ships rival Royal Caribbean's mega-vessels in size and amenities.",
-        "But those eye-catching base fares come with asterisks. MSC's add-on pricing structure is designed around tiered packages, and the gulf between the base experience and the Premium Extra package is wider than on any other line. Gratuities at $16 per person per day are competitive, but the Premium Extra all-inclusive package at $85 per day per person transforms a budget cruise into a mid-range vacation. Understanding which tier fits your travel style is critical to getting good value from MSC.",
+        `But those eye-catching base fares come with asterisks. MSC's add-on pricing structure is designed around tiered packages, and the gulf between the base experience and the Premium Extra package is wider than on any other line. Gratuities at ${usd(PRICE_FACTS.mscStandardCaribbean.amount)} per person per day (${usd(PRICE_FACTS.mscSuiteCaribbean.amount)} in the Yacht Club) are competitive, but the Premium Extra all-inclusive package at $85 per day per person transforms a budget cruise into a mid-range vacation. Understanding which tier fits your travel style is critical to getting good value from MSC.`,
       ],
     },
     {
       heading: "Gratuities and Service Charges: $16/Day",
       paragraphs: [
-        "MSC charges $16 per person per day in mandatory gratuities for standard staterooms. This is on the lower end of the industry, tied with Carnival at their non-suite rate. For two adults on a 7-night cruise, total gratuities come to $224. Suite guests pay slightly more. The 18% service charge on bar purchases and spa treatments is standard across the industry.",
+        `MSC charges ${usd(PRICE_FACTS.mscStandardCaribbean.amount)} per person per day in mandatory hotel service charges for standard staterooms on Caribbean and Alaska sailings, a rate that took effect on May 11, 2026. This is at the Carnival end of the industry. For two adults on a 7-night cruise, total gratuities come to ${usd(PRICE_FACTS.mscStandardCaribbean.amount * 14)}. Yacht Club guests pay ${usd(PRICE_FACTS.mscSuiteCaribbean.amount)} per person per day. Service charges on bar purchases and spa treatments vary by line and show on your onboard account, so check the folio rather than assuming a flat percentage.`,
         "One unique MSC quirk: gratuity handling varies by market. Sailings departing from European ports sometimes include gratuities in the fare, while Caribbean departures from Miami add them separately. Always check whether your specific fare is gratuity-inclusive or not. The booking confirmation will specify, but the marketing page often does not make this clear.",
       ],
     },
@@ -948,7 +949,7 @@ const celebrityCruiseCostPost: BlogPost = {
     "Celebrity",
     "cruise cost",
     "premium cruise",
-    "Always Included",
+    "All Included",
     "drink package",
   ],
   content: [
@@ -956,21 +957,21 @@ const celebrityCruiseCostPost: BlogPost = {
       heading: "Premium Without the Luxury Price Tag? Let Us Check.",
       paragraphs: [
         "Celebrity Cruises occupies the sweet spot between mainstream lines like Royal Caribbean and true luxury brands like Silversea. Their ships are elegant, the dining is a genuine cut above, and the service feels more polished than the mass-market competition. A 7-night Caribbean cruise on Celebrity starts at $799 to $1,200 per person for a veranda stateroom, which already signals a higher baseline than Carnival or Royal Caribbean.",
-        "Celebrity's \"Always Included\" pricing bundles basic drinks, WiFi, and gratuities into the fare at the base level. This makes the sticker price appear higher but includes costs that other lines charge separately. The question is whether the all-in price is actually competitive once you compare apples to apples. Spoiler: it depends on which tier you choose.",
+        `Celebrity's "All Included" pricing bundles the Classic drinks package and basic WiFi into the fare at the base level; gratuities are charged separately at ${usd(PRICE_FACTS.celebrityStandardGratuity.amount)} per person per day. This makes the sticker price appear higher but includes costs that other lines charge separately. The question is whether the all-in price is actually competitive once you compare apples to apples. Spoiler: it depends on which tier you choose.`,
       ],
     },
     {
-      heading: "Always Included: What the Base Fare Covers",
+      heading: "All Included: What the Bundled Fare Covers",
       paragraphs: [
-        "Celebrity's Always Included fare bundles classic drinks (beer, wine, spirits, specialty coffee), basic WiFi, and gratuities at $18 per person per day into the advertised price. This means the sticker price of $799 to $1,200 per person already includes items that would cost $250 to $400 extra on Carnival or Royal Caribbean.",
-        "The Classic drinks tier covers cocktails, beer, wine by the glass, and specialty coffees. Premium spirits, bottles of wine, and high-end champagne require an upgrade to the Elevate ($89.99/day) or Indulge ($109.99/day) tier. The included WiFi is sufficient for browsing and social media but not streaming. For many passengers, the Always Included tier provides everything they need without a la carte stress.",
+        `Celebrity's All Included fare bundles the Classic drinks package (beer, wine, spirits, specialty coffee) and basic WiFi into the advertised price. Gratuities are no longer bundled: Celebrity charges ${usd(PRICE_FACTS.celebrityStandardGratuity.amount)} per person per day for inside, ocean view, and veranda staterooms, ${usd(PRICE_FACTS.celebrityConciergeGratuity.amount)} for Concierge Class and AquaClass, and ${usd(PRICE_FACTS.celebritySuiteGratuity.amount)} in The Retreat. Even so, the sticker price already includes drinks and WiFi that would cost $250 to $400 extra on Carnival or Royal Caribbean.`,
+        `The Classic drinks tier covers cocktails, beer, wine by the glass, and specialty coffees. Premium spirits, bottles of wine, and high-end champagne require the Premium Beverage Package upgrade, which Celebrity prices by sailing rather than at a fixed daily rate. The included WiFi is sufficient for browsing and social media but not streaming. For many passengers, the All Included tier provides everything they need without a la carte stress.`,
       ],
     },
     {
-      heading: "Upgrading: Elevate and Indulge Tiers",
+      heading: "Upgrading: Premium Drinks and Streaming WiFi",
       paragraphs: [
-        "The Elevate tier at $89.99 per person per day upgrades drinks to premium spirits, adds streaming WiFi, and includes onboard credit. The Indulge tier at $109.99 per person per day adds unlimited premium drinks, unlimited WiFi at the highest speed, and additional onboard credit. For two adults over seven nights, the upgrade from Always Included to Elevate adds approximately $630, and the jump to Indulge adds approximately $1,260.",
-        "The value calculation depends on your drinking habits and connectivity needs. If the Classic drinks package covers your preferences and you do not need to stream video, Always Included is the best value. If you drink top-shelf spirits or need video-call-quality WiFi, the Elevate upgrade pays for itself in two to three days. Indulge is best for luxury-oriented cruisers who want zero friction at every bar and restaurant.",
+        `Celebrity retired its Elevate and Indulge fare tiers in 2023. Today the upgrades are bought individually: the Premium Beverage Package upgrade for top-shelf spirits and wines, and a Premium WiFi upgrade for streaming and video calls. Celebrity does not publish fixed daily prices for either; both are quoted per sailing in the Cruise Planner, and a 20% gratuity is added to beverage packages.`,
+        `The value calculation depends on your drinking habits and connectivity needs. If the Classic drinks package covers your preferences and you do not need to stream video, All Included is the best value. If you drink top-shelf spirits or need video-call-quality WiFi, price the upgrades in the Cruise Planner before sailing, when they are cheapest.`,
       ],
     },
     {
@@ -983,8 +984,8 @@ const celebrityCruiseCostPost: BlogPost = {
     {
       heading: "The Real Celebrity Total",
       paragraphs: [
-        "For two adults on a 7-night cruise with the Always Included tier, a veranda cabin, two specialty dinners, and two excursions, the total runs $3,400 to $4,800. With the Elevate tier, add $630. With Indulge, add $1,260. A bare-bones Always Included cruise with no extras beyond what is bundled costs $2,200 to $3,000 for two, which is competitive with a mid-range Royal Caribbean experience once you account for the included drinks and WiFi.",
-        "Celebrity's genuine advantage is that the Always Included price is closer to what you will actually pay than any other cruise line's advertised fare. The gap between sticker price and real cost is smaller, which makes budgeting easier. Use CruiseKit's True Cost Calculator to compare Celebrity's all-in pricing against equivalent add-on bundles on other lines.",
+        `For two adults on a 7-night cruise with the All Included fare, a veranda cabin, two specialty dinners, and two excursions, the total runs $3,400 to $4,800 before the ${usd(PRICE_FACTS.celebrityStandardGratuity.amount)} per person per day gratuity (${usd(PRICE_FACTS.celebrityStandardGratuity.amount * 14)} for the week). A bare-bones All Included cruise with no extras beyond what is bundled costs $2,200 to $3,000 for two, which is competitive with a mid-range Royal Caribbean experience once you account for the included drinks and WiFi.`,
+        `Celebrity's genuine advantage is that the All Included price is closer to what you will actually pay than most other cruise lines' advertised fares. The gap between sticker price and real cost is smaller, which makes budgeting easier. Use CruiseKit's True Cost Calculator to compare Celebrity's bundled pricing against equivalent add-on bundles on other lines.`,
       ],
     },
   ],
@@ -1084,7 +1085,7 @@ const hollandAmericaCostPost: BlogPost = {
     {
       heading: "Have It All: $60/Day for the Full Package",
       paragraphs: [
-        "The Have It All package includes an unlimited drink package (Signature Beverage Package covering cocktails, beer, wine, and specialty coffees), WiFi for one device, a specialty dining experience, and a shore excursion credit. At $60 per person per day, it is significantly cheaper than equivalent bundles on Norwegian ($70+ after gratuities), Celebrity ($89.99 for Elevate), and Royal Caribbean ($78 for drinks alone).",
+        `The Have It All package includes an unlimited drink package (Signature Beverage Package covering cocktails, beer, wine, and specialty coffees), WiFi for one device, a specialty dining experience, and a shore excursion credit. At ${usd(PRICE_FACTS.hollandAmericaHaveItAll.amount)} per person per day, it is significantly cheaper than equivalent bundles on Norwegian ($70+ after gratuities), Celebrity (drinks are priced into the All Included fare), and Royal Caribbean ($78 for drinks alone).`,
         "Purchased separately, the Signature Beverage Package costs $60 to $75 per day, WiFi runs $15 to $20 per day, one specialty dinner is worth $40 to $60, and excursion credit is worth $50. That is $165 to $205 in a la carte value for $60 per day bundled. Have It All is unambiguously the best bundle deal in mainstream cruising and should be the default choice for any Holland America passenger who drinks.",
       ],
     },
@@ -1106,7 +1107,7 @@ const hollandAmericaCostPost: BlogPost = {
       heading: "The Real Cost and Who Should Book Holland America",
       paragraphs: [
         "For two adults on a 7-night cruise, a base fare without Have It All plus individual add-ons costs $2,800 to $4,000. With Have It All, the all-in cost drops to $2,400 to $3,600 because the bundle undercuts a la carte pricing so dramatically. A premium experience with Have It All, additional specialty dining, and excursions at every port runs $3,500 to $5,200.",
-        "Holland America is ideal for travelers who prioritize dining quality, destination enrichment, and a relaxed onboard atmosphere over waterparks and late-night parties. The demographic skews older, but younger couples who value food and culture over frenetic activity will find exceptional value here. Compare Holland America's Have It All pricing against Celebrity Always Included and Princess Plus using CruiseKit's True Cost Calculator.",
+        "Holland America is ideal for travelers who prioritize dining quality, destination enrichment, and a relaxed onboard atmosphere over waterparks and late-night parties. The demographic skews older, but younger couples who value food and culture over frenetic activity will find exceptional value here. Compare Holland America's Have It All pricing against Celebrity All Included and Princess Plus using CruiseKit's True Cost Calculator.",
       ],
     },
   ],
@@ -1223,15 +1224,15 @@ const virginVoyagesCostPost: BlogPost = {
     {
       heading: "The Disruptor That Changed the Game — Mostly",
       paragraphs: [
-        "When Richard Branson launched Virgin Voyages in 2021, the pitch was revolutionary: no kids, no buffets, no hidden fees, all dining included, all gratuities included, WiFi included, and a rock-and-roll attitude that made traditional cruise lines look stuffy. Five years later, the reality has evolved. Gratuities were unbundled in 2026 at $20 per person per day. The Bar Tab system replaced any attempt at drink packages. And some of that disruptive edge has softened into a premium product that competes directly with Celebrity.",
+        `When Richard Branson launched Virgin Voyages in 2021, the pitch was revolutionary: no kids, no buffets, no hidden fees, all dining included, all gratuities included, WiFi included, and a rock-and-roll attitude that made traditional cruise lines look stuffy. Five years later, the reality has evolved. Gratuities were unbundled from the fare on October 7, 2025, at ${usd(PRICE_FACTS.virginCurrentPrepaid.amount)} per Sailor per night when prepaid or ${usd(PRICE_FACTS.virginCurrentOnboard.amount)} when settled onboard. The Bar Tab system replaced any attempt at drink packages. And some of that disruptive edge has softened into a premium product that competes directly with Celebrity.`,
         "A 4-to-5-night Caribbean sailing on Scarlet Lady or Valiant Lady starts at $699 to $999 per person. A 7-night voyage runs $1,100 to $1,600. These fares are higher than mainstream lines but include genuinely free dining at all 20-plus restaurants, basic WiFi, group fitness classes, and the line's signature festival-style entertainment. The question is what the add-ons cost beyond that generous baseline.",
       ],
     },
     {
       heading: "Gratuities: $20/Day (Newly Unbundled in 2026)",
       paragraphs: [
-        "In a controversial move, Virgin Voyages unbundled crew gratuities from the fare in early 2026, adding a $20 per person per day charge to onboard accounts. This matches Norwegian's rate as the highest in the industry. For two adults on a 7-night voyage, gratuities total $280. The change was met with significant pushback from loyal Sailors (Virgin's term for repeat guests), who had valued the original all-inclusive gratuity model.",
-        "The unbundling effectively raised the total cost of a Virgin Voyages cruise by $280 per couple per week while allowing the advertised fare to remain flat. It is the same pricing trick every other cruise line uses, and it marks Virgin's slow migration from disruptor to established player. The 18% service charge on bar purchases remains separate from the daily gratuity.",
+        `In a controversial move, Virgin Voyages unbundled crew gratuities from the fare for bookings made on or after October 7, 2025, charging ${usd(PRICE_FACTS.virginCurrentOnboard.amount)} per Sailor per night to onboard accounts, or ${usd(PRICE_FACTS.virginCurrentPrepaid.amount)} per night if prepaid before sailing. The rate is the same for every cabin, RockStar suites included. For two adults on a 7-night voyage, that is ${usd(PRICE_FACTS.virginCurrentOnboard.amount * 14)} onboard or ${usd(PRICE_FACTS.virginCurrentPrepaid.amount * 14)} prepaid. Voyages booked before that date keep gratuities inside the fare. The change was met with significant pushback from loyal Sailors (Virgin's term for repeat guests), who had valued the original all-inclusive gratuity model.`,
+        `The unbundling effectively raised the total cost of a Virgin Voyages cruise by up to ${usd(PRICE_FACTS.virginCurrentOnboard.amount * 14)} per couple per week while allowing the advertised fare to remain flat. It is the same pricing trick every other cruise line uses, and it marks Virgin's slow migration from disruptor to established player. Virgin still adds no service charge on drinks, dining, or spa treatments, so the nightly gratuity is the only tip you will see on the folio.`,
       ],
     },
     {
@@ -1252,7 +1253,7 @@ const virginVoyagesCostPost: BlogPost = {
       heading: "The Real Virgin Voyages Total",
       paragraphs: [
         "For two adults on a 7-night voyage, the minimal-extras experience with included dining, basic WiFi, fitness classes, and moderate drinking costs $3,000 to $4,200 including gratuities and Bar Tab spending. A mid-range experience adding premium WiFi, shore excursions, and heavier bar spending runs $3,800 to $5,500. The premium experience with a Rockstar Suite, unlimited premium drinks via loaded Bar Tab, and excursions at every port reaches $6,000 to $10,000.",
-        "Virgin Voyages' real competition is Celebrity, not Carnival. Both target style-conscious adults who value dining and design. Celebrity's Always Included pricing with drinks and WiFi often lands within 10% of Virgin's all-in cost, making the choice more about vibe than value. Use CruiseKit's True Cost Calculator to compare Virgin Voyages against Celebrity and other premium lines for your specific travel style.",
+        "Virgin Voyages' real competition is Celebrity, not Carnival. Both target style-conscious adults who value dining and design. Celebrity's All Included pricing with drinks and WiFi often lands within 10% of Virgin's all-in cost, making the choice more about vibe than value. Use CruiseKit's True Cost Calculator to compare Virgin Voyages against Celebrity and other premium lines for your specific travel style.",
       ],
     },
   ],
@@ -1299,13 +1300,13 @@ const norwegianVsRoyalCaribbeanPost: BlogPost = {
       heading: "Gratuities: Norwegian Costs $119 More Per Couple Per Week",
       paragraphs: [
         "Royal Caribbean charges $16 to $18.50 per person per day depending on cabin category. Norwegian charges $20 per person per day for standard staterooms. For two adults in balcony cabins over seven nights, Royal Caribbean's gratuities total $245 while Norwegian's total $280. That is a $35 difference on standard gratuities alone.",
-        "But Norwegian's Free at Sea Open Bar adds a separate $21.80-per-person-per-day gratuity. For two adults over seven nights, that is an additional $305.20. Royal Caribbean's Deluxe Beverage Package gratuity is included in the dynamic package price (18% built into the quoted daily rate). Total gratuity burden: Royal Caribbean at $245 versus Norwegian at $585. Norwegian costs $340 more in gratuities when the open bar perk is active. Over a week for two people, that is $119 more than the standard gratuity gap suggests.",
+        `But Norwegian's Free at Sea Open Bar adds a separate ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)}-per-person-per-day gratuity. For two adults over seven nights, that is an additional ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 14)}. Royal Caribbean's Deluxe Beverage Package gratuity is included in the dynamic package price (18% built into the quoted daily rate). Total gratuity burden: Royal Caribbean at ${usdRounded(PRICE_FACTS.royalCaribbeanStandardGratuity.amount * 14)} versus Norwegian at ${usdRounded((PRICE_FACTS.nclFreeAtSeaAdult.amount + PRICE_FACTS.nclStandardGratuity.amount) * 14)}. Norwegian costs ${usdRounded((PRICE_FACTS.nclFreeAtSeaAdult.amount + PRICE_FACTS.nclStandardGratuity.amount - PRICE_FACTS.royalCaribbeanStandardGratuity.amount) * 14)} more in gratuities when the open bar perk is active. Over a week for two people, that is ${usdRounded(PRICE_FACTS.nclFreeAtSeaAdult.amount * 14)} more than the standard gratuity gap suggests.`,
       ],
     },
     {
       heading: "Drinks: Free at Sea Open Bar vs Deluxe Beverage Package",
       paragraphs: [
-        "Norwegian's Free at Sea Open Bar covers drinks up to $15 at no package cost beyond the $21.80-per-day gratuity. Royal Caribbean's Deluxe Beverage Package costs approximately $78 per day including the 18% gratuity and covers drinks up to $14. For two adults over seven nights: Norwegian's bar cost is $305.20 (gratuity only), while Royal Caribbean's is $1,092 (package price including gratuity).",
+        `Norwegian's Free at Sea Open Bar covers drinks up to $15 at no package cost beyond the ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)}-per-day gratuity. Royal Caribbean's Deluxe Beverage Package costs approximately $78 per day including the 18% gratuity and covers drinks up to $14. For two adults over seven nights: Norwegian's bar cost is ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 14)} (gratuity only), while Royal Caribbean's is $1,092 (package price including gratuity).`,
         "On drinks alone, Norwegian saves $787 per couple per week. This is Norwegian's single biggest value advantage. However, Norwegian's base fare is $200 to $400 higher, and the drink perk is only available to guests who selected it as one of their Free at Sea perks. Balcony guests who choose three perks (open bar, WiFi, specialty dining) get the most complete bundle.",
       ],
     },
@@ -1335,7 +1336,7 @@ const celebrityVsPrincessPost: BlogPost = {
   slug: "celebrity-vs-princess",
   title: "Celebrity vs Princess: Which Premium Line Costs Less?",
   excerpt:
-    "Celebrity's Always Included at $89.99/day vs Princess Plus at $65/day. We compare the two leading premium cruise lines on every cost dimension.",
+    `Celebrity's All Included fare vs Princess Plus at ${usd(PRICE_FACTS.princessPlusAdvance.amount)}/day. We compare the two leading premium cruise lines on every cost dimension.`,
   category: "comparison",
   author: "CruiseKit",
   publishedDate: "2026-03-18",
@@ -1360,15 +1361,15 @@ const celebrityVsPrincessPost: BlogPost = {
     {
       heading: "Base Fare and What Is Included",
       paragraphs: [
-        "Celebrity Beyond starts at $899 per person for an Infinite Veranda stateroom with Always Included pricing. That fare bundles Classic drinks (cocktails, wine, beer, specialty coffee), basic WiFi, and $18-per-day gratuities. Sun Princess starts at $799 per person for a balcony stateroom at the base fare (no bundle). Adding Princess Plus at $65 per day brings the effective price to $1,254 per person for 7 nights.",
+        `Celebrity Beyond starts at $899 per person for an Infinite Veranda stateroom with All Included pricing. That fare bundles Classic drinks (cocktails, wine, beer, specialty coffee) and basic WiFi; gratuities of ${usd(PRICE_FACTS.celebrityStandardGratuity.amount)} per person per day are added onboard. Sun Princess starts at $799 per person for a balcony stateroom at the base fare (no bundle). Adding Princess Plus at ${usd(PRICE_FACTS.princessPlusAdvance.amount)} per day brings the effective price to $1,254 per person for 7 nights.`,
         "Apples to apples with drinks, WiFi, and gratuities included: Celebrity costs $899 per person while Princess Plus costs $1,254 per person for 7 nights. But wait: Celebrity's base fare already includes those bundles, so the $899 is the all-in comparison point. Princess's $799 base plus $455 in Princess Plus equals $1,254. Celebrity is cheaper by $355 per person, or $710 per couple. This surprised us.",
       ],
     },
     {
       heading: "Drink Quality and WiFi Speed",
       paragraphs: [
-        "Celebrity's Always Included drinks cover a Classic selection of spirits, cocktails, wines by the glass, and specialty coffees. The Elevate upgrade at $89.99 per day adds premium spirits and better wines. Princess Plus includes the Premier Beverage Package which covers a wider selection at the base tier than Celebrity's Classic, including some premium options.",
-        "For drink quality at the included level, Princess Plus arguably offers a slightly better selection than Celebrity's Classic tier. But Celebrity's Elevate tier at $89.99 per day surpasses both. WiFi comparison: Celebrity's basic WiFi is browsing-speed with no streaming. Princess Plus WiFi supports browsing on one device. For streaming and multi-device, both lines charge $15 to $30 per day extra. This category is essentially a tie.",
+        `Celebrity's All Included drinks cover a Classic selection of spirits, cocktails, wines by the glass, and specialty coffees. The Premium Beverage Package upgrade, priced per sailing in the Cruise Planner, adds premium spirits and better wines. Princess Plus includes the Premier Beverage Package which covers a wider selection at the base tier than Celebrity's Classic, including some premium options.`,
+        `For drink quality at the included level, Princess Plus arguably offers a slightly better selection than Celebrity's Classic tier. But Celebrity's Premium Beverage Package upgrade surpasses both. WiFi comparison: Celebrity's basic WiFi is browsing-speed with no streaming. Princess Plus WiFi supports browsing on one device. For streaming and multi-device, both lines charge $15 to $30 per day extra. This category is essentially a tie.`,
       ],
     },
     {
@@ -1381,8 +1382,8 @@ const celebrityVsPrincessPost: BlogPost = {
     {
       heading: "The Total Cost Verdict",
       paragraphs: [
-        "For two adults on a 7-night premium cruise with bundled drinks, WiFi, and gratuities: Celebrity Always Included costs $3,200 to $4,200. Princess Plus costs $3,400 to $4,600. Celebrity is $200 to $400 cheaper for equivalent bundled experiences, which is counterintuitive given Celebrity's reputation as the more premium line.",
-        "Princess Premier narrows the gap by adding specialty dining and photos, which Celebrity charges extra for. With Premier, Princess costs $3,900 to $5,100, still slightly more than Celebrity's Always Included plus two specialty dinners ($3,600 to $4,800). The bottom line: Celebrity offers better value at the standard bundle tier, while Princess Premier is competitive for travelers who want the most inclusive experience possible.",
+        `For two adults on a 7-night premium cruise with bundled drinks, WiFi, and gratuities: Celebrity All Included costs $3,200 to $4,200 plus its ${usd(PRICE_FACTS.celebrityStandardGratuity.amount)} per person per day gratuities (about ${usdRounded(PRICE_FACTS.celebrityStandardGratuity.amount * 14)} for two). Princess Plus, which bundles crew appreciation, costs $3,400 to $4,600. That leaves the two lines within a few hundred dollars of each other for equivalent bundled experiences, closer than Celebrity's premium reputation suggests.`,
+        `Princess Premier narrows the gap by adding specialty dining and photos, which Celebrity charges extra for. With Premier, Princess costs $3,900 to $5,100, still slightly more than Celebrity's All Included plus two specialty dinners ($3,600 to $4,800). The bottom line: Celebrity offers better value at the standard bundle tier, while Princess Premier is competitive for travelers who want the most inclusive experience possible.`,
         "Choose Celebrity for superior dining quality, modern ship design, and a slightly younger demographic. Choose Princess for the MedallionClass technology, the Premier all-inclusive tier, and a more traditional cruise atmosphere. Both are excellent premium lines. Use CruiseKit's True Cost Calculator to compare both with your specific dates, cabin type, and must-have add-ons.",
       ],
     },
@@ -1429,14 +1430,14 @@ const mscVsNorwegianPost: BlogPost = {
     {
       heading: "Gratuities and Service Charges",
       paragraphs: [
-        "MSC charges $16 per person per day. Norwegian charges $20 per person per day plus $21.80 per day for the Free at Sea open bar perk. For two adults over seven nights: MSC's gratuities total $224, while Norwegian's total $585 with the bar perk active. Norwegian costs $361 more in gratuities alone, which erases most of the base-fare difference.",
+        `MSC charges ${usd(PRICE_FACTS.mscStandardCaribbean.amount)} per person per day. Norwegian charges ${usd(PRICE_FACTS.nclStandardGratuity.amount)} per person per day plus ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per day for the Free at Sea open bar perk. For two adults over seven nights: MSC's gratuities total ${usdRounded(PRICE_FACTS.mscStandardCaribbean.amount * 14)}, while Norwegian's total ${usdRounded((PRICE_FACTS.nclFreeAtSeaAdult.amount + PRICE_FACTS.nclStandardGratuity.amount) * 14)} with the bar perk active. Norwegian costs ${usdRounded((PRICE_FACTS.nclFreeAtSeaAdult.amount + PRICE_FACTS.nclStandardGratuity.amount - PRICE_FACTS.mscStandardCaribbean.amount) * 14)} more in gratuities alone, which erases most of the base-fare difference.`,
         "This is the hidden math that most comparison articles miss. Norwegian's \"free\" open bar costs $305 in gratuities for a couple. MSC's standalone all-inclusive drink package costs $700 to $980. Norwegian's gratuity approach is cheaper than buying MSC's drink package, but it is not free.",
       ],
     },
     {
       heading: "Drinks, WiFi, and Dining Compared",
       paragraphs: [
-        "Norwegian's Free at Sea Open Bar covers drinks up to $15 for the gratuity cost of $21.80 per day. MSC's Premium Extra package at $85 per day bundles drinks, WiFi, specialty dining, and priority boarding. For drink-only comparison: Norwegian's perk costs $305.20 per couple per week (gratuity). MSC's standalone drink package costs $700 to $980 per couple per week. Norwegian wins on bar value by $400 to $675.",
+        `Norwegian's Free at Sea Open Bar covers drinks up to $15 for the gratuity cost of ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per day. MSC's Premium Extra package at $85 per day bundles drinks, WiFi, specialty dining, and priority boarding. For drink-only comparison: Norwegian's perk costs ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 14)} per couple per week (gratuity). MSC's standalone drink package costs $700 to $980 per couple per week. Norwegian wins on bar value by $300 to $580.`,
         "WiFi: Norwegian includes 150 minutes (21 minutes per day) while MSC's base fare includes nothing. MSC's WiFi costs $15 to $25 per day. Norwegian's perk is barely functional for modern connectivity needs. Both require upgrades for real internet use, at comparable prices. Specialty dining: Norwegian includes 3 meals with the Free at Sea dining perk. MSC charges $30 to $60 per specialty meal. Edge to Norwegian by $90 to $180.",
       ],
     },
@@ -1484,14 +1485,14 @@ const virginVsCelebrityPost: BlogPost = {
     {
       heading: "What Is Included: Different Strengths",
       paragraphs: [
-        "Celebrity's Always Included fare bundles Classic drinks, basic WiFi, and $18-per-day gratuities. A 7-night veranda stateroom starts at $899 per person with all three included. Virgin Voyages includes all dining at 20-plus restaurants, basic WiFi, and group fitness. A 7-night Sea Terrace cabin starts at $1,100 per person, but gratuities at $20 per day are charged separately, adding $140 per person.",
+        `Celebrity's All Included fare bundles Classic drinks and basic WiFi; gratuities of ${usd(PRICE_FACTS.celebrityStandardGratuity.amount)} per person per day are added onboard. A 7-night veranda stateroom starts at $899 per person with both included. Virgin Voyages includes all dining at 20-plus restaurants, basic WiFi, and group fitness. A 7-night Sea Terrace cabin starts at $1,100 per person, but gratuities of ${usd(PRICE_FACTS.virginCurrentPrepaid.amount)} per night prepaid (${usd(PRICE_FACTS.virginCurrentOnboard.amount)} onboard) are charged separately, adding ${usdRounded(PRICE_FACTS.virginCurrentPrepaid.amount * 7)} per person.`,
         "The key difference: Celebrity includes drinks but charges for specialty dining ($35 to $75 per meal). Virgin includes all dining but charges for every drink individually. For a couple that eats at two specialty restaurants and has four drinks per day, the included values roughly offset each other. The deciding factor is whether you value free dining or free drinks more.",
       ],
     },
     {
       heading: "Drinks: Celebrity's Bundle vs Virgin's Bar Tab",
       paragraphs: [
-        "Celebrity's Always Included Classic drinks package covers cocktails, wine, beer, and specialty coffees at no additional cost. For moderate drinkers having three to four drinks per day, this represents $200 to $280 in value per person per week. The Elevate upgrade at $89.99 per day adds premium spirits.",
+        `Celebrity's All Included Classic drinks package covers cocktails, wine, beer, and specialty coffees at no additional cost. For moderate drinkers having three to four drinks per day, this represents $200 to $280 in value per person per week. The Premium Beverage Package upgrade, priced per sailing, adds premium spirits.`,
         "Virgin's Bar Tab system charges per drink with no package option. At an average of $13 per cocktail, a moderate drinker spending on three to four drinks per day racks up $273 to $364 per person per week plus 18% service charge, totaling $322 to $430. For drinkers, Celebrity saves $120 to $150 per person per week at the base tier. For non-drinkers, Virgin's model saves money because you pay nothing.",
       ],
     },
@@ -1505,7 +1506,7 @@ const virginVsCelebrityPost: BlogPost = {
     {
       heading: "The Total Cost Verdict for Two Adults",
       paragraphs: [
-        "For two moderate drinkers on a 7-night cruise with specialty dining and basic WiFi: Celebrity Always Included plus two specialty dinners totals $3,600 to $4,800. Virgin Voyages with Bar Tab spending, gratuities, and included dining totals $3,400 to $4,600. The prices are remarkably close, within $200 of each other.",
+        `For two moderate drinkers on a 7-night cruise with specialty dining and basic WiFi: Celebrity All Included plus two specialty dinners and ${usdRounded(PRICE_FACTS.celebrityStandardGratuity.amount * 14)} in gratuities totals $3,900 to $5,100. Virgin Voyages with Bar Tab spending, gratuities, and included dining totals $3,400 to $4,600. The prices are remarkably close, within $200 of each other.`,
         "For heavy drinkers: Celebrity wins by $300 to $500 because the included drink package caps your bar spending. For non-drinkers who love dining: Virgin wins by $400 to $600 because all restaurants are free and you spend nothing at the bar. For the average couple who drinks moderately and enjoys restaurant variety, the two lines are nearly identical in total cost.",
         "The real differentiator is not price but vibe. Choose Celebrity for polished elegance, a slightly older crowd, and the familiarity of a traditional cruise enhanced with premium touches. Choose Virgin for bold design, a younger energy, festival-style entertainment, and the freedom of 20 included restaurants. Use CruiseKit's True Cost Calculator to compare both with your exact drinking habits and dining preferences.",
       ],
@@ -1521,7 +1522,7 @@ const carnivalVsMscPost: BlogPost = {
   slug: "carnival-vs-msc",
   title: "Carnival vs MSC: The Real Budget Cruise Comparison",
   excerpt:
-    "Carnival starts at $374 with CHEERS! at $82.54/day. MSC starts at $249 with Premium Extra at $85/day. We compared the two budget kings on every cost dimension.",
+    `Carnival starts at $374 with CHEERS! at ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)}/day. MSC starts at $249 with Premium Extra at $85/day. We compared the two budget kings on every cost dimension.`,
   category: "comparison",
   author: "CruiseKit",
   publishedDate: "2026-03-14",
@@ -1553,14 +1554,14 @@ const carnivalVsMscPost: BlogPost = {
     {
       heading: "Gratuities: Carnival Costs $14 More Per Couple Per Week",
       paragraphs: [
-        "Carnival charges $17 per person per day. MSC charges $16 per person per day. For two adults over seven nights: Carnival totals $238 versus MSC at $224. The $14 difference is negligible and both lines sit at the lower end of the industry's gratuity scale.",
+        `Carnival charges ${usd(PRICE_FACTS.carnivalStandardGratuity.amount)} per person per day. MSC charges ${usd(PRICE_FACTS.mscStandardCaribbean.amount)} per person per day on Caribbean and Alaska sailings since May 11, 2026. For two adults over seven nights, both lines total ${usdRounded(PRICE_FACTS.carnivalStandardGratuity.amount * 14)}. There is no meaningful difference, and both lines sit at the lower end of the industry's gratuity scale.`,
         "Both lines charge 18% to 20% service charges on bar purchases and spa treatments. Carnival recently increased their service charge from 18% to 20%, making per-drink costs slightly higher than MSC's. On a $13 cocktail, Carnival's service charge adds $2.60 versus MSC's $2.34. Over 40 drinks in a week, that is a $10 difference. Minor but worth noting.",
       ],
     },
     {
-      heading: "Drink Packages: CHEERS! at $82.54 vs Premium Extra at $85",
+      heading: `Drink Packages: CHEERS! at ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} vs Premium Extra at $85`,
       paragraphs: [
-        "Carnival's CHEERS! package costs $82.54 per day per person after the 20% service charge. MSC's Premium Extra at $85 per day bundles drinks with WiFi, specialty dining credit, and priority boarding. For drinks only, MSC's standalone all-inclusive package costs $50 to $70 per day, making it $12 to $32 per day cheaper than CHEERS! for comparable coverage.",
+        `Carnival's CHEERS! package costs ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day per person after the 20% service charge. MSC's Premium Extra at $85 per day bundles drinks with WiFi, specialty dining credit, and priority boarding. For drinks only, MSC's standalone all-inclusive package costs $50 to $70 per day, making it $14 to $34 per day cheaper than CHEERS! for comparable coverage.`,
         "The cabin-mate rule: Carnival requires all adults in the cabin to buy CHEERS! if one does. MSC does not enforce this restriction on standalone drink packages, though Premium Extra applies to the full cabin. For couples where one person drinks lightly, MSC's a la carte approach saves $400 to $500 per week because the non-drinker does not need to buy a package.",
       ],
     },
@@ -1624,7 +1625,7 @@ const disneyVsCarnivalFamiliesPost: BlogPost = {
       heading: "Dining, Drinks, and Extras for Families",
       paragraphs: [
         "Disney's rotational dining is a genuine differentiator. Arendelle (Frozen-themed with live performances), Worlds of Marvel (interactive menu changes), and 1923 (classic Disney animation) are included in the fare and would cost $50 to $100 per person as specialty experiences on Carnival. For a family of four over seven nights, the included dining value is $600 to $1,200 versus Carnival's buffet-and-main-dining baseline.",
-        "Where Carnival fights back: the CHEERS! drink package gives parents unlimited cocktails for $82.54 per day each ($1,156 for two over seven nights). Disney has no drink package, so parents paying $13 per cocktail will spend $430 to $650 for the same consumption level. Carnival's drink package saves drinking parents $275 to $500 over Disney's per-drink model. Carnival also offers significantly cheaper WiFi ($20.40/day vs Disney's $16 to $49/day) and cheaper shore excursions.",
+        `Where Carnival fights back: the CHEERS! drink package gives parents unlimited cocktails for ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day each (${usdRounded(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 14)} for two over seven nights). Disney has no drink package, so parents paying $13 per cocktail will spend $430 to $650 for the same consumption level. Carnival's drink package saves drinking parents $275 to $500 over Disney's per-drink model. Carnival also offers significantly cheaper WiFi ($20.40/day vs Disney's $16 to $49/day) and cheaper shore excursions.`,
       ],
     },
     {
@@ -1711,7 +1712,7 @@ const howMuchCruiseCost2026Post: BlogPost = {
     {
       heading: "The Big Optional Add-Ons That Feel Mandatory",
       paragraphs: [
-        "Technically these are optional. Realistically, most cruisers buy at least two of them. Drink packages are the single biggest add-on. Carnival's CHEERS! package runs $82.54 per day all-in with the 20% service charge. Royal Caribbean's Deluxe Beverage Package averages $78 per day plus 18% gratuity, landing at roughly $92 per day. Celebrity's Classic package is $89.99 plus 20% gratuity. Norwegian includes a basic open bar with its Free at Sea promo, but the mandatory $21.80 per day drink gratuity still applies. For two adults over seven nights, drink packages add $840 to $1,540 depending on the cruise line.",
+        `Technically these are optional. Realistically, most cruisers buy at least two of them. Drink packages are the single biggest add-on. Carnival's CHEERS! package runs ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day all-in with the 20% service charge. Royal Caribbean's Deluxe Beverage Package averages $78 per day plus 18% gratuity, landing at roughly $92 per day. Celebrity's Classic package is $89.99 plus 20% gratuity. Norwegian includes a basic open bar with its Free at Sea promo, but the mandatory ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per day drink gratuity still applies. For two adults over seven nights, drink packages add $840 to $1,540 depending on the cruise line.`,
         "WiFi is the next budget hit. Despite being on a ship in the middle of the ocean, most people cannot go a week without internet. Carnival's Premium WiFi costs $25.50 per day. Royal Caribbean's VOOM Surf and Stream averages $22 per day. Norwegian's streaming WiFi runs $39.99 per day, though basic WiFi is included with Free at Sea. For one device over seven days, budget $154 to $280. Two devices and you are looking at $308 to $560 for the week.",
         "Shore excursions are the other big-ticket item. The average excursion costs $85 to $100 per person per port across all major cruise lines. A typical 7-night Caribbean itinerary has three port stops. If both adults do one excursion at each port, that is $510 to $600 for the trip. Specialty dining adds another layer — Carnival averages $38 per person per meal, Royal Caribbean averages $55, and Norwegian averages $50. Even two specialty dinners for two people adds $152 to $220.",
       ],
@@ -1719,9 +1720,9 @@ const howMuchCruiseCost2026Post: BlogPost = {
     {
       heading: "Real Budget Examples: 7-Night Caribbean for Two Adults",
       paragraphs: [
-        "Let us run the numbers on three real scenarios using verified 2026 pricing. Scenario one: Carnival, mid-range experience. Base fare at $400 per person times two equals $800. Port fees at $22 per person per day times two times seven equals $308. Gratuities at $17 per person per day times two times seven equals $238. CHEERS! drink package at $82.54 per day times two times seven equals $1,156. Premium WiFi for one device at $25.50 times seven equals $179. Two specialty dinners at $38 per person times two people times two dinners equals $152. Two shore excursions per person at $90 average times two people times two ports equals $360. Grand total: approximately $3,193. The advertised price was $800.",
+        `Let us run the numbers on three real scenarios using verified 2026 pricing. Scenario one: Carnival, mid-range experience. Base fare at $400 per person times two equals $800. Port fees at $22 per person per day times two times seven equals $308. Gratuities at $17 per person per day times two times seven equals $238. CHEERS! drink package at ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day times two times seven equals ${usdRounded(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 14)}. Premium WiFi for one device at $25.50 times seven equals $179. Two specialty dinners at $38 per person times two people times two dinners equals $152. Two shore excursions per person at $90 average times two people times two ports equals $360. Grand total: approximately $3,212. The advertised price was $800.`,
         "Scenario two: Royal Caribbean, mid-range on an Oasis-class ship. Base fare at $650 per person times two equals $1,300. Port fees at $308. Gratuities at $18.50 per person per day times two times seven equals $259. Deluxe Beverage Package at $92 per day all-in times two times seven equals $1,288. WiFi at $22 per day times seven equals $154. Two specialty dinners at $55 average times two people times two equals $220. Two excursions per person at $100 times two times two equals $400. Grand total: approximately $3,929. The advertised price was $1,300.",
-        "Scenario three: Norwegian, mid-range with Free at Sea. Base fare at $700 per person times two equals $1,400. Port fees at $308. Gratuities at $20 per person per day times two times seven equals $280. Free at Sea drink gratuity at $21.80 per day times two times seven equals $305 (drinks are \"included\" but the gratuity is mandatory). Free at Sea Plus upgrade at $49.99 per day times two times seven equals $700 for streaming WiFi and premium spirits. Two specialty dinners at $50 times two times two equals $200. Two excursions at $100 times two times two equals $400. Grand total: approximately $3,593. The advertised price was $1,400.",
+        `Scenario three: Norwegian, mid-range with Free at Sea. Base fare at $700 per person times two equals $1,400. Port fees at $308. Gratuities at $20 per person per day times two times seven equals $280. Free at Sea drink gratuity at ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per day times two times seven equals $305 (drinks are "included" but the gratuity is mandatory). Free at Sea Plus upgrade at $49.99 per day times two times seven equals $700 for streaming WiFi and premium spirits. Two specialty dinners at $50 times two times two equals $200. Two excursions at $100 times two times two equals $400. Grand total: approximately $3,687. The advertised price was $1,400.`,
       ],
     },
     {
@@ -1804,8 +1805,8 @@ const fifteenHiddenCostsPost: BlogPost = {
     {
       heading: "3. Drink Packages — $840 to $1,540 for Two People",
       paragraphs: [
-        "The drink package is the single most expensive add-on on any cruise. Carnival's CHEERS! Beverage Program runs $82.54 per day including the 20% service charge. Royal Caribbean's Deluxe Beverage Package averages $78 per day plus 18% gratuity, landing at about $92 per day all-in. Celebrity's Classic Beverage Package is $89.99 plus 20% gratuity. MSC's Premium Extra package is $85 per day. Holland America's Elite package is $65.95 plus 18% gratuity.",
-        "The catch that surprises most first-time cruisers: on Carnival, Royal Caribbean, Holland America, and several other lines, if one adult in the cabin buys the drink package, ALL adults in the same cabin must buy it too. No exceptions. So if your partner only drinks one glass of wine at dinner, you are still buying two full packages. For two adults over seven nights, that is $840 to $1,540 depending on the line. Norwegian is the notable exception — their Free at Sea promo includes an open bar, though you will still pay $21.80 per day in mandatory drink gratuity per person.",
+        `The drink package is the single most expensive add-on on any cruise. Carnival's CHEERS! Beverage Program runs ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day including the 20% service charge. Royal Caribbean's Deluxe Beverage Package averages $78 per day plus 18% gratuity, landing at about $92 per day all-in. Celebrity's Classic Beverage Package is $89.99 plus 20% gratuity. MSC's Premium Extra package is $85 per day. Holland America's Elite package is $65.95 plus 18% gratuity.`,
+        `The catch that surprises most first-time cruisers: on Carnival, Royal Caribbean, Holland America, and several other lines, if one adult in the cabin buys the drink package, ALL adults in the same cabin must buy it too. No exceptions. So if your partner only drinks one glass of wine at dinner, you are still buying two full packages. For two adults over seven nights, that is $840 to $1,540 depending on the line. Norwegian is the notable exception — their Free at Sea promo includes an open bar, though you will still pay ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)} per day in mandatory drink gratuity per person.`,
       ],
     },
     {
@@ -1937,7 +1938,7 @@ const carnivalVsRoyalCaribbeanComparisonPost: BlogPost = {
       paragraphs: [
         "Base fares tell one story. Total cost tells another. Carnival's 7-night Caribbean sailings start at $249 to $499 per person for interior cabins depending on the ship and date. Royal Caribbean's non-Icon ships start at $499 to $899. Icon of the Seas starts at $1,294. On raw sticker price, Carnival wins every time — and it is not close.",
         "But the sticker price is misleading because the two lines charge different mandatory costs. Carnival's gratuities are $17 per person per day versus Royal Caribbean's $18.50. That is only a $1.50 daily difference — $21 total over seven nights for two people. Port fees are identical at $22 per person per day on Caribbean routes. Where the gap gets interesting is add-ons.",
-        "Carnival's CHEERS! drink package costs $82.54 per day all-in with the 20% service charge. Royal Caribbean's Deluxe Beverage Package averages $78 per day plus 18% gratuity, landing at about $92 per day. On a budget sailing, RCI's drink package can actually be cheaper per day before the gratuity calculation. On a peak sailing, Carnival is cheaper. For WiFi, Carnival's Premium tier is $25.50 per day versus RCI's $22. Slight edge to Royal Caribbean. When you add everything up, a \"fully loaded\" Carnival trip for two runs $2,800 to $4,000, while the equivalent on Royal Caribbean runs $3,500 to $5,200. The gap is real but it is a 25 to 30 percent premium, not the 100 percent gap the base fares suggest.",
+        `Carnival's CHEERS! drink package costs ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day all-in with the 20% service charge. Royal Caribbean's Deluxe Beverage Package averages $78 per day plus 18% gratuity, landing at about $92 per day. On a budget sailing, RCI's drink package can actually be cheaper per day before the gratuity calculation. On a peak sailing, Carnival is cheaper. For WiFi, Carnival's Premium tier is $25.50 per day versus RCI's $22. Slight edge to Royal Caribbean. When you add everything up, a "fully loaded" Carnival trip for two runs $2,800 to $4,000, while the equivalent on Royal Caribbean runs $3,500 to $5,200. The gap is real but it is a 25 to 30 percent premium, not the 100 percent gap the base fares suggest.`,
       ],
     },
     {
@@ -1957,9 +1958,9 @@ const carnivalVsRoyalCaribbeanComparisonPost: BlogPost = {
     {
       heading: "Drink Packages: CHEERS! vs. Deluxe Beverage",
       paragraphs: [
-        "Carnival's CHEERS! Beverage Program costs $82.54 per day all-in (that includes the 20% service charge that Carnival raised from 18%). It covers unlimited alcoholic and non-alcoholic drinks up to $20 per glass. The pre-cruise price is lower than onboard — if you wait to buy the package on the ship, it jumps to $90.60 per day plus the 20% charge. Carnival also offers CHEERS! Zero Proof for non-drinkers at $43.95 per day and Bottomless Bubbles for sodas at $11.99 per day.",
+        `Carnival's CHEERS! Beverage Program costs ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)} per day all-in (that includes the 20% service charge that Carnival raised from 18%). It covers unlimited alcoholic and non-alcoholic drinks up to $20 per glass. The pre-cruise price is lower than onboard — if you wait to buy the package on the ship, it jumps to $90.60 per day plus the 20% charge. Carnival also offers CHEERS! Zero Proof for non-drinkers at $43.95 per day and Bottomless Bubbles for sodas at $11.99 per day.`,
         "Royal Caribbean's Deluxe Beverage Package averages $78 per day plus 18% gratuity, making the all-in cost approximately $92 per day. However, RCI uses dynamic pricing — the package can range from $56 to $120 per day depending on the ship, sailing date, and demand. On off-season sailings, you might pay less than Carnival. On peak sailings aboard Icon of the Seas, you will pay significantly more. RCI also offers a Refreshment Package (non-alcoholic) at $31 per day plus gratuity and a Classic Soda Package at $13.50 per day plus gratuity.",
-        "Both lines enforce the all-adults-must-buy rule. If one person in your cabin gets the package, everyone of legal drinking age must get it too. For two moderate drinkers over seven days, Carnival costs $1,156 and Royal Caribbean costs $1,092 to $1,288 depending on pricing. For heavy drinkers, both packages pay for themselves at about five drinks per day.",
+        `Both lines enforce the all-adults-must-buy rule. If one person in your cabin gets the package, everyone of legal drinking age must get it too. For two moderate drinkers over seven days, Carnival costs ${usdRounded(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount * 14)} and Royal Caribbean costs $1,092 to $1,288 depending on pricing. For heavy drinkers, both packages pay for themselves at about five drinks per day.`,
       ],
     },
     {

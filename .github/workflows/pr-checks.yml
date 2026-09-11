@@ -35,6 +35,9 @@ jobs:
       - name: Web lint
         run: pnpm --filter web lint
 
+      - name: Web unit tests (includes price-fact freshness gate)
+        run: pnpm --filter web test
+
       - name: Functions lint
         run: pnpm --filter cruisekit-functions lint
 

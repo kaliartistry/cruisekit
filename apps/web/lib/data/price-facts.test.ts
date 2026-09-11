@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   getDrinkPackagePurchasePricePair,
@@ -53,4 +55,35 @@ describe("material price fact governance", () => {
     expect(PRICE_FACTS.carnivalWifiPremiumOnboard.category).toBe("wifi");
     expect(PRICE_FACTS.carnivalWifiPremiumOnboard.status).toBe("official");
   });
+});
+
+describe("prose does not reintroduce retired price figures", () => {
+  // Figures that were verified wrong or stale in the 2026-09 price audit.
+  // Prose must interpolate PRICE_FACTS (see usd/usdRounded) instead.
+  const retired = [
+    "$82.54",
+    "$68.78",
+    "$21.80",
+    "$152.60",
+    "$305.20",
+    "$585.20",
+    "$41.80",
+    "$165.08",
+    "$1,155",
+    "$1,156",
+    "Always Included",
+    "unbundled in 2026",
+    "early 2026",
+    "18% service charge on bar purchases",
+    "$60.95/day",
+    "$65.95/day",
+    "$17.50 for balcony",
+  ];
+  for (const file of ["blog-posts.ts", "guides.ts"]) {
+    it(`keeps ${file} free of retired figures`, () => {
+      const text = readFileSync(resolve(__dirname, file), "utf8");
+      const found = retired.filter((token) => text.includes(token));
+      expect(found).toEqual([]);
+    });
+  }
 });

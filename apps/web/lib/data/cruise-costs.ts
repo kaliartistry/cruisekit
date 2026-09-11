@@ -118,7 +118,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
         },
         {
           name: "Bottomless Bubbles",
-          pricePerDay: 11.99,
+          pricePerDay: PRICE_FACTS.carnivalBottomlessBubblesAdult.amount,
           description: "Unlimited fountain sodas (adult pricing)",
         },
       ],
@@ -297,13 +297,13 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
         name: "Free at Sea",
         pricePerDay: 0,
         includes: [
-          "Open bar (mandatory $21.80/day gratuity)",
+          "Open bar (mandatory $28.50/day gratuity per guest 21+, pre-cruise rate; $12.50/day soda package for ages 3-20)",
           "3 specialty dining meals",
           "150 WiFi minutes",
           "$50 shore excursion credit (guest 1)",
         ],
         description:
-          "Promotional bundle included with most bookings. Gratuity on drinks is mandatory at $21.80/day per person.",
+          "Promotional bundle included with most bookings. The open-bar gratuity is mandatory at $28.50/day per guest 21+ when prepaid; the onboard rate varies.",
       },
       {
         name: "Free at Sea Plus",
@@ -521,7 +521,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           name: "Plus Beverage Package",
           pricePerDay: PRICE_FACTS.princessPlusAdvance.amount,
           description:
-            "Full Princess Plus bundle on most ships; includes drinks, crew appreciation, and one-device Wi-Fi.",
+            "Full Princess Plus bundle on most ships (pre-cruise price; $70/day onboard); includes drinks, crew appreciation, and one-device Wi-Fi.",
           includesGratuities: true,
           includesWifi: true,
           verificationStatus: "official",
@@ -530,15 +530,34 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           name: "Premier Beverage Package",
           pricePerDay: PRICE_FACTS.princessPremierAdvance.amount,
           description:
-            "Full Princess Premier bundle on most ships; includes drinks, crew appreciation, and four-device Wi-Fi. Sun/Star Princess are $105/day.",
+            "Full Princess Premier bundle on most ships (pre-cruise price; $105/day onboard); includes drinks, crew appreciation, and four-device Wi-Fi. Sun/Star Princess are $105/day.",
           includesGratuities: true,
           includesWifi: true,
           verificationStatus: "official",
         },
         {
+          name: "Plus Beverage Package (drinks only)",
+          pricePerDay: PRICE_FACTS.princessPlusBeverage.amount,
+          description:
+            "Standalone Plus drinks package without the bundle; crew appreciation and Wi-Fi are charged separately (+ 20% service charge).",
+          verificationStatus: "official",
+        },
+        {
+          name: "Premier Beverage Package (drinks only)",
+          pricePerDay: PRICE_FACTS.princessPremierBeverage.amount,
+          description:
+            "Standalone Premier drinks package without the bundle; crew appreciation and Wi-Fi are charged separately (+ 20% service charge).",
+          verificationStatus: "official",
+        },
+        {
+          name: "Zero-Alcohol Package",
+          pricePerDay: PRICE_FACTS.princessZeroAlcoholBeverage.amount,
+          description: "Unlimited non-alcoholic cocktails, specialty coffees, and sodas (+ 20% service charge)",
+        },
+        {
           name: "Classic Soda Package",
-          pricePerDay: 14.99,
-          description: "Unlimited fountain sodas (+ 18% gratuity)",
+          pricePerDay: PRICE_FACTS.princessClassicSoda.amount,
+          description: "Unlimited fountain sodas (+ 20% service charge)",
         },
       ],
       includedFree: false,
@@ -645,23 +664,23 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "Quench Non-Alcoholic Package",
-          pricePerDay: 17.95,
-          description: "Unlimited non-alcoholic specialty beverages (+ 18% gratuity)",
+          pricePerDay: PRICE_FACTS.hollandAmericaQuenchBeverage.amount,
+          description: "Unlimited non-alcoholic specialty beverages (+ 20% service charge)",
         },
         {
           name: "Signature Beverage Package",
-          pricePerDay: 60.95,
-          description: "Drinks valued at $11 or less (+ 18% gratuity)",
+          pricePerDay: PRICE_FACTS.hollandAmericaSignatureBeverage.amount,
+          description: "Drinks valued at $11 or less (+ 20% service charge)",
         },
         {
           name: "Elite Beverage Package",
-          pricePerDay: 65.95,
-          description: "Drinks valued at $15 or less (+ 18% gratuity)",
+          pricePerDay: PRICE_FACTS.hollandAmericaEliteBeverage.amount,
+          description: "Drinks valued at $15 or less (+ 20% service charge)",
         },
       ],
       includedFree: false,
       notes:
-        "All legal-drinking-age adults in the same stateroom must purchase a drink package if one does. 18% gratuity added to package price.",
+        "All legal-drinking-age adults in the same stateroom must purchase a drink package if one does. 20% service charge added to package price.",
     },
     wifiPackages: {
       tiers: [
@@ -717,7 +736,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
     bundlePackages: [
       {
         name: "Have It All",
-        pricePerDay: 60,
+        pricePerDay: PRICE_FACTS.hollandAmericaHaveItAll.amount,
         includes: [
           "Signature Beverage Package (drinks up to $11)",
           "Surf WiFi",
