@@ -48,8 +48,8 @@ export const PRICE_FACTS = {
     sourceTitle: "Royal Caribbean gratuity FAQ",
     sourceUrl:
       "https://www.royalcaribbean.com/bra/pt/faq/questions/onboard-service-gratuity-expense",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Standard stateroom; automatically applied daily.",
   },
   royalCaribbeanSuiteGratuity: {
@@ -64,8 +64,8 @@ export const PRICE_FACTS = {
     sourceTitle: "Royal Caribbean gratuity FAQ",
     sourceUrl:
       "https://www.royalcaribbean.com/bra/pt/faq/questions/onboard-service-gratuity-expense",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Grand Suite and above; automatically applied daily.",
   },
   carnivalStandardGratuity: {
@@ -112,7 +112,7 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Carnival CHEERS beverage program",
     sourceUrl: "https://www.carnival.com/onboard/cheers",
-    retrievedAt: "2026-09-04",
+    retrievedAt: "2026-09-10",
     recheckBy: "2026-10-04",
     conditions:
       "Purchase by 11:59 PM ET two days before embarkation; all eligible adults in the stateroom must participate.",
@@ -130,7 +130,7 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Carnival CHEERS beverage program Q&A",
     sourceUrl: "https://help.carnival.com/app/answers/detail/a_id/3525",
-    retrievedAt: "2026-09-04",
+    retrievedAt: "2026-09-10",
     recheckBy: "2026-10-04",
     conditions:
       "Purchased after boarding; all eligible adults in the stateroom must participate.",
@@ -246,7 +246,7 @@ export const PRICE_FACTS = {
     sourceTitle: "Norwegian Free at Sea program guide",
     sourceUrl:
       "https://www.ncl.com/sites/default/files/3189550_PRM_Free_at_Sea_Plus_Trade_Launch_Assets_FASvsFASPlus_Rebrand_GSC.pdf",
-    retrievedAt: "2026-09-04",
+    retrievedAt: "2026-09-10",
     recheckBy: "2026-10-04",
     conditions:
       "Current Free at Sea cohort; pre-cruise beverage-package gratuity for guests age 21 and older. Onboard pricing varies.",
@@ -279,8 +279,8 @@ export const PRICE_FACTS = {
     sourceTitle: "Norwegian onboard service charge FAQ",
     sourceUrl: "https://www.ncl.com/faq/what-is-ncl-onboard-service-charge",
     effectiveOn: "2023-01-01",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Guests age 3 and older; Club Balcony Suite and below.",
   },
   nclSuiteGratuity: {
@@ -295,8 +295,8 @@ export const PRICE_FACTS = {
     sourceTitle: "Norwegian onboard service charge FAQ",
     sourceUrl: "https://www.ncl.com/faq/what-is-ncl-onboard-service-charge",
     effectiveOn: "2023-01-01",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Guests age 3 and older; The Haven and Suites.",
   },
   celebrityStandardGratuity: {
@@ -310,8 +310,8 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Celebrity gratuity program FAQ",
     sourceUrl: "https://www.celebritycruises.com/faqs/gratuity-program",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Inside, ocean-view, and veranda staterooms.",
   },
   celebritySuiteGratuity: {
@@ -325,8 +325,8 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Celebrity gratuity program FAQ",
     sourceUrl: "https://www.celebritycruises.com/faqs/gratuity-program",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "The Retreat accommodations; Concierge and AquaClass are $20.50.",
   },
   princessPlusAdvance: {
@@ -341,7 +341,7 @@ export const PRICE_FACTS = {
     sourceTitle: "Princess package comparison",
     sourceUrl:
       "https://www.princess.com/en-int/cruise-deals-promotions/compare-cruise-packages",
-    retrievedAt: "2026-09-04",
+    retrievedAt: "2026-09-10",
     recheckBy: "2026-10-04",
     conditions:
       "Most ships; purchase at least 96 hours before sailing. Includes crew appreciation and one-device Wi-Fi.",
@@ -358,7 +358,7 @@ export const PRICE_FACTS = {
     sourceTitle: "Princess package comparison",
     sourceUrl:
       "https://www.princess.com/en-int/cruise-deals-promotions/compare-cruise-packages",
-    retrievedAt: "2026-09-04",
+    retrievedAt: "2026-09-10",
     recheckBy: "2026-10-04",
     conditions:
       "Most ships; purchase at least 96 hours before sailing. Includes crew appreciation and four-device Wi-Fi. Sun and Star Princess are $105/day.",
@@ -374,8 +374,8 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Princess onboard experience FAQ",
     sourceUrl: "https://www.princess.com/en-int/faq/onboard-experience",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Interior, oceanview, and balcony staterooms; regional exceptions apply.",
   },
   princessMiniSuiteGratuity: {
@@ -389,8 +389,8 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Princess onboard experience FAQ",
     sourceUrl: "https://www.princess.com/en-int/faq/onboard-experience",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Mini-suite, cabana, and Reserve Collection staterooms; regional exceptions apply.",
   },
   princessSuiteGratuity: {
@@ -404,8 +404,8 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Princess onboard experience FAQ",
     sourceUrl: "https://www.princess.com/en-int/faq/onboard-experience",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Suites; regional exceptions apply.",
   },
   hollandAmericaStandardGratuity: {
@@ -420,8 +420,8 @@ export const PRICE_FACTS = {
     sourceTitle: "Holland America crew appreciation FAQ",
     sourceUrl:
       "https://www.hollandamerica.com/en/us/faq/onboard-cruise-experience/onboard-information/is-there-a-crew-appreciation-charge-gratuity-tip",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Non-suite accommodations.",
   },
   hollandAmericaSuiteGratuity: {
@@ -436,8 +436,8 @@ export const PRICE_FACTS = {
     sourceTitle: "Holland America crew appreciation FAQ",
     sourceUrl:
       "https://www.hollandamerica.com/en/us/faq/onboard-cruise-experience/onboard-information/is-there-a-crew-appreciation-charge-gratuity-tip",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Suite accommodations.",
   },
   mscStandardCaribbean: {
@@ -483,8 +483,8 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Disney Cruise Line gratuities FAQ",
     sourceUrl: "https://disneycruise.disney.go.com/en/faq/onboard-services/gratuities/",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Per night for every stateroom guest, including infants and children.",
   },
   disneyConciergeGratuity: {
@@ -498,9 +498,199 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Disney Cruise Line gratuities FAQ",
     sourceUrl: "https://disneycruise.disney.go.com/en/faq/onboard-services/gratuities/",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions: "Per night for every guest in Concierge staterooms and suites.",
+  },
+  carnivalBottomlessBubblesAdult: {
+    id: "carnival.drink-package.bottomless-bubbles.adult",
+    cruiseLineId: "carnival",
+    category: "drink-package",
+    label: "Bottomless Bubbles soda package (adult)",
+    amount: 9.5,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Carnival CHEERS! and Bottomless Bubbles page",
+    sourceUrl: "https://www.carnival.com/drink-packages/cheers-package/",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Adult rate; children $6.95; a 20% service charge is added.",
+  },
+  nclFreeAtSeaMinor: {
+    id: "norwegian.gratuity.free-at-sea-beverage.minor",
+    cruiseLineId: "norwegian",
+    category: "gratuity",
+    label: "Free at Sea soda and juice package for guests aged 3-20",
+    amount: 12.5,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "NCL Free at Sea vs Free at Sea Plus comparison flyer (12/25)",
+    sourceUrl: "https://www.ncl.com/sites/default/files/Free-at-Sea-Plus-Comparison-Flyer_0.pdf",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Charged per guest aged 3-20 in a Free at Sea stateroom instead of the adult open-bar gratuity; guests under 3 are free.",
+  },
+  celebrityConciergeGratuity: {
+    id: "celebrity.gratuity.concierge.current",
+    cruiseLineId: "celebrity",
+    category: "gratuity",
+    label: "Concierge and AquaClass daily gratuity",
+    amount: 20.5,
+    currency: "USD",
+    unit: "person-day",
+    status: "official",
+    sourceTitle: "Celebrity Cruises gratuity program FAQ",
+    sourceUrl: "https://www.celebritycruises.com/faqs/gratuity-program",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Concierge Class and AquaClass staterooms; automatically applied daily.",
+  },
+  princessPlusBeverage: {
+    id: "princess.drink-package.plus-beverage.advance",
+    cruiseLineId: "princess",
+    category: "drink-package",
+    label: "Plus Beverage Package (beverage only)",
+    amount: 64.99,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Princess Cruises beverage packages",
+    sourceUrl: "https://www.princess.com/en-us/cruise-dining/beverages",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Per person per day; 20% service charge applied on all itineraries except Australia.",
+  },
+  princessPremierBeverage: {
+    id: "princess.drink-package.premier-beverage.advance",
+    cruiseLineId: "princess",
+    category: "drink-package",
+    label: "Premier Beverage Package (beverage only)",
+    amount: 84.99,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Princess Cruises beverage packages",
+    sourceUrl: "https://www.princess.com/en-us/cruise-dining/beverages",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Per person per day; 20% service charge applied on all itineraries except Australia.",
+  },
+  princessZeroAlcoholBeverage: {
+    id: "princess.drink-package.zero-alcohol.advance",
+    cruiseLineId: "princess",
+    category: "drink-package",
+    label: "Zero-Alcohol Package",
+    amount: 29.99,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Princess Cruises beverage packages",
+    sourceUrl: "https://www.princess.com/en-us/cruise-dining/beverages",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Per person per day; 20% service charge applied on all itineraries except Australia.",
+  },
+  princessClassicSoda: {
+    id: "princess.drink-package.classic-soda.advance",
+    cruiseLineId: "princess",
+    category: "drink-package",
+    label: "Classic Soda Package",
+    amount: 14.99,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Princess Cruises beverage packages",
+    sourceUrl: "https://www.princess.com/en-us/cruise-dining/beverages",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Per person per day; 20% service charge applied on all itineraries except Australia.",
+  },
+  hollandAmericaQuenchBeverage: {
+    id: "holland-america.drink-package.quench.advance",
+    cruiseLineId: "holland-america",
+    category: "drink-package",
+    label: "Quench non-alcoholic beverage package",
+    amount: 17.95,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Holland America Line beverage packages",
+    sourceUrl: "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Starts-at price per person per day; 20% service charge is applied to beverage purchases.",
+  },
+  hollandAmericaSignatureBeverage: {
+    id: "holland-america.drink-package.signature.advance",
+    cruiseLineId: "holland-america",
+    category: "drink-package",
+    label: "Signature Beverage Package",
+    amount: 55.95,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Holland America Line beverage packages",
+    sourceUrl: "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Drinks up to $11; per person per day; 20% service charge applied.",
+  },
+  hollandAmericaEliteBeverage: {
+    id: "holland-america.drink-package.elite.advance",
+    cruiseLineId: "holland-america",
+    category: "drink-package",
+    label: "Elite Beverage Package",
+    amount: 60.95,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Holland America Line beverage packages",
+    sourceUrl: "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Drinks up to $15; per person per day; 20% service charge applied.",
+  },
+  hollandAmericaHaveItAll: {
+    id: "holland-america.bundle.have-it-all.advance",
+    cruiseLineId: "holland-america",
+    category: "bundle",
+    label: "Have It All package",
+    amount: 65,
+    currency: "USD",
+    unit: "person-day",
+    priceContext: "pre-purchase",
+    status: "official",
+    sourceTitle: "Holland America Line beverage packages",
+    sourceUrl: "https://www.hollandamerica.com/en/us/onboard-packages/beverage-packages",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Per person per day; includes Signature Beverage Package, Surf Wi-Fi, specialty dining, and shore excursion credit.",
+  },
+  hollandAmericaBeverageServiceCharge: {
+    id: "holland-america.service-charge.beverage",
+    cruiseLineId: "holland-america",
+    category: "service-charge",
+    label: "Beverage service charge",
+    amount: 20,
+    currency: "USD",
+    unit: "percent",
+    status: "official",
+    sourceTitle: "Holland America Line crew appreciation FAQ",
+    sourceUrl: "https://www.hollandamerica.com/en/us/faq/onboard-cruise-experience/onboard-information/is-there-a-crew-appreciation-charge-gratuity-tip",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
+    conditions: "Applied to beverage purchases, bar retail, specialty cover charges, and a la carte items; spa and salon carry 18%.",
   },
   virginCurrentPrepaid: {
     id: "virgin-voyages.gratuity.current.prepaid",
@@ -516,8 +706,8 @@ export const PRICE_FACTS = {
     sourceUrl:
       "https://www.virginvoyages.com/faq/before-you-sail/voyagefair-choices",
     effectiveOn: "2025-10-07",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions:
       "Bookings made on or after October 7, 2025 when prepaid before sailing; rate is flat across cabin types.",
   },
@@ -535,8 +725,8 @@ export const PRICE_FACTS = {
     sourceUrl:
       "https://www.virginvoyages.com/faq/before-you-sail/voyagefair-choices",
     effectiveOn: "2025-10-07",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-12-03",
+    retrievedAt: "2026-09-10",
+    recheckBy: "2026-12-09",
     conditions:
       "Bookings made on or after October 7, 2025 when charged onboard; rate is flat across cabin types.",
   },
@@ -632,6 +822,25 @@ export function getWifiPurchasePricePair(
 
 export const MATERIAL_PRICE_FACTS: PriceFact[] = Object.values(PRICE_FACTS);
 
-export function priceFactIsStale(fact: PriceFact, today = "2026-09-04") {
+export function todayIsoDate(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+/**
+ * A fact is stale once its recheck date has passed. The default is the real
+ * current date so the governance test fails when a re-verification is due,
+ * rather than silently passing against a frozen date.
+ */
+export function priceFactIsStale(fact: PriceFact, today = todayIsoDate()) {
   return fact.recheckBy < today;
+}
+
+/** Formats a derived total for prose as whole dollars with thousands separators. */
+export function usdRounded(amount: number): string {
+  return `$${Math.round(amount).toLocaleString("en-US")}`;
+}
+
+/** Formats a fact amount for prose: whole dollars without cents, else 2dp. */
+export function usd(amount: number): string {
+  return Number.isInteger(amount) ? `$${amount}` : `$${amount.toFixed(2)}`;
 }

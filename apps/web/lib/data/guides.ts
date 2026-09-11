@@ -1,3 +1,4 @@
+import { PRICE_FACTS, usd } from "./price-facts";
 /* ------------------------------------------------------------------ */
 /*  Guide Data — First-Timer Cruise Guides for CruiseKit              */
 /* ------------------------------------------------------------------ */
@@ -143,7 +144,7 @@ const firstTimerGuide: Guide = {
         {
           question: "What drinks are included in the cruise fare?",
           answer:
-            "Every cruise line includes water, iced tea, lemonade, drip coffee, and hot tea at no charge. Some lines include more: Virgin Voyages includes sodas and specialty coffee for everyone; Norwegian includes open bar with their Free at Sea promotion (though you pay a mandatory $21.80/day gratuity on it). Most other lines charge for sodas ($3-4 each), specialty coffee ($5-7), and alcoholic drinks ($8-15). That's why drink packages exist — and whether they're worth it depends on how much you drink. See our drink package guide for the full breakdown.",
+            `Every cruise line includes water, iced tea, lemonade, drip coffee, and hot tea at no charge. Some lines include more: Virgin Voyages includes sodas and specialty coffee for everyone; Norwegian includes open bar with their Free at Sea promotion (though every guest 21 and over pays a mandatory ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)}/day gratuity on it at the pre-cruise rate). Most other lines charge for sodas ($3-4 each), specialty coffee ($5-7), and alcoholic drinks ($8-15). That's why drink packages exist \u2014 and whether they're worth it depends on how much you drink. See our drink package guide for the full breakdown.`,
           appliesTo: "All cruise lines",
         },
         {
@@ -401,14 +402,14 @@ const drinkPackageGuide: Guide = {
         {
           question: "How much is the Carnival drink package?",
           answer:
-            "Carnival's CHEERS! Beverage Program costs $82.54/day per person pre-cruise or $90.60/day onboard, plus a 20% gratuity (recently raised from 18%). That makes the real pre-cruise cost about $99/day. The package includes drinks priced at $20 or less — covering most cocktails, beer, wine, sodas, specialty coffee, and bottled water. The 15-drink-per-day limit was quietly removed in 2025. All adults in the cabin must purchase. Their Zero Proof package at $43.95/day is a solid option for non-drinkers who want specialty coffees and premium non-alcoholic beverages.",
+            `Carnival's CHEERS! Beverage Program costs $69.95/day per person pre-cruise or $74.95/day onboard, plus a 20% service charge, which makes the real cost ${usd(PRICE_FACTS.carnivalCheersAdvanceAllIn.amount)}/day before sailing or ${usd(PRICE_FACTS.carnivalCheersOnboardAllIn.amount)}/day onboard. The package includes drinks priced at $20 or less \u2014 covering most cocktails, beer, wine, sodas, specialty coffee, and bottled water \u2014 with a limit of 15 alcoholic drinks per 24-hour period. All adults in the cabin must purchase. Their Zero Proof package at about $44/day is a solid option for non-drinkers who want specialty coffees and premium non-alcoholic beverages.`,
           appliesTo: "Carnival",
         },
         {
           question:
             "Does Norwegian include drinks for free?",
           answer:
-            "Effectively, yes. Norwegian's standard Free at Sea promotion includes open bar for all guests in the booking. However, there's a mandatory $21.80/day per person gratuity on the \"free\" drinks that you cannot remove — so it's not truly free. On a 7-night cruise, that's $152.60 per person just in drink gratuity. The Free at Sea bar covers most standard cocktails, beer, wine, and spirits. As of March 2026, Free at Sea drink packages no longer work at Great Stirrup Cay (Norwegian's private island). You can upgrade to Free at Sea Plus for $49.99/day which adds unlimited streaming WiFi, Starbucks drinks, and premium spirits.",
+            `Effectively, yes. Norwegian's standard Free at Sea promotion includes open bar for all guests in the booking. However, there's a mandatory ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)}/day per person gratuity (pre-cruise rate; the onboard rate varies) on the "free" drinks for every guest aged 21 and over that you cannot remove \u2014 so it's not truly free. On a 7-night cruise, that's ${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 7)} per person just in drink gratuity, and guests aged 3 to 20 are charged ${usd(PRICE_FACTS.nclFreeAtSeaMinor.amount)}/day for a soda and juice package instead. The Free at Sea bar covers most standard cocktails, beer, wine, and spirits. You can upgrade to Free at Sea Plus, which adds unlimited streaming WiFi, Starbucks drinks, premium spirits, prepaid daily service charges, and open bar at Great Stirrup Cay where applicable; NCL quotes the upgrade per sailing, typically around $50/day.`,
           appliesTo: "Norwegian",
         },
         {
@@ -428,7 +429,7 @@ const drinkPackageGuide: Guide = {
           question:
             "How does Holland America handle drink packages?",
           answer:
-            "Holland America offers three standalone drink package tiers: Quench (non-alcoholic) at $17.95/day, Signature (drinks up to $11) at $60.95/day, and Elite (drinks up to $15) at $65.95/day. All are subject to an 18% gratuity. Their Have It All bundle ($60/day) includes the Signature Beverage Package, Surf WiFi, one specialty dinner, and a $100 shore excursion credit — which is often the best deal if you want more than just drinks. All legal-drinking-age adults in the same cabin must purchase a drink package if one does.",
+            `Holland America offers three standalone drink package tiers: Quench (non-alcoholic) from ${usd(PRICE_FACTS.hollandAmericaQuenchBeverage.amount)}/day, Signature (drinks up to $11) at ${usd(PRICE_FACTS.hollandAmericaSignatureBeverage.amount)}/day, and Elite (drinks up to $15) at ${usd(PRICE_FACTS.hollandAmericaEliteBeverage.amount)}/day. All are subject to a 20% service charge. Their Have It All bundle (${usd(PRICE_FACTS.hollandAmericaHaveItAll.amount)}/day) includes the Signature Beverage Package, Surf WiFi, one specialty dinner, and a $100 shore excursion credit \u2014 which is often the best deal if you want more than just drinks. All legal-drinking-age adults in the same cabin must purchase a drink package if one does.`,
           appliesTo: "Holland America",
         },
         {
@@ -529,7 +530,7 @@ const tippingGuide: Guide = {
         {
           question: "Can I remove auto-gratuities from my cruise bill?",
           answer:
-            "Technically, yes — on most cruise lines you can visit Guest Services and request to have auto-gratuities reduced or removed. However, there are strong reasons not to: these gratuities are a significant portion of crew members' income, and the crew works incredibly hard (often 10-14 hour days, 7 days a week, for months at a time away from their families). Some cruise lines have made it increasingly difficult to remove them — requiring an in-person visit to Guest Services and sometimes a conversation about why. Norwegian's drink package gratuity ($21.80/day) cannot be removed at all. Princess and Celebrity include gratuities in their bundle pricing (Plus, Premier, All Included), making them non-removable when you purchase those packages. Our honest advice: budget for gratuities as a non-negotiable part of your cruise cost.",
+            `Technically, yes — on most cruise lines you can visit Guest Services and request to have auto-gratuities reduced or removed. However, there are strong reasons not to: these gratuities are a significant portion of crew members' income, and the crew works incredibly hard (often 10-14 hour days, 7 days a week, for months at a time away from their families). Some cruise lines have made it increasingly difficult to remove them — requiring an in-person visit to Guest Services and sometimes a conversation about why. Norwegian's drink package gratuity (${usd(PRICE_FACTS.nclFreeAtSeaAdult.amount)}/day) cannot be removed at all. Princess and Celebrity include gratuities in their bundle pricing (Plus, Premier, All Included), making them non-removable when you purchase those packages. Our honest advice: budget for gratuities as a non-negotiable part of your cruise cost.`,
           appliesTo: "All cruise lines",
         },
       ],

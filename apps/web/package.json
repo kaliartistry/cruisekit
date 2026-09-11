@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:ports": "vitest run lib/ports/__tests__/port-foundation.test.ts 'app/ports/[port-slug]/port-today-header.test.tsx' 'app/ports/[port-slug]/port-guide-status.test.tsx'"
+    "test:ports": "vitest run lib/ports/__tests__/port-foundation.test.ts 'app/ports/[port-slug]/port-today-header.test.tsx' 'app/ports/[port-slug]/port-guide-status.test.tsx'",
+    "export:mobile-cruise-costs": "EXPORT_MOBILE_CRUISE_COSTS=\"${EXPORT_MOBILE_CRUISE_COSTS:-../../../CruiseKit-Mobile/assets/data/cruise_costs.json}\" vitest run scripts/export-mobile-cruise-costs.test.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
