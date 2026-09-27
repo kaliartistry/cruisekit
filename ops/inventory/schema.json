@@ -1,6 +1,11 @@
 {
-  "generatedAt": "2026-06-26T14:07:40.937Z",
+  "generatedAt": "2026-07-06T15:35:58.784Z",
   "schema": [
+    {
+      "route": "/app",
+      "file": "apps/web/app/app/page.tsx",
+      "schemaDetected": true
+    },
     {
       "route": "/blog/:slug",
       "file": "apps/web/app/blog/[slug]/page.tsx",
