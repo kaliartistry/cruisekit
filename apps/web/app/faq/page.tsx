@@ -94,6 +94,11 @@ const FAQS = [
       "No. CruiseKit does not sell, book, or arrange cruises. We are a planning tool that helps you research and compare before you book directly with a cruise line or your preferred travel agent. Some links on our site are affiliate links, which means we may earn a small commission if you make a purchase through them, but we never handle bookings ourselves.",
   },
   {
+    question: "Is CruiseKit an official cruise line app?",
+    answer:
+      "No. CruiseKit is independent and is not an official cruise line app, certified cruise line product, or cruise line partner. Use CruiseKit for planning context, then verify onboard account details, dining reservations, ship services, ship time, itinerary changes, and sailing-specific rules with the cruise line or onboard sources.",
+  },
+  {
     question: "How accurate is the True Cost Calculator?",
     answer:
       "The True Cost Calculator uses publicly available and manually reviewed pricing inputs for gratuities, drink packages, Wi-Fi, specialty dining, and other common add-ons across major cruise lines. The result is an estimate, not a booking quote. Actual costs may vary based on sailing date, ship, cabin category, and current promotions. Always confirm final pricing directly with the cruise line or booking platform before booking.",
