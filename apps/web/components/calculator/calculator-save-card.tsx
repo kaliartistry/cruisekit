@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Check, Save, Ship } from "lucide-react";
+import { Save } from "lucide-react";
+import CruiseSaveFeedback from "./cruise-save-feedback";
 import type { CalculatorInputs, CostBreakdown } from "@cruise/shared/types";
 import { Button } from "@/components/ui/button";
 import SignInModal from "@/components/shared/sign-in-modal";
@@ -120,11 +121,9 @@ export default function CalculatorSaveCard({
   return (
     <div className="rounded-2xl border border-teal/25 bg-teal/5 p-6 sm:p-7">
       <div className="flex items-start gap-4">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal text-white">
-          {saved ? <Check className="h-5 w-5" /> : <Ship className="h-5 w-5" />}
-        </span>
+        <CruiseSaveFeedback saved={saved} />
         <div className="min-w-0 flex-1">
-          <h3 className="text-lg font-bold text-navy">
+          <h3 aria-live="polite" aria-atomic="true" className="text-lg font-bold text-navy">
             {saved ? "Your cruise is saved." : "Save this cruise, not just the number."}
           </h3>
           <p className="mt-1 text-sm leading-relaxed text-gray-600">
