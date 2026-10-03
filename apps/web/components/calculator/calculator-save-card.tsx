@@ -119,8 +119,8 @@ export default function CalculatorSaveCard({
   };
 
   return (
-    <div className="rounded-2xl border border-teal/25 bg-teal/5 p-6 sm:p-7">
-      <div className="flex items-start gap-4">
+    <div className="rounded-2xl border border-teal/25 bg-teal/5 p-4 sm:p-7">
+      <div className="flex flex-col items-start gap-4 sm:flex-row">
         <CruiseSaveFeedback saved={saved} />
         <div className="min-w-0 flex-1">
           <h3 aria-live="polite" aria-atomic="true" className="text-lg font-bold text-navy">
@@ -131,19 +131,19 @@ export default function CalculatorSaveCard({
               ? "Continue in CruiseKit to finish the sailing details and use MyDay onboard."
               : "Keep this estimate across devices, then carry the cruise into MyDay, Spend, and MyCrew."}
           </p>
-          {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
+          {error && <p role="alert" className="mt-3 text-sm text-red-600">{error}</p>}
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             {saved ? (
-              <Button asChild>
+              <Button asChild className="h-auto min-h-10 whitespace-normal py-2 text-center text-navy">
                 <Link href="/cruise/handoff?v=1">Continue in CruiseKit</Link>
               </Button>
             ) : (
-              <Button onClick={() => void save()} disabled={saving}>
+              <Button className="h-auto min-h-10 whitespace-normal py-2 text-center text-navy" onClick={() => void save()} disabled={saving}>
                 <Save className="h-4 w-4" />
                 {saving ? "Saving..." : "Save this cruise"}
               </Button>
             )}
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" className="h-auto min-h-10 whitespace-normal py-2 text-center">
               <a href={activeCruiseHandoffUrl()}>Open handoff page</a>
             </Button>
           </div>
