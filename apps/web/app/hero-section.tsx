@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import {
   Ship,
@@ -51,6 +51,7 @@ const HERO_PROOF = [
 
 export default function HeroSection() {
   const router = useRouter();
+  const reduceMotion = useReducedMotion() !== false;
   const [selectedLine, setSelectedLine] = useState("");
   const hasSelectedLine = selectedLine !== "";
   const mobileAppLive =
@@ -69,7 +70,7 @@ export default function HeroSection() {
   )?.name;
 
   return (
-    <section className="relative min-h-[600px] lg:min-h-[640px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[580px] lg:min-h-[620px] flex items-center justify-center overflow-hidden">
       <Image
         src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1920&q=80"
         alt="Cruise ship at sea"
@@ -77,23 +78,23 @@ export default function HeroSection() {
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/75 via-navy/55 to-navy/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/85 to-navy/95" />
 
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 py-16 lg:py-20 text-center">
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5 leading-[1.05]"
+          transition={{ duration: reduceMotion ? 0 : 0.18 }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-5 leading-[1.05]"
         >
           Save your cruise.{" "}
-          <span className="text-amber-400">Let MyDay keep it straight.</span>
+          <span className="text-[#B9E4DC]">Let MyDay keep it straight.</span>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: reduceMotion ? 0 : 0.18 }}
           className="text-base sm:text-lg text-white/85 mb-6 max-w-2xl mx-auto"
         >
           CruiseKit keeps the mobile app focused on what cruisers actually use:
@@ -102,9 +103,9 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.18 }}
+          transition={{ duration: reduceMotion ? 0 : 0.18 }}
           className="mb-5 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
           {mobileAppLive && (
@@ -129,15 +130,15 @@ export default function HeroSection() {
 
         <Link
           href="/methodology"
-          className="mt-3 inline-block text-xs text-white/60 hover:text-white/90 underline underline-offset-2 transition-colors"
+          className="mt-3 inline-block text-xs text-white/85 hover:text-white/90 underline underline-offset-2 transition-colors"
         >
           See how we calculate this &rarr;
         </Link>
 
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={false}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          transition={{ duration: reduceMotion ? 0 : 0.18 }}
           className="flex items-center justify-center gap-3 sm:gap-5 mb-8 flex-wrap"
         >
           {[
@@ -147,7 +148,7 @@ export default function HeroSection() {
           ].map((text) => (
             <span
               key={text}
-              className="text-xs sm:text-sm text-white/75 flex items-center gap-1.5"
+              className="text-xs sm:text-sm text-white/90 flex items-center gap-1.5"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-teal" />
               {text}
@@ -156,9 +157,9 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.25 }}
+          transition={{ duration: reduceMotion ? 0 : 0.18 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto mb-8"
         >
           {HERO_PROOF.map(({ icon: Icon, label, value, href }) => (
@@ -173,7 +174,7 @@ export default function HeroSection() {
                   {label}
                   <ArrowRight className="h-3 w-3 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
                 </div>
-                <p className="mt-0.5 text-[13px] text-white/75 leading-snug">
+                <p className="mt-0.5 text-[13px] text-white/90 leading-snug">
                   {value}
                 </p>
               </div>
@@ -182,9 +183,9 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: reduceMotion ? 0 : 0.18 }}
           className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-5 sm:p-6 max-w-2xl mx-auto"
         >
           <label className="block text-xs font-semibold text-gray-500 uppercase mb-2 text-left">
@@ -203,6 +204,7 @@ export default function HeroSection() {
           )}
 
           <select
+            aria-label="Cruise line for cost estimate"
             value={selectedLine}
             onChange={(e) => setSelectedLine(e.target.value)}
             className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal appearance-none cursor-pointer mb-4"

@@ -146,7 +146,7 @@ export default function MyDayContent() {
       <section className="overflow-hidden bg-gradient-to-b from-navy to-[#0a1d38] px-4 pb-20 pt-20 text-white sm:pt-24">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={{ once: true }}
             className="text-center lg:text-left"
@@ -264,7 +264,7 @@ export default function MyDayContent() {
       <section id="app-screenshots" className="scroll-mt-28 bg-white px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={{ once: true }}
             className="mx-auto max-w-3xl text-center"
@@ -300,7 +300,7 @@ export default function MyDayContent() {
               <motion.figure
                 key={shot.title}
                 custom={index}
-                initial="hidden"
+                initial={false}
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
@@ -329,7 +329,7 @@ export default function MyDayContent() {
       {/* ── Feature Grid ── */}
       <section className="mx-auto max-w-6xl px-4 py-20">
         <motion.div
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={{ once: true }}
           className="text-center"
@@ -357,7 +357,7 @@ export default function MyDayContent() {
             <motion.div
               key={f.title}
               custom={i}
-              initial="hidden"
+              initial={false}
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
@@ -381,7 +381,7 @@ export default function MyDayContent() {
       <section className="bg-slate-50 px-4 py-20">
         <div className="mx-auto max-w-5xl">
           <motion.h2
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={{ once: true }}
             custom={0}
@@ -396,7 +396,7 @@ export default function MyDayContent() {
               <motion.div
                 key={tab.name}
                 custom={i}
-                initial="hidden"
+                initial={false}
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
@@ -428,7 +428,7 @@ export default function MyDayContent() {
       {/* ── CTA ── */}
       <section className="px-4 py-20 text-center">
         <motion.div
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={{ once: true }}
         >

@@ -42,10 +42,13 @@ const AuthContext = createContext<AuthContextValue>({
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(process.env.NEXT_PUBLIC_CRUISEKIT_REVIEW !== "true");
 
   /* Listen for auth state changes */
   useEffect(() => {
+    if (process.env.NEXT_PUBLIC_CRUISEKIT_REVIEW === "true") {
+      return;
+    }
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
       setLoading(false);
@@ -80,6 +83,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   /* Google sign-in */
   const signInWithGoogle = useCallback(async (): Promise<User | null> => {
+    if (process.env.NEXT_PUBLIC_CRUISEKIT_REVIEW === "true") return null;
     try {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
@@ -93,6 +97,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   /* Sign out */
   const signOut = useCallback(async () => {
+    if (process.env.NEXT_PUBLIC_CRUISEKIT_REVIEW === "true") return;
     try {
       await firebaseSignOut(auth);
     } catch (err) {
