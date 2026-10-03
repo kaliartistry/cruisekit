@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "8FCKSS2JB5.com.cruisekit.mobile",
+        "paths": [
+          "/mycrew/join*",
+          "/cruise/handoff*"
+        ]
+      }
+    ]
+  }
+}

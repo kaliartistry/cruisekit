@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1560" viewBox="0 0 2400 1560" role="img" aria-label="Bahamas static cruise map">
+
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#BFE4EA"/>
+      <stop offset="1" stop-color="#9BD2DD"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#23445A" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+<rect width="2400" height="1560" fill="#BFE4EA"/>
+<line x1="58.0" y1="58" x2="58.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="343.5" y1="58" x2="343.5" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="629.0" y1="58" x2="629.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="914.5" y1="58" x2="914.5" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1200.0" y1="58" x2="1200.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1485.5" y1="58" x2="1485.5" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="1771.0" y1="58" x2="1771.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="2056.5" y1="58" x2="2056.5" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="2342.0" y1="58" x2="2342.0" y2="1502" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="58.0" x2="2342" y2="58.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="346.8" x2="2342" y2="346.8" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="635.6" x2="2342" y2="635.6" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="924.4" x2="2342" y2="924.4" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="1213.2" x2="2342" y2="1213.2" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<line x1="58" y1="1502.0" x2="2342" y2="1502.0" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+<text x="2328" y="1528" fill="#ffffff" fill-opacity="0.58" font-size="24" font-family="Helvetica" text-anchor="end">24.6° to 26.9°</text>
+<path d="M 2033.9 1250.5 L 2021.2 1279.3 L 1986.8 1300.4 L 1939.7 1308.1 L 1892.7 1300.4 L 1858.2 1279.3 L 1845.6 1250.5 L 1858.2 1221.7 L 1892.7 1200.6 L 1939.7 1192.9 L 1985.0 1202.5 L 2018.2 1222.8 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 1455.7 766.6 L 1442.4 797.1 L 1405.8 819.5 L 1355.9 827.7 L 1306.0 819.5 L 1269.5 797.1 L 1256.1 766.6 L 1269.5 736.0 L 1306.0 713.6 L 1355.9 705.4 L 1406.7 712.7 L 1443.9 735.5 Z" fill="#E5EBD9" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 553.3 312.2 L 541.0 340.1 L 507.7 360.5 L 462.1 368.0 L 416.6 360.5 L 383.2 340.1 L 371.0 312.2 L 383.2 284.3 L 416.6 263.8 L 462.1 256.4 L 511.5 259.8 L 547.6 281.9 Z" fill="#EDF0E4" stroke="#DCE3E8" stroke-width="2" filter="url(#softShadow)"/>
+<path d="M 1883.0 1254.1 C 1939.7 1222.5 1967.7 1280.5 2022.1 1251.0" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 1897.7 1230.5 L 1993.7 1282.5" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 1286.7 785.9 C 1345.4 751.6 1373.4 809.6 1430.8 782.9" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 1328.0 732.2 C 1366.4 725.5 1394.4 783.5 1421.6 728.3" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 401.0 321.9 C 460.3 286.8 488.3 344.8 546.4 318.9" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 418.3 294.8 L 514.3 346.8" fill="none" stroke="#D8C9AA" stroke-width="3" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 414.1 303.7 C 464.0 281.5 492.0 339.5 536.2 300.4" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.72"/>
+<path d="M 86 1434 C 250 1330 362 1398 520 1305 S 840 1214 1105 1328" fill="none" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="5" stroke-dasharray="18 18" stroke-linecap="round"/>
+<text x="56" y="64" fill="#243349" font-size="34" font-family="Helvetica" font-weight="800">Bahamas</text>
+<text x="56" y="102" fill="#637083" font-size="22" font-family="Helvetica">Static CruiseKit planning basemap</text>
+<text x="2344" y="1504" fill="#637083" font-size="20" font-family="Helvetica" text-anchor="end">CruiseKit static map</text>
+</svg>

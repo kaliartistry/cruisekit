@@ -1,0 +1,4795 @@
+/* ------------------------------------------------------------------ */
+/*  Cruise Port Data                                                    */
+/* ------------------------------------------------------------------ */
+
+import {
+  baselinePortGovernance,
+  canonicalPortId,
+  ianaTimeZoneForPort,
+  type PortGovernanceMetadata,
+  validatePortCatalog,
+} from "../ports/port-governance";
+
+export type PortRegion = "western" | "eastern" | "southern" | "bahamas" | "alaska" | "europe-med" | "europe-north" | "homeport" | "private-island" | "asia" | "mexico-pacific" | "canada-new-england";
+
+export interface PortExcursion {
+  name: string;
+  priceRange: { min: number; max: number };
+  typicalDuration: string;
+}
+
+export interface PortFreeActivity {
+  name: string;
+  description: string;
+}
+
+export interface PortRestaurant {
+  name: string;
+  priceRange: "$" | "$$" | "$$$" | "$$$$";
+}
+
+export interface PortEditorialData {
+  slug: string;
+  name: string;
+  country: string;
+  coordinates: { lat: number; lng: number };
+  timezone: string;
+  safetyRating: number;
+  walkabilityRating: number;
+  isTenderPort: boolean;
+  typicalPortHours: number;
+  walkingDistanceToTown: string;
+  currency: string;
+  usdAccepted: boolean;
+  wifiAvailability: "none" | "limited" | "good" | "excellent";
+  cellularCoverage: "none" | "limited" | "good" | "excellent";
+  overview: string;
+  timeZoneAlert: string | null;
+  excursionCategories: PortExcursion[];
+  freeActivities: PortFreeActivity[];
+  restaurants: PortRestaurant[];
+  gettingAround: string;
+  emergencyInfo: {
+    police: string;
+    hospital: string;
+    usConsulate?: string;
+  };
+  region: PortRegion;
+  imageUrl: string;
+}
+
+export interface PortData extends PortEditorialData {
+  /** Stable cross-surface identifier. Slugs remain URL aliases. */
+  canonicalId: `cruisekit:port:${string}`;
+  /** Exact civil time zone. Never substitute the legacy display label. */
+  ianaTimeZone: string;
+  /** Field-level evidence and freshness state for incremental review. */
+  governance: PortGovernanceMetadata;
+}
+
+const EXPANDED_PORTS: PortEditorialData[] = [
+  {
+    slug: "los-angeles",
+    name: "Los Angeles",
+    country: "United States",
+    coordinates: { lat: 33.7361, lng: -118.2819 },
+    timezone: "PST/PDT",
+    safetyRating: 7.5,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Cruise ships usually dock in San Pedro; attractions require rideshare, shuttle, or tour transport",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Los Angeles cruises use the San Pedro and Long Beach harbor area, with easy access to beaches, Hollywood, Downtown LA, and theme parks when the schedule allows. Treat it as a transportation-heavy port and plan extra time for traffic.",
+    timeZoneAlert: "Los Angeles is on Pacific Time, 3 hours behind US Eastern.",
+    excursionCategories: [
+      { name: "Hollywood & Beverly Hills Highlights", priceRange: { min: 80, max: 160 }, typicalDuration: "5-7 hours" },
+      { name: "Long Beach Aquarium & Waterfront", priceRange: { min: 35, max: 90 }, typicalDuration: "3-5 hours" },
+      { name: "Santa Monica & Venice Beach", priceRange: { min: 60, max: 140 }, typicalDuration: "5-7 hours" },
+    ],
+    freeActivities: [
+      { name: "San Pedro Waterfront", description: "Walk the harborfront near the cruise terminal for views, casual dining, and maritime atmosphere." },
+      { name: "Korean Bell of Friendship", description: "Scenic hilltop stop in nearby San Pedro with ocean and harbor views." },
+    ],
+    restaurants: [
+      { name: "San Pedro Fish Market", priceRange: "$$" },
+      { name: "22nd Street Landing", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use rideshare, cruise shuttles, or ship tours. Distances in LA are long and traffic can be heavy, especially for Hollywood, Santa Monica, and theme parks.",
+    emergencyInfo: { police: "911", hospital: "Providence Little Company of Mary Medical Center San Pedro" },
+    region: "mexico-pacific",
+    imageUrl: "/images/ports/los-angeles.jpg",
+  },
+  {
+    slug: "san-diego",
+    name: "San Diego",
+    country: "United States",
+    coordinates: { lat: 32.7157, lng: -117.1611 },
+    timezone: "PST/PDT",
+    safetyRating: 8.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Cruise terminal is on the downtown waterfront near the Embarcadero",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "San Diego is one of the easiest West Coast ports for independent exploring. The terminal sits near the Embarcadero, Little Italy, USS Midway, Seaport Village, and quick rides to Balboa Park or the zoo.",
+    timeZoneAlert: "San Diego is on Pacific Time, 3 hours behind US Eastern.",
+    excursionCategories: [
+      { name: "San Diego Zoo & Balboa Park", priceRange: { min: 70, max: 120 }, typicalDuration: "4-6 hours" },
+      { name: "Old Town & Trolley Tour", priceRange: { min: 35, max: 75 }, typicalDuration: "3-5 hours" },
+      { name: "La Jolla Coast", priceRange: { min: 60, max: 130 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Embarcadero Walk", description: "Flat waterfront walk past ships, public art, and harbor views near the terminal." },
+      { name: "Little Italy", description: "Dining district within a short walk or quick ride from the pier." },
+    ],
+    restaurants: [
+      { name: "Mitch's Seafood", priceRange: "$$" },
+      { name: "Ironside Fish & Oyster", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Downtown is walkable. Use trolley, rideshare, or tours for Balboa Park, La Jolla, Coronado, and beach areas.",
+    emergencyInfo: { police: "911", hospital: "UC San Diego Medical Center" },
+    region: "mexico-pacific",
+    imageUrl: "/images/ports/san-diego.jpg",
+  },
+  {
+    slug: "san-francisco",
+    name: "San Francisco",
+    country: "United States",
+    coordinates: { lat: 37.8044, lng: -122.4010 },
+    timezone: "PST/PDT",
+    safetyRating: 7.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Pier 27 is on the Embarcadero, near Fisherman's Wharf and ferry connections",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "San Francisco puts cruise guests right on the bayfront with access to Fisherman's Wharf, the Ferry Building, cable cars, Chinatown, Alcatraz tours, and Golden Gate viewpoints.",
+    timeZoneAlert: "San Francisco is on Pacific Time, 3 hours behind US Eastern.",
+    excursionCategories: [
+      { name: "Alcatraz & Bay Cruise", priceRange: { min: 45, max: 120 }, typicalDuration: "3-5 hours" },
+      { name: "Golden Gate & City Highlights", priceRange: { min: 70, max: 150 }, typicalDuration: "4-6 hours" },
+      { name: "Muir Woods or Wine Country", priceRange: { min: 100, max: 220 }, typicalDuration: "6-9 hours" },
+    ],
+    freeActivities: [
+      { name: "Embarcadero to Ferry Building", description: "Scenic waterfront walk with food halls, bay views, and public transit access." },
+      { name: "Fisherman's Wharf", description: "Classic visitor area with sea lions, views, and casual seafood stops." },
+    ],
+    restaurants: [
+      { name: "Hog Island Oyster Co.", priceRange: "$$$" },
+      { name: "Boudin Bakery Cafe", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Walking, Muni streetcars, cable cars, ferries, and rideshare all work well. Book Alcatraz early if it matters.",
+    emergencyInfo: { police: "911", hospital: "Zuckerberg San Francisco General Hospital" },
+    region: "mexico-pacific",
+    imageUrl: "/images/ports/san-francisco.jpg",
+  },
+  {
+    slug: "cabo-san-lucas",
+    name: "Cabo San Lucas",
+    country: "Mexico",
+    coordinates: { lat: 22.8905, lng: -109.9167 },
+    timezone: "MST/MDT",
+    safetyRating: 8,
+    walkabilityRating: 7,
+    isTenderPort: true,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Tender pier lands at the marina, a short walk from shops and restaurants",
+    currency: "MXN",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Cabo San Lucas is a tender port built around the marina, Land's End rock formations, beaches, fishing charters, and lively waterfront dining. The tender location makes it easy to explore the marina independently.",
+    timeZoneAlert: "Cabo is usually 2 hours behind US Eastern, but ship time can vary.",
+    excursionCategories: [
+      { name: "Land's End & Arch Boat Tour", priceRange: { min: 25, max: 70 }, typicalDuration: "1-2 hours" },
+      { name: "Beach Day at Medano Beach", priceRange: { min: 15, max: 80 }, typicalDuration: "3-5 hours" },
+      { name: "Whale Watching Season Tour", priceRange: { min: 60, max: 120 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Marina Walk", description: "Easy walk from the tender pier past boats, shops, and waterfront restaurants." },
+      { name: "Downtown Cabo", description: "Compact dining and souvenir area close to the marina." },
+    ],
+    restaurants: [
+      { name: "The Office on the Beach", priceRange: "$$" },
+      { name: "Tacos Gardenias", priceRange: "$" },
+    ],
+    gettingAround:
+      "The marina area is walkable. Use water taxis for beaches and negotiate taxi fares before riding.",
+    emergencyInfo: { police: "911", hospital: "Hospiten Cabo San Lucas" },
+    region: "mexico-pacific",
+    imageUrl: "/images/ports/cabo-san-lucas.jpg",
+  },
+  {
+    slug: "mazatlan",
+    name: "Mazatlan",
+    country: "Mexico",
+    coordinates: { lat: 23.2494, lng: -106.4111 },
+    timezone: "MST/MDT",
+    safetyRating: 7,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Cruise terminal is in the commercial port; shuttles/taxis are typical for Old Town and the Malecon",
+    currency: "MXN",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Mazatlan mixes a working port, restored historic center, long seaside Malecon, beaches, cliff divers, and Pacific seafood. Plan transport from the terminal rather than assuming a beach is right at the gangway.",
+    timeZoneAlert: "Mazatlan is usually 2 hours behind US Eastern.",
+    excursionCategories: [
+      { name: "Old Mazatlan Walking Tour", priceRange: { min: 35, max: 90 }, typicalDuration: "3-4 hours" },
+      { name: "Beach Resort Day", priceRange: { min: 45, max: 110 }, typicalDuration: "4-6 hours" },
+      { name: "Stone Island Beach", priceRange: { min: 30, max: 80 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Plazuela Machado", description: "Historic square with colorful buildings, cafes, and a relaxed old-town feel." },
+      { name: "Malecon Viewpoints", description: "Long oceanfront promenade with monuments and beach views." },
+    ],
+    restaurants: [
+      { name: "Panama Restaurant", priceRange: "$$" },
+      { name: "El Muchacho Alegre", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use official taxis, pulmonias, or ship shuttles. Confirm the fare and return timing before leaving the port area.",
+    emergencyInfo: { police: "911", hospital: "Hospital Sharp Mazatlan" },
+    region: "mexico-pacific",
+    imageUrl: "/images/ports/mazatlan.jpg",
+  },
+  {
+    slug: "puerto-vallarta",
+    name: "Puerto Vallarta",
+    country: "Mexico",
+    coordinates: { lat: 20.6534, lng: -105.2253 },
+    timezone: "CST/CDT",
+    safetyRating: 8,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Cruise terminal is north of downtown; the Malecon and Zona Romantica require taxi or bus",
+    currency: "MXN",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Puerto Vallarta is a scenic Pacific port with mountain backdrops, beaches, the Malecon, Zona Romantica, food tours, and boat trips into Banderas Bay. The cruise terminal is convenient but not directly downtown.",
+    timeZoneAlert: "Puerto Vallarta is on Central Time.",
+    excursionCategories: [
+      { name: "Malecon & Old Town", priceRange: { min: 25, max: 80 }, typicalDuration: "3-5 hours" },
+      { name: "Beach or Resort Day", priceRange: { min: 50, max: 130 }, typicalDuration: "4-6 hours" },
+      { name: "Banderas Bay Boat Tour", priceRange: { min: 70, max: 160 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Malecon Sculptures", description: "Waterfront promenade with public art, ocean views, and shops." },
+      { name: "Our Lady of Guadalupe Church", description: "Landmark church near the old town core." },
+    ],
+    restaurants: [
+      { name: "Mariscos 8 Tostadas", priceRange: "$$" },
+      { name: "Pancho's Takos", priceRange: "$" },
+    ],
+    gettingAround:
+      "Taxis and rideshare are common. Local buses run along the hotel zone and downtown, but build in return time.",
+    emergencyInfo: { police: "911", hospital: "Hospital Joya Puerto Vallarta" },
+    region: "mexico-pacific",
+    imageUrl: "/images/ports/puerto-vallarta.jpg",
+  },
+  {
+    slug: "ensenada",
+    name: "Ensenada",
+    country: "Mexico",
+    coordinates: { lat: 31.8667, lng: -116.5964 },
+    timezone: "PST/PDT",
+    safetyRating: 7.5,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Cruise terminal is close to the waterfront and downtown tourist zone",
+    currency: "MXN",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Ensenada is a frequent short-cruise stop with a walkable waterfront, seafood, craft beer, shopping, and tours to La Bufadora blowhole or Valle de Guadalupe wine country.",
+    timeZoneAlert: "Ensenada uses Pacific Time, matching California.",
+    excursionCategories: [
+      { name: "La Bufadora Blowhole", priceRange: { min: 35, max: 80 }, typicalDuration: "3-4 hours" },
+      { name: "Valle de Guadalupe Wine Tour", priceRange: { min: 80, max: 180 }, typicalDuration: "5-7 hours" },
+      { name: "Downtown Food & Market Walk", priceRange: { min: 25, max: 80 }, typicalDuration: "2-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Waterfront Walk", description: "Easy walk from the cruise area toward shops, harbor views, and casual food stops." },
+      { name: "Plaza Civica", description: "Central plaza with monuments and a simple orientation point near downtown." },
+    ],
+    restaurants: [
+      { name: "La Guerrerense", priceRange: "$" },
+      { name: "Muelle 3", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Downtown is walkable from the terminal. Use tours or fixed-fare taxis for La Bufadora and wine country.",
+    emergencyInfo: { police: "911", hospital: "Hospital Velmar" },
+    region: "mexico-pacific",
+    imageUrl: "/images/ports/ensenada.jpg",
+  },
+  {
+    slug: "halifax",
+    name: "Halifax",
+    country: "Canada",
+    coordinates: { lat: 44.6488, lng: -63.5752 },
+    timezone: "AST/ADT",
+    safetyRating: 9,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Cruise terminal is at the waterfront, near the boardwalk and downtown",
+    currency: "CAD",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Halifax is a walkable Atlantic Canada port with a long waterfront boardwalk, maritime history, the Citadel, public gardens, seafood, and popular tours to Peggy's Cove.",
+    timeZoneAlert: "Halifax is usually 1 hour ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Peggy's Cove", priceRange: { min: 60, max: 120 }, typicalDuration: "3-5 hours" },
+      { name: "Halifax Citadel & City Tour", priceRange: { min: 35, max: 90 }, typicalDuration: "2-4 hours" },
+      { name: "Maritime Museum & Waterfront", priceRange: { min: 15, max: 50 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Halifax Waterfront Boardwalk", description: "Easy harborfront walk from the terminal with food stalls, shops, and views." },
+      { name: "Public Gardens", description: "Victorian-style gardens in the downtown core." },
+    ],
+    restaurants: [
+      { name: "The Bicycle Thief", priceRange: "$$$" },
+      { name: "Waterfront Warehouse", priceRange: "$$" },
+    ],
+    gettingAround:
+      "The waterfront and downtown are walkable. Use tours or taxis for Peggy's Cove and farther coastal sights.",
+    emergencyInfo: { police: "911", hospital: "QEII Health Sciences Centre" },
+    region: "canada-new-england",
+    imageUrl: "/images/ports/halifax.jpg",
+  },
+  {
+    slug: "quebec-city",
+    name: "Quebec City",
+    country: "Canada",
+    coordinates: { lat: 46.8139, lng: -71.2080 },
+    timezone: "EST/EDT",
+    safetyRating: 9,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Cruise terminal is near Old Quebec's lower town; hills and stairs are common",
+    currency: "CAD",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Quebec City is one of North America's most atmospheric cruise ports, with Old Quebec's fortified streets, Chateau Frontenac views, French-Canadian food, and easy access to Montmorency Falls.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Old Quebec Walking Tour", priceRange: { min: 30, max: 90 }, typicalDuration: "2-4 hours" },
+      { name: "Montmorency Falls", priceRange: { min: 45, max: 110 }, typicalDuration: "3-4 hours" },
+      { name: "Island of Orleans", priceRange: { min: 70, max: 150 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Dufferin Terrace", description: "Classic promenade above the St. Lawrence with iconic city views." },
+      { name: "Petit-Champlain", description: "Historic lower-town streets with shops, cafes, and stone architecture." },
+    ],
+    restaurants: [
+      { name: "Le Chic Shack", priceRange: "$$" },
+      { name: "Cochon Dingue", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Old Quebec is walkable but hilly. Use funicular, taxis, or tours for easier access to upper town and Montmorency Falls.",
+    emergencyInfo: { police: "911", hospital: "CHU de Quebec" },
+    region: "canada-new-england",
+    imageUrl: "/images/ports/quebec-city.jpg",
+  },
+  {
+    slug: "whittier",
+    name: "Whittier",
+    country: "United States",
+    coordinates: { lat: 60.7731, lng: -148.6839 },
+    timezone: "AKST/AKDT",
+    safetyRating: 9,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Small cruise terminal town; most guests transfer by rail, coach, or tour",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "Whittier is a compact Alaska embarkation and turnaround port on Prince William Sound. The appeal is scenery, glaciers, wildlife cruises, and transfers through the Anton Anderson Memorial Tunnel toward Anchorage.",
+    timeZoneAlert: "Whittier is on Alaska Time, 4 hours behind US Eastern.",
+    excursionCategories: [
+      { name: "Prince William Sound Glacier Cruise", priceRange: { min: 150, max: 260 }, typicalDuration: "4-6 hours" },
+      { name: "Anchorage Transfer Tour", priceRange: { min: 80, max: 180 }, typicalDuration: "3-5 hours" },
+      { name: "Kayak or Wildlife Viewing", priceRange: { min: 90, max: 180 }, typicalDuration: "3-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Small Boat Harbor Walk", description: "Short harbor walk with mountain and water views." },
+      { name: "Sound Viewpoints", description: "Weather-dependent scenic viewpoints near town." },
+    ],
+    restaurants: [
+      { name: "Swiftwater Seafood Cafe", priceRange: "$$" },
+      { name: "Wild Catch Cafe", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Whittier is small, but onward travel depends on tunnel timing, cruise transfers, rail, or pre-booked tours.",
+    emergencyInfo: { police: "911", hospital: "Providence Alaska Medical Center in Anchorage" },
+    region: "alaska",
+    imageUrl: "/images/ports/whittier.jpg",
+  },
+  {
+    slug: "naples",
+    name: "Naples",
+    country: "Italy",
+    coordinates: { lat: 40.8518, lng: 14.2681 },
+    timezone: "CET/CEST",
+    safetyRating: 7.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Cruise terminal is beside the historic center and ferry connections",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Naples is a high-energy Mediterranean port for pizza, historic streets, Pompeii, Herculaneum, Sorrento, Capri, and the Amalfi Coast. The city center is close, but longer excursions need careful timing.",
+    timeZoneAlert: "Italy is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Pompeii or Herculaneum", priceRange: { min: 60, max: 150 }, typicalDuration: "4-6 hours" },
+      { name: "Capri by Ferry", priceRange: { min: 80, max: 180 }, typicalDuration: "6-8 hours" },
+      { name: "Amalfi Coast Drive", priceRange: { min: 120, max: 260 }, typicalDuration: "8-10 hours" },
+    ],
+    freeActivities: [
+      { name: "Historic Center Walk", description: "Dense old-town streets, churches, and classic Naples street life." },
+      { name: "Piazza del Plebiscito", description: "Large public square within reach of the cruise terminal." },
+    ],
+    restaurants: [
+      { name: "L'Antica Pizzeria da Michele", priceRange: "$" },
+      { name: "Gino e Toto Sorbillo", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Walk for central Naples, use ferries for islands, and book tours or trains carefully for Pompeii and the Amalfi Coast.",
+    emergencyInfo: { police: "112", hospital: "Ospedale del Mare" },
+    region: "europe-med",
+    imageUrl: "/images/ports/naples.jpg",
+  },
+  {
+    slug: "livorno",
+    name: "Livorno",
+    country: "Italy",
+    coordinates: { lat: 43.5485, lng: 10.3106 },
+    timezone: "CET/CEST",
+    safetyRating: 8,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 11,
+    walkingDistanceToTown: "Commercial port; shuttles are commonly needed before exploring independently",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Livorno is the cruise gateway for Florence, Pisa, Lucca, and Tuscany. The port itself is practical rather than scenic, so most guests choose organized transport or train-based day trips.",
+    timeZoneAlert: "Italy is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Florence Highlights", priceRange: { min: 100, max: 240 }, typicalDuration: "9-11 hours" },
+      { name: "Pisa & Leaning Tower", priceRange: { min: 55, max: 130 }, typicalDuration: "4-6 hours" },
+      { name: "Lucca or Tuscan Countryside", priceRange: { min: 80, max: 180 }, typicalDuration: "6-8 hours" },
+    ],
+    freeActivities: [
+      { name: "Livorno Canals", description: "Walk the Venezia Nuova canal district if staying local." },
+      { name: "Terrazza Mascagni", description: "Seafront promenade and photo stop in Livorno." },
+    ],
+    restaurants: [
+      { name: "Cantina Senese", priceRange: "$$" },
+      { name: "Mercato Centrale stalls", priceRange: "$" },
+    ],
+    gettingAround:
+      "Use port shuttles, taxis, trains, or ship excursions. Florence is a long day and requires disciplined return timing.",
+    emergencyInfo: { police: "112", hospital: "Ospedale di Livorno" },
+    region: "europe-med",
+    imageUrl: "/images/ports/livorno.jpg",
+  },
+  {
+    slug: "santorini",
+    name: "Santorini",
+    country: "Greece",
+    coordinates: { lat: 36.3932, lng: 25.4615 },
+    timezone: "EET/EEST",
+    safetyRating: 8.5,
+    walkabilityRating: 6,
+    isTenderPort: true,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Tender port below Fira; cable car, stairs, or tours connect to the cliff-top towns",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Santorini is a tender port famous for caldera views, whitewashed villages, wineries, and sunsets. Logistics matter because cable car lines can be long when several ships are in port.",
+    timeZoneAlert: "Greece is 7 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Oia Village & Caldera Views", priceRange: { min: 60, max: 150 }, typicalDuration: "4-6 hours" },
+      { name: "Winery & Island Highlights", priceRange: { min: 70, max: 160 }, typicalDuration: "4-5 hours" },
+      { name: "Volcano & Hot Springs Boat Tour", priceRange: { min: 40, max: 110 }, typicalDuration: "3-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Fira Lanes", description: "Browse cliff-top streets, views, and shops after reaching town." },
+      { name: "Caldera Viewpoints", description: "Free viewpoints around Fira and Imerovigli reward unhurried walking." },
+    ],
+    restaurants: [
+      { name: "Lucky's Souvlakis", priceRange: "$" },
+      { name: "Argo Restaurant", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Plan for tender and cable car queues. Ship tours may use alternate tender points; independent guests usually route through Fira.",
+    emergencyInfo: { police: "112", hospital: "Santorini General Hospital" },
+    region: "europe-med",
+    imageUrl: "/images/ports/santorini.jpg",
+  },
+  {
+    slug: "mykonos",
+    name: "Mykonos",
+    country: "Greece",
+    coordinates: { lat: 37.4467, lng: 25.3289 },
+    timezone: "EET/EEST",
+    safetyRating: 8.5,
+    walkabilityRating: 8,
+    isTenderPort: true,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Ships may tender or dock at Tourlos; town is reached by sea bus, shuttle, or short ride",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Mykonos offers a photogenic old town, windmills, Little Venice, beaches, and Delos excursions. Arrival mode varies by ship, so check whether you dock at Tourlos or tender closer to town.",
+    timeZoneAlert: "Greece is 7 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Mykonos Town Walk", priceRange: { min: 25, max: 80 }, typicalDuration: "2-4 hours" },
+      { name: "Delos Archaeological Site", priceRange: { min: 70, max: 150 }, typicalDuration: "4-5 hours" },
+      { name: "Beach Club Day", priceRange: { min: 50, max: 160 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Windmills Viewpoint", description: "Classic Mykonos photo stop overlooking town." },
+      { name: "Little Venice", description: "Waterfront lanes and views in the old town." },
+    ],
+    restaurants: [
+      { name: "Kastro's", priceRange: "$$$" },
+      { name: "Sakis Grill House", priceRange: "$" },
+    ],
+    gettingAround:
+      "Use sea bus, shuttles, taxis, or buses. Traffic and taxi availability can be tight in peak season.",
+    emergencyInfo: { police: "112", hospital: "Mykonos Health Center" },
+    region: "europe-med",
+    imageUrl: "/images/ports/mykonos.jpg",
+  },
+  {
+    slug: "rhodes",
+    name: "Rhodes",
+    country: "Greece",
+    coordinates: { lat: 36.4341, lng: 28.2176 },
+    timezone: "EET/EEST",
+    safetyRating: 8.5,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Cruise pier is a short walk from the medieval Old Town",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Rhodes is one of the Mediterranean's easiest cruise calls, with the walled medieval Old Town close to the pier and longer trips available to Lindos, beaches, and island viewpoints.",
+    timeZoneAlert: "Greece is 7 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Medieval Old Town", priceRange: { min: 0, max: 60 }, typicalDuration: "2-4 hours" },
+      { name: "Lindos Acropolis", priceRange: { min: 60, max: 140 }, typicalDuration: "4-6 hours" },
+      { name: "Beach & Island Highlights", priceRange: { min: 45, max: 120 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Old Town Walls", description: "Walk through medieval lanes, gates, and squares near the cruise pier." },
+      { name: "Mandraki Harbor", description: "Harbor walk with views of windmills, fortifications, and boats." },
+    ],
+    restaurants: [
+      { name: "Tamam", priceRange: "$$" },
+      { name: "To Megiston", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Old Town is walkable. Use tours, buses, or taxis for Lindos and beaches.",
+    emergencyInfo: { police: "112", hospital: "Rhodes General Hospital" },
+    region: "europe-med",
+    imageUrl: "/images/ports/rhodes.jpg",
+  },
+  {
+    slug: "piraeus",
+    name: "Athens (Piraeus)",
+    country: "Greece",
+    coordinates: { lat: 37.9420, lng: 23.6460 },
+    timezone: "EET/EEST",
+    safetyRating: 8,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Piraeus port is large; Athens sightseeing requires metro, taxi, or tour transfer",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Piraeus is the cruise gateway to Athens, the Acropolis, Plaka, museums, and Greek food. The port is busy and spread out, so plan transport before heading into the city.",
+    timeZoneAlert: "Greece is 7 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Acropolis & Plaka", priceRange: { min: 70, max: 180 }, typicalDuration: "5-7 hours" },
+      { name: "Athens Museum Day", priceRange: { min: 45, max: 120 }, typicalDuration: "4-6 hours" },
+      { name: "Cape Sounion", priceRange: { min: 80, max: 180 }, typicalDuration: "5-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Plaka Walk", description: "Historic neighborhood below the Acropolis with lanes, shops, and cafes." },
+      { name: "Syntagma Square", description: "Central Athens square and changing-of-the-guard viewpoint." },
+    ],
+    restaurants: [
+      { name: "O Thanasis", priceRange: "$" },
+      { name: "Kuzina", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Use metro, taxis, or tours. Leave generous time for the return to Piraeus because traffic can be heavy.",
+    emergencyInfo: { police: "112", hospital: "Evangelismos General Hospital" },
+    region: "europe-med",
+    imageUrl: "/images/ports/piraeus.jpg",
+  },
+  {
+    slug: "kusadasi",
+    name: "Kusadasi",
+    country: "Turkiye",
+    coordinates: { lat: 37.8579, lng: 27.2610 },
+    timezone: "TRT",
+    safetyRating: 8,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Cruise terminal is beside the waterfront and town center",
+    currency: "TRY",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Kusadasi is a very convenient port and the main cruise gateway for Ephesus. The terminal is close to shopping and waterfront dining, while the archaeological site is a short drive inland.",
+    timeZoneAlert: "Turkiye is usually 7 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Ephesus Ancient City", priceRange: { min: 60, max: 150 }, typicalDuration: "4-6 hours" },
+      { name: "Terrace Houses & Virgin Mary House", priceRange: { min: 80, max: 180 }, typicalDuration: "5-7 hours" },
+      { name: "Kusadasi Bazaar Walk", priceRange: { min: 0, max: 50 }, typicalDuration: "1-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Waterfront Promenade", description: "Easy walk from the terminal with views, cafes, and shops." },
+      { name: "Kusadasi Bazaar", description: "Busy market streets close to the pier; bargaining is expected." },
+    ],
+    restaurants: [
+      { name: "Kazim Usta", priceRange: "$$" },
+      { name: "Planet Yucca", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Town is walkable. Use licensed taxis or tours for Ephesus and confirm return timing.",
+    emergencyInfo: { police: "112", hospital: "Kusadasi State Hospital" },
+    region: "europe-med",
+    imageUrl: "/images/ports/kusadasi.jpg",
+  },
+  {
+    slug: "dubrovnik",
+    name: "Dubrovnik",
+    country: "Croatia",
+    coordinates: { lat: 42.6507, lng: 18.0944 },
+    timezone: "CET/CEST",
+    safetyRating: 8.5,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Ships usually dock at Gruz; Old Town requires shuttle, bus, or taxi",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Dubrovnik is a marquee Adriatic port with stone walls, sea views, Old Town lanes, cable car viewpoints, and coastal excursions. Crowds are common, so early starts help.",
+    timeZoneAlert: "Croatia is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Old Town Walls", priceRange: { min: 35, max: 80 }, typicalDuration: "2-3 hours" },
+      { name: "Cable Car & Panorama", priceRange: { min: 35, max: 90 }, typicalDuration: "2-4 hours" },
+      { name: "Lokrum or Coast Boat Tour", priceRange: { min: 45, max: 120 }, typicalDuration: "3-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Stradun Walk", description: "Main Old Town street with limestone paving, churches, and side lanes." },
+      { name: "Old Harbor Views", description: "Scenic harbor and fort views just outside the busiest streets." },
+    ],
+    restaurants: [
+      { name: "Barba", priceRange: "$$" },
+      { name: "Proto", priceRange: "$$$$" },
+    ],
+    gettingAround:
+      "Use cruise shuttles, local buses, taxis, or tours from Gruz to Old Town. Return lines can build late in the day.",
+    emergencyInfo: { police: "112", hospital: "Dubrovnik General Hospital" },
+    region: "europe-med",
+    imageUrl: "/images/ports/dubrovnik.jpg",
+  },
+  {
+    slug: "lisbon",
+    name: "Lisbon",
+    country: "Portugal",
+    coordinates: { lat: 38.7223, lng: -9.1393 },
+    timezone: "WET/WEST",
+    safetyRating: 8.5,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Cruise terminals sit along the Tagus near Alfama and central transit",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Lisbon is a scenic river-arrival port with tiled neighborhoods, viewpoints, trams, pastries, Belem monuments, and day trips to Sintra. Hills and cobblestones are part of the experience.",
+    timeZoneAlert: "Lisbon is 5 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Alfama & City Viewpoints", priceRange: { min: 30, max: 90 }, typicalDuration: "3-5 hours" },
+      { name: "Belem Monuments", priceRange: { min: 25, max: 80 }, typicalDuration: "3-4 hours" },
+      { name: "Sintra Day Trip", priceRange: { min: 80, max: 180 }, typicalDuration: "6-8 hours" },
+    ],
+    freeActivities: [
+      { name: "Alfama Walk", description: "Historic hillside district near the cruise area with viewpoints and tiled lanes." },
+      { name: "Praca do Comercio", description: "Large riverfront square close to central Lisbon." },
+    ],
+    restaurants: [
+      { name: "Time Out Market", priceRange: "$$" },
+      { name: "Manteigaria", priceRange: "$" },
+    ],
+    gettingAround:
+      "Use walking, trams, metro, taxis, and rideshare. Hills can be steep, so plan routes around mobility needs.",
+    emergencyInfo: { police: "112", hospital: "Hospital de Sao Jose" },
+    region: "europe-med",
+    imageUrl: "/images/ports/lisbon.jpg",
+  },
+  {
+    slug: "funchal",
+    name: "Funchal",
+    country: "Portugal",
+    coordinates: { lat: 32.6669, lng: -16.9241 },
+    timezone: "WET/WEST",
+    safetyRating: 9,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Cruise pier is near central Funchal and the waterfront promenade",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Funchal is Madeira's lush cruise port, known for gardens, mountain viewpoints, cable cars, levada walks, markets, and dramatic Atlantic scenery.",
+    timeZoneAlert: "Madeira is 5 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Cable Car & Monte", priceRange: { min: 35, max: 90 }, typicalDuration: "3-4 hours" },
+      { name: "Madeira Island Viewpoints", priceRange: { min: 60, max: 140 }, typicalDuration: "4-6 hours" },
+      { name: "Levada Walk", priceRange: { min: 60, max: 130 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Funchal Waterfront", description: "Walk from the pier toward gardens, cafes, and harbor views." },
+      { name: "Mercado dos Lavradores", description: "Colorful market for flowers, fruit, and local atmosphere." },
+    ],
+    restaurants: [
+      { name: "Armazem do Sal", priceRange: "$$$" },
+      { name: "Casa do Bolo do Caco", priceRange: "$" },
+    ],
+    gettingAround:
+      "Central Funchal is walkable. Use taxis, tours, or cable car for higher viewpoints and gardens.",
+    emergencyInfo: { police: "112", hospital: "Hospital Dr. Nelio Mendonca" },
+    region: "europe-med",
+    imageUrl: "/images/ports/funchal.jpg",
+  },
+  {
+    slug: "tenerife",
+    name: "Tenerife",
+    country: "Spain",
+    coordinates: { lat: 28.4636, lng: -16.2518 },
+    timezone: "WET/WEST",
+    safetyRating: 8.5,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Santa Cruz cruise terminal is close to the city center and waterfront",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Tenerife cruise calls usually dock in Santa Cruz, with access to city walks, beaches, Anaga mountains, and Mount Teide excursions when port time allows.",
+    timeZoneAlert: "The Canary Islands are 5 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Mount Teide National Park", priceRange: { min: 70, max: 160 }, typicalDuration: "5-7 hours" },
+      { name: "Anaga Mountains", priceRange: { min: 60, max: 140 }, typicalDuration: "4-6 hours" },
+      { name: "Santa Cruz & Beach Transfer", priceRange: { min: 20, max: 80 }, typicalDuration: "3-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Santa Cruz Center", description: "Walkable shopping streets, plazas, and waterfront near the port." },
+      { name: "Auditorio Exterior", description: "Modern waterfront landmark and photo stop." },
+    ],
+    restaurants: [
+      { name: "La Hierbita", priceRange: "$$" },
+      { name: "Mercado Nuestra Senora de Africa", priceRange: "$" },
+    ],
+    gettingAround:
+      "Santa Cruz is walkable from the port. Use tours or taxis for Teide, beaches, and mountain areas.",
+    emergencyInfo: { police: "112", hospital: "Hospital Universitario Nuestra Senora de Candelaria" },
+    region: "europe-med",
+    imageUrl: "/images/ports/tenerife.jpg",
+  },
+  {
+    slug: "ibiza",
+    name: "Ibiza",
+    country: "Spain",
+    coordinates: { lat: 38.9067, lng: 1.4206 },
+    timezone: "CET/CEST",
+    safetyRating: 8,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Cruise docks are near Ibiza Town; shuttle or taxi may be used depending on berth",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Ibiza combines UNESCO-listed Dalt Vila, beaches, coves, marina dining, and nightlife reputation. Daytime cruise visits are usually best spent around Ibiza Town or a planned beach transfer.",
+    timeZoneAlert: "Spain is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Dalt Vila Walking Tour", priceRange: { min: 25, max: 80 }, typicalDuration: "2-4 hours" },
+      { name: "Beach Transfer", priceRange: { min: 35, max: 100 }, typicalDuration: "3-5 hours" },
+      { name: "Island Highlights", priceRange: { min: 70, max: 150 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Dalt Vila", description: "Historic fortified old town with views and stone lanes." },
+      { name: "Marina Walk", description: "Waterfront walk with boats, shops, and cafes." },
+    ],
+    restaurants: [
+      { name: "La Brasa", priceRange: "$$$" },
+      { name: "Can Terra", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use shuttles, taxis, or buses. Beaches can be farther than they look on a map, so confirm return timing.",
+    emergencyInfo: { police: "112", hospital: "Can Misses Hospital" },
+    region: "europe-med",
+    imageUrl: "/images/ports/ibiza.jpg",
+  },
+  {
+    slug: "amsterdam",
+    name: "Amsterdam",
+    country: "Netherlands",
+    coordinates: { lat: 52.3676, lng: 4.9041 },
+    timezone: "CET/CEST",
+    safetyRating: 8.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Cruise terminal is near central transit; many sights are walkable or a short tram ride away",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Amsterdam is a canal-city cruise port with museums, historic streets, food halls, bikes, and easy rail connections. Book major museums early in peak season.",
+    timeZoneAlert: "Amsterdam is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Canal Cruise", priceRange: { min: 20, max: 60 }, typicalDuration: "1-2 hours" },
+      { name: "Rijksmuseum or Van Gogh Museum", priceRange: { min: 25, max: 80 }, typicalDuration: "2-4 hours" },
+      { name: "Zaanse Schans or Countryside", priceRange: { min: 60, max: 140 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Canal Ring Walk", description: "Scenic walking route through bridges, gabled houses, and neighborhoods." },
+      { name: "Jordaan", description: "Atmospheric district with cafes, small shops, and canals." },
+    ],
+    restaurants: [
+      { name: "Foodhallen", priceRange: "$$" },
+      { name: "Winkel 43", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Walk, tram, metro, train, or taxi. Watch bike lanes carefully when crossing streets.",
+    emergencyInfo: { police: "112", hospital: "Amsterdam UMC" },
+    region: "europe-north",
+    imageUrl: "/images/ports/amsterdam.jpg",
+  },
+  {
+    slug: "southampton",
+    name: "Southampton",
+    country: "United Kingdom",
+    coordinates: { lat: 50.9097, lng: -1.4044 },
+    timezone: "GMT/BST",
+    safetyRating: 8.5,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Multiple cruise terminals; some are walkable to the city center, others need taxi or shuttle",
+    currency: "GBP",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Southampton is one of Europe's busiest cruise embarkation ports, with access to London, Stonehenge, Winchester, Portsmouth, and the New Forest.",
+    timeZoneAlert: "The UK is 5 hours ahead of US Eastern during standard time and usually 5 hours ahead in summer.",
+    excursionCategories: [
+      { name: "Stonehenge Transfer", priceRange: { min: 70, max: 160 }, typicalDuration: "4-6 hours" },
+      { name: "London Day Trip", priceRange: { min: 100, max: 240 }, typicalDuration: "8-11 hours" },
+      { name: "Winchester or New Forest", priceRange: { min: 60, max: 150 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Old Town Walls", description: "Historic walls and gates near the city center." },
+      { name: "Mayflower Park", description: "Waterfront park with ship views when schedules align." },
+    ],
+    restaurants: [
+      { name: "Dancing Man Brewery", priceRange: "$$" },
+      { name: "Oxford Street restaurants", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use taxis, rail, coaches, or cruise transfers. London requires a full-day transport plan.",
+    emergencyInfo: { police: "999 or 112", hospital: "University Hospital Southampton" },
+    region: "europe-north",
+    imageUrl: "/images/ports/southampton.jpg",
+  },
+  {
+    slug: "dover",
+    name: "Dover",
+    country: "United Kingdom",
+    coordinates: { lat: 51.1279, lng: 1.3134 },
+    timezone: "GMT/BST",
+    safetyRating: 8.5,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Cruise terminal is near town, but castle and cliff walks require a climb or transport",
+    currency: "GBP",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Dover is known for its white cliffs, castle, Channel views, and role as a UK cruise turnaround port. It can also be a gateway for Canterbury or London-area transfers.",
+    timeZoneAlert: "The UK is usually 5 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Dover Castle", priceRange: { min: 35, max: 90 }, typicalDuration: "2-4 hours" },
+      { name: "White Cliffs Walk", priceRange: { min: 0, max: 60 }, typicalDuration: "2-4 hours" },
+      { name: "Canterbury", priceRange: { min: 60, max: 140 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Waterfront Walk", description: "Harbor and Channel views near town." },
+      { name: "Town Center", description: "Simple shopping and cafe area for a low-key port call." },
+    ],
+    restaurants: [
+      { name: "Cullins Yard", priceRange: "$$" },
+      { name: "The White Horse", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use taxis or tours for the castle, cliffs, Canterbury, or rail connections. Walking routes can be steep.",
+    emergencyInfo: { police: "999 or 112", hospital: "Dover Health Centre / William Harvey Hospital" },
+    region: "europe-north",
+    imageUrl: "/images/ports/dover.jpg",
+  },
+  {
+    slug: "copenhagen",
+    name: "Copenhagen",
+    country: "Denmark",
+    coordinates: { lat: 55.6761, lng: 12.5683 },
+    timezone: "CET/CEST",
+    safetyRating: 9,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Cruise terminals vary; use shuttle, bus, taxi, or metro depending on berth",
+    currency: "DKK",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Copenhagen is a polished Northern Europe port with canals, design, royal palaces, Tivoli, Nyhavn, and bike-friendly streets. Terminal location matters for planning.",
+    timeZoneAlert: "Denmark is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Nyhavn & Canal Cruise", priceRange: { min: 20, max: 70 }, typicalDuration: "2-4 hours" },
+      { name: "Royal Copenhagen Highlights", priceRange: { min: 50, max: 130 }, typicalDuration: "4-6 hours" },
+      { name: "Tivoli Gardens", priceRange: { min: 25, max: 90 }, typicalDuration: "3-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Nyhavn", description: "Colorful harborfront, cafes, and classic Copenhagen views." },
+      { name: "Amalienborg Palace Square", description: "Royal palace square and waterfront approach." },
+    ],
+    restaurants: [
+      { name: "Torvehallerne", priceRange: "$$" },
+      { name: "Gasoline Grill", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use metro, buses, taxis, or bike-friendly routes. Check the exact cruise terminal before choosing a plan.",
+    emergencyInfo: { police: "112", hospital: "Rigshospitalet" },
+    region: "europe-north",
+    imageUrl: "/images/ports/copenhagen.jpg",
+  },
+  {
+    slug: "oslo",
+    name: "Oslo",
+    country: "Norway",
+    coordinates: { lat: 59.9139, lng: 10.7522 },
+    timezone: "CET/CEST",
+    safetyRating: 9,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Cruise docks are close to the city center, Akershus Fortress, and waterfront",
+    currency: "NOK",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Oslo is a clean, easy Northern Europe port with fjord arrival views, museums, waterfront architecture, parks, and strong public transit.",
+    timeZoneAlert: "Norway is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Vigeland Park & City Highlights", priceRange: { min: 50, max: 120 }, typicalDuration: "3-5 hours" },
+      { name: "Museum Peninsula", priceRange: { min: 35, max: 100 }, typicalDuration: "3-5 hours" },
+      { name: "Oslofjord Cruise", priceRange: { min: 40, max: 110 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Akershus Fortress", description: "Historic fortress near the cruise docks with harbor views." },
+      { name: "Aker Brygge Waterfront", description: "Harborfront promenade with restaurants and fjord views." },
+    ],
+    restaurants: [
+      { name: "Mathallen Oslo", priceRange: "$$" },
+      { name: "Fiskeriet", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Walk central areas or use Oslo's transit system. Norway is expensive, so price-check tours and meals.",
+    emergencyInfo: { police: "112", hospital: "Oslo University Hospital" },
+    region: "europe-north",
+    imageUrl: "/images/ports/oslo.jpg",
+  },
+  {
+    slug: "stockholm",
+    name: "Stockholm",
+    country: "Sweden",
+    coordinates: { lat: 59.3293, lng: 18.0686 },
+    timezone: "CET/CEST",
+    safetyRating: 9,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Terminal location varies; some berths need shuttle or public transit to Gamla Stan",
+    currency: "SEK",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Stockholm offers a beautiful archipelago approach, Gamla Stan, museums, waterfront neighborhoods, and efficient transit. Exact berth determines whether the old town is walkable.",
+    timeZoneAlert: "Sweden is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Gamla Stan & Royal Palace", priceRange: { min: 35, max: 100 }, typicalDuration: "3-5 hours" },
+      { name: "Vasa Museum", priceRange: { min: 25, max: 80 }, typicalDuration: "2-4 hours" },
+      { name: "Archipelago or City Highlights", priceRange: { min: 60, max: 150 }, typicalDuration: "4-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Gamla Stan Walk", description: "Historic old town lanes, squares, and waterfront views." },
+      { name: "Skeppsholmen", description: "Island walk with harbor views and museum exteriors." },
+    ],
+    restaurants: [
+      { name: "Ostermalms Saluhall", priceRange: "$$" },
+      { name: "Meatballs for the People", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use shuttles, metro, trams, ferries, or taxis depending on terminal. Confirm return route before leaving the berth.",
+    emergencyInfo: { police: "112", hospital: "Karolinska University Hospital" },
+    region: "europe-north",
+    imageUrl: "/images/ports/stockholm.jpg",
+  },
+  {
+    slug: "yokohama",
+    name: "Yokohama",
+    country: "Japan",
+    coordinates: { lat: 35.4437, lng: 139.6380 },
+    timezone: "JST",
+    safetyRating: 9.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Osanbashi Pier is close to waterfront parks, Chinatown, and rail connections",
+    currency: "JPY",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Yokohama is a major Japan cruise port with a scenic waterfront, Chinatown, gardens, modern shopping, and easy rail access to Tokyo for longer port calls or turnarounds.",
+    timeZoneAlert: "Japan is 13 or 14 hours ahead of US Eastern depending on US daylight saving time.",
+    excursionCategories: [
+      { name: "Tokyo Highlights", priceRange: { min: 100, max: 240 }, typicalDuration: "7-10 hours" },
+      { name: "Yokohama Waterfront & Chinatown", priceRange: { min: 20, max: 80 }, typicalDuration: "3-5 hours" },
+      { name: "Kamakura Temples", priceRange: { min: 80, max: 180 }, typicalDuration: "5-7 hours" },
+    ],
+    freeActivities: [
+      { name: "Yamashita Park", description: "Waterfront park near the pier with harbor views." },
+      { name: "Yokohama Chinatown", description: "Lively dining district within reach of the waterfront." },
+    ],
+    restaurants: [
+      { name: "Yokohama Chinatown stalls", priceRange: "$$" },
+      { name: "Katsuretsuan", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use trains for Tokyo or Kamakura. IC transit cards, taxis, and walking work well around central Yokohama.",
+    emergencyInfo: { police: "110 / ambulance 119", hospital: "Yokohama City University Medical Center" },
+    region: "asia",
+    imageUrl: "/images/ports/yokohama.jpg",
+  },
+  {
+    slug: "shanghai",
+    name: "Shanghai",
+    country: "China",
+    coordinates: { lat: 31.2304, lng: 121.4737 },
+    timezone: "CST",
+    safetyRating: 8.5,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Cruise berths vary; central sightseeing usually requires shuttle, taxi, or metro connection",
+    currency: "CNY",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Shanghai is a major Asia cruise gateway with skyline views, the Bund, Yu Garden, shopping streets, and deep metro coverage. Terminal distance varies widely by itinerary.",
+    timeZoneAlert: "Shanghai is 12 or 13 hours ahead of US Eastern depending on US daylight saving time.",
+    excursionCategories: [
+      { name: "Bund & Yu Garden", priceRange: { min: 60, max: 160 }, typicalDuration: "5-7 hours" },
+      { name: "Shanghai City Highlights", priceRange: { min: 80, max: 200 }, typicalDuration: "6-8 hours" },
+      { name: "Water Town Day Trip", priceRange: { min: 100, max: 240 }, typicalDuration: "7-9 hours" },
+    ],
+    freeActivities: [
+      { name: "The Bund", description: "Classic waterfront skyline walk when transfer time allows." },
+      { name: "Nanjing Road", description: "Major shopping street and orientation point in central Shanghai." },
+    ],
+    restaurants: [
+      { name: "Jia Jia Tang Bao", priceRange: "$" },
+      { name: "Lost Heaven", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Use organized transfers, taxis, or metro. Confirm payment and connectivity options before relying on apps abroad.",
+    emergencyInfo: { police: "110 / ambulance 120", hospital: "Shanghai United Family Hospital" },
+    region: "asia",
+    imageUrl: "/images/ports/shanghai.jpg",
+  },
+  {
+    slug: "busan",
+    name: "Busan",
+    country: "South Korea",
+    coordinates: { lat: 35.1796, lng: 129.0756 },
+    timezone: "KST",
+    safetyRating: 9,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Cruise terminal is near central transit; exact access depends on berth",
+    currency: "KRW",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Busan is a coastal South Korean port with markets, beaches, temples, skyline views, and strong public transit. It is a practical and rewarding independent-exploration stop.",
+    timeZoneAlert: "South Korea is 13 or 14 hours ahead of US Eastern depending on US daylight saving time.",
+    excursionCategories: [
+      { name: "Gamcheon Culture Village", priceRange: { min: 40, max: 110 }, typicalDuration: "3-5 hours" },
+      { name: "Haedong Yonggungsa Temple", priceRange: { min: 60, max: 140 }, typicalDuration: "4-6 hours" },
+      { name: "Jagalchi Market & City Highlights", priceRange: { min: 30, max: 100 }, typicalDuration: "3-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Jagalchi Market", description: "Large seafood market and nearby waterfront atmosphere." },
+      { name: "BIFF Square", description: "Street-food and shopping area near Nampo." },
+    ],
+    restaurants: [
+      { name: "Jagalchi Market seafood stalls", priceRange: "$$" },
+      { name: "Gukje Market food lanes", priceRange: "$" },
+    ],
+    gettingAround:
+      "Metro, taxis, and tours work well. Build extra time for cross-city beach or temple visits.",
+    emergencyInfo: { police: "112 / ambulance 119", hospital: "Pusan National University Hospital" },
+    region: "asia",
+    imageUrl: "/images/ports/busan.jpg",
+  },
+  {
+    slug: "jeju",
+    name: "Jeju",
+    country: "South Korea",
+    coordinates: { lat: 33.4996, lng: 126.5312 },
+    timezone: "KST",
+    safetyRating: 9,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Cruise access varies by terminal; island sights require taxi, tour, or bus",
+    currency: "KRW",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Jeju is a volcanic island port known for coastlines, waterfalls, lava formations, markets, and UNESCO natural scenery. Independent days need transport planning because attractions are spread out.",
+    timeZoneAlert: "South Korea is 13 or 14 hours ahead of US Eastern depending on US daylight saving time.",
+    excursionCategories: [
+      { name: "Jeju Waterfalls & Coast", priceRange: { min: 70, max: 160 }, typicalDuration: "5-7 hours" },
+      { name: "Seongsan Ilchulbong", priceRange: { min: 80, max: 180 }, typicalDuration: "6-8 hours" },
+      { name: "Market & City Walk", priceRange: { min: 20, max: 80 }, typicalDuration: "2-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Dongmun Market", description: "Local food and shopping market in Jeju City." },
+      { name: "Harbor Area Walk", description: "Simple waterfront orientation near port areas when time is short." },
+    ],
+    restaurants: [
+      { name: "Dongmun Market food stalls", priceRange: "$" },
+      { name: "Black pork barbecue restaurants", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use tours, taxis, or buses. Island drives can be long, so avoid overpacking the day.",
+    emergencyInfo: { police: "112 / ambulance 119", hospital: "Jeju National University Hospital" },
+    region: "asia",
+    imageUrl: "/images/ports/jeju.jpg",
+  },
+  {
+    slug: "sydney",
+    name: "Sydney",
+    country: "Australia",
+    coordinates: { lat: -33.8688, lng: 151.2093 },
+    timezone: "AEST/AEDT",
+    safetyRating: 9,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Circular Quay berths are beside the Opera House and The Rocks; White Bay needs transport",
+    currency: "AUD",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Sydney is one of the world's great cruise arrivals, with harbor views, the Opera House, The Rocks, ferries, beaches, and Blue Mountains excursions depending on berth and time.",
+    timeZoneAlert: "Sydney is far ahead of US time; check the app's local date and all-aboard time carefully.",
+    excursionCategories: [
+      { name: "Opera House & The Rocks", priceRange: { min: 0, max: 90 }, typicalDuration: "2-4 hours" },
+      { name: "Bondi Beach & Coastal Walk", priceRange: { min: 30, max: 110 }, typicalDuration: "3-5 hours" },
+      { name: "Blue Mountains", priceRange: { min: 120, max: 260 }, typicalDuration: "8-10 hours" },
+    ],
+    freeActivities: [
+      { name: "Circular Quay", description: "Harborfront views of ferries, the bridge, and Opera House when docked nearby." },
+      { name: "The Rocks", description: "Historic lanes, markets, pubs, and harbor viewpoints." },
+    ],
+    restaurants: [
+      { name: "Opera Bar", priceRange: "$$$" },
+      { name: "The Glenmore", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Use ferries, trains, light rail, taxis, or rideshare. White Bay berths need a transfer before most sightseeing.",
+    emergencyInfo: { police: "000", hospital: "St Vincent's Hospital Sydney" },
+    region: "asia",
+    imageUrl: "/images/ports/sydney.jpg",
+  },
+  {
+    slug: "auckland",
+    name: "Auckland",
+    country: "New Zealand",
+    coordinates: { lat: -36.8485, lng: 174.7633 },
+    timezone: "NZST/NZDT",
+    safetyRating: 9,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Cruise berths are on or near the central waterfront",
+    currency: "NZD",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Auckland is a convenient New Zealand cruise port with a central waterfront, ferries, volcanic viewpoints, museums, food, and access to Waiheke Island or west-coast scenery.",
+    timeZoneAlert: "Auckland is far ahead of US time; verify the local date and all-aboard time.",
+    excursionCategories: [
+      { name: "Waiheke Island", priceRange: { min: 70, max: 180 }, typicalDuration: "5-7 hours" },
+      { name: "Auckland City Highlights", priceRange: { min: 40, max: 120 }, typicalDuration: "3-5 hours" },
+      { name: "West Coast & Rainforest", priceRange: { min: 90, max: 200 }, typicalDuration: "5-7 hours" },
+    ],
+    freeActivities: [
+      { name: "Viaduct Harbour", description: "Waterfront walk with dining, boats, and city views near the terminal." },
+      { name: "Wynyard Quarter", description: "Harborfront public spaces, cafes, and views." },
+    ],
+    restaurants: [
+      { name: "Auckland Fish Market", priceRange: "$$" },
+      { name: "Depot Eatery", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Central waterfront is walkable. Ferries, trains, buses, taxis, and tours cover farther sights.",
+    emergencyInfo: { police: "111", hospital: "Auckland City Hospital" },
+    region: "asia",
+    imageUrl: "/images/ports/auckland.jpg",
+  },
+];
+
+const PORT_RECORDS: PortEditorialData[] = [
+  /* ================================================================ */
+  /*  1. Cozumel, Mexico                                              */
+  /* ================================================================ */
+  {
+    slug: "cozumel",
+    name: "Cozumel",
+    country: "Mexico",
+    coordinates: { lat: 20.4919, lng: -86.9647 },
+    timezone: "EST (no DST)",
+    safetyRating: 8.5,
+    walkabilityRating: 3,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "15-20 min from southern piers to San Miguel",
+    currency: "MXN",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Cozumel is Mexico's largest Caribbean island and one of the world's top diving destinations. The island features stunning coral reefs, Mayan ruins, and a laid-back downtown area called San Miguel. Most cruise ships dock at the southern piers, a fair distance from town.",
+    timeZoneAlert:
+      "Cozumel does NOT observe Daylight Saving Time. In summer (Mar-Nov) it is 1 hour behind Florida/Eastern Time. Double-check your all-aboard time!",
+    excursionCategories: [
+      { name: "Tulum Ruins (ferry + bus)", priceRange: { min: 80, max: 120 }, typicalDuration: "6-7 hours" },
+      { name: "Beach Club Day Pass", priceRange: { min: 40, max: 70 }, typicalDuration: "3-5 hours" },
+      { name: "Atlantis Submarine", priceRange: { min: 105, max: 105 }, typicalDuration: "2 hours" },
+      { name: "San Gervasio Mayan Ruins", priceRange: { min: 40, max: 50 }, typicalDuration: "2-3 hours" },
+      { name: "Snorkeling Reef Tour", priceRange: { min: 40, max: 60 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "San Miguel Walking Tour", description: "Stroll the colorful downtown streets, browse shops, and soak in the authentic Mexican atmosphere." },
+      { name: "Zocalo (Town Square)", description: "The central plaza with benches, Wi-Fi, and local vendors. A great spot to people-watch." },
+      { name: "Museo de la Isla de Cozumel", description: "Small island history museum near the waterfront (~$4 entry). Learn about Mayan heritage and marine ecosystems." },
+    ],
+    restaurants: [
+      { name: "Pancho's Backyard", priceRange: "$$" },
+      { name: "La Mission", priceRange: "$$" },
+      { name: "La Choza", priceRange: "$" },
+    ],
+    gettingAround:
+      "Taxis use fixed-rate pricing — $8 USD from the cruise port to San Miguel town center. Rates are posted at the pier. Negotiate before boarding. Renting a scooter ($25-35/day) is popular for exploring the island's east side.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "CMC Hospital — Calle 1 Sur",
+      usConsulate: "(52) 872-4574 (Consular Agency Cozumel)",
+    },
+    region: "western",
+    imageUrl: "/assets/ports/cozumel.jpg",
+  },
+
+  /* ================================================================ */
+  /*  2. Nassau, Bahamas                                              */
+  /* ================================================================ */
+  {
+    slug: "nassau",
+    name: "Nassau",
+    country: "Bahamas",
+    coordinates: { lat: 25.0784, lng: -77.3431 },
+    timezone: "EST/EDT",
+    safetyRating: 6.5,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "5 min walk to Bay Street",
+    currency: "BSD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Nassau is the vibrant capital of the Bahamas, offering a mix of colonial history, lively markets, and stunning beaches. The cruise port is right downtown, making it one of the most walkable Caribbean stops. Paradise Island and the Atlantis resort are just a bridge away.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Atlantis Aquaventure Waterpark", priceRange: { min: 100, max: 200 }, typicalDuration: "4-6 hours" },
+      { name: "Blue Lagoon Island", priceRange: { min: 70, max: 150 }, typicalDuration: "4-5 hours" },
+      { name: "Pearl Island Beach Escape", priceRange: { min: 80, max: 80 }, typicalDuration: "4-5 hours" },
+      { name: "John Watling's Rum Distillery", priceRange: { min: 20, max: 20 }, typicalDuration: "1-2 hours" },
+      { name: "Dolphin Encounter", priceRange: { min: 100, max: 200 }, typicalDuration: "3-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Junkanoo Beach", description: "The closest public beach to the cruise port — walk west along Bay Street for about 15 minutes." },
+      { name: "Queen's Staircase", description: "Sixty-six steps carved from solid limestone in the late 1700s, shaded by tropical canopy." },
+      { name: "Straw Market", description: "A bustling open-air market selling handmade crafts, straw bags, and souvenirs. Haggling is expected." },
+    ],
+    restaurants: [
+      { name: "Fish Fry at Arawak Cay", priceRange: "$" },
+      { name: "Graycliff Restaurant", priceRange: "$$$$" },
+      { name: "Salty Dog Sea Grille", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Taxi to Atlantis/Paradise Island is $10-15 per person. Water taxis to Paradise Island run $5 each way. Jitney buses cover the island for $1.25. Walking downtown is easy and the best way to explore Bay Street.",
+    emergencyInfo: {
+      police: "911 or 919",
+      hospital: "Princess Margaret Hospital — Shirley Street",
+      usConsulate: "(242) 322-1181",
+    },
+    region: "bahamas",
+    imageUrl: "/images/ports/nassau.jpg"
+  },
+
+  /* ================================================================ */
+  /*  3. Grand Cayman                                                 */
+  /* ================================================================ */
+  {
+    slug: "grand-cayman",
+    name: "Grand Cayman",
+    country: "Cayman Islands",
+    coordinates: { lat: 19.2977, lng: -81.3873 },
+    timezone: "EST (no DST)",
+    safetyRating: 9.5,
+    walkabilityRating: 8,
+    isTenderPort: true,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "5 min tender ride + 5 min walk to George Town",
+    currency: "KYD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Grand Cayman is one of the safest and most polished Caribbean ports. George Town is compact and walkable, with duty-free shopping and waterfront restaurants. The island is best known for Stingray City, Seven Mile Beach, and crystal-clear waters.",
+    timeZoneAlert:
+      "Grand Cayman does NOT observe DST. In summer it is 1 hour behind Florida/Eastern Time. Verify your ship's time zone before heading out.",
+    excursionCategories: [
+      { name: "Stingray City Sandbar", priceRange: { min: 60, max: 100 }, typicalDuration: "2-3 hours" },
+      { name: "Seven Mile Beach Day", priceRange: { min: 15, max: 30 }, typicalDuration: "3-5 hours" },
+      { name: "Cayman Turtle Centre", priceRange: { min: 40, max: 60 }, typicalDuration: "2-3 hours" },
+      { name: "Crystal Caves", priceRange: { min: 50, max: 70 }, typicalDuration: "1.5-2 hours" },
+      { name: "Snorkeling at Eden Rock", priceRange: { min: 30, max: 50 }, typicalDuration: "1-2 hours" },
+    ],
+    freeActivities: [
+      { name: "George Town Walking Tour", description: "Explore colorful Caribbean architecture, duty-free shops, and the waterfront promenade." },
+      { name: "Heroes Square", description: "Central plaza honoring Caymanian heroes, with historic buildings and shaded benches." },
+      { name: "Fort George Ruins", description: "Remains of an 18th-century fort with harbor views — a quick 5-minute photo stop." },
+    ],
+    restaurants: [
+      { name: "Breezes by the Bay", priceRange: "$$" },
+      { name: "Casanova by the Sea", priceRange: "$$$" },
+      { name: "Guy's Beach Bar", priceRange: "$" },
+    ],
+    gettingAround:
+      "Public buses run along the main road for $2.50 CI. Taxis are plentiful but pricey — $20+ to Seven Mile Beach. Shared shuttle options are available for popular spots. This is a tender port, so allow extra time for the boat ride to shore.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Health City Cayman Islands",
+      usConsulate: "No US Consulate — nearest in Jamaica. UK Governor's Office: (345) 244-2401",
+    },
+    region: "western",
+    imageUrl: "/assets/ports/grand-cayman.jpg",
+  },
+
+  /* ================================================================ */
+  /*  4. St. Thomas, USVI                                             */
+  /* ================================================================ */
+  {
+    slug: "st-thomas",
+    name: "St. Thomas",
+    country: "U.S. Virgin Islands",
+    coordinates: { lat: 18.3437, lng: -64.9078 },
+    timezone: "AST (no DST)",
+    safetyRating: 8.5,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "10-15 min walk to Charlotte Amalie from Crown Bay; 5 min from Havensight",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "St. Thomas is a U.S. territory, so no passport is needed for American citizens. Charlotte Amalie offers world-class duty-free shopping and historic Danish colonial architecture. The island's hilly terrain means taxis are common, but the harbor area is walkable.",
+    timeZoneAlert:
+      "St. Thomas is on AST (Atlantic Standard Time) year-round, which is the same as EDT. In winter, it is 1 hour ahead of EST. Check your ship schedule carefully.",
+    excursionCategories: [
+      { name: "Magens Bay Beach", priceRange: { min: 10, max: 25 }, typicalDuration: "3-5 hours" },
+      { name: "Coral World Ocean Park", priceRange: { min: 25, max: 40 }, typicalDuration: "2-3 hours" },
+      { name: "Ferry to St. John", priceRange: { min: 15, max: 30 }, typicalDuration: "4-6 hours" },
+      { name: "Zip Lining at Tree Limin'", priceRange: { min: 100, max: 120 }, typicalDuration: "2-3 hours" },
+      { name: "Kayak & Snorkel Eco Tour", priceRange: { min: 70, max: 90 }, typicalDuration: "3 hours" },
+    ],
+    freeActivities: [
+      { name: "99 Steps", description: "Historic staircase built by the Danes in the 1700s. Climb to the top for panoramic harbor views." },
+      { name: "Fort Christian", description: "The oldest standing structure in the USVI (1672), now a museum. Free to view from outside." },
+      { name: "Main Street Shopping", description: "Window-shop the duty-free stores along Dronningens Gade — the deals are real." },
+    ],
+    restaurants: [
+      { name: "Gladys' Cafe", priceRange: "$" },
+      { name: "Greenhouse Restaurant", priceRange: "$$" },
+      { name: "Amalia Cafe", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Open-air safari taxis (shared trucks) run set routes for $2-4/person. Private taxis charge $10-15 to popular beaches. The island is hilly — wear comfortable shoes even for short walks. Two cruise docks: Havensight and Crown Bay.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Schneider Regional Medical Center",
+    },
+    region: "eastern",
+    imageUrl: "/assets/ports/st-thomas.jpg",
+  },
+
+  /* ================================================================ */
+  /*  5. St. Maarten                                                  */
+  /* ================================================================ */
+  {
+    slug: "st-maarten",
+    name: "St. Maarten",
+    country: "Sint Maarten / Saint-Martin",
+    coordinates: { lat: 18.0425, lng: -63.0548 },
+    timezone: "AST (no DST)",
+    safetyRating: 9,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "5 min walk to Philipsburg from cruise pier",
+    currency: "ANG / EUR",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "St. Maarten is unique: one island shared by two nations (Dutch and French). The cruise port is on the Dutch side in Philipsburg, with great beaches and duty-free shopping steps away. The French side offers European flair, topless beaches, and gourmet dining.",
+    timeZoneAlert:
+      "St. Maarten uses AST year-round. Same as EDT in summer. In winter it is 1 hour ahead of EST.",
+    excursionCategories: [
+      { name: "Maho Beach (Plane Spotting)", priceRange: { min: 15, max: 20 }, typicalDuration: "2-4 hours" },
+      { name: "Orient Bay Beach", priceRange: { min: 20, max: 40 }, typicalDuration: "3-5 hours" },
+      { name: "Loterie Farm Treetop Pool", priceRange: { min: 60, max: 80 }, typicalDuration: "3-4 hours" },
+      { name: "12 Metre Sailing Regatta", priceRange: { min: 100, max: 120 }, typicalDuration: "3 hours" },
+      { name: "Rhino Rider Power Boat", priceRange: { min: 60, max: 80 }, typicalDuration: "2 hours" },
+    ],
+    freeActivities: [
+      { name: "Great Bay Beach", description: "Long stretch of sand right next to the cruise terminal. Lounge for free or rent a chair for $5." },
+      { name: "Front Street Shopping", description: "Duty-free shopping along the Philipsburg boardwalk — jewelry, electronics, and liquor deals." },
+      { name: "Courthouse & Historic Philipsburg", description: "Walk the old town center and see the 1793 Courthouse, the oldest in the Dutch Caribbean." },
+    ],
+    restaurants: [
+      { name: "The Greenhouse", priceRange: "$$" },
+      { name: "Ocean Lounge", priceRange: "$$$" },
+      { name: "Chesterfield's", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Water taxis run from the pier to downtown Philipsburg for $7 round trip. Taxis to Maho Beach are $15-20 per person (fixed rate). Buses to the French side run $2-3. Rent a car ($40-50/day) to explore both sides of the island.",
+    emergencyInfo: {
+      police: "911 (Dutch side) / 17 (French side)",
+      hospital: "St. Maarten Medical Center",
+      usConsulate: "No US Consulate — nearest in Curacao",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/st-maarten.jpg"
+  },
+
+  /* ================================================================ */
+  /*  6. Roatan, Honduras                                             */
+  /* ================================================================ */
+  {
+    slug: "roatan",
+    name: "Roatan",
+    country: "Honduras",
+    coordinates: { lat: 16.3220, lng: -86.5287 },
+    timezone: "CST (no DST)",
+    safetyRating: 7,
+    walkabilityRating: 4,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "15 min walk to Mahogany Bay area; West End is 30 min by taxi",
+    currency: "HNL",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "Roatan is the largest of Honduras' Bay Islands, famous for its world-class diving, lush jungle, and budget-friendly excursions. The Mahogany Bay cruise port has its own beach, shops, and a chairlift to the waterfront. Venture beyond for incredible reef snorkeling.",
+    timeZoneAlert:
+      "Roatan is on CST and does NOT observe DST. In summer it is 2 hours behind Florida/Eastern Time. This is the biggest time gap of any major Caribbean port — triple-check your all-aboard time!",
+    excursionCategories: [
+      { name: "Sloth & Monkey Sanctuary", priceRange: { min: 40, max: 60 }, typicalDuration: "2-3 hours" },
+      { name: "West Bay Beach Day", priceRange: { min: 30, max: 50 }, typicalDuration: "3-5 hours" },
+      { name: "Scuba Diving (2-tank)", priceRange: { min: 60, max: 90 }, typicalDuration: "3-4 hours" },
+      { name: "Zip Line Canopy Tour", priceRange: { min: 60, max: 80 }, typicalDuration: "2-3 hours" },
+      { name: "Glass-Bottom Boat", priceRange: { min: 25, max: 40 }, typicalDuration: "1-2 hours" },
+    ],
+    freeActivities: [
+      { name: "Mahogany Beach", description: "15-minute walk (or free chairlift) from the cruise terminal to a public beach with calm waters." },
+      { name: "Port Area Shopping", description: "Browse souvenir shops and local vendors in the Mahogany Bay complex." },
+      { name: "Nature Walk", description: "Trails near the port area wind through tropical vegetation — keep an eye out for iguanas." },
+    ],
+    restaurants: [
+      { name: "Herby's Sports Bar", priceRange: "$" },
+      { name: "Ginger's Caribbean Grill", priceRange: "$$" },
+      { name: "Vintage Pearl Restaurant", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "IMPORTANT: Confirm if taxi prices are per person or per taxi — it varies by driver and can cause nasty surprises. Taxi to West Bay Beach is $10-15 per person. Water taxis to West Bay run about $5. The port chairlift to the beach is free.",
+    emergencyInfo: {
+      police: "199",
+      hospital: "Roatan Public Hospital — Coxen Hole",
+      usConsulate: "No US Consulate — nearest in Tegucigalpa. Emergency: (504) 2236-9320",
+    },
+    region: "western",
+    imageUrl: "/images/ports/roatan.jpg"
+  },
+
+  /* ================================================================ */
+  /*  7. Aruba                                                        */
+  /* ================================================================ */
+  {
+    slug: "aruba",
+    name: "Aruba",
+    country: "Aruba",
+    coordinates: { lat: 12.5080, lng: -70.0370 },
+    timezone: "AST (no DST)",
+    safetyRating: 9.3,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "5 min walk to downtown Oranjestad",
+    currency: "AWG",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Aruba is one of the safest islands in the Caribbean and sits outside the hurricane belt, so weather is almost always sunny. The cruise terminal is steps from colorful downtown Oranjestad. Eagle Beach consistently ranks among the world's best beaches.",
+    timeZoneAlert:
+      "Aruba uses AST year-round. Same as EDT in summer, 1 hour ahead of EST in winter.",
+    excursionCategories: [
+      { name: "Eagle Beach & Flamingos", priceRange: { min: 5, max: 10 }, typicalDuration: "3-5 hours" },
+      { name: "Arikok National Park 4x4", priceRange: { min: 80, max: 120 }, typicalDuration: "4-5 hours" },
+      { name: "Butterfly Farm", priceRange: { min: 20, max: 20 }, typicalDuration: "1 hour" },
+      { name: "Snorkeling Catamaran", priceRange: { min: 50, max: 80 }, typicalDuration: "3-4 hours" },
+      { name: "ATV Island Tour", priceRange: { min: 90, max: 130 }, typicalDuration: "3-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Solar-Powered Tram", description: "Free trolley that loops through downtown Oranjestad — hop on to see the colorful Dutch architecture." },
+      { name: "Renaissance Marketplace", description: "Waterfront shopping and dining complex right next to the cruise port. Window-shop and enjoy the views." },
+      { name: "Linear Park Walk", description: "Paved walking and biking path along the coast from the port toward Eagle Beach." },
+    ],
+    restaurants: [
+      { name: "Driftwood Restaurant", priceRange: "$$" },
+      { name: "The West Deck", priceRange: "$$" },
+      { name: "Eduardo's Beach Shack", priceRange: "$" },
+    ],
+    gettingAround:
+      "Arubus public buses run along the hotel strip for $2.50 one-way. Taxis are metered; downtown to Eagle Beach is about $10. The free solar tram loops through Oranjestad. Renting a car is easy ($40-50/day) for exploring Arikok and the rugged north coast.",
+    emergencyInfo: {
+      police: "100",
+      hospital: "Dr. Horacio E. Oduber Hospital",
+      usConsulate: "No US Consulate — nearest in Curacao: (599-9) 461-3066",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/aruba.jpg"
+  },
+
+  /* ================================================================ */
+  /*  8. San Juan, Puerto Rico                                        */
+  /* ================================================================ */
+  {
+    slug: "san-juan",
+    name: "San Juan",
+    country: "Puerto Rico (U.S.)",
+    coordinates: { lat: 18.4591, lng: -66.0986 },
+    timezone: "AST (no DST)",
+    safetyRating: 8.5,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Immediate — you dock in Old San Juan",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "San Juan is one of the oldest cities in the Americas and a U.S. territory — no passport needed. The cruise port is right in the heart of Old San Juan, surrounded by 500-year-old fortresses, colorful colonial streets, and fantastic food. It's often a homeport for Caribbean itineraries.",
+    timeZoneAlert:
+      "Puerto Rico uses AST year-round. Same as EDT in summer. In winter, it is 1 hour ahead of EST.",
+    excursionCategories: [
+      { name: "El Yunque Rainforest", priceRange: { min: 80, max: 120 }, typicalDuration: "5-6 hours" },
+      { name: "Bioluminescent Bay (Fajardo)", priceRange: { min: 100, max: 140 }, typicalDuration: "4-5 hours" },
+      { name: "Bacardi Rum Distillery", priceRange: { min: 40, max: 60 }, typicalDuration: "2-3 hours" },
+      { name: "Food Walking Tour", priceRange: { min: 60, max: 90 }, typicalDuration: "2-3 hours" },
+      { name: "Flamenco Beach (Culebra)", priceRange: { min: 120, max: 180 }, typicalDuration: "Full day" },
+    ],
+    freeActivities: [
+      { name: "Paseo de la Princesa", description: "Stunning tree-lined promenade along the old city wall with fountains, art, and harbor views." },
+      { name: "El Morro Fort Grounds", description: "The grounds outside Castillo San Felipe del Morro are free — fly a kite on the vast lawn with ocean views." },
+      { name: "Old San Juan Streets", description: "Wander the iconic blue cobblestone streets, pastel buildings, and plazas of this 500-year-old city." },
+    ],
+    restaurants: [
+      { name: "La Bombonera", priceRange: "$" },
+      { name: "Marmalade", priceRange: "$$$" },
+      { name: "El Jibarito", priceRange: "$" },
+    ],
+    gettingAround:
+      "Old San Juan is best explored on foot. A free trolley runs between the port area and the main attractions. Taxis to Condado beach area cost $10-15. Uber/Lyft work throughout PR. For El Yunque, book a tour or rent a car ($40-50/day).",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Centro Medico — San Juan",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/san-juan.jpg"
+  },
+
+  /* ================================================================ */
+  /*  9. Key West, Florida                                            */
+  /* ================================================================ */
+  {
+    slug: "key-west",
+    name: "Key West",
+    country: "United States",
+    coordinates: { lat: 24.5551, lng: -81.7800 },
+    timezone: "EST/EDT",
+    safetyRating: 9.5,
+    walkabilityRating: 10,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Immediate — Mallory Square is at the pier",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Key West is the southernmost point in the continental U.S. and one of the most walkable cruise ports anywhere. Everything is within a 20-minute walk of the pier. The vibe is laid-back, quirky, and full of history — from Hemingway to Harry Truman. No passport needed.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Conch Tour Train / Trolley", priceRange: { min: 35, max: 40 }, typicalDuration: "1.5 hours" },
+      { name: "Sunset Sailing Trip", priceRange: { min: 60, max: 90 }, typicalDuration: "2 hours" },
+      { name: "Hemingway Home & Museum", priceRange: { min: 18, max: 18 }, typicalDuration: "1-1.5 hours" },
+      { name: "Snorkeling at the Reef", priceRange: { min: 50, max: 70 }, typicalDuration: "3 hours" },
+      { name: "Jet Ski Island Tour", priceRange: { min: 80, max: 120 }, typicalDuration: "1.5 hours" },
+    ],
+    freeActivities: [
+      { name: "Southernmost Point Buoy", description: "The iconic red/yellow/black marker at the tip of the U.S. Great photo op — arrive early to beat lines." },
+      { name: "Mallory Square Sunset", description: "Nightly sunset celebration with street performers, food vendors, and artists. Starts 2 hours before sunset." },
+      { name: "Duval Street Walk", description: "Key West's famous mile-long main drag — bars, galleries, shops, and people-watching galore." },
+    ],
+    restaurants: [
+      { name: "Blue Heaven", priceRange: "$$" },
+      { name: "El Meson de Pepe", priceRange: "$$" },
+      { name: "Garbo's Grill", priceRange: "$" },
+    ],
+    gettingAround:
+      "Key West is best on foot or by bicycle. Rent a bike for $15-20/day. The Conch Tour Train ($40) and Old Town Trolley ($40) offer hop-on/hop-off service. Duval Street is the main artery. Everything you want is within a 20-minute walk of the pier.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Lower Keys Medical Center",
+    },
+    region: "western",
+    imageUrl: "/assets/ports/key-west.jpg",
+  },
+
+  /* ================================================================ */
+  /*  10. Grand Turk                                                  */
+  /* ================================================================ */
+  {
+    slug: "grand-turk",
+    name: "Grand Turk",
+    country: "Turks & Caicos",
+    coordinates: { lat: 21.4370, lng: -71.1370 },
+    timezone: "EST/EDT",
+    safetyRating: 9,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "20-25 min walk to Cockburn Town",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Grand Turk is a tiny, sleepy island that sees most of its visitors from cruise ships. The Carnival-built cruise center has a pool, beach, shops, and a Margaritaville. Beyond the center, the island offers incredible wall diving, historic Cockburn Town, and wild horses.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Stingray Encounter", priceRange: { min: 60, max: 100 }, typicalDuration: "2 hours" },
+      { name: "Scuba Diving (Wall)", priceRange: { min: 100, max: 150 }, typicalDuration: "3-4 hours" },
+      { name: "Island Safari Tour", priceRange: { min: 60, max: 70 }, typicalDuration: "2-3 hours" },
+      { name: "Whale Watching (seasonal)", priceRange: { min: 70, max: 90 }, typicalDuration: "2-3 hours" },
+      { name: "Horseback Beach Ride", priceRange: { min: 80, max: 100 }, typicalDuration: "1.5 hours" },
+    ],
+    freeActivities: [
+      { name: "Cruise Center Beach", description: "Large beach with lounge chairs right at the cruise terminal. The water is crystal clear and the reef is close." },
+      { name: "NASA / John Glenn Exhibit", description: "Small museum at the cruise center commemorating the 1962 Mercury space capsule recovery near Grand Turk." },
+      { name: "Cockburn Town Walk", description: "20-minute walk to the colonial capital with 200-year-old stone buildings and the Turks & Caicos National Museum." },
+    ],
+    restaurants: [
+      { name: "Jack's Shack Beach Bar", priceRange: "$" },
+      { name: "Margaritaville", priceRange: "$$" },
+      { name: "Beached Whale", priceRange: "$$" },
+    ],
+    gettingAround:
+      "The island is very small. Taxis are available at the port for $5-10 to most spots. Golf carts can be rented for $60-80/day. Walking to Cockburn Town takes 20-25 minutes along the coast road. The cruise center itself has plenty to keep you busy.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Grand Turk Hospital",
+      usConsulate: "No US Consulate — nearest in Nassau, Bahamas",
+    },
+    region: "eastern",
+    imageUrl: "/assets/ports/grand-turk.jpg",
+  },
+
+  /* ================================================================ */
+  /*  11. Costa Maya, Mexico                                          */
+  /* ================================================================ */
+  {
+    slug: "costa-maya",
+    name: "Costa Maya",
+    country: "Mexico",
+    coordinates: { lat: 18.7291, lng: -87.6940 },
+    timezone: "EST (no DST)",
+    safetyRating: 8,
+    walkabilityRating: 2,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Mahahual village is a $5 taxi ride (3 km)",
+    currency: "MXN",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "Costa Maya's port is a purpose-built cruise complex on Mexico's remote southern Caribbean coast. The port itself has a pool, shops, and restaurants, but the real draw is the laid-back village of Mahahual and easy access to Mayan ruins like Chacchoben.",
+    timeZoneAlert:
+      "Costa Maya does NOT observe DST. In summer it is 1 hour behind Florida/Eastern Time.",
+    excursionCategories: [
+      { name: "Chacchoben Mayan Ruins", priceRange: { min: 60, max: 90 }, typicalDuration: "4-5 hours" },
+      { name: "Beach Break at Mahahual", priceRange: { min: 15, max: 30 }, typicalDuration: "3-5 hours" },
+      { name: "Bacalar Lagoon (7 Colors)", priceRange: { min: 80, max: 120 }, typicalDuration: "5-6 hours" },
+      { name: "Snorkeling Reef Tour", priceRange: { min: 40, max: 60 }, typicalDuration: "2-3 hours" },
+      { name: "Kayak & Paddleboard", priceRange: { min: 30, max: 50 }, typicalDuration: "2 hours" },
+    ],
+    freeActivities: [
+      { name: "Port Complex Pool", description: "Large swimming pool right at the cruise terminal — free for cruise passengers." },
+      { name: "Mahahual Boardwalk", description: "Short taxi ride to the village boardwalk (malecon) with beach access and local atmosphere." },
+      { name: "Beach Walking", description: "The coastline near the port has calm, clear waters perfect for wading." },
+    ],
+    restaurants: [
+      { name: "Nacional Beach Club", priceRange: "$$" },
+      { name: "Tropicante", priceRange: "$" },
+      { name: "Krazy Lobster", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Taxis from the port to Mahahual village cost about $5 per person. The port complex itself is walkable. For Chacchoben ruins, you'll need a tour ($60-90). There's not much public transport — taxis and tours are the main options.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Centro de Salud Mahahual (basic clinic)",
+      usConsulate: "(52) 872-4574 (Consular Agency — shared with Cozumel)",
+    },
+    region: "western",
+    imageUrl: "/images/ports/costa-maya.jpg"
+  },
+
+  /* ================================================================ */
+  /*  12. Progreso, Mexico                                            */
+  /* ================================================================ */
+  {
+    slug: "progreso",
+    name: "Progreso",
+    country: "Mexico",
+    coordinates: { lat: 21.2808, lng: -89.6630 },
+    timezone: "CST (no DST)",
+    safetyRating: 8,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "10 min walk from the pier head (long pier)",
+    currency: "MXN",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Progreso is the gateway to the Yucatan interior, home to Merida and the iconic Chichen Itza. The port features one of the longest piers in the world (4 miles). The town itself is a quiet Mexican beach community with authentic local flavor.",
+    timeZoneAlert:
+      "Progreso is on CST and does NOT observe DST. In summer it is 2 hours behind Florida. Double-check your all-aboard time!",
+    excursionCategories: [
+      { name: "Chichen Itza Day Trip", priceRange: { min: 80, max: 130 }, typicalDuration: "7-8 hours" },
+      { name: "Merida City Tour", priceRange: { min: 40, max: 70 }, typicalDuration: "4-5 hours" },
+      { name: "Cenote Swimming", priceRange: { min: 40, max: 60 }, typicalDuration: "3-4 hours" },
+      { name: "Uxmal Ruins", priceRange: { min: 70, max: 100 }, typicalDuration: "5-6 hours" },
+      { name: "Beach Day in Progreso", priceRange: { min: 10, max: 20 }, typicalDuration: "3-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Progreso Malecon", description: "Waterfront boardwalk with ocean views, local food stalls, and a relaxed atmosphere." },
+      { name: "Town Square", description: "Central plaza with a church, shaded benches, and local vendors selling Yucatecan snacks." },
+      { name: "Beach Walking", description: "Wide sandy beaches extend in both directions from the pier — calm, shallow waters." },
+    ],
+    restaurants: [
+      { name: "Eladio's Bar", priceRange: "$" },
+      { name: "Flamingos Restaurant", priceRange: "$$" },
+      { name: "Casa de los Abuelos", priceRange: "$" },
+    ],
+    gettingAround:
+      "A shuttle bus runs the 4-mile pier to shore. Taxis wait at the pier head — $20-30 to Merida. For Chichen Itza, a tour is essential (3-hour drive each way). Walking around Progreso town is easy and flat.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Hospital General de Progreso",
+      usConsulate: "(999) 942-5700 (US Consulate in Merida)",
+    },
+    region: "western",
+    imageUrl: "/images/ports/progreso.jpg"
+  },
+
+  /* ================================================================ */
+  /*  13. CocoCay, Bahamas (Royal Caribbean Private Island)           */
+  /* ================================================================ */
+  {
+    slug: "cococay",
+    name: "Perfect Day at CocoCay",
+    country: "Bahamas (Private Island)",
+    coordinates: { lat: 25.8175, lng: -77.9390 },
+    timezone: "EST/EDT",
+    safetyRating: 10,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "N/A — private island, everything is within walking distance",
+    currency: "USD (ship card)",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "limited",
+    overview:
+      "CocoCay is Royal Caribbean's private island in the Berry Islands chain. After a $250 million transformation, it features Thrill Waterpark, an enormous freshwater pool, zip lines, a hot-air balloon ride, and multiple beach areas. All food and basic beach access are included.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Thrill Waterpark", priceRange: { min: 80, max: 100 }, typicalDuration: "All day" },
+      { name: "Up, Up and Away Balloon", priceRange: { min: 30, max: 40 }, typicalDuration: "15 min" },
+      { name: "Zip Line", priceRange: { min: 50, max: 70 }, typicalDuration: "30 min" },
+      { name: "Floating Cabana Rental", priceRange: { min: 200, max: 600 }, typicalDuration: "All day" },
+      { name: "Jet Ski Tour", priceRange: { min: 90, max: 120 }, typicalDuration: "1 hour" },
+    ],
+    freeActivities: [
+      { name: "Chill Island Beach", description: "Huge stretch of beach with free lounge chairs, included as part of your cruise." },
+      { name: "South Beach", description: "Quieter beach area at the far end of the island. Fewer crowds, same gorgeous water." },
+      { name: "Oasis Lagoon Pool", description: "The largest freshwater pool in the Caribbean. Free for all guests with swim-up bar." },
+    ],
+    restaurants: [
+      { name: "Snack Shack (included)", priceRange: "$" },
+      { name: "Chill Grill (included)", priceRange: "$" },
+      { name: "Captain Jack's (a la carte)", priceRange: "$$" },
+    ],
+    gettingAround:
+      "The island is walkable end to end in about 20 minutes. Tram service runs between the dock and the main attractions. Everything is designed for easy foot traffic. No roads, no cars — just pathways and beaches.",
+    emergencyInfo: {
+      police: "Ship security (island is staffed by Royal Caribbean)",
+      hospital: "First aid station on island; medical center on ship",
+    },
+    region: "bahamas",
+    imageUrl: "/assets/ports/cococay.jpg",
+  },
+
+  /* ================================================================ */
+  /*  14. Labadee, Haiti (Royal Caribbean Private Resort)             */
+  /* ================================================================ */
+  {
+    slug: "labadee",
+    name: "Labadee",
+    country: "Haiti (Private Resort)",
+    coordinates: { lat: 19.7750, lng: -72.2450 },
+    timezone: "EST/EDT",
+    safetyRating: 10,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "N/A — private fenced resort, no town access",
+    currency: "USD (ship card)",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "none",
+    overview:
+      "Labadee is Royal Caribbean's private resort on Haiti's northern coast. It's a fully fenced and secured beach destination with multiple beaches, a zip line over the water, and an alpine coaster. The beaches are stunning and included with your cruise.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Dragon's Breath Zip Line", priceRange: { min: 90, max: 100 }, typicalDuration: "30 min" },
+      { name: "Dragon's Tail Alpine Coaster", priceRange: { min: 40, max: 55 }, typicalDuration: "20 min" },
+      { name: "Kayaking", priceRange: { min: 40, max: 60 }, typicalDuration: "1 hour" },
+      { name: "Wave Jet Tour", priceRange: { min: 80, max: 100 }, typicalDuration: "1 hour" },
+      { name: "Private Cabana Rental", priceRange: { min: 250, max: 600 }, typicalDuration: "All day" },
+    ],
+    freeActivities: [
+      { name: "Barefoot Beach", description: "Main beach with calm waters, free lounge chairs, and a great swimming area." },
+      { name: "Adrenaline Beach", description: "More active beach near the zip line and coaster — popular with families." },
+      { name: "Artisan Market", description: "Browse handmade Haitian art, paintings, and crafts at the market near the pier." },
+    ],
+    restaurants: [
+      { name: "Beach BBQ (included)", priceRange: "$" },
+      { name: "Nellie's Beach Bar", priceRange: "$" },
+      { name: "Hilltop Grill (included)", priceRange: "$" },
+    ],
+    gettingAround:
+      "Labadee is walkable but hilly. A tram runs between the pier and the beaches. Wear good shoes for the paths between beaches. Everything is within the resort fence — there is no access to the surrounding area.",
+    emergencyInfo: {
+      police: "Ship security (resort is staffed by Royal Caribbean)",
+      hospital: "First aid station on site; medical center on ship",
+    },
+    region: "eastern",
+    imageUrl: "/assets/ports/labadee.jpg",
+  },
+
+  /* ================================================================ */
+  /*  15. Amber Cove, Dominican Republic                              */
+  /* ================================================================ */
+  {
+    slug: "amber-cove",
+    name: "Amber Cove",
+    country: "Dominican Republic",
+    coordinates: { lat: 19.8120, lng: -70.7120 },
+    timezone: "AST (no DST)",
+    safetyRating: 8,
+    walkabilityRating: 3,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Puerto Plata is a 15-min taxi ride",
+    currency: "DOP",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Amber Cove is Carnival Corporation's purpose-built cruise port on the Dominican Republic's north coast. The complex features a large pool, water slides, zip lines, and shops. Puerto Plata and its 27 Waterfalls of Damajagua are popular excursions.",
+    timeZoneAlert:
+      "The DR uses AST year-round. Same as EDT in summer, 1 hour ahead of EST in winter.",
+    excursionCategories: [
+      { name: "27 Waterfalls of Damajagua", priceRange: { min: 70, max: 100 }, typicalDuration: "4-5 hours" },
+      { name: "Puerto Plata Cable Car & Fort", priceRange: { min: 40, max: 60 }, typicalDuration: "3-4 hours" },
+      { name: "Sosua Beach Day", priceRange: { min: 30, max: 50 }, typicalDuration: "4-5 hours" },
+      { name: "Catamaran Snorkel Cruise", priceRange: { min: 60, max: 80 }, typicalDuration: "3-4 hours" },
+      { name: "Zip Line Adventure", priceRange: { min: 50, max: 70 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Amber Cove Pool Complex", description: "Large pool with swim-up bar, water slides, and lounge chairs — included for cruise guests." },
+      { name: "Port Shopping Village", description: "Browse local crafts, amber jewelry, and Dominican souvenirs at the port shops." },
+      { name: "Nature Trail Walk", description: "Short walking path through tropical gardens near the port area." },
+    ],
+    restaurants: [
+      { name: "Port Complex Grill", priceRange: "$" },
+      { name: "Luper's Restaurant (Puerto Plata)", priceRange: "$" },
+      { name: "La Tarappa (Puerto Plata)", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Taxis from the port to Puerto Plata cost $20-25 for up to 4 people. The port complex itself is walkable. For excursions like the 27 Waterfalls, book a tour. Public guagua (minibus) service is available but not recommended for cruise passengers.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Centro Medico Dr. Bournigal — Puerto Plata",
+      usConsulate: "(809) 567-7775 (Santo Domingo)",
+    },
+    region: "eastern",
+    imageUrl: "/assets/ports/amber-cove.jpg",
+  },
+
+  /* ================================================================ */
+  /*  16. Belize City, Belize                                         */
+  /* ================================================================ */
+  {
+    slug: "belize-city",
+    name: "Belize City",
+    country: "Belize",
+    coordinates: { lat: 17.4833, lng: -88.2167 },
+    timezone: "CST (no DST)",
+    safetyRating: 5.5,
+    walkabilityRating: 3,
+    isTenderPort: true,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Tender to Tourism Village + 5 min walk",
+    currency: "BZD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "Belize City is the tender port gateway to incredible Mayan ruins (Altun Ha, Lamanai), the world's second-largest barrier reef, cave tubing, and jungle adventures. The city itself is rough around the edges — most cruisers book excursions rather than exploring independently.",
+    timeZoneAlert:
+      "Belize is on CST and does NOT observe DST. In summer it is 2 hours behind Florida/Eastern Time.",
+    excursionCategories: [
+      { name: "Cave Tubing", priceRange: { min: 60, max: 90 }, typicalDuration: "4-5 hours" },
+      { name: "Altun Ha Mayan Ruins", priceRange: { min: 50, max: 80 }, typicalDuration: "3-4 hours" },
+      { name: "Snorkeling the Barrier Reef", priceRange: { min: 70, max: 100 }, typicalDuration: "4-5 hours" },
+      { name: "Lamanai River Safari", priceRange: { min: 80, max: 120 }, typicalDuration: "5-6 hours" },
+      { name: "Zip Line & Zoo Combo", priceRange: { min: 80, max: 100 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Tourism Village", description: "Small shopping and dining area near the tender dock. Safe and designed for cruise visitors." },
+      { name: "Swing Bridge", description: "Manually operated swing bridge in the city center — one of the last of its kind in the world." },
+      { name: "Fort George Lighthouse", description: "Short walk to the Baron Bliss Lighthouse with harbor views." },
+    ],
+    restaurants: [
+      { name: "Tourism Village Food Court", priceRange: "$" },
+      { name: "Wet Lizard", priceRange: "$" },
+      { name: "Celebrity Restaurant", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Stay in the Tourism Village area or book an excursion — independent walking beyond the tourist zone is not recommended. Taxis should be pre-arranged through the port. Water taxis to Caye Caulker run $20-25 one way (1 hour) but timing is tight for cruise schedules.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Karl Heusner Memorial Hospital",
+      usConsulate: "(501) 822-4011 (US Embassy Belmopan)",
+    },
+    region: "western",
+    imageUrl: "/assets/ports/belize-city.jpg",
+  },
+
+  /* ================================================================ */
+  /*  17. Falmouth, Jamaica                                           */
+  /* ================================================================ */
+  {
+    slug: "falmouth",
+    name: "Falmouth",
+    country: "Jamaica",
+    coordinates: { lat: 18.4913, lng: -77.6564 },
+    timezone: "EST (no DST)",
+    safetyRating: 7,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "5 min walk from port to Falmouth town center",
+    currency: "JMD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Falmouth is a historic Georgian town on Jamaica's north coast, purpose-built as a cruise port by Royal Caribbean. It's the gateway to Dunn's River Falls, Martha Brae River rafting, and Jamaica's famous Luminous Lagoon bioluminescent bay.",
+    timeZoneAlert:
+      "Jamaica does NOT observe DST. In summer it is 1 hour behind Florida/Eastern Time.",
+    excursionCategories: [
+      { name: "Dunn's River Falls", priceRange: { min: 60, max: 90 }, typicalDuration: "4-5 hours" },
+      { name: "Martha Brae River Rafting", priceRange: { min: 70, max: 90 }, typicalDuration: "3-4 hours" },
+      { name: "Luminous Lagoon Night Tour", priceRange: { min: 30, max: 50 }, typicalDuration: "2 hours" },
+      { name: "Montego Bay Beach Day", priceRange: { min: 30, max: 50 }, typicalDuration: "4-5 hours" },
+      { name: "Mystic Mountain Bobsled", priceRange: { min: 80, max: 110 }, typicalDuration: "3-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Falmouth Heritage Walk", description: "Stroll through one of the best-preserved Georgian towns in the Caribbean — colorful buildings and history." },
+      { name: "Water Square", description: "Historic center of Falmouth with a restored fountain and colonial-era architecture." },
+      { name: "Port Shopping Area", description: "Duty-free shopping and Jamaican crafts near the cruise terminal." },
+    ],
+    restaurants: [
+      { name: "Peppa's Jerk Centre", priceRange: "$" },
+      { name: "Gloria's Seafood Restaurant", priceRange: "$$" },
+      { name: "Time N' Place Beach Bar", priceRange: "$" },
+    ],
+    gettingAround:
+      "Taxis from Falmouth to Montego Bay are $25-30 for a car (not per person). Negotiate before departure. Route taxis are cheap ($2-3) but crowded. For Dunn's River Falls, book a tour — it's a 40-minute drive east. Walking Falmouth town is safe during the day.",
+    emergencyInfo: {
+      police: "119",
+      hospital: "Falmouth Public Hospital",
+      usConsulate: "(876) 702-6000 (US Embassy Kingston)",
+    },
+    region: "western",
+    imageUrl: "/assets/ports/falmouth.jpg",
+  },
+
+  /* ================================================================ */
+  /*  18. Ocho Rios, Jamaica                                          */
+  /* ================================================================ */
+  {
+    slug: "ocho-rios",
+    name: "Ocho Rios",
+    country: "Jamaica",
+    coordinates: { lat: 18.4075, lng: -77.1100 },
+    timezone: "EST (no DST)",
+    safetyRating: 6.5,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "10 min walk to Main Street and beaches",
+    currency: "JMD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Ocho Rios ('Ochi' to locals) is Jamaica's most popular cruise port, set against a backdrop of lush mountains and waterfalls. Dunn's River Falls is the star attraction, and the town has a vibrant local market, great jerk food, and easy beach access.",
+    timeZoneAlert:
+      "Jamaica does NOT observe DST. In summer it is 1 hour behind Florida/Eastern Time.",
+    excursionCategories: [
+      { name: "Dunn's River Falls Climb", priceRange: { min: 25, max: 50 }, typicalDuration: "2-3 hours" },
+      { name: "Mystic Mountain (Bobsled/Zip)", priceRange: { min: 80, max: 120 }, typicalDuration: "3-4 hours" },
+      { name: "Blue Hole Secret Falls", priceRange: { min: 30, max: 50 }, typicalDuration: "2-3 hours" },
+      { name: "Dolphin Cove", priceRange: { min: 70, max: 150 }, typicalDuration: "2-3 hours" },
+      { name: "Bamboo Rafting on White River", priceRange: { min: 50, max: 70 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Ocho Rios Bay Beach", description: "Public beach a short walk from the pier with calm turquoise waters. Free entry." },
+      { name: "Craft Market", description: "Large open-air market next to the port with Jamaican carvings, clothing, and souvenirs. Haggling expected." },
+      { name: "Main Street Walk", description: "Browse shops, grab a patty from a bakery, and soak in the local Jamaican vibes." },
+    ],
+    restaurants: [
+      { name: "Scotchie's Jerk Centre", priceRange: "$" },
+      { name: "Ocho Rios Jerk Centre", priceRange: "$" },
+      { name: "Toscanini (Italian)", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Taxis to Dunn's River Falls cost about $10-15 per person round trip. Walking downtown is manageable but watch for traffic. Route taxis are cheap. For distant excursions, always book through a tour operator for reliable return times.",
+    emergencyInfo: {
+      police: "119",
+      hospital: "St. Ann's Bay Hospital (15 min drive)",
+      usConsulate: "(876) 702-6000 (US Embassy Kingston)",
+    },
+    region: "western",
+    imageUrl: "/images/ports/ocho-rios.jpg"
+  },
+
+  /* ================================================================ */
+  /*  19. Bermuda                                                     */
+  /* ================================================================ */
+  {
+    slug: "bermuda",
+    name: "Bermuda",
+    country: "Bermuda",
+    coordinates: { lat: 32.3078, lng: -64.7505 },
+    timezone: "AST/ADT",
+    safetyRating: 9.5,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 48,
+    walkingDistanceToTown: "5 min walk from Royal Naval Dockyard; Hamilton is 30 min by ferry",
+    currency: "BMD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Bermuda is unique among Caribbean cruise destinations — ships typically dock for 2-3 days, giving you ample time to explore. Pink sand beaches, pastel houses, and British colonial charm define this mid-Atlantic island. It's north of the Caribbean but a staple of cruise itineraries.",
+    timeZoneAlert:
+      "Bermuda uses AST/ADT (same as Atlantic Canada). It is 1 hour ahead of Eastern Time year-round. Plan accordingly!",
+    excursionCategories: [
+      { name: "Horseshoe Bay Beach", priceRange: { min: 5, max: 15 }, typicalDuration: "3-5 hours" },
+      { name: "Crystal & Fantasy Caves", priceRange: { min: 25, max: 35 }, typicalDuration: "1.5-2 hours" },
+      { name: "Hamilton City & Shopping", priceRange: { min: 0, max: 10 }, typicalDuration: "3-4 hours" },
+      { name: "Snorkeling / Helmet Diving", priceRange: { min: 60, max: 100 }, typicalDuration: "2-3 hours" },
+      { name: "Glass-Bottom Boat Tour", priceRange: { min: 45, max: 60 }, typicalDuration: "1.5 hours" },
+    ],
+    freeActivities: [
+      { name: "Royal Naval Dockyard", description: "Explore the historic dockyard complex with shops, museums, and the National Museum of Bermuda (small fee)." },
+      { name: "Hamilton Ferry Ride", description: "Take the public ferry ($5) to Hamilton — the journey through the Great Sound is scenic and a destination itself." },
+      { name: "Bermuda Railway Trail", description: "Walk or bike sections of this converted railway line for stunning coastal views and nature." },
+    ],
+    restaurants: [
+      { name: "Frog & Onion Pub (Dockyard)", priceRange: "$$" },
+      { name: "Art Mel's Spicy Dicy", priceRange: "$" },
+      { name: "The Swizzle Inn", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Public buses and ferries are excellent and affordable ($5 tokens, $19 for a day pass). No rental cars allowed in Bermuda — rent a scooter ($50-70/day) or electric minicar (Twizys, $90/day). Ferries from Dockyard to Hamilton take 20-30 minutes.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "King Edward VII Memorial Hospital",
+      usConsulate: "(441) 295-1342",
+    },
+    region: "eastern",
+    imageUrl: "/assets/ports/bermuda.jpg",
+  },
+
+  /* ================================================================ */
+  /*  21. Puerto Plata, Dominican Republic                            */
+  /* ================================================================ */
+  {
+    slug: "puerto-plata",
+    name: "Puerto Plata",
+    country: "Dominican Republic",
+    coordinates: { lat: 19.798416, lng: -70.701464 },
+    timezone: "AST (no DST)",
+    safetyRating: 6.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "15-20 min from Taino Bay; 7 miles from Amber Cove",
+    currency: "DOP",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Puerto Plata operates a dual-terminal system — Taino Bay offers direct access to the historic city center with its 16th-century San Felipe Fortress, while Amber Cove functions as a gated resort-style complex with pools and bird sanctuaries. The blend of colonial history and modern amenities makes it one of the Dominican Republic's most versatile cruise stops.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Damajagua Falls", priceRange: { min: 75, max: 110 }, typicalDuration: "4-5 hours" },
+      { name: "Mt. Isabel de Torres Cable Car", priceRange: { min: 25, max: 45 }, typicalDuration: "2-3 hours" },
+      { name: "Ocean World", priceRange: { min: 90, max: 160 }, typicalDuration: "3-4 hours" },
+      { name: "Historic City & Rum Tasting", priceRange: { min: 40, max: 70 }, typicalDuration: "2-3 hours" },
+      { name: "Cayo Paraiso", priceRange: { min: 120, max: 150 }, typicalDuration: "5-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Terminal Pool & Bird Sanctuary", description: "Enjoy the pool complex and walk through the bird sanctuary at the terminal — free for cruise guests." },
+      { name: "Malecón Coastal Walk", description: "Scenic waterfront promenade along the coast, perfect for a leisurely stroll." },
+      { name: "San Felipe Fortress Views", description: "Take in the exterior views of the 16th-century fortress overlooking the harbor." },
+    ],
+    restaurants: [
+      { name: "Bocaditos", priceRange: "$$" },
+      { name: "Kaffe", priceRange: "$$" },
+      { name: "Casita Azul", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Taxis are unmetered — negotiate a flat rate of $20-$25 to town from Amber Cove. Taino Bay is within walking distance of downtown.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Centro Médico Bournigal — 809-586-2342",
+      usConsulate: "Santo Domingo 809-567-7775",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/puerto-plata.jpg"
+  },
+
+  /* ================================================================ */
+  /*  22. Montego Bay, Jamaica                                        */
+  /* ================================================================ */
+  {
+    slug: "montego-bay",
+    name: "Montego Bay",
+    country: "Jamaica",
+    coordinates: { lat: 18.465, lng: -77.939 },
+    timezone: "EST (no DST)",
+    safetyRating: 5,
+    walkabilityRating: 3,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "3+ miles to Hip Strip/beaches",
+    currency: "JMD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Montego Bay delivers a vibrant, high-energy Jamaican experience centered on the famous Hip Strip and historic Great Houses. The port's industrial location requires vehicular transport for nearly all activities, but the reward is authentic jerk cuisine, legendary beaches, and the iconic Dunn's River Falls day trip.",
+    timeZoneAlert:
+      "Ships from Florida may be on EDT while Jamaica stays on EST year-round — a potential 1-hour difference in summer.",
+    excursionCategories: [
+      { name: "Dunn's River Falls", priceRange: { min: 90, max: 130 }, typicalDuration: "5-6 hours" },
+      { name: "Martha Brae Rafting", priceRange: { min: 80, max: 110 }, typicalDuration: "3-4 hours" },
+      { name: "Rose Hall Great House", priceRange: { min: 30, max: 50 }, typicalDuration: "2 hours" },
+      { name: "Undersea Tour", priceRange: { min: 45, max: 65 }, typicalDuration: "1.5 hours" },
+      { name: "Chukka Ride & Swim", priceRange: { min: 100, max: 140 }, typicalDuration: "3-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Doctor's Cave Beach", description: "Famous beach with a small entry fee — one of Jamaica's most iconic stretches of sand." },
+      { name: "Craft Markets", description: "Browse vibrant Jamaican craft markets for handmade souvenirs and local art." },
+      { name: "Hip Strip Walking", description: "Walk the famous Gloucester Avenue strip lined with shops, restaurants, and bars." },
+    ],
+    restaurants: [
+      { name: "The Pork Pit", priceRange: "$$" },
+      { name: "Marguerites", priceRange: "$$$$" },
+      { name: "Pelican Grill", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Book taxis through JUTA or MAXI associations only. Shared shuttle to Hip Strip is $5-$10 per person. Avoid unlicensed drivers.",
+    emergencyInfo: {
+      police: "119",
+      hospital: "Hospiten Montego Bay — 876-618-4455",
+      usConsulate: "876-953-0620",
+    },
+    region: "western",
+    imageUrl: "/images/ports/montego-bay.jpg"
+  },
+
+  /* ================================================================ */
+  /*  23. Tortola, British Virgin Islands                             */
+  /* ================================================================ */
+  {
+    slug: "tortola",
+    name: "Tortola",
+    country: "British Virgin Islands",
+    coordinates: { lat: 18.4215, lng: -64.6165 },
+    timezone: "AST (no DST)",
+    safetyRating: 8.5,
+    walkabilityRating: 10,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "Immediate — terminal is in town center",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Tortola's Pier Park puts you directly in the heart of Road Town with upscale shopping, craft markets, and restaurants steps from the gangway. As the gateway to the BVI's stunning archipelago, it offers some of the Caribbean's best sailing and snorkeling excursions, including the famous Baths on Virgin Gorda.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Virgin Gorda Baths", priceRange: { min: 110, max: 160 }, typicalDuration: "5-6 hours" },
+      { name: "Cane Garden Bay Beach", priceRange: { min: 30, max: 55 }, typicalDuration: "3-5 hours" },
+      { name: "Sailing Catamaran", priceRange: { min: 120, max: 180 }, typicalDuration: "4-5 hours" },
+      { name: "Sage Mountain Hike", priceRange: { min: 60, max: 90 }, typicalDuration: "2-3 hours" },
+      { name: "Callwood Rum Distillery", priceRange: { min: 40, max: 70 }, typicalDuration: "1.5-2 hours" },
+    ],
+    freeActivities: [
+      { name: "Pier Park Shops", description: "Walk through the upscale Pier Park shopping complex directly at the cruise terminal." },
+      { name: "Road Town Waterfront", description: "Stroll the scenic waterfront of Road Town with views of the harbor and surrounding hills." },
+      { name: "Main Street Historic Buildings", description: "Explore the historic buildings along Road Town's Main Street." },
+    ],
+    restaurants: [
+      { name: "Pusser's Road Town Pub", priceRange: "$$" },
+      { name: "Capriccio di Mare", priceRange: "$$" },
+      { name: "Maria's by the Sea", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Taxis are open-air safari buses. Trip to Cane Garden Bay costs ~$12 per person for groups of 3+.",
+    emergencyInfo: {
+      police: "999 or 911",
+      hospital: "Peebles Hospital — 284-852-7500",
+      usConsulate: "Nearest in Barbados",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/tortola.jpg"
+  },
+
+  /* ================================================================ */
+  /*  24. Cartagena, Colombia                                         */
+  /* ================================================================ */
+  {
+    slug: "cartagena",
+    name: "Cartagena",
+    country: "Colombia",
+    coordinates: { lat: 10.4065, lng: -75.5275 },
+    timezone: "COT (UTC-5, no DST)",
+    safetyRating: 4,
+    walkabilityRating: 2,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "~3 miles to the Walled City",
+    currency: "COP",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Cartagena's UNESCO-listed Walled City is one of the most spectacular colonial destinations in the Americas, with centuries-old fortifications, vibrant plazas, and world-class dining. The port is in an industrial zone requiring a taxi or Uber to reach the historic heart, but the reward is unmatched cultural immersion.",
+    timeZoneAlert:
+      "Ships arriving from the Eastern Caribbean may be an hour ahead of local Colombian time (COT/UTC-5).",
+    excursionCategories: [
+      { name: "Rosario Islands", priceRange: { min: 70, max: 110 }, typicalDuration: "5-6 hours" },
+      { name: "Walled City & San Felipe Fortress", priceRange: { min: 30, max: 65 }, typicalDuration: "3-4 hours" },
+      { name: "Totumo Mud Volcano", priceRange: { min: 50, max: 85 }, typicalDuration: "3-4 hours" },
+      { name: "Bay Sunset Cruise", priceRange: { min: 35, max: 60 }, typicalDuration: "2-3 hours" },
+      { name: "Electric Car City Tour", priceRange: { min: 25, max: 45 }, typicalDuration: "2 hours" },
+    ],
+    freeActivities: [
+      { name: "Port Oasis Eco Park", description: "Explore the eco park near the port featuring wild macaws and tropical greenery." },
+      { name: "Walk the Walled City Ramparts", description: "Stroll along the top of the centuries-old city walls for panoramic views." },
+      { name: "Plaza Santo Domingo", description: "Iconic colonial plaza with cafes, street performers, and the famous Botero sculpture." },
+    ],
+    restaurants: [
+      { name: "La Cevicheria", priceRange: "$$" },
+      { name: "Restaurante 1621", priceRange: "$$$$" },
+      { name: "Carmen", priceRange: "$$$$" },
+    ],
+    gettingAround:
+      "Taxis are unmetered — always agree on a fare in COP before departing. Uber is widely used and more predictable.",
+    emergencyInfo: {
+      police: "123",
+      hospital: "Hospital Naval de Cartagena",
+      usConsulate: "Bogotá +57 1 275-2000",
+    },
+    region: "southern",
+    imageUrl: "/assets/ports/cartagena.jpg",
+  },
+
+  /* ================================================================ */
+  /*  25. Bridgetown, Barbados                                        */
+  /* ================================================================ */
+  {
+    slug: "barbados",
+    name: "Bridgetown",
+    country: "Barbados",
+    coordinates: { lat: 13.0945, lng: -59.6080 },
+    timezone: "AST (no DST)",
+    safetyRating: 7.5,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "1 mile (20-25 min) to Broad Street",
+    currency: "BBD (2 BBD = 1 USD)",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Bridgetown's British colonial charm meets Caribbean warmth at this UNESCO World Heritage port. The historic Careenage, duty-free shopping on Broad Street, and proximity to premium beach clubs like The Boatyard make it a favorite for repeat cruisers seeking a sophisticated Southern Caribbean experience.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Harrison's Cave", priceRange: { min: 60, max: 95 }, typicalDuration: "2-3 hours" },
+      { name: "Mount Gay Rum Distillery", priceRange: { min: 30, max: 50 }, typicalDuration: "1.5-2 hours" },
+      { name: "Carlisle Bay Snorkel", priceRange: { min: 35, max: 65 }, typicalDuration: "2-3 hours" },
+      { name: "Island Safari 4x4", priceRange: { min: 90, max: 130 }, typicalDuration: "4-5 hours" },
+      { name: "Hunte's Gardens & Bathsheba", priceRange: { min: 130, max: 180 }, typicalDuration: "5-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Walk the Careenage", description: "Stroll along the historic inner harbor where boats bob and colonial buildings line the waterfront." },
+      { name: "Broad Street Shopping", description: "Browse duty-free shops along Bridgetown's main commercial street." },
+      { name: "Chamberlain Bridge Views", description: "Take in views of the Careenage and Parliament Buildings from this historic bridge." },
+    ],
+    restaurants: [
+      { name: "The Boatyard", priceRange: "$$" },
+      { name: "Waterfront Cafe", priceRange: "$$" },
+      { name: "Brown Sugar", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Taxis are unmetered — always confirm if the rate quoted is in USD or BBD (big difference!).",
+    emergencyInfo: {
+      police: "211",
+      hospital: "Queen Elizabeth Hospital — 246-436-6450",
+      usConsulate: "246-227-4000",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/barbados.jpg"
+  },
+
+  /* ================================================================ */
+  /*  26. St. George's, Grenada                                       */
+  /* ================================================================ */
+  {
+    slug: "grenada",
+    name: "St. George's",
+    country: "Grenada",
+    coordinates: { lat: 12.0525, lng: -61.7555 },
+    timezone: "AST (no DST)",
+    safetyRating: 8,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Immediate — terminal is in the historic district",
+    currency: "XCD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "St. George's horseshoe-shaped Carenage is frequently called the most scenic harbor in the Caribbean. The Melville Street terminal places you directly in the colorful historic district, where spice shops, colonial architecture, and the world's first underwater sculpture park are all within reach.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Underwater Sculpture Park", priceRange: { min: 65, max: 95 }, typicalDuration: "2-3 hours" },
+      { name: "Grand Etang Rainforest", priceRange: { min: 55, max: 85 }, typicalDuration: "3-4 hours" },
+      { name: "Seven Sisters Waterfalls", priceRange: { min: 45, max: 75 }, typicalDuration: "3-4 hours" },
+      { name: "River Tubing", priceRange: { min: 70, max: 100 }, typicalDuration: "2-3 hours" },
+      { name: "Belmont Estate Chocolate Tour", priceRange: { min: 50, max: 80 }, typicalDuration: "3-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Walk the Carenage", description: "Stroll along the picturesque horseshoe-shaped harbor lined with colorful buildings." },
+      { name: "Fort George Views", description: "Climb to Fort George for panoramic views of the harbor and St. George's." },
+      { name: "Spice Market Browsing", description: "Browse the fragrant spice stalls selling nutmeg, cinnamon, and other Grenadian spices." },
+    ],
+    restaurants: [
+      { name: "BB's Crabback", priceRange: "$$$" },
+      { name: "Nutmeg Restaurant", priceRange: "$$" },
+      { name: "Carenage Cafes", priceRange: "$" },
+    ],
+    gettingAround:
+      "Water taxis to Grand Anse Beach are a highlight — approximately $10 return trip.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "General Hospital St. George's — 473-440-2051",
+      usConsulate: "473-444-1173",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/grenada.jpg"
+  },
+
+  /* ================================================================ */
+  /*  27. St. John's, Antigua                                         */
+  /* ================================================================ */
+  {
+    slug: "antigua",
+    name: "St. John's",
+    country: "Antigua",
+    coordinates: { lat: 17.1215, lng: -61.8465 },
+    timezone: "AST (no DST)",
+    safetyRating: 7.5,
+    walkabilityRating: 10,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "0 miles — gangway leads directly into Heritage Quay shopping",
+    currency: "XCD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Antigua's Heritage Quay puts you directly in the heart of St. John's with duty-free shopping steps from the gangway. The island's 365 beaches and UNESCO-listed Nelson's Dockyard make it one of the Eastern Caribbean's most complete port experiences.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Nelson's Dockyard & Shirley Heights", priceRange: { min: 55, max: 85 }, typicalDuration: "4-5 hours" },
+      { name: "Stingray City", priceRange: { min: 85, max: 115 }, typicalDuration: "3-4 hours" },
+      { name: "Reef Riders", priceRange: { min: 90, max: 130 }, typicalDuration: "2-3 hours" },
+      { name: "Zipline Canopy", priceRange: { min: 95, max: 135 }, typicalDuration: "2-3 hours" },
+      { name: "Devil's Bridge", priceRange: { min: 40, max: 70 }, typicalDuration: "3-4 hours" },
+    ],
+    freeActivities: [
+      { name: "St. John's Cathedral", description: "Visit the iconic twin-towered cathedral, a landmark of St. John's skyline." },
+      { name: "Redcliffe Quay Historic Streets", description: "Explore the restored historic quarter with boutiques, galleries, and cafes." },
+      { name: "Heritage Quay Browsing", description: "Browse duty-free shops and local vendors steps from the cruise ship gangway." },
+    ],
+    restaurants: [
+      { name: "Hemingway's", priceRange: "$$" },
+      { name: "Big Banana", priceRange: "$$" },
+      { name: "C&C Wine House", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Taxis operate on government-regulated zone pricing. No meters — rates are standardized.",
+    emergencyInfo: {
+      police: "999",
+      hospital: "Sir Lester Bird Medical Centre — 268-484-2700",
+      usConsulate: "Nearest in Barbados",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/antigua.jpg"
+  },
+
+  /* ================================================================ */
+  /*  28. Castries, St. Lucia                                         */
+  /* ================================================================ */
+  {
+    slug: "st-lucia",
+    name: "Castries",
+    country: "St. Lucia",
+    coordinates: { lat: 14.0165, lng: -60.9945 },
+    timezone: "AST (no DST)",
+    safetyRating: 6,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "La Place Carenage is in town; Pointe Seraphine is 20 min walk",
+    currency: "XCD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "St. Lucia's dramatic volcanic topography — crowned by the iconic Pitons — makes it one of the Caribbean's most visually striking destinations. The northern port requires long transit to reach southern attractions, but catamaran cruises to the Pitons and volcanic mud bath experiences make the journey worthwhile.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Soufriere Mud Bath", priceRange: { min: 85, max: 125 }, typicalDuration: "5-6 hours" },
+      { name: "Pitons Catamaran", priceRange: { min: 110, max: 160 }, typicalDuration: "6-7 hours" },
+      { name: "Rainforest Aerial Tram", priceRange: { min: 95, max: 135 }, typicalDuration: "3-4 hours" },
+      { name: "Pigeon Island", priceRange: { min: 45, max: 75 }, typicalDuration: "3-4 hours" },
+      { name: "Banana Plantation", priceRange: { min: 35, max: 60 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Castries Market", description: "Vibrant open-air market with fresh produce, spices, and handmade crafts." },
+      { name: "Derek Walcott Square", description: "Charming public square named after the Nobel Prize-winning poet, shaded by a massive samaan tree." },
+      { name: "Cathedral Basilica", description: "Visit the stunning Cathedral of the Immaculate Conception with its colorful painted interior." },
+    ],
+    restaurants: [
+      { name: "Chef Robby's", priceRange: "$$" },
+      { name: "Auberge Seraphine", priceRange: "$$$" },
+      { name: "Pink Plantation", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Taxis are unmetered — always confirm the currency. Transit to Soufriere/Pitons takes 1+ hour each way.",
+    emergencyInfo: {
+      police: "999",
+      hospital: "Tapion Hospital — 758-459-2000",
+      usConsulate: "Nearest in Barbados",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/st-lucia.jpg"
+  },
+
+  /* ================================================================ */
+  /*  29. Kralendijk, Bonaire                                         */
+  /* ================================================================ */
+  {
+    slug: "bonaire",
+    name: "Kralendijk",
+    country: "Bonaire",
+    coordinates: { lat: 12.1440, lng: -68.2640 },
+    timezone: "AST (no DST)",
+    safetyRating: 9,
+    walkabilityRating: 10,
+    isTenderPort: false,
+    typicalPortHours: 11,
+    walkingDistanceToTown: "Immediate — piers are in the heart of town",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Bonaire is the Caribbean's premier eco-tourism destination, famous for world-class diving, flamingo sanctuaries, and pristine marine parks. As a special municipality of the Netherlands, it offers exceptional safety and infrastructure alongside an unhurried, nature-focused atmosphere.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Marine Park Snorkel", priceRange: { min: 55, max: 85 }, typicalDuration: "2-3 hours" },
+      { name: "Lac Bay Kayaking", priceRange: { min: 75, max: 110 }, typicalDuration: "3-4 hours" },
+      { name: "Washington-Slagbaai Park", priceRange: { min: 85, max: 125 }, typicalDuration: "5-6 hours" },
+      { name: "Salt Flats & Flamingos", priceRange: { min: 40, max: 70 }, typicalDuration: "2-3 hours" },
+      { name: "Land Sailing", priceRange: { min: 70, max: 100 }, typicalDuration: "2 hours" },
+    ],
+    freeActivities: [
+      { name: "Downtown Kralendijk Walking", description: "Explore the charming, colorful streets of this small Dutch Caribbean town." },
+      { name: "Waterfront Promenade", description: "Walk the scenic waterfront with views of Klein Bonaire island across the harbor." },
+      { name: "Slave Huts Historical Site", description: "Visit the preserved 19th-century slave huts near the southern salt pans — a somber historical landmark." },
+    ],
+    restaurants: [
+      { name: "It Rains Fishes", priceRange: "$$$" },
+      { name: "Sebastian's", priceRange: "$$$" },
+      { name: "Karel's Beach Bar", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Walking is preferred for town exploration. Taxis available for beach/dive site trips.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Fundashon Mariadal — 599-717-8900",
+      usConsulate: "Nearest in Curacao 599-9-461-3066",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/bonaire.jpg"
+  },
+
+  /* ================================================================ */
+  /*  30. Harvest Caye, Belize (NCL Private Destination)              */
+  /* ================================================================ */
+  {
+    slug: "harvest-caye",
+    name: "Harvest Caye",
+    country: "Belize (NCL Private Destination)",
+    coordinates: { lat: 16.4800, lng: -88.4040 },
+    timezone: "CST (no DST)",
+    safetyRating: 10,
+    walkabilityRating: 10,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "N/A — private island resort",
+    currency: "USD/BZD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "Harvest Caye is Norwegian Cruise Line's exclusive 75-acre private island destination off the coast of Belize, featuring a 7-acre beach, 15,000 sq ft pool, flighthouse zipline, and wildlife sanctuary with toucans and butterflies. Unlike some private islands, food and drinks are NOT included — they cost extra.",
+    timeZoneAlert:
+      "Harvest Caye is CST (UTC-6), often creating a 2-hour difference from ships based on Florida time.",
+    excursionCategories: [
+      { name: "Flighthouse Zipline", priceRange: { min: 85, max: 115 }, typicalDuration: "1-2 hours" },
+      { name: "Mayan Ruins Nim Li Punit", priceRange: { min: 120, max: 180 }, typicalDuration: "4-5 hours" },
+      { name: "Barrier Reef Snorkeling", priceRange: { min: 100, max: 145 }, typicalDuration: "3-4 hours" },
+      { name: "River Tubing", priceRange: { min: 90, max: 130 }, typicalDuration: "3-4 hours" },
+      { name: "Parasailing", priceRange: { min: 95, max: 125 }, typicalDuration: "1 hour" },
+    ],
+    freeActivities: [
+      { name: "7-Acre Beach with Loungers", description: "Relax on the expansive white-sand beach with complimentary lounge chairs." },
+      { name: "15,000 Sq Ft Lagoon Pool", description: "Take a dip in the massive lagoon-style pool at the heart of the island." },
+      { name: "Wildlife Experience", description: "Visit the toucan aviary, butterfly garden, and wildlife sanctuary — free for all guests." },
+    ],
+    restaurants: [
+      { name: "LandShark Bar & Grill", priceRange: "$$" },
+      { name: "Flight House", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Tram from ship to resort. Everything is self-contained within the island.",
+    emergencyInfo: {
+      police: "On-site security",
+      hospital: "On-site medical facility, coordinates with ship medical staff",
+    },
+    region: "western",
+    imageUrl: "/assets/ports/harvest-caye.jpg",
+  },
+
+  /* ================================================================ */
+  /*  31. Great Stirrup Cay, Bahamas (NCL Private Island)             */
+  /* ================================================================ */
+  {
+    slug: "great-stirrup-cay",
+    name: "Great Stirrup Cay",
+    country: "Bahamas (NCL Private Island)",
+    coordinates: { lat: 25.8260, lng: -77.9140 },
+    timezone: "EST/EDT",
+    safetyRating: 10,
+    walkabilityRating: 10,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "N/A — private island",
+    currency: "USD (ship card)",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "Great Stirrup Cay is NCL's flagship private island in the Berry Islands, featuring a heated 28,000 sq ft lagoon pool, underwater snorkel sculpture garden, and Jumbey Beach Grill. Unlike Harvest Caye, food IS included in the cruise fare here, and beverage packages extend from ship to shore.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Swimming with Pigs", priceRange: { min: 110, max: 150 }, typicalDuration: "2-3 hours" },
+      { name: "Flighthouse Zipline", priceRange: { min: 90, max: 125 }, typicalDuration: "1 hour" },
+      { name: "Wave Runner Tour", priceRange: { min: 115, max: 160 }, typicalDuration: "1.5 hours" },
+      { name: "Silver Cove Villa", priceRange: { min: 600, max: 1500 }, typicalDuration: "All day" },
+      { name: "Stingray Encounter", priceRange: { min: 75, max: 110 }, typicalDuration: "1.5 hours" },
+    ],
+    freeActivities: [
+      { name: "Jumbey Beach Grill", description: "Buffet lunch included free for all cruise guests — burgers, jerk chicken, and Caribbean fare." },
+      { name: "Abaco Taco Bar", description: "Additional free dining option with tacos and tropical sides." },
+      { name: "Underwater Snorkel Garden & Great Life Lagoon", description: "Explore the underwater sculpture garden and relax in the massive heated lagoon pool — all included." },
+    ],
+    restaurants: [
+      { name: "Jumbey Beach Grill (included)", priceRange: "$" },
+      { name: "Abaco Taco Bar (included)", priceRange: "$" },
+    ],
+    gettingAround:
+      "Tram service from pier. Everything designed for easy walking.",
+    emergencyInfo: {
+      police: "On-site security",
+      hospital: "On-site medical facility, coordinates with ship medical staff",
+    },
+    region: "bahamas",
+    imageUrl: "/images/ports/great-stirrup-cay.jpg"
+  },
+
+  /* ================================================================ */
+  /*  32. Celebration Key, Bahamas (Carnival Private Destination)     */
+  /* ================================================================ */
+  {
+    slug: "celebration-key",
+    name: "Celebration Key",
+    country: "Bahamas (Carnival Private Destination)",
+    coordinates: { lat: 26.5700, lng: -78.4980 },
+    timezone: "EST/EDT",
+    safetyRating: 10,
+    walkabilityRating: 10,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "N/A — private destination",
+    currency: "USD (ship card)",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Celebration Key is Carnival's brand-new $100M+ private destination on Grand Bahama, opening July 19, 2025. Engineered to handle multiple Excel-class mega-ships simultaneously, it features four distinct zones: Calypso Lagoon (adults-only with 166-seat swim-up bar), Starfish Lagoon (family zone with Suncastle waterslides), Pearl Cove Beach Club (18+ premium retreat), and Lokono Cove (retail village).",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Premium Cabanas", priceRange: { min: 200, max: 800 }, typicalDuration: "All day" },
+      { name: "Water Sports", priceRange: { min: 50, max: 150 }, typicalDuration: "1-2 hours" },
+      { name: "Island Tours", priceRange: { min: 40, max: 100 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Beach Access", description: "Enjoy the pristine beaches across all four themed zones of the island." },
+      { name: "Pools & Waterslides", description: "Multiple pool areas and Suncastle waterslides included with standard Carnival inclusions." },
+    ],
+    restaurants: [
+      { name: "Multiple Dining Venues (details pending)", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Engineered for easy pedestrian flow between four themed zones.",
+    emergencyInfo: {
+      police: "On-site security",
+      hospital: "On-site medical facility planned",
+    },
+    region: "bahamas",
+    imageUrl: "/images/ports/celebration-key.jpg"
+  },
+
+  /* ================================================================ */
+  /*  33. Port Royal, Jamaica                                         */
+  /* ================================================================ */
+  {
+    slug: "port-royal",
+    name: "Port Royal",
+    country: "Jamaica",
+    coordinates: { lat: 17.9375, lng: -76.8415 },
+    timezone: "EST (no DST)",
+    safetyRating: 5,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Immediate — small flat historical village",
+    currency: "JMD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Port Royal is Jamaica's newest cruise port, offering a heritage-focused experience on the historic Palisadoes spit — once the 'wickedest city on earth' and the pirate capital of the Caribbean. The SeaWalk floating pier provides direct access to the quiet village, though reaching vibrant Kingston requires a taxi.",
+    timeZoneAlert:
+      "Ships from Florida may differ by 1 hour during summer EDT.",
+    excursionCategories: [
+      { name: "Bob Marley Museum & Kingston", priceRange: { min: 75, max: 110 }, typicalDuration: "4-5 hours" },
+      { name: "Fort Charles & Giddy House", priceRange: { min: 25, max: 45 }, typicalDuration: "1.5-2 hours" },
+      { name: "Blue Mountain Coffee Trail", priceRange: { min: 95, max: 135 }, typicalDuration: "5-6 hours" },
+      { name: "Lime Cay Beach Day", priceRange: { min: 55, max: 85 }, typicalDuration: "3-4 hours" },
+      { name: "Devon House Tour", priceRange: { min: 45, max: 65 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Walk Port Royal Village", description: "Explore the quiet historic village that was once the pirate capital of the Caribbean." },
+      { name: "Fort Charles Exterior Views", description: "View the exterior of the historic fort and the famous Giddy House tilted by an earthquake." },
+      { name: "Waterfront Promenade", description: "Stroll the waterfront with views across Kingston Harbour." },
+    ],
+    restaurants: [
+      { name: "Gloria's Seafood City", priceRange: "$$" },
+      { name: "Grand Port Royal Hotel", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Taxis needed to reach Kingston (30+ minutes). Port Royal itself is easily walkable.",
+    emergencyInfo: {
+      police: "119",
+      hospital: "Kingston Public Hospital",
+      usConsulate: "Kingston 876-702-6000",
+    },
+    region: "western",
+    imageUrl: "/images/ports/port-royal.jpg"
+  },
+
+  /* ================================================================ */
+  /*  HOMEPORTS                                                        */
+  /* ================================================================ */
+
+  /* ---------------------------------------------------------------- */
+  /*  Miami, Florida                                                   */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "miami",
+    name: "Miami",
+    country: "United States",
+    coordinates: { lat: 25.7788, lng: -80.1780 },
+    timezone: "EST/EDT",
+    safetyRating: 7.5,
+    walkabilityRating: 4,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Downtown is adjacent to port; South Beach is 15 min by car",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "PortMiami is the cruise capital of the world, handling more passengers than any other port. Located on Dodge Island in Biscayne Bay, it's connected to downtown Miami by bridges. The city offers world-class dining, nightlife, art deco architecture, and beaches.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "South Beach & Art Deco Tour", priceRange: { min: 30, max: 60 }, typicalDuration: "3-4 hours" },
+      { name: "Everglades Airboat Tour", priceRange: { min: 40, max: 80 }, typicalDuration: "4-5 hours" },
+      { name: "Wynwood Walls Art District", priceRange: { min: 0, max: 20 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "South Beach", description: "Iconic beach with art deco architecture along Ocean Drive. Free to visit." },
+      { name: "Bayside Marketplace", description: "Outdoor shopping and entertainment complex on the waterfront, near the port." },
+      { name: "Little Havana - Calle Ocho", description: "Walk through Miami's Cuban cultural heart. Free to explore, with cheap cafecito everywhere." },
+    ],
+    restaurants: [
+      { name: "Versailles (Little Havana)", priceRange: "$" },
+      { name: "Joe's Stone Crab", priceRange: "$$$" },
+      { name: "Casablanca Seafood Bar", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Uber/Lyft are plentiful. The free Metromover downtown connects to Metrorail. Taxis from port to South Beach ~$25-30. Many hotels offer port shuttle service.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Jackson Memorial Hospital — 1611 NW 12th Ave",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/miami.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Fort Lauderdale (Port Everglades), Florida                       */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "fort-lauderdale",
+    name: "Fort Lauderdale",
+    country: "United States",
+    coordinates: { lat: 26.0854, lng: -80.1178 },
+    timezone: "EST/EDT",
+    safetyRating: 8,
+    walkabilityRating: 3,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Port Everglades is 3 miles from Las Olas Blvd",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Port Everglades is one of the busiest cruise ports in the world, located in Fort Lauderdale. The city is known for its canals, beaches, and the upscale Las Olas Boulevard. Fort Lauderdale-Hollywood International Airport (FLL) is just minutes from the port.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Water Taxi Tour", priceRange: { min: 25, max: 35 }, typicalDuration: "2-3 hours" },
+      { name: "Las Olas Boulevard Shopping", priceRange: { min: 0, max: 0 }, typicalDuration: "2-3 hours" },
+      { name: "Flamingo Gardens", priceRange: { min: 20, max: 25 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Fort Lauderdale Beach", description: "Wide, clean beach along A1A with a promenade for walking and biking." },
+      { name: "Riverwalk Fort Lauderdale", description: "Mile-long linear park along the New River with public art and scenic views." },
+      { name: "Hugh Taylor Birch State Park", description: "Coastal hammock park with nature trails and a freshwater lagoon." },
+    ],
+    restaurants: [
+      { name: "Casablanca Cafe", priceRange: "$$" },
+      { name: "Coconuts by the water", priceRange: "$$" },
+      { name: "Rustic Inn Crabhouse", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Uber/Lyft from port to beach ~$10-15. Water Taxi covers the Intracoastal ($28 all day). Sun Trolley has free and $1 routes. The port is NOT walkable to main attractions.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Broward Health Medical Center — 1600 S Andrews Ave",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/fort-lauderdale.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Port Canaveral (Orlando), Florida                                */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "port-canaveral",
+    name: "Port Canaveral",
+    country: "United States",
+    coordinates: { lat: 28.4176, lng: -80.6292 },
+    timezone: "EST/EDT",
+    safetyRating: 9,
+    walkabilityRating: 2,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Cocoa Beach is 5 min by car; Orlando theme parks 45-60 min",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Port Canaveral serves the Orlando area and is the departure point for many Disney, Carnival, Royal Caribbean, and Norwegian sailings. The Kennedy Space Center is just 15 minutes away, and Orlando's theme parks are about an hour's drive.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Kennedy Space Center", priceRange: { min: 57, max: 80 }, typicalDuration: "4-6 hours" },
+      { name: "Cocoa Beach Day", priceRange: { min: 0, max: 20 }, typicalDuration: "3-4 hours" },
+      { name: "Airboat Ride", priceRange: { min: 30, max: 50 }, typicalDuration: "1-2 hours" },
+    ],
+    freeActivities: [
+      { name: "Cocoa Beach", description: "Classic Florida beach town with surfing, swimming, and Ron Jon Surf Shop nearby." },
+      { name: "Jetty Park Beach", description: "Right next to the port — watch ships come and go from the beach or fishing pier." },
+      { name: "Exploration Tower", description: "Seven-story observation tower at the port with exhibits about the region ($7 entry)." },
+    ],
+    restaurants: [
+      { name: "Grills Seafood Deck", priceRange: "$$" },
+      { name: "Fishlips Waterfront", priceRange: "$$" },
+      { name: "Fat Kahuna's", priceRange: "$" },
+    ],
+    gettingAround:
+      "You need a car or rideshare for anything beyond the port area. Uber/Lyft to Cocoa Beach ~$10. Shuttles to Orlando International Airport available (~$35/person).",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Health First Cape Canaveral Hospital",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/port-canaveral.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Galveston, Texas                                                 */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "galveston",
+    name: "Galveston",
+    country: "United States",
+    coordinates: { lat: 29.2856, lng: -94.7977 },
+    timezone: "CST/CDT",
+    safetyRating: 7.5,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "The Strand historic district is 5 min walk from port",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Galveston is a barrier island city on the Texas Gulf Coast and a major cruise port for Carnival and Royal Caribbean. The historic Strand district offers Victorian architecture, shops, and restaurants. Seawall Boulevard runs along miles of beach.",
+    timeZoneAlert: "Galveston is Central Time — 1 hour behind Eastern. Confirm ship times if connecting from East Coast.",
+    excursionCategories: [
+      { name: "Moody Gardens", priceRange: { min: 30, max: 60 }, typicalDuration: "3-4 hours" },
+      { name: "Strand Historic District Tour", priceRange: { min: 0, max: 20 }, typicalDuration: "2-3 hours" },
+      { name: "Pleasure Pier Amusement Park", priceRange: { min: 20, max: 40 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Seawall Beach", description: "Miles of free public beach along the famous Galveston Seawall." },
+      { name: "The Strand District", description: "Walk the historic downtown with 19th-century architecture, galleries, and shops." },
+      { name: "Pier 21", description: "Waterfront area with the Texas Seaport Museum and harbor views." },
+    ],
+    restaurants: [
+      { name: "Gaido's Seafood", priceRange: "$$" },
+      { name: "The Spot", priceRange: "$" },
+      { name: "Miller's Seawall Grill", priceRange: "$$" },
+    ],
+    gettingAround:
+      "The Strand is walkable from port. Uber/Lyft available. Island Transit buses run along the Seawall. Houston Hobby Airport is ~75 min drive.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "UTMB Health — 301 University Blvd",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/galveston.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Tampa, Florida                                                   */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "tampa",
+    name: "Tampa",
+    country: "United States",
+    coordinates: { lat: 27.9420, lng: -82.4465 },
+    timezone: "EST/EDT",
+    safetyRating: 8,
+    walkabilityRating: 4,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Ybor City and Channelside are 10 min walk from port",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Tampa's cruise terminal is on the Channelside waterfront, close to downtown. The city offers the historic Ybor City district, Busch Gardens theme park, and is near the beaches of Clearwater and St. Pete. A popular departure point for Western Caribbean cruises.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Busch Gardens", priceRange: { min: 80, max: 120 }, typicalDuration: "6-8 hours" },
+      { name: "Clearwater Beach Day", priceRange: { min: 0, max: 30 }, typicalDuration: "4-5 hours" },
+      { name: "Ybor City Walking Tour", priceRange: { min: 0, max: 25 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Tampa Riverwalk", description: "2.6-mile waterfront path connecting parks, museums, and restaurants along the Hillsborough River." },
+      { name: "Ybor City", description: "Tampa's historic Latin Quarter with cobblestone streets, cigar shops, and nightlife." },
+      { name: "Curtis Hixon Park", description: "Downtown waterfront park with skyline views and regular events." },
+    ],
+    restaurants: [
+      { name: "Columbia Restaurant (Ybor)", priceRange: "$$" },
+      { name: "Ulele", priceRange: "$$$" },
+      { name: "Datz", priceRange: "$$" },
+    ],
+    gettingAround:
+      "TECO Line streetcar connects the port area to Ybor City (free). Uber/Lyft to Clearwater Beach ~$35-40. Tampa International Airport is 20 min from port.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Tampa General Hospital — 1 Tampa General Circle",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/tampa.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  New Orleans, Louisiana                                           */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "new-orleans",
+    name: "New Orleans",
+    country: "United States",
+    coordinates: { lat: 29.9435, lng: -90.0591 },
+    timezone: "CST/CDT",
+    safetyRating: 6.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "French Quarter is a 10 min walk from the cruise terminal",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "The Julia Street Cruise Terminal sits along the Mississippi River, walking distance from the French Quarter. New Orleans offers incredible food, live jazz, and unique culture. Many cruisers arrive a day or two early to enjoy the city.",
+    timeZoneAlert: "New Orleans is Central Time — 1 hour behind Eastern.",
+    excursionCategories: [
+      { name: "French Quarter Walking Tour", priceRange: { min: 20, max: 40 }, typicalDuration: "2-3 hours" },
+      { name: "Swamp Tour", priceRange: { min: 30, max: 60 }, typicalDuration: "3-4 hours" },
+      { name: "Plantation Tour", priceRange: { min: 50, max: 80 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Jackson Square", description: "Iconic plaza with street performers, artists, and St. Louis Cathedral." },
+      { name: "Bourbon Street", description: "The legendary nightlife strip — free to walk and soak in the atmosphere." },
+      { name: "Magazine Street", description: "Six miles of local shops, galleries, and restaurants through the Garden District." },
+    ],
+    restaurants: [
+      { name: "Café Du Monde", priceRange: "$" },
+      { name: "Commander's Palace", priceRange: "$$$" },
+      { name: "Central Grocery (Muffuletta)", priceRange: "$" },
+    ],
+    gettingAround:
+      "The French Quarter is very walkable from the port. St. Charles Streetcar ($1.25) runs to the Garden District. Uber/Lyft plentiful. Louis Armstrong Airport (MSY) is 30 min by car.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "University Medical Center — 2000 Canal St",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/new-orleans.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Baltimore, Maryland                                              */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "baltimore",
+    name: "Baltimore",
+    country: "United States",
+    coordinates: { lat: 39.2654, lng: -76.5779 },
+    timezone: "EST/EDT",
+    safetyRating: 6,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Inner Harbor attractions are steps from the cruise terminal",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Baltimore's cruise terminal at the South Locust Point Marine Terminal is minutes from the Inner Harbor. The city offers the National Aquarium, historic Fells Point, and amazing seafood. A convenient no-fly option for mid-Atlantic cruisers.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "National Aquarium", priceRange: { min: 40, max: 50 }, typicalDuration: "2-3 hours" },
+      { name: "Fort McHenry Tour", priceRange: { min: 10, max: 15 }, typicalDuration: "1-2 hours" },
+      { name: "Fells Point Food Tour", priceRange: { min: 50, max: 70 }, typicalDuration: "3 hours" },
+    ],
+    freeActivities: [
+      { name: "Inner Harbor Promenade", description: "Walk along the waterfront past historic ships, restaurants, and the marina." },
+      { name: "Fells Point", description: "Cobblestone streets with pubs, shops, and the oldest standing residence in Baltimore." },
+      { name: "Federal Hill Park", description: "Hilltop park with panoramic views of the Inner Harbor and downtown skyline." },
+    ],
+    restaurants: [
+      { name: "LP Steamers (crab house)", priceRange: "$$" },
+      { name: "Thames Street Oyster House", priceRange: "$$$" },
+      { name: "Lexington Market", priceRange: "$" },
+    ],
+    gettingAround:
+      "Water Taxi connects the terminal to Inner Harbor, Fells Point, and Canton ($14/day). Charm City Circulator bus is free. Uber/Lyft available. BWI Airport is 20 min south.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Johns Hopkins Hospital — 1800 Orleans St",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/baltimore.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Norfolk, Virginia                                                */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "norfolk",
+    name: "Norfolk",
+    country: "United States",
+    coordinates: { lat: 36.8460, lng: -76.2951 },
+    timezone: "EST/EDT",
+    safetyRating: 7.5,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Downtown waterfront is adjacent to Half Moone Cruise Terminal",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Norfolk's Half Moone Cruise Terminal sits on the downtown waterfront, making it one of the most walkable U.S. homeports. Home to the world's largest naval station, Norfolk offers nautical heritage, the Chrysler Museum of Art, and access to Virginia Beach.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Naval Station Norfolk Tour", priceRange: { min: 0, max: 15 }, typicalDuration: "1-2 hours" },
+      { name: "Virginia Beach Day Trip", priceRange: { min: 0, max: 30 }, typicalDuration: "4-5 hours" },
+      { name: "Nauticus & Battleship Wisconsin", priceRange: { min: 15, max: 20 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Town Point Park", description: "Waterfront park along the Elizabeth River with walking paths and views." },
+      { name: "Chrysler Museum of Art", description: "World-class art museum with free admission, including a glass studio." },
+      { name: "Freemason District", description: "Historic neighborhood with 18th-century homes and cobblestone sidewalks." },
+    ],
+    restaurants: [
+      { name: "Freemason Abbey", priceRange: "$$" },
+      { name: "Saltine", priceRange: "$$$" },
+      { name: "Doumar's (historic drive-in)", priceRange: "$" },
+    ],
+    gettingAround:
+      "Downtown is walkable from the terminal. The Tide light rail connects to Virginia Beach direction. Norfolk International Airport is 15 min by car.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Sentara Norfolk General — 600 Gresham Dr",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/norfolk.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Manhattan (New York City), New York                              */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "manhattan",
+    name: "Manhattan",
+    country: "United States",
+    coordinates: { lat: 40.7672, lng: -74.0014 },
+    timezone: "EST/EDT",
+    safetyRating: 7,
+    walkabilityRating: 10,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Manhattan Cruise Terminal is at Pier 88-90 on the Hudson, midtown",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "The Manhattan Cruise Terminal (Piers 88-90) sits on the west side of Midtown, steps from Times Square and Hell's Kitchen. Sailing in or out of New York City offers iconic views of the Statue of Liberty and Manhattan skyline. One of the most exciting embarkation experiences in cruising.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Statue of Liberty & Ellis Island", priceRange: { min: 20, max: 25 }, typicalDuration: "4-5 hours" },
+      { name: "Broadway Show", priceRange: { min: 80, max: 300 }, typicalDuration: "3 hours" },
+      { name: "Central Park Bike Tour", priceRange: { min: 35, max: 50 }, typicalDuration: "2 hours" },
+    ],
+    freeActivities: [
+      { name: "Times Square", description: "The iconic crossroads of the world — bright lights, street performers, and energy." },
+      { name: "High Line", description: "Elevated linear park built on a former rail line with city views and public art." },
+      { name: "Central Park", description: "843 acres of urban parkland with trails, lakes, and free performances." },
+    ],
+    restaurants: [
+      { name: "Joe's Pizza", priceRange: "$" },
+      { name: "Los Tacos No.1 (Chelsea Market)", priceRange: "$" },
+      { name: "The Smith", priceRange: "$$" },
+    ],
+    gettingAround:
+      "NYC subway is the fastest way around ($2.90/ride). Uber/Lyft available but traffic is heavy. The terminal is near the 42nd St subway stations. JFK is 60-90 min; Newark (EWR) is 45-60 min.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Mount Sinai West — 1000 10th Ave",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/manhattan.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Seattle, Washington                                              */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "seattle",
+    name: "Seattle",
+    country: "United States",
+    coordinates: { lat: 47.6062, lng: -122.3321 },
+    timezone: "PST/PDT",
+    safetyRating: 7,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Pike Place Market is 10 min walk from Pier 91",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Seattle is the primary embarkation point for Alaska cruises. The city offers Pike Place Market, the Space Needle, a thriving food scene, and stunning Pacific Northwest scenery. Most cruisers spend a day or two exploring before or after their Alaska voyage.",
+    timeZoneAlert: "Seattle is Pacific Time — 3 hours behind Eastern.",
+    excursionCategories: [
+      { name: "Pike Place Market Tour", priceRange: { min: 30, max: 60 }, typicalDuration: "2-3 hours" },
+      { name: "Space Needle + Chihuly Garden", priceRange: { min: 50, max: 70 }, typicalDuration: "2-3 hours" },
+      { name: "Underground Tour", priceRange: { min: 22, max: 28 }, typicalDuration: "1.5 hours" },
+    ],
+    freeActivities: [
+      { name: "Pike Place Market", description: "Iconic farmers market with fish-throwing vendors, craft stalls, and the original Starbucks." },
+      { name: "Olympic Sculpture Park", description: "Free outdoor sculpture park on the waterfront with mountain views." },
+      { name: "Pioneer Square", description: "Seattle's oldest neighborhood with galleries, bookshops, and brick architecture." },
+    ],
+    restaurants: [
+      { name: "Pike Place Chowder", priceRange: "$" },
+      { name: "Ivar's Acres of Clams", priceRange: "$$" },
+      { name: "Japonessa", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Link Light Rail connects the airport to downtown ($3). Buses are plentiful. Seattle is walkable downtown. Uber/Lyft from airport to cruise terminal ~$40-50. Sea-Tac Airport (SEA) is 30-45 min south.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Virginia Mason Medical Center — 1100 9th Ave",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/seattle.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Vancouver, British Columbia                                      */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "vancouver",
+    name: "Vancouver",
+    country: "Canada",
+    coordinates: { lat: 49.2880, lng: -123.1115 },
+    timezone: "PST/PDT",
+    safetyRating: 9,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Canada Place cruise terminal is in the heart of downtown",
+    currency: "CAD",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Canada Place is one of the most scenic cruise terminals in the world, set against a backdrop of mountains and the waterfront. Vancouver is a vibrant, multicultural city known for Stanley Park, Granville Island, and exceptional Asian cuisine. A major Alaska cruise homeport.",
+    timeZoneAlert: "Vancouver is Pacific Time — 3 hours behind Eastern.",
+    excursionCategories: [
+      { name: "Stanley Park & Aquarium", priceRange: { min: 0, max: 40 }, typicalDuration: "3-4 hours" },
+      { name: "Capilano Suspension Bridge", priceRange: { min: 50, max: 60 }, typicalDuration: "3 hours" },
+      { name: "Granville Island Market", priceRange: { min: 0, max: 0 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Stanley Park Seawall", description: "10 km paved path around the park with mountain and ocean views. Walk, bike, or rollerblade." },
+      { name: "Gastown", description: "Vancouver's oldest neighborhood with the Steam Clock, galleries, and cafes." },
+      { name: "English Bay Beach", description: "Sandy urban beach popular for sunset watching, a short walk from downtown." },
+    ],
+    restaurants: [
+      { name: "Japadog", priceRange: "$" },
+      { name: "Miku (waterfront sushi)", priceRange: "$$$" },
+      { name: "Granville Island Public Market", priceRange: "$" },
+    ],
+    gettingAround:
+      "Canada Line SkyTrain connects airport to downtown in 25 min ($9 CAD). Downtown is very walkable. Aquabus ferry to Granville Island ($4 CAD). Uber/Lyft available.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "St. Paul's Hospital — 1081 Burrard St",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/vancouver.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Mobile, Alabama                                                  */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "mobile",
+    name: "Mobile",
+    country: "United States",
+    coordinates: { lat: 30.6954, lng: -88.0399 },
+    timezone: "CST/CDT",
+    safetyRating: 7,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "Dauphin Street downtown is 5-10 min walk from terminal",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Mobile's cruise terminal on the Mobile River serves as a budget-friendly departure point for Western Caribbean cruises, primarily with Carnival. The city is the birthplace of Mardi Gras in America and features a charming downtown with French-influenced architecture.",
+    timeZoneAlert: "Mobile is Central Time — 1 hour behind Eastern.",
+    excursionCategories: [
+      { name: "USS Alabama Battleship Park", priceRange: { min: 15, max: 20 }, typicalDuration: "2-3 hours" },
+      { name: "Bellingrath Gardens", priceRange: { min: 22, max: 30 }, typicalDuration: "3-4 hours" },
+      { name: "Gulf Shores Beach Day", priceRange: { min: 0, max: 20 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Dauphin Street", description: "Downtown's main drag with bars, restaurants, and art galleries." },
+      { name: "Bienville Square", description: "Historic park surrounded by iron-lace balconied buildings." },
+      { name: "Mobile Carnival Museum", description: "Learn about Mobile's Mardi Gras traditions (small entry fee)." },
+    ],
+    restaurants: [
+      { name: "Wintzell's Oyster House", priceRange: "$" },
+      { name: "The Noble South", priceRange: "$$$" },
+      { name: "Callaghan's Irish Social Club", priceRange: "$" },
+    ],
+    gettingAround:
+      "Downtown is walkable from the terminal. Uber/Lyft for anything beyond downtown. Mobile Regional Airport (MOB) is 25 min away. Gulf Shores Beach is 1 hour south.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Mobile Infirmary — 5 Mobile Infirmary Circle",
+    },
+    region: "homeport",
+    imageUrl: "/images/ports/mobile.jpg"
+  },
+
+  /* ================================================================ */
+  /*  ALASKA PORTS                                                     */
+  /* ================================================================ */
+
+  /* ---------------------------------------------------------------- */
+  /*  Juneau, Alaska                                                   */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "juneau",
+    name: "Juneau",
+    country: "United States",
+    coordinates: { lat: 58.3005, lng: -134.4197 },
+    timezone: "AKST/AKDT",
+    safetyRating: 9.5,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Downtown is directly adjacent to the cruise ship docks",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Alaska's capital city is only accessible by sea or air — there are no roads in or out. Juneau is surrounded by the Tongass National Forest and sits at the foot of Mount Juneau and Mount Roberts. Mendenhall Glacier is just 12 miles from downtown. One of the most popular Alaska cruise stops.",
+    timeZoneAlert: "Juneau is Alaska Time — 4 hours behind Eastern, 1 hour behind Pacific.",
+    excursionCategories: [
+      { name: "Mendenhall Glacier & Whale Watch", priceRange: { min: 150, max: 250 }, typicalDuration: "4-5 hours" },
+      { name: "Dog Sled on Glacier (Helicopter)", priceRange: { min: 500, max: 650 }, typicalDuration: "3-4 hours" },
+      { name: "Whale Watching Cruise", priceRange: { min: 100, max: 180 }, typicalDuration: "3-4 hours" },
+      { name: "Rainforest Zipline", priceRange: { min: 150, max: 200 }, typicalDuration: "3 hours" },
+      { name: "Mendenhall Glacier Trek", priceRange: { min: 180, max: 250 }, typicalDuration: "5-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Downtown Juneau Walking", description: "Explore the compact downtown with gift shops, galleries, the Capitol building, and the Red Dog Saloon." },
+      { name: "Mount Roberts Trails", description: "Free hiking trails start right from the cruise ship dock. The lower basin trail is beginner-friendly." },
+      { name: "Juneau-Douglas Bridge Viewpoint", description: "Walk to the bridge for panoramic views of the Gastineau Channel." },
+    ],
+    restaurants: [
+      { name: "Tracy's King Crab Shack", priceRange: "$$" },
+      { name: "The Hangar on the Wharf", priceRange: "$$" },
+      { name: "Deckhand Dave's (fish tacos)", priceRange: "$" },
+    ],
+    gettingAround:
+      "Downtown is very walkable from the docks. City buses run to Mendenhall Glacier ($2). Taxi to glacier ~$35. Most excursions include pickup at the dock.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Bartlett Regional Hospital — 3260 Hospital Dr",
+    },
+    region: "alaska",
+    imageUrl: "/images/ports/juneau.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Ketchikan, Alaska                                                */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "ketchikan",
+    name: "Ketchikan",
+    country: "United States",
+    coordinates: { lat: 55.3422, lng: -131.6461 },
+    timezone: "AKST/AKDT",
+    safetyRating: 9.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Creek Street and downtown are steps from the cruise berths",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Known as the 'Salmon Capital of the World,' Ketchikan is often the first Alaska port of call for northbound cruises from Seattle. The town stretches along the waterfront with colorful Creek Street boardwalk, totem pole parks, and surrounded by the Tongass National Forest.",
+    timeZoneAlert: "Ketchikan is Alaska Time — 4 hours behind Eastern.",
+    excursionCategories: [
+      { name: "Misty Fjords Flightseeing", priceRange: { min: 250, max: 350 }, typicalDuration: "2-3 hours" },
+      { name: "Salmon Fishing Charter", priceRange: { min: 200, max: 300 }, typicalDuration: "4-5 hours" },
+      { name: "Lumberjack Show", priceRange: { min: 40, max: 45 }, typicalDuration: "1.5 hours" },
+      { name: "Totem Pole & Nature Tour", priceRange: { min: 60, max: 100 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Creek Street", description: "Historic boardwalk built on stilts over Ketchikan Creek — the former red-light district, now shops and galleries." },
+      { name: "Totem Heritage Center", description: "Small museum with the world's largest collection of unrestored 19th-century totem poles ($6 entry)." },
+      { name: "Salmon Ladder at Creek Street", description: "In season (July-Sept), watch salmon swimming upstream right through downtown." },
+    ],
+    restaurants: [
+      { name: "Alaska Fish House", priceRange: "$$" },
+      { name: "Bar Harbor Restaurant", priceRange: "$$" },
+      { name: "Annabelle's (at the Gilmore Hotel)", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Very walkable downtown. The local bus goes to Totem Bight State Park (free). Most excursions pick up at the dock. Taxis available for Saxman Village (~$15).",
+    emergencyInfo: {
+      police: "911",
+      hospital: "PeaceHealth Ketchikan Medical Center",
+    },
+    region: "alaska",
+    imageUrl: "/images/ports/ketchikan.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Skagway, Alaska                                                  */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "skagway",
+    name: "Skagway",
+    country: "United States",
+    coordinates: { lat: 59.4583, lng: -135.3139 },
+    timezone: "AKST/AKDT",
+    safetyRating: 10,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Broadway Street shops start 2 min from the dock",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "A Gold Rush-era town at the head of the Lynn Canal, Skagway was the gateway to the Klondike Gold Rush in 1898. Today its restored boardwalk downtown (part of a National Historic District) welcomes cruise ships. The White Pass & Yukon Route railroad is the star attraction.",
+    timeZoneAlert: "Skagway is Alaska Time — 4 hours behind Eastern.",
+    excursionCategories: [
+      { name: "White Pass & Yukon Route Railroad", priceRange: { min: 120, max: 250 }, typicalDuration: "3-4 hours" },
+      { name: "Yukon Suspension Bridge & Sled Dogs", priceRange: { min: 150, max: 200 }, typicalDuration: "3-4 hours" },
+      { name: "Chilkoot Trail Hike", priceRange: { min: 80, max: 150 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Broadway Street", description: "Walk the restored Gold Rush-era main street with wooden boardwalks, saloons, and shops." },
+      { name: "Gold Rush Cemetery", description: "Short hike to the cemetery where notorious outlaw Soapy Smith is buried. Lower Reid Falls nearby." },
+      { name: "Klondike Gold Rush NHP Visitor Center", description: "Free National Park Service center with ranger talks and gold rush history exhibits." },
+    ],
+    restaurants: [
+      { name: "Skagway Brewing Co.", priceRange: "$$" },
+      { name: "Starfire (Thai)", priceRange: "$$" },
+      { name: "Bonanza Bar & Grill", priceRange: "$" },
+    ],
+    gettingAround:
+      "Everything in town is walkable. The SMART bus runs free in summer. Most excursions pick up at the dock or on Broadway. No taxis needed for downtown.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Dahl Memorial Clinic — 350 14th Ave",
+    },
+    region: "alaska",
+    imageUrl: "/images/ports/skagway.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Sitka, Alaska                                                    */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "sitka",
+    name: "Sitka",
+    country: "United States",
+    coordinates: { lat: 57.0531, lng: -135.3300 },
+    timezone: "AKST/AKDT",
+    safetyRating: 9.5,
+    walkabilityRating: 7,
+    isTenderPort: true,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Tender drops at the downtown lightering facility; 5 min walk to Lincoln Street",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Sitka sits on the outer coast of Baranof Island, facing the open Pacific. It was the capital of Russian America and the site of Alaska's transfer from Russia to the US in 1867. The town blends Tlingit and Russian heritage with stunning natural scenery including Mount Edgecumbe.",
+    timeZoneAlert: "Sitka is Alaska Time — 4 hours behind Eastern.",
+    excursionCategories: [
+      { name: "Sea Otter & Wildlife Quest", priceRange: { min: 120, max: 180 }, typicalDuration: "3 hours" },
+      { name: "Sitka Sound Kayaking", priceRange: { min: 100, max: 150 }, typicalDuration: "2.5 hours" },
+      { name: "Fortress of the Bear (rescue center)", priceRange: { min: 15, max: 35 }, typicalDuration: "1-2 hours" },
+    ],
+    freeActivities: [
+      { name: "Sitka National Historical Park", description: "Totem-lined trail through coastal rainforest at the site of the 1804 Tlingit-Russian battle. Free entry." },
+      { name: "St. Michael's Cathedral", description: "Iconic Russian Orthodox cathedral in the center of town (small entry fee)." },
+      { name: "Castle Hill", description: "Short climb to the spot where the Alaska transfer ceremony took place. Panoramic views." },
+    ],
+    restaurants: [
+      { name: "Ludvig's Bistro", priceRange: "$$$" },
+      { name: "The Larkspur Cafe", priceRange: "$$" },
+      { name: "Highliner Coffee", priceRange: "$" },
+    ],
+    gettingAround:
+      "Downtown is walkable. Free shuttle buses run between the tender dock and town. Taxis go to Fortress of the Bear (~$20). Sitka is a tender port — weather can affect schedule.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "SEARHC Mt. Edgecumbe Hospital",
+    },
+    region: "alaska",
+    imageUrl: "/images/ports/sitka.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Icy Strait Point, Alaska                                         */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "icy-strait-point",
+    name: "Icy Strait Point",
+    country: "United States",
+    coordinates: { lat: 58.1298, lng: -135.4443 },
+    timezone: "AKST/AKDT",
+    safetyRating: 10,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Hoonah is a 1.5 mile walk from the cruise dock",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "Icy Strait Point is a privately owned cruise destination near the Tlingit village of Hoonah on Chichagof Island. It's home to the world's largest zipline (ZipRider) and offers authentic Alaska wilderness experiences including whale watching in nearby Point Adolphus, one of the best humpback whale habitats in the world.",
+    timeZoneAlert: "Alaska Time — 4 hours behind Eastern.",
+    excursionCategories: [
+      { name: "ZipRider (world's largest zipline)", priceRange: { min: 150, max: 180 }, typicalDuration: "1 hour" },
+      { name: "Whale & Marine Mammals Cruise", priceRange: { min: 170, max: 220 }, typicalDuration: "2.5-3 hours" },
+      { name: "Brown Bear Search", priceRange: { min: 200, max: 280 }, typicalDuration: "3 hours" },
+    ],
+    freeActivities: [
+      { name: "Hoonah Village Walk", description: "Walk to the small Tlingit village of Hoonah — one of the largest Tlingit communities in Alaska." },
+      { name: "Beach & Shoreline Walks", description: "Explore the wild shoreline and look for eagles, seals, and sea otters." },
+      { name: "Cannery Museum", description: "Restored 1912 salmon cannery with exhibits on the fishing and Tlingit history." },
+    ],
+    restaurants: [
+      { name: "The Crab Station", priceRange: "$$" },
+      { name: "The Cookhouse", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Shuttle runs between the dock and Hoonah village. This is a wilderness destination — most visitors stick to the excursion area or walk to Hoonah.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Hoonah Medical Clinic",
+    },
+    region: "alaska",
+    imageUrl: "/images/ports/icy-strait-point.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Victoria, British Columbia                                       */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "victoria",
+    name: "Victoria",
+    country: "Canada",
+    coordinates: { lat: 48.4284, lng: -123.3656 },
+    timezone: "PST/PDT",
+    safetyRating: 9.5,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Inner Harbour and downtown are directly at the cruise ship dock",
+    currency: "CAD",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Victoria is the charming capital of British Columbia, on the southern tip of Vancouver Island. With its English gardens, historic parliament buildings, and the famous Empress Hotel overlooking the Inner Harbour, it's often called the most British city in Canada. A common stop on Alaska cruise itineraries.",
+    timeZoneAlert: "Victoria is Pacific Time — 3 hours behind Eastern.",
+    excursionCategories: [
+      { name: "Butchart Gardens", priceRange: { min: 35, max: 100 }, typicalDuration: "3-4 hours" },
+      { name: "Whale Watching", priceRange: { min: 100, max: 150 }, typicalDuration: "3 hours" },
+      { name: "Royal BC Museum", priceRange: { min: 20, max: 30 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Inner Harbour Walk", description: "Stroll the picturesque harbour front past the Empress Hotel, Parliament, and street performers." },
+      { name: "Beacon Hill Park", description: "200-acre park with gardens, a petting zoo, and views of the Olympic Mountains and Strait of Juan de Fuca." },
+      { name: "Fisherman's Wharf", description: "Colorful floating homes and food stalls with fish & chips and ice cream. Watch for harbour seals." },
+    ],
+    restaurants: [
+      { name: "Red Fish Blue Fish (wharf)", priceRange: "$" },
+      { name: "Il Terrazzo", priceRange: "$$$" },
+      { name: "Jam Cafe", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Downtown is extremely walkable from the cruise dock. Double-decker hop-on-hop-off buses are popular ($40 CAD). Local buses go to Butchart Gardens. Taxis available.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Royal Jubilee Hospital — 1952 Bay St",
+    },
+    region: "alaska",
+    imageUrl: "/images/ports/victoria.jpg"
+  },
+
+  /* ================================================================ */
+  /*  PRIVATE ISLANDS                                                  */
+  /* ================================================================ */
+
+  /* ---------------------------------------------------------------- */
+  /*  Bimini, Bahamas                                                  */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "bimini",
+    name: "Bimini",
+    country: "Bahamas",
+    coordinates: { lat: 25.7267, lng: -79.2694 },
+    timezone: "EST/EDT",
+    safetyRating: 9,
+    walkabilityRating: 4,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Resorts World Bimini is at the dock; Alice Town is a short shuttle ride",
+    currency: "BSD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "limited",
+    overview:
+      "Bimini is the westernmost island in the Bahamas, just 50 miles from Miami. It's a key stop for Virgin Voyages' short Caribbean cruises. The island features Resorts World Bimini with a beach club, pools, and casino, plus the famous crystal-clear waters that Hemingway loved.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Beach Club Day Pass", priceRange: { min: 0, max: 60 }, typicalDuration: "4-5 hours" },
+      { name: "Snorkeling Trip", priceRange: { min: 50, max: 80 }, typicalDuration: "2-3 hours" },
+      { name: "Deep Sea Fishing", priceRange: { min: 150, max: 300 }, typicalDuration: "4 hours" },
+    ],
+    freeActivities: [
+      { name: "Radio Beach", description: "Beautiful public beach on North Bimini, popular with locals and visitors." },
+      { name: "Alice Town Walk", description: "Tiny main street with colorful bars and shops — Hemingway's old haunts." },
+    ],
+    restaurants: [
+      { name: "Stuart's Conch Stand", priceRange: "$" },
+      { name: "Sabor (Resorts World)", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Golf cart rentals are the main transport ($80/day). Shuttle from dock to Alice Town. The island is tiny — everything is close.",
+    emergencyInfo: {
+      police: "911 or 919",
+      hospital: "Bimini Medical Clinic — Alice Town",
+    },
+    region: "private-island",
+    imageUrl: "/images/ports/bimini.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Half Moon Cay, Bahamas (Carnival/HAL)                            */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "half-moon-cay",
+    name: "Half Moon Cay",
+    country: "Bahamas",
+    coordinates: { lat: 24.5740, lng: -75.9520 },
+    timezone: "EST/EDT",
+    safetyRating: 10,
+    walkabilityRating: 6,
+    isTenderPort: true,
+    typicalPortHours: 6,
+    walkingDistanceToTown: "N/A — private island with beach area at the tender landing",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "none",
+    cellularCoverage: "none",
+    overview:
+      "Half Moon Cay (officially Little San Salvador Island) is Carnival Corporation's private island in the Bahamas. It features a stunning 2-mile white sand beach, consistently rated among the best private cruise islands. Used by Carnival and Holland America ships. Tender required.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Horseback Riding on Beach", priceRange: { min: 100, max: 130 }, typicalDuration: "1.5 hours" },
+      { name: "Stingray Adventure", priceRange: { min: 50, max: 70 }, typicalDuration: "1 hour" },
+      { name: "Private Cabana Rental", priceRange: { min: 300, max: 600 }, typicalDuration: "All day" },
+    ],
+    freeActivities: [
+      { name: "Beach", description: "Two miles of white sand beach with free lounge chairs. The main reason to visit." },
+      { name: "Nature Trail", description: "Short hiking trail through the island's interior with birdwatching opportunities." },
+    ],
+    restaurants: [
+      { name: "Complimentary BBQ Lunch", priceRange: "$" },
+      { name: "Captain Morgan Bar", priceRange: "$" },
+    ],
+    gettingAround:
+      "Walk along the beach. Tram service connects the tender landing to the far end of the beach. This is a small, self-contained beach destination.",
+    emergencyInfo: {
+      police: "Ship security",
+      hospital: "Ship's medical center — no hospital on island",
+    },
+    region: "private-island",
+    imageUrl: "/images/ports/half-moon-cay.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Ocean Cay MSC Marine Reserve, Bahamas                            */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "ocean-cay",
+    name: "Ocean Cay MSC Marine Reserve",
+    country: "Bahamas",
+    coordinates: { lat: 25.4209, lng: -79.2055 },
+    timezone: "EST/EDT",
+    safetyRating: 10,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "N/A — private island; beaches start at the pier",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "none",
+    overview:
+      "MSC's private island, transformed from an industrial sand extraction site into a marine reserve. Features 7 beaches, a lighthouse, a nature preserve, and late-night stay (ships often dock until 11 PM). Unique among private islands for its eco-restoration focus and evening programming.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Catamaran Cruise", priceRange: { min: 70, max: 100 }, typicalDuration: "1.5 hours" },
+      { name: "Snorkeling Tour", priceRange: { min: 40, max: 60 }, typicalDuration: "1.5 hours" },
+      { name: "Cabana Rental", priceRange: { min: 200, max: 900 }, typicalDuration: "All day" },
+    ],
+    freeActivities: [
+      { name: "7 Beaches", description: "Explore all seven beaches — each has a different vibe from party to secluded." },
+      { name: "Lighthouse Walk", description: "Walk to the island's lighthouse for sunset views." },
+      { name: "Food Hall", description: "Complimentary BBQ and buffet lunch included for all guests." },
+    ],
+    restaurants: [
+      { name: "Complimentary BBQ Buffet", priceRange: "$" },
+      { name: "Beach Bars (various)", priceRange: "$" },
+    ],
+    gettingAround:
+      "The island is walkable. A tram connects the pier to the far beaches. Ships dock directly — no tender needed.",
+    emergencyInfo: {
+      police: "Ship security",
+      hospital: "Ship's medical center",
+    },
+    region: "private-island",
+    imageUrl: "/images/ports/ocean-cay.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Princess Cays, Bahamas                                           */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "princess-cays",
+    name: "Princess Cays",
+    country: "Bahamas",
+    coordinates: { lat: 24.6160, lng: -76.1500 },
+    timezone: "EST/EDT",
+    safetyRating: 10,
+    walkabilityRating: 5,
+    isTenderPort: true,
+    typicalPortHours: 6,
+    walkingDistanceToTown: "N/A — private beach resort on the southern tip of Eleuthera",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "none",
+    cellularCoverage: "none",
+    overview:
+      "Princess Cays is Princess Cruises' private resort on the southern tip of Eleuthera island. It's a classic beach day stop with calm turquoise waters, white sand, and a laid-back atmosphere. Tender service from the ship to shore.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Snorkeling Gear Rental", priceRange: { min: 25, max: 35 }, typicalDuration: "Self-guided" },
+      { name: "Kayak Rental", priceRange: { min: 30, max: 40 }, typicalDuration: "1 hour" },
+      { name: "Bungalow Rental", priceRange: { min: 250, max: 500 }, typicalDuration: "All day" },
+    ],
+    freeActivities: [
+      { name: "Beach & Swimming", description: "Beautiful beach with free lounge chairs and calm, shallow water." },
+      { name: "Nature Walk", description: "Short path through native vegetation on the point." },
+    ],
+    restaurants: [
+      { name: "Complimentary BBQ Lunch", priceRange: "$" },
+      { name: "Beach Bar", priceRange: "$" },
+    ],
+    gettingAround:
+      "Walk along the beach. The resort area is compact. Tender from ship to shore.",
+    emergencyInfo: {
+      police: "Ship security",
+      hospital: "Ship's medical center",
+    },
+    region: "private-island",
+    imageUrl: "/images/ports/princess-cays.jpg"
+  },
+
+  /* ================================================================ */
+  /*  ADDITIONAL CARIBBEAN PORTS                                       */
+  /* ================================================================ */
+
+  /* ---------------------------------------------------------------- */
+  /*  Curaçao (Willemstad)                                             */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "curacao",
+    name: "Curaçao",
+    country: "Curaçao",
+    coordinates: { lat: 12.1070, lng: -68.9340 },
+    timezone: "AST (no DST)",
+    safetyRating: 7.5,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Willemstad's Handelskade is 5 min walk from the Mega Pier",
+    currency: "ANG",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Curaçao is a Dutch Caribbean island known for its colorful UNESCO-listed Willemstad waterfront, excellent diving, and the famous Blue Curaçao liqueur. Less touristy than many Caribbean ports, it offers an authentic island experience with Dutch, Caribbean, and Latin influences.",
+    timeZoneAlert: "Curaçao does NOT observe Daylight Saving Time. In summer it is 1 hour ahead of Eastern.",
+    excursionCategories: [
+      { name: "Beach Hopping Tour", priceRange: { min: 50, max: 80 }, typicalDuration: "4-5 hours" },
+      { name: "Hato Caves", priceRange: { min: 10, max: 20 }, typicalDuration: "1.5 hours" },
+      { name: "Snorkel/Dive Trip", priceRange: { min: 50, max: 100 }, typicalDuration: "3 hours" },
+      { name: "Blue Curaçao Distillery Tour", priceRange: { min: 10, max: 15 }, typicalDuration: "1 hour" },
+    ],
+    freeActivities: [
+      { name: "Willemstad Waterfront Walk", description: "Walk across the Queen Emma pontoon bridge between Punda and Otrobanda — the iconic colorful Handelskade." },
+      { name: "Punda Shopping District", description: "Narrow streets with pastel Dutch colonial buildings, boutiques, and cafes." },
+      { name: "Fort Amsterdam", description: "Historic Dutch fort that now serves as the governor's residence. Free to view from outside." },
+    ],
+    restaurants: [
+      { name: "Plasa Bieu (Old Market)", priceRange: "$" },
+      { name: "Gouverneur de Rouville", priceRange: "$$" },
+      { name: "Seaside Terrace", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Willemstad is walkable. Taxis have fixed rates — to beaches like Mambo Beach ~$15-20. Car rental recommended for remote beaches. No Uber.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Curaçao Medical Center — Weg Naar Sint Elisabeth",
+      usConsulate: "+599 9 461-3066",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/curacao.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Dominica                                                         */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "dominica",
+    name: "Dominica",
+    country: "Dominica",
+    coordinates: { lat: 15.3010, lng: -61.3872 },
+    timezone: "AST (no DST)",
+    safetyRating: 8,
+    walkabilityRating: 4,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Roseau town center is 5 min walk from the cruise port",
+    currency: "XCD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Known as the 'Nature Island of the Caribbean,' Dominica is one of the most unspoiled islands in the region. It's volcanic, mountainous, and covered in lush rainforest. The island offers incredible hiking, hot springs, and the world's second-largest boiling lake. Not to be confused with the Dominican Republic.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Trafalgar Falls & Rainforest", priceRange: { min: 50, max: 80 }, typicalDuration: "3-4 hours" },
+      { name: "Champagne Reef Snorkeling", priceRange: { min: 40, max: 60 }, typicalDuration: "2-3 hours" },
+      { name: "Titou Gorge & Emerald Pool", priceRange: { min: 60, max: 100 }, typicalDuration: "4-5 hours" },
+      { name: "Whale & Dolphin Watch", priceRange: { min: 60, max: 90 }, typicalDuration: "3 hours" },
+    ],
+    freeActivities: [
+      { name: "Roseau Market", description: "Colorful waterfront market selling tropical fruit, spices, and crafts." },
+      { name: "Roseau Cathedral Walk", description: "Walk through the small capital past the stone cathedral and colonial buildings." },
+      { name: "Bayfront Boardwalk", description: "Stroll along the waterfront promenade for mountain and ocean views." },
+    ],
+    restaurants: [
+      { name: "Old Stone Grill", priceRange: "$$" },
+      { name: "Cocorico Cafe", priceRange: "$" },
+      { name: "Pearl's Cuisine", priceRange: "$" },
+    ],
+    gettingAround:
+      "Roseau is walkable but attractions are in the mountains. Hire a guide/taxi for waterfalls — roads are winding and narrow. A guided tour is recommended.",
+    emergencyInfo: {
+      police: "999",
+      hospital: "Princess Margaret Hospital — Roseau",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/dominica.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Freeport, Bahamas                                                */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "freeport",
+    name: "Freeport",
+    country: "Bahamas",
+    coordinates: { lat: 26.5285, lng: -78.6967 },
+    timezone: "EST/EDT",
+    safetyRating: 7,
+    walkabilityRating: 3,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Lucaya is 10 min by taxi from the cruise port",
+    currency: "BSD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "Freeport is the main city on Grand Bahama Island, the closest Bahamian island to Florida. Port Lucaya Marketplace is the main tourist area with shops, restaurants, and Count Basie Square. The island has beautiful beaches but is more spread out than Nassau.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "UNEXSO Dolphin Encounter", priceRange: { min: 80, max: 200 }, typicalDuration: "2-3 hours" },
+      { name: "Lucayan National Park & Caves", priceRange: { min: 40, max: 60 }, typicalDuration: "3-4 hours" },
+      { name: "Snorkel/Glass-Bottom Boat", priceRange: { min: 40, max: 60 }, typicalDuration: "2 hours" },
+    ],
+    freeActivities: [
+      { name: "Port Lucaya Marketplace", description: "Open-air marketplace with shops, restaurants, and live music at Count Basie Square." },
+      { name: "Lucaya Beach", description: "Beautiful public beach near the marketplace — free to enjoy." },
+    ],
+    restaurants: [
+      { name: "Zorba's Greek Restaurant", priceRange: "$$" },
+      { name: "Billy Joe's on the Beach", priceRange: "$" },
+      { name: "Sabor (Port Lucaya)", priceRange: "$$" },
+    ],
+    gettingAround:
+      "You need a taxi or shuttle from the cruise port to Lucaya ($10-15/person). No walkable attractions near the port itself. Car rental or organized tour recommended for the island.",
+    emergencyInfo: {
+      police: "911 or 919",
+      hospital: "Rand Memorial Hospital — East Atlantic Dr",
+    },
+    region: "bahamas",
+    imageUrl: "/images/ports/freeport.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Martinique                                                       */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "martinique",
+    name: "Martinique",
+    country: "France (Overseas Region)",
+    coordinates: { lat: 14.6042, lng: -61.0742 },
+    timezone: "AST (no DST)",
+    safetyRating: 8,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Fort-de-France center is a 5 min walk from the cruise terminal",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Martinique is a French Caribbean island that's an overseas region of France — you'll find boulangeries, patisseries, and French culture blended with Caribbean vibes. Fort-de-France is the bustling capital, while the north has the dramatic Mount Pelée volcano and black sand beaches.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Mount Pelée & St. Pierre Tour", priceRange: { min: 60, max: 100 }, typicalDuration: "5-6 hours" },
+      { name: "Les Salines Beach Day", priceRange: { min: 40, max: 60 }, typicalDuration: "4-5 hours" },
+      { name: "Rum Distillery Tour (Clément/JM)", priceRange: { min: 40, max: 60 }, typicalDuration: "3 hours" },
+    ],
+    freeActivities: [
+      { name: "Fort-de-France Market", description: "The covered Grand Marché sells spices, rum, and tropical produce. The adjacent craft market has souvenirs." },
+      { name: "Bibliothèque Schoelcher", description: "Stunning 19th-century library with a colorful, ornate facade — originally built for the 1889 Paris Exposition." },
+      { name: "La Savane Park", description: "Central park with palm trees, benches, and a statue of Empress Joséphine (born here)." },
+    ],
+    restaurants: [
+      { name: "Le Petibonum (beach restaurant)", priceRange: "$$" },
+      { name: "Chez Carole (Creole)", priceRange: "$" },
+      { name: "La Table de Marcel", priceRange: "$$$" },
+    ],
+    gettingAround:
+      "Fort-de-France is walkable. Taxis use fixed rates — to Les Salines beach ~€60. Local buses ('taxi collectif') are cheap (~€2) but confusing for tourists. Car rental recommended for exploring the island.",
+    emergencyInfo: {
+      police: "17",
+      hospital: "CHU de Martinique — Fort-de-France",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/martinique.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Guadeloupe                                                       */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "guadeloupe",
+    name: "Guadeloupe",
+    country: "France (Overseas Region)",
+    coordinates: { lat: 16.2411, lng: -61.5331 },
+    timezone: "AST (no DST)",
+    safetyRating: 8,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "Pointe-à-Pitre center is a 5 min walk from the cruise terminal",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Guadeloupe is a butterfly-shaped French Caribbean archipelago. Ships dock in Pointe-à-Pitre on Grande-Terre. The island offers French-Creole cuisine, volcano hikes on Basse-Terre (La Soufrière), and gorgeous beaches. Like Martinique, it uses the euro and feels distinctly French.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "La Soufrière Volcano Hike", priceRange: { min: 60, max: 100 }, typicalDuration: "5-6 hours" },
+      { name: "Snorkeling at Jacques Cousteau Reserve", priceRange: { min: 40, max: 70 }, typicalDuration: "3 hours" },
+      { name: "Sainte-Anne Beach Day", priceRange: { min: 30, max: 50 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Pointe-à-Pitre Market", description: "Colorful spice and produce market — great for local vanilla, rum, and handmade hot sauce." },
+      { name: "Place de la Victoire", description: "Main public square with colonial buildings, palm trees, and waterfront views." },
+      { name: "Mémorial ACTe", description: "Striking modern museum about Caribbean slavery and memory (small entry fee)." },
+    ],
+    restaurants: [
+      { name: "La Route du Rhum", priceRange: "$$" },
+      { name: "Chez Coco", priceRange: "$" },
+    ],
+    gettingAround:
+      "Pointe-à-Pitre center is walkable. Taxis use fixed rates. Car rental recommended to explore Basse-Terre side. Buses exist but schedules are infrequent.",
+    emergencyInfo: {
+      police: "17",
+      hospital: "CHU de Guadeloupe — Pointe-à-Pitre",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/guadeloupe.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  St. Kitts                                                        */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "st-kitts",
+    name: "St. Kitts",
+    country: "St. Kitts & Nevis",
+    coordinates: { lat: 17.2960, lng: -62.7249 },
+    timezone: "AST (no DST)",
+    safetyRating: 8,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Basseterre town center is 5 min walk from Port Zante",
+    currency: "XCD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "St. Kitts is the larger half of the Federation of St. Kitts and Nevis. Port Zante in Basseterre is right downtown. The island features a scenic railway (the last in the Caribbean), the imposing Brimstone Hill Fortress, and lush rainforest on Mount Liamuiga.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "St. Kitts Scenic Railway", priceRange: { min: 90, max: 120 }, typicalDuration: "3 hours" },
+      { name: "Brimstone Hill Fortress", priceRange: { min: 40, max: 60 }, typicalDuration: "3-4 hours" },
+      { name: "Rainforest Zipline", priceRange: { min: 80, max: 120 }, typicalDuration: "3 hours" },
+      { name: "Mount Liamuiga Volcano Hike", priceRange: { min: 70, max: 100 }, typicalDuration: "5-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Basseterre Walking Tour", description: "Walk to Independence Square, the Circus (modeled after Piccadilly), and colonial-era churches." },
+      { name: "Port Zante Shopping", description: "Duty-free shopping complex right at the cruise port." },
+      { name: "Frigate Bay Beach", description: "Popular beach a short taxi ride from port — North Frigate Bay is calm, South has beach bars." },
+    ],
+    restaurants: [
+      { name: "Sprat Net", priceRange: "$" },
+      { name: "Marshalls", priceRange: "$$$" },
+      { name: "Reggae Beach Bar", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Basseterre is walkable. Taxis have fixed rates — to Frigate Bay ~$10, Brimstone Hill ~$30. Island tours by taxi available for $25-30/hour. No Uber.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Joseph N. France General Hospital — Basseterre",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/st-kitts.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  St. Croix, USVI                                                  */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "st-croix",
+    name: "St. Croix",
+    country: "US Virgin Islands",
+    coordinates: { lat: 17.7466, lng: -64.7024 },
+    timezone: "AST (no DST)",
+    safetyRating: 7,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Frederiksted town is directly at the cruise pier",
+    currency: "USD",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "The largest of the US Virgin Islands, St. Croix is less crowded than St. Thomas and offers a more authentic Caribbean experience. Ships dock in the charming town of Frederiksted. Christiansted on the east end is the main historic town. No passport needed for US citizens.",
+    timeZoneAlert: "USVI does NOT observe Daylight Saving Time.",
+    excursionCategories: [
+      { name: "Buck Island Snorkeling", priceRange: { min: 60, max: 100 }, typicalDuration: "4-5 hours" },
+      { name: "Christiansted Historic Tour", priceRange: { min: 30, max: 50 }, typicalDuration: "3-4 hours" },
+      { name: "Cruzan Rum Distillery", priceRange: { min: 15, max: 25 }, typicalDuration: "1.5 hours" },
+    ],
+    freeActivities: [
+      { name: "Frederiksted Beach", description: "Beautiful sandy beach right next to the cruise pier — walk off the ship and onto the sand." },
+      { name: "Fort Frederik", description: "18th-century Danish fort right at the pier with a small museum." },
+      { name: "Frederiksted Waterfront Walk", description: "Stroll the colorful colonial streets along the waterfront." },
+    ],
+    restaurants: [
+      { name: "Polly's at the Pier", priceRange: "$" },
+      { name: "Beach Side Cafe", priceRange: "$$" },
+      { name: "Turtles Deli", priceRange: "$" },
+    ],
+    gettingAround:
+      "Frederiksted is walkable. Taxi to Christiansted ~$25 each way. Buck Island boat trips depart from Christiansted. Car rental available if you want to explore both towns.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Juan F. Luis Hospital — Christiansted",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/st-croix.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  La Romana, Dominican Republic                                    */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "la-romana",
+    name: "La Romana",
+    country: "Dominican Republic",
+    coordinates: { lat: 18.4274, lng: -68.9734 },
+    timezone: "AST (no DST)",
+    safetyRating: 7,
+    walkabilityRating: 3,
+    isTenderPort: false,
+    typicalPortHours: 8,
+    walkingDistanceToTown: "La Romana town is 10 min by taxi; Altos de Chavón is 5 min",
+    currency: "DOP",
+    usdAccepted: true,
+    wifiAvailability: "good",
+    cellularCoverage: "good",
+    overview:
+      "La Romana is home to Casa de Campo resort and the stunning replica Mediterranean village of Altos de Chavón. Cruise ships dock at the resort's port. Nearby Saona Island and Catalina Island offer pristine beach excursions. Some cruises use La Romana as an embarkation port.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Saona Island Catamaran", priceRange: { min: 80, max: 120 }, typicalDuration: "6-7 hours" },
+      { name: "Altos de Chavón & Chavón River", priceRange: { min: 30, max: 60 }, typicalDuration: "3 hours" },
+      { name: "Catalina Island Snorkeling", priceRange: { min: 60, max: 90 }, typicalDuration: "5-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Altos de Chavón", description: "Stunning replica 16th-century Mediterranean village with an amphitheater, galleries, and river views." },
+      { name: "Marina Walk", description: "Stroll the Casa de Campo marina with yachts, shops, and restaurants." },
+    ],
+    restaurants: [
+      { name: "La Piazzetta (Altos de Chavón)", priceRange: "$$" },
+      { name: "Pepperoni Cafe", priceRange: "$" },
+    ],
+    gettingAround:
+      "You'll need a taxi or shuttle from the port to attractions. Altos de Chavón is a short ride. Beach excursions include transportation. Not really walkable beyond the port area.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Hospital Dr. Francisco Gonzalvo — La Romana",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/la-romana.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Samaná, Dominican Republic                                       */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "samana",
+    name: "Samaná",
+    country: "Dominican Republic",
+    coordinates: { lat: 19.2060, lng: -69.3370 },
+    timezone: "AST (no DST)",
+    safetyRating: 7.5,
+    walkabilityRating: 4,
+    isTenderPort: true,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Santa Bárbara de Samaná town is at the tender pier",
+    currency: "DOP",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "The Samaná Peninsula is one of the most beautiful and least developed areas of the Dominican Republic. Famous for humpback whale watching (January-March), the El Limón waterfall, and the stunning Rincón Beach. Ships typically tender to shore.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "Whale Watching (Jan-Mar)", priceRange: { min: 50, max: 80 }, typicalDuration: "2-3 hours" },
+      { name: "El Limón Waterfall", priceRange: { min: 40, max: 70 }, typicalDuration: "3-4 hours" },
+      { name: "Cayo Levantado Beach Day", priceRange: { min: 30, max: 50 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Samaná Town Walk", description: "Small, colorful town with a Malecón waterfront promenade and local vendors." },
+      { name: "Cayacoa Bridge", description: "Walk across the bridge connecting the town to the small island with restaurants." },
+    ],
+    restaurants: [
+      { name: "El Cabito (cliff restaurant)", priceRange: "$$" },
+      { name: "Restaurante Xaman", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Town is walkable. Motoconchos (motorcycle taxis) are the cheapest local transport. Taxis for excursions. Roads to waterfalls are rough — a guided tour is recommended.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Hospital Municipal de Samaná",
+    },
+    region: "eastern",
+    imageUrl: "/images/ports/samana.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  St. Vincent                                                      */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "st-vincent",
+    name: "St. Vincent",
+    country: "St. Vincent & the Grenadines",
+    coordinates: { lat: 13.1560, lng: -61.2270 },
+    timezone: "AST (no DST)",
+    safetyRating: 7,
+    walkabilityRating: 4,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Kingstown is directly at the cruise ship berth",
+    currency: "XCD",
+    usdAccepted: true,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "St. Vincent is the volcanic main island of St. Vincent and the Grenadines. Less polished than some Caribbean stops, it offers raw natural beauty — the La Soufrière volcano, black sand beaches, and the Vermont Nature Trail through tropical rainforest. Kingstown is the small, bustling capital.",
+    timeZoneAlert: null,
+    excursionCategories: [
+      { name: "La Soufrière Volcano Hike", priceRange: { min: 70, max: 120 }, typicalDuration: "5-6 hours" },
+      { name: "Botanical Gardens Tour", priceRange: { min: 20, max: 40 }, typicalDuration: "1.5-2 hours" },
+      { name: "Catamaran to Bequia", priceRange: { min: 80, max: 130 }, typicalDuration: "5-6 hours" },
+    ],
+    freeActivities: [
+      { name: "Kingstown Market", description: "Loud, colorful market selling produce, spices, and local goods. Saturday mornings are busiest." },
+      { name: "Botanical Gardens", description: "One of the oldest botanical gardens in the Western Hemisphere (1765). Breadfruit from Captain Bligh's voyage." },
+      { name: "Fort Charlotte", description: "Hillside fort with views of Kingstown, the Grenadines, and the coastline." },
+    ],
+    restaurants: [
+      { name: "Basil's Bar (Kingstown)", priceRange: "$$" },
+      { name: "Cobblestone Inn Restaurant", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Kingstown center is walkable but hilly. Minibuses ('dollar vans') go everywhere for ~$1-2 EC. Taxis for volcano hikes or beaches. Roads are steep and winding.",
+    emergencyInfo: {
+      police: "911",
+      hospital: "Milton Cato Memorial Hospital — Kingstown",
+    },
+    region: "southern",
+    imageUrl: "/images/ports/st-vincent.jpg"
+  },
+
+  /* ================================================================ */
+  /*  EUROPEAN PORTS                                                   */
+  /* ================================================================ */
+
+  /* ---------------------------------------------------------------- */
+  /*  Barcelona, Spain                                                 */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "barcelona",
+    name: "Barcelona",
+    country: "Spain",
+    coordinates: { lat: 41.3784, lng: 2.1799 },
+    timezone: "CET/CEST",
+    safetyRating: 7,
+    walkabilityRating: 9,
+    isTenderPort: false,
+    typicalPortHours: 10,
+    walkingDistanceToTown: "La Rambla is 15 min walk or a short shuttle from the cruise terminals",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Barcelona is one of Europe's most popular cruise ports, both as a port of call and embarkation city. The city offers Gaudí's masterpieces (Sagrada Família, Park Güell), Gothic Quarter charm, world-class food, and Mediterranean beaches. Multiple cruise terminals line the waterfront.",
+    timeZoneAlert: "Barcelona is Central European Time — 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Sagrada Família Tour", priceRange: { min: 26, max: 50 }, typicalDuration: "2-3 hours" },
+      { name: "Gothic Quarter Walking Tour", priceRange: { min: 15, max: 30 }, typicalDuration: "2 hours" },
+      { name: "Park Güell & Casa Batlló", priceRange: { min: 30, max: 60 }, typicalDuration: "3-4 hours" },
+      { name: "Montserrat Day Trip", priceRange: { min: 50, max: 80 }, typicalDuration: "5-6 hours" },
+    ],
+    freeActivities: [
+      { name: "La Rambla", description: "Barcelona's famous tree-lined pedestrian boulevard from Plaça de Catalunya to the waterfront." },
+      { name: "Gothic Quarter", description: "Medieval streets and plazas with the cathedral, hidden squares, and Roman ruins." },
+      { name: "Barceloneta Beach", description: "City beach just minutes from the cruise port with a lively boardwalk." },
+    ],
+    restaurants: [
+      { name: "La Boqueria Market", priceRange: "$" },
+      { name: "Cal Pep (tapas)", priceRange: "$$$" },
+      { name: "Cervecería Catalana", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Metro is fast and cheap (€2.40/ride, T-casual 10-ride card €11.35). Free port shuttle bus to the bottom of La Rambla. Taxis from port to Sagrada Família ~€15-20. The city is very walkable.",
+    emergencyInfo: {
+      police: "112 (EU emergency) or 091 (national police)",
+      hospital: "Hospital del Mar — Passeig Marítim",
+      usConsulate: "+34 93-280-2227",
+    },
+    region: "europe-med",
+    imageUrl: "/images/ports/barcelona.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Rome (Civitavecchia), Italy                                      */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "rome-civitavecchia",
+    name: "Rome (Civitavecchia)",
+    country: "Italy",
+    coordinates: { lat: 42.0936, lng: 11.7863 },
+    timezone: "CET/CEST",
+    safetyRating: 7,
+    walkabilityRating: 3,
+    isTenderPort: false,
+    typicalPortHours: 12,
+    walkingDistanceToTown: "Civitavecchia town is 15 min walk; Rome is 60-90 min by train",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Civitavecchia is the port city for Rome, about 50 miles northwest of the Eternal City. Most cruisers head straight to Rome via train or organized tour. The port is a major embarkation point for Mediterranean cruises. Civitavecchia itself has a Michelangelo-designed fort and seafood restaurants.",
+    timeZoneAlert: "Italy is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Rome: Colosseum & Vatican", priceRange: { min: 100, max: 200 }, typicalDuration: "10-12 hours" },
+      { name: "Rome: Skip-the-Line Vatican", priceRange: { min: 80, max: 150 }, typicalDuration: "8-10 hours" },
+      { name: "Civitavecchia & Tuscia Wine Country", priceRange: { min: 50, max: 100 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Civitavecchia Fort & Waterfront", description: "Walk to the Forte Michelangelo and the fishing harbor — a pleasant half day if not going to Rome." },
+      { name: "Civitavecchia Town Center", description: "Small Italian town with markets, gelato shops, and a train station." },
+    ],
+    restaurants: [
+      { name: "La Bomboniera (Civitavecchia)", priceRange: "$$" },
+      { name: "Ristorante Ideale (Civitavecchia)", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Regional train from Civitavecchia to Roma Termini takes ~60-80 min (€5-8). Shuttle from port to train station. Organized shore excursions handle all logistics. Going independently to Rome is very doable but plan for the long day.",
+    emergencyInfo: {
+      police: "112",
+      hospital: "San Paolo Hospital — Civitavecchia",
+      usConsulate: "US Embassy Rome: +39 06-46741",
+    },
+    region: "europe-med",
+    imageUrl: "/images/ports/rome-civitavecchia.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Valletta, Malta                                                  */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "valletta",
+    name: "Valletta",
+    country: "Malta",
+    coordinates: { lat: 35.8989, lng: 14.5146 },
+    timezone: "CET/CEST",
+    safetyRating: 9,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Grand Harbour cruise terminal has an elevator up to Barrakka Gardens in the city",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Valletta is a UNESCO World Heritage city and one of the most concentrated historic areas in the world. Built by the Knights of St. John in the 1500s, the fortified city sits on a peninsula between two harbors. Despite being tiny (less than 1 km long), it's packed with baroque architecture, museums, and cafes.",
+    timeZoneAlert: "Malta is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Valletta Walking Tour", priceRange: { min: 20, max: 40 }, typicalDuration: "2-3 hours" },
+      { name: "Mdina & Rabat (ancient capital)", priceRange: { min: 40, max: 70 }, typicalDuration: "3-4 hours" },
+      { name: "Blue Grotto Boat Trip", priceRange: { min: 30, max: 50 }, typicalDuration: "3-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Upper Barrakka Gardens", description: "Stunning viewpoint overlooking the Grand Harbour. The noon cannon salute fires daily." },
+      { name: "St. John's Co-Cathedral", description: "Baroque masterpiece with two Caravaggio paintings (€15 entry, worth every cent)." },
+      { name: "Republic Street Walk", description: "Main pedestrian street through the city with cafes, shops, and historic buildings." },
+    ],
+    restaurants: [
+      { name: "Noni", priceRange: "$$$" },
+      { name: "Pastizzeria (any)", priceRange: "$" },
+      { name: "Trabuxu Wine Bar", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Valletta is tiny and walkable but very hilly with steep stairs. Elevator from harbour to Upper Barrakka. Buses go everywhere on the island (€2/ride). Ferry to Three Cities from the harbour.",
+    emergencyInfo: {
+      police: "112",
+      hospital: "Mater Dei Hospital — Msida",
+    },
+    region: "europe-med",
+    imageUrl: "/images/ports/valletta.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Sicily (Messina), Italy                                          */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "sicily-messina",
+    name: "Sicily (Messina)",
+    country: "Italy",
+    coordinates: { lat: 38.1938, lng: 15.5540 },
+    timezone: "CET/CEST",
+    safetyRating: 7.5,
+    walkabilityRating: 7,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Messina's Duomo and center are 10 min walk from the cruise pier",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Messina is the gateway to Sicily, sitting on the northeast tip of the island across the strait from mainland Italy. The city itself is pleasant with a famous astronomical clock, but most cruisers use it as a base to visit Taormina and Mount Etna — two of Sicily's most spectacular attractions.",
+    timeZoneAlert: "Italy is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Taormina & Greek Theatre", priceRange: { min: 50, max: 90 }, typicalDuration: "4-5 hours" },
+      { name: "Mount Etna Excursion", priceRange: { min: 70, max: 130 }, typicalDuration: "5-7 hours" },
+      { name: "Godfather Movie Sites Tour", priceRange: { min: 80, max: 120 }, typicalDuration: "6 hours" },
+    ],
+    freeActivities: [
+      { name: "Duomo & Astronomical Clock", description: "Messina's cathedral with the world's largest astronomical clock — the noon show is a must-see." },
+      { name: "Piazza del Duomo", description: "Main square with the Orion Fountain and surrounding cafes." },
+      { name: "Via Garibaldi", description: "Main shopping street from the port to the cathedral." },
+    ],
+    restaurants: [
+      { name: "Fratelli La Bufala", priceRange: "$$" },
+      { name: "Pasticceria Irrera", priceRange: "$" },
+    ],
+    gettingAround:
+      "Messina center is walkable. Taormina is 1 hour by bus or taxi (~€80-100 round trip). Mount Etna requires an organized tour. Train to Taormina-Giardini station takes 45 min.",
+    emergencyInfo: {
+      police: "112",
+      hospital: "Policlinico Universitario — Via Consolare Valeria",
+    },
+    region: "europe-med",
+    imageUrl: "/images/ports/sicily-messina.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Olympia (Katakolon), Greece                                      */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "olympia-katakolon",
+    name: "Olympia (Katakolon)",
+    country: "Greece",
+    coordinates: { lat: 37.6400, lng: 21.3186 },
+    timezone: "EET/EEST",
+    safetyRating: 9,
+    walkabilityRating: 5,
+    isTenderPort: false,
+    typicalPortHours: 7,
+    walkingDistanceToTown: "Katakolon village shops and tavernas start right at the pier",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "limited",
+    cellularCoverage: "good",
+    overview:
+      "Katakolon is a tiny fishing village on Greece's western Peloponnese coast, serving as the port for Ancient Olympia — the birthplace of the Olympic Games. Most visitors head straight to the archaeological site 35 km inland. The village itself has a pretty waterfront with tavernas and olive oil shops.",
+    timeZoneAlert: "Greece is 7 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Ancient Olympia Archaeological Site", priceRange: { min: 40, max: 80 }, typicalDuration: "4-5 hours" },
+      { name: "Olympia Museum & Site Combo", priceRange: { min: 50, max: 90 }, typicalDuration: "5-6 hours" },
+      { name: "Beach & Olive Oil Tasting", priceRange: { min: 30, max: 50 }, typicalDuration: "3 hours" },
+    ],
+    freeActivities: [
+      { name: "Katakolon Waterfront Walk", description: "Charming harbor promenade with fishing boats, tavernas, and souvenir shops." },
+      { name: "Kourouta Beach", description: "Sandy beach a short walk south of the village — uncrowded and scenic." },
+      { name: "Museum of Ancient Greek Technology", description: "Small museum in Katakolon village showcasing reconstructions of ancient inventions." },
+    ],
+    restaurants: [
+      { name: "Taverna Bacchus", priceRange: "$" },
+      { name: "Elia Restaurant", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Katakolon village is walkable. Taxi to Ancient Olympia ~€50-60 round trip. Hop-on-hop-off train runs to Olympia in season. Most people book a ship excursion.",
+    emergencyInfo: {
+      police: "112",
+      hospital: "Pyrgos General Hospital (25 min drive)",
+    },
+    region: "europe-med",
+    imageUrl: "/images/ports/olympia-katakolon.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Chania (Souda), Crete, Greece                                    */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "chania-souda",
+    name: "Chania (Souda)",
+    country: "Greece",
+    coordinates: { lat: 35.4850, lng: 24.0959 },
+    timezone: "EET/EEST",
+    safetyRating: 9,
+    walkabilityRating: 4,
+    isTenderPort: false,
+    typicalPortHours: 9,
+    walkingDistanceToTown: "Souda port is 7 km from Chania old town — shuttle or taxi needed",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Souda Bay is the deep-water port serving Chania, Crete's most beautiful city. Chania's Venetian harbor, with its iconic lighthouse and pastel buildings, is one of the most photogenic spots in the Greek islands. Crete offers ancient Minoan ruins, dramatic gorges, and exceptional cuisine.",
+    timeZoneAlert: "Crete/Greece is 7 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Chania Old Town Walking Tour", priceRange: { min: 30, max: 50 }, typicalDuration: "3-4 hours" },
+      { name: "Knossos Palace (Heraklion)", priceRange: { min: 80, max: 130 }, typicalDuration: "6-7 hours" },
+      { name: "Samariá Gorge Hike", priceRange: { min: 50, max: 80 }, typicalDuration: "8 hours" },
+      { name: "Cretan Wine & Olive Oil Tasting", priceRange: { min: 40, max: 70 }, typicalDuration: "3-4 hours" },
+    ],
+    freeActivities: [
+      { name: "Venetian Harbour & Lighthouse", description: "Walk the harbor promenade to the iconic Egyptian Lighthouse — one of the oldest in the world." },
+      { name: "Old Town Streets", description: "Wander the narrow lanes of the Venetian, Turkish, and Jewish quarters. Beautiful architecture and hidden gems." },
+      { name: "Chania Municipal Market", description: "Cross-shaped covered market from 1913 selling Cretan cheese, herbs, honey, and olive oil." },
+    ],
+    restaurants: [
+      { name: "Tamam (Cretan)", priceRange: "$$" },
+      { name: "Bougatsa Iordanis", priceRange: "$" },
+      { name: "To Maridaki (seafood)", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Shuttle bus from Souda port to Chania old town (often free or €5). Chania old town is very walkable. Taxi from port ~€15. Public bus to Heraklion takes 2.5 hours.",
+    emergencyInfo: {
+      police: "112",
+      hospital: "Chania General Hospital — Mournies",
+    },
+    region: "europe-med",
+    imageUrl: "/images/ports/chania-souda.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Le Havre (Paris), France                                         */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "le-havre",
+    name: "Le Havre (Paris)",
+    country: "France",
+    coordinates: { lat: 49.4944, lng: 0.1079 },
+    timezone: "CET/CEST",
+    safetyRating: 8,
+    walkabilityRating: 6,
+    isTenderPort: false,
+    typicalPortHours: 12,
+    walkingDistanceToTown: "Le Havre city center is 15 min walk from cruise terminal",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "good",
+    cellularCoverage: "excellent",
+    overview:
+      "Le Havre is the port for Paris, about 2-2.5 hours away by bus or train. The city itself is a UNESCO World Heritage Site for its post-war modernist architecture by Auguste Perret. Most cruisers choose between a whirlwind Paris day trip or exploring Normandy's D-Day beaches and the charming town of Honfleur.",
+    timeZoneAlert: "France is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Paris Highlights (Eiffel Tower area)", priceRange: { min: 120, max: 250 }, typicalDuration: "12-14 hours" },
+      { name: "D-Day Beaches of Normandy", priceRange: { min: 80, max: 150 }, typicalDuration: "8-10 hours" },
+      { name: "Honfleur & Normandy Countryside", priceRange: { min: 50, max: 90 }, typicalDuration: "4-5 hours" },
+    ],
+    freeActivities: [
+      { name: "Le Havre Beach", description: "Long pebble beach along the promenade — nice for a walk even if not swimming weather." },
+      { name: "Perret Model Apartment", description: "UNESCO-recognized modernist architecture — free guided tours of a restored 1950s apartment." },
+      { name: "Saint-Joseph Church", description: "Stunning modernist church with a 107-meter tower and incredible stained glass interior." },
+    ],
+    restaurants: [
+      { name: "Le Lyonnais (seafood)", priceRange: "$$" },
+      { name: "Les Enfants Sages", priceRange: "$$" },
+    ],
+    gettingAround:
+      "Train to Paris Saint-Lazare takes 2-2.5 hours (€15-25 each way). Book in advance. Shuttle to train station from port. Honfleur is 30 min by bus. Le Havre has a modern tram system.",
+    emergencyInfo: {
+      police: "17 or 112",
+      hospital: "Groupe Hospitalier du Havre",
+      usConsulate: "US Embassy Paris: +33 1-43-12-22-22",
+    },
+    region: "europe-north",
+    imageUrl: "/images/ports/le-havre.jpg"
+  },
+
+  /* ---------------------------------------------------------------- */
+  /*  Hamburg, Germany                                                  */
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "hamburg",
+    name: "Hamburg",
+    country: "Germany",
+    coordinates: { lat: 53.5511, lng: 9.9937 },
+    timezone: "CET/CEST",
+    safetyRating: 8.5,
+    walkabilityRating: 8,
+    isTenderPort: false,
+    typicalPortHours: 0,
+    walkingDistanceToTown: "HafenCity cruise terminal is in the heart of Hamburg",
+    currency: "EUR",
+    usdAccepted: false,
+    wifiAvailability: "excellent",
+    cellularCoverage: "excellent",
+    overview:
+      "Hamburg is Germany's second-largest city and a major European cruise embarkation port. The Elbe River harbor city offers the stunning Elbphilharmonie concert hall, the Speicherstadt warehouse district (UNESCO), and the famous Reeperbahn nightlife. A cosmopolitan, maritime city with incredible architecture.",
+    timeZoneAlert: "Germany is 6 hours ahead of US Eastern.",
+    excursionCategories: [
+      { name: "Harbour Boat Tour", priceRange: { min: 15, max: 30 }, typicalDuration: "1.5-2 hours" },
+      { name: "Elbphilharmonie Plaza Visit", priceRange: { min: 0, max: 0 }, typicalDuration: "1 hour" },
+      { name: "Miniatur Wunderland", priceRange: { min: 15, max: 20 }, typicalDuration: "2-3 hours" },
+    ],
+    freeActivities: [
+      { name: "Speicherstadt Walk", description: "Walk through the UNESCO World Heritage warehouse district — stunning red-brick architecture on canals." },
+      { name: "Elbphilharmonie Plaza", description: "Free visit to the observation plaza of Hamburg's iconic concert hall. Panoramic harbour views." },
+      { name: "Jungfernstieg & Alster Lake", description: "Elegant boulevard along the inner Alster Lake — the heart of the city." },
+    ],
+    restaurants: [
+      { name: "Fischbrötchen at Brücke 10", priceRange: "$" },
+      { name: "Block House (steak)", priceRange: "$$" },
+      { name: "Speicherstadt Kaffeerösterei", priceRange: "$" },
+    ],
+    gettingAround:
+      "Excellent U-Bahn/S-Bahn metro system (day pass ~€8). HafenCity terminal is walkable to Speicherstadt. Hamburg Airport is 30 min by S-Bahn.",
+    emergencyInfo: {
+      police: "110 or 112",
+      hospital: "UKE Hamburg — Martinistr. 52",
+      usConsulate: "+49 40-4117-1100",
+    },
+    region: "europe-north",
+    imageUrl: "/images/ports/hamburg.jpg"
+  },
+  ...EXPANDED_PORTS,
+];
+
+export const PORTS: PortData[] = PORT_RECORDS.map((port) => ({
+  ...port,
+  canonicalId: canonicalPortId(port.slug),
+  ianaTimeZone: ianaTimeZoneForPort(port.slug),
+  governance: baselinePortGovernance(),
+}));
+
+validatePortCatalog(PORTS);
+
+/* ------------------------------------------------------------------ */
+/*  Helper Functions                                                   */
+/* ------------------------------------------------------------------ */
+
+export function getPortBySlug(slug: string): PortData | undefined {
+  return PORTS.find((port) => port.slug === slug);
+}
+
+export function getAllPortSlugs(): string[] {
+  return PORTS.map((port) => port.slug);
+}
+
+export function getPortsByRegion(region: PortRegion): PortData[] {
+  return PORTS.filter((port) => port.region === region);
+}
+
+export const REGION_LABELS: Record<PortRegion, string> = {
+  western: "Western Caribbean",
+  eastern: "Eastern Caribbean",
+  southern: "Southern Caribbean",
+  bahamas: "Bahamas",
+  alaska: "Alaska",
+  "europe-med": "Mediterranean",
+  "europe-north": "Northern Europe",
+  homeport: "US & Canada Homeports",
+  "private-island": "Private Islands",
+  asia: "Asia-Pacific",
+  "mexico-pacific": "Pacific Mexico & West Coast",
+  "canada-new-england": "Canada & New England",
+};

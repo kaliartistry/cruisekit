@@ -1,0 +1,245 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { Star, Clock, ExternalLink, Loader2, AlertCircle } from "lucide-react";
+import { cn } from "@/lib/utils/cn";
+import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
+import type { ViatorProduct, ViatorSearchResponse } from "@/lib/types/viator";
+import {
+  getExcursionLink,
+  getViatorDestinationLink,
+} from "@/lib/affiliate-config";
+import { VIATOR_DESTINATIONS } from "@/lib/data/viator-destinations";
+import { trackOutboundAffiliateClick } from "@/lib/analytics";
+
+interface ViatorExcursionsProps {
+  portSlug: string;
+  portName: string;
+}
+
+export default function ViatorExcursions({
+  portSlug,
+  portName,
+}: ViatorExcursionsProps) {
+  const [products, setProducts] = useState<ViatorProduct[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function fetchProducts() {
+      try {
+        const res = await fetch(
+          `/data/viator/${encodeURIComponent(portSlug)}.json`
+        );
+        if (!res.ok) throw new Error("fetch failed");
+        const data: ViatorSearchResponse = await res.json();
+        if (!cancelled) {
+          setProducts(data.products);
+          setLoading(false);
+        }
+      } catch {
+        if (!cancelled) {
+          setError(true);
+          setLoading(false);
+        }
+      }
+    }
+
+    fetchProducts();
+    return () => {
+      cancelled = true;
+    };
+  }, [portSlug]);
+
+  // Private islands / no products: fall back to Viator's destination
+  // browse page so interested users still land on Viator with our
+  // affiliate attribution. Returns null only when Viator has no
+  // presence for this port at all (e.g. NCL private islands).
+  const destinationId = VIATOR_DESTINATIONS[portSlug];
+  const showBrowseFallback =
+    !loading && !error && products.length === 0 && destinationId != null;
+
+  if (!loading && !error && products.length === 0 && !showBrowseFallback) {
+    return null;
+  }
+
+  return (
+    <section className="mb-12">
+      <div className="mb-6 flex items-center justify-between">
+        <h2 className="text-2xl font-bold tracking-tight text-navy">
+          Book Tours & Activities
+        </h2>
+        {!loading && products.length > 0 && (
+          <span className="text-xs text-gray-400">
+            Powered by Viator
+          </span>
+        )}
+      </div>
+
+      {loading && (
+        <div className="flex items-center justify-center gap-2 py-12 text-gray-400">
+          <Loader2 className="h-5 w-5 animate-spin" />
+          <span className="text-sm">Loading tours for {portName}…</span>
+        </div>
+      )}
+
+      {error && (
+        <div className="flex items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 p-4">
+          <AlertCircle className="h-5 w-5 shrink-0 text-amber-500" />
+          <p className="text-sm text-amber-800">
+            Tours are temporarily unavailable. Check back soon!
+          </p>
+        </div>
+      )}
+
+      {!loading && !error && products.length > 0 && (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {products.map((product) => (
+            <ViatorProductCard
+              key={product.productCode}
+              product={product}
+              portSlug={portSlug}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Empty-state fallback — send users to Viator's destination page
+          with our pid attached so the click still earns attribution. */}
+      {showBrowseFallback && destinationId != null && (
+        <a
+          href={getViatorDestinationLink(destinationId, portName)}
+          target="_blank"
+          rel="noopener noreferrer noindex nofollow"
+          onClick={() => trackOutboundAffiliateClick("viator", `port-${portSlug}`)}
+          className="group flex items-center justify-between rounded-xl border border-teal/30 bg-teal/5 p-5 transition-colors hover:bg-teal/10"
+        >
+          <div>
+            <p className="font-semibold text-navy">
+              Browse tours for {portName} on Viator
+            </p>
+            <p className="mt-1 text-sm text-gray-600">
+              Shore excursions, day trips, and guided experiences.
+            </p>
+          </div>
+          <span className="flex items-center gap-1 text-sm font-semibold text-teal">
+            Browse <ExternalLink className="h-4 w-4" />
+          </span>
+        </a>
+      )}
+
+      {/* Viator attribution (required by partner agreement) + disclosure */}
+      {!loading && !error && (products.length > 0 || showBrowseFallback) && (
+        <div className="mt-4">
+          <AffiliateDisclosure variant="block" />
+          <p className="mt-2 text-center text-[10px] text-gray-400">
+            Tour content and prices provided by Viator.
+          </p>
+        </div>
+      )}
+    </section>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Product Card                                                       */
+/* ------------------------------------------------------------------ */
+
+function ViatorProductCard({
+  product,
+  portSlug,
+}: {
+  product: ViatorProduct;
+  portSlug: string;
+}) {
+  // Viator Partner API URLs are usually pre-attributed, but some paths
+  // (manual curation, cached exports) may not be — getExcursionLink is
+  // a no-op when `pid=` is already present.
+  const href = getExcursionLink(product.productUrl, "viator");
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer noindex nofollow"
+      onClick={() => trackOutboundAffiliateClick("viator", `port-${portSlug}`)}
+      className={cn(
+        "group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white",
+        "transition-all hover:shadow-lg hover:border-teal/30"
+      )}
+    >
+      {/* Image */}
+      <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+        {product.thumbnailUrl ? (
+          <Image
+            src={product.thumbnailUrl}
+            alt={product.title}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center bg-gray-100 text-gray-300">
+            <Star className="h-8 w-8" />
+          </div>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-1 flex-col p-4">
+        <h3 className="line-clamp-2 text-sm font-semibold text-navy group-hover:text-teal">
+          {product.title}
+        </h3>
+
+        {/* Rating */}
+        {product.reviewCount > 0 && (
+          <div className="mt-2 flex items-center gap-1">
+            <div className="flex items-center gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  className={cn(
+                    "h-3 w-3",
+                    i < Math.round(product.rating)
+                      ? "fill-amber-400 text-amber-400"
+                      : "text-gray-200"
+                  )}
+                />
+              ))}
+            </div>
+            <span className="text-xs text-gray-500">
+              ({product.reviewCount.toLocaleString()})
+            </span>
+          </div>
+        )}
+
+        {/* Duration */}
+        {product.duration && (
+          <div className="mt-2 flex items-center gap-1 text-xs text-gray-500">
+            <Clock className="h-3 w-3" />
+            {product.duration}
+          </div>
+        )}
+
+        {/* Price + CTA */}
+        <div className="mt-auto flex items-end justify-between pt-3">
+          {product.pricingFrom != null ? (
+            <div>
+              <span className="text-[11px] text-gray-400">From</span>
+              <p className="text-lg font-bold text-navy">
+                ${product.pricingFrom.toFixed(0)}
+              </p>
+            </div>
+          ) : (
+            <div />
+          )}
+          <span className="inline-flex items-center gap-1 rounded-full bg-teal/10 px-3 py-1 text-xs font-semibold text-teal transition-colors group-hover:bg-teal group-hover:text-white">
+            Book <ExternalLink className="h-3 w-3" />
+          </span>
+        </div>
+      </div>
+    </a>
+  );
+}
