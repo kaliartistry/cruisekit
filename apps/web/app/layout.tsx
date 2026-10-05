@@ -107,8 +107,10 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <AuthProvider>{children}</AuthProvider>
-        <AnalyticsLoader />
-        <UtmLandingTracker />
+        {process.env.NEXT_PUBLIC_CRUISEKIT_REVIEW !== "true" && <>
+          <AnalyticsLoader />
+          <UtmLandingTracker />
+        </>}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

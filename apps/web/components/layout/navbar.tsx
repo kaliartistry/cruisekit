@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import {
   Ship,
   Menu,
@@ -55,6 +55,7 @@ const CALCULATOR_LINKS = [
 ] as const;
 
 export default function Navbar() {
+  const reduceMotion = useReducedMotion() !== false;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileCalculatorsOpen, setMobileCalculatorsOpen] = useState(false);
   const [calculatorsOpen, setCalculatorsOpen] = useState(false);
@@ -63,6 +64,7 @@ export default function Navbar() {
   const [showSignIn, setShowSignIn] = useState(false);
   const { user, loading: authLoading, signOut } = useAuth();
   const userMenuRef = useRef<HTMLDivElement>(null);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const calculatorsMenuRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
@@ -112,11 +114,14 @@ export default function Navbar() {
       if (e.key === "Escape") {
         setCalculatorsOpen(false);
         setUserMenuOpen(false);
+        setMobileOpen(false);
+        setMobileCalculatorsOpen(false);
+        if (mobileOpen) mobileMenuButtonRef.current?.focus();
       }
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [mobileOpen]);
 
   const userInitial = user?.displayName
     ? user.displayName.charAt(0).toUpperCase()
@@ -226,10 +231,10 @@ export default function Navbar() {
                 <motion.div
                   id="desktop-calculators-menu"
                   role="menu"
-                  initial={{ opacity: 0, y: -4, scale: 0.98 }}
+                  initial={reduceMotion ? false : { opacity: 0 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -4, scale: 0.98 }}
-                  transition={{ duration: 0.15 }}
+                  transition={{ duration: reduceMotion ? 0 : 0.16 }}
                   className="absolute left-0 top-full mt-2 w-80 rounded-xl border border-gray-200 bg-white p-2 shadow-lg"
                 >
                   {CALCULATOR_LINKS.map((link) => (
@@ -304,10 +309,10 @@ export default function Navbar() {
                   <AnimatePresence>
                     {userMenuOpen && (
                       <motion.div
-                        initial={{ opacity: 0, y: -4, scale: 0.95 }}
+                        initial={reduceMotion ? false : { opacity: 0 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -4, scale: 0.95 }}
-                        transition={{ duration: 0.15 }}
+                        transition={{ duration: reduceMotion ? 0 : 0.16 }}
                         className="absolute right-0 top-full mt-2 w-52 rounded-xl border border-gray-200 bg-white py-1.5 shadow-lg"
                       >
                         <div className="px-3 py-2 border-b border-gray-100">
@@ -388,6 +393,7 @@ export default function Navbar() {
               "text-gray-600 hover:text-navy hover:bg-gray-100",
               "transition-colors"
             )}
+            ref={mobileMenuButtonRef}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -407,10 +413,10 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
+            initial={reduceMotion ? false : { opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
+            transition={{ duration: reduceMotion ? 0 : 0.16 }}
             className="lg:hidden overflow-hidden border-t border-gray-100"
           >
             <div className="mx-auto max-w-7xl px-4 pb-4 pt-2 sm:px-6">
@@ -491,10 +497,10 @@ export default function Navbar() {
                     {mobileCalculatorsOpen && (
                       <motion.div
                         id="mobile-calculators-menu"
-                        initial={{ height: 0, opacity: 0 }}
+                        initial={reduceMotion ? false : { opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                        transition={{ duration: reduceMotion ? 0 : 0.16 }}
                         className="overflow-hidden pl-7"
                       >
                         <div className="mt-1 grid gap-1 border-l border-gray-200 pl-3">
