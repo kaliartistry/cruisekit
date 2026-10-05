@@ -6,16 +6,40 @@ import type {
   PurchaseTiming,
 } from "../types";
 
+export function packagePriceNeedsQuote(tier: PackageTier, today = new Date().toISOString().slice(0, 10)) {
+  return Boolean(tier.priceEntryRequired || (tier.recheckBy && tier.recheckBy < today));
+}
+
 export function resolvePackageDailyPrice(
   tier: PackageTier,
   timing: PurchaseTiming = "pre-purchase",
   userEnteredPrice = 0,
+  nights = 7,
 ) {
-  if (tier.priceEntryRequired) return Math.max(0, userEnteredPrice);
+  if (nights < (tier.minimumNights ?? 1)) throw new RangeError("Package not verified for this sailing length.");
+  if (packagePriceNeedsQuote(tier)) {
+    if (!Number.isFinite(userEnteredPrice) || userEnteredPrice <= 0) {
+      throw new RangeError("Enter a current package quote; an unavailable rate is not free.");
+    }
+    return userEnteredPrice;
+  }
   if (timing === "onboard" && tier.onboardPricePerDay !== undefined) {
     return tier.onboardPricePerDay;
   }
-  return tier.pricePerDay;
+  return tier.shortCruisePricePerDay !== undefined && nights <= (tier.shortCruiseMaxNights ?? 0)
+    ? tier.shortCruisePricePerDay : tier.pricePerDay;
+}
+
+export function calculateDrinkPackageCost(tier: PackageTier, inputs: Pick<CalculatorInputs,
+  "adults" | "duration" | "drinkPackageQuantity" | "drinkPackagePurchaseTiming" | "drinkPackagePricePerPersonPerDay">) {
+  if (tier.billingUnit === "purchase") {
+    if (packagePriceNeedsQuote(tier) || !Number.isFinite(tier.pricePerPurchase) || (tier.pricePerPurchase ?? 0) <= 0) {
+      throw new RangeError("Fixed-credit rate unavailable; confirm the current offer.");
+    }
+    return tier.pricePerPurchase! * (inputs.drinkPackageQuantity ?? 1);
+  }
+  return resolvePackageDailyPrice(tier, inputs.drinkPackagePurchaseTiming,
+    inputs.drinkPackagePricePerPersonPerDay, inputs.duration) * inputs.adults * inputs.duration;
 }
 
 /**
@@ -30,10 +54,11 @@ export function calculateCosts(
   const amounts = [inputs.baseFare, inputs.excursionBudgetPerPort,
     inputs.parkingCostPerDay, inputs.taxesAndFees ?? 0, inputs.drinkPackagePricePerPersonPerDay ?? 0, inputs.wifiPackagePricePerDay ?? 0, inputs.gratuityRateOverride ?? 0];
   const counts = [adults, children, duration, inputs.numberOfPorts,
-    inputs.specialtyDiningMeals, inputs.parkingDays, inputs.cabins ?? 1, inputs.wifiPackageQuantity ?? 1, inputs.gratuityGuestCountOverride ?? (adults + children)];
+    inputs.specialtyDiningMeals, inputs.parkingDays, inputs.cabins ?? 1, inputs.wifiPackageQuantity ?? 1, inputs.drinkPackageQuantity ?? 1, inputs.gratuityGuestCountOverride ?? (adults + children)];
   if (amounts.some(v => !Number.isFinite(v) || v < 0 || v > 1e9) ||
       counts.some(v => !Number.isInteger(v) || v < 0 || v > 1000) ||
       adults < 1 || duration < 1 || (inputs.cabins ?? 1) < 1 ||
+      (inputs.drinkPackageQuantity ?? 1) < 1 ||
       inputs.baseFare <= 0 ||
       (inputs.fareUnit && !["booking", "person", "cabin"].includes(inputs.fareUnit)) ||
       (inputs.taxTreatment && !["included", "excluded", "unknown"].includes(inputs.taxTreatment)) ||
@@ -69,12 +94,7 @@ export function calculateCosts(
   let drinkPackage = 0;
   if (inputs.drinkPackage) {
     if (selectedTier) {
-      const dailyPrice = resolvePackageDailyPrice(
-        selectedTier,
-        inputs.drinkPackagePurchaseTiming,
-        inputs.drinkPackagePricePerPersonPerDay,
-      );
-      drinkPackage = dailyPrice * adults * duration;
+      drinkPackage = calculateDrinkPackageCost(selectedTier, inputs);
     }
   }
 

@@ -6,10 +6,12 @@ import {
   getWifiPurchasePricePair,
   MATERIAL_PRICE_FACTS,
   PRICE_FACTS,
+  UNAVAILABLE_PRICE_FACTS,
   PURCHASE_PRICE_PAIRS,
   priceFactIsStale,
   purchasePricePairSavings,
 } from "./price-facts";
+import { CRUISE_LINE_COSTS } from "./cruise-costs";
 
 describe("material price fact governance", () => {
   it("has unique record IDs and source links", () => {
@@ -26,10 +28,24 @@ describe("material price fact governance", () => {
     );
   });
 
-  it("never labels the MSC fallback as official", () => {
-    expect(
-      MATERIAL_PRICE_FACTS.find((fact) => fact.cruiseLineId === "msc")?.status,
-    ).toBe("corroborated");
+  it("uses the rechecked official MSC schedule with the booking cohort", () => {
+    expect(PRICE_FACTS.mscStandardCaribbean.status).toBe("official");
+    expect(PRICE_FACTS.mscStandardCaribbean.sourceUrl).toBe("https://www.msccruisesusa.com/service-charges");
+    expect(PRICE_FACTS.mscStandardCaribbean.conditions).toContain("May 11, 2026");
+  });
+
+  it("archives an unverifiable legacy fact without treating a recheck attempt as verification", () => {
+    const fact = UNAVAILABLE_PRICE_FACTS.nclMoreAtSeaLegacy;
+    expect(fact.status).toBe("unavailable");
+    expect(fact.retrievedAt).toBe("2026-09-04");
+    expect(fact.recheckBy).toBe("2026-10-04");
+    expect(MATERIAL_PRICE_FACTS.some(f => f.id === fact.id)).toBe(false);
+    expect(CRUISE_LINE_COSTS.norwegian.drinkPackages.tiers.find(t => t.name.startsWith("More at Sea"))).toMatchObject({pricePerDay: 0, priceEntryRequired: true});
+  });
+
+  it("still fails freshness for any active fact after its exact recheck boundary", () => {
+    expect(priceFactIsStale(PRICE_FACTS.nclFreeAtSeaAdult, "2026-11-04")).toBe(false);
+    expect(priceFactIsStale(PRICE_FACTS.nclFreeAtSeaAdult, "2026-11-05")).toBe(true);
   });
 
   it("keeps official pre-purchase and onboard facts paired without duplicating amounts in UI code", () => {

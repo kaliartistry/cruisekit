@@ -17,6 +17,7 @@ import {
   Vote,
   ChevronDown,
 } from "lucide-react";
+import { calculateCosts, packagePriceNeedsQuote } from "@cruise/shared/utils";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 
 /* ------------------------------------------------------------------ */
@@ -36,13 +37,6 @@ const CRUISE_LINES = [
 ] as const;
 
 type CabinType = "inside" | "ocean-view" | "balcony" | "suite";
-
-const CABIN_MULTIPLIERS: Record<CabinType, number> = {
-  inside: 1.0,
-  "ocean-view": 1.25,
-  balcony: 1.6,
-  suite: 2.5,
-};
 
 const CABIN_LABELS: Record<CabinType, string> = {
   inside: "Inside",
@@ -69,41 +63,35 @@ function GroupCostSplitter() {
   const [cruiseLine, setCruiseLine] = useState("royal-caribbean");
   const [duration, setDuration] = useState(7);
   const [cabinType, setCabinType] = useState<CabinType>("balcony");
-  const [baseFarePerPerson, setBaseFarePerPerson] = useState(800);
+  const [baseFarePerPerson, setBaseFarePerPerson] = useState(0);
 
   const breakdown = useMemo(() => {
     const costs = CRUISE_LINE_COSTS[cruiseLine];
     if (!costs) return null;
 
+    if (!Number.isFinite(baseFarePerPerson) || baseFarePerPerson <= 0 || baseFarePerPerson > 1e9) return null;
     const cabins = Math.ceil(groupSize / 2);
-    const fare = baseFarePerPerson * CABIN_MULTIPLIERS[cabinType];
-    const gratuity = costs.gratuityPerPersonPerDay * duration;
-    const portFees = costs.portFeesPerPersonPerDay * duration;
-
-    // Estimate drink package (first tier if available)
     const drinkTier = costs.drinkPackages.tiers[0];
-    const drinkPerPerson = drinkTier
-      ? costs.drinkPackages.includedFree
-        ? 0
-        : drinkTier.pricePerDay * duration
-      : 0;
-
-    const perPerson = fare + gratuity + portFees;
-    const perPersonWithDrinks = perPerson + drinkPerPerson;
-    const groupTotal = perPerson * groupSize;
-    const groupTotalWithDrinks = perPersonWithDrinks * groupSize;
-
+    const drinksAvailable = Boolean(drinkTier && !packagePriceNeedsQuote(drinkTier) && drinkTier.billingUnit !== "purchase" && duration >= (drinkTier.minimumNights ?? 1));
+    const input = {
+      cruiseLineId: costs.cruiseLineId, duration, adults: groupSize, children: 0,
+      cabinType, region: "caribbean" as const, baseFare: baseFarePerPerson,
+      fareUnit: "person" as const, currency: "USD" as const, taxTreatment: "unknown" as const,
+      drinkPackage: null, wifiPackage: null, specialtyDiningMeals: 0,
+      excursionBudgetPerPort: 0, numberOfPorts: 0, addTravelInsurance: false,
+      addParking: false, parkingDays: 0, parkingCostPerDay: 0,
+    };
+    const beforeDrinks = calculateCosts(input, costs);
+    const withDrinks = drinksAvailable ? calculateCosts({ ...input, drinkPackage: drinkTier.name }, costs) : beforeDrinks;
+    const cents = (v: number) => Math.round(v * 100) / 100;
     return {
-      cabins,
-      fare: Math.round(fare),
-      gratuity: Math.round(gratuity),
-      portFees: Math.round(portFees),
-      drinkPerPerson: Math.round(drinkPerPerson),
-      perPerson: Math.round(perPerson),
-      perPersonWithDrinks: Math.round(perPersonWithDrinks),
-      groupTotal: Math.round(groupTotal),
-      groupTotalWithDrinks: Math.round(groupTotalWithDrinks),
-      drinksIncluded: costs.drinkPackages.includedFree,
+      cabins, fare: baseFarePerPerson,
+      gratuity: cents(beforeDrinks.gratuities / groupSize),
+      portFees: 0, drinkPerPerson: cents(withDrinks.drinkPackage / groupSize),
+      perPerson: cents(beforeDrinks.grandTotal / groupSize),
+      perPersonWithDrinks: cents(withDrinks.grandTotal / groupSize),
+      groupTotal: beforeDrinks.grandTotal, groupTotalWithDrinks: withDrinks.grandTotal,
+      drinksAvailable, drinksIncluded: costs.drinkPackages.includedFree,
     };
   }, [groupSize, cruiseLine, duration, cabinType, baseFarePerPerson]);
 
@@ -118,7 +106,7 @@ function GroupCostSplitter() {
             Group Cost Splitter
           </h3>
           <p className="text-sm text-gray-500">
-            Estimate per-person costs for your group cruise.
+            Use the same quoted USD fare for each guest; use the full calculator if guest fares differ.
           </p>
         </div>
       </div>
@@ -177,7 +165,7 @@ function GroupCostSplitter() {
             onChange={(e) => setDuration(parseInt(e.target.value))}
             className="mt-1.5 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-navy focus:border-coral focus:outline-none focus:ring-2 focus:ring-coral/20"
           >
-            {[3, 4, 5, 7, 8, 10, 12, 14].map((d) => (
+            {[3, 4, 5, 6, 7, 8, 10, 12, 14].map((d) => (
               <option key={d} value={d}>
                 {d} nights
               </option>
@@ -207,20 +195,22 @@ function GroupCostSplitter() {
 
         {/* Base Fare */}
         <div>
-          <label className="block text-xs font-medium text-gray-500 uppercase tracking-wider">
-            Base Fare (per person, Inside)
+          <label htmlFor="group-quoted-fare" className="block text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Quoted Fare / Person (USD)
           </label>
           <div className="mt-1.5 relative">
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">
               $
             </span>
             <input
+              id="group-quoted-fare"
               type="number"
-              min={200}
+              min={0}
+              step="0.01"
               max={10000}
               value={baseFarePerPerson}
               onChange={(e) =>
-                setBaseFarePerPerson(Math.max(0, parseInt(e.target.value) || 0))
+                setBaseFarePerPerson(Math.max(0, parseFloat(e.target.value) || 0))
               }
               className="w-full rounded-lg border border-gray-300 pl-7 pr-3 py-2 text-sm font-medium text-navy focus:border-coral focus:outline-none focus:ring-2 focus:ring-coral/20"
             />
@@ -228,6 +218,7 @@ function GroupCostSplitter() {
         </div>
       </div>
 
+      {!breakdown && <p role="status" className="mt-4 text-sm text-amber-900">Enter a positive quoted USD fare for each guest to calculate a planning subtotal.</p>}
       {/* Results */}
       {breakdown && (
         <div className="mt-8 rounded-xl bg-gray-50 p-5 sm:p-6">
@@ -238,10 +229,10 @@ function GroupCostSplitter() {
                 Per Person
               </p>
               <p className="mt-1 text-3xl font-extrabold text-navy">
-                ${breakdown.perPerson.toLocaleString()}
+                ${breakdown.perPerson.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
               </p>
               <p className="text-xs text-gray-400">
-                before drinks
+                planning subtotal before drinks
               </p>
             </div>
 
@@ -251,7 +242,7 @@ function GroupCostSplitter() {
                 With Drink Package
               </p>
               <p className="mt-1 text-3xl font-extrabold text-coral">
-                ${breakdown.perPersonWithDrinks.toLocaleString()}
+                {breakdown.drinksAvailable ? `$${breakdown.perPersonWithDrinks.toLocaleString(undefined, {minimumFractionDigits: 2})}` : "Quote required"}
               </p>
               <p className="text-xs text-gray-400">
                 {breakdown.drinksIncluded
@@ -263,10 +254,10 @@ function GroupCostSplitter() {
             {/* Group total */}
             <div className="text-center">
               <p className="text-xs font-medium uppercase tracking-wider text-gray-500">
-                Group Total
+                Group Subtotal
               </p>
               <p className="mt-1 text-3xl font-extrabold text-teal">
-                ${breakdown.groupTotal.toLocaleString()}
+                ${breakdown.groupTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
               </p>
               <p className="text-xs text-gray-400">
                 {groupSize} people &middot; {breakdown.cabins} cabins
@@ -274,25 +265,26 @@ function GroupCostSplitter() {
             </div>
           </div>
 
+          <p className="mt-4 text-xs leading-5 text-amber-900">Required taxes and fees may already be included or extra; they are unresolved and excluded from this subtotal. No cabin-price multiplier is applied to your quote. Add-on amounts are dated planning defaults. Fixed Bar Tab credit and packages without a verified rate require a separate selection in the full calculator.</p>
           {/* Breakdown table */}
           <div className="mt-5 border-t border-gray-200 pt-4">
             <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-sm sm:grid-cols-4">
               <div className="flex justify-between">
                 <span className="text-gray-500">Fare</span>
                 <span className="font-medium text-navy">
-                  ${breakdown.fare.toLocaleString()}
+                  ${breakdown.fare.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                 </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-500">Gratuities</span>
                 <span className="font-medium text-navy">
-                  ${breakdown.gratuity.toLocaleString()}
+                  ${breakdown.gratuity.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-500">Port Fees</span>
+                <span className="text-gray-500">Required taxes</span>
                 <span className="font-medium text-navy">
-                  ${breakdown.portFees.toLocaleString()}
+                  Unresolved
                 </span>
               </div>
               <div className="flex justify-between">
@@ -300,7 +292,7 @@ function GroupCostSplitter() {
                 <span className="font-medium text-navy">
                   {breakdown.drinksIncluded
                     ? "Included"
-                    : `$${breakdown.drinkPerPerson.toLocaleString()}`}
+                    : !breakdown.drinksAvailable ? "Quote required" : `$${breakdown.drinkPerPerson.toLocaleString(undefined, {minimumFractionDigits: 2})}`}
                 </span>
               </div>
             </div>

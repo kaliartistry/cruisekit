@@ -438,7 +438,7 @@ function buildFaqs(slug: string) {
         costs.drinkPackages.tiers.length > 0
           ? costs.drinkPackages.tiers.some((tier) => tier.priceEntryRequired)
             ? `${displayName} prices one or more beverage packages dynamically by sailing. Choose the package and enter the current all-in per-person daily quote shown for your booking; CruiseKit will not turn a $0 placeholder into a fake public price. ${costs.drinkPackages.notes || ""}`
-            : `${displayName} offers ${costs.drinkPackages.tiers.length} drink package tier${costs.drinkPackages.tiers.length > 1 ? "s" : ""}. ${costs.drinkPackages.tiers.map((t) => `The ${t.name} is $${t.pricePerDay.toFixed(2)}/day per person${t.onboardPricePerDay !== undefined ? ` before sailing or $${t.onboardPricePerDay.toFixed(2)}/day onboard` : ""}`).join(". ")}. ${costs.drinkPackages.notes || ""}`
+            : `${displayName} offers ${costs.drinkPackages.tiers.length} drink package tier${costs.drinkPackages.tiers.length > 1 ? "s" : ""}. ${costs.drinkPackages.tiers.map((t) => `The ${t.name} is ${t.billingUnit === "purchase" ? `$${t.pricePerPurchase?.toFixed(2)} per fixed purchase` : `$${t.pricePerDay.toFixed(2)}/day per adult`}${t.onboardPricePerDay !== undefined ? ` before sailing or $${t.onboardPricePerDay.toFixed(2)}/day onboard` : ""}`).join(". ")}. ${costs.drinkPackages.notes || ""}`
           : `${displayName} does not offer traditional unlimited drink packages. ${costs.drinkPackages.notes || ""}`,
     },
     {
@@ -615,7 +615,7 @@ export default async function CruiseLinePage({ params }: Props) {
                   : costs.drinkPackages.tiers.length > 0
                   ? costs.drinkPackages.tiers[0].priceEntryRequired
                     ? "Your quote"
-                    : `$${costs.drinkPackages.tiers[0].pricePerDay.toFixed(2)}`
+                    : `$${(costs.drinkPackages.tiers[0].pricePerPurchase ?? costs.drinkPackages.tiers[0].pricePerDay).toFixed(2)}`
                   : "N/A"}
               </p>
               <p className="mt-0.5 text-xs text-gray-500">
@@ -624,7 +624,7 @@ export default async function CruiseLinePage({ params }: Props) {
                   : costs.drinkPackages.tiers.length > 0
                   ? costs.drinkPackages.tiers[0].priceEntryRequired
                     ? `${costs.drinkPackages.tiers[0].name} varies by sailing`
-                    : `${costs.drinkPackages.tiers[0].name} /day${costs.drinkPackages.tiers[0].onboardPricePerDay !== undefined ? " before sailing" : ""}`
+                    : `${costs.drinkPackages.tiers[0].name} ${costs.drinkPackages.tiers[0].billingUnit === "purchase" ? "/purchase" : "/day"}${costs.drinkPackages.tiers[0].onboardPricePerDay !== undefined ? " before sailing" : ""}`
                   : costs.drinkPackages.includedFree
                     ? "Included with booking"
                     : "No packages offered"}

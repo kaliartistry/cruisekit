@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculateCosts } from "../../../packages/shared/utils/cost-calculator";
+import { calculateCosts, packagePriceNeedsQuote } from "../../../packages/shared/utils/cost-calculator";
 import type { CalculatorInputs } from "../../../packages/shared/types/calculator";
 import { CRUISE_LINE_COSTS } from "./data/cruise-costs";
 import { getFareEstimate } from "./data/fare-estimates";
@@ -16,6 +16,23 @@ const quote: CalculatorInputs = {
 const cost = (changes: Partial<CalculatorInputs> = {}) => calculateCosts({ ...quote, ...changes }, CRUISE_LINE_COSTS.carnival);
 
 describe("quote arithmetic", () => {
+  it.each([5, 6, 7])("charges fixed Bar Tab credit once across %i nights and varying parties", duration => {
+    for (const adults of [1, 2, 4]) {
+      const input = { ...quote, cruiseLineId: "virgin-voyages" as const, adults, duration, drinkPackage: "Bar Tab $300" };
+      expect(calculateCosts(input, CRUISE_LINE_COSTS["virgin-voyages"]).drinkPackage).toBe(300);
+      expect(calculateCosts({ ...input, drinkPackageQuantity: 2 }, CRUISE_LINE_COSTS["virgin-voyages"]).drinkPackage).toBe(600);
+    }
+  });
+  it.each([[5, 320], [6, 342]])("uses current NCL %i-night price with its exact threshold", (duration, amount) => {
+    expect(calculateCosts({ ...quote, cruiseLineId: "norwegian", duration, drinkPackage: "Free at Sea — current booking cohort" }, CRUISE_LINE_COSTS.norwegian).drinkPackage).toBe(amount);
+  });
+  it("does not price an expired package as free or current", () => {
+    const tier = CRUISE_LINE_COSTS["virgin-voyages"].drinkPackages.tiers[0];
+    expect(packagePriceNeedsQuote(tier, "2026-11-04")).toBe(false);
+    expect(packagePriceNeedsQuote(tier, "2026-11-05")).toBe(true);
+    const stale = { ...CRUISE_LINE_COSTS["virgin-voyages"], drinkPackages: { tiers: [{ ...tier, recheckBy: "2000-01-01" }], includedFree: false } };
+    expect(() => calculateCosts({ ...quote, drinkPackage: tier.name }, stale)).toThrow(/unavailable/);
+  });
   it("does not add included required taxes again", () => expect(cost({ taxesAndFees: 308 })).toMatchObject({ baseFare: 2000, gratuities: 238, portFees: 0, grandTotal: 2238 }));
   it("adds only confirmed whole-party extra taxes", () => expect(cost({ taxTreatment: "excluded", taxesAndFees: 308 })).toMatchObject({ portFees: 308, grandTotal: 2546 }));
   it("leaves an unknown basis unresolved and requires an excluded amount", () => {

@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
+import { packagePriceNeedsQuote } from "@cruise/shared/utils";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 
 /* ------------------------------------------------------------------ */
@@ -42,24 +43,28 @@ interface MetricRow {
   note?: string;
 }
 
-function getDrinkPrice(id: string): number {
+function getDrinkPrice(id: string): number | string {
   const costs = CRUISE_LINE_COSTS[id];
   if (!costs) return 0;
   const tiers = costs.drinkPackages.tiers;
   if (costs.drinkPackages.includedFree) return 0;
   if (tiers.length === 0) return -1; // N/A (Disney)
   // Get the primary/cheapest alcoholic package
-  return tiers[0].pricePerDay;
+  const tier = tiers[0];
+  if (packagePriceNeedsQuote(tier)) return "Quote required";
+  if (tier.billingUnit === "purchase") return `From $${tier.pricePerPurchase?.toFixed(2)}/purchase`;
+  if (tier.shortCruisePricePerDay) return `$${tier.pricePerDay.toFixed(2)}/day (6+ nights); $${tier.shortCruisePricePerDay.toFixed(2)} (2–5)`;
+  return tier.pricePerDay;
 }
 
-function getWifiPrice(id: string): number {
+function getWifiPrice(id: string): number | string {
   const costs = CRUISE_LINE_COSTS[id];
   if (!costs) return 0;
   if (costs.wifiPackages.includedFree) return 0;
   const tiers = costs.wifiPackages.tiers.filter(
     (t) => t.pricePerDay > 0
   );
-  return tiers.length > 0 ? tiers[0].pricePerDay : 0;
+  return tiers.length > 0 && !packagePriceNeedsQuote(tiers[0]) ? tiers[0].pricePerDay : "Quote required";
 }
 
 const METRICS: MetricRow[] = [
@@ -74,15 +79,15 @@ const METRICS: MetricRow[] = [
   {
     key: "drinks",
     label: "Drink Package",
-    unit: "/person/day",
+    unit: "",
     getValue: (id) => getDrinkPrice(id),
     format: (v) => {
       if (v === 0) return "Included";
       if (v === -1) return "N/A";
-      return typeof v === "number" ? `$${v.toFixed(0)}` : String(v);
+      return typeof v === "number" ? `$${v.toFixed(2)}/day` : String(v);
     },
     lowerIsBetter: true,
-    note: "Lowest alcoholic package price",
+    note: "Dated planning rates; purchase credit and conditional rates are not ranked against daily packages",
   },
   {
     key: "wifi",
@@ -110,10 +115,9 @@ const METRICS: MetricRow[] = [
   },
   {
     key: "portFees",
-    label: "Port Fees",
-    unit: "/person/day",
-    getValue: (id) =>
-      CRUISE_LINE_COSTS[id]?.portFeesPerPersonPerDay ?? 0,
+    label: "Required Taxes",
+    unit: "",
+    getValue: () => "Quote required",
     format: (v) => (typeof v === "number" ? `$${v}` : String(v)),
     lowerIsBetter: true,
   },
@@ -415,10 +419,10 @@ function HeadToHead() {
     const drinkB = getDrinkPrice(lineB);
     items.push({
       label: "Drink Package",
-      a: drinkA === 0 ? "Included" : drinkA === -1 ? "N/A" : `$${drinkA}/day`,
-      b: drinkB === 0 ? "Included" : drinkB === -1 ? "N/A" : `$${drinkB}/day`,
+      a: drinkA === 0 ? "Included" : drinkA === -1 ? "N/A" : typeof drinkA === "string" ? drinkA : `$${drinkA.toFixed(2)}/day`,
+      b: drinkB === 0 ? "Included" : drinkB === -1 ? "N/A" : typeof drinkB === "string" ? drinkB : `$${drinkB.toFixed(2)}/day`,
       winner:
-        drinkA < 0 || drinkB < 0
+        typeof drinkA !== "number" || typeof drinkB !== "number" || drinkA < 0 || drinkB < 0
           ? "tie"
           : drinkA < drinkB
             ? "a"
@@ -432,9 +436,9 @@ function HeadToHead() {
     const wifiB = getWifiPrice(lineB);
     items.push({
       label: "WiFi",
-      a: wifiA === 0 ? "Included" : `$${wifiA}/day`,
-      b: wifiB === 0 ? "Included" : `$${wifiB}/day`,
-      winner: wifiA < wifiB ? "a" : wifiA > wifiB ? "b" : "tie",
+      a: wifiA === 0 ? "Included" : typeof wifiA === "string" ? wifiA : `$${wifiA}/day`,
+      b: wifiB === 0 ? "Included" : typeof wifiB === "string" ? wifiB : `$${wifiB}/day`,
+      winner: typeof wifiA !== "number" || typeof wifiB !== "number" ? "tie" : wifiA < wifiB ? "a" : wifiA > wifiB ? "b" : "tie",
     });
 
     // Dining

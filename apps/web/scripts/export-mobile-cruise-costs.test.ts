@@ -2,7 +2,6 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { describe, expect, it } from "vitest";
 import { CRUISE_LINE_COSTS } from "../lib/data/cruise-costs";
-import { MATERIAL_PRICE_FACTS } from "../lib/data/price-facts";
 
 /**
  * Exports the calculator's cruise-line cost table (already resolved against
@@ -17,9 +16,6 @@ const target = process.env.EXPORT_MOBILE_CRUISE_COSTS;
 
 describe("mobile cruise-cost export", () => {
   it.skipIf(!target)("writes cruise_costs.json for the mobile app", () => {
-    const latestRetrieval = MATERIAL_PRICE_FACTS.map((fact) => fact.retrievedAt)
-      .sort()
-      .at(-1)!;
     const out: Record<string, unknown> = {};
     for (const [id, costs] of Object.entries(CRUISE_LINE_COSTS)) {
       out[id] = {
@@ -27,7 +23,6 @@ describe("mobile cruise-cost export", () => {
         // The mobile model predates the rename on the web side; keep both
         // keys so CruiseLineCosts.fromJson parses (it requires the old one).
         averageActivityCostPerPort: costs.averageExcursionCostPerPort,
-        lastUpdated: latestRetrieval,
       };
     }
     mkdirSync(dirname(target!), { recursive: true });

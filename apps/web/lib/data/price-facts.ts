@@ -18,7 +18,7 @@ export type PriceFact = {
   label: string;
   amount: number;
   currency: "USD" | "EUR";
-  unit: "person-day" | "adult-day" | "package-day" | "percent";
+  unit: "person-day" | "adult-day" | "package-day" | "percent" | "purchase";
   priceContext?: PriceFactContext;
   status: PriceFactStatus;
   sourceTitle: string;
@@ -111,11 +111,10 @@ export const PRICE_FACTS = {
     priceContext: "pre-purchase",
     status: "official",
     sourceTitle: "Carnival CHEERS beverage program",
-    sourceUrl: "https://www.carnival.com/onboard/cheers",
-    retrievedAt: "2026-09-10",
-    recheckBy: "2026-10-04",
-    conditions:
-      "Purchase by 11:59 PM ET two days before embarkation; all eligible adults in the stateroom must participate.",
+    sourceUrl: "https://www.carnival.com/drink-packages/cheers-package/cheers-SUM",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "US-dollar published planning rate including 20% service charge. All eligible adults 21+ in the stateroom must participate. Online advance cutoff is 11:59 PM the day before embarkation. US-water drink taxes may be extra; Texas, Norfolk and New York activation begins Day 2. Confirm the sailing quote.",
     calculation: "$69.95 base price x 1.20 service charge = $83.94.",
   },
   carnivalCheersOnboardAllIn: {
@@ -129,11 +128,10 @@ export const PRICE_FACTS = {
     priceContext: "onboard",
     status: "official",
     sourceTitle: "Carnival CHEERS beverage program Q&A",
-    sourceUrl: "https://help.carnival.com/app/answers/detail/a_id/3525",
-    retrievedAt: "2026-09-10",
-    recheckBy: "2026-10-04",
-    conditions:
-      "Purchased after boarding; all eligible adults in the stateroom must participate.",
+    sourceUrl: "https://www.carnival.com/drink-packages/cheers-package/cheers-SUM",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "US-dollar published planning rate including 20% service charge. All eligible adults 21+ in the stateroom must participate. Online advance cutoff is 11:59 PM the day before embarkation. US-water drink taxes may be extra; Texas, Norfolk and New York activation begins Day 2. Confirm the sailing quote.",
   },
   carnivalWifiSocialAdvance: {
     id: "carnival.wifi.social.advance.current",
@@ -147,10 +145,10 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Carnival internet plans",
     sourceUrl: "https://www.carnival.com/internet-plans",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
     conditions:
-      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+      "Published cruise-long USD rate; advance prices start at the listed amount and are subject to change. Confirm the sailing quote. One plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
   },
   carnivalWifiSocialOnboard: {
     id: "carnival.wifi.social.onboard.current",
@@ -164,9 +162,9 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Carnival internet plans",
     sourceUrl: "https://www.carnival.com/internet-plans",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
-    conditions: "Cruise-long plan, one connected device at a time.",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "Published cruise-long USD rate; advance prices start at the listed amount and are subject to change. Confirm the sailing quote. One plan, one connected device at a time.",
   },
   carnivalWifiValueAdvance: {
     id: "carnival.wifi.value.advance.current",
@@ -180,10 +178,10 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Carnival internet plans",
     sourceUrl: "https://www.carnival.com/internet-plans",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
     conditions:
-      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+      "Published cruise-long USD rate; advance prices start at the listed amount and are subject to change. Confirm the sailing quote. One plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
   },
   carnivalWifiValueOnboard: {
     id: "carnival.wifi.value.onboard.current",
@@ -197,9 +195,9 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Carnival internet plans",
     sourceUrl: "https://www.carnival.com/internet-plans",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
-    conditions: "Cruise-long plan, one connected device at a time.",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "Published cruise-long USD rate; advance prices start at the listed amount and are subject to change. Confirm the sailing quote. One plan, one connected device at a time.",
   },
   carnivalWifiPremiumAdvance: {
     id: "carnival.wifi.premium.advance.current",
@@ -213,10 +211,10 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Carnival internet plans",
     sourceUrl: "https://www.carnival.com/internet-plans",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
     conditions:
-      "Cruise-long plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
+      "Published cruise-long USD rate; advance prices start at the listed amount and are subject to change. Confirm the sailing quote. One plan, one connected device at a time; purchase by 11:59 PM ET the day before embarkation.",
   },
   carnivalWifiPremiumOnboard: {
     id: "carnival.wifi.premium.onboard.current",
@@ -230,9 +228,9 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Carnival internet plans",
     sourceUrl: "https://www.carnival.com/internet-plans",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
-    conditions: "Cruise-long plan, one connected device at a time.",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "Published cruise-long USD rate; advance prices start at the listed amount and are subject to change. Confirm the sailing quote. One plan, one connected device at a time.",
   },
   nclFreeAtSeaAdult: {
     id: "norwegian.free-at-sea.gratuity.current.adult",
@@ -243,29 +241,71 @@ export const PRICE_FACTS = {
     currency: "USD",
     unit: "adult-day",
     status: "official",
-    sourceTitle: "Norwegian Free at Sea program guide",
-    sourceUrl:
-      "https://www.ncl.com/sites/default/files/3189550_PRM_Free_at_Sea_Plus_Trade_Launch_Assets_FASvsFASPlus_Rebrand_GSC.pdf",
-    retrievedAt: "2026-09-10",
-    recheckBy: "2026-10-04",
-    conditions:
-      "Current Free at Sea cohort; pre-cruise beverage-package gratuity for guests age 21 and older. Onboard pricing varies.",
+    sourceTitle: "Norwegian Free at Sea promotional terms",
+    sourceUrl: "https://www.ncl.com/cruise-deals/promotion-terms",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "Current qualifying Free at Sea cohort: $28.50 per eligible adult 21+ per day for 6+ nights; 2–5 nights are $32. Booking office, guest sequence and Pride of America exceptions apply. Onboard/local taxes may be extra. Confirm booking eligibility.",
   },
-  nclMoreAtSeaLegacy: {
-    id: "norwegian.more-at-sea.gratuity.legacy",
-    cruiseLineId: "norwegian",
-    category: "drink-package",
-    label: "Legacy More at Sea beverage-package gratuity",
-    amount: 21.8,
-    currency: "USD",
-    unit: "adult-day",
-    status: "official",
-    sourceTitle: "Norwegian More at Sea terms",
-    sourceUrl: "https://www.ncl.com/about/terms-and-conditions/promotions",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
-    conditions:
-      "Only for applicable bookings made from October 1, 2024 through November 4, 2025; verify the booking confirmation.",
+  nclFreeAtSeaShortAdult: {
+    id: "norwegian.free-at-sea.current.adult.2-5-nights",
+    cruiseLineId: "norwegian", category: "drink-package",
+    label: "Free at Sea eligible adult, 2–5 nights", amount: 32,
+    currency: "USD", unit: "adult-day", status: "official",
+    sourceTitle: "Norwegian Free at Sea promotional terms",
+    sourceUrl: "https://www.ncl.com/cruise-deals/promotion-terms",
+    retrievedAt: "2026-10-05", recheckBy: "2026-11-04",
+    conditions: "Current qualifying 2–5-night cohort, adult 21+; confirm booking office and guest eligibility. Local taxes may be extra.",
+  },
+  virginBarTab200: {
+    id: "virgin-voyages.bar-tab.200.purchase",
+    cruiseLineId: "virgin-voyages", category: "drink-package",
+    label: "Bar Tab $200 fixed purchase", amount: 200,
+    currency: "USD", unit: "purchase", status: "official",
+    sourceTitle: "Virgin Voyages Bar Tab offer terms",
+    sourceUrl: "https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks",
+    retrievedAt: "2026-10-05", recheckBy: "2026-11-04",
+    conditions: "Optional fixed purchase credited to the purchaser folio; can buy drinks for other Sailors. Most non-chartered open revenue voyages; pre-purchase up to 24 hours before sailing. Unspent credit is not refunded or cashed out; confirm offer eligibility.",
+  },
+  virginBarTab300: {
+    id: "virgin-voyages.bar-tab.300.purchase",
+    cruiseLineId: "virgin-voyages", category: "drink-package",
+    label: "Bar Tab $300 fixed purchase", amount: 300,
+    currency: "USD", unit: "purchase", status: "official",
+    sourceTitle: "Virgin Voyages Bar Tab offer terms",
+    sourceUrl: "https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks",
+    retrievedAt: "2026-10-05", recheckBy: "2026-11-04",
+    conditions: "Optional fixed purchase credited to the purchaser folio; can buy drinks for other Sailors. Most non-chartered open revenue voyages; pre-purchase up to 24 hours before sailing. Unspent credit is not refunded or cashed out; confirm offer eligibility.",
+  },
+  virginBarTab500: {
+    id: "virgin-voyages.bar-tab.500.purchase",
+    cruiseLineId: "virgin-voyages", category: "drink-package",
+    label: "Bar Tab $500 fixed purchase", amount: 500,
+    currency: "USD", unit: "purchase", status: "official",
+    sourceTitle: "Virgin Voyages Bar Tab offer terms",
+    sourceUrl: "https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks",
+    retrievedAt: "2026-10-05", recheckBy: "2026-11-04",
+    conditions: "Optional fixed purchase credited to the purchaser folio; can buy drinks for other Sailors. Most non-chartered open revenue voyages; pre-purchase up to 24 hours before sailing. Unspent credit is not refunded or cashed out; confirm offer eligibility.",
+  },
+  virginBarTab750: {
+    id: "virgin-voyages.bar-tab.750.purchase",
+    cruiseLineId: "virgin-voyages", category: "drink-package",
+    label: "Bar Tab $750 fixed purchase", amount: 750,
+    currency: "USD", unit: "purchase", status: "official",
+    sourceTitle: "Virgin Voyages Bar Tab offer terms",
+    sourceUrl: "https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks",
+    retrievedAt: "2026-10-05", recheckBy: "2026-11-04",
+    conditions: "Optional fixed purchase credited to the purchaser folio; can buy drinks for other Sailors. Most non-chartered open revenue voyages; pre-purchase up to 24 hours before sailing. Unspent credit is not refunded or cashed out; confirm offer eligibility.",
+  },
+  virginBarTab1000: {
+    id: "virgin-voyages.bar-tab.1000.purchase",
+    cruiseLineId: "virgin-voyages", category: "drink-package",
+    label: "Bar Tab $1000 fixed purchase", amount: 1000,
+    currency: "USD", unit: "purchase", status: "official",
+    sourceTitle: "Virgin Voyages Bar Tab offer terms",
+    sourceUrl: "https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks",
+    retrievedAt: "2026-10-05", recheckBy: "2026-11-04",
+    conditions: "Optional fixed purchase credited to the purchaser folio; can buy drinks for other Sailors. Most non-chartered open revenue voyages; pre-purchase up to 24 hours before sailing. Unspent credit is not refunded or cashed out; confirm offer eligibility.",
   },
   nclStandardGratuity: {
     id: "norwegian.gratuity.standard.current",
@@ -340,11 +380,10 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Princess package comparison",
     sourceUrl:
-      "https://www.princess.com/en-int/cruise-deals-promotions/compare-cruise-packages",
-    retrievedAt: "2026-09-10",
-    recheckBy: "2026-10-04",
-    conditions:
-      "Most ships; purchase at least 96 hours before sailing. Includes crew appreciation and one-device Wi-Fi.",
+      "https://www.princess.com/en-int/cruise-deals-promotions/plus-premier-cruise-packages",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "2026 sailings; guests 1 and 2; purchase at least 96 hours before departure. Later/onboard purchase adds $5/person/day. Most ships $65; Sun/Star $70. Includes crew appreciation and one-device Wi-Fi.",
   },
   princessPremierAdvance: {
     id: "princess.premier.bundle.advance.current",
@@ -357,11 +396,10 @@ export const PRICE_FACTS = {
     status: "official",
     sourceTitle: "Princess package comparison",
     sourceUrl:
-      "https://www.princess.com/en-int/cruise-deals-promotions/compare-cruise-packages",
-    retrievedAt: "2026-09-10",
-    recheckBy: "2026-10-04",
-    conditions:
-      "Most ships; purchase at least 96 hours before sailing. Includes crew appreciation and four-device Wi-Fi. Sun and Star Princess are $105/day.",
+      "https://www.princess.com/en-int/cruise-deals-promotions/plus-premier-cruise-packages",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "2026 sailings; guests 1 and 2; purchase at least 96 hours before departure. Later/onboard purchase adds $5/person/day. Most ships $100; Sun/Star $105. Includes crew appreciation and four-device Wi-Fi.",
   },
   princessStandardGratuity: {
     id: "princess.gratuity.standard.current",
@@ -441,36 +479,35 @@ export const PRICE_FACTS = {
     conditions: "Suite accommodations.",
   },
   mscStandardCaribbean: {
-    id: "msc.gratuity.caribbean-standard.corroborated",
+    id: "msc.gratuity.caribbean-standard.2026-05-11",
     cruiseLineId: "msc",
     category: "gratuity",
     label: "Caribbean and Alaska standard daily hotel service charge",
     amount: 17,
     currency: "USD",
     unit: "person-day",
-    status: "corroborated",
-    sourceTitle: "MSC service-charge schedule (third-party corroboration)",
+    status: "official",
+    sourceTitle: "MSC hotel service-charge schedule",
     sourceUrl:
-      "https://www.cruisecritic.com/articles/what-to-know-about-cruise-line-gratuities",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
-    conditions:
-      "Caribbean/Alaska planning assumption only. MSC official pages blocked automated retrieval; verify the booking terms because other regions use different currencies and rates.",
+      "https://www.msccruisesusa.com/service-charges",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "Caribbean, Alaska and USA bookings made from May 11, 2026; guests aged 2+. Earlier bookings are $16 standard/$20 Yacht Club. Other regions and Grand Voyages differ; verify the booking confirmation.",
   },
   mscSuiteCaribbean: {
-    id: "msc.gratuity.caribbean-yacht-club.corroborated",
+    id: "msc.gratuity.caribbean-yacht-club.2026-05-11",
     cruiseLineId: "msc",
     category: "gratuity",
     label: "Caribbean and Alaska Yacht Club daily hotel service charge",
     amount: 23,
     currency: "USD",
     unit: "person-day",
-    status: "corroborated",
-    sourceTitle: "MSC service-charge schedule (third-party corroboration)",
-    sourceUrl: "https://www.cruisecritic.com/articles/what-to-know-about-cruise-line-gratuities",
-    retrievedAt: "2026-09-04",
-    recheckBy: "2026-10-04",
-    conditions: "Caribbean/Alaska Yacht Club planning assumption only; verify regional booking terms.",
+    status: "official",
+    sourceTitle: "MSC hotel service-charge schedule",
+    sourceUrl: "https://www.msccruisesusa.com/service-charges",
+    retrievedAt: "2026-10-05",
+    recheckBy: "2026-11-04",
+    conditions: "Caribbean, Alaska and USA bookings made from May 11, 2026; guests aged 2+. Earlier bookings are $16 standard/$20 Yacht Club. Other regions and Grand Voyages differ; verify the booking confirmation.",
   },
   disneyStandardGratuity: {
     id: "disney.gratuity.standard.current",
@@ -749,6 +786,28 @@ export const PRICE_FACTS = {
       "Bookings made before October 7, 2025 under the prior fare structure; confirm the original booking confirmation.",
   },
 } as const satisfies Record<string, PriceFact>;
+
+/** Historical evidence is never an active calculator price or freshness pass. */
+export const UNAVAILABLE_PRICE_FACTS = {
+  nclMoreAtSeaLegacy: {
+    id: "norwegian.more-at-sea.gratuity.legacy",
+    cruiseLineId: "norwegian",
+    category: "drink-package",
+    label: "Legacy More at Sea beverage-package gratuity",
+    amount: 21.8,
+    currency: "USD",
+    unit: "adult-day",
+    status: "unavailable",
+    sourceTitle: "Norwegian More at Sea terms",
+    sourceUrl: "https://www.ncl.com/about/terms-and-conditions/promotions",
+    retrievedAt: "2026-09-04",
+    recheckBy: "2026-10-04",
+    lastAttemptedAt: "2026-10-05",
+    unavailableReason: "Current official terms no longer expose the legacy rate/cohort; historical amount retained for audit only. Enter a booking quote instead.",
+    conditions:
+      "Only for applicable bookings made from October 1, 2024 through November 4, 2025; verify the booking confirmation.",
+  },
+} as const;
 
 export type PurchasePricePair = Readonly<{
   prePurchase: PriceFact;
