@@ -361,7 +361,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
   });
   if (deal.departureDate) {
     calcParams.set("departure", deal.departureDate);
-    calcParams.set("month", String(new Date(deal.departureDate).getMonth()));
+    calcParams.set("month", String(new Date(deal.departureDate).getUTCMonth()));
   }
   // Historical observations cannot silently seed a current estimate.
   if (fareFreshness(deal.lastVerified) === "recent" && deal.confidence === "verified_from_cruise_line" && deal.currency === "USD" && deal.priceBasis === "per-person-double-occupancy" && deal.startingPrice != null) {

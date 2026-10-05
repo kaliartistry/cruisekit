@@ -17,6 +17,7 @@ import {
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { getTopDealsByRegion, DEAL_STATS } from "@/lib/data/real-deals";
+import { fareFreshness, priceBasisLabel } from "@/lib/format/confidence";
 import { getDealImage } from "@/lib/data/port-images";
 import {
   confidenceLabel,
@@ -231,7 +232,7 @@ export default function ContentSections() {
               return (
                 <Link
                   key={deal.id}
-                  href={`/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2&fare=${deal.fromPrice}${deal.departureDate ? `&month=${monthIndexFromDateOnly(deal.departureDate)}` : ""}`}
+                  href={`/calculator?line=${deal.cruiseLineId}&duration=${deal.duration}&adults=2${deal.departureDate ? `&month=${monthIndexFromDateOnly(deal.departureDate)}` : ""}`}
                   className="group flex-shrink-0 w-[280px] sm:w-[300px] snap-start rounded-xl border border-gray-200 bg-white shadow-[var(--shadow-sm)] transition-all hover:shadow-[var(--shadow-lg)] hover:-translate-y-1 overflow-hidden"
                 >
                   {/* Ship image area */}
@@ -255,14 +256,14 @@ export default function ContentSections() {
                       <p className="font-price text-[10px] text-gray-400 uppercase tracking-wider">From</p>
                       <p className="font-price text-xl font-bold text-navy leading-tight">
                         {deal.startingPrice !== null
-                          ? `$${deal.startingPrice.toLocaleString()}`
+                          ? `${deal.currency} ${deal.startingPrice.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
                           : "See site"}
                       </p>
                       <p className="font-price text-[9px] text-gray-500 leading-tight">
-                        per person, dbl
+                        {priceBasisLabel(deal.priceBasis) || "Fare unit unverified"}
                       </p>
                       <p className="font-price text-[9px] text-gray-400 leading-tight">
-                        {deal.taxesAndFeesIncluded ? "incl. taxes & fees" : "excl. taxes & fees"}
+                        {deal.taxesAndFeesIncluded ? "taxes/fees recorded included" : "tax inclusion unverified"}
                       </p>
                     </div>
                     {/* Duration badge */}
@@ -322,7 +323,7 @@ export default function ContentSections() {
                         </span>
                       </div>
                       <p className="mt-1 text-[10px] text-gray-400 leading-snug">
-                        Confirm current price on {deal.cruiseLine}.
+                        {fareFreshness(deal.lastVerified) === "recent" ? "Recently checked" : "Stale / unverified — historical fare"}. Checked {formatLastVerified(deal.lastVerified) || "date unavailable"}. Source: {deal.source}. Confirm current price on {deal.cruiseLine}.
                       </p>
                       <div className="flex items-center justify-between mt-2">
                         {deal.departureDate && (

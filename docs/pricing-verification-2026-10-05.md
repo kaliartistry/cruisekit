@@ -44,3 +44,7 @@ Rollback is to discard the pricing commit(s) on these candidate branches or comp
 ## Preserved web baseline
 
 Baseline commit `ca2d0cece51fa7249301d7a23a4cf71aa1a3f156`; prior held/source parent `6f7e3686727f228ea1749eba57f195e2e6ef49be`; source ancestry parent `fc1588d993b7aa3eac77aa7200e7ca49f56cc09f`. Full source inputs are independent internal copies. Native's 367 formerly untracked held inputs exactly match original tracked files and were preserved in the baseline. The pricing diff is separate from inherited design work.
+
+## Current-main integration review
+
+This held-baseline branch is not a safe wholesale merge to current main. A separate `codex/truthful-pricing-main-integration-20261005` candidate starts from GitHub `5df4a4726212440470b746f729f2ff20083bbbce` and preserves the canonical price-facts module, dynamic package quotes, purchase timing, exemptions, Wi-Fi quantities, bundle handling, save/restore and current routes. Homepage tiles now include dated source/unit/currency disclosures here too. No Go remains: 14 expired current-main source facts, unresolved Virgin fixed-credit billing units, applicable exact-commit CI and approved release QA. See that branch's pricing verification document and the task integration recommendation. Website HOLD remains.

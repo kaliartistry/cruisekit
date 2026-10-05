@@ -683,7 +683,7 @@ export default function CalculatorForm({
               <p className="mt-2 text-xs text-gray-500">Per-person and per-cabin entries assume the same price for each. Use the booking total when guest or cabin prices differ.</p>
               <label className="mt-3 block text-sm text-navy">Required taxes and fees
                 <select aria-label="Tax inclusion" value={taxTreatment} onChange={e => setTaxTreatment(e.target.value as typeof taxTreatment)} className="mt-1 block w-full max-w-md rounded border p-2">
-                  <option value="unknown">I don't know — show a subtotal</option>
+                  <option value="unknown">I don&apos;t know — show a subtotal</option>
                   <option value="included">Already included in my fare</option>
                   <option value="excluded">Extra — enter the party amount</option>
                 </select>
