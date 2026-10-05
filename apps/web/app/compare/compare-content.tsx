@@ -64,7 +64,9 @@ function getWifiPrice(id: string): number | string {
   const tiers = costs.wifiPackages.tiers.filter(
     (t) => t.pricePerDay > 0
   );
-  return tiers.length > 0 && !packagePriceNeedsQuote(tiers[0]) ? tiers[0].pricePerDay : "Quote required";
+  const tier = tiers[0];
+  if (!tier || packagePriceNeedsQuote(tier)) return "Quote required";
+  return tier.rateQualifier === "starting-at" ? `From $${tier.pricePerDay.toFixed(2)}/plan/day` : tier.pricePerDay;
 }
 
 const METRICS: MetricRow[] = [
@@ -92,11 +94,11 @@ const METRICS: MetricRow[] = [
   {
     key: "wifi",
     label: "WiFi",
-    unit: "/day",
+    unit: "",
     getValue: (id) => getWifiPrice(id),
     format: (v) => {
       if (v === 0) return "Included";
-      return typeof v === "number" ? `$${v.toFixed(0)}` : String(v);
+      return typeof v === "number" ? `$${v.toFixed(2)}/day` : String(v);
     },
     lowerIsBetter: true,
   },
@@ -608,15 +610,15 @@ function PopularComparisons() {
 const FAQS = [
   {
     q: "Which cruise line has the lowest daily gratuity?",
-    a: "Disney Cruise Line has the lowest standard gratuity at $16.00 per person per day. MSC is close behind at $16.00 as well. Carnival is $17.00, while Norwegian and Virgin Voyages charge the highest at $20.00/day.",
+    a: `Compare the dated standard rates above with your actual booking. MSC Caribbean/Alaska/USA bookings from May 11, 2026 use $${CRUISE_LINE_COSTS.msc.gratuityPerPersonPerDay.toFixed(2)}/person/night, or $${CRUISE_LINE_COSTS.msc.suiteGratuityPerPersonPerDay.toFixed(2)} for Yacht Club; earlier bookings use $16/$20 and other regions differ. Bundles and eligible guests can change what you owe.`,
   },
   {
     q: "Which cruise lines include drinks for free?",
-    a: "Norwegian Cruise Line includes an open bar with their Free at Sea promotion (mandatory $21.80/day gratuity applies). Virgin Voyages includes basic beverages. All other major cruise lines charge separately for drink packages.",
+    a: `Eligible NCL Free at Sea bookings still have a mandatory adult beverage charge: ${getDrinkPrice("norwegian")}. Confirm booking cohort, guest eligibility and extra local taxes. The old More at Sea rate needs a booking quote. Virgin includes basic beverages; Bar Tab is optional paid credit.`,
   },
   {
     q: "Which cruise line is cheapest overall?",
-    a: "Carnival and MSC typically have the lowest base fares. However, the true cost depends on add-ons. Norwegian's Free at Sea bundle includes drinks and WiFi, which can make it cheaper overall. Use our True Cost Calculator to compare actual totals for your specific trip.",
+    a: "Compare actual quoted fares and their tax/occupancy basis, then eligible add-ons and booking inclusions. NCL Free at Sea has a mandatory adult beverage charge and conditional Wi-Fi benefits. A dated planning rate alone cannot establish which cruise is cheapest for your party.",
   },
   {
     q: "Can I compare two cruise lines in detail?",

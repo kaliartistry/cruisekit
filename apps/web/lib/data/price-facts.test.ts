@@ -103,3 +103,14 @@ describe("prose does not reintroduce retired price figures", () => {
     });
   }
 });
+
+// Comparison FAQs previously bypassed the canonical fact register.
+// Guard customer-facing prose in that consumer as well as guides/articles.
+describe("comparison pricing prose", () => {
+  it("does not republish the unavailable legacy rate as current", () => {
+    const text = readFileSync(resolve(__dirname, "../../app/compare/compare-content.tsx"), "utf8");
+    expect(text).not.toContain("$21.80");
+    expect(text).not.toContain("MSC is close behind at $16.00");
+    expect(text).toContain('getDrinkPrice("norwegian")');
+  });
+});
