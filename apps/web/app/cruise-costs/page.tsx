@@ -169,7 +169,7 @@ const costFaqs = [
   {
     question: "How does cruise pricing work?",
     answer:
-      "The advertised fare usually covers the cabin, transportation between ports, included dining, entertainment, pools, and basic ship activities. Cruise lines then add mandatory fees and optional onboard spending, which is why the real total can be much higher than the headline fare.",
+      "The advertised fare usually covers the cabin, transportation between ports, included dining, entertainment, pools, and basic ship activities. The quote may already include required taxes and fees. Add only charges confirmed extra and the optional spending you choose.",
   },
   {
     question: "Are cruise taxes and port fees included?",

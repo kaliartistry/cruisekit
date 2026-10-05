@@ -1,5 +1,13 @@
 # Truthful pricing integration review — October 5, 2026
 
+## Website-only release preparation
+
+Kali conditionally approved publication after the exact website candidate passes release checks. Native remains held. The prior website candidate `a9ed7aa` passed [PR Checks on Node 22](https://github.com/kaliartistry/cruisekit/actions/runs/37367725584/attempts/2): 135 web tests, 10 ship tests, 63 rules tests and lint/duplicate-route checks. A normal release build, including the data-generation hooks, succeeds with 193 pages. Its four fare payloads match the current live 362-record cohort byte-for-byte; all dates remain stale and all 53 staged fare changes remain excluded.
+
+The final prose revision corrects indexed tax-inclusion claims and conditional USD examples: whole-booking 2,000 with taxes included plus 238 extra gratuities is 2,238; if 308 required fees are explicitly extra, it is 2,546. Neither amount establishes a live fare. It removes retired NCL 305 arithmetic, fixes the CHEERS onboard all-in rate, labels monetary previews and package examples as historical planning references, removes final-bill guarantees, and preserves existing cost-hub fragment links through optional section anchors. Final local checks pass 139 web tests, one intentional default export skip, full lint/types, duplicate-route check and the 193-page normal build with the existing Pages feature flag. Headless desktop/phone calculator, package, comparison and group flows pass. Seven affected articles pass rendered tax/arithmetic/basis checks; keyboard fragment navigation preserves existing links and reveals headings below the sticky navigation. Exact final-revision CI is required before publication. The GitHub Pages service recovered at 22:40 UTC; its health must be checked again at release time. No native build/store publication is authorized by this website decision.
+
+Historical status and source matrices below retain their original observation times. This section supersedes their website HOLD and CI-not-run statements only; it does not certify deployment or fresh fares.
+
 ## Recheck milestone — official rates and fixed purchase billing
 
 **Ready for pricing integration review; No Go for production release.** This milestone supersedes the expired-fact and Bar Tab blockers in the earlier review retained below. Review branches only: web `codex/truthful-pricing-main-integration-20261005`, paired mobile `codex/truthful-pricing-20261005`. Website HOLD and frozen native 1.0.28 (56) remain. No merge, deployment, store check/write, signed release build, new provider or credentials, paid outreach, external-drive access, or foreground app control occurred.
