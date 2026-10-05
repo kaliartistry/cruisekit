@@ -615,7 +615,7 @@ export default async function GuideDetailPage({ params }: Props) {
       <main className="flex-1">
         {/* Hero */}
         <section className="border-b border-gray-200 bg-gray-50/60">
-          <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-14">
+          <div className="mx-auto grid grid-cols-1 max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-14">
             <div>
               <nav aria-label="Breadcrumb" className="mb-4">
                 <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-500">
@@ -645,7 +645,7 @@ export default async function GuideDetailPage({ params }: Props) {
                       Guides
                     </Link>
                   </li>
-                  <li className="flex min-w-0 items-center gap-1">
+                  <li className="flex min-w-0 max-w-full items-center gap-1">
                     <svg
                       className="h-3.5 w-3.5 shrink-0 text-gray-400"
                       fill="none"
@@ -710,6 +710,7 @@ export default async function GuideDetailPage({ params }: Props) {
                   </svg>
                   Updated{" "}
                   {new Date(guide.updatedDate).toLocaleDateString("en-US", {
+                    timeZone: "UTC",
                     month: "long",
                     day: "numeric",
                     year: "numeric",
@@ -754,6 +755,7 @@ export default async function GuideDetailPage({ params }: Props) {
                   </p>
                   <p className="mt-1 text-sm font-bold text-navy">
                     {new Date(guide.updatedDate).toLocaleDateString("en-US", {
+                    timeZone: "UTC",
                       month: "short",
                       year: "numeric",
                     })}

@@ -70,6 +70,13 @@ export interface CalculatorInputs {
   cabinType: CabinType;
   region: CruiseRegion;
   baseFare: number;
+  /** Quote unit; normalize exactly once to the entire party. */
+  fareUnit?: "booking" | "person" | "cabin";
+  cabins?: number;
+  currency?: "USD";
+  taxTreatment?: "included" | "excluded" | "unknown";
+  /** Extra required taxes/fees for the entire party, from the quote. */
+  taxesAndFees?: number | null;
   drinkPackage: string | null;
   wifiPackage: string | null;
   specialtyDiningMeals: number;

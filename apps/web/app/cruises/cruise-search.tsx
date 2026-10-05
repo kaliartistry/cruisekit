@@ -31,6 +31,7 @@ import { cn } from "@/lib/utils/cn";
 import HeartButton from "@/components/shared/heart-button";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
 import {
+  fareFreshness,
   confidenceLabel,
   confidenceBadgeClass,
   formatLastVerified,
@@ -62,8 +63,8 @@ function getDurationKey(nights: number): string {
 const SORT_OPTIONS = [
   { value: "best", label: "Best Matches" },
   { value: "date-asc", label: "Date: Soonest" },
-  { value: "price-asc", label: "Price: Low to High" },
-  { value: "price-desc", label: "Price: High to Low" },
+  { value: "price-asc", label: "Observed price: Low to High" },
+  { value: "price-desc", label: "Observed price: High to Low" },
   { value: "duration-asc", label: "Duration: Short to Long" },
   { value: "duration-desc", label: "Duration: Long to Short" },
   { value: "ship-asc", label: "Ship Name A-Z" },
@@ -223,7 +224,7 @@ function getDepartureMonth(date: string | null): string | null {
 function formatMonth(ym: string): string {
   const [year, month] = ym.split("-");
   const d = new Date(Number(year), Number(month) - 1);
-  return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+  return d.toLocaleDateString("en-US", { timeZone: "UTC", month: "short", year: "numeric" });
 }
 
 const ALL_MONTHS = [...new Set(
@@ -353,7 +354,6 @@ function DealCard({ deal }: { deal: RealDeal }) {
     line: deal.cruiseLineId,
     duration: String(deal.duration),
     adults: "2",
-    fare: String(deal.fromPrice),
     sailing: deal.id,
     ship: deal.shipName,
     port: deal.departurePort,
@@ -363,14 +363,21 @@ function DealCard({ deal }: { deal: RealDeal }) {
     calcParams.set("departure", deal.departureDate);
     calcParams.set("month", String(new Date(deal.departureDate).getMonth()));
   }
+  // Historical observations cannot silently seed a current estimate.
+  if (fareFreshness(deal.lastVerified) === "recent" && deal.confidence === "verified_from_cruise_line" && deal.currency === "USD" && deal.priceBasis === "per-person-double-occupancy" && deal.startingPrice != null) {
+    calcParams.set("fare", String(deal.startingPrice * 2));
+    calcParams.set("unit", "booking");
+    calcParams.set("checked", deal.lastVerified);
+  }
   const calcHref = `/calculator?${calcParams.toString()}`;
-  const basisText = priceBasisLabel(deal.priceBasis) || "per person, double occupancy";
+  const basisText = priceBasisLabel(deal.priceBasis) || "Fare unit / occupancy unverified";
   const taxText = deal.taxesAndFeesIncluded
-    ? "Taxes, fees, and gratuities included."
-    : "Excludes taxes, fees, and gratuities.";
+    ? "Source records required taxes/fees included. Gratuities checked separately."
+    : "Required taxes/fees not confirmed included; check the quote. Gratuities checked separately.";
+  const freshness = fareFreshness(deal.lastVerified);
   const checkedDate = formatLastVerified(deal.lastVerified);
   const priceDisclosure = checkedDate
-    ? `Planning fare last checked ${checkedDate}. Confirm current price and availability on ${deal.cruiseLine}.`
+    ? `Historical fare (${freshness}), last checked ${checkedDate}. Confirm current price and availability on ${deal.cruiseLine}.`
     : `Planning fare only. Confirm current price and availability on ${deal.cruiseLine}.`;
   const displayedPrice = deal.startingPrice ?? deal.fromPrice;
   const visiblePorts = deal.ports.slice(0, 4);
@@ -433,7 +440,7 @@ function DealCard({ deal }: { deal: RealDeal }) {
             <span className="inline-flex items-center gap-1.5">
               <CalendarDays className="h-3.5 w-3.5 text-gray-400" />
             {deal.departureDate
-              ? new Date(deal.departureDate).toLocaleDateString("en-US", {
+              ? new Date(deal.departureDate).toLocaleDateString("en-US", { timeZone: "UTC",
                   month: "long",
                   day: "numeric",
                   year: "numeric",
@@ -495,9 +502,10 @@ function DealCard({ deal }: { deal: RealDeal }) {
           <p className="text-[10px] uppercase tracking-wider text-gray-400">
             Planning fare from
           </p>
+          <p className="text-xs font-semibold text-amber-700">{freshness === "recent" ? "Recently checked starting fare" : "Stale / unverified — last observed fare"}</p>
           {displayedPrice !== null ? (
             <p className="font-price text-2xl font-bold text-navy leading-none">
-              ${displayedPrice.toLocaleString()}
+              {deal.currency} {displayedPrice.toLocaleString()}
             </p>
           ) : (
             <p className="text-sm font-semibold text-gray-500">Price on cruise line site</p>
@@ -686,7 +694,7 @@ function FilterSidebar({
       </div>
 
       <div className="px-5">
-        {/* Price range */}
+        {/* Historical price range */}
         <FilterSection title="Price Range">
           <div className="flex items-center justify-between mb-3">
             <span className="font-price text-sm font-semibold text-navy">
@@ -1167,7 +1175,7 @@ interface CuratedCollection {
 function buildCuratedCollections(deals: RealDeal[]): CuratedCollection[] {
   const collections: Omit<CuratedCollection, "count" | "fromPrice">[] = [
     { key: "best", label: "Best picks", subtitle: "Useful starting points" },
-    { key: "under-500", label: "Under $500", subtitle: "Lowest entry fares" },
+    { key: "under-500", label: "Under $500", subtitle: "Historical observed fares" },
     { key: "short", label: "Short cruises", subtitle: "3-6 night getaways" },
     { key: "seven-night-caribbean", label: "7-night Caribbean", subtitle: "Classic weeklong trips" },
     { key: "florida", label: "Leaving from Florida", subtitle: "Miami, Tampa, Port Canaveral" },
@@ -1177,7 +1185,7 @@ function buildCuratedCollections(deals: RealDeal[]): CuratedCollection[] {
 
   return collections.map((collection) => {
     const matches = curatedMatches(collection.key, deals);
-    const prices = matches.map((deal) => deal.fromPrice).filter(Number.isFinite);
+    const prices = matches.filter(deal => fareFreshness(deal.lastVerified) === "recent" && deal.currency === "USD" && deal.priceBasis === "per-person-double-occupancy").map((deal) => deal.fromPrice).filter(Number.isFinite);
     return {
       ...collection,
       count: matches.length,
@@ -1243,7 +1251,7 @@ function CuratedCollections({
               </span>
             </div>
             <p className="mt-2 text-xs font-semibold text-teal">
-              {collection.fromPrice != null ? `From $${collection.fromPrice.toLocaleString()}` : "Browse"}
+              {collection.fromPrice != null ? `Recently checked USD ${collection.fromPrice.toLocaleString()} per person` : "Browse dated fares"}
             </p>
           </button>
         ))}

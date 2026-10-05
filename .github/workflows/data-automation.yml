@@ -55,11 +55,23 @@ jobs:
         run: pnpm run data:automation:daily
         env:
           CRUISEKIT_REPORT_ONLY: "1"
+      - name: Check published fare freshness on the daily cadence
+        id: freshness
+        continue-on-error: true
+        run: pnpm run data:freshness
+      - name: Create or update data freshness issue
+        if: steps.freshness.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/create-data-freshness-issue.mjs
       - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: cruisekit-daily-data-reports
           path: data/reports/
+      - name: Fail when published fare data is stale
+        if: steps.freshness.outcome == 'failure'
+        run: exit 1
 
   publish-candidate:
     if: >-

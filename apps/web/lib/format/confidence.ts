@@ -67,3 +67,13 @@ export function formatLastVerified(iso: string): string {
 export function priceBasisLabel(b: Sailing["priceBasis"]): string {
   return PRICE_BASIS_LABELS[b] ?? "";
 }
+
+/** Same seven-day policy as the production data freshness gate. */
+export function fareFreshness(lastChecked: string | null | undefined, now = new Date()): "recent" | "stale" | "unverified" {
+  if (!lastChecked || !/^\d{4}-\d{2}-\d{2}(T.*)?$/.test(lastChecked)) return "unverified";
+  const checked = new Date(lastChecked.length === 10 ? `${lastChecked}T00:00:00Z` : lastChecked);
+  if (!Number.isFinite(checked.getTime()) || checked.toISOString().slice(0, 10) !== lastChecked.slice(0, 10)) return "unverified";
+  const age = now.getTime() - checked.getTime();
+  if (!Number.isFinite(age) || age < 0) return "unverified";
+  return age > 7 * 86400000 ? "stale" : "recent";
+}

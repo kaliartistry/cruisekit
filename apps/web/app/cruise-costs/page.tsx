@@ -119,7 +119,7 @@ const categoryLinks: HubLink[] = [
   {
     title: "Port Taxes & Fees",
     description:
-      "The mandatory taxes and port charges that usually appear after the headline fare.",
+      "Check whether required taxes and port charges are already included in your quoted fare.",
     href: "/blog/hidden-cruise-costs#2-port-taxes-and-fees-280-to-308-added-at-checkout",
     icon: Receipt,
   },
@@ -174,7 +174,7 @@ const costFaqs = [
   {
     question: "Are cruise taxes and port fees included?",
     answer:
-      "Taxes and port fees may not be included in the first price shown during cruise search. They usually appear before checkout, and they commonly add hundreds of dollars to a 7-night cruise for two people.",
+      "Required taxes and fees may already be included in advertised prices. Confirm the specific quote, market, currency and occupancy. Add only confirmed extra amounts, and check gratuities separately.",
   },
   {
     question: "What costs are not included in a cruise fare?",

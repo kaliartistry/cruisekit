@@ -46,14 +46,7 @@ import {
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
 
-const DURATION_RANGES = [
-  { label: "3-4", default: 4 },
-  { label: "5-6", default: 5 },
-  { label: "7", default: 7 },
-  { label: "8-9", default: 9 },
-  { label: "10-13", default: 10 },
-  { label: "14+", default: 14 },
-];
+const DURATION_RANGES = [3, 4, 5, 6, 7, 8, 9, 10, 14].map(n => ({ label: String(n), default: n }));
 
 const CABIN_TYPES: { value: CabinType; label: string }[] = [
   { value: "inside", label: "Inside" },
@@ -94,6 +87,7 @@ function NumberStepper({
       )}
       <button
         type="button"
+        aria-label={`Decrease ${label ?? "quantity"}`}
         onClick={() => onChange(Math.max(min, value - 1))}
         disabled={value <= min}
         className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 bg-white text-navy transition-colors hover:bg-gray-50 disabled:opacity-40"
@@ -105,6 +99,7 @@ function NumberStepper({
       </span>
       <button
         type="button"
+        aria-label={`Increase ${label ?? "quantity"}`}
         onClick={() => onChange(Math.min(max, value + 1))}
         disabled={value >= max}
         className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 bg-white text-navy transition-colors hover:bg-gray-50 disabled:opacity-40"
@@ -232,12 +227,18 @@ export default function CalculatorForm({
   /* -- Step 1 state ------------------------------------------------ */
   const [selectedLines, setSelectedLines] = useState<string[]>(resolvedDefaultIds);
   const [month, setMonth] = useState<number | undefined>(defaultMonth);
-  const [duration, setDuration] = useState(defaultDuration ?? 7);
-  const [adults, setAdults] = useState(defaultAdults ?? 2);
+  const [duration, setDuration] = useState(Math.min(99, Math.max(1, defaultDuration ?? 7)));
+  const [adults, setAdults] = useState(Math.min(10, Math.max(1, defaultAdults ?? 2)));
   const [children, setChildren] = useState(0);
   const [showChildren, setShowChildren] = useState(false);
   const [cabinType, setCabinType] = useState<CabinType>("balcony");
   const [baseFare, setBaseFare] = useState(defaultFare ?? "");
+  const [fareUnit, setFareUnit] = useState<"booking" | "person" | "cabin">("booking");
+  const [cabins, setCabins] = useState(1);
+  const [taxTreatment, setTaxTreatment] = useState<"included" | "excluded" | "unknown">("unknown");
+  const [taxAmount, setTaxAmount] = useState("");
+  const validFare = /^\d+(\.\d{1,2})?$/.test(baseFare) && Number(baseFare) > 0 && Number(baseFare) <= 1e9;
+  const validTax = taxTreatment !== "excluded" || (/^\d+(\.\d{1,2})?$/.test(taxAmount) && Number(taxAmount) <= 1e9);
 
   const seasonalInfo = month !== undefined ? getSeasonalMultiplier(month) : null;
 
@@ -268,10 +269,8 @@ export default function CalculatorForm({
 
   /** The effective base fare: user-entered value, or the mid estimate */
   const effectiveBaseFare = useMemo(() => {
-    const userFare = parseFloat(baseFare);
-    if (!isNaN(userFare) && userFare > 0) return userFare;
-    return fareEstimate?.mid ?? 0;
-  }, [baseFare, fareEstimate]);
+    return validFare ? Number(baseFare) : 0;
+  }, [baseFare, validFare]);
 
   // When duration changes update default ports
   const handleDurationChange = useCallback(
@@ -340,46 +339,14 @@ export default function CalculatorForm({
 
   const insuranceImpact = useMemo(() => {
     if (!insuranceOn || !costs) return 0;
-    const fare = effectiveBaseFare;
+    const fare = effectiveBaseFare * (fareUnit === "person" ? adults + children : fareUnit === "cabin" ? cabins : 1);
     return (fare * costs.travelInsurancePercent) / 100;
-  }, [insuranceOn, costs, effectiveBaseFare]);
+  }, [insuranceOn, costs, effectiveBaseFare, fareUnit, adults, children, cabins]);
 
   const parkingImpact = useMemo(() => {
     if (!parkingOn) return 0;
     return parkingDays * (parseFloat(parkingCost) || 0);
   }, [parkingOn, parkingDays, parkingCost]);
-
-  const runningTotal = useMemo(() => {
-    const fare = effectiveBaseFare;
-    if (!costs) return fare;
-    const gratuities =
-      costs.gratuityPerPersonPerDay * (adults + children) * duration;
-    const portFees =
-      costs.portFeesPerPersonPerDay * (adults + children) * duration;
-    return (
-      fare +
-      gratuities +
-      portFees +
-      drinkImpact +
-      wifiImpact +
-      diningImpact +
-      excursionImpact +
-      insuranceImpact +
-      parkingImpact
-    );
-  }, [
-    effectiveBaseFare,
-    costs,
-    adults,
-    children,
-    duration,
-    drinkImpact,
-    wifiImpact,
-    diningImpact,
-    excursionImpact,
-    insuranceImpact,
-    parkingImpact,
-  ]);
 
   /* -- Build CalculatorInputs -------------------------------------- */
   const calculatorInputs: CalculatorInputs | null = useMemo(() => {
@@ -392,6 +359,8 @@ export default function CalculatorForm({
       cabinType,
       region: "caribbean",
       baseFare: effectiveBaseFare,
+      fareUnit, cabins, currency: "USD", taxTreatment,
+      taxesAndFees: taxTreatment === "excluded" && validTax ? Number(taxAmount) : null,
       drinkPackage: drinkPackageOn ? drinkTier || null : null,
       wifiPackage: wifiOn ? wifiTier || null : null,
       specialtyDiningMeals: specialtyMeals,
@@ -408,7 +377,7 @@ export default function CalculatorForm({
     adults,
     children,
     cabinType,
-    effectiveBaseFare,
+    effectiveBaseFare, fareUnit, cabins, taxTreatment, taxAmount, validTax,
     drinkPackageOn,
     drinkTier,
     wifiOn,
@@ -424,13 +393,15 @@ export default function CalculatorForm({
 
   /* -- Calculate results ------------------------------------------- */
   const breakdown: CostBreakdownType | null = useMemo(() => {
-    if (!calculatorInputs || !costs) return null;
+    if (!calculatorInputs || !costs || !validFare || !validTax) return null;
     return calculateCosts(calculatorInputs, costs);
-  }, [calculatorInputs, costs]);
+  }, [calculatorInputs, costs, validFare, validTax]);
+
+  const runningTotal = breakdown?.grandTotal ?? 0;
 
   /* -- Calculate comparison breakdown for second line --------------- */
   const comparisonBreakdown: CostBreakdownType | null = useMemo(() => {
-    if (!calculatorInputs || !secondaryLineId || !comparisonCosts) return null;
+    if (!calculatorInputs || !secondaryLineId || !comparisonCosts || !validFare || !validTax) return null;
 
     // Try matching drink tier name; fallback to first available or null
     let compDrinkTier: string | null = null;
@@ -466,14 +437,14 @@ export default function CalculatorForm({
     };
 
     return calculateCosts(compInputs, comparisonCosts);
-  }, [calculatorInputs, secondaryLineId, comparisonCosts, drinkPackageOn, drinkTier, wifiOn, wifiTier]);
+  }, [calculatorInputs, secondaryLineId, comparisonCosts, drinkPackageOn, drinkTier, wifiOn, wifiTier, validFare, validTax]);
 
   /* -- Navigation -------------------------------------------------- */
   /* Allow proceeding if at least 1 line is selected AND either:
      - User entered a base fare, OR
      - We have a fare estimate for their selection (discovery mode) */
   const canProceedStep1 =
-    selectedLines.length >= 1 && (parseFloat(baseFare) > 0 || fareEstimate !== null);
+    selectedLines.length >= 1 && validFare && validTax;
 
   const goNext = () => {
     if (step === 1) trackCalculatorStarted();
@@ -545,6 +516,9 @@ export default function CalculatorForm({
               </div>
             </div>
 
+            <label className="mb-6 block text-sm font-medium text-navy">Exact nights
+              <input aria-label="Exact nights" type="number" min="1" max="99" step="1" value={duration} onChange={e => handleDurationChange(Math.min(99, Math.max(1, Math.trunc(Number(e.target.value) || 1))))} className="ml-3 w-20 rounded border p-2" />
+            </label>
             {/* Travel Month */}
             <div className="mb-8">
               <h2 className="mb-3 text-lg font-bold text-navy">
@@ -670,7 +644,7 @@ export default function CalculatorForm({
                 Advertised cruise price
               </h2>
               <p className="mb-3 text-sm text-gray-500">
-                Enter your price, or use our estimate based on current market rates
+                Enter a current USD quote. Add-ons are planning estimates; use your invoice for required fees.
               </p>
               <div className="relative max-w-xs">
                 <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-price text-sm font-semibold text-gray-400">
@@ -678,7 +652,10 @@ export default function CalculatorForm({
                 </span>
                 <input
                   type="number"
-                  inputMode="numeric"
+                  aria-label="Quoted fare in USD"
+                  min="0.01"
+                  step="0.01"
+                  inputMode="decimal"
                   placeholder={
                     fareEstimate
                       ? `Estimated: ${fareEstimate.mid.toLocaleString()}`
@@ -695,6 +672,26 @@ export default function CalculatorForm({
                   )}
                 />
               </div>
+              <label className="mt-3 block text-sm text-navy">This fare is for
+                <select aria-label="Fare unit" value={fareUnit} onChange={e => setFareUnit(e.target.value as typeof fareUnit)} className="mt-1 block w-full max-w-md rounded border p-2">
+                  <option value="booking">The whole party / booking</option>
+                  <option value="person">Each person</option>
+                  <option value="cabin">Each cabin</option>
+                </select>
+              </label>
+              {fareUnit === "cabin" && <label className="mt-3 block text-sm">Number of cabins <input aria-label="Number of cabins" type="number" min="1" max="20" value={cabins} onChange={e => setCabins(Math.min(20, Math.max(1, Number(e.target.value) || 1)))} className="ml-2 w-20 rounded border p-2" /></label>}
+              <p className="mt-2 text-xs text-gray-500">Per-person and per-cabin entries assume the same price for each. Use the booking total when guest or cabin prices differ.</p>
+              <label className="mt-3 block text-sm text-navy">Required taxes and fees
+                <select aria-label="Tax inclusion" value={taxTreatment} onChange={e => setTaxTreatment(e.target.value as typeof taxTreatment)} className="mt-1 block w-full max-w-md rounded border p-2">
+                  <option value="unknown">I don't know — show a subtotal</option>
+                  <option value="included">Already included in my fare</option>
+                  <option value="excluded">Extra — enter the party amount</option>
+                </select>
+              </label>
+              {taxTreatment === "excluded" && <label className="mt-3 block text-sm">Extra taxes / required fees for the whole party (USD)<input aria-label="Extra taxes and fees in USD" type="number" min="0" step="0.01" value={taxAmount} onChange={e => setTaxAmount(e.target.value)} className="mt-1 block rounded border p-2" /></label>}
+              {baseFare && !validFare && <p role="alert" className="mt-2 text-sm text-coral">Enter a positive USD fare with at most two decimal places.</p>}
+              {!validTax && <p role="alert" className="mt-2 text-sm text-coral">Enter extra required fees for the whole party, including 0 if confirmed.</p>}
+              {!fareEstimate && <p className="mt-3 text-xs text-amber-700">Historical fare table: March 28, 2026. It is stale and is excluded from current estimates. Enter your own quote.</p>}
               {fareEstimate && !baseFare && (
                 <div className="mt-2 max-w-xs rounded-lg bg-teal/5 border border-teal/20 px-3 py-2">
                   <p className="text-xs text-teal font-medium">
@@ -1025,14 +1022,14 @@ export default function CalculatorForm({
                       </p>
                       {(adults + children) > 1 && (
                         <p className="font-price text-sm text-gray-500 mt-1">
-                          ${Math.round(runningTotal / (adults + children)).toLocaleString()} per person
+                          ${(runningTotal / (adults + children)).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})} per person
                         </p>
                       )}
                       <div className="mt-3 space-y-1 border-t border-gray-100 pt-3">
                         <div className="flex justify-between text-xs text-gray-500">
                           <span>Base fare</span>
                           <span className="font-price font-medium">
-                            ${(effectiveBaseFare).toLocaleString()}
+                            ${(breakdown?.baseFare ?? 0).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                           </span>
                         </div>
                         <div className="flex justify-between text-xs text-gray-500">
@@ -1040,7 +1037,7 @@ export default function CalculatorForm({
                           <span className="font-price font-medium text-teal">
                             +$
                             {Math.round(
-                              runningTotal - (effectiveBaseFare)
+                              runningTotal - (breakdown?.baseFare ?? 0)
                             ).toLocaleString()}
                           </span>
                         </div>
@@ -1055,13 +1052,13 @@ export default function CalculatorForm({
             <div className="fixed inset-x-0 bottom-0 z-40 border-t border-gray-200 bg-white/95 p-3 backdrop-blur-sm lg:hidden">
               <div className="mx-auto flex max-w-4xl items-center justify-between">
                 <div>
-                  <p className="text-xs text-gray-400">Estimated total</p>
+                  <p className="text-xs text-gray-400">{taxTreatment === "unknown" ? "Subtotal — taxes unresolved" : "Planning estimate"}</p>
                   <p className="font-price text-lg font-bold text-navy">
-                    ${Math.round(runningTotal).toLocaleString()}
+                    ${runningTotal.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                   </p>
                   {(adults + children) > 1 && (
                     <p className="font-price text-[11px] text-gray-400">
-                      ${Math.round(runningTotal / (adults + children)).toLocaleString()}/person
+                      ${(runningTotal / (adults + children)).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})}/person
                     </p>
                   )}
                 </div>

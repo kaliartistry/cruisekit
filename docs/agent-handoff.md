@@ -1,5 +1,9 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-05 — truthful pricing review candidate, HOLD
+
+Isolated internal candidate on `codex/truthful-pricing-20261005`; preserved baseline `ca2d0cece51fa7249301d7a23a4cf71aa1a3f156`. Pricing changes explicitly normalize party/person/cabin USD quotes, use exact nights, distinguish included/excluded/unknown required taxes, retain cents and reject stale auto-estimates. Browse prices show their source/check dates. See [pricing verification and release gate](pricing-verification-2026-10-05.md) for verified sources, fallback counts, QA, cross-repository dependency and rollback. No fresh sailing quotes were promoted. Website HOLD and frozen native 1.0.28 (56) submissions remain; no store status recheck, production publication or new release artifact. All earlier live/store-state sections below are historical observations, not fresh status claims.
+
 Last verified: 2026-08-09
 
 ## Mobile setup-catalog over-the-air refresh is blocked on a data source

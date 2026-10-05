@@ -76,7 +76,9 @@ export default function AnimatedCounter({
       className={cn(prefix === "$" && "font-price", className)}
     >
       {prefix}
-      <motion.span>{display}</motion.span>
+      {prefersReducedMotion
+        ? <span>{formatNumber(value, decimals)}</span>
+        : <motion.span>{display}</motion.span>}
       {suffix}
     </span>
   );
