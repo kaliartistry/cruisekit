@@ -6,10 +6,14 @@ import {
   getWifiPurchasePricePair,
   MATERIAL_PRICE_FACTS,
   PRICE_FACTS,
+  UNAVAILABLE_PRICE_FACTS,
   PURCHASE_PRICE_PAIRS,
   priceFactIsStale,
   purchasePricePairSavings,
 } from "./price-facts";
+import { CRUISE_LINE_COSTS } from "./cruise-costs";
+import { BLOG_POSTS, getBlogPostBySlug } from "./blog-posts";
+import { usd } from "./price-facts";
 
 describe("material price fact governance", () => {
   it("has unique record IDs and source links", () => {
@@ -26,10 +30,24 @@ describe("material price fact governance", () => {
     );
   });
 
-  it("never labels the MSC fallback as official", () => {
-    expect(
-      MATERIAL_PRICE_FACTS.find((fact) => fact.cruiseLineId === "msc")?.status,
-    ).toBe("corroborated");
+  it("uses the rechecked official MSC schedule with the booking cohort", () => {
+    expect(PRICE_FACTS.mscStandardCaribbean.status).toBe("official");
+    expect(PRICE_FACTS.mscStandardCaribbean.sourceUrl).toBe("https://www.msccruisesusa.com/service-charges");
+    expect(PRICE_FACTS.mscStandardCaribbean.conditions).toContain("May 11, 2026");
+  });
+
+  it("archives an unverifiable legacy fact without treating a recheck attempt as verification", () => {
+    const fact = UNAVAILABLE_PRICE_FACTS.nclMoreAtSeaLegacy;
+    expect(fact.status).toBe("unavailable");
+    expect(fact.retrievedAt).toBe("2026-09-04");
+    expect(fact.recheckBy).toBe("2026-10-04");
+    expect(MATERIAL_PRICE_FACTS.some(f => f.id === fact.id)).toBe(false);
+    expect(CRUISE_LINE_COSTS.norwegian.drinkPackages.tiers.find(t => t.name.startsWith("More at Sea"))).toMatchObject({pricePerDay: 0, priceEntryRequired: true});
+  });
+
+  it("still fails freshness for any active fact after its exact recheck boundary", () => {
+    expect(priceFactIsStale(PRICE_FACTS.nclFreeAtSeaAdult, "2026-11-04")).toBe(false);
+    expect(priceFactIsStale(PRICE_FACTS.nclFreeAtSeaAdult, "2026-11-05")).toBe(true);
   });
 
   it("keeps official pre-purchase and onboard facts paired without duplicating amounts in UI code", () => {
@@ -86,4 +104,57 @@ describe("prose does not reintroduce retired price figures", () => {
       expect(found).toEqual([]);
     });
   }
+});
+
+// Comparison FAQs previously bypassed the canonical fact register.
+// Guard customer-facing prose in that consumer as well as guides/articles.
+describe("comparison pricing prose", () => {
+  it("does not republish the unavailable legacy rate as current", () => {
+    const text = readFileSync(resolve(__dirname, "../../app/compare/compare-content.tsx"), "utf8");
+    expect(text).not.toContain("$21.80");
+    expect(text).not.toContain("MSC is close behind at $16.00");
+    expect(text).toContain('getDrinkPrice("norwegian")');
+  });
+});
+
+describe("published pricing article contracts", () => {
+  it("keeps included and explicitly extra tax examples conditional", () => {
+    for (const slug of ["how-much-does-caribbean-cruise-cost-2026", "how-much-does-a-cruise-really-cost-2026"]) {
+      const post = getBlogPostBySlug(slug)!;
+      const text = post.content.flatMap(section => section.paragraphs).join(" ");
+      expect(text).toContain("$2,000 + $238 = $2,238");
+      expect(text).toContain("$2,000 + $308 + $238 = $2,546");
+      expect(text).toContain("explicitly excludes");
+      expect(text).toContain("subtotal");
+      expect(text).not.toMatch(/\$\d+ (?:to \$\d+ )?per person per day.*port fees|added at checkout on top|verified 2026 pricing/i);
+    }
+  });
+
+  it("discloses the historical basis in monetary article previews and metadata", () => {
+    const monetaryPosts = BLOG_POSTS.filter(post => post.excerpt.includes("$"));
+    expect(monetaryPosts.length).toBeGreaterThan(0);
+    expect(monetaryPosts.every(post => post.excerpt.startsWith("Historical USD planning reference:"))).toBe(true);
+    expect(BLOG_POSTS.some(post => post.excerpt.includes("real and current"))).toBe(false);
+  });
+
+  it("does not reintroduce retired arithmetic or double-charge the CHEERS service fee", () => {
+    const ncl = getBlogPostBySlug("msc-vs-norwegian")!.content.flatMap(section => section.paragraphs).join(" ");
+    expect(ncl).toContain(usd(PRICE_FACTS.nclFreeAtSeaAdult.amount * 14));
+    expect(ncl).not.toContain("$305");
+    const comparison = getBlogPostBySlug("carnival-vs-royal-caribbean-comparison")!.content.flatMap(section => section.paragraphs).join(" ");
+    expect(comparison).toContain(usd(PRICE_FACTS.carnivalCheersOnboardAllIn.amount));
+    expect(comparison).not.toContain("$90.60");
+    expect(comparison).not.toContain("unlimited alcoholic");
+  });
+
+  it("preserves existing cost-hub fragments after correcting misleading headings", () => {
+    const post = getBlogPostBySlug("hidden-cruise-costs")!;
+    const section = post.content.find(section => section.anchorId === "2-port-taxes-and-fees-280-to-308-added-at-checkout")!;
+    expect(section.heading).toContain("Confirm Your Quoted Inclusions");
+    expect(section.paragraphs.join(" ")).toMatch(/(?:confirmed|quoted) extra/);
+    for (const post of BLOG_POSTS) {
+      const anchors = post.content.map(section => section.anchorId ?? section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""));
+      expect(new Set(anchors).size).toBe(anchors.length);
+    }
+  });
 });

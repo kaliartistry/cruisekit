@@ -518,7 +518,7 @@ const tippingGuide: Guide = {
           question:
             "How much are auto-gratuities on each cruise line in 2026?",
           answer:
-            "Here are the current daily per-person gratuity rates for 2026: Royal Caribbean — $18.50 standard, $21.00 suites. Carnival — $17.00 standard, $19.00 suites (effective April 2, 2026). Norwegian — $20.00 standard, $25.00 suites. MSC — $16.00 for all cabin types (Caribbean itineraries; varies by region). Celebrity — $18.00 standard, $23.00 suites (Concierge/AquaClass $19.00). Princess — $18.00 standard, $20.00 suites (mini-suite $19.00). Holland America — $17.00 standard, $19.00 suites. Disney — $16.00 standard, $27.25 suites. Virgin Voyages — $20.00 prepaid, $22.00 if paid onboard. These rates have been climbing steadily — most lines raised them 8-16% in the past two years.",
+            `Dated USD per-person/day planning defaults, subject to your booking date, region, age and inclusions: Royal Caribbean — ${usd(PRICE_FACTS.royalCaribbeanStandardGratuity.amount)} standard / ${usd(PRICE_FACTS.royalCaribbeanSuiteGratuity.amount)} suite. Carnival — ${usd(PRICE_FACTS.carnivalStandardGratuity.amount)} / ${usd(PRICE_FACTS.carnivalSuiteGratuity.amount)}. Norwegian — ${usd(PRICE_FACTS.nclStandardGratuity.amount)} / ${usd(PRICE_FACTS.nclSuiteGratuity.amount)}. MSC Caribbean/Alaska/USA bookings from May 11, 2026, age 2+ — ${usd(PRICE_FACTS.mscStandardCaribbean.amount)} standard / ${usd(PRICE_FACTS.mscSuiteCaribbean.amount)} Yacht Club; earlier bookings $16/$20, other regions differ. Celebrity — ${usd(PRICE_FACTS.celebrityStandardGratuity.amount)} standard / ${usd(PRICE_FACTS.celebritySuiteGratuity.amount)} Retreat, with Concierge/AquaClass at ${usd(PRICE_FACTS.celebrityConciergeGratuity.amount)}. Princess — ${usd(PRICE_FACTS.princessStandardGratuity.amount)} standard / ${usd(PRICE_FACTS.princessMiniSuiteGratuity.amount)} mini-suite / ${usd(PRICE_FACTS.princessSuiteGratuity.amount)} suite. Holland America — ${usd(PRICE_FACTS.hollandAmericaStandardGratuity.amount)} / ${usd(PRICE_FACTS.hollandAmericaSuiteGratuity.amount)}. Disney — ${usd(PRICE_FACTS.disneyStandardGratuity.amount)} standard. Virgin — $20 prepaid / $22 onboard for the eligible paid cohort; legacy included bookings differ. Bundles can include eligible guests' gratuities. Confirm the source terms and what your quote already includes.`,
           appliesTo: "All cruise lines",
         },
       ],
@@ -722,18 +722,18 @@ const insuranceGuide: Guide = {
         {
           question: "What's the difference between trip insurance and medical evacuation coverage?",
           answer:
-            "Trip insurance is broad but shallow — it reimburses you for a wide range of things (cancellations, lost bags, basic medical care abroad) but caps out quickly on the big-ticket items. Medical evacuation coverage is narrow but deep — it only covers medical transport, but it covers it completely and to a hospital of YOUR choice. Here's the scenario that most clearly shows the difference: you fall ill on a cruise in the Eastern Caribbean. The ship's medical team stabilizes you but recommends you disembark at the next port for higher-level care. Standard trip insurance will pay to fly you from, say, St. Maarten to the best hospital in St. Maarten or maybe Puerto Rico. Medical evacuation coverage like Medjet will fly you from St. Maarten directly to your chosen home hospital — Cleveland Clinic, MD Anderson, wherever your own doctors are. For a complex medical situation, the difference can easily be $75,000-150,000 and measurably better care outcomes.",
+            "Trip insurance benefits depend on the policy. MedjetAssist is a separate medical transport membership: eligible members hospitalized at least 150 miles from home can request transfer to a hospital in their home country, subject to inpatient-care and medical-stability rules. It does not pay for medical treatment.",
           appliesTo: "All cruise lines",
         },
         {
           question: "How much does medical evacuation actually cost if I pay out of pocket?",
           answer:
-            "The real-world numbers are sobering. Basic helicopter evacuation from a ship to the nearest hospital: $25,000-50,000. Fixed-wing air ambulance between countries (e.g., Caribbean to Florida): $30,000-75,000. International air ambulance with medical staff (e.g., Mediterranean or Asia back to the US): $100,000-250,000. These are bills that have bankrupted families. Most credit card travel insurance and standard trip insurance caps medical evacuation at $50,000-100,000 — which sounds like a lot until you see a single flight quote come in at $180,000. Medjet (and similar membership-based services like MedjetHorizon, Global Rescue, and Covac Global) charges an annual membership fee of roughly $99-365 depending on your age and coverage level, and there's no cap on the transport cost — they absorb it.",
+            "Transport costs depend on the route, aircraft and medical needs; request a quote rather than relying on a generic range. MedjetAssist lists individual 8-day membership from $99 and individual annual membership from $315 USD, checked October 5, 2026. These products have different terms and periods; $99 is not an annual price.",
           appliesTo: "All cruise lines",
           productRecommendation: {
             name: "Medjet",
             description:
-              "Medical evacuation membership that transports you to your home hospital, not just the nearest facility. Annual memberships start around $99 for travelers under 75.",
+              "MedjetAssist: individual 8-day membership from $99; individual annual membership from $315 USD. Eligibility and transport rules apply. Prices checked October 5, 2026.",
           },
         },
       ],
@@ -745,13 +745,13 @@ const insuranceGuide: Guide = {
         {
           question: "How does Medjet's coverage work?",
           answer:
-            "Medjet is a membership service, not traditional insurance — and that's actually why it works the way it does. When you become a member, you're not filing a claim; you're calling a 24/7 operations center that arranges your transport. If you're hospitalized more than 150 miles from home (domestic) or anywhere internationally, they arrange medical air transport to the hospital of your choice, in your home state. No deductibles, no claim paperwork, no reimbursement model — they handle the logistics and pay the bill directly. The base Medjet Assist membership covers medical transport. MedjetHorizon is the upgraded tier that also includes non-medical evacuation (political unrest, natural disasters, kidnap-for-ransom response). Pricing as of 2026: Medjet Assist is $295/year for an individual under 75, or $99 for 7-day coverage for shorter trips.",
+            "MedjetAssist is a medical transport membership, not insurance. Eligible members hospitalized at least 150 miles from their primary residence can request transport to a hospital in their home country. Members must require inpatient care at the destination and be medically stable for transfer. Individual 8-day membership starts at $99; individual annual membership starts at $315 USD, checked October 5, 2026.",
           appliesTo: "All cruise lines",
         },
         {
           question: "What are the limitations I should know about?",
           answer:
-            "Medjet isn't a catch-all. Key limitations: (1) You must be a member BEFORE you get sick or injured — there's typically a 7-day waiting period after enrolling, (2) You must be hospitalized as an inpatient to trigger coverage — outpatient visits and minor injuries that don't require admission aren't covered for transport, (3) The flight home is determined by medical necessity, not convenience — Medjet decides when you're stable enough to fly, (4) Pre-existing conditions are covered (unlike most trip insurance) but the service doesn't cover the medical treatment itself — only the transport. You still need trip insurance or regular health insurance to cover the actual hospital bills. For most cruisers, the ideal combination is: standard trip insurance ($200-400) PLUS Medjet membership ($99-295). Total annual cost for a frequent traveler: $300-700. Total financial exposure if you skip it: potentially six figures.",
+            "Membership must be activated before leaving your primary residence. Standard short-term membership is for eligible US, Canada or Mexico residents under 75; ages 75–84 have separate Diamond terms. Transport requires inpatient hospitalization, destination inpatient care and medical stability. Medical necessity at the current hospital is not required. Treatment bills are separate.",
           appliesTo: "All cruise lines",
           productRecommendation: {
             name: "Medjet",
@@ -774,12 +774,12 @@ const insuranceGuide: Guide = {
         {
           question: "When should I enroll in Medjet?",
           answer:
-            "Medjet membership has a 7-day waiting period from enrollment before coverage begins. For a specific trip, enroll at least two weeks before sailing to be safe. Better yet: if you cruise or travel internationally more than once a year, the annual membership ($295) is almost always better value than the per-trip option. Once enrolled, you're covered for every trip that year — not just the cruise you were thinking about when you signed up. For families, the family membership covers you, your spouse/partner, and dependent children for around $495/year total — significantly cheaper than buying individual trip-specific coverage for each person.",
+            "Enroll before departure from your primary residence and choose dates covering your whole trip. An 8-day individual MedjetAssist membership starts at $99; annual individual membership starts at $315 USD, checked October 5, 2026. Annual membership limits international trips to fewer than 90 consecutive days. Compare the official terms and your actual trip lengths before choosing a period.",
           appliesTo: "All cruise lines",
           productRecommendation: {
             name: "Medjet",
             description:
-              "Annual membership typically pays for itself if you take more than one trip per year. Family memberships cover spouse and dependent children.",
+              "Compare short-term and annual periods with your travel plans. Family and Diamond memberships have separate prices and eligibility rules.",
           },
         },
       ],

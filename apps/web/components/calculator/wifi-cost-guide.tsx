@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { packagePriceNeedsQuote } from "@cruise/shared/utils";
 import { CRUISE_LINES } from "@cruise/shared/constants";
 import type { PackageTier } from "@cruise/shared/types";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
@@ -21,7 +22,7 @@ function WifiTierPrice({
 }) {
   const pair = getWifiPurchasePricePair(cruiseLineId, tier.name);
 
-  if (tier.priceEntryRequired) {
+  if (packagePriceNeedsQuote(tier)) {
     return (
       <p className="mt-1 text-xs font-semibold leading-5 text-amber-800">
         Enter your current sailing quote in the calculator; this line does not publish one fixed price for every voyage.
@@ -42,7 +43,7 @@ function WifiTierPrice({
       <div className="mt-2 text-xs leading-5 text-gray-600">
         <p>
           <span className="font-price font-bold text-navy">
-            {formatMoney(pair.prePurchase.amount)}
+            From {formatMoney(pair.prePurchase.amount)}
           </span>{" "}
           before sailing · {formatMoney(pair.prePurchase.amount * 7)} for one 7-night plan
         </p>
@@ -52,8 +53,9 @@ function WifiTierPrice({
           </span>{" "}
           onboard · {formatMoney(pair.onboard.amount * 7)} for one 7-night plan
         </p>
+        <p>Source checked {pair.prePurchase.retrievedAt}; advance prices start at the listed rate. Confirm your sailing quote.</p>
         <p className="mt-1 font-semibold text-teal-dark">
-          Pre-purchasing saves {formatMoney((pair.onboard.amount - pair.prePurchase.amount) * 7)} per plan on a 7-night cruise.
+          Published purchase-time difference: {formatMoney((pair.onboard.amount - pair.prePurchase.amount) * 7)} per plan on a 7-night cruise.
         </p>
       </div>
     );

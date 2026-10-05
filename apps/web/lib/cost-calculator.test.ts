@@ -74,11 +74,12 @@ describe("true-cost calculator arithmetic", () => {
       costs,
     );
     const legacy = calculateCosts(
-      { ...baseInputs, drinkPackage: "More at Sea — legacy eligible booking" },
+      { ...baseInputs, drinkPackage: "More at Sea — legacy eligible booking", drinkPackagePricePerPersonPerDay: 24.25 },
       costs,
     );
     expect(current.drinkPackage).toBe(28.5 * 2 * 7);
-    expect(legacy.drinkPackage).toBe(21.8 * 2 * 7);
+    expect(legacy.drinkPackage).toBe(24.25 * 2 * 7);
+    expect(() => calculateCosts({ ...baseInputs, drinkPackage: "More at Sea — legacy eligible booking" }, costs)).toThrow(/unavailable/);
   });
 
   it("does not double-count Princess bundle gratuity or Wi-Fi", () => {
@@ -98,7 +99,7 @@ describe("true-cost calculator arithmetic", () => {
 
   it("requires a user-entered quote for a dynamic Royal Caribbean package", () => {
     const costs = CRUISE_LINE_COSTS["royal-caribbean"];
-    const withoutQuote = calculateCosts(
+    const withoutQuote = () => calculateCosts(
       { ...baseInputs, drinkPackage: "Deluxe Beverage Package" },
       costs,
     );
@@ -110,7 +111,7 @@ describe("true-cost calculator arithmetic", () => {
       },
       costs,
     );
-    expect(withoutQuote.drinkPackage).toBe(0);
+    expect(withoutQuote).toThrow(/unavailable/);
     expect(withQuote.drinkPackage).toBe(92.5 * 2 * 7);
   });
 
@@ -169,7 +170,7 @@ describe("true-cost calculator arithmetic", () => {
 
   it("requires traveler-entered package and Wi-Fi quotes for Celebrity", () => {
     const costs = CRUISE_LINE_COSTS.celebrity;
-    const withoutQuotes = calculateCosts(
+    const withoutQuotes = () => calculateCosts(
       {
         ...baseInputs,
         drinkPackage: "Classic Beverage Package",
@@ -190,8 +191,7 @@ describe("true-cost calculator arithmetic", () => {
       costs,
     );
 
-    expect(withoutQuotes.drinkPackage).toBe(0);
-    expect(withoutQuotes.wifi).toBe(0);
+    expect(withoutQuotes).toThrow(/unavailable/);
     expect(withQuotes.drinkPackage).toBeCloseTo(82.5 * 2 * 7);
     expect(withQuotes.wifi).toBeCloseTo(19.25 * 7);
   });

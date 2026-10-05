@@ -253,8 +253,12 @@ export function getFareEstimate(
   cruiseLineId: string,
   duration: number,
   cabinType: CabinType,
-  month?: number // 0-indexed: 0=Jan, 11=Dec
+  month?: number, // 0-indexed: 0=Jan, 11=Dec
+  now: Date = new Date()
 ): FareEstimate | null {
+  // Historical manually collected estimates have no current reviewed basis.
+  const age = now.getTime() - Date.parse("2026-03-28T00:00:00Z");
+  if (!Number.isFinite(age) || age < 0 || age > 7 * 86400000) return null;
   const lineData = FARE_ESTIMATES[cruiseLineId];
   if (!lineData) return null;
 

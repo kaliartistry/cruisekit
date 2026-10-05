@@ -7,6 +7,16 @@ export interface PackageTier {
   pricePerDay: number;
   /** Official onboard price when the line publishes both purchase timings. */
   onboardPricePerDay?: number;
+  /** Fixed prepaid credit is charged once per purchase, independent of guests/nights. */
+  billingUnit?: "adult-day" | "purchase";
+  pricePerPurchase?: number;
+  shortCruisePricePerDay?: number;
+  shortCruiseMaxNights?: number;
+  minimumNights?: number;
+  sourceUrl?: string;
+  sourceCheckedAt?: string;
+  recheckBy?: string;
+  rateQualifier?: "starting-at";
   description: string;
   /** A zero price means the traveler must enter the live price they were quoted. */
   priceEntryRequired?: boolean;
@@ -80,8 +90,18 @@ export interface CalculatorInputs {
   cabinType: CabinType;
   region: CruiseRegion;
   baseFare: number;
+  /** Quote unit; normalize exactly once to the entire party. */
+  fareUnit?: "booking" | "person" | "cabin";
+  cabins?: number;
+  currency?: "USD";
+  taxTreatment?: "included" | "excluded" | "unknown";
+  /** Extra required taxes/fees for the entire party, from the quote. */
+  taxesAndFees?: number | null;
+
   /** Optional live per-person/day quote for dynamically priced packages. */
   drinkPackagePricePerPersonPerDay?: number;
+  /** Number of fixed-price credit purchases for the party; defaults to one. */
+  drinkPackageQuantity?: number;
   /** Purchase timing used when a package publishes a separate onboard price. */
   drinkPackagePurchaseTiming?: PurchaseTiming;
   /** Optional cohort-specific daily gratuity override. */

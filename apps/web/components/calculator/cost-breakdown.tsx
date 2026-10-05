@@ -60,7 +60,7 @@ interface CostBreakdownProps {
 }
 
 const COST_ITEMS = [
-  { key: "baseFare" as const, label: "Advertised Fare", icon: DollarSign },
+  { key: "baseFare" as const, label: "Quoted Party Fare", icon: DollarSign },
   { key: "gratuities" as const, label: "Gratuities", icon: Heart },
   { key: "drinkPackage" as const, label: "Drink Package", icon: Wine },
   { key: "wifi" as const, label: "WiFi", icon: Wifi },
@@ -125,7 +125,7 @@ export function buildTotalCruiseShareText({
 }) {
   return (
     `I ran the numbers for a cruise. Fare: $${advertised.toLocaleString()}. ` +
-    `Estimated real total: $${Math.round(real).toLocaleString()} after gratuities, drinks, WiFi, excursions, and port spending. ` +
+    `Planning subtotal: USD ${real.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} using my quote and selected estimates. Confirm unresolved taxes and package inclusions. ` +
     "Calculate yours at https://cruisekit.app/calculator/"
   );
 }
@@ -143,9 +143,9 @@ export function buildTotalCruiseComparisonShareText({
 }) {
   return (
     `I compared ${primaryLineName} and ${comparisonLineName}. ` +
-    `Estimated real totals: ${primaryLineName} $${Math.round(primaryTotal).toLocaleString()} vs. ` +
-    `${comparisonLineName} $${Math.round(comparisonTotal).toLocaleString()}. ` +
-    "These broad estimates include fare, gratuities, drinks, WiFi, excursions, and port spending. " +
+    `Modeled planning subtotals: ${primaryLineName} $${primaryTotal.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} vs. ` +
+    `${comparisonLineName} $${comparisonTotal.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}. ` +
+    "The same entered fare and selected add-on assumptions are used for each line; confirm current quotes and inclusions. " +
     "Compare yours at https://cruisekit.app/calculator/"
   );
 }
@@ -321,9 +321,8 @@ export function DeltaHero({
         </div>
 
         <h2 className="mb-5 text-2xl font-extrabold leading-tight text-navy sm:text-3xl">
-          Your {lineName} cruise will cost{" "}
-          <span className="text-coral">~{percentOver}% more</span> than the
-          sticker price.
+          Your {lineName} planning estimate adds{" "}
+          <span className="text-coral">~{percentOver}% more</span> to your entered fare.
         </h2>
 
         {/* Delta bar */}
@@ -333,21 +332,21 @@ export function DeltaHero({
               className="flex items-center justify-center bg-navy text-[11px] font-bold text-white transition-all"
               style={{ width: `${advertisedPct}%` }}
             >
-              {advertisedPct > 16 && "Advertised"}
+              {advertisedPct > 16 && "Quoted fare"}
             </div>
             <div
               className="flex items-center justify-center bg-coral text-[11px] font-bold text-white transition-all"
               style={{ width: `${hiddenPct}%` }}
             >
-              {hiddenPct > 16 && "Hidden costs"}
+              {hiddenPct > 16 && "Selected add-ons"}
             </div>
           </div>
           <div className="mt-2 flex justify-between text-xs">
             <span className="font-price font-semibold text-navy">
-              ${advertised.toLocaleString()} advertised
+              ${advertised.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} quoted fare
             </span>
             <span className="font-price font-bold text-coral">
-              ${Math.round(real).toLocaleString()} real
+              ${real.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} planning subtotal
             </span>
           </div>
         </div>
@@ -356,7 +355,7 @@ export function DeltaHero({
         <p className="mb-5 text-sm text-gray-600">
           That&apos;s{" "}
           <span className="font-price font-bold text-coral">
-            +${Math.round(hidden).toLocaleString()}
+            +${hidden.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </span>{" "}
           in fees, packages, and add-ons the advertised price doesn&apos;t
           show.
@@ -520,11 +519,12 @@ function SingleBreakdown({
 
   return (
     <div className="mx-auto max-w-5xl">
+      <p className="mb-4 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">USD · {totalGuests} guests · {inputs.duration} exact nights · quote per {inputs.fareUnit ?? "booking"} · {inputs.cabins ?? 1} cabin(s). {inputs.taxTreatment === "included" ? "Required taxes/fees recorded as included; none added again." : inputs.taxTreatment === "excluded" ? "Only the extra required whole-party fees you entered are added." : "Tax inclusion is unknown. This is a subtotal excluding unresolved taxes/fees."} Confirm package and gratuity inclusions before purchase.</p>
       {/* Delta-led hero: lead with the gap, not the total. */}
       <DeltaHero
         lineName={lineName}
         cruiseLineId={cruiseLineId}
-        advertised={inputs.baseFare}
+        advertised={breakdown.baseFare}
         real={breakdown.grandTotal}
         percentOver={percentOver}
         inputs={inputs}
@@ -587,6 +587,7 @@ function SingleBreakdown({
               <span className="font-price text-sm font-semibold text-navy">
                 <AnimatedCounter
                   value={breakdown[item.key]}
+                  decimals={2}
                   duration={1.2}
                 />
               </span>
@@ -602,10 +603,11 @@ function SingleBreakdown({
           variants={itemVariants}
           className="flex items-center justify-between py-3"
         >
-          <span className="text-lg font-bold text-navy">TOTAL</span>
+          <span className="text-lg font-bold text-navy">{inputs.taxTreatment === "unknown" || !inputs.taxTreatment ? "SUBTOTAL" : "ESTIMATED TOTAL"}</span>
           <span className="font-price text-xl font-bold text-coral">
             <AnimatedCounter
               value={breakdown.grandTotal}
+              decimals={2}
               duration={1.5}
               className="text-coral"
             />
@@ -685,8 +687,8 @@ function SingleBreakdown({
                 </h4>
               </div>
               <p className="text-xs text-gray-500 mb-3">
-                Helicopter evacs can cost $50k+. Medjet covers transport home —
-                from ~$99/year.
+                MedjetAssist offers qualifying hospital-to-hospital transport —
+                individual eight-day from $99 or annual from $315 USD (checked October 5, 2026). Standard short-term membership is for eligible US/Canada/Mexico residents under 75; hospital and distance conditions apply. Transport membership, not travel insurance.
               </p>
               <AffiliateLink
                 href={getMedEvacLink("https://www.medjetassist.com/")}
@@ -897,7 +899,7 @@ function ComparisonColumn({
                   isLower ? "text-green-600" : "text-navy"
                 )}
               >
-                ${Math.round(val).toLocaleString()}
+                ${val.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             </div>
           );
@@ -908,7 +910,7 @@ function ComparisonColumn({
 
         {/* Grand Total */}
         <div className="flex items-center justify-between py-3">
-          <span className="text-sm font-bold text-navy">TOTAL</span>
+          <span className="text-sm font-bold text-navy">{!inputs.taxTreatment || inputs.taxTreatment === "unknown" ? "SUBTOTAL" : "ESTIMATED TOTAL"}</span>
           <span
             className={cn(
               "font-price text-lg font-bold",
@@ -919,6 +921,7 @@ function ComparisonColumn({
           >
             <AnimatedCounter
               value={breakdown.grandTotal}
+              decimals={2}
               duration={1.5}
               className={
                 breakdown.grandTotal <= otherBreakdown.grandTotal
@@ -1037,15 +1040,15 @@ export function ComparisonBreakdown({
       >
         {isSame ? (
           <p className="text-sm font-semibold text-navy">
-            Both lines cost the same for this trip
+            Both modeled totals use the same entered fare
           </p>
         ) : (
           <p className="text-sm font-semibold text-navy">
-            You save{" "}
+            Modeled add-ons are lower by{" "}
             <span className="font-price font-bold text-green-600">
-              ${Math.round(diff).toLocaleString()}
+              ${diff.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>{" "}
-            with {cheaperName}
+            for {cheaperName} using the same fare; confirm current quotes
           </p>
         )}
         <div className="mt-4">

@@ -839,10 +839,15 @@ export default async function BlogPostPage({ params }: Props) {
         <section className="mx-auto max-w-4xl px-4 pb-12 sm:px-6 lg:px-8">
           {showPriceDisclaimer && (
             <div className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">
-              Fare examples in this article are planning references, not live
-              quotes. Cruise prices and availability change frequently; confirm
-              final pricing with the cruise line or booking platform before you
-              book.
+              Dollar figures and package examples in this article are historical
+              planning references, not current sailing or product quotes. Use
+              your current booking’s currency, fare unit, occupancy and
+              inclusions. Add only required charges confirmed extra. The{" "}
+              <Link href="/calculator" className="font-semibold underline">
+                calculator
+              </Link>{" "}
+              shows dated source conditions for its planning rates; confirm the
+              booking terms before buying.
             </div>
           )}
 
@@ -858,9 +863,8 @@ export default async function BlogPostPage({ params }: Props) {
                     Calculate your real cruise total before you book
                   </p>
                   <p className="mt-1 text-sm text-gray-600">
-                    Add gratuities, taxes, drinks, WiFi, excursions, port
-                    spending, parking, insurance, and onboard extras in one
-                    estimate.
+                    Confirm the quoted fare’s inclusions, then add separate
+                    charges and the optional purchases you choose in one estimate.
                   </p>
                 </div>
                 <svg
@@ -909,8 +913,8 @@ export default async function BlogPostPage({ params }: Props) {
             {post.content.map((section) => (
               <div
                 key={section.heading}
-                className="mb-10"
-                id={section.heading
+                className="mb-10 scroll-mt-32"
+                id={section.anchorId ?? section.heading
                   .toLowerCase()
                   .replace(/[^a-z0-9]+/g, "-")
                   .replace(/(^-|-$)/g, "")}

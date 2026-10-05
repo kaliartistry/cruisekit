@@ -67,7 +67,7 @@ export default function CalculatorPage() {
         <PageHeader
           pillar="plan"
           title="Cruise Cost Calculator"
-          subtitle="Cruise fares leave out gratuities, taxes, drinks, WiFi, excursions, port spending, parking, insurance, and onboard extras. CruiseKit adds it up before you commit."
+          subtitle="Start with a current quote and its fare unit. Confirm whether required taxes and fees are already included, then estimate gratuities and your selected extras."
           breadcrumbs={[{ label: "Cruise Cost Calculator" }]}
         />
         <section className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
@@ -87,8 +87,8 @@ export default function CalculatorPage() {
               Estimate the Real Price, Not Just the Fare
             </h2>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              Cruise lines advertise base fares that often exclude mandatory
-              and common trip costs: daily gratuities, taxes and port fees,
+              A quoted cruise fare may already include required taxes and fees.
+              Check your quote before adding them. Budget separately for gratuities,
               drink packages, WiFi, specialty dining, excursions, parking,
               insurance, photos, and port spending. CruiseKit turns those
               separate line items into one planning estimate so you can compare
@@ -177,9 +177,8 @@ export default function CalculatorPage() {
                   <p className="mt-1 text-sm leading-relaxed text-gray-600">
                     Start with the fare you found, then add the mandatory costs
                     you cannot skip and the optional add-ons you are likely to
-                    buy. If you are still deciding, use the default fare
-                    estimates and adjust the choices until the total matches
-                    your travel style.
+                    buy. Historical fare tables are excluded from current estimates;
+                    enter a current quote and confirm its unit and inclusions.
                   </p>
                 </div>
                 <div>
@@ -187,11 +186,10 @@ export default function CalculatorPage() {
                     Are taxes, port fees, and gratuities included in cruise prices?
                   </h4>
                   <p className="mt-1 text-sm leading-relaxed text-gray-600">
-                    Taxes and port fees are usually added during checkout, and
-                    gratuities are commonly charged daily to your onboard
-                    account or prepaid before sailing. That is why the
-                    advertised fare can be much lower than the real cruise
-                    total.
+                    Some advertised fares already include required taxes and fees.
+                    Carnival US offers reviewed October 5, 2026 list them as included.
+                    Check your specific quote and currency; do not add an included
+                    amount twice. Gratuities and optional packages have separate terms.
                   </p>
                 </div>
                 <div>

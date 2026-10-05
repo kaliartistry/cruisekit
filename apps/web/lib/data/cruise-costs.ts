@@ -105,10 +105,13 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "CHEERS! Beverage Program",
+          sourceUrl: PRICE_FACTS.carnivalCheersAdvanceAllIn.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.carnivalCheersAdvanceAllIn.retrievedAt,
+          recheckBy: PRICE_FACTS.carnivalCheersAdvanceAllIn.recheckBy,
           pricePerDay: PRICE_FACTS.carnivalCheersAdvanceAllIn.amount,
           onboardPricePerDay: PRICE_FACTS.carnivalCheersOnboardAllIn.amount,
           description:
-            "Advance price including the 20% service charge; $89.94/day all-in onboard. Advance cutoff is 11:59 PM ET two days before embarkation.",
+            "Advance price including the 20% service charge; $89.94/day with service charge onboard. Online advance cutoff is 11:59 PM the day before embarkation; US-water drink taxes can be extra and some ports begin activation on Day 2.",
           verificationStatus: "official",
         },
         {
@@ -129,6 +132,10 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "Social WiFi",
+          rateQualifier: "starting-at",
+          sourceUrl: PRICE_FACTS.carnivalWifiSocialAdvance.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.carnivalWifiSocialAdvance.retrievedAt,
+          recheckBy: PRICE_FACTS.carnivalWifiSocialAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.carnivalWifiSocialAdvance.amount,
           onboardPricePerDay: PRICE_FACTS.carnivalWifiSocialOnboard.amount,
           description:
@@ -137,6 +144,10 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
         },
         {
           name: "Value WiFi",
+          rateQualifier: "starting-at",
+          sourceUrl: PRICE_FACTS.carnivalWifiValueAdvance.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.carnivalWifiValueAdvance.retrievedAt,
+          recheckBy: PRICE_FACTS.carnivalWifiValueAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.carnivalWifiValueAdvance.amount,
           onboardPricePerDay: PRICE_FACTS.carnivalWifiValueOnboard.amount,
           description:
@@ -145,6 +156,10 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
         },
         {
           name: "Premium WiFi",
+          rateQualifier: "starting-at",
+          sourceUrl: PRICE_FACTS.carnivalWifiPremiumAdvance.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.carnivalWifiPremiumAdvance.retrievedAt,
+          recheckBy: PRICE_FACTS.carnivalWifiPremiumAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.carnivalWifiPremiumAdvance.amount,
           onboardPricePerDay: PRICE_FACTS.carnivalWifiPremiumOnboard.amount,
           description:
@@ -203,16 +218,23 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "Free at Sea — current booking cohort",
+          sourceUrl: PRICE_FACTS.nclFreeAtSeaAdult.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.nclFreeAtSeaAdult.retrievedAt,
+          recheckBy: PRICE_FACTS.nclFreeAtSeaAdult.recheckBy,
           pricePerDay: PRICE_FACTS.nclFreeAtSeaAdult.amount,
+          shortCruisePricePerDay: PRICE_FACTS.nclFreeAtSeaShortAdult.amount,
+          shortCruiseMaxNights: 5,
+          minimumNights: 2,
           description:
-            "Beverage package is promotional; this is the mandatory pre-cruise gratuity for each guest age 21+ ($28.50/day).",
+            "Qualifying adult 21+ pre-cruise rate: $32/day for 2–5 nights, $28.50/day for 6+ nights. Verify booking office, guest sequence and eligibility; local taxes may be extra.",
           verificationStatus: "official",
         },
         {
           name: "More at Sea — legacy eligible booking",
-          pricePerDay: PRICE_FACTS.nclMoreAtSeaLegacy.amount,
+          pricePerDay: 0,
+          priceEntryRequired: true,
           description:
-            "Legacy cohort only for applicable bookings made October 1, 2024–November 4, 2025. Confirm the original booking.",
+            "Legacy rate unavailable: the current official source no longer verifies this cohort. Enter the current all-in rate from your original booking confirmation.",
           verificationStatus: "official",
         },
         {
@@ -237,9 +259,9 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           description: "Unlimited fountain sodas and non-alcoholic beverages",
         },
       ],
-      includedFree: true,
+      includedFree: false,
       notes:
-        "Current Free at Sea beverage gratuity is $28.50/day for guests age 21+ when prepaid; onboard price varies. The $21.80/day selection is retained only for eligible legacy More at Sea bookings.",
+        "Free at Sea is an optional paid selection, not a free drinks allowance: qualifying adults pay $32/day for 2–5 nights or $28.50/day for 6+ nights before sailing. Current terms do not reverify the legacy More at Sea rate; a booking quote is required.",
     },
     wifiPackages: {
       tiers: [
@@ -390,7 +412,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       "Some basic beverages with certain fare types",
     ],
     notes:
-      "Gratuity rate of $16.00/day applies to Caribbean itineraries and varies by region. Service charges are included in package pricing. Yacht Club includes all beverages and WiFi.",
+      "Caribbean, Alaska and USA gratuities are $17 standard/$23 Yacht Club for bookings made from May 11, 2026; earlier bookings $16/$20. Other regions differ. These defaults require that cohort; verify your booking. Service charges are included in package pricing. Yacht Club includes all beverages and WiFi.",
   },
 
   // ---------------------------------------------------------------------------
@@ -453,6 +475,10 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
         },
         {
           name: "Premium WiFi",
+          rateQualifier: "starting-at",
+          sourceUrl: PRICE_FACTS.carnivalWifiPremiumAdvance.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.carnivalWifiPremiumAdvance.retrievedAt,
+          recheckBy: PRICE_FACTS.carnivalWifiPremiumAdvance.recheckBy,
           pricePerDay: 0,
           description:
             "Dynamic sailing price. Enter the current per-plan/day quote shown for your booking.",
@@ -519,6 +545,9 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "Plus Beverage Package",
+          sourceUrl: PRICE_FACTS.princessPlusAdvance.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.princessPlusAdvance.retrievedAt,
+          recheckBy: PRICE_FACTS.princessPlusAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.princessPlusAdvance.amount,
           description:
             "Full Princess Plus bundle on most ships (pre-cruise price; $70/day onboard); includes drinks, crew appreciation, and one-device Wi-Fi.",
@@ -528,6 +557,9 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
         },
         {
           name: "Premier Beverage Package",
+          sourceUrl: PRICE_FACTS.princessPremierAdvance.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.princessPremierAdvance.retrievedAt,
+          recheckBy: PRICE_FACTS.princessPremierAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.princessPremierAdvance.amount,
           description:
             "Full Princess Premier bundle on most ships (pre-cruise price; $105/day onboard); includes drinks, crew appreciation, and four-device Wi-Fi. Sun/Star Princess are $105/day.",
@@ -562,7 +594,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       ],
       includedFree: false,
       notes:
-        "The $65/$100 choices are full bundles, not beverage-only prices. They already include crew appreciation and Wi-Fi, so CruiseKit does not add those components again.",
+        "The $65/$100 choices are full bundles for most ships, guests 1 and 2, purchased at least 96 hours before departure. Sun/Star are $70/$105; later/onboard purchase adds $5/person/day. Confirm the package quote before using these defaults. They already include crew appreciation and Wi-Fi, so CruiseKit does not add those components again.",
     },
     wifiPackages: {
       tiers: [
@@ -840,33 +872,58 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       tiers: [
         {
           name: "Bar Tab $200",
-          pricePerDay: 200 / 7,
+          sourceUrl: PRICE_FACTS.virginBarTab200.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.virginBarTab200.retrievedAt,
+          recheckBy: PRICE_FACTS.virginBarTab200.recheckBy,
+          pricePerDay: 0,
+          billingUnit: "purchase",
+          pricePerPurchase: PRICE_FACTS.virginBarTab200.amount,
           description: "$200 pre-paid credit with $225 spending power ($25 bonus)",
         },
         {
           name: "Bar Tab $300",
-          pricePerDay: 300 / 7,
+          sourceUrl: PRICE_FACTS.virginBarTab300.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.virginBarTab300.retrievedAt,
+          recheckBy: PRICE_FACTS.virginBarTab300.recheckBy,
+          pricePerDay: 0,
+          billingUnit: "purchase",
+          pricePerPurchase: PRICE_FACTS.virginBarTab300.amount,
           description: "$300 pre-paid credit with $350 spending power ($50 bonus)",
         },
         {
           name: "Bar Tab $500",
-          pricePerDay: 500 / 7,
+          sourceUrl: PRICE_FACTS.virginBarTab500.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.virginBarTab500.retrievedAt,
+          recheckBy: PRICE_FACTS.virginBarTab500.recheckBy,
+          pricePerDay: 0,
+          billingUnit: "purchase",
+          pricePerPurchase: PRICE_FACTS.virginBarTab500.amount,
           description: "$500 pre-paid credit with $600 spending power ($100 bonus)",
         },
         {
           name: "Bar Tab $750",
-          pricePerDay: 750 / 7,
+          sourceUrl: PRICE_FACTS.virginBarTab750.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.virginBarTab750.retrievedAt,
+          recheckBy: PRICE_FACTS.virginBarTab750.recheckBy,
+          pricePerDay: 0,
+          billingUnit: "purchase",
+          pricePerPurchase: PRICE_FACTS.virginBarTab750.amount,
           description: "$750 pre-paid credit with $925 spending power ($175 bonus)",
         },
         {
           name: "Bar Tab $1000",
-          pricePerDay: 1000 / 7,
+          sourceUrl: PRICE_FACTS.virginBarTab1000.sourceUrl,
+          sourceCheckedAt: PRICE_FACTS.virginBarTab1000.retrievedAt,
+          recheckBy: PRICE_FACTS.virginBarTab1000.recheckBy,
+          pricePerDay: 0,
+          billingUnit: "purchase",
+          pricePerPurchase: PRICE_FACTS.virginBarTab1000.amount,
           description: "$1000 pre-paid credit with $1250 spending power ($250 bonus)",
         },
       ],
       includedFree: false,
       notes:
-        "Virgin Voyages does not offer unlimited drink packages. Instead, a Bar Tab system provides pre-paid credit with bonus spending power. No additional gratuity or service charge on drinks. Prices shown as per-day are the total Bar Tab amount divided by 7 days.",
+        "Virgin Voyages does not offer unlimited drink packages. Instead, a Bar Tab system provides pre-paid credit with bonus spending power. No additional gratuity or service charge on drinks. Amounts are USD per fixed purchase, independent of guest count and voyage length. Choose how many purchases to budget; they credit the purchaser folio and can buy drinks for others. Most non-chartered open revenue voyages; pre-purchase up to 24 hours before sailing. Unspent credit is not refunded or cashed out.",
     },
     wifiPackages: {
       tiers: [
