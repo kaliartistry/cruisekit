@@ -26,8 +26,28 @@ export function calculateCosts(
   inputs: CalculatorInputs,
   costs: CruiseLineCosts
 ): CostBreakdown {
-  const { adults, children, duration, baseFare } = inputs;
+  const { adults, children, duration } = inputs;
+  const amounts = [inputs.baseFare, inputs.excursionBudgetPerPort,
+    inputs.parkingCostPerDay, inputs.taxesAndFees ?? 0, inputs.drinkPackagePricePerPersonPerDay ?? 0, inputs.wifiPackagePricePerDay ?? 0, inputs.gratuityRateOverride ?? 0];
+  const counts = [adults, children, duration, inputs.numberOfPorts,
+    inputs.specialtyDiningMeals, inputs.parkingDays, inputs.cabins ?? 1, inputs.wifiPackageQuantity ?? 1, inputs.gratuityGuestCountOverride ?? (adults + children)];
+  if (amounts.some(v => !Number.isFinite(v) || v < 0 || v > 1e9) ||
+      counts.some(v => !Number.isInteger(v) || v < 0 || v > 1000) ||
+      adults < 1 || duration < 1 || (inputs.cabins ?? 1) < 1 ||
+      inputs.baseFare <= 0 ||
+      (inputs.fareUnit && !["booking", "person", "cabin"].includes(inputs.fareUnit)) ||
+      (inputs.taxTreatment && !["included", "excluded", "unknown"].includes(inputs.taxTreatment)) ||
+      (inputs.taxTreatment === "excluded" && inputs.taxesAndFees == null) ||
+      (inputs.currency && inputs.currency !== "USD")) {
+    throw new RangeError("Enter valid USD amounts, guests, cabins, and exact nights.");
+  }
+  const money = (value: number) => Math.round((value + Number.EPSILON) * 100) / 100;
   const totalGuests = adults + children;
+  const multiplier = inputs.fareUnit === "person" ? totalGuests
+    : inputs.fareUnit === "cabin" ? (inputs.cabins ?? 1) : 1;
+  const baseFare = money(inputs.baseFare * multiplier);
+
+
   const gratuityGuests = Math.min(
     totalGuests,
     Math.max(0, inputs.gratuityGuestCountOverride ?? totalGuests),
@@ -42,9 +62,8 @@ export function calculateCosts(
     (inputs.cabinType === "suite"
       ? costs.suiteGratuityPerPersonPerDay
       : costs.gratuityPerPersonPerDay);
-  const gratuities = selectedTier?.includesGratuities
-    ? 0
-    : dailyGratuity * gratuityGuests * duration;
+  const chargedGratuityGuests = selectedTier?.includesGratuities ? Math.max(0, gratuityGuests - adults) : gratuityGuests;
+  const gratuities = dailyGratuity * chargedGratuityGuests * duration;
 
   // Drink package — only adults get drink packages
   let drinkPackage = 0;
@@ -95,8 +114,7 @@ export function calculateCosts(
     : 0;
 
   // Port fees
-  const portFees =
-    costs.portFeesPerPersonPerDay * totalGuests * duration;
+  const portFees = inputs.taxTreatment === "excluded" ? money(inputs.taxesAndFees ?? 0) : 0;
 
   // Parking
   const parking = inputs.addParking
@@ -107,34 +125,21 @@ export function calculateCosts(
   const photography = 0;
 
   // Totals
-  const totalAdditional =
-    gratuities +
-    drinkPackage +
-    wifi +
-    specialtyDining +
-    excursions +
-    travelInsurance +
-    portFees +
-    parking +
-    photography;
-
-  const grandTotal = baseFare + totalAdditional;
-  const percentAboveAdvertised =
-    baseFare > 0 ? ((grandTotal - baseFare) / baseFare) * 100 : 0;
-  const perPersonPerDay =
-    totalGuests > 0 && duration > 0 ? grandTotal / totalGuests / duration : 0;
+// Round each displayed line before summing so the visible rows reconcile.
+  const rounded = {
+    gratuities: money(gratuities), drinkPackage: money(drinkPackage),
+    wifi: money(wifi), specialtyDining: money(specialtyDining),
+    excursions: money(excursions), travelInsurance: money(travelInsurance),
+    portFees, parking: money(parking), photography,
+  };
+  const totalAdditional = money(Object.values(rounded).reduce((sum, v) => sum + v, 0));
+  const grandTotal = money(baseFare + totalAdditional);
+  const percentAboveAdvertised = baseFare > 0 ? totalAdditional / baseFare * 100 : 0;
+  const perPersonPerDay = money(grandTotal / totalGuests / duration);
 
   return {
     baseFare,
-    gratuities,
-    drinkPackage,
-    wifi,
-    specialtyDining,
-    excursions,
-    travelInsurance,
-    portFees,
-    parking,
-    photography,
+    ...rounded,
     totalAdditional,
     grandTotal,
     percentAboveAdvertised,

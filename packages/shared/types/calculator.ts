@@ -80,6 +80,14 @@ export interface CalculatorInputs {
   cabinType: CabinType;
   region: CruiseRegion;
   baseFare: number;
+  /** Quote unit; normalize exactly once to the entire party. */
+  fareUnit?: "booking" | "person" | "cabin";
+  cabins?: number;
+  currency?: "USD";
+  taxTreatment?: "included" | "excluded" | "unknown";
+  /** Extra required taxes/fees for the entire party, from the quote. */
+  taxesAndFees?: number | null;
+
   /** Optional live per-person/day quote for dynamically priced packages. */
   drinkPackagePricePerPersonPerDay?: number;
   /** Purchase timing used when a package publishes a separate onboard price. */

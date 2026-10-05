@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import { fareFreshness } from "@/lib/format/confidence";
 import CalculatorForm from "@/components/calculator/calculator-form";
 
 function CalculatorFormWithSearchParams() {
@@ -37,7 +38,7 @@ function CalculatorFormWithSearchParams() {
   // Parse `fare` param (pre-fill base fare from deal cards)
   const fareParam = searchParams.get("fare");
   const defaultFare =
-    fareParam && !isNaN(parseFloat(fareParam))
+    fareParam && !isNaN(parseFloat(fareParam)) && fareFreshness(searchParams.get("checked")) === "recent" && searchParams.get("unit") === "booking"
       ? fareParam
       : undefined;
 

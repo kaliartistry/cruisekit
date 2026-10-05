@@ -64,7 +64,7 @@ describe("Total Cruise Cost result sharing", () => {
     const text = buildTotalCruiseShareText({ advertised: 2400, real: 3150 });
 
     expect(text).toContain("Fare: $2,400");
-    expect(text).toContain("Estimated real total: $3,150");
+    expect(text).toContain("Planning subtotal: USD 3,150.00");
     expect(text).toContain("https://cruisekit.app/calculator/");
     expect(text).not.toMatch(/ship|departure|itinerary|children|passenger/i);
   });

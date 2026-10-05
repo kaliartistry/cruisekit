@@ -21,7 +21,6 @@ import type {
 } from "@cruise/shared/types";
 import {
   calculateCosts,
-  partyFareFromPerPerson,
   resolvePackageDailyPrice,
 } from "@cruise/shared/utils";
 import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
@@ -69,14 +68,9 @@ import {
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
 
-const DURATION_RANGES = [
-  { label: "3-4", default: 4 },
-  { label: "5-6", default: 5 },
-  { label: "7", default: 7 },
-  { label: "8-9", default: 9 },
-  { label: "10-13", default: 10 },
-  { label: "14+", default: 14 },
-];
+const DURATION_RANGES = [3, 4, 5, 6, 7, 8, 9, 10, 14].map(n => ({ label: String(n), default: n }));
+
+
 
 const CABIN_TYPES: { value: CabinType; label: string }[] = [
   { value: "inside", label: "Inside" },
@@ -181,7 +175,7 @@ function PurchaseTimingChoice({
         })}
       </div>
       <p className="mt-3 text-sm font-semibold leading-6 text-navy" role="status">
-        Buying before sailing saves {formatMoney(savings)} for {quantityLabel} over {nights} {nights === 1 ? "night" : "nights"}.
+        With these stored rates, buying before sailing would save {formatMoney(savings)} for {quantityLabel} over {nights} {nights === 1 ? "night" : "nights"}.
       </p>
       <p className="mt-2 text-[11px] leading-5 text-gray-500">
         Official source checked {formatFactDate(pair.onboard.retrievedAt)}: {" "}
@@ -226,6 +220,7 @@ function NumberStepper({
       <button
         type="button"
         onClick={() => onChange(Math.max(min, value - 1))}
+        aria-label={`Decrease ${label ?? "quantity"}`}
         disabled={value <= min}
         className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 bg-white text-navy transition-colors hover:bg-gray-50 disabled:opacity-40"
       >
@@ -237,6 +232,7 @@ function NumberStepper({
       <button
         type="button"
         onClick={() => onChange(Math.min(max, value + 1))}
+        aria-label={`Increase ${label ?? "quantity"}`}
         disabled={value >= max}
         className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 bg-white text-navy transition-colors hover:bg-gray-50 disabled:opacity-40"
       >
@@ -371,6 +367,12 @@ export default function CalculatorForm({
   const [showChildren, setShowChildren] = useState(false);
   const [cabinType, setCabinType] = useState<CabinType>("balcony");
   const [baseFare, setBaseFare] = useState(defaultFare ?? "");
+  const [fareUnit, setFareUnit] = useState<"booking" | "person" | "cabin">("booking");
+  const [cabins, setCabins] = useState(1);
+  const [taxTreatment, setTaxTreatment] = useState<"included" | "excluded" | "unknown">("unknown");
+  const [extraTaxes, setExtraTaxes] = useState("");
+  const validFare = /^\d+(\.\d{1,2})?$/.test(baseFare) && Number(baseFare) > 0 && Number(baseFare) <= 1e9;
+  const validTax = taxTreatment !== "excluded" || (/^\d+(\.\d{1,2})?$/.test(extraTaxes) && Number(extraTaxes) <= 1e9);
 
   const seasonalInfo = month !== undefined ? getSeasonalMultiplier(month) : null;
 
@@ -474,13 +476,11 @@ export default function CalculatorForm({
     return getFareEstimate(primaryLineId, duration, cabinType, month);
   }, [primaryLineId, duration, cabinType, month]);
 
-  /** The UI accepts a per-person fare; the calculator operates on party totals. */
+  // UI impact previews use a party amount; the engine receives the raw quote.
   const effectiveBaseFare = useMemo(() => {
-    const userFare = parseFloat(baseFare);
-    const perPersonFare =
-      !isNaN(userFare) && userFare > 0 ? userFare : (fareEstimate?.mid ?? 0);
-    return partyFareFromPerPerson(perPersonFare, adults + children);
-  }, [baseFare, fareEstimate, adults, children]);
+    const multiplier = fareUnit === "person" ? adults + children : fareUnit === "cabin" ? cabins : 1;
+    return validFare ? Math.round(Number(baseFare) * multiplier * 100) / 100 : 0;
+  }, [baseFare, fareUnit, adults, children, cabins, validFare]);
 
   // When duration changes update default ports
   const handleDurationChange = useCallback(
@@ -585,61 +585,6 @@ export default function CalculatorForm({
     return parkingDays * (parseFloat(parkingCost) || 0);
   }, [parkingOn, parkingDays, parkingCost]);
 
-  const runningTotal = useMemo(() => {
-    const fare = effectiveBaseFare;
-    if (!costs) return fare;
-    const selectedTier = costs.drinkPackages.tiers.find(
-      (tier) => tier.name === drinkTier,
-    );
-    const cabinGratuity =
-      cabinType === "suite"
-        ? costs.suiteGratuityPerPersonPerDay
-        : costs.gratuityPerPersonPerDay;
-    const virginGratuity =
-      primaryLineId === "virgin-voyages"
-        ? virginGratuityCohort === "legacy-included"
-          ? PRICE_FACTS.virginLegacyIncluded.amount
-          : virginGratuityCohort === "current-onboard"
-            ? PRICE_FACTS.virginCurrentOnboard.amount
-            : PRICE_FACTS.virginCurrentPrepaid.amount
-        : cabinGratuity;
-    const gratuities = selectedTier?.includesGratuities
-      ? 0
-      : virginGratuity *
-        Math.max(0, adults + children - Math.min(children, gratuityExemptGuests)) *
-        duration;
-    const portFees =
-      costs.portFeesPerPersonPerDay * (adults + children) * duration;
-    return (
-      fare +
-      gratuities +
-      portFees +
-      drinkImpact +
-      (selectedTier?.includesWifi ? 0 : wifiImpact) +
-      diningImpact +
-      excursionImpact +
-      insuranceImpact +
-      parkingImpact
-    );
-  }, [
-    effectiveBaseFare,
-    costs,
-    primaryLineId,
-    cabinType,
-    virginGratuityCohort,
-    drinkTier,
-    adults,
-    children,
-    gratuityExemptGuests,
-    duration,
-    drinkImpact,
-    wifiImpact,
-    diningImpact,
-    excursionImpact,
-    insuranceImpact,
-    parkingImpact,
-  ]);
-
   /* -- Build CalculatorInputs -------------------------------------- */
   const calculatorInputs: CalculatorInputs | null = useMemo(() => {
     if (!primaryLineId) return null;
@@ -650,7 +595,9 @@ export default function CalculatorForm({
       children,
       cabinType,
       region: "caribbean",
-      baseFare: effectiveBaseFare,
+      baseFare: validFare ? Number(baseFare) : 0,
+      fareUnit, cabins, currency: "USD", taxTreatment,
+      taxesAndFees: taxTreatment === "excluded" && validTax ? Number(extraTaxes) : null,
       drinkPackagePricePerPersonPerDay: parseFloat(customDrinkPrice) || 0,
       drinkPackagePurchaseTiming: drinkPurchaseTiming,
       gratuityRateOverride:
@@ -685,7 +632,7 @@ export default function CalculatorForm({
     children,
     gratuityExemptGuests,
     cabinType,
-    effectiveBaseFare,
+    baseFare, validFare, fareUnit, cabins, taxTreatment, validTax, extraTaxes,
     customDrinkPrice,
     drinkPurchaseTiming,
     virginGratuityCohort,
@@ -707,13 +654,13 @@ export default function CalculatorForm({
 
   /* -- Calculate results ------------------------------------------- */
   const breakdown: CostBreakdownType | null = useMemo(() => {
-    if (!calculatorInputs || !costs) return null;
+    if (!calculatorInputs || !costs || !validFare || !validTax) return null;
     return calculateCosts(calculatorInputs, costs);
-  }, [calculatorInputs, costs]);
+  }, [calculatorInputs, costs, validFare, validTax]);
 
   /* -- Calculate comparison breakdown for second line --------------- */
   const comparisonBreakdown: CostBreakdownType | null = useMemo(() => {
-    if (!calculatorInputs || !secondaryLineId || !comparisonCosts) return null;
+    if (!calculatorInputs || !secondaryLineId || !comparisonCosts || !validFare || !validTax) return null;
 
     // Try matching drink tier name; fallback to first available or null
     let compDrinkTier: string | null = null;
@@ -744,19 +691,30 @@ export default function CalculatorForm({
     const compInputs: CalculatorInputs = {
       ...calculatorInputs,
       cruiseLineId: secondaryLineId as CalculatorInputs["cruiseLineId"],
+      // A primary line's cohort/exemption is not the other line's policy.
+      gratuityRateOverride: secondaryLineId === "virgin-voyages"
+        ? virginGratuityCohort === "legacy-included"
+          ? PRICE_FACTS.virginLegacyIncluded.amount
+          : virginGratuityCohort === "current-onboard"
+            ? PRICE_FACTS.virginCurrentOnboard.amount
+            : PRICE_FACTS.virginCurrentPrepaid.amount
+        : undefined,
+      gratuityGuestCountOverride: undefined,
       drinkPackage: compDrinkTier,
       wifiPackage: compWifiTier,
     };
 
     return calculateCosts(compInputs, comparisonCosts);
-  }, [calculatorInputs, secondaryLineId, comparisonCosts, drinkPackageOn, drinkTier, wifiOn, wifiTier]);
+  }, [calculatorInputs, secondaryLineId, comparisonCosts, drinkPackageOn, drinkTier, wifiOn, wifiTier, validFare, validTax, virginGratuityCohort]);
+
+  const runningTotal = breakdown?.grandTotal ?? effectiveBaseFare;
 
   /* -- Navigation -------------------------------------------------- */
   /* Allow proceeding if at least 1 line is selected AND either:
      - User entered a base fare, OR
      - We have a fare estimate for their selection (discovery mode) */
   const canProceedStep1 =
-    selectedLines.length >= 1 && (parseFloat(baseFare) > 0 || fareEstimate !== null);
+    selectedLines.length >= 1 && validFare && validTax;
 
   const analyticsContext = {
     cruiseLineId: primaryLineId ?? undefined,
@@ -806,6 +764,18 @@ export default function CalculatorForm({
     setShowChildren(savedInputs.children > 0);
     setCabinType(savedInputs.cabinType);
     setBaseFare(String(savedInputs.baseFare));
+    // Legacy saved inputs already contain a party fare. Never multiply it again.
+    setFareUnit(savedInputs.fareUnit ?? "booking");
+    setCabins(savedInputs.cabins ?? 1);
+    setTaxTreatment(savedInputs.taxTreatment ?? "unknown");
+    setExtraTaxes(savedInputs.taxesAndFees == null ? "" : String(savedInputs.taxesAndFees));
+    setCustomDrinkPrice(String(savedInputs.drinkPackagePricePerPersonPerDay ?? ""));
+    setDrinkPurchaseTiming(savedInputs.drinkPackagePurchaseTiming ?? "pre-purchase");
+    setCustomWifiPrice(String(savedInputs.wifiPackagePricePerDay ?? ""));
+    setWifiPlanCount(savedInputs.wifiPackageQuantity ?? 1);
+    setWifiPurchaseTiming(savedInputs.wifiPackagePurchaseTiming ?? "pre-purchase");
+    setGratuityExemptGuests(Math.max(0, savedInputs.adults + savedInputs.children - (savedInputs.gratuityGuestCountOverride ?? savedInputs.adults + savedInputs.children)));
+    setVirginGratuityCohort(savedInputs.gratuityRateOverride === 0 ? "legacy-included" : savedInputs.gratuityRateOverride === 22 ? "current-onboard" : "current-prepaid");
     setDrinkPackageOn(Boolean(savedInputs.drinkPackage));
     setDrinkTier(savedInputs.drinkPackage ?? "");
     setWifiOn(Boolean(savedInputs.wifiPackage));
@@ -839,6 +809,7 @@ export default function CalculatorForm({
 
   return (
     <div className="mx-auto max-w-4xl">
+      <p className="mb-5 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">Add-on amounts use dated source facts and planning assumptions. Confirm current package rates, gratuities and your booking inclusions. Expired source facts remain subject to the freshness gate.</p>
       {step === 1 && savedResult && (
         <div className="mb-6 flex flex-col gap-4 rounded-2xl border border-teal/25 bg-teal/5 p-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-start gap-3">
@@ -920,6 +891,9 @@ export default function CalculatorForm({
               </div>
             </div>
 
+            <label className="mb-6 block text-sm font-medium text-navy">Exact nights
+              <input aria-label="Exact nights" type="number" min="1" max="99" step="1" value={duration} onChange={e => handleDurationChange(Math.min(99, Math.max(1, Math.trunc(Number(e.target.value) || 1))))} className="ml-3 w-20 rounded border p-2" />
+            </label>
             {/* Travel Month */}
             <div className="mb-8">
               <h2 className="mb-3 text-lg font-bold text-navy">
@@ -1042,10 +1016,10 @@ export default function CalculatorForm({
             {/* Base Fare */}
             <div className="mb-8">
               <h2 className="mb-1 text-lg font-bold text-navy">
-                Advertised cruise fare per person
+                Advertised cruise price
               </h2>
               <p className="mb-3 text-sm text-gray-500">
-                Enter one traveler&apos;s fare before add-ons. CruiseKit multiplies it by the number of guests.
+                Enter a current USD quote. Add-ons are planning estimates; use your invoice for required fees.
               </p>
               <div className="relative max-w-xs">
                 <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-price text-sm font-semibold text-gray-400">
@@ -1053,7 +1027,10 @@ export default function CalculatorForm({
                 </span>
                 <input
                   type="number"
-                  inputMode="numeric"
+                  aria-label="Quoted fare in USD"
+                  min="0.01"
+                  step="0.01"
+                  inputMode="decimal"
                   placeholder={
                     fareEstimate
                       ? `Estimated: ${fareEstimate.mid.toLocaleString()}`
@@ -1070,6 +1047,26 @@ export default function CalculatorForm({
                   )}
                 />
               </div>
+              <label className="mt-3 block text-sm text-navy">This fare is for
+                <select aria-label="Fare unit" value={fareUnit} onChange={e => setFareUnit(e.target.value as typeof fareUnit)} className="mt-1 block w-full max-w-md rounded border p-2">
+                  <option value="booking">The whole party / booking</option>
+                  <option value="person">Each person</option>
+                  <option value="cabin">Each cabin</option>
+                </select>
+              </label>
+              {fareUnit === "cabin" && <label className="mt-3 block text-sm">Number of cabins <input aria-label="Number of cabins" type="number" min="1" max="20" value={cabins} onChange={e => setCabins(Math.min(20, Math.max(1, Number(e.target.value) || 1)))} className="ml-2 w-20 rounded border p-2" /></label>}
+              <p className="mt-2 text-xs text-gray-500">Per-person and per-cabin entries assume the same price for each. Use the booking total when guest or cabin prices differ.</p>
+              <label className="mt-3 block text-sm text-navy">Required taxes and fees
+                <select aria-label="Tax inclusion" value={taxTreatment} onChange={e => setTaxTreatment(e.target.value as typeof taxTreatment)} className="mt-1 block w-full max-w-md rounded border p-2">
+                  <option value="unknown">I don&apos;t know — show a subtotal</option>
+                  <option value="included">Already included in my fare</option>
+                  <option value="excluded">Extra — enter the party amount</option>
+                </select>
+              </label>
+              {taxTreatment === "excluded" && <label className="mt-3 block text-sm">Extra taxes / required fees for the whole party (USD)<input aria-label="Extra taxes and fees in USD" type="number" min="0" step="0.01" value={extraTaxes} onChange={e => setExtraTaxes(e.target.value)} className="mt-1 block rounded border p-2" /></label>}
+              {baseFare && !validFare && <p role="alert" className="mt-2 text-sm text-coral">Enter a positive USD fare with at most two decimal places.</p>}
+              {!validTax && <p role="alert" className="mt-2 text-sm text-coral">Enter extra required fees for the whole party, including 0 if confirmed.</p>}
+              {!fareEstimate && <p className="mt-3 text-xs text-amber-700">Historical fare table: March 28, 2026. It is stale and is excluded from current estimates. Enter your own quote.</p>}
               {fareEstimate && !baseFare && (
                 <div className="mt-2 max-w-xs rounded-lg bg-teal/5 border border-teal/20 px-3 py-2">
                   <p className="text-xs text-teal font-medium">
@@ -1609,6 +1606,7 @@ export default function CalculatorForm({
                       <p className="font-price text-3xl font-bold text-navy">
                         <AnimatedCounter
                           value={runningTotal}
+                              decimals={2}
                           duration={0.6}
                         />
                       </p>

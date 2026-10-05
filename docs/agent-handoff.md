@@ -1,5 +1,10 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-05 — pricing integration review, No Go
+
+The second correctness review preserves website HOLD and frozen native 1.0.28 (56). Current-main web pricing work is isolated on `codex/truthful-pricing-main-integration-20261005` from `5df4a4726212440470b746f729f2ff20083bbbce`; do not merge the held design baseline wholesale. Package timing, gratuity exemptions, Wi-Fi quantities, bundle handling and saved-result contracts are preserved. Native repairs include the engine-backed running subtotal, preserved bundle flags and matching verified quote context for price-watch alerts; legacy watches remain stored. Release blockers: fourteen expired current-main price facts, unresolved Virgin fixed-credit billing units, applicable exact-commit CI, approved new native version/build and release QA, then Kali's specific release approval. Source/data refresh and publication were not performed. See the task's integration recommendation and current-main `docs/pricing-verification-2026-10-05.md` for evidence, scope and rollback. Earlier store/live-state notes are historical; no store status was rechecked.
+
+
 Last verified: 2026-09-10
 
 ## September 10 price-fact follow-up (PR #74, branch `fix/price-constants-2026-09`)

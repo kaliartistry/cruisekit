@@ -443,7 +443,7 @@ function buildFaqs(slug: string) {
     },
     {
       question: `What are the hidden fees on a ${displayName} cruise?`,
-      answer: `Beyond the advertised fare, expect to pay for gratuities ($${costs.gratuityPerPersonPerDay.toFixed(2)}/day/person), port fees (~$${costs.portFeesPerPersonPerDay}/day/person), WiFi, specialty dining (avg $${costs.specialtyDining.averagePerMeal}/meal), shore excursions (avg $${costs.averageExcursionCostPerPort}/port), and optional extras like spa treatments (avg $${costs.spaAverageTreatment}).`,
+      answer: `Historical planning defaults recorded ${costs.lastUpdated}: budget for separate gratuities ($${costs.gratuityPerPersonPerDay.toFixed(2)}/day/person), any required taxes/fees confirmed extra on your quote (never infer them from a daily average), WiFi, specialty dining (avg $${costs.specialtyDining.averagePerMeal}/meal), shore excursions (avg $${costs.averageExcursionCostPerPort}/port), and optional extras like spa treatments (avg $${costs.spaAverageTreatment}).`,
     },
     {
       question: `Does ${displayName} charge a service charge on drinks?`,
