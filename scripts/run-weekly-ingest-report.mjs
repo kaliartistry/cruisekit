@@ -150,7 +150,9 @@ async function main() {
     reviewResults.push(imported?.ok ? await runReview(review) : { provider: review.provider, ok: false, exitCode: null, status: "skipped", reason: "This run has no successful approved import; old staging is not reused." });
   }
 
-  const verification = await recheck({ startedAt: runStartedAt, latest: true });
+  // Re-read the public rules weekly; this never attempts a denied quote path
+  // and never treats a rules check as a successful fare observation.
+  const verification = await recheck({ startedAt: runStartedAt, latest: true, probeProvider: "norwegian" });
 
   const failed = results.filter((result) => !result.ok);
   const failedReviews = reviewResults.filter((result) => !result.ok);

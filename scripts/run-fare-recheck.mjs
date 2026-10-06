@@ -53,7 +53,7 @@ export async function recheck({ output = resolve(root, "data/ingest/reports/fare
   const assessment = assessFares({ seed, ledger, observations, policy, runStartedAt: startedAt });
   const { candidateSeed, candidateLedger, ...audit } = assessment;
   audit.sourceChecks = sourceChecks;
-  audit.providerReadiness = Object.entries(policy.providers).map(([provider, p]) => ({ provider, access: p.access, reason: p.reason, contractVersion: p.contractVersion }));
+  audit.providerReadiness = Object.entries(policy.providers).map(([provider, p]) => ({ provider, access: p.access, reason: p.reason, policyRulesCheckedAt: p.rulesCheckedAt ?? null, contractVersion: p.contractVersion }));
   audit.ready = audit.counts.retained === 0 && audit.counts.quarantined === 0 && audit.counts.eligible > 0;
   audit.publicationEnabled = false;
   audit.paths = { audit: relative(root, output), candidateSeed: "sailings.candidate.json", candidateLedger: "fare-verifications.candidate.json", rollbackSeed: "sailings.before.json", rollbackLedger: "fare-verifications.before.json" };

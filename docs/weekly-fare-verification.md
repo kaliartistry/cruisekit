@@ -83,6 +83,8 @@ Keep one existing weekly job, Mondays 11:34 UTC (next expected October 12), and
 daily freshness at 10:21 UTC. Cron may be delayed; neither cron is changed.
 The candidate gates source access, skips reviews without same-run approved imports,
 bounds child execution/output and returns failure for blocked verification.
+It rechecks NCL's public robots rules on this cadence with at most two anonymous
+requests and zero fare requests; a rules check never advances a quote date.
 Weekly CI continues to freshness/the existing Issue 52 updater, uploads audit and
 fails visibly. Permissions remain contents:read/issues:write. No bot contents write,
 secret, paid runner or deploy dispatch is added. This branch is not active on main.

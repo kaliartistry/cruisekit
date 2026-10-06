@@ -68,7 +68,7 @@ export function freshnessIssueBody(report, verification = null) {
 
 Production cruise data freshness and price/source review.
 
-${currentVerification ? `## Exact Quote Recheck\n\nRun: ${currentVerification.generatedAt}. Eligible candidates: ${currentVerification.counts.eligible}; retained fares: ${currentVerification.counts.retained}; quarantined unmatched observations: ${currentVerification.counts.quarantined}. Publication is disabled.\n\n${currentVerification.providerReadiness.map(p => `- ${p.provider}: ${p.access}. ${p.reason}`).join("\n")}\n\nAudit/rollback files: ${currentVerification.paths.audit}. Job/scrape/build dates do not prove prices. Missing/sold-out/changed results do not prove cancellation.\n` : ""}
+${currentVerification ? `## Exact Quote Recheck\n\nRun: ${currentVerification.generatedAt}. Eligible candidates: ${currentVerification.counts.eligible}; retained fares: ${currentVerification.counts.retained}; quarantined unmatched observations: ${currentVerification.counts.quarantined}. Publication is disabled.\n\n${(currentVerification.sourceChecks ?? []).map(s => `- Actual rules attempt ${s.provider}: ${s.status}, ${s.checkedAt}, ${s.requests} request(s), ${s.fareRequests} fare requests.`).join("\n")}\n\n${currentVerification.providerReadiness.map(p => `- ${p.provider}: ${p.access}. ${p.reason} Policy rules checked: ${p.policyRulesCheckedAt ?? "pending"}.`).join("\n")}\n\nAudit/rollback files: ${currentVerification.paths.audit}. Job/scrape/build dates do not prove prices. Missing/sold-out/changed results do not prove cancellation.\n` : ""}
 
 ## Why Automation Paused
 
