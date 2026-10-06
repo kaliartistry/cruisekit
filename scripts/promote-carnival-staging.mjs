@@ -110,11 +110,11 @@ function normalizePromotedRecord(record, promotedAt) {
     source: {
       ...record.source,
       confidence,
-      lastVerified: promotedAt.slice(0, 10),
+      lastVerified: record.source?.lastVerified ?? record.lastVerified,
       termsNotes:
         "Promoted from Carnival public cruise search staging. Price remains check-required; verify fare basis, taxes/fees, and availability near booking.",
     },
-    lastVerified: promotedAt.slice(0, 10),
+    lastVerified: record.lastVerified,
     createdAt: record.createdAt ?? promotedAt,
     updatedAt: promotedAt,
   };

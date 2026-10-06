@@ -9,6 +9,7 @@ import { execFile } from "node:child_process";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { promisify } from "node:util";
+import { fileURLToPath } from "node:url";
 
 const execFileAsync = promisify(execFile);
 const repoRoot = process.cwd();
@@ -48,11 +49,11 @@ function briefFindingList(findings, limit = 12) {
 function table(rows) {
   if (!Array.isArray(rows) || rows.length === 0) return "- None";
   return [
-    "| Cruise line | Public sailings | Stale | Oldest check | Latest check |",
-    "| --- | ---: | ---: | --- | --- |",
+    "| Cruise line | Public sailings | Stale quotes | Unverified quotes | Oldest record review | Latest record review |",
+    "| --- | ---: | ---: | ---: | --- | --- |",
     ...rows.map(
       (row) =>
-        `| ${row.cruiseLine} | ${row.publicSailings} | ${row.stalePublicSailings} | ${row.oldestLastVerified ?? "n/a"} | ${row.latestLastVerified ?? "n/a"} |`,
+        `| ${row.cruiseLine} | ${row.publicSailings} | ${row.stalePublicSailings} | ${row.unverifiedPublicFares ?? 0} | ${row.oldestLastVerified ?? "n/a"} | ${row.latestLastVerified ?? "n/a"} |`,
     ),
   ].join("\n");
 }
@@ -61,15 +62,17 @@ async function ensureLabel(label) {
   await run("gh", ["label", "create", label, "--color", label === "needs-kali" ? "B60205" : "D93F0B"]);
 }
 
-async function main() {
-  const report = await loadJson("data/reports/latest-data-freshness.json");
-  const issueBody = `## Approval Type
+export function freshnessIssueBody(report, verification = null) {
+  const currentVerification = verification && verification.generatedAt?.slice(0, 10) === report.generatedAt?.slice(0, 10) ? verification : null;
+  return `## Approval Type
 
 Production cruise data freshness and price/source review.
 
+${currentVerification ? `## Exact Quote Recheck\n\nRun: ${currentVerification.generatedAt}. Eligible candidates: ${currentVerification.counts.eligible}; retained fares: ${currentVerification.counts.retained}; quarantined unmatched observations: ${currentVerification.counts.quarantined}. Publication is disabled.\n\n${currentVerification.providerReadiness.map(p => `- ${p.provider}: ${p.access}. ${p.reason}`).join("\n")}\n\nAudit/rollback files: ${currentVerification.paths.audit}. Job/scrape/build dates do not prove prices. Missing/sold-out/changed results do not prove cancellation.\n` : ""}
+
 ## Why Automation Paused
 
-The weekly freshness gate found ${report.counts.blockers} blocker(s) and ${report.counts.warnings} warning(s). Public sailing fare checks must be ${report.thresholds.maxPublicAgeDays} days old or newer before CruiseKit broadens review prompts or treats the cruise-search data as current.
+The freshness gate found ${report.counts.blockers} blocker(s) and ${report.counts.warnings} warning(s), including ${report.counts.unverifiedPublicFares ?? 0} fares without confirmed exact-context price checks. Actual public fare observations must be ${report.thresholds.maxPublicAgeDays} days old or newer before treating the data as current. Weekly is a check cadence, not a guarantee of unchanged prices.
 
 ## Evidence
 
@@ -91,7 +94,7 @@ ${briefFindingList(report.blockers)}
 
 ## Recommended Action
 
-Review the latest staging import and staging review reports, approve exact source-backed seed updates for sailing dates, links, prices, price basis, and taxes/fees language, then run:
+Review source access and implement an approved bounded quote adapter first. Approve exact initial cabin/rate/package/occupancy/currency/tax contexts with raw evidence in the fare ledger. Review the dated before/candidate audit; old staging or a successful scrape is insufficient. For an owner-approved candidate, run:
 
 \`\`\`bash
 pnpm run data:build
@@ -103,12 +106,18 @@ If the candidate is clean, merge the approved data PR into main so GitHub Pages 
 
 ## Risk Level
 
-High for review-prompt timing. Asking for public ratings while production fare data is stale can create avoidable trust risk.
+High for customer pricing trust if unmatched quote contexts or old snapshots are presented as current fares.
 
 ## Deadline If Any
 
-Before broadening in-app review prompts.
+Before treating unverified fares as current or enabling unattended production writes.
 `;
+}
+
+async function main() {
+  const report = await loadJson("data/reports/latest-data-freshness.json");
+  const verification = await loadJson("data/reports/latest-fare-verification.json").catch(() => null);
+  const issueBody = freshnessIssueBody(report, verification);
 
   for (const label of labels) await ensureLabel(label);
 
@@ -168,7 +177,7 @@ Before broadening in-app review prompts.
   console.log(result.output);
 }
 
-main().catch((error) => {
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().catch((error) => {
   console.error(error);
   process.exit(1);
 });

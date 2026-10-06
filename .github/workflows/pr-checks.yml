@@ -44,6 +44,9 @@ jobs:
       - name: Ship asset and code data tests
         run: pnpm run data:test:ship-gaps
 
+      - name: Fare verification, retention and source access tests
+        run: pnpm run data:test:fare-verification
+
       - name: Firestore rules tests
         run: pnpm run test:rules
 

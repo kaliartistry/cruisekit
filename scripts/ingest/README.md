@@ -13,11 +13,31 @@ Each importer should:
 
 Promotion to public data happens in a separate review step.
 
-The scheduled weekly job runs all provider importers in report-only mode, runs
-the available staging-review scripts, rebuilds bundles from approved seeds, and
-then runs `pnpm run data:freshness`. Public sailing fare checks older than 7
-days block the weekly freshness gate and require Kali approval before refreshed
-price/link/date changes are promoted into `data/seed/*.json`.
+The weekly job retains its Monday 11:34 UTC schedule and report-only permissions.
+`data/fare-verification-policy.json` gates source access before importer execution;
+blocked or unreviewed sources are reported without collecting quotes. Reviews
+require a successful import from the same run, never old staging. The exact-quote
+verification stage emits an immutable audit, before files and candidate files.
+The job fails visibly on blocked checks or stale/unverified public fares and uses
+the existing needs-kali freshness issue. It never commits, pushes or publishes.
+
+No source adapter is currently approved to verify an exact fare automatically.
+The NCL date-specific path is disallowed by its current robots file, and Carnival
+reuse permission needs review. Other provider access and quote contracts remain
+unreviewed. The existing discovery importers below are not approved quote adapters.
+Do not toggle access to approved without resolving access rules and implementing
+and testing a bounded source-specific adapter. No evasion, credentials or paid
+source is authorized by this candidate.
+
+Legacy staging `lastVerified`/`generatedAt` values describe importer/record history;
+they do not populate `data/seed/fare-verifications.json`. Promotion preserves the
+original date rather than stamping a promotion date. A confirmed price requires
+an owner-reviewed initial quote tuple, actual `observedAt`, source timestamp when
+provided, hashed raw evidence, precise cabin/rate/package/occupancy/tax context,
+and the same sailing/itinerary. Only complete normal changes below 15% become
+eligible candidates. Large, ambiguous, new or unmatched results require review.
+Sold-out, missing or changed results retain the last good fare and never assert
+cancellation. See [weekly verification scope](../../docs/weekly-fare-verification.md).
 
 ## Current providers
 

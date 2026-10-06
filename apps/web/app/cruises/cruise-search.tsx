@@ -30,6 +30,7 @@ import {
 import { cn } from "@/lib/utils/cn";
 import HeartButton from "@/components/shared/heart-button";
 import AffiliateDisclosure from "@/components/shared/affiliate-disclosure";
+import { fareCheckLabel } from "@/lib/data/fare-verification";
 import {
   fareFreshness,
   confidenceLabel,
@@ -364,21 +365,19 @@ function DealCard({ deal }: { deal: RealDeal }) {
     calcParams.set("month", String(new Date(deal.departureDate).getUTCMonth()));
   }
   // Historical observations cannot silently seed a current estimate.
-  if (fareFreshness(deal.lastVerified) === "recent" && deal.confidence === "verified_from_cruise_line" && deal.currency === "USD" && deal.priceBasis === "per-person-double-occupancy" && deal.startingPrice != null) {
+  if (fareFreshness(deal.priceLastChecked) === "recent" && deal.confidence === "verified_from_cruise_line" && deal.currency === "USD" && deal.priceBasis === "per-person-double-occupancy" && deal.startingPrice != null) {
     calcParams.set("fare", String(deal.startingPrice * 2));
     calcParams.set("unit", "booking");
-    calcParams.set("checked", deal.lastVerified);
+    calcParams.set("checked", deal.priceLastChecked!);
+    calcParams.set("cabin", deal.priceCabinType!);
   }
   const calcHref = `/calculator?${calcParams.toString()}`;
   const basisText = priceBasisLabel(deal.priceBasis) || "Fare unit / occupancy unverified";
   const taxText = deal.taxesAndFeesIncluded
     ? "Source records required taxes/fees included. Gratuities checked separately."
     : "Required taxes/fees not confirmed included; check the quote. Gratuities checked separately.";
-  const freshness = fareFreshness(deal.lastVerified);
-  const checkedDate = formatLastVerified(deal.lastVerified);
-  const priceDisclosure = checkedDate
-    ? `Historical fare (${freshness}), last checked ${checkedDate}. Confirm current price and availability on ${deal.cruiseLine}.`
-    : `Planning fare only. Confirm current price and availability on ${deal.cruiseLine}.`;
+  const freshness = fareFreshness(deal.priceLastChecked);
+  const priceDisclosure = `Price checks are snapshots. Confirm current price and availability with ${deal.cruiseLine} before booking.`;
   const displayedPrice = deal.startingPrice ?? deal.fromPrice;
   const visiblePorts = deal.ports.slice(0, 4);
 
@@ -518,7 +517,8 @@ function DealCard({ deal }: { deal: RealDeal }) {
 
         <div className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-right text-[10px] leading-snug text-gray-500">
           <span className="block font-medium text-gray-700">Source: {deal.source}</span>
-          <span className="block">Checked: {formatLastVerified(deal.lastVerified)}</span>
+          <span className="block">{fareCheckLabel(deal.priceLastChecked, deal.lastVerified, deal.nextPriceCheckAt)}</span>
+          {deal.priceQuoteBasis && <span className="block">Observed quote: {deal.priceQuoteBasis}</span>}
           <span className="mt-1 block">{priceDisclosure}</span>
         </div>
 
@@ -980,9 +980,9 @@ export default function CruiseSearchPage() {
             {DEAL_STATS.totalDeals === 1 ? "" : "s"} from{" "}
             {DEAL_STATS.cruiseLines.length} cruise line
             {DEAL_STATS.cruiseLines.length === 1 ? "" : "s"}
-            {DEAL_STATS.lastVerified
-              ? ` · Latest check ${formatLastVerified(DEAL_STATS.lastVerified)}`
-              : ""}
+            {DEAL_STATS.priceLastChecked
+              ? ` · Latest price check ${formatLastVerified(DEAL_STATS.priceLastChecked)}`
+              : " · Price check dates unverified"}
             {" "}· Final fares and availability must be confirmed with the source.
           </p>
         </div>
@@ -1185,7 +1185,7 @@ function buildCuratedCollections(deals: RealDeal[]): CuratedCollection[] {
 
   return collections.map((collection) => {
     const matches = curatedMatches(collection.key, deals);
-    const prices = matches.filter(deal => fareFreshness(deal.lastVerified) === "recent" && deal.currency === "USD" && deal.priceBasis === "per-person-double-occupancy").map((deal) => deal.fromPrice).filter(Number.isFinite);
+    const prices = matches.filter(deal => fareFreshness(deal.priceLastChecked) === "recent" && deal.currency === "USD" && deal.priceBasis === "per-person-double-occupancy").map((deal) => deal.fromPrice).filter(Number.isFinite);
     return {
       ...collection,
       count: matches.length,

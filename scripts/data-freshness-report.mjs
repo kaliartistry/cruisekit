@@ -9,7 +9,8 @@
 import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { currentUtcDateOnly, dateOnly, daysBetween, formatDateOnly } from "./lib/date.mjs";
+import { currentUtcDateOnly, daysBetween, formatDateOnly } from "./lib/date.mjs";
+import { ledgerProblems } from "./lib/fare-verification.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const reportDir = resolve(repoRoot, "data/reports");
@@ -52,12 +53,6 @@ function countBy(records, keyFn) {
   return Object.fromEntries(Object.entries(counts).sort(([a], [b]) => a.localeCompare(b)));
 }
 
-function ageDays(dateValue) {
-  const parsed = dateOnly(dateValue);
-  if (!parsed) return null;
-  return daysBetween(parsed, today);
-}
-
 function generatedAgeDays(isoValue) {
   const parsed = new Date(isoValue);
   if (Number.isNaN(parsed.getTime())) return null;
@@ -83,11 +78,11 @@ function formatFindings(findings) {
 function markdownCruiseLineRows(rows) {
   if (rows.length === 0) return "- None\n";
   return [
-    "| Cruise line | Public sailings | Stale | Oldest check | Latest check |",
-    "| --- | ---: | ---: | --- | --- |",
+    "| Cruise line | Public sailings | Stale quotes | Unverified quotes | Oldest record review | Latest record review | Latest price check |",
+    "| --- | ---: | ---: | ---: | --- | --- | --- |",
     ...rows.map(
       (row) =>
-        `| ${row.cruiseLine} | ${row.publicSailings} | ${row.stalePublicSailings} | ${row.oldestLastVerified ?? "n/a"} | ${row.latestLastVerified ?? "n/a"} |`,
+        `| ${row.cruiseLine} | ${row.publicSailings} | ${row.stalePublicSailings} | ${row.unverifiedPublicFares} | ${row.oldestLastVerified ?? "n/a"} | ${row.latestLastVerified ?? "n/a"} | ${row.latestPriceCheck ?? "unverified"} |`,
     ),
   ].join("\n") + "\n";
 }
@@ -113,6 +108,7 @@ async function loadOptionalReport(relPath) {
 }
 
 async function main() {
+  if (maxPublicAgeDays !== 7) throw new Error("The approved public fare freshness policy is exactly seven days; an environment override cannot weaken it.");
   if (!Number.isFinite(maxPublicAgeDays) || maxPublicAgeDays < 1) {
     throw new Error("CRUISEKIT_MAX_PUBLIC_DATA_AGE_DAYS must be a positive integer.");
   }
@@ -120,15 +116,20 @@ async function main() {
     throw new Error("CRUISEKIT_MAX_INGEST_AGE_DAYS must be a positive integer.");
   }
 
-  const [manifest, publicSailings, watchlist] = await Promise.all([
+  const [manifest, publicSailings, watchlist, fareLedger, farePolicy, seedSailings] = await Promise.all([
     loadJson("data/bundles/manifest.json"),
     loadJson("data/bundles/canonical/sailings.json"),
     loadJson("data/source-watchlist.json"),
+    loadJson("data/seed/fare-verifications.json"),
+    loadJson("data/fare-verification-policy.json"),
+    loadJson("data/seed/sailings.json"),
   ]);
 
   const blockers = [];
   const warnings = [];
   const info = [];
+  const provenanceErrors = ledgerProblems(seedSailings, fareLedger, farePolicy);
+  for (const error of provenanceErrors) addFinding(blockers, "blocker", "fare-provenance", error);
   const lineCounts = countBy(publicSailings, (sailing) => sailing.cruiseLine);
   const sailingsByLine = new Map();
 
@@ -138,9 +139,10 @@ async function main() {
     records.push(sailing);
     sailingsByLine.set(line, records);
 
-    const age = ageDays(sailing.lastVerified);
+    const checked = provenanceErrors.length ? null : fareLedger.entries[sailing.id]?.lastSuccessfulVerification;
+    const age = checked ? (Date.now() - Date.parse(checked)) / 86400000 : null;
     if (age == null) {
-      addFinding(blockers, "blocker", sailing.id ?? "unknown", "Public sailing has no valid lastVerified date.");
+      addFinding(blockers, "blocker", sailing.id ?? "unknown", `No confirmed exact-context price observation. Legacy record review ${sailing.lastVerified} is not a verified fare check.`, { cruiseLine: line, unverifiedFare: true });
       continue;
     }
     if (age > maxPublicAgeDays) {
@@ -148,7 +150,7 @@ async function main() {
         blockers,
         "blocker",
         sailing.id,
-        `lastVerified=${sailing.lastVerified} is ${age} days old; max allowed is ${maxPublicAgeDays} days.`,
+        `Price checked ${checked} is ${age.toFixed(2)} days old; max allowed is ${maxPublicAgeDays} days.`,
         { cruiseLine: line, ageDays: age },
       );
     }
@@ -156,11 +158,13 @@ async function main() {
 
   const byCruiseLine = [...sailingsByLine.entries()]
     .map(([cruiseLine, records]) => {
-      const ages = records.map((record) => ageDays(record.lastVerified));
+      const ages = records.map(record => { const checked = fareLedger.entries[record.id]?.lastSuccessfulVerification; return checked ? (Date.now() - Date.parse(checked)) / 86400000 : null; });
       return {
         cruiseLine,
         publicSailings: records.length,
         stalePublicSailings: ages.filter((age) => age != null && age > maxPublicAgeDays).length,
+        unverifiedPublicFares: ages.filter(age => age == null).length,
+        latestPriceCheck: latestDate(records.map(r => fareLedger.entries[r.id]?.lastSuccessfulVerification)),
         oldestLastVerified: oldestDate(records.map((record) => record.lastVerified)),
         latestLastVerified: latestDate(records.map((record) => record.lastVerified)),
       };
@@ -233,6 +237,7 @@ async function main() {
     counts: {
       publicSailings: publicSailings.length,
       stalePublicSailings: blockers.filter((finding) => finding.ageDays != null).length,
+      unverifiedPublicFares: blockers.filter(finding => finding.unverifiedFare).length,
       weeklyWatchlistSources: watchlistRows.length,
       blockers: blockers.length,
       warnings: warnings.length,
@@ -259,6 +264,7 @@ Production freshness threshold: ${maxPublicAgeDays} days.
 | --- | ---: |
 | Public sailings | ${report.counts.publicSailings} |
 | Stale public sailings | ${report.counts.stalePublicSailings} |
+| Unverified public fares | ${report.counts.unverifiedPublicFares} |
 | Weekly watchlist sources | ${report.counts.weeklyWatchlistSources} |
 | Blockers | ${report.counts.blockers} |
 | Warnings | ${report.counts.warnings} |
@@ -282,8 +288,9 @@ ${formatFindings(info)}
 ## Required Action
 
 If blockers are present, do not broaden in-app review prompts yet. Review the
-latest staging import and staging review reports, approve exact source-backed
-seed changes, rebuild bundles, and rerun this report before publishing.
+latest exact-quote audit and source access review. Approve complete cabin/rate,
+occupancy, currency, taxes and sailing context with raw evidence before adopting
+seed and fare-ledger candidates. Rebuild and rerun the gate before publishing.
 `;
 
   await mkdir(reportDir, { recursive: true });

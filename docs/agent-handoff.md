@@ -1,5 +1,13 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-06 — weekly fare verification candidate, no activation/publication
+
+Active pricing website remains `c0e6390c31ed808ac50929aa2bc401bf2e45878d`. Work is isolated on `codex/weekly-fare-verification-20261005`. Existing Monday 11:34 UTC ingest stages reports; Pages rebuilds approved seed and does not promote observations. Successful discovery and legacy importer/promotion dates cannot prove actual fare checks.
+
+The candidate adds an exact-context fare ledger and sanitized web provenance bundle without changing canonical/native models or approved fare amounts. Confirmed observations show checked-on/age/due dates; legacy records retain their original review date with price-check-unverified status. Report-only verification retains last known good data and quarantines ambiguous/new/large changes. Failure handling reuses Issue 52; cron and token permissions are unchanged. No new automation, production write, credential or paid source is enabled.
+
+Source blockers: NCL robots disallows the existing date-specific vacation-builder path; Carnival reuse/source access needs review; other quote adapters/contracts are unapproved. One controlled NCL rules dry run made one request, zero fare requests, retained 362 fares and left seed unchanged. Local October 6 build has 361 upcoming records because one October 5 departure aged out, not because of cancellation. The 53 staged changes remain unapproved. Approved quote adapters, initial context review and any unattended production-write scope need a bounded decision before activation. See [weekly verification scope](weekly-fare-verification.md) for diagnosis, source evidence, limits and rollback. Frozen native 1.0.28 (56) and protected checkouts remain held/untouched.
+
 ## 2026-10-05 — website pricing release verified; native remains held
 
 Kali's conditionally approved website-only pricing release is live and verified. [PR #77](https://github.com/kaliartistry/cruisekit/pull/77) merged candidate `8583f28d5444d86160beea07307fb0b1fe204d2e` as `7a067630452e54288cfe08d8492995b9c909a56d`. [Final PR Checks](https://github.com/kaliartistry/cruisekit/actions/runs/37386287014) passed on Node 22: 139 web tests, 10 ship tests, 63 rules tests, web/functions lint and no duplicate routes. Its synthetic checkout `e798be8e` has exactly the candidate's tree `847d6c642143444a75bcc90ebbf0520485d92a20`. The normal [Pages release](https://github.com/kaliartistry/cruisekit/actions/runs/37386633573) built 193 pages and succeeded at 23:09 UTC; provider deployment `6871449825` confirms the published pricing merge.

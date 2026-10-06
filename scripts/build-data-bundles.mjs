@@ -12,6 +12,7 @@ import { fileURLToPath } from "node:url";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { currentUtcDateOnly, dateOnly } from "./lib/date.mjs";
+import { ledgerProblems } from "./lib/fare-verification.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outRoot = resolve(repoRoot, "data/bundles");
@@ -487,6 +488,13 @@ async function main() {
 
   const today = currentUtcDateOnly();
   const publicSailings = seedSailings.filter((sailing) => isPublicSailing(sailing, today));
+  const [fareLedger, farePolicy] = await Promise.all([loadJson("data/seed/fare-verifications.json"), loadJson("data/fare-verification-policy.json")]);
+  const fareErrors = ledgerProblems(seedSailings, fareLedger, farePolicy);
+  if (fareErrors.length) throw new Error(`Fare provenance build blocked:\n${fareErrors.join("\n")}`);
+  const publicChecks = { schemaVersion: 1, entries: Object.fromEntries(publicSailings.filter(s => fareLedger.entries[s.id]).map(s => {
+    const e = fareLedger.entries[s.id], c = e.quoteContext;
+    return [s.id, { price: e.price, currency: c.currency, sourceUrl: c.sourceUrl, cabinType: c.cabinType, quoteBasis: `${c.adults} adults, ${c.children} children, ${c.cabins} cabin; ${c.cabinType} category ${c.cabinCategory}; rate ${c.rateCode}; package ${c.packageCode}; ${c.market} market`, lastSuccessfulVerification: e.lastSuccessfulVerification, nextCheckAt: e.nextCheckAt, evidenceSha256: e.evidenceSha256, context: { shipName: c.shipName, departureDate: c.departureDate, returnDate: c.returnDate, nights: c.nights, priceBasis: c.priceBasis, taxesAndFeesIncluded: c.taxesAndFeesIncluded } }];
+  })) };
   const publicDeals = seedDeals.filter(isPublicDeal);
   const mobileSailings = publicSailings.map(toMobileSailing);
   const mobileDeals = publicSailings.map(toMobileDeal);
@@ -497,6 +505,7 @@ async function main() {
   const bundles = {
     canonicalSailings: await writeBundle("data/bundles/canonical/sailings.json", publicSailings),
     canonicalDeals: await writeBundle("data/bundles/canonical/deals.json", publicDeals),
+    fareVerifications: await writeBundle("data/bundles/canonical/fare-verifications.json", publicChecks),
     mobileSailings: await writeBundle("data/bundles/mobile/sailings.json", mobileSailings),
     mobileDeals: await writeBundle("data/bundles/mobile/deals.json", mobileDeals),
   };

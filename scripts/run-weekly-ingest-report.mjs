@@ -7,13 +7,21 @@
  * failures are collected as warnings so a single blocked supplier does not
  * hide the rest of the weekly signal.
  */
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { recheck } from "./run-fare-recheck.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const reportDir = resolve(repoRoot, "data/reports");
+const policy = JSON.parse(await readFile(resolve(repoRoot, "data/fare-verification-policy.json"), "utf8"));
+function stopOwnedChild(child, signal) {
+  try {
+    if (process.platform !== "win32" && child.pid) process.kill(-child.pid, signal);
+    else child.kill(signal);
+  } catch { /* The owned process group already exited. */ }
+}
 const providers = [
   "azamara",
   "carnival",
@@ -35,10 +43,15 @@ const reviews = [
 ];
 
 function runProvider(provider) {
+  const access = policy.providers[provider];
+  if (access?.access !== "approved" || !access.contractVersion) {
+    return Promise.resolve({ provider, startedAt: new Date().toISOString(), finishedAt: new Date().toISOString(), exitCode: null, ok: false, status: "access-review-required", reason: access?.reason ?? "No approved source contract", stdoutTail: "", stderrTail: "" });
+  }
   return new Promise((resolveRun) => {
     const startedAt = new Date().toISOString();
     const child = spawn("pnpm", ["run", `data:ingest:${provider}`], {
       cwd: repoRoot,
+      detached: process.platform !== "win32",
       stdio: ["ignore", "pipe", "pipe"],
       env: {
         ...process.env,
@@ -48,17 +61,21 @@ function runProvider(provider) {
 
     let stdout = "";
     let stderr = "";
+    const deadline = setTimeout(() => stopOwnedChild(child, "SIGTERM"), 120000);
+    const forceDeadline = setTimeout(() => stopOwnedChild(child, "SIGKILL"), 125000);
     child.stdout.on("data", (chunk) => {
       const text = chunk.toString();
-      stdout += text;
+      stdout = (stdout + text).slice(-12000);
       process.stdout.write(text);
     });
     child.stderr.on("data", (chunk) => {
       const text = chunk.toString();
-      stderr += text;
+      stderr = (stderr + text).slice(-12000);
       process.stderr.write(text);
     });
     child.on("close", (code) => {
+      clearTimeout(deadline); clearTimeout(forceDeadline);
+      stopOwnedChild(child, "SIGKILL");
       resolveRun({
         provider,
         startedAt,
@@ -69,6 +86,7 @@ function runProvider(provider) {
         stderrTail: stderr.split("\n").slice(-40).join("\n"),
       });
     });
+    child.on("error", (error) => { clearTimeout(deadline); clearTimeout(forceDeadline); resolveRun({ provider, startedAt, finishedAt: new Date().toISOString(), exitCode: null, ok: false, stderrTail: error.message }); });
   });
 }
 
@@ -77,6 +95,7 @@ function runReview(review) {
     const startedAt = new Date().toISOString();
     const child = spawn("pnpm", ["run", review.command], {
       cwd: repoRoot,
+      detached: process.platform !== "win32",
       stdio: ["ignore", "pipe", "pipe"],
       env: {
         ...process.env,
@@ -86,17 +105,21 @@ function runReview(review) {
 
     let stdout = "";
     let stderr = "";
+    const deadline = setTimeout(() => stopOwnedChild(child, "SIGTERM"), 30000);
+    const forceDeadline = setTimeout(() => stopOwnedChild(child, "SIGKILL"), 35000);
     child.stdout.on("data", (chunk) => {
       const text = chunk.toString();
-      stdout += text;
+      stdout = (stdout + text).slice(-12000);
       process.stdout.write(text);
     });
     child.stderr.on("data", (chunk) => {
       const text = chunk.toString();
-      stderr += text;
+      stderr = (stderr + text).slice(-12000);
       process.stderr.write(text);
     });
     child.on("close", (code) => {
+      clearTimeout(deadline); clearTimeout(forceDeadline);
+      stopOwnedChild(child, "SIGKILL");
       resolveRun({
         provider: review.provider,
         command: review.command,
@@ -108,10 +131,12 @@ function runReview(review) {
         stderrTail: stderr.split("\n").slice(-40).join("\n"),
       });
     });
+    child.on("error", (error) => { clearTimeout(deadline); clearTimeout(forceDeadline); resolveRun({ provider: review.provider, startedAt, finishedAt: new Date().toISOString(), exitCode: null, ok: false, stderrTail: error.message }); });
   });
 }
 
 async function main() {
+  const runStartedAt = new Date().toISOString();
   const results = [];
   for (const provider of providers) {
     console.log(`\n=== Weekly ingest: ${provider} ===`);
@@ -121,8 +146,11 @@ async function main() {
   const reviewResults = [];
   for (const review of reviews) {
     console.log(`\n=== Weekly staging review: ${review.provider} ===`);
-    reviewResults.push(await runReview(review));
+    const imported = results.find(r => r.provider === review.provider);
+    reviewResults.push(imported?.ok ? await runReview(review) : { provider: review.provider, ok: false, exitCode: null, status: "skipped", reason: "This run has no successful approved import; old staging is not reused." });
   }
+
+  const verification = await recheck({ startedAt: runStartedAt, latest: true });
 
   const failed = results.filter((result) => !result.ok);
   const failedReviews = reviewResults.filter((result) => !result.ok);
@@ -131,7 +159,9 @@ async function main() {
     mode: "weekly-ingest-and-review-report-only",
     providers,
     reviews: reviews.map((review) => review.provider),
-    ok: failed.length === 0 && failedReviews.length === 0,
+    ok: failed.length === 0 && failedReviews.length === 0 && verification.ready,
+    runStartedAt,
+    fareVerification: { generatedAt: verification.generatedAt, counts: verification.counts, ready: verification.ready, publicationEnabled: false },
     failedProviders: failed.map((result) => result.provider),
     failedReviews: failedReviews.map((result) => result.provider),
     results,
@@ -173,6 +203,8 @@ ${failedReviews.length === 0 ? "- None\n" : failedReviews.map((result) => `- ${r
 
   console.log(`Weekly ingest report: ${failed.length} provider warning(s), ${failedReviews.length} review warning(s).`);
   console.log("Report written to data/reports/latest-weekly-ingest.md");
+  // A completed report is not a successful price verification.
+  if (!report.ok) process.exitCode = 1;
 }
 
 main().catch((error) => {

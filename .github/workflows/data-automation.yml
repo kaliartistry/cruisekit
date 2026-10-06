@@ -123,13 +123,15 @@ jobs:
       - name: Install Playwright browser
         run: pnpm exec playwright install chromium
       - name: Run weekly ingest and review report-only pass
+        id: ingest
+        continue-on-error: true
         run: pnpm run data:ingest:weekly-report
       - name: Run weekly production freshness gate
         id: freshness
         continue-on-error: true
         run: pnpm run data:build && pnpm run data:freshness
       - name: Create or update data freshness issue
-        if: steps.freshness.outcome == 'failure'
+        if: steps.freshness.outcome == 'failure' || steps.ingest.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/create-data-freshness-issue.mjs
@@ -140,8 +142,8 @@ jobs:
           path: |
             data/reports/
             data/ingest/reports/
-      - name: Fail when production data is stale
-        if: steps.freshness.outcome == 'failure'
+      - name: Fail when production data is stale or quote checks are blocked
+        if: steps.freshness.outcome == 'failure' || steps.ingest.outcome == 'failure'
         run: exit 1
 
   launch-readiness:

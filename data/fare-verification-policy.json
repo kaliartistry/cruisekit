@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "cadenceDays": 7,
+  "largeChangeFraction": 0.15,
+  "maxTargets": 400,
+  "publicationMode": "review-only",
+  "transport": {
+    "maxRequests": 40,
+    "maxAttempts": 2,
+    "timeoutMs": 10000,
+    "minDelayMs": 750,
+    "maxRetryDelayMs": 5000,
+    "maxBytes": 2000000
+  },
+  "providers": {
+    "carnival": {
+      "origin": "https://www.carnival.com",
+      "access": "review-required",
+      "reason": "Website terms restrict reuse; an approved reuse/source path is required.",
+      "rulesUrl": "https://www.carnival.com/about-carnival/legal-notice",
+      "rulesCheckedAt": "2026-10-05",
+      "contractVersion": null
+    },
+    "norwegian": {
+      "origin": "https://www.ncl.com",
+      "access": "blocked",
+      "reason": "robots.txt disallows /vacation-builder/, including the date-specific endpoint.",
+      "rulesUrl": "https://www.ncl.com/robots.txt",
+      "rulesCheckedAt": "2026-10-05",
+      "contractVersion": null
+    },
+    "holland-america": {
+      "origin": "https://www.hollandamerica.com",
+      "access": "review-required",
+      "reason": "Access/reuse rules and exact cabin, occupancy, rate and taxes contract need review.",
+      "contractVersion": null
+    },
+    "virgin-voyages": {
+      "origin": "https://www.virginvoyages.com",
+      "access": "review-required",
+      "reason": "Access/reuse rules and exact voyage/cabin/occupancy contract need review.",
+      "contractVersion": null
+    },
+    "royal-caribbean": { "access": "blocked", "reason": "Existing source denial; no evasion or CAPTCHA bypass.", "contractVersion": null },
+    "azamara": { "access": "review-required", "reason": "Approved source access and fare contract pending.", "contractVersion": null },
+    "msc": { "access": "review-required", "reason": "US source unavailable; alternate market currency and terms need approval.", "contractVersion": null },
+    "princess": { "access": "review-required", "reason": "Existing light feed does not prove dated fares.", "contractVersion": null },
+    "viking": { "access": "review-required", "reason": "Existing search does not prove dated sailing quotes.", "contractVersion": null }
+  }
+}

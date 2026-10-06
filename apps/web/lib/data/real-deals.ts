@@ -9,6 +9,7 @@
  * compiling. New code should import `SAILINGS` and use the canonical fields.
  */
 import { fareFreshness } from "../format/confidence";
+import { verifiedFareCheck } from "./fare-verification";
 import publicSailings from "../../../../data/bundles/canonical/sailings.json";
 import type { Sailing } from "../../../../shared/models/ts/sailing";
 import { getDealImage } from "./port-images";
@@ -66,6 +67,10 @@ export interface RealDeal {
   source: string;
   sourceUrl: string;
   lastVerified: string;
+  priceLastChecked: string | null;
+  nextPriceCheckAt: string | null;
+  priceCabinType: import("@cruise/shared/types").CabinType | null;
+  priceQuoteBasis: string | null;
   confidence: Sailing["confidence"];
   priceBasis: Sailing["priceBasis"];
   taxesAndFeesIncluded: boolean;
@@ -128,6 +133,7 @@ function toLegacyRegion(region: Sailing["destinationRegion"]): DealRegion {
 }
 
 function toRealDeal(s: Sailing): RealDeal {
+  const check = verifiedFareCheck(s);
   const cruiseLineId = s.cruiseLine;
   const monthKey = s.departureDate.slice(0, 7);
   const deal: RealDeal = {
@@ -148,6 +154,10 @@ function toRealDeal(s: Sailing): RealDeal {
     source: s.source.provider,
     sourceUrl: s.sourceUrl,
     lastVerified: s.lastVerified,
+    priceLastChecked: check?.lastSuccessfulVerification ?? null,
+    nextPriceCheckAt: check?.nextCheckAt ?? null,
+    priceCabinType: check?.cabinType ?? null,
+    priceQuoteBasis: check?.quoteBasis ?? null,
     confidence: s.confidence,
     priceBasis: s.priceBasis,
     taxesAndFeesIncluded: s.taxesAndFeesIncluded,
@@ -177,7 +187,7 @@ function formatMonth(monthKey: string): string {
 function dealScore(s: Sailing): number {
   let score = 0;
   const price = s.startingPrice;
-  if (fareFreshness(s.lastVerified) === "recent" && Number.isFinite(price)) {
+  if (fareFreshness(verifiedFareCheck(s)?.lastSuccessfulVerification) === "recent" && Number.isFinite(price)) {
     if ((price ?? 0) <= 350) score += 45;
     else if ((price ?? 0) <= 500) score += 35;
     else if ((price ?? 0) <= 750) score += 22;
@@ -195,7 +205,7 @@ function dealScore(s: Sailing): number {
 
 function dealBadges(s: Sailing): string[] {
   const badges: string[] = [];
-  if (fareFreshness(s.lastVerified) === "recent" && Number.isFinite(s.startingPrice) && (s.startingPrice ?? 0) <= 350) badges.push("Low price");
+  if (fareFreshness(verifiedFareCheck(s)?.lastSuccessfulVerification) === "recent" && Number.isFinite(s.startingPrice) && (s.startingPrice ?? 0) <= 350) badges.push("Low price");
   if (s.nights >= 3 && s.nights <= 5) badges.push("Short cruise");
   if (s.nights === 7) badges.push("7-night");
   if (s.confidence === "itinerary_verified_price_check_required") badges.push("Price check required");
@@ -274,9 +284,10 @@ export const DEAL_STATS = {
   highestPrice: REAL_DEALS.length > 0 ? Math.max(...REAL_DEALS.map((d) => d.fromPrice)) : 0,
   cruiseLines: [...new Set(REAL_DEALS.map((d) => d.cruiseLineId))],
   ships: [...new Set(REAL_DEALS.map((d) => d.shipName))],
-  /** Latest verification date across the seed set — used in the page header. */
+  /** Legacy record-review date; never a confirmed quote date. */
   lastVerified:
     REAL_DEALS.length > 0
       ? REAL_DEALS.reduce((latest, d) => (d.lastVerified > latest ? d.lastVerified : latest), REAL_DEALS[0].lastVerified)
       : null,
+  priceLastChecked: REAL_DEALS.reduce<string | null>((latest, d) => d.priceLastChecked && (!latest || d.priceLastChecked > latest) ? d.priceLastChecked : latest, null),
 };

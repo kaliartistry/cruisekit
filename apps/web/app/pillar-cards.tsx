@@ -19,6 +19,7 @@ import { CRUISE_LINE_COSTS } from "@/lib/data/cruise-costs";
 import CruiseLineLogo from "@/components/shared/cruise-line-logo";
 import { getTopDealsByRegion, DEAL_STATS } from "@/lib/data/real-deals";
 import { fareFreshness, priceBasisLabel } from "@/lib/format/confidence";
+import { fareCheckLabel } from "@/lib/data/fare-verification";
 import { getDealImage } from "@/lib/data/port-images";
 import {
   confidenceLabel,
@@ -206,9 +207,9 @@ export default function ContentSections() {
               </div>
               <p className="text-sm text-gray-500">
                 Curated sailing fares from {DEAL_STATS.cruiseLines.length} lines &middot; {DEAL_STATS.totalDeals} sailings
-                {DEAL_STATS.lastVerified
-                  ? ` · Latest check ${formatLastVerified(DEAL_STATS.lastVerified)}`
-                  : ""}{" "}
+                {DEAL_STATS.priceLastChecked
+                  ? ` · Latest price check ${formatLastVerified(DEAL_STATS.priceLastChecked)}`
+                  : " · Price check dates unverified"}{" "}
                 &middot; See the{" "}
                 <span className="font-semibold text-navy">true cost</span> with our calculator
               </p>
@@ -315,7 +316,7 @@ export default function ContentSections() {
                     <div className="mt-3 pt-3 border-t border-gray-100">
                       <div className="flex items-center justify-between gap-2">
                         <span className="text-[10px] text-gray-400 truncate">
-                          {deal.source} &middot; checked {formatLastVerified(deal.lastVerified)}
+                          Source: {deal.source}
                         </span>
                         <span
                           className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide ${confidenceBadgeClass(deal.confidence)}`}
@@ -324,8 +325,9 @@ export default function ContentSections() {
                         </span>
                       </div>
                       <p className="mt-1 text-[10px] text-gray-400 leading-snug">
-                        {fareFreshness(deal.lastVerified) === "recent" ? "Recently checked" : "Stale / unverified — historical fare"}. Checked {formatLastVerified(deal.lastVerified) || "date unavailable"}. Source: {deal.source}. Confirm current price on {deal.cruiseLine}.
+                        {fareFreshness(deal.priceLastChecked) === "recent" ? "Recently checked" : "Stale / unverified — historical fare"}. {fareCheckLabel(deal.priceLastChecked, deal.lastVerified, deal.nextPriceCheckAt)} Confirm current price and availability on {deal.cruiseLine} before booking.
                       </p>
+                      {deal.priceQuoteBasis && <p className="text-[10px] text-gray-400">Observed quote: {deal.priceQuoteBasis}</p>}
                       <div className="flex items-center justify-between mt-2">
                         {deal.departureDate && (
                           <p className="text-xs text-gray-400">
