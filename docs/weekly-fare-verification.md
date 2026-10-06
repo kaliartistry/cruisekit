@@ -1,5 +1,85 @@
 # Weekly fare verification candidate
 
+## October 6 renewed project goal and decision log
+
+This dedicated project continues in the existing thread and draft PR 79. The
+measurable goal is a permitted source with a complete comparable quote, one real
+sailing verified end to end, then a reliable weekly refresh and a bounded
+verified publication path. The goal is not achieved by a report, rules check,
+fixture, rebuild or approval flag. No working live collector or active fare
+refresh is claimed. Parent coordination handles routine implementation choices;
+only concrete source-access, spending, security, unique-data or release decisions
+need escalation. Preserve the live pricing site and held native work.
+
+| Milestone | Required evidence | Current state / next step |
+| --- | --- | --- |
+| M1: legitimate source | Source-specific collection, public display, attribution and caching rights; exact feed/API scope and update semantics | Blocked: no established usable grant in the reviewed project evidence. Review the access analysis, then use existing legitimate access if supplied or consider one unsent bounded rights inquiry. |
+| M2: one real complete quote | One named sailing, full quote tuple, permitted bounded transport, raw evidence hash, actual observation/provider timestamps and immutable retained/candidate audit | Blocked on M1 and a real collector. No denied source retry or fabricated missing fields. |
+| M3: reviewed first baseline | Specific human review bound to proposal/before/evidence hashes; complete candidate and rollback files; current context and age revalidated | Candidate-only machinery is tested with synthetic fixtures; no real baseline has been approved or adopted. |
+| M4: reliable weekly refresh | Explicit cohort, reused weekly job, bounded requests/batch, stable identity, exact-context comparisons, seven-day checks, quarantine/retention, same-run alerts and repeat/replay/failure tests | Missing permitted collector and approved live context. The draft pilot emits no observations under the present restriction. Keep global coverage distinct from one-sailing success. |
+| M5: bounded publication | Explicit destination/cohort and write authority; atomic seed/ledger/evidence binding; review/CI/build/UI and freshness gates; deployment receipt and rollback | Design/release gate remains open. Current scripts create candidates only. Do not enable unattended writes or merge merely to activate reporting. |
+
+The complete tuple and current validator limits below remain required. A weekly
+cron does not guarantee a run within seven days; delayed/failed checks must leave
+the actual prior observation date and stale fallback intact. A single verified
+cohort cannot make the remaining catalog fresh. A global freshness gate must not
+be weakened or silently converted to a pilot-success gate.
+
+Decision log, 2026-10-06:
+
+- D1 — Reuse this project, PR 79, existing workflows and Issue 52. No new daemon,
+  duplicate task, schedule, paid service, signup, key, outreach or permission
+  change is authorized by the renewed goal.
+- D2 — The bounded public-source pass reviewed Carnival, Princess, Azamara and
+  the already-recorded Widgety API. Carnival reusable-data permission remains
+  unresolved; Princess's light feed lacks exact fares and its US legal link
+  redirected internationally; Azamara's legal read returned 403 and was not
+  retried. Widgety's documented trial requires contacting it for a test key.
+  The vendor tracker records offers/eligibility, not an executed grant or issued
+  CruiseKit key. Absence of an established source does not prove every free
+  source forbidden. Virgin section 11 and denied NCL booking paths stay respected.
+- D3 — Existing project evidence does not document an accepted current fare
+  license or public syndication grant. `docs/data-pipeline.md` describes provider
+  access as pending and licensed alternatives as conditional; the watchlist is
+  a review queue, not a license. Affiliate paths are outside this project.
+- D4 — Prepare a sanitized review packet for actual Claude Desktop Opus 5.5
+  Ultracode, with access and architecture challenged independently. Invocation
+  and foreground ownership stay with the coordinator. No CLI/headless `max`
+  substitution, completed-review claim or private payload is permitted.
+- D5 — New material coupling: `apps/web/package.json` prebuild invokes bundle
+  building/public copying; both canonical and mobile bundles come from shared
+  seed (`scripts/build-data-bundles.mjs`, `scripts/publish-data-bundles.mjs`).
+  Future web fare adoption can therefore change the public mobile feed without
+  changing native code. Before M5, the parent must decide the intended feed
+  scope or approve isolation; native hold cannot be inferred to protect feed data.
+- D6 — Architecture questions for review, not completed fixes: same-run artifact
+  binding, review receipt authority, HTTP cache/provider-age semantics, ingest
+  failure propagation, partial-cohort/global-freshness separation, and a deploy
+  gate that depends on the exact verified candidate. Existing Pages deployment
+  does not depend on the report-only job or its freshness result.
+
+If no existing legitimate access is supplied, the smallest consequential next
+decision is whether to authorize one provider rights inquiry. Its unsent scope:
+one named sailing, US/USD, adult-only explicit occupancy, one cabin/category and
+rate/package; a nonprivate sample/schema and exact source/update timestamps;
+collection/public-display/cache/attribution rights and limits; whether access
+can be granted without account, key, fee, affiliate agreement or booking access.
+Any required new access or contract returns to the parent before action. This is
+an option, not outreach authorization or a commercial commitment.
+
+Public source evidence: [Carnival terms](https://www.carnival.com/about-carnival/legal-notice),
+[Princess terms (redirect destination)](https://www.princess.com/en-int/legal/legal-information),
+[Azamara legal link (403)](https://www.azamara.com/about-azamara/legal),
+[Widgety API access](https://widgety.org/product/api/),
+[Widgety sharing terms](https://widgety.org/terms-conditions/).
+October 6 task-local receipts preserve six hashed public document/homepage
+bodies; none is quote evidence. The review packet is prepared separately on
+internal task storage and is not a Claude response or source-access grant.
+
+Older schedule/gating descriptions below are historical where the October 6
+pilot revision supersedes them. Current draft source policy remains review-only;
+all provider contract versions are null and the verification ledger is empty.
+
 ## October 6 pilot revision — source failure, no verified fare
 
 PR 79 stays draft. The previous blanket gate is removed: the weekly discovery

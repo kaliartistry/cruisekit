@@ -1,5 +1,36 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-06 — renewed automated fare-refresh goal; review coordination pending
+
+Continue the existing dedicated project and draft PR 79. The finish line is a
+permitted complete quote source, one actual sailing verified end to end, then a
+reliable weekly refresh and explicitly bounded verified publication. No active
+collector, fresh fare, new baseline, unattended write or release is claimed.
+The [weekly verification document](weekly-fare-verification.md) now persists
+measurable M1–M5 milestones, a decision log, source-access distinctions and the
+smallest unsent rights-inquiry option. Existing vendor offers are not evidence
+of a current executed grant or issued key. Keep source restrictions and all
+current access/spending/security/release boundaries.
+
+A sanitized packet is prepared on internal task storage for coordinated
+Claude Desktop Opus 5.5 Ultracode review of both access analysis and architecture.
+The packet is `CLAUDE-ULTRACODE-FARE-REVIEW.md` in the existing task directory;
+SHA-256 `9b03b4a742dc575a5125d90462028283ea2030585554b4eb2ca95c68819f4196`.
+No Claude invocation, CLI `max` substitute or foreground control has occurred.
+The code snapshot remains `13b5c8bc48019807d20b00b3a5575c3b14d9e572`; this follow-up
+only updates project documentation. Main/live remains
+`c0e6390c31ed808ac50929aa2bc401bf2e45878d`; frozen native 56 and protected checkouts
+remain untouched. Do not merge this draft as a working refresh system.
+
+Material publication dependency discovered: web prebuild rebuilds and copies
+both canonical and mobile public bundles from shared seed. A future web fare
+change would therefore also alter mobile feed data unless the publication scope
+explicitly permits that effect or isolation is approved. Parent decision is
+required before adopting real fare candidates; no feed was changed. Also review
+same-run artifact binding, authenticated review authority, cache/provider-age
+semantics, ingest failure propagation and exact-candidate deployment gates.
+Existing report, freshness and Pages schedules are independent and unchanged.
+
 ## 2026-10-06 — one-sailing pilot stopped on verified source restriction
 
 PR 79 remains draft/unmerged; main remains `c0e6390c31ed808ac50929aa2bc401bf2e45878d`. The earlier candidate's blanket discovery-import gate was removed: the existing weekly runner and all nine importer files now match production byte-for-byte. An independent pilot step uses the existing weekly job/cadence/permissions, without replacing discovery or publishing fares. Do not merge merely to activate a blocked pilot.
