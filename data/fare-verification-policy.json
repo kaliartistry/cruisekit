@@ -16,7 +16,7 @@
     "carnival": {
       "origin": "https://www.carnival.com",
       "access": "review-required",
-      "reason": "Website terms restrict reuse; an approved reuse/source path is required.",
+      "reason": "Site-material reuse terms need source-specific review; exact quote normalization is unfinished. No blanket permission requirement for factual fares has been established.",
       "rulesUrl": "https://www.carnival.com/about-carnival/legal-notice",
       "rulesCheckedAt": "2026-10-05",
       "contractVersion": null
@@ -32,13 +32,18 @@
     "holland-america": {
       "origin": "https://www.hollandamerica.com",
       "access": "review-required",
-      "reason": "Access/reuse rules and exact cabin, occupancy, rate and taxes contract need review.",
+      "reason": "Robots disallows the booking funnel. Public discovery access/reuse and exact cabin, occupancy, rate and taxes contract remain unreviewed.",
+      "rulesUrl": "https://www.hollandamerica.com/robots.txt",
+      "rulesCheckedAt": "2026-10-06",
       "contractVersion": null
     },
     "virgin-voyages": {
       "origin": "https://www.virginvoyages.com",
-      "access": "review-required",
-      "reason": "Access/reuse rules and exact voyage/cabin/occupancy contract need review.",
+      "access": "blocked",
+      "reason": "Website terms Part I section 11 expressly prohibit manual/automated data collection. No permitted exact quote source established; fare requests stopped.",
+      "rulesUrl": "https://www.virginvoyages.com/terms-and-conditions",
+      "rulesCheckedAt": "2026-10-06",
+      "rulesEvidenceSha256": "ab73d570a1154cc88dab6c50b7f619753c049f827488faf3fcfcf895d06ac9fb",
       "contractVersion": null
     },
     "royal-caribbean": { "access": "blocked", "reason": "Existing source denial; no evasion or CAPTCHA bypass.", "contractVersion": null },

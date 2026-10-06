@@ -1,14 +1,14 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFile, writeFile, mkdtemp, symlink } from "node:fs/promises";
+import { readFile, writeFile, mkdtemp, symlink, mkdir } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
-import { assessFares, boundedReader, robotsAllows, digest, ledgerProblems } from "../lib/fare-verification.mjs";
-import { recheck } from "../run-fare-recheck.mjs";
+import { assessFares, boundedReader, robotsAllows, digest, ledgerProblems, reviewInitialBaselines } from "../lib/fare-verification.mjs";
+import { recheck, reviewBaselineAudit } from "../run-fare-recheck.mjs";
 import { freshnessIssueBody } from "../create-data-freshness-issue.mjs";
 
 const now = new Date("2026-10-05T12:01:00Z");
-const r = { id: "carnival-test", cruiseLine: "carnival", shipName: "Test Ship", departureDate: "2026-11-01", returnDate: "2026-11-06", nights: 5, departurePort: "Miami", returnPort: "Miami", itineraryPorts: ["Nassau"], currency: "USD", priceBasis: "per-person-double-occupancy", taxesAndFeesIncluded: true, sourceUrl: "https://www.carnival.com/test-sailing", startingPrice: 500.25, lastVerified: "2026-08-26", confidence: "verified_from_cruise_line" };
+const r = { id: "carnival-test", cruiseLine: "carnival", shipName: "Test Ship", departureDate: "2026-11-01", returnDate: "2026-11-06", nights: 5, departurePort: "Miami", returnPort: "Miami", itineraryPorts: ["Miami", "Nassau", "Miami"], currency: "USD", priceBasis: "per-person-double-occupancy", taxesAndFeesIncluded: true, sourceUrl: "https://www.carnival.com/test-sailing", startingPrice: 500.25, lastVerified: "2026-08-26", confidence: "verified_from_cruise_line" };
 const c = { provider: r.cruiseLine, shipName: r.shipName, departureDate: r.departureDate, returnDate: r.returnDate, nights: r.nights, departurePort: r.departurePort, returnPort: r.returnPort, itineraryPorts: r.itineraryPorts, currency: r.currency, priceBasis: r.priceBasis, taxesAndFeesIncluded: true, sourceUrl: r.sourceUrl, sourceSailingId: "ship-20261101", cabinCategory: "4A", cabinType: "inside", rateCode: "PUBLIC", packageCode: "NONE", market: "US", contractVersion: "fixture-only-not-live", adults: 2, children: 0, cabins: 1 };
 const p = { publicationMode: "review-only", cadenceDays: 7, largeChangeFraction: 0.15, maxTargets: 400, providers: { carnival: { origin: "https://www.carnival.com", access: "approved", contractVersion: c.contractVersion } } };
 const e = { price: r.startingPrice, observedAt: "2026-09-28T12:00:00Z", lastSuccessfulVerification: "2026-09-28T12:00:00Z", nextCheckAt: "2026-10-05T12:00:00.000Z", contextApprovedAt: "2026-09-28T11:00:00Z", reviewedBy: "owner-fixture", quoteContext: c, evidenceSha256: digest("old quote fixture"), evidenceRef: "old-fixture.json" };
@@ -140,4 +140,95 @@ test("existing failure alert includes current exact-quote blockers and excludes 
   const body = freshnessIssueBody(report, verification);
   assert.match(body, /robots-denied/); assert.match(body, /Publication is disabled/); assert.match(body, /361 fares without confirmed/);
   assert.doesNotMatch(freshnessIssueBody(report, { ...verification, generatedAt: "2026-10-05T11:00:00Z" }), /Exact Quote Recheck/);
+});
+
+test("complete first observations produce reviewable baselines, never silent certification", () => {
+  const empty = { schemaVersion: 1, entries: {} };
+  const seed = [{ ...r, taxesAndFeesIncluded: false }];
+  const a = assessFares({ seed, ledger: empty, policy: p, observations: [o], runStartedAt: "2026-10-05T12:00:00Z", now });
+  assert.equal(a.initialBaselines.length, 1);
+  assert.equal(a.initialBaselines[0].record.taxesAndFeesIncluded, true);
+  assert.equal(a.initialBaselines[0].record.lastVerified, r.lastVerified);
+  assert.equal(a.initialBaselines[0].observation.price, 505.25);
+  assert.equal(a.counts.eligible, 0);
+  assert.deepEqual(a.candidateSeed, seed);
+  assert.deepEqual(a.candidateLedger, empty);
+});
+
+test("specific baseline review adopts only candidates and preserves actual observation time", () => {
+  const empty = { schemaVersion: 1, entries: {} };
+  const proposals = run(o, empty).initialBaselines;
+  const reviews = [{ targetId: r.id, proposalSha256: proposals[0].proposalSha256, reviewedBy: "explicit-owner-fixture-not-real-approval", contextApprovedAt: now.toISOString() }];
+  const a = reviewInitialBaselines({ seed: [r], ledger: empty, proposals, reviews, policy: p, now });
+  assert.equal(a.candidateSeed[0].startingPrice, 505.25);
+  assert.equal(a.candidateSeed[0].lastVerified, "2026-08-26");
+  assert.equal(a.candidateLedger.entries[r.id].lastSuccessfulVerification, o.observedAt);
+  assert.equal(a.candidateLedger.entries[r.id].nextCheckAt, "2026-10-12T12:00:30.000Z");
+  assert.deepEqual(ledgerProblems(a.candidateSeed, a.candidateLedger, p, now), []);
+  assert.equal(r.startingPrice, 500.25);
+  assert.deepEqual(empty.entries, {});
+});
+
+test("baseline reviews reject broad, altered, expired, duplicate or mismatched approval receipts", () => {
+  const empty = { schemaVersion: 1, entries: {} }, proposals = run(o, empty).initialBaselines;
+  const review = { targetId: r.id, proposalSha256: proposals[0].proposalSha256, reviewedBy: "owner-fixture", contextApprovedAt: now.toISOString() };
+  const args = { seed: [r], ledger: empty, proposals, reviews: [review], policy: p, now };
+  for (const changed of [{ reviews: [] }, { reviews: [review, review] }, { reviews: [{ ...review, proposalSha256: digest("wrong") }] }, { reviews: [{ ...review, reviewedBy: "" }] }, { reviews: [{ ...review, contextApprovedAt: "2026-10-06T00:00:00Z" }] }, { reviews: [{ ...review, contextApprovedAt: "2026-10-05T11:59:00Z" }] }, { seed: [{ ...r, startingPrice: 501 }] }, { now: new Date("2026-10-13T12:01:00Z") }, { proposals: [{ ...proposals[0], record: { ...r, startingPrice: 1 } }] }]) assert.throws(() => reviewInitialBaselines({ ...args, ...changed }));
+});
+
+test("incomplete, ambiguous and restricted first observations do not even create baseline proposals", () => {
+  const empty = { schemaVersion: 1, entries: {} };
+  for (const observation of [{ ...o, quoteContext: { ...c, cabinCategory: null } }, { ...o, quoteContext: { ...c, taxesAndFeesIncluded: null } }, { ...o, quoteContext: { ...c, nights: 6 } }, { ...o, quoteContext: { ...c, adults: null } }, { ...o, responseAgeSeconds: 301 }, { ...o, price: 505.251 }, [o, o]]) assert.equal(run(observation, empty).initialBaselines.length, 0);
+  assert.equal(run(o, empty, { ...p, providers: { carnival: { ...p.providers.carnival, access: "blocked" } } }).initialBaselines.length, 0);
+});
+
+test("pilot scope cannot certify unchecked public sailings and rejects hidden/expired/unknown IDs", () => {
+  const seed = [r, { ...r, id: "unchecked" }];
+  const a = assessFares({ seed, ledger: { schemaVersion: 1, entries: { [r.id]: e } }, policy: p, observations: [o], targetIds: [r.id], runStartedAt: "2026-10-05T12:00:00Z", now });
+  assert.equal(a.counts.eligible, 1);
+  assert.deepEqual(a.coverage, { publicTargets: 2, selectedTargets: 1, outsideScope: 1, globalCoverage: false });
+  for (const ids of [[], [r.id, r.id], ["unknown"]]) assert.throws(() => assessFares({ seed, ledger: { schemaVersion: 1, entries: {} }, policy: p, observations: [], targetIds: ids, runStartedAt: "2026-10-05T12:00:00Z", now }), /pilot targets/);
+});
+
+test("reviewed first baseline supports a later weekly check without manufacturing dates", () => {
+  const empty = { schemaVersion: 1, entries: {} }, proposals = run(o, empty).initialBaselines;
+  const first = reviewInitialBaselines({ seed: [r], ledger: empty, proposals, reviews: [{ targetId: r.id, proposalSha256: proposals[0].proposalSha256, reviewedBy: "explicit-owner-fixture", contextApprovedAt: now.toISOString() }], policy: p, now });
+  const nextNow = new Date("2026-10-12T12:01:00Z"), next = { ...o, price: 505.75, observedAt: "2026-10-12T12:00:30Z", evidenceSha256: digest("next-week fixture") };
+  const second = assessFares({ seed: first.candidateSeed, ledger: first.candidateLedger, observations: [next], policy: p, runStartedAt: "2026-10-12T12:00:00Z", now: nextNow });
+  assert.equal(second.counts.eligible, 1); assert.equal(second.candidateSeed[0].startingPrice, 505.75);
+  assert.equal(second.candidateLedger.entries[r.id].nextCheckAt, "2026-10-19T12:00:30.000Z");
+  assert.equal(second.candidateSeed[0].lastVerified, r.lastVerified);
+});
+
+test("alerts distinguish actual scoped source failure from public fare verification", () => {
+  const report = { generatedAt: "2026-10-06T12:00:00Z", counts: { blockers: 361, warnings: 0, unverifiedPublicFares: 361 }, thresholds: { maxPublicAgeDays: 7 }, blockers: [], byCruiseLine: [] };
+  const pilot = { generatedAt: "2026-10-06T11:00:00Z", targetId: "pilot", access: { status: "terms-collection-prohibited", checkedAt: "2026-10-06T10:59:00Z", url: "https://www.virginvoyages.com/terms-and-conditions", evidenceSha256: digest("fixture") }, requests: 1, fareRequests: 0, completeQuotes: 0, verification: { coverage: { outsideScope: 360 } }, missingEvidence: ["taxes"] };
+  assert.match(freshnessIssueBody(report, null, pilot), /360 public sailings outside this pilot/);
+  assert.match(freshnessIssueBody(report, null, pilot), /0 fare requests, 0 complete quotes/);
+  assert.doesNotMatch(freshnessIssueBody(report, null, { ...pilot, generatedAt: "2026-10-05T11:00:00Z" }), /Scoped Virgin Pilot/);
+});
+
+test("immutable first-observation audit can become reviewed candidates with revalidated raw evidence", async () => {
+  const dir = await mkdtemp(resolve(tmpdir(), "cruisekit-baseline-fixture-"));
+  const empty = { schemaVersion: 1, entries: {} }, policy = { ...p, transport: { maxBytes: 2000000 } };
+  await mkdir(resolve(dir, "data/seed"), { recursive: true });
+  for (const [file, value] of Object.entries({ "data/seed/sailings.json": [r], "data/seed/fare-verifications.json": empty, "data/fare-verification-policy.json": policy, "observations.json": [o] })) await writeFile(resolve(dir, file), JSON.stringify(value));
+  await writeFile(resolve(dir, "new-fixture.json"), "new quote fixture");
+  const auditDirectory = resolve(dir, "audit");
+  const a = await recheck({ dataDirectory: dir, output: auditDirectory, observationsFile: resolve(dir, "observations.json"), startedAt: "2026-10-05T12:00:00Z", now });
+  assert.equal(a.counts.initialBaselines, 1); assert.equal(a.ready, false);
+  const proposals = JSON.parse(await readFile(resolve(auditDirectory, "initial-baselines.pending.json")));
+  const reviewsFile = resolve(dir, "reviews.json");
+  await writeFile(reviewsFile, JSON.stringify([{ targetId: r.id, proposalSha256: proposals[0].proposalSha256, reviewedBy: "explicit-owner-fixture-not-live-approval", contextApprovedAt: now.toISOString() }]));
+  const output = resolve(dir, "reviewed-candidates");
+  const result = await reviewBaselineAudit({ auditDirectory, reviewsFile, output, dataDirectory: dir, now });
+  assert.deepEqual(result, { publicationEnabled: false, reviewedCandidates: 1, inputsUnchanged: true });
+  assert.equal(JSON.parse(await readFile(resolve(output, "sailings.candidate.json")))[0].startingPrice, 505.25);
+  const entry = JSON.parse(await readFile(resolve(output, "fare-verifications.candidate.json"))).entries[r.id];
+  assert.equal(entry.observedAt, o.observedAt);
+  assert.equal((await readFile(resolve(output, entry.evidenceRef))).toString(), "new quote fixture");
+  assert.equal(JSON.parse(await readFile(resolve(dir, "data/seed/sailings.json")))[0].startingPrice, 500.25);
+  assert.deepEqual(JSON.parse(await readFile(resolve(dir, "data/seed/fare-verifications.json"))), empty);
+  await writeFile(resolve(auditDirectory, proposals[0].observation.evidenceRef), "tampered");
+  await assert.rejects(reviewBaselineAudit({ auditDirectory, reviewsFile, output: resolve(dir, "invalid"), dataDirectory: dir, now }), /raw evidence does not match/);
 });

@@ -14,20 +14,21 @@ Each importer should:
 Promotion to public data happens in a separate review step.
 
 The weekly job retains its Monday 11:34 UTC schedule and report-only permissions.
-`data/fare-verification-policy.json` gates source access before importer execution;
-blocked or unreviewed sources are reported without collecting quotes. Reviews
-require a successful import from the same run, never old staging. The exact-quote
-verification stage emits an immutable audit, before files and candidate files.
-The job fails visibly on blocked checks or stale/unverified public fares and uses
-the existing needs-kali freshness issue. It never commits, pushes or publishes.
+The original discovery runner and all provider importer files are preserved
+byte-for-byte; the earlier candidate's blanket source-policy gate was removed.
+An independent one-sailing pilot passes scoped observation files into the verifier.
+It currently stops on Virgin's explicit collection restriction, emits zero quotes,
+and fails visibly without certifying the catalog. Existing discovery is not a
+replacement quote adapter or evidence of source permission; none was executed
+during this pilot. No commit, push or publication path is added.
 
-No source adapter is currently approved to verify an exact fare automatically.
-The NCL date-specific path is disallowed by its current robots file, and Carnival
-reuse permission needs review. Other provider access and quote contracts remain
-unreviewed. The existing discovery importers below are not approved quote adapters.
-Do not toggle access to approved without resolving access rules and implementing
-and testing a bounded source-specific adapter. No evasion, credentials or paid
-source is authorized by this candidate.
+No complete permitted live quote adapter has yet been established. Virgin terms
+Part I section 11 explicitly prohibit data collection; NCL robots disallows the
+date-specific path; Holland robots disallows its booking funnel. Carnival's
+material-reuse terms need precise review without presuming a blanket permission
+requirement for price facts. Public research and missing adapter implementation
+are already authorized engineering. A policy toggle cannot replace an actual
+source contract/field mapping. No evasion, credentials or paid source is added.
 
 Legacy staging `lastVerified`/`generatedAt` values describe importer/record history;
 they do not populate `data/seed/fare-verifications.json`. Promotion preserves the

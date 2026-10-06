@@ -1,5 +1,103 @@
 # Weekly fare verification candidate
 
+## October 6 pilot revision — source failure, no verified fare
+
+PR 79 stays draft. The previous blanket gate is removed: the weekly discovery
+runner and all nine importer files match production `c0e6390c` byte-for-byte.
+The pilot is an independent step in the existing Monday 11:34 UTC job; it does
+not replace discovery. Cron/permissions/Pages behavior remain unchanged. It must
+not be merged as an assertion that a working fare updater exists. Existing
+discovery scripts were not executed during this pilot, and preservation does not
+certify their source permissions or fare semantics.
+
+The chosen existing record is `virgin-voyages-brilliant-lady-20261024-5nlah`,
+voyage `BR2610245NLAH`, October 24–29 (five nights). Its stored USD 1,192/per-cabin
+amount and false tax flag are historical, unverified inputs, not current facts.
+
+[Virgin website terms](https://www.virginvoyages.com/terms-and-conditions),
+effective March 18, 2026, Part I section 11, expressly prohibit collecting site
+data through manual/automated crawling or scraping. The actual bounded pilot
+read that source at `2026-10-06T00:46:58.362Z`, evidence SHA-256
+`540bf34142f3eb2c0ce164ced2cb148a8dd94bbf9061da4f7f6d2d3c1cf08454`, and stopped:
+one terms request, zero fare requests, zero complete quotes/baseline proposals,
+one retained fare, 360 other upcoming public records outside scope, unchanged
+seed/ledger, expected exit 1. The terms check is not a price verification date.
+No provider permission, credentials or permitted alternative source was obtained.
+
+The existing Virgin discovery shape has voyage/package IDs and some dates,
+headline/dated price strings and ports. It does not prove exact cabin category,
+rate plan, guest/cabin counts, US market, returned USD currency or tax inclusion.
+`inspectVirginDiscovery` diagnoses those gaps, preserves decimal cents and never
+substitutes the card price, guesses a ship from a prefix, or emits a complete
+quote. Synthetic fixtures are clearly marked; none is live evidence. A complete
+Virgin live quote adapter cannot be established against the prohibited website.
+
+The fresh [Holland robots](https://www.hollandamerica.com/robots.txt) evidence
+at `2026-10-06T00:38:34.819Z` has SHA-256
+`d6a726e4c1885c0d89251ca83fb2c456d22481bab4fda092955b8ed9971eed05` and disallows
+the booking funnel. Its public discovery access/terms and exact quote contract
+remain unresolved; no alternate quote was collected. NCL's exact dated path
+remains denied. Carnival's broad material-reuse terms need precise source review;
+they have not established a blanket permission requirement for factual fare
+research. Missing normalizers and source-contract review are engineering work,
+not new Kali permission requirements. Respect actual restrictions and seek a
+permitted free source; no bypass, private access, key or paid service is added.
+
+## Working observation and first-baseline path
+
+The verifier now consumes explicit scoped observations:
+
+```sh
+pnpm run data:fare:recheck --target EXACT_EXISTING_ID --observations /local/run/observations.json --run-started-at CURRENT_RUN_UTC --output /local/run/audit
+```
+
+The source adapter must supply the full existing quote tuple and hashed raw
+evidence. `coverage.outsideScope` remains explicit; `ready` cannot be true for
+a partial catalog. The public freshness gate is unchanged and does not treat
+pilot success or candidate dates as public certification.
+
+Complete first observations now emit `initial-baselines.pending.json`, including
+the exact before hashes, proposed record, evidence/observation and proposal hash.
+They do not change seed or create an approved ledger entry. First proposals may
+correct legacy unit/tax metadata only with an explicit complete source context;
+sailing/itinerary identity must match. Missing/unknown/denied evidence produces
+no proposal. The selected Virgin source failure produced an empty pending file.
+
+After a specific human data review, supply a JSON array of receipts with
+`targetId`, `proposalSha256`, `reviewedBy` and `contextApprovedAt`. The tool does
+not manufacture approvals or accept broad provider approval as a data review:
+
+```sh
+pnpm run data:fare:recheck --review-audit /local/run/audit --reviews /local/specific-reviews.json --output /local/reviewed-candidates
+```
+
+This revalidates current before hashes, context, raw evidence hashes/path bounds,
+review identity/timing and the seven-day observation age. It writes separate
+immutable candidate/before/evidence files, never seed, feeds, a commit or deploy.
+Approval time never replaces observation time. Specific adoption remains a
+reviewed data PR/release action. Once adopted, later weekly exact-context checks
+can produce ordinary candidate changes; >=15%/changed/ambiguous results still
+retain the prior fare for review. Fixture integration proves this path without
+representing its synthetic prices or receipts as actual quotes/approvals.
+
+The independent weekly pilot passes an observations file and explicit target to
+the verifier. Under current Virgin terms that file is empty and the job fails
+visibly. It reports actual source failure/evidence/coverage via the existing
+Issue 52 updater and uploaded dated artifacts. If terms become inconclusive it
+still stops; absence of a detected restriction does not establish a contract or
+activate a collector. The selected departure expires October 24; the pilot then
+fails before access until a new concrete target is selected, never silently
+substituting a different sailing.
+
+Remaining path: establish a permitted free exact-quote source; implement its
+actual field mapping/collector and prove one complete live quote; prepare/review
+one initial baseline; then expand explicitly bounded cohorts with coverage tests.
+Source restriction/research and unfinished implementation are distinct. No real
+verified-fare dry run has passed. Pricing-data adoption, website/native feed
+publication and unattended production writes remain specifically gated.
+
+## Previous candidate description (superseded where noted above)
+
 Status: local candidate; publication disabled. Live remains
 `c0e6390c31ed808ac50929aa2bc401bf2e45878d`. No public fare has been updated,
 new schedule enabled, or staged change approved. This foundation does not

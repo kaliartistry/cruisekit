@@ -62,13 +62,16 @@ async function ensureLabel(label) {
   await run("gh", ["label", "create", label, "--color", label === "needs-kali" ? "B60205" : "D93F0B"]);
 }
 
-export function freshnessIssueBody(report, verification = null) {
+export function freshnessIssueBody(report, verification = null, pilot = null) {
   const currentVerification = verification && verification.generatedAt?.slice(0, 10) === report.generatedAt?.slice(0, 10) ? verification : null;
+  const currentPilot = pilot && pilot.generatedAt?.slice(0, 10) === report.generatedAt?.slice(0, 10) ? pilot : null;
   return `## Approval Type
 
 Production cruise data freshness and price/source review.
 
 ${currentVerification ? `## Exact Quote Recheck\n\nRun: ${currentVerification.generatedAt}. Eligible candidates: ${currentVerification.counts.eligible}; retained fares: ${currentVerification.counts.retained}; quarantined unmatched observations: ${currentVerification.counts.quarantined}. Publication is disabled.\n\n${(currentVerification.sourceChecks ?? []).map(s => `- Actual rules attempt ${s.provider}: ${s.status}, ${s.checkedAt}, ${s.requests} request(s), ${s.fareRequests} fare requests.`).join("\n")}\n\n${currentVerification.providerReadiness.map(p => `- ${p.provider}: ${p.access}. ${p.reason} Policy rules checked: ${p.policyRulesCheckedAt ?? "pending"}.`).join("\n")}\n\nAudit/rollback files: ${currentVerification.paths.audit}. Job/scrape/build dates do not prove prices. Missing/sold-out/changed results do not prove cancellation.\n` : ""}
+
+${currentPilot ? `## Scoped Virgin Pilot\n\nTarget: ${currentPilot.targetId}. Actual source check: ${currentPilot.access.status} at ${currentPilot.access.checkedAt}. Source: ${currentPilot.access.url}. Evidence SHA-256: ${currentPilot.access.evidenceSha256 ?? "unavailable"}.\n\n${currentPilot.requests} rules request(s), ${currentPilot.fareRequests} fare requests, ${currentPilot.completeQuotes} complete quotes. ${currentPilot.verification.coverage.outsideScope} public sailings outside this pilot; global freshness is not certified. Missing evidence: ${currentPilot.missingEvidence.join(", ")}. No source denial bypass or public write.\n` : ""}
 
 ## Why Automation Paused
 
@@ -94,7 +97,7 @@ ${briefFindingList(report.blockers)}
 
 ## Recommended Action
 
-Review source access and implement an approved bounded quote adapter first. Approve exact initial cabin/rate/package/occupancy/currency/tax contexts with raw evidence in the fare ledger. Review the dated before/candidate audit; old staging or a successful scrape is insufficient. For an owner-approved candidate, run:
+Public-source research, adapter implementation and local tests are authorized engineering. Respect actual source restrictions; internal review-required labels do not establish provider permission requirements. Prepare exact initial cabin/rate/package/occupancy/currency/tax baseline proposals with raw evidence, then review specific data candidates. Old staging or a successful scrape is insufficient. For an owner-approved candidate, run:
 
 \`\`\`bash
 pnpm run data:build
@@ -117,7 +120,8 @@ Before treating unverified fares as current or enabling unattended production wr
 async function main() {
   const report = await loadJson("data/reports/latest-data-freshness.json");
   const verification = await loadJson("data/reports/latest-fare-verification.json").catch(() => null);
-  const issueBody = freshnessIssueBody(report, verification);
+  const pilot = await loadJson("data/reports/latest-virgin-fare-pilot.json").catch(() => null);
+  const issueBody = freshnessIssueBody(report, verification, pilot);
 
   for (const label of labels) await ensureLabel(label);
 

@@ -27,7 +27,7 @@ export function contextProblems(c, record, provider) {
     if (c[key] !== expected) problems.push(`context-${key}`);
   }
   if (!date(c.departureDate) || !date(c.returnDate) || (Date.parse(c.returnDate) - Date.parse(c.departureDate)) / DAY !== c.nights) problems.push("nights-date-mismatch");
-  if (!Array.isArray(c.itineraryPorts) || JSON.stringify(c.itineraryPorts) !== JSON.stringify(record.itineraryPorts)) problems.push("context-itinerary");
+  if (!Array.isArray(c.itineraryPorts) || c.itineraryPorts.length < 2 || !c.itineraryPorts.every(text) || JSON.stringify(c.itineraryPorts) !== JSON.stringify(record.itineraryPorts)) problems.push("context-itinerary");
   if (!["sourceSailingId", "cabinCategory", "rateCode", "packageCode", "market", "contractVersion"].every(k => text(c[k]))) problems.push("incomplete-cabin-rate-package-market");
   if (!["inside", "oceanview", "balcony", "suite"].includes(c.cabinType)) problems.push("unknown-cabin-mapping");
   if (c.contractVersion !== provider.contractVersion) problems.push("unreviewed-source-contract");
@@ -59,19 +59,22 @@ export function ledgerProblems(seed, ledger, policy, now = new Date()) {
 }
 
 /** Only returns candidate files. Never writes seed, commits, pushes or publishes. */
-export function assessFares({ seed, ledger, observations, policy, runStartedAt, now = new Date() }) {
+export function assessFares({ seed, ledger, observations, policy, runStartedAt, targetIds = null, now = new Date() }) {
   if (policy.publicationMode !== "review-only" || policy.cadenceDays !== 7 || policy.largeChangeFraction !== 0.15) throw new Error("Unapproved verification policy");
   if (!validInstant(runStartedAt) || Date.parse(runStartedAt) > now.getTime() || now.getTime() - Date.parse(runStartedAt) > 45 * 60000) throw new Error("Invalid or expired run start");
   const ledgerErrors = ledgerProblems(seed, ledger, policy, now);
   if (ledgerErrors.length) throw new Error(ledgerErrors.join("\n"));
-  const targets = seed.filter(r => r.confidence !== "internal_do_not_publish" && r.departureDate >= now.toISOString().slice(0, 10));
+  const publicTargets = seed.filter(r => r.confidence !== "internal_do_not_publish" && r.departureDate >= now.toISOString().slice(0, 10));
+  if (targetIds !== null && (!Array.isArray(targetIds) || !targetIds.length || new Set(targetIds).size !== targetIds.length || targetIds.some(id => !publicTargets.some(r => r.id === id)))) throw new Error("Invalid or expired pilot targets");
+  const targets = targetIds === null ? publicTargets : publicTargets.filter(r => targetIds.includes(r.id));
   if (targets.length > policy.maxTargets || observations.length > policy.maxTargets * 4) throw new Error("Batch bound exceeded");
   const candidateSeed = structuredClone(seed);
   const candidateLedger = structuredClone(ledger);
   const index = new Map(candidateSeed.map((r, i) => [r.id, i]));
   const decisions = [];
-  const targetIds = new Set(targets.map(r => r.id));
-  for (const o of observations) if (!targetIds.has(o.targetId)) decisions.push({ id: o.targetId ?? null, status: "quarantined", reasons: ["unmatched-or-new-sailing"] });
+  const initialBaselines = [];
+  const selectedIds = new Set(targets.map(r => r.id));
+  for (const o of observations) if (!selectedIds.has(o.targetId)) decisions.push({ id: o.targetId ?? null, status: "quarantined", reasons: ["unmatched-or-new-sailing"] });
   for (const r of targets) {
     const prior = ledger.entries[r.id];
     const p = policy.providers[r.cruiseLine];
@@ -88,13 +91,21 @@ export function assessFares({ seed, ledger, observations, policy, runStartedAt, 
       if (!Number.isFinite(o.responseAgeSeconds) || o.responseAgeSeconds < 0 || o.responseAgeSeconds > 300) reasons.push("unknown-or-cached-response-age");
       if (!/^[a-f0-9]{64}$/.test(o.evidenceSha256 ?? "") || !text(o.evidenceRef)) reasons.push("missing-raw-evidence");
       if (!money(o.price)) reasons.push("invalid-price-or-rounding");
-      reasons.push(...contextProblems(o.quoteContext, r, p));
+      // First observations may correct legacy unit/tax metadata, only in a
+      // separately reviewed proposal. Sailing/itinerary identity must still match.
+      const contextRecord = prior ? r : { ...r, priceBasis: o.quoteContext?.priceBasis, taxesAndFeesIncluded: o.quoteContext?.taxesAndFeesIncluded };
+      reasons.push(...contextProblems(o.quoteContext, contextRecord, p));
       if (prior && contextKey(prior.quoteContext) !== contextKey(o.quoteContext)) reasons.push("changed-quote-context");
       if (prior && validInstant(o.observedAt) && Date.parse(o.observedAt) <= Date.parse(prior.lastSuccessfulVerification)) reasons.push("replayed-observation");
       if (!money(r.startingPrice)) reasons.push("initial-price-needs-owner-review");
       else if (money(o.price) && Math.abs(o.price - r.startingPrice) / r.startingPrice >= policy.largeChangeFraction - 1e-12) reasons.push("large-price-change-needs-owner-review");
     }
     reasons = [...new Set(reasons)];
+    const baselineReviewReasons = ["initial-quote-context-needs-owner-review", "initial-price-needs-owner-review", "large-price-change-needs-owner-review"];
+    if (!prior && rows.length === 1 && reasons.every(reason => baselineReviewReasons.includes(reason))) {
+      const proposal = { schemaVersion: 1, targetId: r.id, beforeSeedSha256: digest(seed), beforeLedgerSha256: digest(ledger), record: { ...r, startingPrice: o.price, priceBasis: o.quoteContext.priceBasis, taxesAndFeesIncluded: o.quoteContext.taxesAndFeesIncluded }, observation: structuredClone(o) };
+      initialBaselines.push({ ...proposal, proposalSha256: digest(proposal), status: "pending-specific-data-review" });
+    }
     if (reasons.length) {
       decisions.push({ id: r.id, provider: r.cruiseLine, status: "retained", reasons, lastSuccessfulVerification: prior?.lastSuccessfulVerification ?? null, lastRecordReview: r.lastVerified });
       continue;
@@ -103,7 +114,33 @@ export function assessFares({ seed, ledger, observations, policy, runStartedAt, 
     candidateLedger.entries[r.id] = { ...prior, price: o.price, observedAt: o.observedAt, lastSuccessfulVerification: o.observedAt, nextCheckAt: new Date(Date.parse(o.observedAt) + policy.cadenceDays * DAY).toISOString(), sourceTimestamp: o.sourceTimestamp ?? null, evidenceSha256: o.evidenceSha256, evidenceRef: o.evidenceRef };
     decisions.push({ id: r.id, provider: r.cruiseLine, status: "eligible-candidate", previousPrice: r.startingPrice, price: o.price, observedAt: o.observedAt, sourceTimestamp: o.sourceTimestamp ?? null, responseAgeSeconds: o.responseAgeSeconds, evidenceSha256: o.evidenceSha256, evidenceRef: o.evidenceRef, nextCheckAt: candidateLedger.entries[r.id].nextCheckAt, reasons: [] });
   }
-  return { schemaVersion: 1, generatedAt: now.toISOString(), runStartedAt, mode: "review-only-no-public-writes", before: { seedSha256: digest(seed), ledgerSha256: digest(ledger) }, after: { seedSha256: digest(candidateSeed), ledgerSha256: digest(candidateLedger) }, counts: { targets: targets.length, eligible: decisions.filter(d => d.status === "eligible-candidate").length, retained: decisions.filter(d => d.status === "retained").length, quarantined: decisions.filter(d => d.status === "quarantined").length }, decisions, candidateSeed, candidateLedger };
+  return { schemaVersion: 1, generatedAt: now.toISOString(), runStartedAt, mode: "review-only-no-public-writes", before: { seedSha256: digest(seed), ledgerSha256: digest(ledger) }, after: { seedSha256: digest(candidateSeed), ledgerSha256: digest(candidateLedger) }, coverage: { publicTargets: publicTargets.length, selectedTargets: targets.length, outsideScope: publicTargets.length - targets.length, globalCoverage: targets.length === publicTargets.length }, counts: { targets: targets.length, eligible: decisions.filter(d => d.status === "eligible-candidate").length, initialBaselines: initialBaselines.length, retained: decisions.filter(d => d.status === "retained").length, quarantined: decisions.filter(d => d.status === "quarantined").length }, decisions, initialBaselines, candidateSeed, candidateLedger };
+}
+
+/** Materialize only specifically reviewed baseline proposals, still outside seed.
+ * Review receipts are supplied by a human-approved data review, never generated.
+ */
+export function reviewInitialBaselines({ seed, ledger, proposals, reviews, policy, now = new Date() }) {
+  if (!Array.isArray(proposals) || !Array.isArray(reviews) || !reviews.length || new Set(reviews.map(r => r.targetId)).size !== reviews.length) throw new Error("Specific baseline review receipts required");
+  if (policy.publicationMode !== "review-only" || policy.cadenceDays !== 7 || policy.largeChangeFraction !== 0.15) throw new Error("Unapproved verification policy");
+  const candidateSeed = structuredClone(seed), candidateLedger = structuredClone(ledger);
+  for (const review of reviews) {
+    const matches = proposals.filter(p => p.targetId === review.targetId);
+    if (matches.length !== 1) throw new Error("Missing or ambiguous baseline proposal");
+    const { proposalSha256, status, ...proposal } = matches[0];
+    if (status !== "pending-specific-data-review" || digest(proposal) !== proposalSha256 || proposalSha256 !== review.proposalSha256 || !text(review.reviewedBy) || !validInstant(review.contextApprovedAt) || Date.parse(review.contextApprovedAt) > now.getTime()) throw new Error("Invalid or mismatched baseline review");
+    if (proposal.beforeSeedSha256 !== digest(seed) || proposal.beforeLedgerSha256 !== digest(ledger)) throw new Error("Baseline inputs changed; review again");
+    if (ledger.entries[proposal.targetId]) throw new Error("Existing baseline cannot be overwritten");
+    const index = seed.findIndex(r => r.id === proposal.targetId), o = proposal.observation;
+    if (index < 0 || seed[index].departureDate < now.toISOString().slice(0, 10) || proposal.record.lastVerified !== seed[index].lastVerified) throw new Error("Invalid baseline identity or historical date");
+    const assessment = assessFares({ seed, ledger, observations: [o], policy, targetIds: [proposal.targetId], runStartedAt: o.observedAt, now: new Date(o.observedAt) });
+    if (assessment.initialBaselines.length !== 1 || assessment.initialBaselines[0].proposalSha256 !== proposalSha256 || now.getTime() - Date.parse(o.observedAt) > policy.cadenceDays * DAY || Date.parse(review.contextApprovedAt) < Date.parse(o.observedAt)) throw new Error("Incomplete, expired or altered baseline evidence");
+    candidateSeed[index] = proposal.record;
+    candidateLedger.entries[proposal.targetId] = { price: o.price, quoteContext: o.quoteContext, observedAt: o.observedAt, lastSuccessfulVerification: o.observedAt, nextCheckAt: new Date(Date.parse(o.observedAt) + policy.cadenceDays * DAY).toISOString(), sourceTimestamp: o.sourceTimestamp ?? null, evidenceSha256: o.evidenceSha256, evidenceRef: o.evidenceRef, reviewedBy: review.reviewedBy, contextApprovedAt: review.contextApprovedAt };
+  }
+  const errors = ledgerProblems(candidateSeed, candidateLedger, policy, now);
+  if (errors.length) throw new Error(errors.join("\n"));
+  return { candidateSeed, candidateLedger };
 }
 
 /** Longest-match robots rules; unknown responses fail closed in the caller. */
