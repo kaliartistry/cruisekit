@@ -1,5 +1,153 @@
 # Weekly fare verification candidate
 
+## October 6 bounded Carnival applicability review — no fare collection
+
+This source-specific pass separates personal viewing, product evaluation,
+automated recording and customer redistribution. It establishes no complete
+permitted quote source and no legal conclusion about all price facts. No fare
+endpoint, booking page, account or trial was accessed. Current Carnival policy
+remains `review-required` with null contract; existing discovery is preserved.
+
+Primary text, read October 6:
+
+- [US website terms](https://www.carnival.com/en-US/about-carnival/legal-notice/website-terms-and-conditions),
+  **OWNERSHIP AND RESTRICTIONS ON USE**, first two paragraphs: copied material is
+  limited to one personal home-use copy; the exact qualifier is **“personal,
+  non-commercial home use only”**. Other-site use is restricted.
+- [Copyright section](https://www.carnival.com/en-US/about-carnival/legal-notice/copyright),
+  third paragraph: website copying/modification requires **“prior written
+  authorization”**. The next paragraph's travel-agent exception depends on
+  Carnival's agency guidelines; its following image restriction concerns images.
+- The same combined legal page includes Carnival's mobile-app EULA section
+  2.2(j), restricting automated queries made *using that application*. This is
+  not a demonstrated general website scraping clause. The website section has
+  no located scraper/robot-specific clause. No effective date is shown for those
+  website paragraphs; the privacy date and copyright year are not their date.
+- [Current robots](https://www.carnival.com/robots.txt) lists search/error and
+  login/enrollment-query exclusions, not `/cruisesearch/api/search`. No robots
+  denial for that path was found. This is not a reuse license.
+
+| Proposed action | Bounded conclusion |
+| --- | --- |
+| Person views a trip for themselves | Not expressly barred by the reviewed copying clauses. |
+| Person records a quote/screenshots for CruiseKit | Product evaluation is not established as personal home use; scope unresolved. |
+| Agent records weekly factual quotes | No specific web automation prohibition located; recording/reuse scope remains unresolved. |
+| CruiseKit stores/transforms/displays quotes | No applicable grant established; bare facts versus protected material and contract applicability remain unresolved. |
+
+A free product does not establish the personal-use exception. This is a source
+applicability question, not a ruling that price numbers are copyrighted or that
+every factual read requires written permission. If proceeding without source
+clarification is proposed, counsel should assess the specific fact-only method,
+protected selection/layout, contractual assent/enforceability and intended use.
+Owner risk acceptance must not be recorded as Carnival permission. Concrete
+terms interpretation is useful; another broad provider search is not required.
+
+### Documented routes and source completeness
+
+Carnival's [GoCCL portal](https://www.goccl.com/) and linked
+[agency policy](https://www.goccl.com/en/travel-agency-policy) redirect to login.
+The review stopped there, without authentication or alternate access. The
+travel-agent exception is not evidence CruiseKit qualifies or has a feed grant.
+
+[Widgety's API](https://widgety.org/product/api/) is a documented supplier route
+for eligible agencies/technology firms, with pricing/availability and website
+content. It requires contact for a time-limited two-operator test key. Its
+[markets page](https://widgety.org/markets/) links a USD list, but the linked
+public document returned no readable text in this review; Carnival/USD coverage
+is unconfirmed. Marketing coverage, historical trial eligibility and local
+vendor notes are not current access, caching, evidence-retention or display
+rights. No key, contract, fee, affiliate path or inquiry was activated. Other
+local vendor proposals remain prospective; no new paid-provider pass was made.
+
+Independent local audit confirms `scripts/ingest/carnival.mjs` requests
+`/cruisesearch/api/search` with two adults/USD/locality=1 and pagination, without
+exact sailing/cabin/rate selection (lines 17, 160–183). Optional room price,
+currency/category/rate fields are saved separately (69–82). Canonical price is
+the minimum positive room amount without excluding sold-out rooms, or a lead
+price fallback (85–90, 113); category/rate association is lost. Currency can
+come from a different room, then defaults to USD (133). Unit/tax flags are
+hardcoded (134–135); ports use the lead sailing's schedule and `lastVerified`
+uses import day (104–112, 141–150). Reachability and those fields cannot certify
+a current exact quote. No importer was executed during this review.
+
+The possible inquiry example is the *historical catalog reference*
+`carnival-carnival-valor-20261022-22098`: Carnival Valor, October 22–26, four
+nights, New Orleans round trip. These are not freshly confirmed source facts.
+Its stored itinerary contains only Cozumel, while the current validator requires
+at least two entries and exact seed agreement. Even after source scope is
+established, this target cannot qualify unchanged; the source's complete ordered
+itinerary and the intended normalized representation require explicit review.
+One-port itineraries can be a valid design case; do not pad duplicate ports or
+invent stops to satisfy the current minimum, or label the voyage unavailable.
+No seed correction or cancellation is inferred from this mismatch.
+
+### Minimum unsent rights inquiry
+
+An owner-review draft is preserved in the internal task directory as
+`CARNIVAL-FARE-RIGHTS-INQUIRY-DRAFT.md`; it has not been sent. Ask Carnival to
+identify a permitted no-cost method or supplied nonprivate example for **one
+internal US/USD adult-only cabin quote**, separately answering human recording,
+automated weekly checks and eventual web/mobile fact display; attribution,
+retention/cache limits; exact cabin/rate/package/occupancy/tax/itinerary fields
+and price observation/cache timestamps. No signup, key, trial, acceptance,
+payment or production use is requested or authorized by this draft.
+
+Practical decision: authorize the single information-only inquiry through a
+confirmed appropriate contact, or obtain a narrow counsel interpretation of the
+fact-only internal method before treating it as permitted. Pending that choice,
+stop Carnival fare collection and preserve the existing dated/stale fallback.
+One complete quote is still unproven; weekly verification remains unfinished.
+
+## October 6 completed Claude consultation — browser interim option
+
+The actual initial packet review and one focused browser follow-up completed in
+the same native Desktop Code session, visibly Opus 5.5 / Plan / Effort Ultracode.
+This was a bounded single-context review with no source/code/CI audit by Claude,
+no fanout, no new inference on final collection and no CLI effort substitution.
+Full substantive responses and completion/model/hash receipts are retained in
+the existing internal task directory, alongside the reconciliation. Foreground
+was released immediately after collection. The prepared/pending status below is
+historical; no fresh quote or release is inferred from this completed review.
+
+Decision log additions:
+
+- D7 — A small human-browser study may be useful only once applicable terms or
+  existing legitimate access establish the intended provider-specific scope.
+  Bespoke written grants are not established as a universal requirement for
+  factual human reads. Claude corrected that initial recommendation's breadth
+  and withdrew its Azamara 403 inference/retry suggestion. No provider in the
+  supplied packet is presently established as allowed for the study. Ordinary
+  viewing, systematic manual recording, automation and public reuse differ.
+- D8 — An interim study could first prove one complete real future quote, then
+  measure 3–5 explicitly selected voyages twice, 14 days apart, including actual
+  incomplete/unavailable outcomes. This is exploratory, not source collection
+  authorization or a Muse handoff. Muse browser control remains automated.
+- D9 — Keep seven-day freshness. Fourteen-day visits cannot maintain a current
+  subset for the full cycle or clear the stale global catalog. Unknown browser
+  cache/backend age remains unknown. Current verifier requires a distinct
+  evidence contract before accepting human observations; do not insert age 0,
+  fabricate missing tuple fields or use policy/build dates as checks.
+- D10 — Preserve pending first-baseline review versus later eligible candidates.
+  The initial audit retains old input and does not set `scopeReady`; specific
+  reviewed candidates do not publish themselves. No global gate is relaxed and
+  no prior blanket discovery-import gate is restored by Claude's recommendation.
+- D11 — A reasonable concrete next source-research candidate is Carnival's full
+  applicable US collection/reuse scope, not its fare endpoint. This is ordinary
+  already-authorized research; it does not declare Carnival permitted. A narrow
+  uncertainty or actual restriction returns for a concrete scope decision.
+  Existing Widgety information-only inquiry remains an unsent alternative; no
+  new service, key, commercial agreement, fee or outreach is authorized here.
+
+The labour estimate remains unmeasured: at 10–15 minutes per complete quote,
+five cost 50–75 minutes plus review; the historical 362-target set costs
+60h20–90h30 before review. Current counts change as departures age out. Measure
+actual completeness, transcription errors and review effort before expansion;
+Claude's proposed 15-minute median/four-of-five threshold is not adopted policy.
+Public partial-cohort/feed scope and shared mobile-feed implications remain
+specific release decisions. No real source, baseline, collector or M1–M5 pass
+has been established. This local documentation follow-up is not pushed under
+the latest no-public-writes instruction; no executable/data/customer change.
+
 ## October 6 renewed project goal and decision log
 
 This dedicated project continues in the existing thread and draft PR 79. The

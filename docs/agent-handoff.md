@@ -1,5 +1,82 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-06 — bounded Carnival source applicability reviewed
+
+The actual primary Carnival US website/copyright text and robots were reviewed
+for personal viewing, internal quote recording, agent collection and product
+redistribution. Copying restrictions and the personal home-use exception do not
+establish the intended CruiseKit use. No general website automation-specific
+clause was located; the combined page's automated-query restriction is in the
+Carnival mobile-app EULA and must not be applied as a general web clause.
+Robots does not list the existing `/cruisesearch/api/search` path; this alone
+does not grant collection/reuse rights. Bare-fact/material and contract
+applicability remain specific unresolved questions, not a categorical ban or
+universal bespoke-license requirement. See the sourced [Carnival review in
+weekly verification](weekly-fare-verification.md).
+
+GoCCL's agency-policy route reaches login, where research stopped. Widgety's
+documented API remains a potential supplier route, not current Carnival/USD
+access or accepted display/cache/retention rights. No key, account, trial, fee,
+outreach, private access or denial bypass occurred. An unsent owner-review
+Carnival information/rights inquiry is preserved in the existing task directory.
+The concrete next choice is that bounded inquiry through a confirmed contact,
+or narrow counsel interpretation of the proposed factual internal method.
+
+No Carnival fare endpoint or booking page was requested and zero complete quotes
+were obtained. The preserved importer loses cabin/rate association when selecting
+the minimum room amount, does not exclude sold-out rooms, hardcodes unit/tax
+fields and uses a lead itinerary/import date; it is not a verified quote adapter.
+The example Valor October 22 catalog reference has one stored port, incompatible
+with the current verifier's minimum-two/exact-itinerary check. Source itinerary
+and representation review would still be required after access is established.
+No seed, policy, importer, workflow, feed, seven-day gate or customer behavior
+changed. Draft PR 79 stays unmerged; frozen native 56 and protected checkouts stay
+held. This bounded task authorizes review-document commits on the existing draft
+branch; earlier collection-only no-public-write notes are preserved history.
+
+## 2026-10-06 — actual Desktop review and browser follow-up complete
+
+The sanitized packet review and one focused browser-interim follow-up completed
+in the same native Claude Desktop Code session. UI independently showed Opus 5.5,
+Plan and Effort Ultracode; no CLI `max` substitute or multiagent workflow ran.
+Claude reports packet-only analysis, with no code/source/PR/CI audit or source
+collection. Both complete substantive outputs, reconciliation and hashed receipts
+are preserved in the existing internal task directory. Foreground was released
+after collection. Earlier prepared/pending invocation notes below are history.
+
+The browser answer supports a small internal human-run study once the intended
+provider scope is established, not a weekly catalog-feed replacement. Applicable
+published terms can establish a bounded use without a bespoke written grant;
+the packet does not yet establish that scope for any provider. Claude corrected
+its earlier universal written-grant standard and withdrew the Azamara 403/legal
+inference and alternate-browser suggestion. Muse browser use remains automation.
+Virgin collection restrictions and NCL denied automated paths remain respected.
+No denied source was retried and no browser fare was collected.
+
+One complete real future quote, then explicitly selected 3–5 voyages, is a
+possible measurable interim study, not an activated job. Fourteen-day visits
+leave observations stale after seven days. A distinct human evidence contract
+would preserve actual viewing time, unknown cache/backend age, full exact quote
+context and permitted nonprivate evidence; no fake zero age or fresh date may
+enter the existing verifier. Carnival is only a possible first terms-review
+candidate, not a permitted source. Existing Widgety information inquiry remains
+unsent and separately authorized; offers/trials do not establish a current grant.
+
+Code inspection confirms the review's concerns about HTTP age defaulting,
+optional provider timestamps, direct-operator source URL assumptions, same-date
+report matching, legacy ingest warning propagation and shared mobile feed
+publication. No fixes or policy changes are claimed by the consultation. Keep
+the existing seven-day global gate and preserved discovery runner. A pending
+first baseline is not `scopeReady`; publication, authenticated specific review
+and feed scope remain distinct. See [weekly verification](weekly-fare-verification.md).
+
+Zero complete real quotes/baselines or active fare collectors. Executable/data/UI
+snapshot remains `13b5c8bc48019807d20b00b3a5575c3b14d9e572`, draft PR 79 head at
+collection is `d4312288ef99bf2f0d3fc624753a6637850e3223`; main/live remains
+`c0e6390c31ed808ac50929aa2bc401bf2e45878d`, frozen native 56 held. This local
+handoff addition is not pushed under the current no-public-writes instruction.
+No fare, source policy, schedule, credential, billing, feed or release changed.
+
 ## 2026-10-06 — renewed automated fare-refresh goal; review coordination pending
 
 Continue the existing dedicated project and draft PR 79. The finish line is a
