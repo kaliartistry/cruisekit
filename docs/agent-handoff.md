@@ -1,5 +1,40 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-07 — two practical refresh reviews complete; research stays separate
+
+Two actual focused Claude Desktop exchanges completed in the same chat, displayed
+Opus 5.5 Medium; the prior October 6 Ultracode session is separate historical
+context. Actual replies and native completion evidence are preserved in internal
+task artifacts. The source/engineering review withdrew the internal-owner-checkbox
+permission claim, assumed retention period, body-hash novelty rule and proposal
+to admit unknown-age evidence merely by suppressing its label. No third exchange
+is needed to resolve the remaining storage question from inspected code.
+
+Use a distinct research schema/file set outside verified seed, generated bundles
+and public assets. Current ledger validation ignores research flags; valid flagged
+entries can still advance dates, count toward recency and be exported. A tiny
+synthetic in-memory check confirmed that path. Incomplete research entries instead
+fail provenance validation. This is an engineering recommendation, not an
+implemented research store, admission change or new security boundary.
+
+Next authorized local work is transport metadata repair (unknown Age stays
+unknown; document Last-Modified is separate from quote time), run/event consistency
+and offline failure/report tests. Preserve existing source holds, discovery,
+seven-day global recency and no-publication mode. Existing synthetic integration
+tests and pure alert formatting are allowed; external issue writes, source probes,
+production CLI runs and feed generation are outside this experiment. No repaired
+code or new test coverage is claimed by this documentation-only follow-up.
+
+No permitted complete source, actual quote or reviewed baseline is established.
+Source-use evidence is distinct from internal engineering approval; applicable
+published scope can suffice without a universal bespoke-license requirement.
+Any new outreach/key/grant/spend or production/web/mobile release needs its own
+authorization. The daily October 7 run still fails on 361 public records, with
+legacy dates 42–98 days old. The published calculator fixes and historical fare
+labels remain separate from refresh success. Draft PR 79 stays unmerged, executable
+snapshot `13b5c8bc` unchanged, main/live `c0e6390c` unchanged and native 56 held.
+See [the practical review outcome](weekly-fare-verification.md).
+
 ## 2026-10-06 — bounded Carnival source applicability reviewed
 
 The actual primary Carnival US website/copyright text and robots were reviewed

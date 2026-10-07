@@ -1,5 +1,61 @@
 # Weekly fare verification candidate
 
+## October 7 practical two-exchange outcome — no collector activation
+
+Two actual focused Claude Desktop replies were collected and reviewed against
+current code and primary-source evidence. Displayed mode was Opus 5.5 Medium,
+distinct from the October 6 session. Neither consultation is a source permission,
+code audit or actual quote verification. Two current-phase exchanges are complete;
+no additional inference is required merely to answer the storage question.
+
+**Research observations belong in a distinct schema/file set.** At the inspected
+`d3385eff` snapshot, `ledgerProblems()` in `scripts/lib/fare-verification.mjs:42`
+does not interpret research/eligibility flags. `assessFares()` uses any valid
+entry as a prior baseline and advances ordinary eligible dates at line 114.
+`scripts/data-freshness-report.mjs:142` reads that successful-verification date;
+`scripts/build-data-bundles.mjs:494` projects every public entry and drops extra
+flags. A synthetic in-memory probe confirmed ineffective flags remain present
+while an eligible candidate advances. Invalid research entries instead fail
+provenance validation. Existing source/context gates still apply; flags supply
+no additional exclusion once an entry satisfies them.
+
+Keep research artifacts outside `data/seed/fare-verifications.json`, generated
+bundles and public assets, with a distinct kind/schema, no verified-state dates
+and no automatic conversion into ledger entries. Physical/schema separation is
+an ordinary consistency boundary, not authentication. Synthetic fixtures may
+exercise it now; actual collection still needs an established applicable source
+use. No store, migration or source admission change was implemented here.
+
+The practical local sequence is: repair missing/malformed Age and separate HTTP
+Last-Modified; bind actual run/collection events without requiring changed body
+hashes; then test conservative failure envelopes and same-run report matching
+through temporary inputs. Keep first proposals, specific fixture reviews,
+later-week candidates, selected scope and global recency distinct. Unknown-age
+research never advances the verified ledger or certifies freshness. HTTP Age
+does not measure backend quote age; see [RFC 9111 section 5.1](https://www.rfc-editor.org/rfc/rfc9111.html#section-5.1).
+
+Existing 67 tests passed earlier October 7; they include safe synthetic
+`recheck`, baseline-review and injected-pilot integration. Those existing tests
+and pure issue formatting are permitted in the offline experiment. No external
+issue writer, `gh` mutation, production CLI/source probe, `latest` output or
+build/feed generation is included. Proposed new fixes/tests remain unimplemented.
+
+Source evidence and internal scope approval must stay separate. An owner's
+internal checkbox cannot create third-party rights; applicable published terms,
+existing legitimate authorization or a defensible applicability assessment may
+establish a method without a universal bespoke-license rule. Carnival's reviewed
+[website terms](https://www.carnival.com/en-US/about-carnival/legal-notice/website-terms-and-conditions)
+and [copyright section](https://www.carnival.com/en-US/about-carnival/legal-notice/copyright)
+still do not establish this exact CruiseKit method. The assumed 30-day retention
+was withdrawn. No provider outreach, account, key, grant, payment or quote request.
+
+No one-target result certifies the 361-record catalog. Existing seven-day global
+failure remains. New real collection, a changed human admission/partial-publication
+policy, unattended adoption and exact release require their concrete source/scope
+decisions. Shared-seed web prebuild also changes mobile feeds; frozen native 56
+and mobile release effects remain held. PR 79 remains draft, executable snapshot
+`13b5c8bc` unchanged and main/live `c0e6390c` unchanged.
+
 ## October 6 bounded Carnival applicability review — no fare collection
 
 This source-specific pass separates personal viewing, product evaluation,
