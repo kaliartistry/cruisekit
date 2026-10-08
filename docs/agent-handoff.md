@@ -1,5 +1,11 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-08: unpublished SEO/GEO and press drafts
+
+Branch `codex/genie-seo-geo-20261008` starts from main `c0e6390`. Root Organization and SoftwareApplication use the exact Genie description in `apps/web/lib/config/brand-facts.ts`; the app's store destinations remain unchanged. `/press/` is a static server page with Genie's verbatim boilerplate, three supplied key facts, the existing PNG/SVG logos, founder Kali McCarthy and Kali's approved press-only contact `info@cruisekit.app`. It is linked from the footer and canonical sitemap. No new client component or dependency was added. Support/account/legal/pricing surfaces remain unchanged.
+
+The draft tagline is the supplied descriptor `Independent cruise planning toolkit`; Genie may supply a different exact tagline before shipping. Final Node 22 static export, TypeScript and scoped ESLint checks pass. Desktop 1440 and phone 390 previews pass image, overflow and console checks; screenshots are held in this task's evidence folder. Both schema descriptions and the boilerplate are compared verbatim to the supplied Part 2 package. No public publication, deployment, native/store release, credential change or backend change was performed. Everything remains in isolated local checkouts until Kali says ship. Earlier release/provider notes below remain historical.
+
 ## 2026-10-05 — website pricing release verified; native remains held
 
 Kali's conditionally approved website-only pricing release is live and verified. [PR #77](https://github.com/kaliartistry/cruisekit/pull/77) merged candidate `8583f28d5444d86160beea07307fb0b1fe204d2e` as `7a067630452e54288cfe08d8492995b9c909a56d`. [Final PR Checks](https://github.com/kaliartistry/cruisekit/actions/runs/37386287014) passed on Node 22: 139 web tests, 10 ship tests, 63 rules tests, web/functions lint and no duplicate routes. Its synthetic checkout `e798be8e` has exactly the candidate's tree `847d6c642143444a75bcc90ebbf0520485d92a20`. The normal [Pages release](https://github.com/kaliartistry/cruisekit/actions/runs/37386633573) built 193 pages and succeeded at 23:09 UTC; provider deployment `6871449825` confirms the published pricing merge.
