@@ -5,6 +5,7 @@ import { AuthProvider } from "@/lib/firebase/auth";
 import AnalyticsLoader from "@/components/shared/analytics-loader";
 import UtmLandingTracker from "@/components/shared/utm-landing-tracker";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/config/app-store-urls";
+import { CRUISEKIT_DESCRIPTION, CRUISEKIT_TAGLINE } from "@/lib/config/brand-facts";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -117,10 +118,13 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "Organization",
+                  "@id": "https://cruisekit.app/#organization",
                   name: "CruiseKit",
                   url: "https://cruisekit.app",
-                  description:
-                    "Free cruise planning toolkit for true cruise costs, port-time awareness, MyDay planning, and port days.",
+                  description: CRUISEKIT_DESCRIPTION,
+                  slogan: CRUISEKIT_TAGLINE,
+                  logo: "https://cruisekit.app/cruisekit-logo-square.png",
+                  founder: { "@type": "Person", name: "Kali McCarthy" },
                 },
                 {
                   "@type": "WebSite",
@@ -129,10 +133,16 @@ export default function RootLayout({
                 },
                 {
                   "@type": "SoftwareApplication",
+                  "@id": "https://cruisekit.app/#app",
                   name: "CruiseKit",
+                  alternateName: "CruiseKit cruise planner app",
+                  alternativeHeadline: CRUISEKIT_TAGLINE,
+                  description: CRUISEKIT_DESCRIPTION,
                   applicationCategory: "TravelApplication",
                   operatingSystem: "iOS, Android",
+                  availableOnDevice: "iPhone, Android devices",
                   url: "https://cruisekit.app",
+                  publisher: { "@id": "https://cruisekit.app/#organization" },
                   downloadUrl: [APP_STORE_URL, PLAY_STORE_URL],
                   offers: {
                     "@type": "Offer",
