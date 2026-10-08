@@ -6,7 +6,7 @@ export const CRUISEKIT_BOILERPLATE =
   "CruiseKit is an independent cruise planning toolkit for iPhone and Android, built by Kali Artistry. It helps cruisers plan smarter with MyDay daily sailing plans, port, sea-day and embarkation checklists, and honest package math that shows when a drink or Wi-Fi package actually breaks even — estimates for planning, never quotes. CruiseKit is not a booking engine and is not affiliated with any cruise line. Learn more at cruisekit.app.";
 
 export const CRUISEKIT_PRESS_EMAIL = "info@cruisekit.app";
-// Draft descriptor from the supplied facts; a different tagline can be supplied before shipping.
+// Exact tagline confirmed by Genie in Muse, 2026-10-08.
 export const CRUISEKIT_TAGLINE = "Independent cruise planning toolkit";
 export const CRUISEKIT_KEY_FACTS = [
   "iPhone + Android",
