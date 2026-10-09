@@ -6,8 +6,10 @@ Kali authorized prioritizing deployment of ready validated non-ShipSafe work.
 [PR 82](https://github.com/kaliartistry/cruisekit/pull/82) merged candidate
 `093ff4be85b597d6164a3c97276d47b117129b7d` as
 `3f3707727c64f730dda2298ed5acd68812fe7bea` at 18:44:09 UTC. The merge has exactly
-the reviewed candidate tree. Draft PR 79 remains separate; its unfinished pilot
-activation was excluded by preserving production's automation workflow exactly.
+the reviewed candidate tree. GitHub also records former draft PR 79 as merged
+with this same merge; its head is included in the release ancestry. Only PR 82 was
+explicitly merged. The unfinished pilot activation was excluded by preserving
+production's automation workflow exactly; the published blob was verified.
 
 [PR Checks 37974978373](https://github.com/kaliartistry/cruisekit/actions/runs/37974978373)
 passed on the exact candidate: 148 web tests (one intentional mobile-export skip),
