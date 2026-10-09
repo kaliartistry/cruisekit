@@ -4,9 +4,10 @@
 
 The narrowed website/control release is published through
 [PR 82](https://github.com/kaliartistry/cruisekit/pull/82), candidate `093ff4b`,
-merge `3f370772`. GitHub also records former draft PR 79 as merged with this
-same merge because its head is included in the ancestry; no separate PR 79 merge
-was issued. The published automation blob exactly matches pre-release production.
+merge `3f370772`. GitHub also records former draft PR 79 as merged at 18:44:11
+UTC, with its `mergeCommit` field pointing to head `52940e7`, which is included in
+the ancestry. This task issued only the PR 82 merge; actual published main remains
+`3f370772`. The published automation blob exactly matches pre-release production.
 Exact-candidate PR Checks `37974978373` and normal Pages
 `37975341830` passed; provider deployment `6968435220` succeeded at 18:45:54 UTC.
 Full live desktop/phone calculator/disclosure and actual sailing navigation QA
