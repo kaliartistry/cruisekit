@@ -1,5 +1,32 @@
 # Weekly fare verification candidate
 
+## October 9 narrowed website/control release
+
+Kali authorized deployment of ready validated non-ShipSafe work. The separate
+release branch starts from reviewed draft PR 79 head `52940e7`, restores the
+existing production automation workflow unchanged, and retains the existing live
+pricing/SEO website. The unfinished weekly Virgin source pilot is not activated.
+The code remains available for offline validation and future permitted capture;
+this release is not a successful live weekly refresh.
+
+The normal production export passed. Its canonical sailing/deal and mobile
+sailing/deal payloads are byte-identical to the actual live October 9 baseline.
+The new public fare verification ledger is empty. Cards identify price-check
+dates as unverified, retain separate record-review provenance, and cannot use
+these historical prices for current calculator estimates. No seed/check date,
+53 staged price candidates, provider policy, dependency, native artifact, store,
+ShipSafe or credential/security setting changes. Seven-day freshness and finite
+0–300-second transport age gates remain unchanged.
+
+All 102 offline verification tests passed on Node 22.23.2. Production build,
+static SEO, desktop/phone rendered calculator/disclosure and synthetic cabin QA
+passed. Exact release PR CI and final Pages/live read-back remain required; the
+release PR records their final evidence. The task retains the underlying logs, screenshots and exact feed
+hashes. Deployment status must be read from that final receipt, not inferred from
+older candidate/HOLD entries below. Rollback is a reviewed revert of this release
+merge, preserving later unrelated main work. Source collection, real baseline
+adoption and native release remain separate scope decisions.
+
 ## October 9 offline implementation — candidate only
 
 The saved October 7 engineering sequence resumed after the Mac update. It had

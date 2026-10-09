@@ -1,5 +1,44 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-09 — authorized narrowed website/control release
+
+Kali prioritized deployment of ready validated work, excluding ShipSafe. The
+release branch `codex/release-offline-fare-repairs-20261009` starts from the reviewed
+PR 79 head `52940e7fc4a0d176897eea192c938882e9a19c88`. PR 79 remains a separate draft:
+its unfinished Virgin pilot is not activated. The release restores
+`.github/workflows/data-automation.yml` byte-for-byte to production main
+`22abfeb1cde3b9a1cd45a01405a00198ce71a0a4`; the existing Pages workflow, source seed,
+dependencies, discovery and seven-day freshness policy are preserved.
+
+This release adds truthful unverified price-check disclosures and provenance,
+suppresses unverified recency ranking and fare autofill, preserves calculator
+cabin context, validates ledger provenance during normal export, and includes the
+102-tested offline capture/replay/failure repairs described below. Empty verified
+ledger entries establish no new current fare. No permitted complete collector,
+real quote or reviewed baseline exists. The source-use limits, 53 unapproved
+staged prices and frozen native 56 remain outside this release. No ShipSafe,
+backend, store, credential/security, simulator or external-storage change occurs.
+
+The normal production-flags build passed on Node 22.23.2, with existing fonts and
+unchanged public analytics configuration. All four actual canonical/mobile fare
+payloads in the static export match the October 9 live baseline byte-for-byte;
+only the new empty provenance ledger is added. Generated bundle churn was not
+staged. Static SEO verification passed (180 canonical sitemap URLs, 15 repaired
+canonicals, five ports). Existing pricing and SEO/press releases are retained.
+Desktop 1440 / phone 390 rendered regression and synthetic cabin tests passed,
+including keyboard/errors/repeat, tax inclusion, quote units/cents, save/restore,
+stale prefill suppression and zero uncaught page errors. One intentionally blocked
+external-resource warning per viewport is recorded. Exact-head PR Checks, Pages
+deployment and public read-back remain required; their final evidence is recorded
+in the release PR. The internal task retains build logs, screenshots, payload hashes and
+boundary receipts. Publication is confirmed only by the release PR's final
+provider/live receipt; earlier HOLD and candidate-only entries below are history.
+
+Deploy through the existing main-push Pages workflow once; do not dispatch source
+collection or promote stale observations. Rollback uses a reviewed branch reverting
+only this release merge with mainline 1, preserving unrelated later work. The
+pre-release website source is `22abfeb1cde3b9a1cd45a01405a00198ce71a0a4`.
+
 ## 2026-10-09 — offline fare repairs resumed after recovery
 
 The previously authorized, unstarted repairs are now implemented in the isolated
