@@ -1,5 +1,72 @@
 # Weekly fare verification candidate
 
+## October 9 offline implementation — candidate only
+
+The saved October 7 engineering sequence resumed after the Mac update. It had
+been unstarted, rather than partially written. The code now preserves unknown
+HTTP Age with explicit reasons and separates document Last-Modified from quote
+time. Missing age cannot enter an initial baseline or advance a verified date;
+the existing 300-second and seven-day gates are unchanged.
+
+`fare-run.mjs` provides canonical logical input hashes and bounded manifests.
+A quote capture must supply `runId`, `collectionEventId`, actual `observedAt`,
+complete context and raw evidence. The manifest binds exact selected targets,
+code/policy/seed/ledger hashes and receipts; ingestion requires `--manifest` and
+matching `--run-id`/`--run-started-at` for nonempty quote files. It never supplies
+missing capture identity to legacy observations. The only unbound field is the
+local `evidenceRef` path, which is remapped after containment and raw-hash checks.
+Manifest target order follows the selected seed order. Identical bodies are
+permitted for different evidenced collection events, while prior-run receipts,
+duplicate events and persisted used-event identities are rejected. Each target
+keeps at most 1,024 events and stops for review instead of dropping history.
+These are integrity consistency checks, not origin authentication or proof that a
+collector actually viewed the offer. Actual source use and extraction review
+remain required.
+
+Initial proposals carry their manifest. Specific baseline review revalidates
+the completed source audit, code/input hashes, exact proposal and retained raw
+bytes before writing separate candidates. It cannot adopt seed or certify other
+targets. A synthetic file integration exercises pending proposal → fixture review
+→ candidates → later-week check with equal body hashes, retaining historical
+record review dates and unchanged actual repository files.
+
+Research artifacts have `{schemaVersion:1, kind:"research-observations",
+observations:[…]}`, outside seed/bundles/public assets. They cannot carry ledger
+certification fields and are rejected by quote ingestion. No real research store
+or automatic migration was introduced; flags on an otherwise valid legacy ledger
+entry remain insufficient to define a research boundary.
+
+`terminal.json` binds the execution result to its run and audit hash. Catchable
+parsing, raw-evidence, expired-target or pre-audit failures produce failed records
+when their output directory can be reserved. Original errors propagate even when
+terminal storage fails; an existing successful output is never overwritten.
+Completed execution can still have pending baselines or false scope/global
+readiness. Hard termination, invalid initial run identity or unavailable storage
+can leave evidence missing; check runner status rather than infer success.
+
+Pure alert formatting requires explicit exact-run correlation plus a completed
+terminal/audit match. Same-day foreign reports and incomplete evidence are omitted
+with “Audit unavailable”; a matching terminal failure is shown even if a nested
+audit completed. Tests hard-fail accidental network and child/external-writer
+calls. No production CLI, `latest` write, issue mutation, source probe, credential
+read, build/feed generation, schedule or unattended adoption ran. Existing workflow
+run-identity propagation is a later integration decision; absent bindings remain
+unavailable, without weakening the freshness gate.
+
+Validation: `pnpm run data:test:fare-verification` passes all 102 tests on Node
+22.23.2. Seed/ledger/policy are parsed from the same captured byte snapshot and
+all three plus the executable fingerprint are checked again. Synthetic seed and
+policy changes after capture fail before audit creation. The existing discovery
+runner and all nine importers retain their exact production hashes. New web/native
+build or UI QA is skipped because this offline repair changes no customer UI or
+verified feed; October 5 release QA remains dated evidence.
+
+The new code stays on draft PR 79 for review. Source holds remain as recorded;
+there is still no permitted complete source, actual fresh quote or reviewed real
+baseline. Website pricing/SEO releases are separate completed work, and frozen
+native 56 and the pricing QA simulator are unchanged. Revert only the offline
+repair commit through a separate branch if needed; no customer rollback is needed.
+
 ## October 7 practical two-exchange outcome — no collector activation
 
 Two actual focused Claude Desktop replies were collected and reviewed against

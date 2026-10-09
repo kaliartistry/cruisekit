@@ -10,6 +10,7 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
+import { terminalMatchesAudit, terminalProblems } from "./lib/fare-run.mjs";
 
 const execFileAsync = promisify(execFile);
 const repoRoot = process.cwd();
@@ -62,12 +63,20 @@ async function ensureLabel(label) {
   await run("gh", ["label", "create", label, "--color", label === "needs-kali" ? "B60205" : "D93F0B"]);
 }
 
-export function freshnessIssueBody(report, verification = null, pilot = null) {
-  const currentVerification = verification && verification.generatedAt?.slice(0, 10) === report.generatedAt?.slice(0, 10) ? verification : null;
-  const currentPilot = pilot && pilot.generatedAt?.slice(0, 10) === report.generatedAt?.slice(0, 10) ? pilot : null;
+export function freshnessIssueBody(report, verification = null, pilot = null, { runId = report.runId, verificationTerminal = null, pilotTerminal = null } = {}) {
+  const matches = (audit, terminal) => typeof runId === "string" && runId.length > 0 && terminalMatchesAudit(terminal, audit, { runId });
+  const currentVerification = matches(verification, verificationTerminal) ? verification : null;
+  const currentPilot = matches(pilot, pilotTerminal) ? pilot : null;
+  const failed = [verificationTerminal, pilotTerminal].filter(t => runId && t?.executionStatus === "failed" && terminalProblems(t, { runId }).length === 0);
+  const unavailable = !currentVerification && !currentPilot ? `## Recheck Evidence\n\nAudit unavailable for this run; same-day or unbound reports cannot certify its result.\n` : "";
+  const failures = failed.length ? `## Recheck Execution Failures\n\n${failed.map(t => `Run ${t.runId} failed at ${t.stage}: ${t.error?.message ?? "failure before audit completion"}. Candidate readiness and freshness remain unconfirmed.`).join("\n\n")}\n` : "";
   return `## Approval Type
 
 Production cruise data freshness and price/source review.
+
+${unavailable}
+
+${failures}
 
 ${currentVerification ? `## Exact Quote Recheck\n\nRun: ${currentVerification.generatedAt}. Eligible candidates: ${currentVerification.counts.eligible}; retained fares: ${currentVerification.counts.retained}; quarantined unmatched observations: ${currentVerification.counts.quarantined}. Publication is disabled.\n\n${(currentVerification.sourceChecks ?? []).map(s => `- Actual rules attempt ${s.provider}: ${s.status}, ${s.checkedAt}, ${s.requests} request(s), ${s.fareRequests} fare requests.`).join("\n")}\n\n${currentVerification.providerReadiness.map(p => `- ${p.provider}: ${p.access}. ${p.reason} Policy rules checked: ${p.policyRulesCheckedAt ?? "pending"}.`).join("\n")}\n\nAudit/rollback files: ${currentVerification.paths.audit}. Job/scrape/build dates do not prove prices. Missing/sold-out/changed results do not prove cancellation.\n` : ""}
 

@@ -1,5 +1,45 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-09 — offline fare repairs resumed after recovery
+
+The previously authorized, unstarted repairs are now implemented in the isolated
+weekly verification candidate. Missing/malformed HTTP Age stays null with a
+reason, explicit valid zero is preserved, and document Last-Modified never becomes
+a provider quote timestamp. The finite 0–300-second gate remains unchanged.
+
+Quote ingestion requires a manifest binding exact selected targets, run/event
+identities, executable/policy/seed/ledger hashes, context, observation and raw
+hashes. Candidates retain bounded event history and reject reused events; equal
+bodies from distinct evidenced events remain valid. This detects inconsistent
+receipts, not fabricated origin/extraction. First quotes remain pending until
+specific data review; review revalidates immutable audit/terminal/raw bindings.
+Research uses a distinct non-ledger schema with no automatic conversion.
+
+Recheck and the existing pilot reserve immutable outputs and emit conservative
+terminal records for catchable failures. Execution completion, pending baseline,
+selected-scope readiness and global coverage stay separate. The pure alert
+formatter requires exact run and completed audit binding; missing/foreign evidence
+is unavailable, and matching failure evidence remains visible alongside a
+completed nested audit. Existing issue-writer and workflow identity propagation
+were not activated or exercised. Hard termination or unavailable output storage
+may leave terminal evidence missing; runner status must still be checked.
+
+All 102 offline tests pass on Node 22.23.2; coverage includes transport metadata, event replay, unchanged-body
+checks, research exclusion, pending proposal → explicit fixture review → immutable
+candidates → later-week files, unchanged production inputs, pre-audit parsing and
+expired-target failures, immutable repeated runs and report correlation. Fixture
+review strings are synthetic, not real approval. Final evidence is preserved in
+the task's offline recovery receipt and test log. No new source adapter, permitted
+complete quote or reviewed real baseline is established.
+
+PR 79 remains a draft review candidate; this work does not authorize adoption or
+release. The October 5 pricing and October 8 SEO website publications are completed
+separate scopes. Preserve their current main changes and all prior release notes.
+Verified seed, policy, discovery importers, feeds and schedules remain unchanged.
+Frozen native 56, mobile candidate source, simulator state, credentials, external
+drive and store surfaces were untouched. Roll back only this repair commit on an
+isolated branch; do not reset main or discard unrelated release work.
+
 ## 2026-10-07 — two practical refresh reviews complete; research stays separate
 
 Two actual focused Claude Desktop exchanges completed in the same chat, displayed

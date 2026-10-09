@@ -4,7 +4,7 @@ import { readFile, writeFile, mkdtemp, symlink, mkdir } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import { assessFares, boundedReader, robotsAllows, digest, ledgerProblems, reviewInitialBaselines } from "../lib/fare-verification.mjs";
-import { recheck, reviewBaselineAudit } from "../run-fare-recheck.mjs";
+import { recheck, reviewBaselineAudit, fareCodeSha256 } from "../run-fare-recheck.mjs";
 import { freshnessIssueBody } from "../create-data-freshness-issue.mjs";
 
 const now = new Date("2026-10-05T12:01:00Z");
@@ -12,8 +12,16 @@ const r = { id: "carnival-test", cruiseLine: "carnival", shipName: "Test Ship", 
 const c = { provider: r.cruiseLine, shipName: r.shipName, departureDate: r.departureDate, returnDate: r.returnDate, nights: r.nights, departurePort: r.departurePort, returnPort: r.returnPort, itineraryPorts: r.itineraryPorts, currency: r.currency, priceBasis: r.priceBasis, taxesAndFeesIncluded: true, sourceUrl: r.sourceUrl, sourceSailingId: "ship-20261101", cabinCategory: "4A", cabinType: "inside", rateCode: "PUBLIC", packageCode: "NONE", market: "US", contractVersion: "fixture-only-not-live", adults: 2, children: 0, cabins: 1 };
 const p = { publicationMode: "review-only", cadenceDays: 7, largeChangeFraction: 0.15, maxTargets: 400, providers: { carnival: { origin: "https://www.carnival.com", access: "approved", contractVersion: c.contractVersion } } };
 const e = { price: r.startingPrice, observedAt: "2026-09-28T12:00:00Z", lastSuccessfulVerification: "2026-09-28T12:00:00Z", nextCheckAt: "2026-10-05T12:00:00.000Z", contextApprovedAt: "2026-09-28T11:00:00Z", reviewedBy: "owner-fixture", quoteContext: c, evidenceSha256: digest("old quote fixture"), evidenceRef: "old-fixture.json" };
-const o = { targetId: r.id, price: 505.25, observedAt: "2026-10-05T12:00:30Z", sourceTimestamp: null, responseAgeSeconds: 0, evidenceSha256: digest("new quote fixture"), evidenceRef: "new-fixture.json", quoteContext: c, availability: "available" };
-const run = (observation = o, ledger = { schemaVersion: 1, entries: { [r.id]: e } }, policy = p) => assessFares({ seed: [r], ledger, policy, observations: observation == null ? [] : Array.isArray(observation) ? observation : [observation], runStartedAt: "2026-10-05T12:00:00Z", now });
+const o = { runId: "fixture-run", collectionEventId: "fixture-event", targetId: r.id, price: 505.25, observedAt: "2026-10-05T12:00:30Z", sourceTimestamp: null, responseAgeSeconds: 0, evidenceSha256: digest("new quote fixture"), evidenceRef: "new-fixture.json", quoteContext: c, availability: "available" };
+import { makeRunManifest, stableDigest } from "../lib/fare-run.mjs";
+function assessFixture(args) {
+  const targetIds = args.targetIds ?? args.seed.filter(r => r.confidence !== "internal_do_not_publish" && r.departureDate >= args.now.toISOString().slice(0, 10)).map(r => r.id);
+  const codeSha256 = digest("fixture-code");
+  const runManifest = args.runManifest ?? makeRunManifest({ runId: args.observations[0]?.runId ?? "fixture-run", startedAt: args.runStartedAt, targetIds, seed: args.seed, ledger: args.ledger, policy: args.policy, codeSha256, observations: args.observations });
+  return assessFares({ ...args, codeSha256, runManifest });
+}
+const completeTerminal = audit => ({ schemaVersion: 1, kind: "fare-run-terminal", runId: audit.runId, startedAt: audit.runStartedAt, completedAt: audit.generatedAt, stage: "fixture-complete", executionStatus: "completed", auditSha256: stableDigest(audit), scopeReady: false, ready: false });
+const run = (observation = o, ledger = { schemaVersion: 1, entries: { [r.id]: e } }, policy = p) => assessFixture({ seed: [r], ledger, policy, observations: observation == null ? [] : Array.isArray(observation) ? observation : [observation], runStartedAt: "2026-10-05T12:00:00Z", now });
 
 test("exact known quote advances candidate cents, actual observation and seven-day due date only", () => {
   const a = run();
@@ -60,11 +68,11 @@ test("access hold cannot be overridden by an otherwise exact quote", () => {
   assert.equal(run(o, undefined, policy).counts.eligible, 0);
 });
 test("an old job start cannot authorize replay of historical quote evidence", () => {
-  assert.throws(() => assessFares({ seed: [r], ledger: { schemaVersion: 1, entries: { [r.id]: e } }, policy: p, observations: [o], runStartedAt: "2026-10-01T00:00:00Z", now }), /expired run/);
+  assert.throws(() => assessFixture({ seed: [r], ledger: { schemaVersion: 1, entries: { [r.id]: e } }, policy: p, observations: [o], runStartedAt: "2026-10-01T00:00:00Z", now }), /expired run/);
 });
 test("replayed successful observation is rejected; wrong ledger amount blocks build", () => {
   const first = run();
-  const second = assessFares({ seed: first.candidateSeed, ledger: first.candidateLedger, policy: p, observations: [o], runStartedAt: "2026-10-05T12:00:00Z", now });
+  const second = assessFixture({ seed: first.candidateSeed, ledger: first.candidateLedger, policy: p, observations: [o], runStartedAt: "2026-10-05T12:00:00Z", now });
   assert.equal(second.counts.eligible, 0);
   assert.equal(ledgerProblems([r], first.candidateLedger, p, now).length, 1);
 });
@@ -121,14 +129,20 @@ test("raw evidence tampering and symlink escape fail without a candidate or seed
   await symlink(resolve(outside, "raw.json"), resolve(dir, "escape.json"));
   observations[0].evidenceRef = "escape.json";
   await writeFile(resolve(dir, "observations.json"), JSON.stringify(observations));
-  await assert.rejects(recheck({ output: resolve(dir, "candidate"), observationsFile: resolve(dir, "observations.json") }), /escapes/);
+  await assert.rejects(recheck({ output: resolve(dir, "escaped-candidate"), observationsFile: resolve(dir, "observations.json") }), /escapes/);
 });
 test("valid raw evidence is preserved in the immutable audit even when its quote is quarantined", async () => {
   const dir = await mkdtemp(resolve(tmpdir(), "cruisekit-fare-raw-audit-"));
   await writeFile(resolve(dir, "raw.json"), "new quote fixture");
   await writeFile(resolve(dir, "observations.json"), JSON.stringify([{ ...o, observedAt: new Date().toISOString(), evidenceRef: "raw.json" }]));
   const output = resolve(dir, "audit");
-  const a = await recheck({ output, observationsFile: resolve(dir, "observations.json") });
+  const seed = JSON.parse(await readFile(new URL("../../data/seed/sailings.json", import.meta.url)));
+  const ledger = JSON.parse(await readFile(new URL("../../data/seed/fare-verifications.json", import.meta.url)));
+  const policy = JSON.parse(await readFile(new URL("../../data/fare-verification-policy.json", import.meta.url)));
+  const current = new Date(), startedAt = current.toISOString();
+  const manifestFile = resolve(dir, "run-manifest.json");
+  await writeFile(manifestFile, JSON.stringify(makeRunManifest({ runId: o.runId, startedAt, targetIds: seed.filter(r => r.confidence !== "internal_do_not_publish" && r.departureDate >= startedAt.slice(0,10)).map(r => r.id), seed, ledger, policy, codeSha256: await fareCodeSha256(), observations: [] })));
+  const a = await recheck({ output, observationsFile: resolve(dir, "observations.json"), manifestFile, runId: o.runId, startedAt, clock: () => current, now: current });
   assert.equal(a.counts.eligible, 0); assert.equal(a.inputsUnchanged, true);
   assert.equal((await readFile(resolve(output, "evidence", `${o.evidenceSha256}.txt`))).toString(), "new quote fixture");
   const rows = JSON.parse(await readFile(resolve(output, "observations.json")));
@@ -136,8 +150,8 @@ test("valid raw evidence is preserved in the immutable audit even when its quote
 });
 test("existing failure alert includes current exact-quote blockers and excludes old run reports", () => {
   const report = { generatedAt: "2026-10-06T12:00:00Z", currentDate: "2026-10-06", counts: { blockers: 361, warnings: 0, unverifiedPublicFares: 361 }, thresholds: { maxPublicAgeDays: 7 }, blockers: [], byCruiseLine: [] };
-  const verification = { generatedAt: "2026-10-06T11:00:00Z", counts: { eligible: 0, retained: 361, quarantined: 0 }, providerReadiness: [{ provider: "norwegian", access: "blocked", reason: "robots-denied" }], paths: { audit: "dated-audit" } };
-  const body = freshnessIssueBody(report, verification);
+  const verification = { runId: "fixture-alert", runStartedAt: "2026-10-06T10:00:00Z", generatedAt: "2026-10-06T11:00:00Z", counts: { eligible: 0, retained: 361, quarantined: 0 }, providerReadiness: [{ provider: "norwegian", access: "blocked", reason: "robots-denied" }], paths: { audit: "dated-audit" } };
+  const body = freshnessIssueBody(report, verification, null, { runId: "fixture-alert", verificationTerminal: completeTerminal(verification) });
   assert.match(body, /robots-denied/); assert.match(body, /Publication is disabled/); assert.match(body, /361 fares without confirmed/);
   assert.doesNotMatch(freshnessIssueBody(report, { ...verification, generatedAt: "2026-10-05T11:00:00Z" }), /Exact Quote Recheck/);
 });
@@ -145,7 +159,7 @@ test("existing failure alert includes current exact-quote blockers and excludes 
 test("complete first observations produce reviewable baselines, never silent certification", () => {
   const empty = { schemaVersion: 1, entries: {} };
   const seed = [{ ...r, taxesAndFeesIncluded: false }];
-  const a = assessFares({ seed, ledger: empty, policy: p, observations: [o], runStartedAt: "2026-10-05T12:00:00Z", now });
+  const a = assessFixture({ seed, ledger: empty, policy: p, observations: [o], runStartedAt: "2026-10-05T12:00:00Z", now });
   assert.equal(a.initialBaselines.length, 1);
   assert.equal(a.initialBaselines[0].record.taxesAndFeesIncluded, true);
   assert.equal(a.initialBaselines[0].record.lastVerified, r.lastVerified);
@@ -184,17 +198,17 @@ test("incomplete, ambiguous and restricted first observations do not even create
 
 test("pilot scope cannot certify unchecked public sailings and rejects hidden/expired/unknown IDs", () => {
   const seed = [r, { ...r, id: "unchecked" }];
-  const a = assessFares({ seed, ledger: { schemaVersion: 1, entries: { [r.id]: e } }, policy: p, observations: [o], targetIds: [r.id], runStartedAt: "2026-10-05T12:00:00Z", now });
+  const a = assessFixture({ seed, ledger: { schemaVersion: 1, entries: { [r.id]: e } }, policy: p, observations: [o], targetIds: [r.id], runStartedAt: "2026-10-05T12:00:00Z", now });
   assert.equal(a.counts.eligible, 1);
   assert.deepEqual(a.coverage, { publicTargets: 2, selectedTargets: 1, outsideScope: 1, globalCoverage: false });
-  for (const ids of [[], [r.id, r.id], ["unknown"]]) assert.throws(() => assessFares({ seed, ledger: { schemaVersion: 1, entries: {} }, policy: p, observations: [], targetIds: ids, runStartedAt: "2026-10-05T12:00:00Z", now }), /pilot targets/);
+  for (const ids of [[], [r.id, r.id], ["unknown"]]) assert.throws(() => assessFixture({ seed, ledger: { schemaVersion: 1, entries: {} }, policy: p, observations: [], targetIds: ids, runStartedAt: "2026-10-05T12:00:00Z", now }), /pilot targets/);
 });
 
 test("reviewed first baseline supports a later weekly check without manufacturing dates", () => {
   const empty = { schemaVersion: 1, entries: {} }, proposals = run(o, empty).initialBaselines;
   const first = reviewInitialBaselines({ seed: [r], ledger: empty, proposals, reviews: [{ targetId: r.id, proposalSha256: proposals[0].proposalSha256, reviewedBy: "explicit-owner-fixture", contextApprovedAt: now.toISOString() }], policy: p, now });
-  const nextNow = new Date("2026-10-12T12:01:00Z"), next = { ...o, price: 505.75, observedAt: "2026-10-12T12:00:30Z", evidenceSha256: digest("next-week fixture") };
-  const second = assessFares({ seed: first.candidateSeed, ledger: first.candidateLedger, observations: [next], policy: p, runStartedAt: "2026-10-12T12:00:00Z", now: nextNow });
+  const nextNow = new Date("2026-10-12T12:01:00Z"), next = { ...o, runId: "fixture-next-week", collectionEventId: "next-week-event", price: 505.75, observedAt: "2026-10-12T12:00:30Z", evidenceSha256: digest("next-week fixture") };
+  const second = assessFixture({ seed: first.candidateSeed, ledger: first.candidateLedger, observations: [next], policy: p, runStartedAt: "2026-10-12T12:00:00Z", now: nextNow });
   assert.equal(second.counts.eligible, 1); assert.equal(second.candidateSeed[0].startingPrice, 505.75);
   assert.equal(second.candidateLedger.entries[r.id].nextCheckAt, "2026-10-19T12:00:30.000Z");
   assert.equal(second.candidateSeed[0].lastVerified, r.lastVerified);
@@ -202,9 +216,9 @@ test("reviewed first baseline supports a later weekly check without manufacturin
 
 test("alerts distinguish actual scoped source failure from public fare verification", () => {
   const report = { generatedAt: "2026-10-06T12:00:00Z", counts: { blockers: 361, warnings: 0, unverifiedPublicFares: 361 }, thresholds: { maxPublicAgeDays: 7 }, blockers: [], byCruiseLine: [] };
-  const pilot = { generatedAt: "2026-10-06T11:00:00Z", targetId: "pilot", access: { status: "terms-collection-prohibited", checkedAt: "2026-10-06T10:59:00Z", url: "https://www.virginvoyages.com/terms-and-conditions", evidenceSha256: digest("fixture") }, requests: 1, fareRequests: 0, completeQuotes: 0, verification: { coverage: { outsideScope: 360 } }, missingEvidence: ["taxes"] };
-  assert.match(freshnessIssueBody(report, null, pilot), /360 public sailings outside this pilot/);
-  assert.match(freshnessIssueBody(report, null, pilot), /0 fare requests, 0 complete quotes/);
+  const pilot = { runId: "fixture-alert", runStartedAt: "2026-10-06T10:00:00Z", generatedAt: "2026-10-06T11:00:00Z", targetId: "pilot", access: { status: "terms-collection-prohibited", checkedAt: "2026-10-06T10:59:00Z", url: "https://www.virginvoyages.com/terms-and-conditions", evidenceSha256: digest("fixture") }, requests: 1, fareRequests: 0, completeQuotes: 0, verification: { coverage: { outsideScope: 360 } }, missingEvidence: ["taxes"] };
+  assert.match(freshnessIssueBody(report, null, pilot, { runId: "fixture-alert", pilotTerminal: completeTerminal(pilot) }), /360 public sailings outside this pilot/);
+  assert.match(freshnessIssueBody(report, null, pilot, { runId: "fixture-alert", pilotTerminal: completeTerminal(pilot) }), /0 fare requests, 0 complete quotes/);
   assert.doesNotMatch(freshnessIssueBody(report, null, { ...pilot, generatedAt: "2026-10-05T11:00:00Z" }), /Scoped Virgin Pilot/);
 });
 
@@ -215,7 +229,9 @@ test("immutable first-observation audit can become reviewed candidates with reva
   for (const [file, value] of Object.entries({ "data/seed/sailings.json": [r], "data/seed/fare-verifications.json": empty, "data/fare-verification-policy.json": policy, "observations.json": [o] })) await writeFile(resolve(dir, file), JSON.stringify(value));
   await writeFile(resolve(dir, "new-fixture.json"), "new quote fixture");
   const auditDirectory = resolve(dir, "audit");
-  const a = await recheck({ dataDirectory: dir, output: auditDirectory, observationsFile: resolve(dir, "observations.json"), startedAt: "2026-10-05T12:00:00Z", now });
+  const manifestFile = resolve(dir, "run-manifest.json");
+  await writeFile(manifestFile, JSON.stringify(makeRunManifest({ runId: o.runId, startedAt: "2026-10-05T12:00:00Z", targetIds: [r.id], seed: [r], ledger: empty, policy, codeSha256: await fareCodeSha256(), observations: [o] })));
+  const a = await recheck({ dataDirectory: dir, output: auditDirectory, observationsFile: resolve(dir, "observations.json"), manifestFile, runId: o.runId, startedAt: "2026-10-05T12:00:00Z", clock: () => now, now });
   assert.equal(a.counts.initialBaselines, 1); assert.equal(a.ready, false);
   const proposals = JSON.parse(await readFile(resolve(auditDirectory, "initial-baselines.pending.json")));
   const reviewsFile = resolve(dir, "reviews.json");
