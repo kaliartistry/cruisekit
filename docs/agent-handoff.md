@@ -1,5 +1,43 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-09 — website fare provenance/control publication verified
+
+Kali authorized prioritizing deployment of ready validated non-ShipSafe work.
+[PR 82](https://github.com/kaliartistry/cruisekit/pull/82) merged candidate
+`093ff4be85b597d6164a3c97276d47b117129b7d` as
+`3f3707727c64f730dda2298ed5acd68812fe7bea` at 18:44:09 UTC. The merge has exactly
+the reviewed candidate tree. Draft PR 79 remains separate; its unfinished pilot
+activation was excluded by preserving production's automation workflow exactly.
+
+[PR Checks 37974978373](https://github.com/kaliartistry/cruisekit/actions/runs/37974978373)
+passed on the exact candidate: 148 web tests (one intentional mobile-export skip),
+102 fare tests, ten ship tests, 63 rules tests, lint and duplicate-route checks.
+The normal production-flags local build, static SEO and desktop/phone QA passed.
+[Normal Pages 37975341830](https://github.com/kaliartistry/cruisekit/actions/runs/37975341830)
+passed; provider deployment `6968435220` reported success at 18:45:54 UTC. This was
+one normal merge-triggered release with no manual dispatch/retry.
+
+All six public bundle files returned HTTP 200 at 18:47 UTC. Canonical sailing/deal
+and mobile sailing/deal feeds are byte-identical to the pre-release live baseline;
+the new public verified ledger is empty. Full live desktop 1440 / phone 390 QA
+passed tax inclusion, six nights, units/cents, errors, keyboard/repeated flows,
+save/restore, stale disclosures and Medjet product periods with zero uncaught
+errors. Actual sailing navigation checked 20 links per viewport and left the
+quoted-fare field empty. Cruises/press show no horizontal overflow. Screenshots,
+logs and exact feed hashes are retained in the task evidence; the merged PR body
+contains the final portable publication receipt. The local preview is closed.
+
+No permitted complete live collector, actual fresh quote or reviewed baseline is
+established. The 53 staged price changes remain unapproved, the pilot is inactive,
+and unbound audit evidence remains unavailable. ShipSafe, existing pricing/SEO,
+native frozen 56/stores, credentials/security, simulator and external storage were
+preserved. Rollback is a reviewed mainline-1 revert of merge `3f370772`, preserving
+later unrelated work. Pre-release source is `22abfeb`.
+
+This receipt-only branch preserves the final handoff without another Pages
+publication. Carry it into the next normal source update; do not deploy solely to
+refresh this note. Earlier preparation and HOLD entries below are historical.
+
 ## 2026-10-09 — authorized narrowed website/control release
 
 Kali prioritized deployment of ready validated work, excluding ShipSafe. The

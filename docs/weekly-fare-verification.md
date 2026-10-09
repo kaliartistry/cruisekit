@@ -1,5 +1,23 @@
 # Weekly fare verification candidate
 
+## October 9 website/control release verified
+
+The narrowed website/control release is published through
+[PR 82](https://github.com/kaliartistry/cruisekit/pull/82), candidate `093ff4b`,
+merge `3f370772`. Exact-candidate PR Checks `37974978373` and normal Pages
+`37975341830` passed; provider deployment `6968435220` succeeded at 18:45:54 UTC.
+Full live desktop/phone calculator/disclosure and actual sailing navigation QA
+passed with zero uncaught errors. All four public fare feeds retain their exact
+pre-release bytes, and the new public verification ledger is empty. Source check
+dates remain explicitly unverified. No current quote or live weekly refresh is
+claimed, the unfinished pilot is inactive, and the 53 staged fares are unapproved.
+
+Production automation, source policy, discovery, existing pricing/SEO, ShipSafe,
+native frozen56/stores, credentials/security, simulator and external storage are
+preserved. The final merged PR body records evidence and rollback. This note is
+held on a receipt-only source branch for the next routine integration, avoiding a
+second Pages deployment just for documentation.
+
 ## October 9 narrowed website/control release
 
 Kali authorized deployment of ready validated non-ShipSafe work. The separate
