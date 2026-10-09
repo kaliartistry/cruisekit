@@ -36,6 +36,12 @@
       "bytes": 492695,
       "sha256": "bff624855cb009bf14b3c9b5b5fd0f64e19de38cf2ea4899fb325c18a45f4c49",
       "records": 422
+    },
+    "fareVerifications": {
+      "path": "data/bundles/canonical/fare-verifications.json",
+      "bytes": 42,
+      "sha256": "89c8d70d93f879eaa3ad187302c4d706e34673d7e5da226bd40bbd9d5ca7db42",
+      "records": null
     }
   }
 }

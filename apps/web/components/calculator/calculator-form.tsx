@@ -331,6 +331,8 @@ interface CalculatorFormProps {
   defaultMonth?: number;
   /** Pre-fill base fare (e.g., from a deal card click) */
   defaultFare?: string;
+  /** Mapped cabin from a confirmed fare context. */
+  defaultCabinType?: CabinType;
   sailingContext?: CalculatorSailingContext;
 }
 
@@ -341,6 +343,7 @@ export default function CalculatorForm({
   defaultAdults,
   defaultMonth,
   defaultFare,
+  defaultCabinType,
   sailingContext,
 }: CalculatorFormProps = {}) {
   /* -- Resolve default cruise line IDs with backward compat ---------- */
@@ -367,7 +370,7 @@ export default function CalculatorForm({
   const [adults, setAdults] = useState(defaultAdults ?? 2);
   const [children, setChildren] = useState(0);
   const [showChildren, setShowChildren] = useState(false);
-  const [cabinType, setCabinType] = useState<CabinType>("balcony");
+  const [cabinType, setCabinType] = useState<CabinType>(defaultCabinType ?? "balcony");
   const [baseFare, setBaseFare] = useState(defaultFare ?? "");
   const [fareUnit, setFareUnit] = useState<"booking" | "person" | "cabin">("booking");
   const [cabins, setCabins] = useState(1);

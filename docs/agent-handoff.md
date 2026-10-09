@@ -1,5 +1,84 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-10-09 — authorized narrowed website/control release
+
+Kali prioritized deployment of ready validated work, excluding ShipSafe. The
+release branch `codex/release-offline-fare-repairs-20261009` starts from the reviewed
+PR 79 head `52940e7fc4a0d176897eea192c938882e9a19c88`. PR 79 remains a separate draft:
+its unfinished Virgin pilot is not activated. The release restores
+`.github/workflows/data-automation.yml` byte-for-byte to production main
+`22abfeb1cde3b9a1cd45a01405a00198ce71a0a4`; the existing Pages workflow, source seed,
+dependencies, discovery and seven-day freshness policy are preserved.
+
+This release adds truthful unverified price-check disclosures and provenance,
+suppresses unverified recency ranking and fare autofill, preserves calculator
+cabin context, validates ledger provenance during normal export, and includes the
+102-tested offline capture/replay/failure repairs described below. Empty verified
+ledger entries establish no new current fare. No permitted complete collector,
+real quote or reviewed baseline exists. The source-use limits, 53 unapproved
+staged prices and frozen native 56 remain outside this release. No ShipSafe,
+backend, store, credential/security, simulator or external-storage change occurs.
+
+The normal production-flags build passed on Node 22.23.2, with existing fonts and
+unchanged public analytics configuration. All four actual canonical/mobile fare
+payloads in the static export match the October 9 live baseline byte-for-byte;
+only the new empty provenance ledger is added. Generated bundle churn was not
+staged. Static SEO verification passed (180 canonical sitemap URLs, 15 repaired
+canonicals, five ports). Existing pricing and SEO/press releases are retained.
+Desktop 1440 / phone 390 rendered regression and synthetic cabin tests passed,
+including keyboard/errors/repeat, tax inclusion, quote units/cents, save/restore,
+stale prefill suppression and zero uncaught page errors. One intentionally blocked
+external-resource warning per viewport is recorded. Exact-head PR Checks, Pages
+deployment and public read-back remain required; their final evidence is recorded
+in the release PR. The internal task retains build logs, screenshots, payload hashes and
+boundary receipts. Publication is confirmed only by the release PR's final
+provider/live receipt; earlier HOLD and candidate-only entries below are history.
+
+Deploy through the existing main-push Pages workflow once; do not dispatch source
+collection or promote stale observations. Rollback uses a reviewed branch reverting
+only this release merge with mainline 1, preserving unrelated later work. The
+pre-release website source is `22abfeb1cde3b9a1cd45a01405a00198ce71a0a4`.
+
+## 2026-10-09 — offline fare repairs resumed after recovery
+
+The previously authorized, unstarted repairs are now implemented in the isolated
+weekly verification candidate. Missing/malformed HTTP Age stays null with a
+reason, explicit valid zero is preserved, and document Last-Modified never becomes
+a provider quote timestamp. The finite 0–300-second gate remains unchanged.
+
+Quote ingestion requires a manifest binding exact selected targets, run/event
+identities, executable/policy/seed/ledger hashes, context, observation and raw
+hashes. Candidates retain bounded event history and reject reused events; equal
+bodies from distinct evidenced events remain valid. This detects inconsistent
+receipts, not fabricated origin/extraction. First quotes remain pending until
+specific data review; review revalidates immutable audit/terminal/raw bindings.
+Research uses a distinct non-ledger schema with no automatic conversion.
+
+Recheck and the existing pilot reserve immutable outputs and emit conservative
+terminal records for catchable failures. Execution completion, pending baseline,
+selected-scope readiness and global coverage stay separate. The pure alert
+formatter requires exact run and completed audit binding; missing/foreign evidence
+is unavailable, and matching failure evidence remains visible alongside a
+completed nested audit. Existing issue-writer and workflow identity propagation
+were not activated or exercised. Hard termination or unavailable output storage
+may leave terminal evidence missing; runner status must still be checked.
+
+All 102 offline tests pass on Node 22.23.2; coverage includes transport metadata, event replay, unchanged-body
+checks, research exclusion, pending proposal → explicit fixture review → immutable
+candidates → later-week files, unchanged production inputs, pre-audit parsing and
+expired-target failures, immutable repeated runs and report correlation. Fixture
+review strings are synthetic, not real approval. Final evidence is preserved in
+the task's offline recovery receipt and test log. No new source adapter, permitted
+complete quote or reviewed real baseline is established.
+
+PR 79 remains a draft review candidate; this work does not authorize adoption or
+release. The October 5 pricing and October 8 SEO website publications are completed
+separate scopes. Preserve their current main changes and all prior release notes.
+Verified seed, policy, discovery importers, feeds and schedules remain unchanged.
+Frozen native 56, mobile candidate source, simulator state, credentials, external
+drive and store surfaces were untouched. Roll back only this repair commit on an
+isolated branch; do not reset main or discard unrelated release work.
+
 ## 2026-10-08: SEO/GEO website publication verified
 
 Kali authorized publishing the completed website package. [PR #80](https://github.com/kaliartistry/cruisekit/pull/80) merged candidate `b795656fcc21f2e60cf162b5b20f1dd1f42e7bc4` as `56c8d5cb0c7afd94af8513ff4b1f0b68f3674e3f`. The merge has the exact candidate tree `17c98e475e990a407f620b9abca2dd2cf7fac046`. Normal [PR Checks](https://github.com/kaliartistry/cruisekit/actions/runs/37855576966) passed. The [GitHub Pages build/deploy](https://github.com/kaliartistry/cruisekit/actions/runs/37856071801) passed; provider deployment `6948614055` reports success for that merge.
@@ -15,6 +94,167 @@ Rollback, if required: create a branch from then-current main, revert only merge
 Branch `codex/genie-seo-geo-20261008` starts from main `c0e6390`. Root Organization and SoftwareApplication use the exact Genie description in `apps/web/lib/config/brand-facts.ts`; the app's store destinations remain unchanged. `/press/` is a static server page with Genie's verbatim boilerplate, three supplied key facts, the existing PNG/SVG logos, founder Kali McCarthy and Kali's approved press-only contact `info@cruisekit.app`. It is linked from the footer and canonical sitemap. No new client component or dependency was added. Support/account/legal/pricing surfaces remain unchanged.
 
 Genie confirmed `Independent cruise planning toolkit` as the exact tagline during Kali-authorized direct coordination in Muse on 2026-10-08. The wording is unchanged from the rendered draft. Final Node 22 static export, TypeScript and scoped ESLint checks pass. Desktop 1440 and phone 390 previews pass image, overflow and console checks; screenshots are held in this task's evidence folder. Both schema descriptions and the boilerplate are compared verbatim to the supplied Part 2 package. No public publication, deployment, native/store release, credential change or backend change was performed. Everything remains in isolated local checkouts until Kali says ship. Earlier release/provider notes below remain historical.
+
+## 2026-10-07 — two practical refresh reviews complete; research stays separate
+
+Two actual focused Claude Desktop exchanges completed in the same chat, displayed
+Opus 5.5 Medium; the prior October 6 Ultracode session is separate historical
+context. Actual replies and native completion evidence are preserved in internal
+task artifacts. The source/engineering review withdrew the internal-owner-checkbox
+permission claim, assumed retention period, body-hash novelty rule and proposal
+to admit unknown-age evidence merely by suppressing its label. No third exchange
+is needed to resolve the remaining storage question from inspected code.
+
+Use a distinct research schema/file set outside verified seed, generated bundles
+and public assets. Current ledger validation ignores research flags; valid flagged
+entries can still advance dates, count toward recency and be exported. A tiny
+synthetic in-memory check confirmed that path. Incomplete research entries instead
+fail provenance validation. This is an engineering recommendation, not an
+implemented research store, admission change or new security boundary.
+
+Next authorized local work is transport metadata repair (unknown Age stays
+unknown; document Last-Modified is separate from quote time), run/event consistency
+and offline failure/report tests. Preserve existing source holds, discovery,
+seven-day global recency and no-publication mode. Existing synthetic integration
+tests and pure alert formatting are allowed; external issue writes, source probes,
+production CLI runs and feed generation are outside this experiment. No repaired
+code or new test coverage is claimed by this documentation-only follow-up.
+
+No permitted complete source, actual quote or reviewed baseline is established.
+Source-use evidence is distinct from internal engineering approval; applicable
+published scope can suffice without a universal bespoke-license requirement.
+Any new outreach/key/grant/spend or production/web/mobile release needs its own
+authorization. The daily October 7 run still fails on 361 public records, with
+legacy dates 42–98 days old. The published calculator fixes and historical fare
+labels remain separate from refresh success. Draft PR 79 stays unmerged, executable
+snapshot `13b5c8bc` unchanged, main/live `c0e6390c` unchanged and native 56 held.
+See [the practical review outcome](weekly-fare-verification.md).
+
+## 2026-10-06 — bounded Carnival source applicability reviewed
+
+The actual primary Carnival US website/copyright text and robots were reviewed
+for personal viewing, internal quote recording, agent collection and product
+redistribution. Copying restrictions and the personal home-use exception do not
+establish the intended CruiseKit use. No general website automation-specific
+clause was located; the combined page's automated-query restriction is in the
+Carnival mobile-app EULA and must not be applied as a general web clause.
+Robots does not list the existing `/cruisesearch/api/search` path; this alone
+does not grant collection/reuse rights. Bare-fact/material and contract
+applicability remain specific unresolved questions, not a categorical ban or
+universal bespoke-license requirement. See the sourced [Carnival review in
+weekly verification](weekly-fare-verification.md).
+
+GoCCL's agency-policy route reaches login, where research stopped. Widgety's
+documented API remains a potential supplier route, not current Carnival/USD
+access or accepted display/cache/retention rights. No key, account, trial, fee,
+outreach, private access or denial bypass occurred. An unsent owner-review
+Carnival information/rights inquiry is preserved in the existing task directory.
+The concrete next choice is that bounded inquiry through a confirmed contact,
+or narrow counsel interpretation of the proposed factual internal method.
+
+No Carnival fare endpoint or booking page was requested and zero complete quotes
+were obtained. The preserved importer loses cabin/rate association when selecting
+the minimum room amount, does not exclude sold-out rooms, hardcodes unit/tax
+fields and uses a lead itinerary/import date; it is not a verified quote adapter.
+The example Valor October 22 catalog reference has one stored port, incompatible
+with the current verifier's minimum-two/exact-itinerary check. Source itinerary
+and representation review would still be required after access is established.
+No seed, policy, importer, workflow, feed, seven-day gate or customer behavior
+changed. Draft PR 79 stays unmerged; frozen native 56 and protected checkouts stay
+held. This bounded task authorizes review-document commits on the existing draft
+branch; earlier collection-only no-public-write notes are preserved history.
+
+## 2026-10-06 — actual Desktop review and browser follow-up complete
+
+The sanitized packet review and one focused browser-interim follow-up completed
+in the same native Claude Desktop Code session. UI independently showed Opus 5.5,
+Plan and Effort Ultracode; no CLI `max` substitute or multiagent workflow ran.
+Claude reports packet-only analysis, with no code/source/PR/CI audit or source
+collection. Both complete substantive outputs, reconciliation and hashed receipts
+are preserved in the existing internal task directory. Foreground was released
+after collection. Earlier prepared/pending invocation notes below are history.
+
+The browser answer supports a small internal human-run study once the intended
+provider scope is established, not a weekly catalog-feed replacement. Applicable
+published terms can establish a bounded use without a bespoke written grant;
+the packet does not yet establish that scope for any provider. Claude corrected
+its earlier universal written-grant standard and withdrew the Azamara 403/legal
+inference and alternate-browser suggestion. Muse browser use remains automation.
+Virgin collection restrictions and NCL denied automated paths remain respected.
+No denied source was retried and no browser fare was collected.
+
+One complete real future quote, then explicitly selected 3–5 voyages, is a
+possible measurable interim study, not an activated job. Fourteen-day visits
+leave observations stale after seven days. A distinct human evidence contract
+would preserve actual viewing time, unknown cache/backend age, full exact quote
+context and permitted nonprivate evidence; no fake zero age or fresh date may
+enter the existing verifier. Carnival is only a possible first terms-review
+candidate, not a permitted source. Existing Widgety information inquiry remains
+unsent and separately authorized; offers/trials do not establish a current grant.
+
+Code inspection confirms the review's concerns about HTTP age defaulting,
+optional provider timestamps, direct-operator source URL assumptions, same-date
+report matching, legacy ingest warning propagation and shared mobile feed
+publication. No fixes or policy changes are claimed by the consultation. Keep
+the existing seven-day global gate and preserved discovery runner. A pending
+first baseline is not `scopeReady`; publication, authenticated specific review
+and feed scope remain distinct. See [weekly verification](weekly-fare-verification.md).
+
+Zero complete real quotes/baselines or active fare collectors. Executable/data/UI
+snapshot remains `13b5c8bc48019807d20b00b3a5575c3b14d9e572`, draft PR 79 head at
+collection is `d4312288ef99bf2f0d3fc624753a6637850e3223`; main/live remains
+`c0e6390c31ed808ac50929aa2bc401bf2e45878d`, frozen native 56 held. This local
+handoff addition is not pushed under the current no-public-writes instruction.
+No fare, source policy, schedule, credential, billing, feed or release changed.
+
+## 2026-10-06 — renewed automated fare-refresh goal; review coordination pending
+
+Continue the existing dedicated project and draft PR 79. The finish line is a
+permitted complete quote source, one actual sailing verified end to end, then a
+reliable weekly refresh and explicitly bounded verified publication. No active
+collector, fresh fare, new baseline, unattended write or release is claimed.
+The [weekly verification document](weekly-fare-verification.md) now persists
+measurable M1–M5 milestones, a decision log, source-access distinctions and the
+smallest unsent rights-inquiry option. Existing vendor offers are not evidence
+of a current executed grant or issued key. Keep source restrictions and all
+current access/spending/security/release boundaries.
+
+A sanitized packet is prepared on internal task storage for coordinated
+Claude Desktop Opus 5.5 Ultracode review of both access analysis and architecture.
+The packet is `CLAUDE-ULTRACODE-FARE-REVIEW.md` in the existing task directory;
+SHA-256 `9b03b4a742dc575a5125d90462028283ea2030585554b4eb2ca95c68819f4196`.
+No Claude invocation, CLI `max` substitute or foreground control has occurred.
+The code snapshot remains `13b5c8bc48019807d20b00b3a5575c3b14d9e572`; this follow-up
+only updates project documentation. Main/live remains
+`c0e6390c31ed808ac50929aa2bc401bf2e45878d`; frozen native 56 and protected checkouts
+remain untouched. Do not merge this draft as a working refresh system.
+
+Material publication dependency discovered: web prebuild rebuilds and copies
+both canonical and mobile public bundles from shared seed. A future web fare
+change would therefore also alter mobile feed data unless the publication scope
+explicitly permits that effect or isolation is approved. Parent decision is
+required before adopting real fare candidates; no feed was changed. Also review
+same-run artifact binding, authenticated review authority, cache/provider-age
+semantics, ingest failure propagation and exact-candidate deployment gates.
+Existing report, freshness and Pages schedules are independent and unchanged.
+
+## 2026-10-06 — one-sailing pilot stopped on verified source restriction
+
+PR 79 remains draft/unmerged; main remains `c0e6390c31ed808ac50929aa2bc401bf2e45878d`. The earlier candidate's blanket discovery-import gate was removed: the existing weekly runner and all nine importer files now match production byte-for-byte. An independent pilot step uses the existing weekly job/cadence/permissions, without replacing discovery or publishing fares. Do not merge merely to activate a blocked pilot.
+
+Virgin's current website terms (effective March 18, 2026), Part I section 11, expressly prohibit manual/automated data collection. The actual pilot for Brilliant Lady October 24, voyage `BR2610245NLAH`, read those terms at `2026-10-06T00:46:58.362Z`, SHA-256 `540bf34142f3eb2c0ce164ced2cb148a8dd94bbf9061da4f7f6d2d3c1cf08454`, then stopped: one rules request, zero fare requests/complete quotes/baselines, one unchanged selected fare, 360 other upcoming public sailings outside scope, no input writes. This is a verified source failure, **not** a verified fare. Earlier "unreviewed Virgin access" notes below are superseded. Holland's fresh robots also disallows its booking funnel; no permitted alternative exact-quote source has been established.
+
+Authorized engineering now supports scoped normalized observation files, pending complete first-baseline proposals, specific hash-bound review receipts and candidate-only baseline materialization with revalidated raw evidence. First observations can propose corrections to legacy tax/unit metadata; source fields are never fabricated. Later weekly checks operate on the reviewed context. The legacy Virgin card inspector preserves cents and rejects missing cabin/rate/occupancy/market/currency/tax data; it is not a complete live quote adapter. Global freshness remains honest and independent of pilot success. Public reading/research and missing adapter implementation are authorized work, not owner approval blockers. Actual collection restrictions need a permitted source path; concrete data adoption and release remain specifically review-gated.
+
+Local validation: 67 fare/source/baseline tests, including an isolated first-observation audit → specific review → immutable candidates → later-week verification, raw tamper rejection, scoped coverage and production discovery hashes. No live fare was adopted; approved seed, native feeds and website behavior are unchanged by this follow-up. Frozen native 56/protected checkouts remain untouched. See [weekly verification](weekly-fare-verification.md) for the exact failure, CLI review path and remaining automation work. No new provider/credential/security permission, paid service, publication or store action occurred.
+
+## 2026-10-06 — weekly fare verification candidate, no activation/publication
+
+Active pricing website remains `c0e6390c31ed808ac50929aa2bc401bf2e45878d`. Work is isolated on `codex/weekly-fare-verification-20261005`. Existing Monday 11:34 UTC ingest stages reports; Pages rebuilds approved seed and does not promote observations. Successful discovery and legacy importer/promotion dates cannot prove actual fare checks.
+
+The candidate adds an exact-context fare ledger and sanitized web provenance bundle without changing canonical/native models or approved fare amounts. Confirmed observations show checked-on/age/due dates; legacy records retain their original review date with price-check-unverified status. Report-only verification retains last known good data and quarantines ambiguous/new/large changes. Failure handling reuses Issue 52; cron and token permissions are unchanged. No new automation, production write, credential or paid source is enabled.
+
+Source blockers: NCL robots disallows the existing date-specific vacation-builder path; Carnival reuse/source access needs review; other quote adapters/contracts are unapproved. One controlled NCL rules dry run made one request, zero fare requests, retained 362 fares and left seed unchanged. Local October 6 build has 361 upcoming records because one October 5 departure aged out, not because of cancellation. The 53 staged changes remain unapproved. Approved quote adapters, initial context review and any unattended production-write scope need a bounded decision before activation. See [weekly verification scope](weekly-fare-verification.md) for diagnosis, source evidence, limits and rollback. Frozen native 1.0.28 (56) and protected checkouts remain held/untouched.
 
 ## 2026-10-05 — website pricing release verified; native remains held
 

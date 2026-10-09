@@ -88,7 +88,8 @@ function ageDays(record, today) {
 
 function refreshExistingRecord(existing, staged, refreshedAt) {
   const confidence = "itinerary_verified_price_check_required";
-  const lastVerified = staged.lastVerified ?? formatDateOnly(refreshedAt);
+  // Matching old staging is not a new manual record review or a price check.
+  const lastVerified = existing.lastVerified;
   return {
     ...existing,
     ...staged,

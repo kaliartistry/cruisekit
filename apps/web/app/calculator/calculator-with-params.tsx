@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import type { CabinType } from "@cruise/shared/types";
 import { fareFreshness } from "@/lib/format/confidence";
 import CalculatorForm from "@/components/calculator/calculator-form";
 
@@ -41,6 +42,9 @@ function CalculatorFormWithSearchParams() {
     fareParam && !isNaN(parseFloat(fareParam)) && fareFreshness(searchParams.get("checked")) === "recent" && searchParams.get("unit") === "booking"
       ? fareParam
       : undefined;
+  const cabinParam = searchParams.get("cabin");
+  const defaultCabinType = defaultFare && cabinParam && ["inside", "oceanview", "balcony", "suite"].includes(cabinParam)
+    ? cabinParam as CabinType : undefined;
 
   const sailingContext = {
     sailingId: searchParams.get("sailing") ?? undefined,
@@ -58,6 +62,7 @@ function CalculatorFormWithSearchParams() {
       defaultAdults={defaultAdults}
       defaultMonth={defaultMonth}
       defaultFare={defaultFare}
+      defaultCabinType={defaultCabinType}
       sailingContext={sailingContext}
     />
   );

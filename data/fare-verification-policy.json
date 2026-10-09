@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "cadenceDays": 7,
+  "largeChangeFraction": 0.15,
+  "maxTargets": 400,
+  "publicationMode": "review-only",
+  "transport": {
+    "maxRequests": 40,
+    "maxAttempts": 2,
+    "timeoutMs": 10000,
+    "minDelayMs": 750,
+    "maxRetryDelayMs": 5000,
+    "maxBytes": 2000000
+  },
+  "providers": {
+    "carnival": {
+      "origin": "https://www.carnival.com",
+      "access": "review-required",
+      "reason": "Site-material reuse terms need source-specific review; exact quote normalization is unfinished. No blanket permission requirement for factual fares has been established.",
+      "rulesUrl": "https://www.carnival.com/about-carnival/legal-notice",
+      "rulesCheckedAt": "2026-10-05",
+      "contractVersion": null
+    },
+    "norwegian": {
+      "origin": "https://www.ncl.com",
+      "access": "blocked",
+      "reason": "robots.txt disallows /vacation-builder/, including the date-specific endpoint.",
+      "rulesUrl": "https://www.ncl.com/robots.txt",
+      "rulesCheckedAt": "2026-10-05",
+      "contractVersion": null
+    },
+    "holland-america": {
+      "origin": "https://www.hollandamerica.com",
+      "access": "review-required",
+      "reason": "Robots disallows the booking funnel. Public discovery access/reuse and exact cabin, occupancy, rate and taxes contract remain unreviewed.",
+      "rulesUrl": "https://www.hollandamerica.com/robots.txt",
+      "rulesCheckedAt": "2026-10-06",
+      "contractVersion": null
+    },
+    "virgin-voyages": {
+      "origin": "https://www.virginvoyages.com",
+      "access": "blocked",
+      "reason": "Website terms Part I section 11 expressly prohibit manual/automated data collection. No permitted exact quote source established; fare requests stopped.",
+      "rulesUrl": "https://www.virginvoyages.com/terms-and-conditions",
+      "rulesCheckedAt": "2026-10-06",
+      "rulesEvidenceSha256": "ab73d570a1154cc88dab6c50b7f619753c049f827488faf3fcfcf895d06ac9fb",
+      "contractVersion": null
+    },
+    "royal-caribbean": { "access": "blocked", "reason": "Existing source denial; no evasion or CAPTCHA bypass.", "contractVersion": null },
+    "azamara": { "access": "review-required", "reason": "Approved source access and fare contract pending.", "contractVersion": null },
+    "msc": { "access": "review-required", "reason": "US source unavailable; alternate market currency and terms need approval.", "contractVersion": null },
+    "princess": { "access": "review-required", "reason": "Existing light feed does not prove dated fares.", "contractVersion": null },
+    "viking": { "access": "review-required", "reason": "Existing search does not prove dated sailing quotes.", "contractVersion": null }
+  }
+}

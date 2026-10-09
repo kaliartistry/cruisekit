@@ -13,11 +13,32 @@ Each importer should:
 
 Promotion to public data happens in a separate review step.
 
-The scheduled weekly job runs all provider importers in report-only mode, runs
-the available staging-review scripts, rebuilds bundles from approved seeds, and
-then runs `pnpm run data:freshness`. Public sailing fare checks older than 7
-days block the weekly freshness gate and require Kali approval before refreshed
-price/link/date changes are promoted into `data/seed/*.json`.
+The weekly job retains its Monday 11:34 UTC schedule and report-only permissions.
+The original discovery runner and all provider importer files are preserved
+byte-for-byte; the earlier candidate's blanket source-policy gate was removed.
+An independent one-sailing pilot passes scoped observation files into the verifier.
+It currently stops on Virgin's explicit collection restriction, emits zero quotes,
+and fails visibly without certifying the catalog. Existing discovery is not a
+replacement quote adapter or evidence of source permission; none was executed
+during this pilot. No commit, push or publication path is added.
+
+No complete permitted live quote adapter has yet been established. Virgin terms
+Part I section 11 explicitly prohibit data collection; NCL robots disallows the
+date-specific path; Holland robots disallows its booking funnel. Carnival's
+material-reuse terms need precise review without presuming a blanket permission
+requirement for price facts. Public research and missing adapter implementation
+are already authorized engineering. A policy toggle cannot replace an actual
+source contract/field mapping. No evasion, credentials or paid source is added.
+
+Legacy staging `lastVerified`/`generatedAt` values describe importer/record history;
+they do not populate `data/seed/fare-verifications.json`. Promotion preserves the
+original date rather than stamping a promotion date. A confirmed price requires
+an owner-reviewed initial quote tuple, actual `observedAt`, source timestamp when
+provided, hashed raw evidence, precise cabin/rate/package/occupancy/tax context,
+and the same sailing/itinerary. Only complete normal changes below 15% become
+eligible candidates. Large, ambiguous, new or unmatched results require review.
+Sold-out, missing or changed results retain the last good fare and never assert
+cancellation. See [weekly verification scope](../../docs/weekly-fare-verification.md).
 
 ## Current providers
 

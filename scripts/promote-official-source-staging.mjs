@@ -63,11 +63,11 @@ function normalizePromotedRecord(record, promotedAt) {
     source: {
       ...record.source,
       confidence,
-      lastVerified: promotedAt.slice(0, 10),
+      lastVerified: record.source?.lastVerified ?? record.lastVerified,
       termsNotes:
         "Promoted from official-source staging. Price remains check-required; verify fare basis, taxes/fees, source link, and availability near booking.",
     },
-    lastVerified: promotedAt.slice(0, 10),
+    lastVerified: record.lastVerified,
     createdAt: record.createdAt ?? promotedAt,
     updatedAt: promotedAt,
   };
