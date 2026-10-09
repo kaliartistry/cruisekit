@@ -40,6 +40,22 @@ Frozen native 56, mobile candidate source, simulator state, credentials, externa
 drive and store surfaces were untouched. Roll back only this repair commit on an
 isolated branch; do not reset main or discard unrelated release work.
 
+## 2026-10-08: SEO/GEO website publication verified
+
+Kali authorized publishing the completed website package. [PR #80](https://github.com/kaliartistry/cruisekit/pull/80) merged candidate `b795656fcc21f2e60cf162b5b20f1dd1f42e7bc4` as `56c8d5cb0c7afd94af8513ff4b1f0b68f3674e3f`. The merge has the exact candidate tree `17c98e475e990a407f620b9abca2dd2cf7fac046`. Normal [PR Checks](https://github.com/kaliartistry/cruisekit/actions/runs/37855576966) passed. The [GitHub Pages build/deploy](https://github.com/kaliartistry/cruisekit/actions/runs/37856071801) passed; provider deployment `6948614055` reports success for that merge.
+
+The exact approved Organization/SoftwareApplication description and tagline are live. [The press kit](https://cruisekit.app/press/) has the approved boilerplate, official PNG/SVG downloads, founder attribution and press-only email; its canonical and single sitemap entry are verified. Eleven public routes/assets were read back, including contact, legal pages, calculator, sitemap and robots; both logo downloads match official source bytes. Final desktop/phone rendering evidence and the publication receipt are held in the SEO/GEO task's evidence folder. The draft entry below is historical and its website HOLD is lifted for this completed scope.
+
+Muse leads social/SEO/GEO and measurement; Codex leads security and engineering. Muse may now verify and use the published first-party press/schema facts under its existing outreach mandate. Current support contacts remain unchanged. This release contains no native app/store upload, account/credential change, backend deployment or RSVP demo. Native review-prompt release QA and the proposed measured fictional RSVP experiment remain separate. The five previously non-indexed hub URLs are still not proven indexed; publication is not Google indexation proof.
+
+Rollback, if required: create a branch from then-current main, revert only merge `56c8d5cb0c7afd94af8513ff4b1f0b68f3674e3f` with mainline 1, review/CI and publish through the normal Pages workflow. Do not reset over unrelated work.
+
+## 2026-10-08: unpublished SEO/GEO and press drafts
+
+Branch `codex/genie-seo-geo-20261008` starts from main `c0e6390`. Root Organization and SoftwareApplication use the exact Genie description in `apps/web/lib/config/brand-facts.ts`; the app's store destinations remain unchanged. `/press/` is a static server page with Genie's verbatim boilerplate, three supplied key facts, the existing PNG/SVG logos, founder Kali McCarthy and Kali's approved press-only contact `info@cruisekit.app`. It is linked from the footer and canonical sitemap. No new client component or dependency was added. Support/account/legal/pricing surfaces remain unchanged.
+
+Genie confirmed `Independent cruise planning toolkit` as the exact tagline during Kali-authorized direct coordination in Muse on 2026-10-08. The wording is unchanged from the rendered draft. Final Node 22 static export, TypeScript and scoped ESLint checks pass. Desktop 1440 and phone 390 previews pass image, overflow and console checks; screenshots are held in this task's evidence folder. Both schema descriptions and the boilerplate are compared verbatim to the supplied Part 2 package. No public publication, deployment, native/store release, credential change or backend change was performed. Everything remains in isolated local checkouts until Kali says ship. Earlier release/provider notes below remain historical.
+
 ## 2026-10-07 — two practical refresh reviews complete; research stays separate
 
 Two actual focused Claude Desktop exchanges completed in the same chat, displayed

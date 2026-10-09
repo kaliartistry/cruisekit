@@ -41,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ai/cruisekit-summary',
     '/about',
     '/contact',
+    '/press',
     '/affiliate-disclosure',
     '/faq',
     '/help',
