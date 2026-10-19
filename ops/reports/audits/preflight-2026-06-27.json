@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-06-27T14:02:03.889Z",
+  "checks": {
+    "path": {
+      "ok": true,
+      "output": "C:\\Users\\ilak_\\Projects\\cruisekit"
+    },
+    "status": {
+      "ok": true,
+      "output": "## codex/growthops-2026-06-27"
+    },
+    "remote": {
+      "ok": true,
+      "output": "origin\thttps://github.com/kaliartistry/cruisekit.git (fetch)\norigin\thttps://github.com/kaliartistry/cruisekit.git (push)"
+    },
+    "fetch": {
+      "ok": true,
+      "output": ""
+    },
+    "branch": {
+      "ok": true,
+      "output": "codex/growthops-2026-06-27"
+    },
+    "ghPrs": {
+      "ok": true,
+      "output": "[{\"headRefName\":\"codex/cruise-spend-tracker-authority-page\",\"number\":21,\"state\":\"OPEN\",\"title\":\"[codex] Add cruise spend tracker authority page\",\"url\":\"https://github.com/kaliartistry/cruisekit/pull/21\"}]"
+    },
+    "ghIssues": {
+      "ok": true,
+      "output": "[{\"number\":4,\"state\":\"OPEN\",\"title\":\"CruiseKit GrowthOps approvals needed\",\"url\":\"https://github.com/kaliartistry/cruisekit/issues/4\"}]"
+    },
+    "branchGuard": {
+      "ok": true,
+      "output": "Current branch: codex/growthops-2026-06-27"
+    }
+  },
+  "duplicateRoutes": [],
+  "routeCount": 40,
+  "contentPageCount": 32,
+  "schemaCount": 14,
+  "approvalRequiredPatterns": [
+    "pricing",
+    "subscriptions",
+    "paid tools",
+    "API credits",
+    "paid ads",
+    "creator payments",
+    "legal",
+    "privacy",
+    "affiliate agreements",
+    "partnership contracts",
+    "external outreach",
+    "#1",
+    "official",
+    "partnered",
+    "certified"
+  ],
+  "inventoryReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\initial-inventory-2026-06-27.md",
+  "initialInventoryRefreshed": true,
+  "auditReport": "C:\\Users\\ilak_\\Projects\\cruisekit\\ops\\reports\\audits\\preflight-2026-06-27.json"
+}
