@@ -28,7 +28,9 @@ export function contextProblems(c, record, provider) {
     if (c[key] !== expected) problems.push(`context-${key}`);
   }
   if (!date(c.departureDate) || !date(c.returnDate) || (Date.parse(c.returnDate) - Date.parse(c.departureDate)) / DAY !== c.nights) problems.push("nights-date-mismatch");
-  if (!Array.isArray(c.itineraryPorts) || c.itineraryPorts.length < 2 || !c.itineraryPorts.every(text) || JSON.stringify(c.itineraryPorts) !== JSON.stringify(record.itineraryPorts)) problems.push("context-itinerary");
+  // Canonical ports of call may omit embarkation/return ports. A single call is
+  // valid; unknown/empty itineraries and any exact ordered-list mismatch are not.
+  if (!Array.isArray(c.itineraryPorts) || c.itineraryPorts.length < 1 || !c.itineraryPorts.every(text) || JSON.stringify(c.itineraryPorts) !== JSON.stringify(record.itineraryPorts)) problems.push("context-itinerary");
   if (!["sourceSailingId", "cabinCategory", "rateCode", "packageCode", "market", "contractVersion"].every(k => text(c[k]))) problems.push("incomplete-cabin-rate-package-market");
   if (!["inside", "oceanview", "balcony", "suite"].includes(c.cabinType)) problems.push("unknown-cabin-mapping");
   if (c.contractVersion !== provider.contractVersion) problems.push("unreviewed-source-contract");

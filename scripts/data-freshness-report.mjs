@@ -10,7 +10,7 @@ import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { currentUtcDateOnly, daysBetween, formatDateOnly } from "./lib/date.mjs";
-import { ledgerProblems } from "./lib/fare-verification.mjs";
+import { summarizePublicFareFreshness } from "./lib/fare-freshness.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const reportDir = resolve(repoRoot, "data/reports");
@@ -58,14 +58,6 @@ function generatedAgeDays(isoValue) {
   if (Number.isNaN(parsed.getTime())) return null;
   parsed.setUTCHours(0, 0, 0, 0);
   return daysBetween(parsed, today);
-}
-
-function latestDate(values) {
-  return values.filter(Boolean).sort().at(-1) ?? null;
-}
-
-function oldestDate(values) {
-  return values.filter(Boolean).sort().at(0) ?? null;
 }
 
 function formatFindings(findings) {
@@ -125,51 +117,13 @@ async function main() {
     loadJson("data/seed/sailings.json"),
   ]);
 
-  const blockers = [];
+  const now = new Date();
+  const { blockers, byCruiseLine } = summarizePublicFareFreshness({
+    publicSailings, seed: seedSailings, ledger: fareLedger, policy: farePolicy, now, maxPublicAgeDays,
+  });
   const warnings = [];
   const info = [];
-  const provenanceErrors = ledgerProblems(seedSailings, fareLedger, farePolicy);
-  for (const error of provenanceErrors) addFinding(blockers, "blocker", "fare-provenance", error);
   const lineCounts = countBy(publicSailings, (sailing) => sailing.cruiseLine);
-  const sailingsByLine = new Map();
-
-  for (const sailing of publicSailings) {
-    const line = sailing.cruiseLine ?? "unknown";
-    const records = sailingsByLine.get(line) ?? [];
-    records.push(sailing);
-    sailingsByLine.set(line, records);
-
-    const checked = provenanceErrors.length ? null : fareLedger.entries[sailing.id]?.lastSuccessfulVerification;
-    const age = checked ? (Date.now() - Date.parse(checked)) / 86400000 : null;
-    if (age == null) {
-      addFinding(blockers, "blocker", sailing.id ?? "unknown", `No confirmed exact-context price observation. Legacy record review ${sailing.lastVerified} is not a verified fare check.`, { cruiseLine: line, unverifiedFare: true });
-      continue;
-    }
-    if (age > maxPublicAgeDays) {
-      addFinding(
-        blockers,
-        "blocker",
-        sailing.id,
-        `Price checked ${checked} is ${age.toFixed(2)} days old; max allowed is ${maxPublicAgeDays} days.`,
-        { cruiseLine: line, ageDays: age },
-      );
-    }
-  }
-
-  const byCruiseLine = [...sailingsByLine.entries()]
-    .map(([cruiseLine, records]) => {
-      const ages = records.map(record => { const checked = fareLedger.entries[record.id]?.lastSuccessfulVerification; return checked ? (Date.now() - Date.parse(checked)) / 86400000 : null; });
-      return {
-        cruiseLine,
-        publicSailings: records.length,
-        stalePublicSailings: ages.filter((age) => age != null && age > maxPublicAgeDays).length,
-        unverifiedPublicFares: ages.filter(age => age == null).length,
-        latestPriceCheck: latestDate(records.map(r => fareLedger.entries[r.id]?.lastSuccessfulVerification)),
-        oldestLastVerified: oldestDate(records.map((record) => record.lastVerified)),
-        latestLastVerified: latestDate(records.map((record) => record.lastVerified)),
-      };
-    })
-    .sort((a, b) => b.stalePublicSailings - a.stalePublicSailings || a.cruiseLine.localeCompare(b.cruiseLine));
 
   const weeklyReport = await loadOptionalReport("data/reports/latest-weekly-ingest.json");
   const weeklyReportAge = generatedAgeDays(weeklyReport?.generatedAt);
@@ -226,7 +180,7 @@ async function main() {
   }
 
   const report = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: now.toISOString(),
     currentDate: formatDateOnly(today),
     mode: "production-data-freshness",
     thresholds: {

@@ -1,5 +1,93 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-11-06 — fare evidence intake and freshness repair candidate
+
+Engineering resumed on `codex/fare-capture-context-20261106` from current main
+`3f3707727c64f730dda2298ed5acd68812fe7bea`. [Issue 83](https://github.com/kaliartistry/cruisekit/issues/83)
+and [daily run 42202268864](https://github.com/kaliartistry/cruisekit/actions/runs/42202268864)
+report 315 upcoming public fares without confirmed exact-context observations:
+Carnival 125, Norwegian 163, Virgin 16 and Holland 11. The verification ledger
+remains empty and no provider has an approved quote contract. Legacy record
+review/import dates cannot clear this gate. The downloaded report ZIP matches
+GitHub's SHA-256; its fresh November 6 freshness report is distinguished from the
+bundled July 1 weekly-ingest report. ZIP/file modification times do not refresh
+that historical result. The daily run's publication job was skipped by its
+independent schedule condition; no publication was attempted here.
+
+The candidate adds an offline Carnival discovery inspector that retains each
+selected sailing/room amount, currency, category, rate and tri-state sold-out
+flag. It does not choose a minimum/lead price or infer tax, occupancy, package,
+itinerary mapping, collection time or cache age. It always emits an incomplete
+diagnostic and zero verifier observations. The existing discovery importer and
+inactive pilot remain unchanged. Known source-shape limitations are explicit.
+
+Two verification/reporting defects are repaired: canonical single-call
+itineraries can match a complete exact tuple without padding; empty/unknown or
+mismatched itineraries still fail. Freshness blockers and per-line statistics now
+share one qualified view and clock, including whole-ledger failure and binding to
+the actual public amount/context. Invalid/future provenance or an outdated public
+bundle cannot display a confirmed check. Latest instants compare chronologically.
+All 124 Node 22 fare tests pass, including the actual report CLI in isolated
+fixtures. No production report CLI, feed build or frontend change was required.
+
+Current Claude access/ownership/Auto/effort cannot be verified: this environment
+exposes no supported Claude/computer-control route. Saved October 6/7 reviews are
+completed packet-only consultations. No replacement Claude job or held-source
+transmission occurred. Existing source restrictions, permissions, seven-day gate,
+300-second response-age limit and publication safeguards remain intact.
+
+No real quote, first baseline, data adoption, job activation, release or store
+status change is claimed. Carnival source-use applicability remains unresolved;
+NCL/Virgin/Holland restrictions remain respected. Next evidence is one permitted,
+fully captured exact-context quote and a specific reviewed baseline, followed by
+bounded coverage expansion. Specific data/publication/unattended-write approval
+is still required. Native release ownership, saved QA and release artifacts are
+untouched. Roll back only this candidate's source changes through a reviewed
+revert if later merged; preserve unrelated work. Historical release receipts below
+remain dated evidence rather than current store-status assertions.
+
+## 2026-10-09 — website fare provenance/control publication verified
+
+Kali authorized prioritizing deployment of ready validated non-ShipSafe work.
+[PR 82](https://github.com/kaliartistry/cruisekit/pull/82) merged candidate
+`093ff4be85b597d6164a3c97276d47b117129b7d` as
+`3f3707727c64f730dda2298ed5acd68812fe7bea` at 18:44:09 UTC. The merge has exactly
+the reviewed candidate tree. GitHub also records former draft PR 79 as merged at
+18:44:11 UTC (draft flag retained), with its `mergeCommit` field pointing to its
+head `52940e7`, which is included in the release ancestry. This task explicitly
+merged only PR 82; actual published main remains `3f370772`. The unfinished pilot activation was excluded by preserving
+production's automation workflow exactly; the published blob was verified.
+
+[PR Checks 37974978373](https://github.com/kaliartistry/cruisekit/actions/runs/37974978373)
+passed on the exact candidate: 148 web tests (one intentional mobile-export skip),
+102 fare tests, ten ship tests, 63 rules tests, lint and duplicate-route checks.
+The normal production-flags local build, static SEO and desktop/phone QA passed.
+[Normal Pages 37975341830](https://github.com/kaliartistry/cruisekit/actions/runs/37975341830)
+passed; provider deployment `6968435220` reported success at 18:45:54 UTC. This was
+one normal merge-triggered release with no manual dispatch/retry.
+
+All six public bundle files returned HTTP 200 at 18:47 UTC. Canonical sailing/deal
+and mobile sailing/deal feeds are byte-identical to the pre-release live baseline;
+the new public verified ledger is empty. Full live desktop 1440 / phone 390 QA
+passed tax inclusion, six nights, units/cents, errors, keyboard/repeated flows,
+save/restore, stale disclosures and Medjet product periods with zero uncaught
+errors. Actual sailing navigation checked 20 links per viewport and left the
+quoted-fare field empty. Cruises/press show no horizontal overflow. Screenshots,
+logs and exact feed hashes are retained in the task evidence; the merged PR body
+contains the final portable publication receipt. The local preview is closed.
+
+No permitted complete live collector, actual fresh quote or reviewed baseline is
+established. The 53 staged price changes remain unapproved, the pilot is inactive,
+and unbound audit evidence remains unavailable. ShipSafe, existing pricing/SEO,
+native frozen 56/stores, credentials/security, simulator and external storage were
+preserved. Rollback is a reviewed mainline-1 revert of merge `3f370772`, preserving
+later unrelated work. Pre-release source is `22abfeb`.
+
+This receipt-only branch preserves the final handoff without another Pages
+publication. Carry it into the next normal source update; do not deploy solely to
+refresh this note. Earlier preparation and HOLD entries below are historical.
+
+
 ## 2026-10-09 — authorized narrowed website/control release
 
 Kali prioritized deployment of ready validated work, excluding ShipSafe. The
