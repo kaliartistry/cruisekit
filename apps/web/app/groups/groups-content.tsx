@@ -72,7 +72,7 @@ function GroupCostSplitter() {
     if (!Number.isFinite(baseFarePerPerson) || baseFarePerPerson <= 0 || baseFarePerPerson > 1e9) return null;
     const cabins = Math.ceil(groupSize / 2);
     const drinkTier = costs.drinkPackages.tiers[0];
-    const drinksAvailable = Boolean(drinkTier && !packagePriceNeedsQuote(drinkTier) && drinkTier.billingUnit !== "purchase" && duration >= (drinkTier.minimumNights ?? 1));
+    const drinksAvailable = Boolean(drinkTier && !packagePriceNeedsQuote(drinkTier, undefined, duration) && drinkTier.billingUnit !== "purchase" && duration >= (drinkTier.minimumNights ?? 1));
     const input = {
       cruiseLineId: costs.cruiseLineId, duration, adults: groupSize, children: 0,
       cabinType, region: "caribbean" as const, baseFare: baseFarePerPerson,

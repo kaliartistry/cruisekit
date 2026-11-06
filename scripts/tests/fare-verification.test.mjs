@@ -214,6 +214,65 @@ test("reviewed first baseline supports a later weekly check without manufacturin
   assert.equal(second.candidateSeed[0].lastVerified, r.lastVerified);
 });
 
+test("a single exact port of call supports explicit first-baseline review and a later weekly check", () => {
+  const seed = [{ ...r, itineraryPorts: ["Cozumel"] }];
+  const empty = { schemaVersion: 1, entries: {} };
+  const observation = { ...o, quoteContext: { ...c, itineraryPorts: ["Cozumel"] } };
+  const pending = assessFixture({ seed, ledger: empty, observations: [observation], policy: p, runStartedAt: "2026-10-05T12:00:00Z", now });
+  assert.equal(pending.initialBaselines.length, 1);
+  assert.equal(pending.counts.eligible, 0);
+  assert.deepEqual(pending.candidateSeed, seed);
+  assert.deepEqual(pending.candidateLedger, empty);
+
+  const first = reviewInitialBaselines({ seed, ledger: empty, proposals: pending.initialBaselines, reviews: [{ targetId: r.id, proposalSha256: pending.initialBaselines[0].proposalSha256, reviewedBy: "explicit-owner-fixture-not-real-approval", contextApprovedAt: now.toISOString() }], policy: p, now });
+  assert.deepEqual(first.candidateLedger.entries[r.id].quoteContext.itineraryPorts, ["Cozumel"]);
+  assert.deepEqual(ledgerProblems(first.candidateSeed, first.candidateLedger, p, now), []);
+
+  const nextNow = new Date("2026-10-12T12:01:00Z");
+  const next = { ...observation, runId: "single-call-next-week", collectionEventId: "single-call-next-event", price: 505.75, observedAt: "2026-10-12T12:00:30Z", evidenceSha256: digest("single-call next-week fixture") };
+  const second = assessFixture({ seed: first.candidateSeed, ledger: first.candidateLedger, observations: [next], policy: p, runStartedAt: "2026-10-12T12:00:00Z", now: nextNow });
+  assert.equal(second.counts.eligible, 1);
+  assert.equal(second.candidateSeed[0].startingPrice, 505.75);
+  assert.equal(second.candidateLedger.entries[r.id].lastSuccessfulVerification, next.observedAt);
+  assert.equal(second.candidateLedger.entries[r.id].nextCheckAt, "2026-10-19T12:00:30.000Z");
+  assert.equal(second.candidateSeed[0].lastVerified, r.lastVerified);
+  assert.deepEqual(seed[0].itineraryPorts, ["Cozumel"]);
+  assert.deepEqual(empty.entries, {});
+});
+
+test("empty, unknown and blank itineraries cannot create a first baseline even when record and observation agree", () => {
+  for (const itineraryPorts of [[], null, [""], [" "], ["Cozumel", ""]]) {
+    const seed = [{ ...r, itineraryPorts }];
+    const empty = { schemaVersion: 1, entries: {} };
+    const observation = { ...o, quoteContext: { ...c, itineraryPorts } };
+    const pending = assessFixture({ seed, ledger: empty, observations: [observation], policy: p, runStartedAt: "2026-10-05T12:00:00Z", now });
+    assert.equal(pending.initialBaselines.length, 0);
+    assert.equal(pending.counts.eligible, 0);
+    assert.ok(pending.decisions[0].reasons.includes("context-itinerary"));
+    assert.deepEqual(pending.candidateSeed, seed);
+    assert.deepEqual(pending.candidateLedger, empty);
+  }
+});
+
+test("single-call support does not accept omitted, added, reordered or different ports on an existing baseline", () => {
+  for (const [recordPorts, observedPorts] of [
+    [["Cozumel"], []],
+    [["Cozumel"], null],
+    [["Cozumel"], ["Nassau"]],
+    [["Cozumel"], ["Cozumel", "Miami"]],
+    [["Cozumel", "Nassau"], ["Nassau", "Cozumel"]],
+  ]) {
+    const seed = [{ ...r, itineraryPorts: recordPorts }];
+    const ledger = { schemaVersion: 1, entries: { [r.id]: { ...e, quoteContext: { ...c, itineraryPorts: recordPorts } } } };
+    const observation = { ...o, quoteContext: { ...c, itineraryPorts: observedPorts } };
+    const a = assessFixture({ seed, ledger, observations: [observation], policy: p, runStartedAt: "2026-10-05T12:00:00Z", now });
+    assert.equal(a.counts.eligible, 0);
+    assert.ok(a.decisions[0].reasons.includes("context-itinerary"));
+    assert.deepEqual(a.candidateSeed, seed);
+    assert.deepEqual(a.candidateLedger, ledger);
+  }
+});
+
 test("alerts distinguish actual scoped source failure from public fare verification", () => {
   const report = { generatedAt: "2026-10-06T12:00:00Z", counts: { blockers: 361, warnings: 0, unverifiedPublicFares: 361 }, thresholds: { maxPublicAgeDays: 7 }, blockers: [], byCruiseLine: [] };
   const pilot = { runId: "fixture-alert", runStartedAt: "2026-10-06T10:00:00Z", generatedAt: "2026-10-06T11:00:00Z", targetId: "pilot", access: { status: "terms-collection-prohibited", checkedAt: "2026-10-06T10:59:00Z", url: "https://www.virginvoyages.com/terms-and-conditions", evidenceSha256: digest("fixture") }, requests: 1, fareRequests: 0, completeQuotes: 0, verification: { coverage: { outsideScope: 360 } }, missingEvidence: ["taxes"] };

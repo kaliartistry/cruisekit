@@ -12,6 +12,10 @@ export interface PackageTier {
   pricePerPurchase?: number;
   shortCruisePricePerDay?: number;
   shortCruiseMaxNights?: number;
+  /** Independent evidence deadline; refreshing the longer-cruise rate cannot renew this cohort. */
+  shortCruiseRecheckBy?: string;
+  /** Actual source check for the short-cruise cohort; never inherit the longer rate's check. */
+  shortCruiseSourceCheckedAt?: string;
   minimumNights?: number;
   sourceUrl?: string;
   sourceCheckedAt?: string;

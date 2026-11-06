@@ -1,5 +1,5 @@
 import type { CruiseLineCosts } from "@cruise/shared/types";
-import { PRICE_FACTS } from "./price-facts";
+import { PRICE_FACTS, usd } from "./price-facts";
 
 /**
  * Cruise line cost pricing database.
@@ -224,9 +224,11 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           pricePerDay: PRICE_FACTS.nclFreeAtSeaAdult.amount,
           shortCruisePricePerDay: PRICE_FACTS.nclFreeAtSeaShortAdult.amount,
           shortCruiseMaxNights: 5,
+          shortCruiseRecheckBy: PRICE_FACTS.nclFreeAtSeaShortAdult.recheckBy,
+          shortCruiseSourceCheckedAt: PRICE_FACTS.nclFreeAtSeaShortAdult.retrievedAt,
           minimumNights: 2,
           description:
-            "Qualifying adult 21+ pre-cruise rate: $32/day for 2–5 nights, $28.50/day for 6+ nights. Verify booking office, guest sequence and eligibility; local taxes may be extra.",
+            "Qualifying adult 21+ pre-cruise rate: $28.50/day for 6+ nights. A current all-in per-adult/day booking quote is required for 2–5 nights; the published $32 amount does not establish that daily unit. Verify booking office, guest sequence and eligibility; local taxes may be extra.",
           verificationStatus: "official",
         },
         {
@@ -261,7 +263,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       ],
       includedFree: false,
       notes:
-        "Free at Sea is an optional paid selection, not a free drinks allowance: qualifying adults pay $32/day for 2–5 nights or $28.50/day for 6+ nights before sailing. Current terms do not reverify the legacy More at Sea rate; a booking quote is required.",
+        "Free at Sea is an optional paid selection, not a free drinks allowance: qualifying adults pay $28.50/day for 6+ nights before sailing. For 2–5 nights, enter a current all-in per-adult/day booking quote; the published $32 amount does not establish a daily rate. Current terms do not reverify the legacy More at Sea rate; a booking quote is required.",
     },
     wifiPackages: {
       tiers: [
@@ -550,7 +552,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           recheckBy: PRICE_FACTS.princessPlusAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.princessPlusAdvance.amount,
           description:
-            "Full Princess Plus bundle on most ships (pre-cruise price; $70/day onboard); includes drinks, crew appreciation, and one-device Wi-Fi.",
+            `Full Princess Plus bundle: ${usd(PRICE_FACTS.princessPlusAdvance.amount)}/person/day in advance on most ships; ${usd(PRICE_FACTS.princessPlusAdvance.amount + 5)} on Sun/Star. Later/onboard purchase adds $5/person/day. Includes drinks, crew appreciation, and one-device Wi-Fi. Confirm the original quote for existing bookings.`,
           includesGratuities: true,
           includesWifi: true,
           verificationStatus: "official",
@@ -562,7 +564,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           recheckBy: PRICE_FACTS.princessPremierAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.princessPremierAdvance.amount,
           description:
-            "Full Princess Premier bundle on most ships (pre-cruise price; $105/day onboard); includes drinks, crew appreciation, and four-device Wi-Fi. Sun/Star Princess are $105/day.",
+            `Full Princess Premier bundle: ${usd(PRICE_FACTS.princessPremierAdvance.amount)}/person/day in advance on most ships; ${usd(PRICE_FACTS.princessPremierAdvance.amount + 5)} on Sun/Star. Later/onboard purchase adds $5/person/day. Includes drinks, crew appreciation, and four-device Wi-Fi. Confirm the original quote for existing bookings.`,
           includesGratuities: true,
           includesWifi: true,
           verificationStatus: "official",
@@ -594,19 +596,19 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       ],
       includedFree: false,
       notes:
-        "The $65/$100 choices are full bundles for most ships, guests 1 and 2, purchased at least 96 hours before departure. Sun/Star are $70/$105; later/onboard purchase adds $5/person/day. Confirm the package quote before using these defaults. They already include crew appreciation and Wi-Fi, so CruiseKit does not add those components again.",
+        `The ${usd(PRICE_FACTS.princessPlusAdvance.amount)}/${usd(PRICE_FACTS.princessPremierAdvance.amount)} choices are full bundles for most ships, guests 1 and 2, purchased at least 96 hours before departure. Sun/Star are ${usd(PRICE_FACTS.princessPlusAdvance.amount + 5)}/${usd(PRICE_FACTS.princessPremierAdvance.amount + 5)}; later/onboard purchase adds $5/person/day. Confirm the original package quote for existing bookings before using these defaults. They already include crew appreciation and Wi-Fi, so CruiseKit does not add those components again.`,
     },
     wifiPackages: {
       tiers: [
         {
           name: "Princess Plus WiFi",
           pricePerDay: 0,
-          description: "1 device, included in Princess Plus ($65/day bundle)",
+          description: `1 device, included in Princess Plus (${usd(PRICE_FACTS.princessPlusAdvance.amount)}/day bundle on most ships)`,
         },
         {
           name: "Princess Premier WiFi",
           pricePerDay: 0,
-          description: "4 devices, included in Princess Premier ($100/day bundle)",
+          description: `4 devices, included in Princess Premier (${usd(PRICE_FACTS.princessPremierAdvance.amount)}/day bundle on most ships)`,
         },
         {
           name: "Standalone WiFi",
@@ -653,7 +655,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
     bundlePackages: [
       {
         name: "Princess Plus",
-        pricePerDay: 65,
+        pricePerDay: PRICE_FACTS.princessPlusAdvance.amount,
         includes: [
           "Plus Beverage Package (drinks up to $15)",
           "WiFi (1 device)",
@@ -665,7 +667,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       },
       {
         name: "Princess Premier",
-        pricePerDay: 100,
+        pricePerDay: PRICE_FACTS.princessPremierAdvance.amount,
         includes: [
           "Premier Beverage Package (drinks up to $20)",
           "WiFi (4 devices)",
@@ -676,11 +678,11 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           "Reserved theater seating",
         ],
         description:
-          "Premium all-inclusive bundle. Price is $105/day on Sphere-class ships (Sun/Star Princess).",
+          `Premium all-inclusive bundle. Current advance price is ${usd(PRICE_FACTS.princessPremierAdvance.amount)}/person/day on most ships and ${usd(PRICE_FACTS.princessPremierAdvance.amount + 5)} on Sun/Star. Later/onboard purchase adds $5/person/day. Confirm the original quote for existing bookings.`,
       },
     ],
     notes:
-      "Princess Plus and Premier are the primary ways to add extras. Mini-suite/Reserve gratuity is $19.00/day. Premier price is $105/day on Sphere-class ships. Travel insurance platinum plan available at 12% of fare.",
+      `Princess Plus and Premier are the primary ways to add extras. Mini-suite/Reserve gratuity is $19.00/day. Current advance Premier price is ${usd(PRICE_FACTS.princessPremierAdvance.amount + 5)}/person/day on Sun/Star; later/onboard purchase adds $5/person/day. Confirm the original quote for existing bookings. Travel insurance platinum plan available at 12% of fare.`,
   },
 
   // ---------------------------------------------------------------------------

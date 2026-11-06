@@ -92,7 +92,7 @@ describe("true-cost calculator arithmetic", () => {
       },
       CRUISE_LINE_COSTS.princess,
     );
-    expect(result.drinkPackage).toBe(100 * 2 * 7);
+    expect(result.drinkPackage).toBe(105 * 2 * 7);
     expect(result.gratuities).toBe(0);
     expect(result.wifi).toBe(0);
   });

@@ -1,5 +1,172 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-11-06 — bounded continuation QA complete; draft push only
+
+Recovered the same Mac and independently confirmed the exact branch, remote
+checkpoint and all 12 preserved edits before resuming. No earlier QA process,
+listener, browser or Git index lock remained. One localhost server and one
+isolated headless browser were used; the user's screen and other work were not
+controlled. Both task-owned QA resources were closed after verification.
+
+Actual desktop 1440 and phone 390 flows pass NCL five-to-six-to-five nights,
+missing/negative quote blocking, keyboard switching, correct separate source dates,
+local save/reload/restore and final cents. The entered five-night $42/day fixture
+reconciles to $2,620; the supported six-night default reconciles to $2,582. The
+previous animated-counter wait was an off-screen QA assertion: scrolling the
+unchanged counter into view verified its settled value. Comparison keeps each
+line's own rate/gratuity context. Princess Plus/Premier fixtures reconcile to
+$2,980/$3,470 without duplicate included gratuities. Groups exclude the unsupported
+short rate, include the supported six-night rate, then exclude it again. No page
+errors or phone horizontal overflow were found. Phone sticky previews retain their
+existing whole-dollar rounding; final results preserve exact cents.
+
+Fresh postflight on the preserved source passes 124 fare tests, TypeScript, full
+web lint, duplicate-route and diff checks. Web tests: 150 pass, one intended
+real-date material-fact failure for exactly six unsupported facts, one intentional
+mobile-export skip. All 18 protected seed/policy/workflow/discovery/pilot files
+and all six held fact records remain byte-identical. Thirteen supported material
+facts remain rechecked November 6/due December 6. The separate 315-fare gate,
+empty ledger, zero approved quote contracts and inactive pilot are unchanged.
+
+This completes only authorized QA and the existing draft PR 84 branch update.
+There is no provider outreach/access, new quote/baseline, data adoption, activation,
+credential expansion, Claude job, merge, deployment, insurance change or native
+release work. Browser traffic was restricted to localhost; production networking,
+export/build hooks and native outputs were not exercised. The PR body records the
+final candidate commit and hosted-check status; a red gate must not be relabelled
+as release readiness. Source evidence and screenshots remain in the task's
+`fare-resume-20261106` and `output/playwright` artifacts.
+
+## 2026-11-06 — material pricing follow-through, no release
+
+The same [draft PR 84](https://github.com/kaliartistry/cruisekit/pull/84) now carries
+source-backed material-fact follow-through after the initial candidate's CI found
+19 overdue facts. Official public static research supports **13**: Carnival's
+eight rates, NCL's 6+ night $28.50/day rate, Princess's two bundles and MSC's two
+booking-cohort charges. Princess's current advertised most-ship advance defaults
+are $70/$105, with $75/$110 on Sun/Star; existing bookings retain their own quotes.
+Supported facts were actually reviewed November 6 and use the existing 30-day
+December 6 deadline. [The exact 19-row matrix and source limits](pricing-verification-2026-10-05.md)
+preserve historical evidence separately.
+
+Six facts remain overdue: NCL's $32 short-sailing table omits a daily unit, and
+five Virgin Bar Tab facts remain under the recorded website collection hold.
+No held page was requested or restamped. The real-date material-fact gate remains
+active and must fail on those unresolved facts. NCL now has independent short-rate
+expiry/source-check metadata throughout arithmetic, calculator inputs, saved
+restore, comparisons and groups: renewing the 6+ fact cannot renew a 2–5-night
+rate. A current short-sailing per-person/day booking quote is required. The UI
+shows the corresponding cohort's actual check/deadline. Current Princess consumer
+prices derive from the same facts rather than stale duplicates.
+
+The local Claude wrapper is now available for status inspection: at 14:03 UTC it
+returned `no_job` for this exact project and the original sanitized packet project.
+This does not inventory independent Desktop/Cowork jobs or establish safe Auto.
+No Claude invocation, new/resumed model job, held-source transmission, permission,
+credential, billing or account change occurred.
+
+The Carnival hold concerns fare/booking collection, not an established blanket
+ban on static product research. Its website-material restrictions leave a concrete
+applicability/retention/reuse question for minimal factual quote records; the
+mobile-app EULA is not a general website automation clause. Resolve that specific
+basis for one defined quote method, or authorize the existing unsent information
+inquiry through a confirmed appropriate contact. An internal approval checkbox is
+not provider permission. Source access alone would still not supply missing exact
+quote fields, raw evidence, real collection/cache times or reviewed data adoption.
+
+No complete permitted live quote, baseline proposal, fare adoption, source-policy,
+collector activation, public feed, merge/deployment or native release is claimed.
+PR 84 holds the final tests/CI evidence. Do not release on these partial fact
+updates or weaken gates to remove the remaining blockers.
+
+## 2026-11-06 — fare evidence intake and freshness repair candidate
+
+Engineering resumed on `codex/fare-capture-context-20261106` from current main
+`3f3707727c64f730dda2298ed5acd68812fe7bea`. [Issue 83](https://github.com/kaliartistry/cruisekit/issues/83)
+and [daily run 42202268864](https://github.com/kaliartistry/cruisekit/actions/runs/42202268864)
+report 315 upcoming public fares without confirmed exact-context observations:
+Carnival 125, Norwegian 163, Virgin 16 and Holland 11. The verification ledger
+remains empty and no provider has an approved quote contract. Legacy record
+review/import dates cannot clear this gate. The downloaded report ZIP matches
+GitHub's SHA-256; its fresh November 6 freshness report is distinguished from the
+bundled July 1 weekly-ingest report. ZIP/file modification times do not refresh
+that historical result. The daily run's publication job was skipped by its
+independent schedule condition; no publication was attempted here.
+
+The candidate adds an offline Carnival discovery inspector that retains each
+selected sailing/room amount, currency, category, rate and tri-state sold-out
+flag. It does not choose a minimum/lead price or infer tax, occupancy, package,
+itinerary mapping, collection time or cache age. It always emits an incomplete
+diagnostic and zero verifier observations. The existing discovery importer and
+inactive pilot remain unchanged. Known source-shape limitations are explicit.
+
+Two verification/reporting defects are repaired: canonical single-call
+itineraries can match a complete exact tuple without padding; empty/unknown or
+mismatched itineraries still fail. Freshness blockers and per-line statistics now
+share one qualified view and clock, including whole-ledger failure and binding to
+the actual public amount/context. Invalid/future provenance or an outdated public
+bundle cannot display a confirmed check. Latest instants compare chronologically.
+All 124 Node 22 fare tests pass, including the actual report CLI in isolated
+fixtures. No production report CLI, feed build or frontend change was required.
+
+Current Claude access/ownership/Auto/effort cannot be verified: this environment
+exposes no supported Claude/computer-control route. Saved October 6/7 reviews are
+completed packet-only consultations. No replacement Claude job or held-source
+transmission occurred. Existing source restrictions, permissions, seven-day gate,
+300-second response-age limit and publication safeguards remain intact.
+
+No real quote, first baseline, data adoption, job activation, release or store
+status change is claimed. Carnival source-use applicability remains unresolved;
+NCL/Virgin/Holland restrictions remain respected. Next evidence is one permitted,
+fully captured exact-context quote and a specific reviewed baseline, followed by
+bounded coverage expansion. Specific data/publication/unattended-write approval
+is still required. Native release ownership, saved QA and release artifacts are
+untouched. Roll back only this candidate's source changes through a reviewed
+revert if later merged; preserve unrelated work. Historical release receipts below
+remain dated evidence rather than current store-status assertions.
+
+## 2026-10-09 — website fare provenance/control publication verified
+
+Kali authorized prioritizing deployment of ready validated non-ShipSafe work.
+[PR 82](https://github.com/kaliartistry/cruisekit/pull/82) merged candidate
+`093ff4be85b597d6164a3c97276d47b117129b7d` as
+`3f3707727c64f730dda2298ed5acd68812fe7bea` at 18:44:09 UTC. The merge has exactly
+the reviewed candidate tree. GitHub also records former draft PR 79 as merged at
+18:44:11 UTC (draft flag retained), with its `mergeCommit` field pointing to its
+head `52940e7`, which is included in the release ancestry. This task explicitly
+merged only PR 82; actual published main remains `3f370772`. The unfinished pilot activation was excluded by preserving
+production's automation workflow exactly; the published blob was verified.
+
+[PR Checks 37974978373](https://github.com/kaliartistry/cruisekit/actions/runs/37974978373)
+passed on the exact candidate: 148 web tests (one intentional mobile-export skip),
+102 fare tests, ten ship tests, 63 rules tests, lint and duplicate-route checks.
+The normal production-flags local build, static SEO and desktop/phone QA passed.
+[Normal Pages 37975341830](https://github.com/kaliartistry/cruisekit/actions/runs/37975341830)
+passed; provider deployment `6968435220` reported success at 18:45:54 UTC. This was
+one normal merge-triggered release with no manual dispatch/retry.
+
+All six public bundle files returned HTTP 200 at 18:47 UTC. Canonical sailing/deal
+and mobile sailing/deal feeds are byte-identical to the pre-release live baseline;
+the new public verified ledger is empty. Full live desktop 1440 / phone 390 QA
+passed tax inclusion, six nights, units/cents, errors, keyboard/repeated flows,
+save/restore, stale disclosures and Medjet product periods with zero uncaught
+errors. Actual sailing navigation checked 20 links per viewport and left the
+quoted-fare field empty. Cruises/press show no horizontal overflow. Screenshots,
+logs and exact feed hashes are retained in the task evidence; the merged PR body
+contains the final portable publication receipt. The local preview is closed.
+
+No permitted complete live collector, actual fresh quote or reviewed baseline is
+established. The 53 staged price changes remain unapproved, the pilot is inactive,
+and unbound audit evidence remains unavailable. ShipSafe, existing pricing/SEO,
+native frozen 56/stores, credentials/security, simulator and external storage were
+preserved. Rollback is a reviewed mainline-1 revert of merge `3f370772`, preserving
+later unrelated work. Pre-release source is `22abfeb`.
+
+This receipt-only branch preserves the final handoff without another Pages
+publication. Carry it into the next normal source update; do not deploy solely to
+refresh this note. Earlier preparation and HOLD entries below are historical.
+
+
 ## 2026-10-09 — authorized narrowed website/control release
 
 Kali prioritized deployment of ready validated work, excluding ShipSafe. The

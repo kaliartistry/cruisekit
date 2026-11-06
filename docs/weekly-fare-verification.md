@@ -1,5 +1,156 @@
 # Weekly fare verification candidate
 
+## November 6 material-fact follow-through and precise source decision
+
+The [pricing verification matrix](pricing-verification-2026-10-05.md) now identifies
+all 19 overdue static material facts and their actual official URLs. Thirteen
+were supported on November 6; six remain overdue, so the real-date gate is still
+required to fail. NCL's missing short-tier daily unit is not filled by its older
+PDF or unrelated daily-price headings. Its short/long source dates and admission
+checks are independent. Static plan research is not a complete sailing quote and
+never advances the empty fare ledger. Current Princess defaults changed only on
+actual official comparison evidence; original-booking cohorts are preserved.
+
+### Carnival: exact unresolved applicability question
+
+The proposed first quote method is one anonymous, nonprivate future Carnival
+sailing/cabin/rate tuple, US/USD, one cabin/two adults/no children, with only the
+factual amount/unit, tax treatment, availability, ordered dated itinerary and
+actual collection/cache metadata retained. No protected page prose, images or
+layout would be republished. Whether supporting raw evidence may be retained,
+for how long, and under what attribution/cache rules must be resolved separately.
+The fare/booking endpoint remains held; no such read occurred.
+
+The question is whether the actual website-material restrictions/contract apply
+to this defined factual recording method and its intended reuse. Do not treat
+robots silence, an internal `review-required` flag, a source-contract ID, or the
+mobile-application query clause as a grant or a universal website ban. Ordinary
+static fact research does not itself resolve later quote collection or display.
+Applicable published scope, existing legitimate authorization or a concrete
+source-specific applicability assessment may supply the basis; a bespoke written
+grant or counsel letter is not universally mandatory.
+
+The smallest owner decision is which documented applicability basis CruiseKit will
+rely on for that one method. If none can be established, authorize the existing
+information-only inquiry through a confirmed appropriate contact, separating
+static product facts, one quote, repeated automation, evidence retention and
+public factual display. Do not send to an unconfirmed recipient or accept terms,
+open an account, obtain a key, trial, fee or commercial commitment. No inquiry was
+sent. Existing supplier marketing/docs, including Widgety, do not establish an
+executed eligible quote feed or current operator/USD/retention coverage.
+
+No supported complete quote exists to turn into a baseline proposal. Even resolved
+source scope would not fill cabin/rate/package/occupancy/tax fields or unknown
+response age; the existing exact evidence, 300-second admission and seven-day
+freshness checks remain. A real specifically reviewed baseline and bounded data
+publication approval are separate later steps. The inactive pilot and all native
+release work remain untouched.
+
+## November 6 evidence-intake engineering candidate — no live refresh
+
+The current [freshness issue](https://github.com/kaliartistry/cruisekit/issues/83)
+and [daily run](https://github.com/kaliartistry/cruisekit/actions/runs/42202268864)
+show **315 unverified exact-context fares**, not 315 verified-but-old quotes:
+Carnival 125, Norwegian 163, Virgin 16, Holland 11. All latest confirmed checks are
+null. The verified ledger is empty; every provider contract is still unapproved.
+The daily job does not invoke the deliberately inactive quote pilot/recheck.
+Publication was skipped by a separate schedule condition, not by an attempted
+fare publication. No new job, schedule or workflow is added by this candidate.
+
+The actual artifact `13494458730` was downloaded and checked against GitHub's
+ZIP SHA-256 `b24a18822a11185090446d12833830970f08e1288499a8787584122e8373055f`.
+Its freshness content was generated at `2026-11-06T10:23:50.713Z`. Its bundled
+`latest-weekly-ingest.json` content is instead dated `2026-07-01T14:33:16.820Z`;
+November ZIP entry timestamps do not establish a new ingest or quote check.
+Internal evidence is retained with this task's `fare-resume-20261106` QA artifacts.
+
+### Candidate behavior and validation
+
+- `scripts/lib/carnival-fare-discovery.mjs` inspects an already supplied discovery
+  response. It selects an explicit source sailing ID and room key; retains each
+  room's amount/currency/category/rate/availability association and source field
+  path; preserves cents; and exposes missing or mismatched context. It never
+  chooses the cheapest room, substitutes another sailing/lead headline, defaults
+  currency/taxes/occupancy, or turns an import time into an observation time.
+- A `soldOut:false` flag means only that the supplied capture did not mark that
+  room sold out. It does not prove current inventory. Absent/malformed flags stay
+  unknown. The selected sailing's raw schedule names are diagnostic only; a lead
+  schedule is never substituted and no itinerary is padded to match seed.
+- The inspector always returns `status: incomplete-discovery-not-quote` and
+  `observations: []`. It is not a collector, complete quote adapter, source grant,
+  baseline proposal or research-ledger import. Its object cannot be passed as a
+  verifier observation array. Only synthetic fixtures have been exercised;
+  actual upstream field types and complete contract mappings remain unconfirmed.
+- Canonical `itineraryPorts` describes ordered calls and permits omission of
+  embarkation/return ports. A nonempty single call can now pass exact matching;
+  empty/unknown/blank lists and added/omitted/reordered/different calls still fail.
+  Tests cover pending proposal, explicit synthetic review and later-week check.
+- `scripts/lib/fare-freshness.mjs` produces findings and cruise-line summaries
+  from one qualified view and instant. Whole-ledger errors hide all confirmed
+  dates. A public row's amount and complete supported context must also match its
+  valid ledger entry, so a new seed cannot certify an outdated public bundle.
+  Optional fractional seconds are sorted by actual time, not text ordering.
+
+All **124 tests** in `data:test:fare-verification` pass on Node 22.23.2 with
+`TMPDIR=/tmp`. This includes the actual report CLI copied into isolated fixture
+roots: a future entry produces a failing exit and matching JSON/Markdown
+unverified totals without modifying fixture inputs. Existing synthetic
+capture/replay/baseline-review tests remain in the same suite. No production
+report execution, collection, feed generation or UI build was performed.
+
+### Source and execution limits
+
+Fresh public [Carnival website terms](https://www.carnival.com/en-US/about-carnival/legal-notice/website-terms-and-conditions)
+and [copyright text](https://www.carnival.com/en-US/about-carnival/legal-notice/copyright)
+still do not establish the intended factual collection/reuse scope. Their
+mobile-application automated-query clause must not be presented as a general web
+scraping ban. The existing collection hold remains; no fare endpoint was read.
+[Widgety's public documentation](https://widgety.org/product/api/) still requires
+contact/key access and does not establish CruiseKit's current eligible source,
+operator/USD coverage, retention or display rights. No outreach, account, key,
+trial or purchase occurred. Recorded NCL/Virgin/Holland restrictions were not
+retried or bypassed. Applicable published scope, legitimate existing access or a
+concrete source-specific applicability assessment can establish a bounded route;
+there is no universal bespoke written-grant requirement or internal-checkbox
+substitute for that evidence.
+
+The preferred existing Claude route cannot be inspected from this execution
+environment: no supported Claude/computer-control tool is exposed. October 6/7
+saved sessions are completed and packet-only. Current owner, active state, Auto
+and effort remain unverified, not newly denied. No replacement job, hidden GUI/CLI
+route, permission expansion or held-source transmission was used. Local engineering
+continued within the renewed authorization.
+
+Remaining milestones are a permitted complete real quote, a specifically reviewed
+first baseline with raw/run/event/field derivation, then explicitly bounded
+coverage growth. None is established by these synthetic tests. Seven-day global
+freshness, finite cache-age admission, provider policy, verified seed, shared
+mobile feeds, discovery and publication safeguards remain unchanged. There is no
+merge/deployment or unattended production-write approval in this candidate.
+
+## October 9 website/control release verified
+
+The narrowed website/control release is published through
+[PR 82](https://github.com/kaliartistry/cruisekit/pull/82), candidate `093ff4b`,
+merge `3f370772`. GitHub also records former draft PR 79 as merged at 18:44:11
+UTC, with its `mergeCommit` field pointing to head `52940e7`, which is included in
+the ancestry. This task issued only the PR 82 merge; actual published main remains
+`3f370772`. The published automation blob exactly matches pre-release production.
+Exact-candidate PR Checks `37974978373` and normal Pages
+`37975341830` passed; provider deployment `6968435220` succeeded at 18:45:54 UTC.
+Full live desktop/phone calculator/disclosure and actual sailing navigation QA
+passed with zero uncaught errors. All four public fare feeds retain their exact
+pre-release bytes, and the new public verification ledger is empty. Source check
+dates remain explicitly unverified. No current quote or live weekly refresh is
+claimed, the unfinished pilot is inactive, and the 53 staged fares are unapproved.
+
+Production automation, source policy, discovery, existing pricing/SEO, ShipSafe,
+native frozen56/stores, credentials/security, simulator and external storage are
+preserved. The final merged PR body records evidence and rollback. This note is
+held on a receipt-only source branch for the next routine integration, avoiding a
+second Pages deployment just for documentation.
+
+
 ## October 9 narrowed website/control release
 
 Kali authorized deployment of ready validated non-ShipSafe work. The separate

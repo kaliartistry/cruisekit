@@ -6,8 +6,16 @@ import type {
   PurchaseTiming,
 } from "../types";
 
-export function packagePriceNeedsQuote(tier: PackageTier, today = new Date().toISOString().slice(0, 10)) {
-  return Boolean(tier.priceEntryRequired || (tier.recheckBy && tier.recheckBy < today));
+export function packagePriceNeedsQuote(tier: PackageTier, today = new Date().toISOString().slice(0, 10), nights?: number) {
+  if (tier.priceEntryRequired) return true;
+  const baseNeedsQuote = Boolean(tier.recheckBy && tier.recheckBy < today);
+  const hasShortRate = tier.shortCruisePricePerDay !== undefined && tier.shortCruiseMaxNights !== undefined;
+  const shortNeedsQuote = hasShortRate && (!tier.shortCruiseRecheckBy || tier.shortCruiseRecheckBy < today);
+  if (nights !== undefined && Number.isInteger(nights) && nights > 0) {
+    return hasShortRate && nights <= tier.shortCruiseMaxNights! ? shortNeedsQuote : baseNeedsQuote;
+  }
+  // A caller without sailing length cannot represent either expired cohort as current.
+  return baseNeedsQuote || shortNeedsQuote;
 }
 
 export function resolvePackageDailyPrice(
@@ -17,7 +25,7 @@ export function resolvePackageDailyPrice(
   nights = 7,
 ) {
   if (nights < (tier.minimumNights ?? 1)) throw new RangeError("Package not verified for this sailing length.");
-  if (packagePriceNeedsQuote(tier)) {
+  if (packagePriceNeedsQuote(tier, undefined, nights)) {
     if (!Number.isFinite(userEnteredPrice) || userEnteredPrice <= 0) {
       throw new RangeError("Enter a current package quote; an unavailable rate is not free.");
     }
@@ -33,7 +41,7 @@ export function resolvePackageDailyPrice(
 export function calculateDrinkPackageCost(tier: PackageTier, inputs: Pick<CalculatorInputs,
   "adults" | "duration" | "drinkPackageQuantity" | "drinkPackagePurchaseTiming" | "drinkPackagePricePerPersonPerDay">) {
   if (tier.billingUnit === "purchase") {
-    if (packagePriceNeedsQuote(tier) || !Number.isFinite(tier.pricePerPurchase) || (tier.pricePerPurchase ?? 0) <= 0) {
+    if (packagePriceNeedsQuote(tier, undefined, inputs.duration) || !Number.isFinite(tier.pricePerPurchase) || (tier.pricePerPurchase ?? 0) <= 0) {
       throw new RangeError("Fixed-credit rate unavailable; confirm the current offer.");
     }
     return tier.pricePerPurchase! * (inputs.drinkPackageQuantity ?? 1);
