@@ -466,6 +466,12 @@ export default function CalculatorForm({
   const selectedDrinkTier = costs?.drinkPackages.tiers.find(
     (tier) => tier.name === drinkTier,
   );
+  const selectedDrinkUsesShortRate = selectedDrinkTier?.shortCruisePricePerDay !== undefined
+    && duration <= (selectedDrinkTier.shortCruiseMaxNights ?? 0);
+  const selectedDrinkSourceCheckedAt = selectedDrinkUsesShortRate
+    ? selectedDrinkTier?.shortCruiseSourceCheckedAt : selectedDrinkTier?.sourceCheckedAt;
+  const selectedDrinkRecheckBy = selectedDrinkUsesShortRate
+    ? selectedDrinkTier?.shortCruiseRecheckBy : selectedDrinkTier?.recheckBy;
   const selectedWifiTier = costs?.wifiPackages.tiers.find(
     (tier) => tier.name === wifiTier,
   );
@@ -538,7 +544,7 @@ export default function CalculatorForm({
   );
 
   /* -- Price impact helpers ---------------------------------------- */
-  const drinkImpact = useMemo(() => {
+  const drinkImpact = (() => {
     if (!drinkPackageOn || !selectedDrinkTier) return 0;
     try {
       return calculateDrinkPackageCost(selectedDrinkTier, {
@@ -547,7 +553,7 @@ export default function CalculatorForm({
         drinkPackagePricePerPersonPerDay: Number(customDrinkPrice),
       });
     } catch { return 0; }
-  }, [drinkPackageOn, selectedDrinkTier, drinkPurchaseTiming, customDrinkPrice, adults, duration, drinkPurchaseCount]);
+  })();
   const wifiImpact = useMemo(() => {
     if (!wifiOn || !selectedWifiTier) return 0;
     if (packagePriceNeedsQuote(selectedWifiTier) && !(Number(customWifiPrice) > 0)) return 0;
@@ -657,7 +663,7 @@ export default function CalculatorForm({
 
   const addonError = drinkPackageOn && selectedDrinkTier && duration < (selectedDrinkTier.minimumNights ?? 1)
     ? "This package rate is not verified for your sailing length; remove it and confirm your booking."
-    : drinkPackageOn && selectedDrinkTier && packagePriceNeedsQuote(selectedDrinkTier)
+    : drinkPackageOn && selectedDrinkTier && packagePriceNeedsQuote(selectedDrinkTier, undefined, duration)
     ? selectedDrinkTier.billingUnit === "purchase"
       ? "Bar Tab offer is overdue for recheck; remove it and confirm a current offer."
       : !(Number(customDrinkPrice) > 0 && Number(customDrinkPrice) <= 1e9)
@@ -684,7 +690,7 @@ export default function CalculatorForm({
       if (matchByName) {
         compDrinkTier = matchByName.name;
       } else if (comparisonCosts.drinkPackages.tiers.length > 0) {
-        compDrinkTier = comparisonCosts.drinkPackages.tiers.find(t => !packagePriceNeedsQuote(t) && duration >= (t.minimumNights ?? 1))?.name ?? null;
+        compDrinkTier = comparisonCosts.drinkPackages.tiers.find(t => !packagePriceNeedsQuote(t, undefined, duration) && duration >= (t.minimumNights ?? 1))?.name ?? null;
       }
     }
 
@@ -803,7 +809,7 @@ export default function CalculatorForm({
     setParkingCost(String(savedInputs.parkingCostPerDay));
     setDirection(1);
     const savedTier = CRUISE_LINE_COSTS[savedInputs.cruiseLineId]?.drinkPackages.tiers.find(t => t.name === savedInputs.drinkPackage);
-    const needsCurrentQuote = savedTier && packagePriceNeedsQuote(savedTier) && !(Number(savedInputs.drinkPackagePricePerPersonPerDay) > 0);
+    const needsCurrentQuote = savedTier && packagePriceNeedsQuote(savedTier, undefined, savedInputs.duration) && !(Number(savedInputs.drinkPackagePricePerPersonPerDay) > 0);
     setStep(needsCurrentQuote ? 2 : 3);
     trackCalculatorResultReturned({
       cruiseLineId: savedInputs.cruiseLineId,
@@ -1252,7 +1258,7 @@ export default function CalculatorForm({
                                 <SelectItem key={t.name} value={t.name}>
                                   {t.name} &mdash;{" "}
                                   <span className="font-price">
-                                    {packagePriceNeedsQuote(t)
+                                    {packagePriceNeedsQuote(t, undefined, duration)
                                       ? "enter current quote"
                                       : t.billingUnit === "purchase" ? `${formatMoney(t.pricePerPurchase ?? 0)}/purchase`
                                       : duration < (t.minimumNights ?? 1) ? "sailing length not eligible"
@@ -1262,7 +1268,7 @@ export default function CalculatorForm({
                               ))}
                             </SelectContent>
                           </Select>
-                          {selectedDrinkTier && packagePriceNeedsQuote(selectedDrinkTier) && selectedDrinkTier.billingUnit !== "purchase" && (
+                          {selectedDrinkTier && packagePriceNeedsQuote(selectedDrinkTier, undefined, duration) && selectedDrinkTier.billingUnit !== "purchase" && (
                             <div className="mt-3">
                               <label
                                 htmlFor="live-drink-package-price"
@@ -1291,7 +1297,11 @@ export default function CalculatorForm({
                               <p className="mt-1 text-[11px] text-gray-500">
                                 {primaryLineId === "celebrity"
                                   ? "Celebrity prices vary by ship, itinerary, and sailing length; CruiseKit will not invent a fixed rate."
-                                  : primaryLineId === "norwegian" ? "Legacy rate unavailable: current official terms no longer verify it. Use your booking confirmation." : "The stored rate is unavailable or varies by sailing; use your current booking quote."}
+                                  : primaryLineId === "norwegian"
+                                    ? selectedDrinkTier.name.startsWith("More at Sea")
+                                      ? "Legacy rate unavailable: current official terms no longer verify it. Use your booking confirmation."
+                                      : "The short-sailing daily rate is unverified. Enter the current all-in per-person/day price from your booking quote."
+                                    : "The stored rate is unavailable or varies by sailing; use your current booking quote."}
                               </p>
                             </div>
                           )}
@@ -1302,9 +1312,9 @@ export default function CalculatorForm({
                             </div>
                           )}
                           {selectedDrinkTier && <p className="mt-2 text-xs leading-5 text-gray-600">{selectedDrinkTier.description}</p>}
-                          {selectedDrinkTier?.sourceCheckedAt && <p className="mt-2 text-xs text-gray-500">Source checked {formatFactDate(selectedDrinkTier.sourceCheckedAt)}; recheck by {selectedDrinkTier.recheckBy}. <a href={selectedDrinkTier.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">Official source</a></p>}
+                          {selectedDrinkTier?.sourceUrl && <p className="mt-2 text-xs text-gray-500">Source checked {selectedDrinkSourceCheckedAt ? formatFactDate(selectedDrinkSourceCheckedAt) : "date unknown"}; recheck by {selectedDrinkRecheckBy ?? "date unknown"}. <a href={selectedDrinkTier.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">Official source</a></p>}
                           {costs.drinkPackages.notes && <p className="mt-2 text-xs leading-5 text-gray-500">{costs.drinkPackages.notes}</p>}
-                          {drinkPricePair && !packagePriceNeedsQuote(selectedDrinkTier!) && (
+                          {drinkPricePair && !packagePriceNeedsQuote(selectedDrinkTier!, undefined, duration) && (
                             <PurchaseTimingChoice
                               pair={drinkPricePair}
                               selectedTiming={drinkPurchaseTiming}

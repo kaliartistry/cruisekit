@@ -1,5 +1,51 @@
 # Weekly fare verification candidate
 
+## November 6 material-fact follow-through and precise source decision
+
+The [pricing verification matrix](pricing-verification-2026-10-05.md) now identifies
+all 19 overdue static material facts and their actual official URLs. Thirteen
+were supported on November 6; six remain overdue, so the real-date gate is still
+required to fail. NCL's missing short-tier daily unit is not filled by its older
+PDF or unrelated daily-price headings. Its short/long source dates and admission
+checks are independent. Static plan research is not a complete sailing quote and
+never advances the empty fare ledger. Current Princess defaults changed only on
+actual official comparison evidence; original-booking cohorts are preserved.
+
+### Carnival: exact unresolved applicability question
+
+The proposed first quote method is one anonymous, nonprivate future Carnival
+sailing/cabin/rate tuple, US/USD, one cabin/two adults/no children, with only the
+factual amount/unit, tax treatment, availability, ordered dated itinerary and
+actual collection/cache metadata retained. No protected page prose, images or
+layout would be republished. Whether supporting raw evidence may be retained,
+for how long, and under what attribution/cache rules must be resolved separately.
+The fare/booking endpoint remains held; no such read occurred.
+
+The question is whether the actual website-material restrictions/contract apply
+to this defined factual recording method and its intended reuse. Do not treat
+robots silence, an internal `review-required` flag, a source-contract ID, or the
+mobile-application query clause as a grant or a universal website ban. Ordinary
+static fact research does not itself resolve later quote collection or display.
+Applicable published scope, existing legitimate authorization or a concrete
+source-specific applicability assessment may supply the basis; a bespoke written
+grant or counsel letter is not universally mandatory.
+
+The smallest owner decision is which documented applicability basis CruiseKit will
+rely on for that one method. If none can be established, authorize the existing
+information-only inquiry through a confirmed appropriate contact, separating
+static product facts, one quote, repeated automation, evidence retention and
+public factual display. Do not send to an unconfirmed recipient or accept terms,
+open an account, obtain a key, trial, fee or commercial commitment. No inquiry was
+sent. Existing supplier marketing/docs, including Widgety, do not establish an
+executed eligible quote feed or current operator/USD/retention coverage.
+
+No supported complete quote exists to turn into a baseline proposal. Even resolved
+source scope would not fill cabin/rate/package/occupancy/tax fields or unknown
+response age; the existing exact evidence, 300-second admission and seven-day
+freshness checks remain. A real specifically reviewed baseline and bounded data
+publication approval are separate later steps. The inactive pilot and all native
+release work remain untouched.
+
 ## November 6 evidence-intake engineering candidate — no live refresh
 
 The current [freshness issue](https://github.com/kaliartistry/cruisekit/issues/83)

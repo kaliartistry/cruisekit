@@ -1,5 +1,84 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-11-06 — bounded continuation QA complete; draft push only
+
+Recovered the same Mac and independently confirmed the exact branch, remote
+checkpoint and all 12 preserved edits before resuming. No earlier QA process,
+listener, browser or Git index lock remained. One localhost server and one
+isolated headless browser were used; the user's screen and other work were not
+controlled. Both task-owned QA resources were closed after verification.
+
+Actual desktop 1440 and phone 390 flows pass NCL five-to-six-to-five nights,
+missing/negative quote blocking, keyboard switching, correct separate source dates,
+local save/reload/restore and final cents. The entered five-night $42/day fixture
+reconciles to $2,620; the supported six-night default reconciles to $2,582. The
+previous animated-counter wait was an off-screen QA assertion: scrolling the
+unchanged counter into view verified its settled value. Comparison keeps each
+line's own rate/gratuity context. Princess Plus/Premier fixtures reconcile to
+$2,980/$3,470 without duplicate included gratuities. Groups exclude the unsupported
+short rate, include the supported six-night rate, then exclude it again. No page
+errors or phone horizontal overflow were found. Phone sticky previews retain their
+existing whole-dollar rounding; final results preserve exact cents.
+
+Fresh postflight on the preserved source passes 124 fare tests, TypeScript, full
+web lint, duplicate-route and diff checks. Web tests: 150 pass, one intended
+real-date material-fact failure for exactly six unsupported facts, one intentional
+mobile-export skip. All 18 protected seed/policy/workflow/discovery/pilot files
+and all six held fact records remain byte-identical. Thirteen supported material
+facts remain rechecked November 6/due December 6. The separate 315-fare gate,
+empty ledger, zero approved quote contracts and inactive pilot are unchanged.
+
+This completes only authorized QA and the existing draft PR 84 branch update.
+There is no provider outreach/access, new quote/baseline, data adoption, activation,
+credential expansion, Claude job, merge, deployment, insurance change or native
+release work. Browser traffic was restricted to localhost; production networking,
+export/build hooks and native outputs were not exercised. The PR body records the
+final candidate commit and hosted-check status; a red gate must not be relabelled
+as release readiness. Source evidence and screenshots remain in the task's
+`fare-resume-20261106` and `output/playwright` artifacts.
+
+## 2026-11-06 — material pricing follow-through, no release
+
+The same [draft PR 84](https://github.com/kaliartistry/cruisekit/pull/84) now carries
+source-backed material-fact follow-through after the initial candidate's CI found
+19 overdue facts. Official public static research supports **13**: Carnival's
+eight rates, NCL's 6+ night $28.50/day rate, Princess's two bundles and MSC's two
+booking-cohort charges. Princess's current advertised most-ship advance defaults
+are $70/$105, with $75/$110 on Sun/Star; existing bookings retain their own quotes.
+Supported facts were actually reviewed November 6 and use the existing 30-day
+December 6 deadline. [The exact 19-row matrix and source limits](pricing-verification-2026-10-05.md)
+preserve historical evidence separately.
+
+Six facts remain overdue: NCL's $32 short-sailing table omits a daily unit, and
+five Virgin Bar Tab facts remain under the recorded website collection hold.
+No held page was requested or restamped. The real-date material-fact gate remains
+active and must fail on those unresolved facts. NCL now has independent short-rate
+expiry/source-check metadata throughout arithmetic, calculator inputs, saved
+restore, comparisons and groups: renewing the 6+ fact cannot renew a 2–5-night
+rate. A current short-sailing per-person/day booking quote is required. The UI
+shows the corresponding cohort's actual check/deadline. Current Princess consumer
+prices derive from the same facts rather than stale duplicates.
+
+The local Claude wrapper is now available for status inspection: at 14:03 UTC it
+returned `no_job` for this exact project and the original sanitized packet project.
+This does not inventory independent Desktop/Cowork jobs or establish safe Auto.
+No Claude invocation, new/resumed model job, held-source transmission, permission,
+credential, billing or account change occurred.
+
+The Carnival hold concerns fare/booking collection, not an established blanket
+ban on static product research. Its website-material restrictions leave a concrete
+applicability/retention/reuse question for minimal factual quote records; the
+mobile-app EULA is not a general website automation clause. Resolve that specific
+basis for one defined quote method, or authorize the existing unsent information
+inquiry through a confirmed appropriate contact. An internal approval checkbox is
+not provider permission. Source access alone would still not supply missing exact
+quote fields, raw evidence, real collection/cache times or reviewed data adoption.
+
+No complete permitted live quote, baseline proposal, fare adoption, source-policy,
+collector activation, public feed, merge/deployment or native release is claimed.
+PR 84 holds the final tests/CI evidence. Do not release on these partial fact
+updates or weaken gates to remove the remaining blockers.
+
 ## 2026-11-06 — fare evidence intake and freshness repair candidate
 
 Engineering resumed on `codex/fare-capture-context-20261106` from current main

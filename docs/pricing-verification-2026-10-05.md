@@ -1,5 +1,88 @@
 # Truthful pricing integration review — October 5, 2026
 
+## Bounded continuation verification — November 6
+
+The same-Mac recovery and headless desktop/phone QA are complete for the preserved
+PR 84 changes. NCL five/six-night admission and source dates, quote errors,
+keyboard flow, save/restore, repeated flow, exact final cents, comparison isolation,
+Princess bundle totals and group exclusion all passed. There were no page errors
+or phone overflow. Off-screen animated totals were scrolled into view before
+settled-value assertions; no counter/product-code change was needed. The existing
+phone sticky preview rounds whole dollars while final results retain cents.
+
+Postflight: 124 fare tests pass; TypeScript/lint/duplicate-route/diff checks pass.
+Web tests have 150 passes, one expected six-fact real-date failure and one
+intentional export skip. All six unsupported facts retain their original dates;
+all protected inputs/gates remain unchanged. Only the existing draft branch is
+pushed. No insurance, native, provider access, fare adoption, activation, merge or
+deployment is included. Both isolated QA resources were closed.
+
+## November 6, 2026 — partial material-fact revalidation on draft PR 84
+
+This is an unmerged source update, not a customer release. Of the exact 19 facts
+that expired November 4, **13 are supported by fresh official public research**.
+Six retain their old retrieval/deadline. The existing 30-day material-fact cadence
+puts supported rechecks at December 6; it does not guarantee unchanged prices.
+The seven-day sailing-fare gate is separate and remains unchanged.
+
+| Fact key | Supported USD amount / source unit | November 6 outcome | Official public source |
+| --- | --- | --- | --- |
+| `carnivalCheersAdvanceAllIn` | 83.94 / adult/day including service charge | Checked Nov 6; due Dec 6 | [CHEERS](https://www.carnival.com/drink-packages/cheers-package/cheers-SUM) |
+| `carnivalCheersOnboardAllIn` | 89.94 / adult/day including service charge | Checked Nov 6; due Dec 6 | [CHEERS](https://www.carnival.com/drink-packages/cheers-package/cheers-SUM) |
+| `carnivalWifiSocialAdvance` | 20.40 / plan/day | Checked Nov 6; due Dec 6 | [Internet plans](https://www.carnival.com/internet-plans) |
+| `carnivalWifiSocialOnboard` | 22.00 / plan/day | Checked Nov 6; due Dec 6 | [Internet plans](https://www.carnival.com/internet-plans) |
+| `carnivalWifiValueAdvance` | 23.80 / plan/day | Checked Nov 6; due Dec 6 | [Internet plans](https://www.carnival.com/internet-plans) |
+| `carnivalWifiValueOnboard` | 26.00 / plan/day | Checked Nov 6; due Dec 6 | [Internet plans](https://www.carnival.com/internet-plans) |
+| `carnivalWifiPremiumAdvance` | 25.50 / plan/day | Checked Nov 6; due Dec 6 | [Internet plans](https://www.carnival.com/internet-plans) |
+| `carnivalWifiPremiumOnboard` | 28.00 / plan/day | Checked Nov 6; due Dec 6 | [Internet plans](https://www.carnival.com/internet-plans) |
+| `nclFreeAtSeaAdult` | 28.50 / eligible adult/day | Checked Nov 6; due Dec 6 | [NCL terms](https://www.ncl.com/cruise-deals/promotion-terms) |
+| `nclFreeAtSeaShortAdult` | 32.00 / person; daily unit unconfirmed | UNRESOLVED; Oct 5 / Nov 4 retained | [NCL terms](https://www.ncl.com/cruise-deals/promotion-terms) |
+| `virginBarTab200` | 200.00 / fixed purchase; not revalidated | HELD; Oct 5 / Nov 4 retained | [Bar Tab source, not requested](https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks) |
+| `virginBarTab300` | 300.00 / fixed purchase; not revalidated | HELD; Oct 5 / Nov 4 retained | [Bar Tab source, not requested](https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks) |
+| `virginBarTab500` | 500.00 / fixed purchase; not revalidated | HELD; Oct 5 / Nov 4 retained | [Bar Tab source, not requested](https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks) |
+| `virginBarTab750` | 750.00 / fixed purchase; not revalidated | HELD; Oct 5 / Nov 4 retained | [Bar Tab source, not requested](https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks) |
+| `virginBarTab1000` | 1000.00 / fixed purchase; not revalidated | HELD; Oct 5 / Nov 4 retained | [Bar Tab source, not requested](https://www.virginvoyages.com/drinks/cruise-drink-package-option-free-drinks) |
+| `princessPlusAdvance` | 70.00 / person/day, most-ship advance bundle | Checked Nov 6; due Dec 6 | [Princess comparison](https://www.princess.com/en-int/cruise-deals-promotions/plus-premier-cruise-packages) |
+| `princessPremierAdvance` | 105.00 / person/day, most-ship advance bundle | Checked Nov 6; due Dec 6 | [Princess comparison](https://www.princess.com/en-int/cruise-deals-promotions/plus-premier-cruise-packages) |
+| `mscStandardCaribbean` | 17.00 / person/night, stated booking cohort | Checked Nov 6; due Dec 6 | [MSC schedule](https://www.msccruisesusa.com/service-charges) |
+| `mscSuiteCaribbean` | 23.00 / person/night, stated booking cohort | Checked Nov 6; due Dec 6 | [MSC schedule](https://www.msccruisesusa.com/service-charges) |
+
+Carnival's CHEERS all-in figures are derived from its published advance base,
+$5 onboard difference and 20% charge; they are starting planning rates, not
+sailing quotes. Wi-Fi rates are cruise-long, per plan/day; the legacy fact enum
+remains `person-day` for compatibility while explicit plan quantity drives totals.
+
+NCL's [daily-rate FAQ](https://www.ncl.com/faq/i-only-drink-1-2-drinks-a-day-should-i-still-get-the-free-at-sea)
+supports $28.50/day; current terms give $32/person for 2–5 nights without a daily
+unit. The historical [official PDF](https://www.ncl.com/sites/default/files/Free-at-Sea-Plus-Comparison-Flyer_0.pdf)
+is marked December 2025 and cannot establish the new short-tier unit. Independent
+short-cohort deadlines now prevent the renewed 6+ rate from reactivating that
+unverified rate. Five-night selections require an entered quote and display the
+old short check/deadline; six-night selections use the supported long-cohort facts.
+
+Princess now advertises $70/$105 on most ships, $75/$110 on Sun/Star, and an
+additional $5 for late/onboard purchases. Original purchased packages retain their
+own terms; new prices are not applied retrospectively to an existing booking.
+The linked full-terms target returned HTTP 400/redirect loop and was not retried;
+that unavailable evidence is not a finding that collection is prohibited.
+
+MSC's $17/$23 applies to Caribbean/Alaska/USA bookings from May 11, 2026, ages 2+
+including children; $23 is Yacht Club, not every suite. Earlier bookings retain
+the stated older schedule. The source charges per night; calculator duration is
+nights even though the compatibility enum is `person-day`.
+
+Virgin's recorded website-wide collection restriction still applies to the five
+Bar Tab source pages. None was fetched or restamped. The real-date material-fact
+CI gate must continue failing on those five facts and NCL's unresolved short tier.
+Fixed-credit arithmetic tests use clearly synthetic purchase data so they do not
+assert that a held live offer is current; the real-date governance test is intact.
+
+No new sailing quote, fare observation, baseline proposal, feed, provider-policy,
+credential, source collection job, merge, deployment or native artifact was created.
+All underlying research receipts, actual access times and test outcomes are retained
+in the dedicated task's `fare-resume-20261106` evidence directory. The existing
+[PR 84](https://github.com/kaliartistry/cruisekit/pull/84) records final candidate CI.
+
 ## Published website result — native remains held
 
 [PR #77](https://github.com/kaliartistry/cruisekit/pull/77) released source candidate `8583f28d5444d86160beea07307fb0b1fe204d2e` as merge `7a067630452e54288cfe08d8492995b9c909a56d`. [Final Node 22 CI](https://github.com/kaliartistry/cruisekit/actions/runs/37386287014) passed 139 web / 10 ship / 63 rules tests and lint/duplicate checks; its tested tree equals the candidate tree. [Pages deployment](https://github.com/kaliartistry/cruisekit/actions/runs/37386633573) succeeded at 23:09 UTC, provider deployment `6871449825`. The public website then passed desktop 1440 / phone 390 calculator, package, comparison/group, stale-fare and seven-article/fragment verification, including keyboard, negative/missing-input errors, repeated flows and save/restore. No uncaught page errors or horizontal overflow; intentionally blocked optional external resources are a QA limitation.
