@@ -1,5 +1,41 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-11-16 — weekly browser compatibility repair candidate; no release
+
+[Weekly run 43860022826](https://github.com/kaliartistry/cruisekit/actions/runs/43860022826),
+job 133274094448, failed before ingest: `ubuntu-latest` selected Ubuntu 26.04.1
+(image version 20261111.196.1), while locked Playwright 1.58.2 rejected Chromium
+on `ubuntu26.04-x64`. Browser installation failed; ingest, freshness checking
+and issue updating were skipped. The separate publish-candidate job was skipped
+by its schedule condition. Successful artifact upload did not refresh reports.
+The distinct November 16 daily report blocked all 301 public fares lacking
+confirmed exact-context observations; this tooling failure supplies no fare
+evidence.
+
+The compatibility branch pins only `weekly-ingest.runs-on` to `ubuntu-24.04`.
+[Playwright's versioned platform source](https://github.com/microsoft/playwright/blob/v1.58.2/packages/playwright-core/src/server/utils/hostPlatform.ts)
+supports Ubuntu 24.04. Offline checks of the installed locked package confirm
+Chromium and headless-shell download mappings for 24.04 and absent mappings for
+26.04. No host-platform override is added to the workflow. Node 22, dependencies,
+schedules, permissions, conditions, report-only commands and freshness/publication
+safeguards remain unchanged. YAML parsing and exact semantic comparison pass;
+the production baseline's 102 offline fare tests pass on Node 22.23.2.
+
+This separate candidate starts from main `3f370772`; draft PR 84 and its
+`e7a6c4ac` pricing/evidence checkpoint are untouched. No fact or quote dates are
+renewed here. Main's material-fact governance failures and PR 84's six unsupported
+facts remain unresolved, alongside the empty verified ledger and inactive pilot.
+No UI, insurance, native source or saved release artifact changes are included.
+
+Actual Ubuntu browser installation/launch has not been verified. Validate that
+in an isolated install/launch-only smoke check before claiming hosted recovery.
+Do not use the full weekly job as that smoke test: its report-only runner still
+contacts all nine providers, including held source routes. No workflow dispatch,
+provider request, collection, adoption, activation, merge or deployment was made
+for this candidate. Release and source-access holds remain in force. A reviewed
+revert of this runner-pin commit would roll back the compatibility change;
+preserve unrelated work.
+
 ## 2026-10-09 — authorized narrowed website/control release
 
 Kali prioritized deployment of ready validated work, excluding ShipSafe. The
