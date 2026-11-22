@@ -1,5 +1,17 @@
 # CruiseKit Shared Agent Handoff — Web and Backend
 
+## 2026-11-22 — price-fact recheck drafted, not published
+
+Kali approved a price-fact refresh in his own words at 12:43 AM ET on
+November 22, 2026. Draft branch `cursor/price-facts-recheck-2026-11-22`
+starts from main `3f3707727c64f730dda2298ed5acd68812fe7bea` and is separate
+from the visual accessibility draft. It dates the 19 facts whose `recheckBy`
+was `2026-11-04` to retrieved `2026-11-22` and recheck `2026-12-22`. The only
+amount changes are Princess Plus advance `65` to `70` (Sun/Star `70` to `75`)
+and Princess Premier advance `100` to `105` (Sun/Star `105` to `110`). No
+deployment, workflow, rules, or functions change is included. Publication
+waits on the draft pull request and a green PR Checks run.
+
 ## 2026-10-09 — authorized narrowed website/control release
 
 Kali prioritized deployment of ready validated work, excluding ShipSafe. The

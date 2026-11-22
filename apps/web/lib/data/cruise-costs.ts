@@ -550,7 +550,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           recheckBy: PRICE_FACTS.princessPlusAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.princessPlusAdvance.amount,
           description:
-            "Full Princess Plus bundle on most ships (pre-cruise price; $70/day onboard); includes drinks, crew appreciation, and one-device Wi-Fi.",
+            "Full Princess Plus bundle on most ships (pre-cruise price; $75/day onboard); includes drinks, crew appreciation, and one-device Wi-Fi.",
           includesGratuities: true,
           includesWifi: true,
           verificationStatus: "official",
@@ -562,7 +562,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           recheckBy: PRICE_FACTS.princessPremierAdvance.recheckBy,
           pricePerDay: PRICE_FACTS.princessPremierAdvance.amount,
           description:
-            "Full Princess Premier bundle on most ships (pre-cruise price; $105/day onboard); includes drinks, crew appreciation, and four-device Wi-Fi. Sun/Star Princess are $105/day.",
+            "Full Princess Premier bundle on most ships (pre-cruise price; $110/day onboard); includes drinks, crew appreciation, and four-device Wi-Fi. Sun/Star Princess are $110/day before sailing.",
           includesGratuities: true,
           includesWifi: true,
           verificationStatus: "official",
@@ -594,19 +594,19 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       ],
       includedFree: false,
       notes:
-        "The $65/$100 choices are full bundles for most ships, guests 1 and 2, purchased at least 96 hours before departure. Sun/Star are $70/$105; later/onboard purchase adds $5/person/day. Confirm the package quote before using these defaults. They already include crew appreciation and Wi-Fi, so CruiseKit does not add those components again.",
+        "The $70/$105 choices are full bundles for most ships, guests 1 and 2, purchased at least 96 hours before departure. Sun/Star are $75/$110; later/onboard purchase adds $5/person/day. Confirm the package quote before using these defaults. They already include crew appreciation and Wi-Fi, so CruiseKit does not add those components again.",
     },
     wifiPackages: {
       tiers: [
         {
           name: "Princess Plus WiFi",
           pricePerDay: 0,
-          description: "1 device, included in Princess Plus ($65/day bundle)",
+          description: "1 device, included in Princess Plus ($70/day bundle)",
         },
         {
           name: "Princess Premier WiFi",
           pricePerDay: 0,
-          description: "4 devices, included in Princess Premier ($100/day bundle)",
+          description: "4 devices, included in Princess Premier ($105/day bundle)",
         },
         {
           name: "Standalone WiFi",
@@ -653,7 +653,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
     bundlePackages: [
       {
         name: "Princess Plus",
-        pricePerDay: 65,
+        pricePerDay: 70,
         includes: [
           "Plus Beverage Package (drinks up to $15)",
           "WiFi (1 device)",
@@ -665,7 +665,7 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
       },
       {
         name: "Princess Premier",
-        pricePerDay: 100,
+        pricePerDay: 105,
         includes: [
           "Premier Beverage Package (drinks up to $20)",
           "WiFi (4 devices)",
@@ -676,11 +676,11 @@ export const CRUISE_LINE_COSTS: Record<string, CruiseLineCosts> = {
           "Reserved theater seating",
         ],
         description:
-          "Premium all-inclusive bundle. Price is $105/day on Sphere-class ships (Sun/Star Princess).",
+          "Premium all-inclusive bundle. Price is $110/day on Sphere-class ships (Sun/Star Princess).",
       },
     ],
     notes:
-      "Princess Plus and Premier are the primary ways to add extras. Mini-suite/Reserve gratuity is $19.00/day. Premier price is $105/day on Sphere-class ships. Travel insurance platinum plan available at 12% of fare.",
+      "Princess Plus and Premier are the primary ways to add extras. Mini-suite/Reserve gratuity is $19.00/day. Premier price is $110/day on Sphere-class ships. Travel insurance platinum plan available at 12% of fare.",
   },
 
   // ---------------------------------------------------------------------------
