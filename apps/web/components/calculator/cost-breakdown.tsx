@@ -309,7 +309,7 @@ export function DeltaHero({
       transition={{ duration: 0.5 }}
       className="mb-10"
     >
-      <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-6 shadow-md sm:p-8">
+      <div className="mx-auto max-w-3xl scroll-mt-40 scroll-mb-36 rounded-2xl border border-gray-200 bg-white p-6 shadow-md sm:p-8">
         <div className="mb-5 flex items-center gap-3">
           <CruiseLineLogo cruiseLineId={cruiseLineId} size="md" />
           <div>

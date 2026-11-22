@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -52,6 +52,7 @@ const HERO_PROOF = [
 
 export default function HeroSection() {
   const router = useRouter();
+  const lineSelectRef = useRef<HTMLSelectElement>(null);
   const [selectedLine, setSelectedLine] = useState("");
   const [lineError, setLineError] = useState(false);
   const hasSelectedLine = selectedLine !== "";
@@ -63,6 +64,7 @@ export default function HeroSection() {
     trackCalculatorCtaClicked("homepage_hero");
     if (!selectedLine) {
       setLineError(true);
+      lineSelectRef.current?.focus();
       return;
     }
     const params = new URLSearchParams();
@@ -218,6 +220,7 @@ export default function HeroSection() {
 
           <select
             id="hero-cruise-line"
+            ref={lineSelectRef}
             value={selectedLine}
             aria-invalid={lineError || undefined}
             aria-describedby="hero-cruise-line-error"
@@ -237,7 +240,7 @@ export default function HeroSection() {
 
           <p
             id="hero-cruise-line-error"
-            aria-live="polite"
+            role="alert"
             className={
               lineError
                 ? "mb-4 text-left text-sm font-medium text-coral"
