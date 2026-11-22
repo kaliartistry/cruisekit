@@ -117,7 +117,7 @@ export function WifiCostGuide() {
               <WifiTierList cruiseLineId={line.id} />
               <Link
                 href={`/calculator/${line.id}/`}
-                className="mt-4 inline-flex text-xs font-bold text-teal-dark underline decoration-teal/30 underline-offset-4"
+                className="mt-4 inline-flex min-h-12 items-center text-xs font-bold text-teal-dark underline decoration-teal/30 underline-offset-4"
               >
                 Open this line&apos;s full cost calculator
               </Link>

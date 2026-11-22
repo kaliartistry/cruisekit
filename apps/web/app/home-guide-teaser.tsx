@@ -50,14 +50,14 @@ export default function HomeGuideTeaser() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/cruise-drink-package-calculator"
-              className="inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-navy/90"
+              className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-navy/90"
             >
               Estimate break-even
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/app"
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-teal hover:text-teal"
+              className="inline-flex min-h-12 items-center gap-2 rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-teal hover:text-teal"
             >
               Download the app
             </Link>

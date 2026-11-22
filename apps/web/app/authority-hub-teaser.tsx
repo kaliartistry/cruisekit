@@ -32,7 +32,7 @@ export default function AuthorityHubTeaser() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-full border border-gray-300 px-4 py-2 text-sm font-bold text-navy transition-colors hover:border-teal hover:text-teal"
+                className="inline-flex min-h-12 items-center rounded-full border border-gray-300 px-4 py-2 text-sm font-bold text-navy transition-colors hover:border-teal hover:text-teal"
               >
                 {link.label}
               </Link>
@@ -40,7 +40,7 @@ export default function AuthorityHubTeaser() {
           </div>
           <Link
             href="/cruisekit-public-information"
-            className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-teal transition-colors hover:text-teal-dark"
+            className="mt-7 inline-flex min-h-12 items-center gap-2 text-sm font-bold text-teal transition-colors hover:text-teal-dark"
           >
             Open the public information hub
             <ArrowRight className="h-4 w-4" />

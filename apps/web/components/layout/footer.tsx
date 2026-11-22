@@ -95,7 +95,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-400 transition-colors hover:text-white"
+                      className="inline-flex min-h-12 items-center text-sm text-gray-400 transition-colors hover:text-white"
                     >
                       {link.label}
                     </Link>

@@ -42,7 +42,7 @@ const Slider = React.forwardRef<
       <SliderPrimitive.Root
         ref={ref}
         className={cn(
-          "relative flex w-full touch-none select-none items-center",
+          "relative flex min-h-12 w-full touch-none select-none items-center",
           className
         )}
         value={value}
@@ -65,7 +65,7 @@ const Slider = React.forwardRef<
           <SliderPrimitive.Thumb
             key={i}
             className={cn(
-              "relative block size-5 rounded-full border-2 border-teal bg-navy shadow-md",
+              "relative block size-12 rounded-full border-2 border-teal bg-navy shadow-md",
               "transition-shadow duration-150",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2",
               "hover:shadow-lg",
