@@ -146,7 +146,7 @@ export default function CalculatorPage() {
               </p>
               <Link
                 href="/cruise-costs"
-                className="mt-4 inline-flex items-center text-sm font-semibold text-teal transition-colors hover:text-teal-dark"
+                className="mt-4 inline-flex min-h-12 items-center text-sm font-semibold text-teal transition-colors hover:text-teal-dark"
               >
                 Browse the full cruise costs hub -&gt;
               </Link>
@@ -219,31 +219,31 @@ export default function CalculatorPage() {
               <div className="mt-6 flex flex-wrap gap-2 border-t border-gray-100 pt-5">
                 <Link
                   href="/guides/drink-package-guide"
-                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                  className="inline-flex min-h-12 items-center rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
                 >
                   Drink package break-even math
                 </Link>
                 <Link
                   href="/cruise-gratuity-calculator"
-                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                  className="inline-flex min-h-12 items-center rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
                 >
                   Cruise gratuities
                 </Link>
                 <Link
                   href="/guides/port-day-tips"
-                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                  className="inline-flex min-h-12 items-center rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
                 >
                   Port spending and cash
                 </Link>
                 <Link
                   href="/blog/hidden-cruise-costs"
-                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                  className="inline-flex min-h-12 items-center rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
                 >
                   Hidden cruise costs
                 </Link>
                 <Link
                   href="/cruise-costs"
-                  className="rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
+                  className="inline-flex min-h-12 items-center rounded-full border border-teal/25 bg-teal/5 px-3 py-1.5 text-xs font-semibold text-teal transition-colors hover:border-teal hover:bg-teal/10"
                 >
                   Cruise costs hub
                 </Link>
@@ -259,7 +259,7 @@ export default function CalculatorPage() {
                   <Link
                     key={line.href}
                     href={line.href}
-                    className="group flex items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-navy transition-all hover:border-teal/50 hover:text-teal hover:shadow-[var(--shadow-sm)]"
+                    className="group flex min-h-12 items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-navy transition-all hover:border-teal/50 hover:text-teal hover:shadow-[var(--shadow-sm)]"
                   >
                     <span>{line.name} cost calculator</span>
                     <span aria-hidden="true" className="text-gray-300 group-hover:text-teal">

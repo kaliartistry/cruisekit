@@ -199,6 +199,52 @@ function PurchaseTimingChoice({
 /*  NumberStepper                                                      */
 /* ------------------------------------------------------------------ */
 
+function EstimatedTotalBar({
+  total,
+  partySize,
+  onBack,
+  onNext,
+  nextDisabled,
+  showNext,
+}: {
+  total: number;
+  partySize: number;
+  onBack: () => void;
+  onNext: () => void;
+  nextDisabled: boolean;
+  showNext: boolean;
+}) {
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-gray-200 bg-white/95 p-3 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-4xl items-center justify-between gap-3">
+        <div>
+          <p className="text-xs text-gray-400">Estimated total</p>
+          <p className="font-price text-lg font-bold text-navy">
+            ${Math.round(total).toLocaleString()}
+          </p>
+          {partySize > 1 && (
+            <p className="font-price text-[11px] text-gray-400">
+              ${Math.round(total / partySize).toLocaleString()}/person
+            </p>
+          )}
+        </div>
+        <div className="flex gap-2">
+          <Button variant="outline" size="sm" onClick={onBack}>
+            <ChevronLeft className="h-4 w-4" />
+            Back
+          </Button>
+          {showNext && (
+            <Button size="sm" onClick={onNext} disabled={nextDisabled}>
+              Results
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function NumberStepper({
   value,
   onChange,
@@ -224,7 +270,7 @@ function NumberStepper({
         onClick={() => onChange(Math.max(min, value - 1))}
         aria-label={`Decrease ${label ?? "quantity"}`}
         disabled={value <= min}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 bg-white text-navy transition-colors hover:bg-gray-50 disabled:opacity-40"
+        className="flex h-12 w-12 items-center justify-center rounded-lg border border-gray-200 bg-white text-navy transition-colors hover:bg-gray-50 disabled:opacity-40"
       >
         <Minus className="h-4 w-4" />
       </button>
@@ -236,7 +282,7 @@ function NumberStepper({
         onClick={() => onChange(Math.min(max, value + 1))}
         aria-label={`Increase ${label ?? "quantity"}`}
         disabled={value >= max}
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 bg-white text-navy transition-colors hover:bg-gray-50 disabled:opacity-40"
+        className="flex h-12 w-12 items-center justify-center rounded-lg border border-gray-200 bg-white text-navy transition-colors hover:bg-gray-50 disabled:opacity-40"
       >
         <Plus className="h-4 w-4" />
       </button>
@@ -895,7 +941,7 @@ export default function CalculatorForm({
                     type="button"
                     onClick={() => handleDurationChange(range.default)}
                     className={cn(
-                      "rounded-lg px-4 py-2 text-sm font-semibold transition-colors",
+                      "min-h-12 rounded-lg px-4 py-2 text-sm font-semibold transition-colors",
                       duration === range.default
                         ? "bg-teal text-white"
                         : "border border-gray-200 bg-white text-navy hover:bg-gray-50"
@@ -908,7 +954,7 @@ export default function CalculatorForm({
             </div>
 
             <label className="mb-6 block text-sm font-medium text-navy">Exact nights
-              <input aria-label="Exact nights" type="number" min="1" max="99" step="1" value={duration} onChange={e => handleDurationChange(Math.min(99, Math.max(1, Math.trunc(Number(e.target.value) || 1))))} className="ml-3 w-20 rounded border p-2" />
+              <input aria-label="Exact nights" type="number" min="1" max="99" step="1" value={duration} onChange={e => handleDurationChange(Math.min(99, Math.max(1, Math.trunc(Number(e.target.value) || 1))))} className="ml-3 min-h-12 w-20 rounded border px-2" />
             </label>
             {/* Travel Month */}
             <div className="mb-8">
@@ -922,7 +968,7 @@ export default function CalculatorForm({
                     type="button"
                     onClick={() => setMonth(month === idx ? undefined : idx)}
                     className={cn(
-                      "rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
+                      "min-h-12 rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
                       month === idx
                         ? "bg-teal text-white"
                         : "border border-gray-200 bg-white text-navy hover:bg-gray-50"
@@ -984,7 +1030,7 @@ export default function CalculatorForm({
                     <button
                       type="button"
                       onClick={() => setShowChildren(true)}
-                      className="self-start text-sm font-medium text-teal hover:text-teal-dark transition-colors"
+                      className="inline-flex min-h-12 items-center self-start px-1 text-sm font-medium text-teal transition-colors hover:text-teal-dark"
                     >
                       + Add children
                     </button>
@@ -1016,7 +1062,7 @@ export default function CalculatorForm({
                       type="button"
                       onClick={() => setCabinType(ct.value)}
                       className={cn(
-                        "rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
+                        "min-h-12 rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
                         cabinType === ct.value
                           ? "bg-teal text-white"
                           : "border border-gray-200 bg-white text-navy hover:bg-gray-50"
@@ -1055,7 +1101,7 @@ export default function CalculatorForm({
                   value={baseFare}
                   onChange={(e) => setBaseFare(e.target.value)}
                   className={cn(
-                    "flex h-10 w-full rounded-lg border bg-white py-2 pl-7 pr-3",
+                    "flex h-12 min-h-12 w-full rounded-lg border bg-white py-2 pl-7 pr-3",
                     "font-price text-sm text-navy placeholder:text-gray-400",
                     "transition-colors duration-150",
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-1",
@@ -1064,22 +1110,22 @@ export default function CalculatorForm({
                 />
               </div>
               <label className="mt-3 block text-sm text-navy">This fare is for
-                <select aria-label="Fare unit" value={fareUnit} onChange={e => setFareUnit(e.target.value as typeof fareUnit)} className="mt-1 block w-full max-w-md rounded border p-2">
+                <select aria-label="Fare unit" value={fareUnit} onChange={e => setFareUnit(e.target.value as typeof fareUnit)} className="mt-1 block min-h-12 w-full max-w-md rounded border px-2">
                   <option value="booking">The whole party / booking</option>
                   <option value="person">Each person</option>
                   <option value="cabin">Each cabin</option>
                 </select>
               </label>
-              {fareUnit === "cabin" && <label className="mt-3 block text-sm">Number of cabins <input aria-label="Number of cabins" type="number" min="1" max="20" value={cabins} onChange={e => setCabins(Math.min(20, Math.max(1, Number(e.target.value) || 1)))} className="ml-2 w-20 rounded border p-2" /></label>}
+              {fareUnit === "cabin" && <label className="mt-3 block text-sm">Number of cabins <input aria-label="Number of cabins" type="number" min="1" max="20" value={cabins} onChange={e => setCabins(Math.min(20, Math.max(1, Number(e.target.value) || 1)))} className="ml-2 min-h-12 w-20 rounded border px-2" /></label>}
               <p className="mt-2 text-xs text-gray-500">Per-person and per-cabin entries assume the same price for each. Use the booking total when guest or cabin prices differ.</p>
               <label className="mt-3 block text-sm text-navy">Required taxes and fees
-                <select aria-label="Tax inclusion" value={taxTreatment} onChange={e => setTaxTreatment(e.target.value as typeof taxTreatment)} className="mt-1 block w-full max-w-md rounded border p-2">
+                <select aria-label="Tax inclusion" value={taxTreatment} onChange={e => setTaxTreatment(e.target.value as typeof taxTreatment)} className="mt-1 block min-h-12 w-full max-w-md rounded border px-2">
                   <option value="unknown">I don&apos;t know — show a subtotal</option>
                   <option value="included">Already included in my fare</option>
                   <option value="excluded">Extra — enter the party amount</option>
                 </select>
               </label>
-              {taxTreatment === "excluded" && <label className="mt-3 block text-sm">Extra taxes / required fees for the whole party (USD)<input aria-label="Extra taxes and fees in USD" type="number" min="0" step="0.01" value={extraTaxes} onChange={e => setExtraTaxes(e.target.value)} className="mt-1 block rounded border p-2" /></label>}
+              {taxTreatment === "excluded" && <label className="mt-3 block text-sm">Extra taxes / required fees for the whole party (USD)<input aria-label="Extra taxes and fees in USD" type="number" min="0" step="0.01" value={extraTaxes} onChange={e => setExtraTaxes(e.target.value)} className="mt-1 block min-h-12 rounded border px-2" /></label>}
               {baseFare && !validFare && <p role="alert" className="mt-2 text-sm text-coral">Enter a positive USD fare with at most two decimal places.</p>}
               {!validTax && <p role="alert" className="mt-2 text-sm text-coral">Enter extra required fees for the whole party, including 0 if confirmed.</p>}
               {!fareEstimate && <p className="mt-3 text-xs text-amber-700">Historical fare table: March 28, 2026. It is stale and is excluded from current estimates. Enter your own quote.</p>}
@@ -1285,7 +1331,7 @@ export default function CalculatorForm({
                                     setCustomDrinkPrice(event.target.value)
                                   }
                                   placeholder="Price shown in Cruise Planner"
-                                  className="flex h-10 w-full rounded-lg border border-gray-200 bg-white py-2 pl-7 pr-3 text-sm text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+                                  className="flex h-12 min-h-12 w-full rounded-lg border border-gray-200 bg-white py-2 pl-7 pr-3 text-sm text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
                                 />
                               </div>
                               <p className="mt-1 text-[11px] text-gray-500">
@@ -1413,7 +1459,7 @@ export default function CalculatorForm({
                                     setCustomWifiPrice(event.target.value)
                                   }
                                   placeholder="Price shown for your sailing"
-                                  className="flex h-10 w-full rounded-lg border border-gray-200 bg-white py-2 pl-7 pr-3 text-sm text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+                                  className="flex h-12 min-h-12 w-full rounded-lg border border-gray-200 bg-white py-2 pl-7 pr-3 text-sm text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
                                 />
                               </div>
                               <p className="mt-1 text-[11px] text-gray-500">
@@ -1608,7 +1654,7 @@ export default function CalculatorForm({
                             value={parkingCost}
                             onChange={(e) => setParkingCost(e.target.value)}
                             className={cn(
-                              "flex h-10 w-full rounded-lg border bg-white py-2 pl-7 pr-3",
+                              "flex h-12 min-h-12 w-full rounded-lg border bg-white py-2 pl-7 pr-3",
                               "font-price text-sm text-navy placeholder:text-gray-400",
                               "transition-colors duration-150",
                               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-1",
@@ -1667,33 +1713,6 @@ export default function CalculatorForm({
               </div>
             </div>
 
-            {/* Mobile running total sticky bar */}
-            <div className="fixed inset-x-0 bottom-0 z-40 border-t border-gray-200 bg-white/95 p-3 backdrop-blur-sm lg:hidden">
-              <div className="mx-auto flex max-w-4xl items-center justify-between">
-                <div>
-                  <p className="text-xs text-gray-400">Estimated total</p>
-                  <p className="font-price text-lg font-bold text-navy">
-                    ${Math.round(runningTotal).toLocaleString()}
-                  </p>
-                  {(adults + children) > 1 && (
-                    <p className="font-price text-[11px] text-gray-400">
-                      ${Math.round(runningTotal / (adults + children)).toLocaleString()}/person
-                    </p>
-                  )}
-                </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" onClick={goBack}>
-                    <ChevronLeft className="h-4 w-4" />
-                    Back
-                  </Button>
-                  <Button size="sm" onClick={goNext} disabled={Boolean(addonError)}>
-                    Results
-                    <ChevronRight className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-
             {/* Desktop navigation */}
             <div className="mt-8 hidden items-center justify-between lg:flex">
               <Button variant="outline" size="lg" onClick={goBack}>
@@ -1706,8 +1725,6 @@ export default function CalculatorForm({
               </Button>
             </div>
 
-            {/* Spacer for mobile sticky bar */}
-            <div className="h-20 lg:hidden" />
           </motion.div>
         )}
 
@@ -1750,6 +1767,20 @@ export default function CalculatorForm({
           </motion.div>
         )}
       </AnimatePresence>
+
+      {(step === 2 || step === 3) && (
+        <>
+          <EstimatedTotalBar
+            total={runningTotal}
+            partySize={adults + children}
+            onBack={goBack}
+            onNext={goNext}
+            nextDisabled={Boolean(addonError)}
+            showNext={step === 2}
+          />
+          <div className="h-28" />
+        </>
+      )}
     </div>
   );
 }

@@ -33,7 +33,7 @@ export default function PageHeader({
               <li>
                 <Link
                   href="/"
-                  className="transition-colors hover:text-navy"
+                  className="inline-flex min-h-12 min-w-12 items-center px-2 transition-colors hover:text-navy"
                 >
                   Home
                 </Link>
@@ -44,7 +44,7 @@ export default function PageHeader({
                   {crumb.href && index < breadcrumbs.length - 1 ? (
                     <Link
                       href={crumb.href}
-                      className="transition-colors hover:text-navy"
+                      className="inline-flex min-h-12 min-w-12 items-center px-2 transition-colors hover:text-navy"
                     >
                       {crumb.label}
                     </Link>

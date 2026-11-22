@@ -71,9 +71,9 @@ export default function AnalyticsLoader() {
           role="dialog"
           aria-modal="false"
           aria-labelledby="analytics-consent-title"
-          className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl sm:inset-x-6 sm:p-6"
+          className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-h-[calc(100dvh-2rem)] max-w-2xl overflow-y-auto rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl sm:inset-x-6 sm:p-6"
         >
-          <h2 id="analytics-consent-title" className="text-lg font-bold text-navy">
+          <h2 id="analytics-consent-title" className="break-words text-lg font-bold text-navy">
             Optional website analytics
           </h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -90,14 +90,14 @@ export default function AnalyticsLoader() {
             <button
               type="button"
               onClick={() => choose("granted")}
-              className="rounded-lg bg-navy px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+              className="inline-flex min-h-12 items-center rounded-lg bg-navy px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
             >
               Allow analytics
             </button>
             <button
               type="button"
               onClick={() => choose("denied")}
-              className="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+              className="inline-flex min-h-12 items-center rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
             >
               Keep analytics off
             </button>
@@ -105,7 +105,7 @@ export default function AnalyticsLoader() {
               <button
                 type="button"
                 onClick={() => setSettingsOpen(false)}
-                className="px-2 py-2.5 text-sm font-semibold text-slate-500 underline underline-offset-4"
+                className="inline-flex min-h-12 items-center px-2 py-2.5 text-sm font-semibold text-slate-500 underline underline-offset-4"
               >
                 Cancel
               </button>
@@ -122,7 +122,7 @@ export function AnalyticsPreferenceButton() {
     <button
       type="button"
       onClick={() => window.dispatchEvent(new Event(OPEN_CONSENT_EVENT))}
-      className="font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
+      className="inline-flex min-h-12 items-center font-medium text-teal underline decoration-teal/30 underline-offset-2 transition-colors hover:text-teal-dark"
     >
       Change website analytics choice
     </button>

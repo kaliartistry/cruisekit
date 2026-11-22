@@ -30,7 +30,7 @@ export default function InfoTip({ text, className }: InfoTipProps) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="text-gray-400 hover:text-teal transition-colors"
+        className="inline-flex h-12 w-12 items-center justify-center rounded-lg text-gray-400 transition-colors hover:bg-gray-50 hover:text-teal"
         aria-label="More info"
       >
         <Info className="h-3.5 w-3.5" />
