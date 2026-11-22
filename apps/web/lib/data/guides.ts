@@ -422,7 +422,7 @@ const drinkPackageGuide: Guide = {
           question:
             "How does the Princess drink package work?",
           answer:
-            "Princess doesn't sell drink packages standalone — they're bundled into Princess Plus ($65/day) and Princess Premier ($100/day, or $105 on Sphere-class ships). Princess Plus includes drinks up to $15, WiFi for 1 device, gratuities, and 4 casual specialty dining meals. Princess Premier bumps it to drinks up to $20, WiFi for 4 devices, unlimited specialty dining, unlimited photos, a $100 excursion credit on 7+ night sailings, and reserved theater seating. The bundle approach means you're getting multiple perks, not just drinks — making it harder to do simple break-even math but often a strong value overall. The 20% service charge is included in the bundle price.",
+            "Princess doesn't sell drink packages standalone — they're bundled into Princess Plus ($70/day) and Princess Premier ($105/day, or $110 on Sphere-class ships). Princess Plus includes drinks up to $15, WiFi for 1 device, gratuities, and 4 casual specialty dining meals. Princess Premier bumps it to drinks up to $20, WiFi for 4 devices, unlimited specialty dining, unlimited photos, a $100 excursion credit on 7+ night sailings, and reserved theater seating. The bundle approach means you're getting multiple perks, not just drinks — making it harder to do simple break-even math but often a strong value overall. The 20% service charge is included in the bundle price.",
           appliesTo: "Princess",
         },
         {

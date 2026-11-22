@@ -28,8 +28,8 @@ describe("quote arithmetic", () => {
   });
   it("does not price an expired package as free or current", () => {
     const tier = CRUISE_LINE_COSTS["virgin-voyages"].drinkPackages.tiers[0];
-    expect(packagePriceNeedsQuote(tier, "2026-11-04")).toBe(false);
-    expect(packagePriceNeedsQuote(tier, "2026-11-05")).toBe(true);
+    expect(packagePriceNeedsQuote(tier, "2026-12-22")).toBe(false);
+    expect(packagePriceNeedsQuote(tier, "2026-12-23")).toBe(true);
     const stale = { ...CRUISE_LINE_COSTS["virgin-voyages"], drinkPackages: { tiers: [{ ...tier, recheckBy: "2000-01-01" }], includedFree: false } };
     expect(() => calculateCosts({ ...quote, drinkPackage: tier.name }, stale)).toThrow(/unavailable/);
   });
@@ -49,7 +49,7 @@ describe("quote arithmetic", () => {
   it("uses suite gratuities", () => expect(cost({ cabinType: "suite" }).gratuities).toBe(266));
   it("retains current-main bundled adult inclusions without exempting children", () => {
     const result = calculateCosts({ ...quote, cruiseLineId: "princess", children: 1, drinkPackage: "Premier Beverage Package", wifiPackage: "Princess Premier WiFi" }, CRUISE_LINE_COSTS.princess);
-    expect(result.drinkPackage).toBe(1400);
+    expect(result.drinkPackage).toBe(1470);
     expect(result.gratuities).toBe(126);
     expect(result.wifi).toBe(0);
   });
