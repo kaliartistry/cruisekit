@@ -1,0 +1,57 @@
+name: Playwright Chromium Smoke (Ubuntu 24.04)
+
+# Manual-only check that Playwright's Chromium installs and launches on a
+# pinned ubuntu-24.04 runner. No provider traffic, no repo writes.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  chromium-smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
+      - name: Guard locked Playwright version (1.58.2)
+        run: |
+          version="$(pnpm exec playwright --version)"
+          echo "$version"
+          case "$version" in
+            *1.58.2*) ;;
+            *) echo "Expected Playwright 1.58.2, got: $version" >&2; exit 1 ;;
+          esac
+      - name: Install Playwright browser
+        run: pnpm exec playwright install chromium
+      - name: Headless Chromium launch
+        run: |
+          node -e '
+          const fs = require("node:fs");
+          const { chromium } = require("playwright");
+          (async () => {
+            const osRelease = fs.readFileSync("/etc/os-release", "utf8");
+            const pretty = (osRelease.match(/^PRETTY_NAME="?([^"\n]*)"?$/m) || [])[1] || "unknown";
+            console.log("OS: " + pretty);
+            const browser = await chromium.launch({ headless: true });
+            try {
+              const page = await browser.newPage();
+              await page.goto("data:text/html,<title>smoke</title><p>ok</p>");
+              console.log("Page title: " + (await page.title()));
+              console.log("Chromium version: " + browser.version());
+            } finally {
+              await browser.close();
+            }
+          })().catch((err) => {
+            console.error(err);
+            process.exit(1);
+          });
+          '
