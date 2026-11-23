@@ -216,7 +216,7 @@ export default function ContentSections() {
             </div>
             <Link
               href="/cruises"
-              className="hidden sm:flex items-center gap-1 text-sm font-semibold text-teal hover:text-teal-dark transition-colors"
+              className="hidden min-h-12 items-center gap-1 text-sm font-semibold text-teal transition-colors hover:text-teal-dark sm:flex"
             >
               View all
               <ArrowRight className="h-4 w-4" />
@@ -349,7 +349,7 @@ export default function ContentSections() {
 
           <Link
             href="/cruises"
-            className="sm:hidden flex items-center justify-center gap-1 mt-4 text-sm font-semibold text-teal hover:text-teal-dark transition-colors"
+            className="mt-4 flex min-h-12 items-center justify-center gap-1 text-sm font-semibold text-teal transition-colors hover:text-teal-dark sm:hidden"
           >
             View all cruises
             <ArrowRight className="h-4 w-4" />
@@ -447,7 +447,7 @@ export default function ContentSections() {
           <div className="mt-8 text-right">
             <Link
               href="/methodology"
-              className="text-xs text-gray-400 hover:text-teal underline underline-offset-2 transition-colors"
+              className="inline-flex min-h-12 items-center text-xs text-gray-400 underline underline-offset-2 transition-colors hover:text-teal"
             >
               Sources &amp; methodology &rarr;
             </Link>

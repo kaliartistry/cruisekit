@@ -20,7 +20,7 @@ export default function AffiliateDisclosure({
           We earn a commission if you book. It never changes the price you pay.{" "}
           <Link
             href="/how-we-make-money"
-            className="text-teal hover:underline font-medium"
+            className="inline-flex min-h-12 items-center font-medium text-teal hover:underline"
           >
             How we make money
           </Link>
@@ -36,7 +36,7 @@ export default function AffiliateDisclosure({
       We earn a commission if you book. It never changes the price you pay.{" "}
       <Link
         href="/how-we-make-money"
-        className="text-teal hover:underline"
+        className="inline-flex min-h-12 items-center text-teal hover:underline"
       >
         How we make money
       </Link>

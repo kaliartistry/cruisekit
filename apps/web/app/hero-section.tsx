@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -52,7 +52,9 @@ const HERO_PROOF = [
 
 export default function HeroSection() {
   const router = useRouter();
+  const lineSelectRef = useRef<HTMLSelectElement>(null);
   const [selectedLine, setSelectedLine] = useState("");
+  const [lineError, setLineError] = useState(false);
   const hasSelectedLine = selectedLine !== "";
   const mobileAppLive =
     isStoreLive(APP_STORE_STATUS, APP_STORE_URL) ||
@@ -60,8 +62,13 @@ export default function HeroSection() {
 
   const handleSubmit = () => {
     trackCalculatorCtaClicked("homepage_hero");
+    if (!selectedLine) {
+      setLineError(true);
+      lineSelectRef.current?.focus();
+      return;
+    }
     const params = new URLSearchParams();
-    if (selectedLine) params.set("line", selectedLine);
+    params.set("line", selectedLine);
     router.push(`/calculator?${params.toString()}`);
   };
 
@@ -70,15 +77,17 @@ export default function HeroSection() {
   )?.name;
 
   return (
-    <section className="relative min-h-[600px] lg:min-h-[640px] flex items-center justify-center overflow-hidden">
-      <Image
-        src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1920&q=80"
-        alt="Cruise ship at sea"
-        fill
-        className="object-cover"
-        priority
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/75 via-navy/55 to-navy/85" />
+    <section className="relative min-h-[600px] lg:min-h-[640px] flex items-center justify-center">
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1920&q=80"
+          alt="Cruise ship at sea"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/75 via-navy/55 to-navy/85" />
+      </div>
 
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 py-16 lg:py-20 text-center">
         <motion.h1
@@ -112,7 +121,7 @@ export default function HeroSection() {
             <Link
               href="/app"
               onClick={() => trackDownloadCtaClicked("unknown", "homepage_hero")}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-all hover:bg-teal hover:text-white sm:w-auto"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-navy shadow-xl transition-all hover:bg-teal hover:text-white sm:w-auto"
             >
               <Smartphone className="h-4 w-4" strokeWidth={2.2} />
               Get the free app
@@ -121,7 +130,7 @@ export default function HeroSection() {
           <Link
             href="/calculator"
             onClick={() => trackCalculatorCtaClicked("homepage_hero")}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20 sm:w-auto"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20 sm:w-auto"
           >
             Use the web calculator
             <ArrowRight className="h-4 w-4" strokeWidth={2.4} />
@@ -130,7 +139,7 @@ export default function HeroSection() {
 
         <Link
           href="/methodology"
-          className="mt-3 inline-block text-xs text-white/60 hover:text-white/90 underline underline-offset-2 transition-colors"
+          className="mt-3 inline-flex min-h-12 items-center text-xs text-white/60 underline underline-offset-2 transition-colors hover:text-white/90"
         >
           See how we calculate this &rarr;
         </Link>
@@ -188,9 +197,15 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-5 sm:p-6 max-w-2xl mx-auto"
         >
-          <label className="block text-xs font-semibold text-gray-500 uppercase mb-2 text-left">
-            <Ship className="inline h-3.5 w-3.5 mr-1" />
+          <p className="mb-2 block text-left text-xs font-semibold uppercase text-gray-500">
+            <Ship className="mr-1 inline h-3.5 w-3.5" />
             Want a web estimate first?
+          </p>
+          <label
+            htmlFor="hero-cruise-line"
+            className="mb-2 block text-left text-xs font-semibold uppercase text-gray-500"
+          >
+            Cruise line
           </label>
 
           {hasSelectedLine && (
@@ -204,9 +219,16 @@ export default function HeroSection() {
           )}
 
           <select
+            id="hero-cruise-line"
+            ref={lineSelectRef}
             value={selectedLine}
-            onChange={(e) => setSelectedLine(e.target.value)}
-            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal appearance-none cursor-pointer mb-4"
+            aria-invalid={lineError || undefined}
+            aria-describedby="hero-cruise-line-error"
+            onChange={(e) => {
+              setSelectedLine(e.target.value);
+              if (e.target.value) setLineError(false);
+            }}
+            className="mb-4 min-h-12 w-full cursor-pointer appearance-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-navy focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal"
           >
             <option value="">Select a cruise line</option>
             {CRUISE_LINES.filter((line) => CRUISE_LINE_COSTS[line.id]).map((line) => (
@@ -216,9 +238,21 @@ export default function HeroSection() {
             ))}
           </select>
 
+          <p
+            id="hero-cruise-line-error"
+            role="alert"
+            className={
+              lineError
+                ? "mb-4 text-left text-sm font-medium text-coral"
+                : "sr-only"
+            }
+          >
+            {lineError ? "Choose a cruise line to start your estimate." : ""}
+          </p>
+
           <button
             onClick={handleSubmit}
-            className="w-full bg-teal hover:bg-teal-dark text-white font-bold py-4 px-6 rounded-xl text-base transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+            className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-teal px-6 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-teal-dark hover:shadow-xl"
           >
             Estimate before I sail
             <span aria-hidden="true">&rarr;</span>

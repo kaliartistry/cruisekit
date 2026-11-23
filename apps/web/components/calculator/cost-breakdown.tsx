@@ -196,7 +196,7 @@ function ShareResultButton({
         type="button"
         onClick={handleShare}
         className={cn(
-          "inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-bold transition-colors sm:w-auto",
+          "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-bold transition-colors sm:w-auto",
           shareStatus === "copied" || shareStatus === "shared"
             ? "border-green-200 bg-green-50 text-green-700"
             : "border-navy/20 bg-white text-navy hover:bg-navy/5"
@@ -260,7 +260,7 @@ function SaveResultButton({
         type="button"
         onClick={save}
         className={cn(
-          "inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-bold transition-colors sm:w-auto",
+          "inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-bold transition-colors sm:w-auto",
           status === "saved"
             ? "border-green-200 bg-green-50 text-green-700"
             : "border-navy/20 bg-white text-navy hover:bg-navy/5",
@@ -309,7 +309,7 @@ export function DeltaHero({
       transition={{ duration: 0.5 }}
       className="mb-10"
     >
-      <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-6 shadow-md sm:p-8">
+      <div className="mx-auto max-w-3xl scroll-mt-40 scroll-mb-36 rounded-2xl border border-gray-200 bg-white p-6 shadow-md sm:p-8">
         <div className="mb-5 flex items-center gap-3">
           <CruiseLineLogo cruiseLineId={cruiseLineId} size="md" />
           <div>
@@ -467,7 +467,7 @@ function InlineAdjustPanel({
             type="button"
             onClick={row.onRemove}
             className={cn(
-              "group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all",
+              "group inline-flex min-h-12 items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all",
               "border-gray-200 bg-white text-navy",
               "hover:border-coral hover:bg-coral/5 hover:text-coral"
             )}
@@ -672,7 +672,7 @@ function SingleBreakdown({
                 href={getHotelLink("https://www.booking.com/")}
                 partner="booking.com"
                 source="calculator"
-                className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-700"
+                className="inline-flex min-h-12 items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-700"
               >
                 Search hotels →
               </AffiliateLink>
@@ -694,7 +694,7 @@ function SingleBreakdown({
                 href={getMedEvacLink("https://www.medjetassist.com/")}
                 partner="medjet"
                 source="calculator"
-                className="inline-flex items-center gap-1 text-xs font-semibold text-amber-600 hover:text-amber-700"
+                className="inline-flex min-h-12 items-center gap-1 text-xs font-semibold text-amber-600 hover:text-amber-700"
               >
                 Learn more →
               </AffiliateLink>
@@ -781,7 +781,7 @@ function SingleBreakdown({
         Prices{" "}
         <Link
           href="/methodology"
-          className="underline decoration-gray-300 underline-offset-2 hover:text-navy hover:decoration-navy"
+          className="inline-flex min-h-12 items-center underline decoration-gray-300 underline-offset-2 hover:text-navy hover:decoration-navy"
         >
           verified
         </Link>{" "}

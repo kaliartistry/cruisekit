@@ -46,8 +46,8 @@ describe("material price fact governance", () => {
   });
 
   it("still fails freshness for any active fact after its exact recheck boundary", () => {
-    expect(priceFactIsStale(PRICE_FACTS.nclFreeAtSeaAdult, "2026-11-04")).toBe(false);
-    expect(priceFactIsStale(PRICE_FACTS.nclFreeAtSeaAdult, "2026-11-05")).toBe(true);
+    expect(priceFactIsStale(PRICE_FACTS.nclFreeAtSeaAdult, "2026-12-22")).toBe(false);
+    expect(priceFactIsStale(PRICE_FACTS.nclFreeAtSeaAdult, "2026-12-23")).toBe(true);
   });
 
   it("keeps official pre-purchase and onboard facts paired without duplicating amounts in UI code", () => {

@@ -167,7 +167,7 @@ export default function Navbar() {
             <Link
               href="/app"
               onClick={trackAppDownload}
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-bold text-navy transition-colors hover:bg-teal hover:text-white"
+              className="inline-flex min-h-12 shrink-0 items-center gap-1.5 rounded-full bg-white px-3 font-bold text-navy transition-colors hover:bg-teal hover:text-white"
             >
               Download free
               <ArrowRight className="h-3 w-3" strokeWidth={2.4} />
@@ -180,7 +180,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
+          className="flex min-h-12 items-center gap-2.5 transition-opacity hover:opacity-80"
         >
           <Ship className="h-7 w-7 text-teal" strokeWidth={2} />
           <span className="text-lg font-bold tracking-tight text-navy font-sans">
@@ -197,7 +197,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium",
+                    "flex min-h-12 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium",
                     "text-gray-600 transition-colors",
                     "hover:text-navy hover:bg-gray-50"
                   )}
@@ -217,7 +217,7 @@ export default function Navbar() {
               aria-haspopup="menu"
               aria-controls="desktop-calculators-menu"
               className={cn(
-                "flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium",
+                "flex min-h-12 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium",
                 "text-gray-600 transition-colors",
                 "hover:bg-gray-50 hover:text-navy",
                 "focus:outline-none focus:ring-2 focus:ring-teal/40"
@@ -251,7 +251,7 @@ export default function Navbar() {
                       href={link.href}
                       role="menuitem"
                       onClick={() => setCalculatorsOpen(false)}
-                      className="block rounded-lg px-3 py-3 transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none"
+                      className="block min-h-12 rounded-lg px-3 py-3 transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none"
                     >
                       <span className="block text-sm font-bold text-navy">
                         {link.label}
@@ -273,7 +273,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium",
+                    "flex min-h-12 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium",
                     "text-gray-600 transition-colors",
                     "hover:text-navy hover:bg-gray-50"
                   )}
@@ -295,7 +295,7 @@ export default function Navbar() {
                 <div className="relative" ref={userMenuRef}>
                   <button
                     onClick={() => setUserMenuOpen((prev) => !prev)}
-                    className="flex items-center gap-2 rounded-full p-0.5 transition-all hover:ring-2 hover:ring-teal/30"
+                    className="flex h-12 w-12 items-center justify-center rounded-full transition-all hover:ring-2 hover:ring-teal/30"
                     aria-label="User menu"
                   >
                     {user.photoURL ? (
@@ -334,7 +334,7 @@ export default function Navbar() {
                         <Link
                           href="/my-trips"
                           onClick={() => setUserMenuOpen(false)}
-                          className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-navy transition-colors"
+                          className="flex min-h-12 items-center gap-2.5 px-3 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-navy transition-colors"
                         >
                           <Heart className="h-4 w-4" />
                           My Trips
@@ -344,7 +344,7 @@ export default function Navbar() {
                             setUserMenuOpen(false);
                             signOut();
                           }}
-                          className="flex w-full items-center gap-2.5 px-3 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-600 transition-colors"
+                          className="flex min-h-12 w-full items-center gap-2.5 px-3 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-600 transition-colors"
                         >
                           <LogOut className="h-4 w-4" />
                           Sign Out
@@ -356,7 +356,7 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => setShowSignIn(true)}
-                  className="hidden sm:inline-flex text-sm font-medium text-gray-600 hover:text-navy transition-colors"
+                  className="hidden min-h-12 items-center px-3 text-sm font-medium text-gray-600 transition-colors hover:text-navy sm:inline-flex"
                 >
                   Sign In
                 </button>
@@ -369,7 +369,7 @@ export default function Navbar() {
               href="/app"
               onClick={trackAppDownload}
               className={cn(
-                "hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold",
+                "hidden min-h-12 items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold sm:inline-flex",
                 "bg-navy text-white shadow-sm",
                 "transition-all hover:bg-teal hover:shadow-md",
                 "active:scale-[0.97]"
@@ -382,7 +382,7 @@ export default function Navbar() {
             <Link
               href="/calculator"
               className={cn(
-                "hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold",
+                "hidden min-h-12 items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold sm:inline-flex",
                 "bg-teal text-white shadow-sm",
                 "transition-all hover:bg-teal-dark hover:shadow-md",
                 "active:scale-[0.97]"
@@ -397,7 +397,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setMobileOpen((prev) => !prev)}
             className={cn(
-              "lg:hidden inline-flex items-center justify-center rounded-lg p-2",
+              "lg:hidden inline-flex h-12 w-12 items-center justify-center rounded-lg",
               "text-gray-600 hover:text-navy hover:bg-gray-100",
               "transition-colors"
             )}
@@ -462,7 +462,7 @@ export default function Navbar() {
                         href={link.href}
                         onClick={() => setMobileOpen(false)}
                         className={cn(
-                          "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
+                          "flex min-h-12 items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
                           "text-gray-600 transition-colors",
                           "hover:text-navy hover:bg-gray-50",
                           "active:bg-gray-100"
@@ -484,7 +484,7 @@ export default function Navbar() {
                     aria-expanded={mobileCalculatorsOpen}
                     aria-controls="mobile-calculators-menu"
                     className={cn(
-                      "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
+                      "flex min-h-12 w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
                       "text-gray-600 transition-colors",
                       "hover:text-navy hover:bg-gray-50",
                       "active:bg-gray-100"
@@ -519,7 +519,7 @@ export default function Navbar() {
                                 setMobileOpen(false);
                                 setMobileCalculatorsOpen(false);
                               }}
-                              className="rounded-lg px-3 py-2 text-left transition-colors hover:bg-gray-50"
+                              className="flex min-h-12 flex-col justify-center rounded-lg px-3 py-2 text-left transition-colors hover:bg-gray-50"
                             >
                               <span className="block text-sm font-bold text-navy">
                                 {link.shortLabel}
@@ -543,7 +543,7 @@ export default function Navbar() {
                         href={link.href}
                         onClick={() => setMobileOpen(false)}
                         className={cn(
-                          "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
+                          "flex min-h-12 items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
                           "text-gray-600 transition-colors",
                           "hover:text-navy hover:bg-gray-50",
                           "active:bg-gray-100"
@@ -565,7 +565,7 @@ export default function Navbar() {
                         href="/my-trips"
                         onClick={() => setMobileOpen(false)}
                         className={cn(
-                          "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
+                          "flex min-h-12 items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
                           "text-gray-600 transition-colors",
                           "hover:text-navy hover:bg-gray-50"
                         )}
@@ -579,7 +579,7 @@ export default function Navbar() {
                           signOut();
                         }}
                         className={cn(
-                          "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
+                          "flex min-h-12 w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
                           "text-gray-600 transition-colors",
                           "hover:text-red-600 hover:bg-red-50"
                         )}
@@ -595,7 +595,7 @@ export default function Navbar() {
                         setShowSignIn(true);
                       }}
                       className={cn(
-                        "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
+                        "flex min-h-12 w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium",
                         "text-gray-600 transition-colors",
                         "hover:text-navy hover:bg-gray-50"
                       )}
@@ -617,7 +617,7 @@ export default function Navbar() {
                         trackAppDownload();
                       }}
                       className={cn(
-                        "flex w-full items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold",
+                        "flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold",
                         "bg-navy text-white",
                         "transition-all hover:bg-teal",
                         "active:scale-[0.97]"
@@ -629,7 +629,7 @@ export default function Navbar() {
                     <Link
                       href="/calculator"
                       onClick={() => setMobileOpen(false)}
-                      className="flex w-full items-center justify-center rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-teal hover:text-teal"
+                      className="flex min-h-12 w-full items-center justify-center rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-teal hover:text-teal"
                     >
                       Use cost calculator
                     </Link>
@@ -639,7 +639,7 @@ export default function Navbar() {
                     href="/calculator"
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      "flex w-full items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold",
+                      "flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold",
                       "bg-teal text-white",
                       "transition-all hover:bg-teal-dark",
                       "active:scale-[0.97]"

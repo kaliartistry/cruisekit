@@ -66,6 +66,7 @@ const Slider = React.forwardRef<
             key={i}
             className={cn(
               "relative block size-5 rounded-full border-2 border-teal bg-navy shadow-md",
+              "before:absolute before:-inset-[16px] before:content-['']",
               "transition-shadow duration-150",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2",
               "hover:shadow-lg",
