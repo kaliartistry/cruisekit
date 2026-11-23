@@ -110,7 +110,7 @@ jobs:
       (github.event_name == 'workflow_dispatch' &&
       (github.event.inputs.job == 'all' || github.event.inputs.job == 'weekly-ingest')) ||
       github.event.schedule == '34 11 * * 1'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v6
